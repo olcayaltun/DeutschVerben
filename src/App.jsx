@@ -49,12 +49,12 @@ const App = () => {
   };
 
   return (
-    <div className="mt-[360px] overflow-y-hidden ml-5 mr-5">
+    <div className="mt-[340px] overflow-y-hidden ml-5 mr-5">
       <div className="flex justify-center gap-[70px] max-sm:flex max-sm:flex-col">
         <div className="flex justify-center gap-10">
           {/* Geri Butonu */}
           <button
-            className="max-sm:absolute max-sm:left-[170px] "
+            className="max-sm:absolute max-sm:left-[120px] "
             onClick={handlePrev}
           >
             <FaArrowCircleLeft className="text-white text-4xl  hover:text-blue-500" />
@@ -62,7 +62,7 @@ const App = () => {
 
           {/* İleri Butonu */}
           <button
-            className="max-sm:absolute max-sm:left-[280px]"
+            className="max-sm:absolute max-sm:left-[250px]"
             onClick={handleNext}
           >
             <FaArrowCircleRight className="text-white text-4xl hover:text-blue-500" />
