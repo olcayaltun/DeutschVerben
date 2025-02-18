@@ -1,0 +1,8 @@
+@import "tailwindcss";
+body {
+  overflow-y: hidden;
+  background: #1f1f1f;
+}
+.sch {
+  box-shadow: 1px 1px 15px white;
+}
