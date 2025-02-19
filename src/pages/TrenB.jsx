@@ -3,7 +3,7 @@ import Tr from "../utils/trB";
 import { Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
 
-const MatchingGame = () => {
+const TrenB = () => {
   const [currentIndex, setCurrentIndex] = useState(
     parseInt(localStorage.getItem("currentIndex")) || 0
   );
@@ -141,4 +141,4 @@ const MatchingGame = () => {
   );
 };
 
-export default MatchingGame;
+export default TrenB;
