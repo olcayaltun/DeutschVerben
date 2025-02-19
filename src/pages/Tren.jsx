@@ -37,12 +37,10 @@ const Tren = () => {
     const touch = event.touches[0];
     const wordElement = document.getElementById(word);
 
-    // Store initial position
     const rect = wordElement.getBoundingClientRect();
     wordElement.dataset.originalX = rect.left;
     wordElement.dataset.originalY = rect.top;
 
-    // Setup drag styles
     wordElement.style.position = "fixed";
     wordElement.style.zIndex = "1000";
     wordElement.style.left = `${rect.left}px`;
@@ -57,11 +55,9 @@ const Tren = () => {
     };
 
     const handleTouchEnd = (endEvent) => {
-      // Remove event listeners
       wordElement.removeEventListener("touchmove", handleTouchMove);
       wordElement.removeEventListener("touchend", handleTouchEnd);
 
-      // Find drop target
       const touch = endEvent.changedTouches[0];
       const elements = document.elementsFromPoint(touch.clientX, touch.clientY);
       const meaningElement = elements.find((el) => el.dataset.meaning);
@@ -73,7 +69,6 @@ const Tren = () => {
         );
       }
 
-      // Reset styles
       wordElement.style.position = "";
       wordElement.style.left = "";
       wordElement.style.top = "";
@@ -103,16 +98,16 @@ const Tren = () => {
   };
 
   return (
-    <div className="p-4 grid place-items-center h-screen">
-      <div className=" ">
-        <Link className=" text-white text-4xl hover:text-blue-500" to="/">
+    <div className="p-4 grid place-items-center h-screen bg-gray-800">
+      <div className="absolute top-4 left-4">
+        <Link className="text-white text-4xl hover:text-blue-500" to="/">
           <FaArrowCircleLeft />
         </Link>
       </div>
 
       {completed ? (
-        <div>
-          <h2 className="text-green-500 text-xl">
+        <div className="text-center">
+          <h2 className="text-green-500 text-2xl mb-4">
             Tebrikler! Tüm fiilleri eşleştirdiniz.
           </h2>
           <button
@@ -122,59 +117,73 @@ const Tren = () => {
               setCompleted(false);
               localStorage.clear();
             }}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+            className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             Baştan Başla
           </button>
         </div>
       ) : (
-        <div>
-          <h2 className="text-xl mb-4 text-white">
-            <span className=" text-2xl text-red-700">{currentVerb}</span> fiili
-            için eşleştirme yapın
+        <div className="w-full max-w-4xl">
+          <h2 className="text-xl mb-6 text-center text-white">
+            <span className="text-3xl text-red-400 font-bold">
+              {currentVerb}
+            </span>
+            <br />
+            fiili için eşleştirme yapın
           </h2>
-          <div className="flex space-x-8">
-            <div className="space-y-2">
-              {wordKeys.map((word) => (
-                <div
-                  key={word}
-                  id={word}
-                  className="px-4 py-2 bg-blue-300 cursor-grab rounded touch-none"
-                  onTouchStart={(e) => handleTouchStart(e, word)}
-                >
-                  {word}
-                </div>
-              ))}
+
+          <div className="flex flex-col md:flex-row gap-8 justify-center">
+            <div className="space-y-4 flex-1">
+              {wordKeys.map((word) => {
+                const isCorrect =
+                  matches.find((m) => m.word === word)?.match === words[word];
+                return (
+                  <div
+                    key={word}
+                    id={word}
+                    className={`px-6 py-3 rounded-lg text-lg cursor-grab touch-none ${
+                      isCorrect ? "bg-green-400" : "bg-blue-400"
+                    } text-white font-semibold shadow-md transition-colors`}
+                    onTouchStart={(e) => handleTouchStart(e, word)}
+                  >
+                    {word}
+                  </div>
+                );
+              })}
             </div>
-            <div className="space-y-2">
+
+            <div className="space-y-4 flex-1">
               {shuffledMeanings.map((meaning) => (
                 <div
                   key={meaning}
                   data-meaning={meaning}
-                  className={`px-4 py-2 border rounded ${
+                  className={`px-6 py-3 rounded-lg text-lg border-2 ${
                     matches.some(
                       (m) => m.match === meaning && words[m.word] === meaning
                     )
-                      ? "bg-green-300"
+                      ? "bg-green-400 border-green-600"
                       : matches.some(
                           (m) =>
                             m.match === meaning && words[m.word] !== meaning
                         )
-                      ? "bg-red-300"
-                      : "bg-gray-200"
-                  }`}
+                      ? "bg-red-400 border-red-600"
+                      : "bg-gray-200 border-gray-400"
+                  } text-gray-800 font-semibold shadow-md`}
                 >
                   {meaning}
                 </div>
               ))}
             </div>
           </div>
-          <button
-            onClick={checkMatches}
-            className="mt-4 px-4 py-2 bg-green-500 text-white rounded"
-          >
-            Kontrol Et
-          </button>
+
+          <div className="mt-8 text-center">
+            <button
+              onClick={checkMatches}
+              className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-semibold"
+            >
+              Kontrol Et
+            </button>
+          </div>
         </div>
       )}
     </div>
