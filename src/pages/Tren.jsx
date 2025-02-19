@@ -35,8 +35,8 @@ const Tren = () => {
   const handleTouchStart = (event, word) => {
     event.preventDefault();
     const wordElement = document.getElementById(word);
-
     const rect = wordElement.getBoundingClientRect();
+
     wordElement.dataset.originalX = rect.left;
     wordElement.dataset.originalY = rect.top;
 
@@ -122,78 +122,72 @@ const Tren = () => {
           </button>
         </div>
       ) : (
-        <div className="w-full max-w-4xl mx-auto py-8">
+        <div className="w-full max-w-6xl mx-auto py-8 px-2">
           <h2 className="text-xl mb-6 text-center text-white">
-            <span className="text-3xl text-red-400 font-bold">
+            <span className="text-2xl sm:text-3xl text-red-400 font-bold">
               {currentVerb}
             </span>
             <br />
             fiili için eşleştirme yapın
           </h2>
 
-          <div className="flex gap-8 justify-center">
+          <div className="flex flex-row overflow-x-auto pb-3 gap-4 sm:gap-6">
             {/* Almanca Kelimeler */}
-            <div
-              className="space-y-4 overflow-y-auto"
-              style={{ maxHeight: "500px" }}
-            >
-              {wordKeys.map((word) => {
-                const isCorrect =
-                  matches.find((m) => m.word === word)?.match === words[word];
-                return (
-                  <div
-                    key={word}
-                    id={word}
-                    className={`px-6 py-3 rounded-lg text-lg cursor-grab touch-none ${
-                      isCorrect ? "bg-green-400" : "bg-blue-400"
-                    } text-white font-semibold shadow-md transition-colors`}
-                    onTouchStart={(e) => handleTouchStart(e, word)}
-                  >
-                    {word}
-                  </div>
-                );
-              })}
+            <div className="min-w-[300px] flex-1 bg-gray-700 rounded-lg shadow-xl p-4">
+              <h3 className="text-white text-lg font-bold mb-4">
+                Almanca Fiiller
+              </h3>
+              <div className="space-y-3">
+                {wordKeys.map((word) => {
+                  const isCorrect =
+                    matches.find((m) => m.word === word)?.match === words[word];
+                  return (
+                    <div
+                      key={word}
+                      id={word}
+                      className={`p-3 rounded-lg cursor-grab touch-none ${
+                        isCorrect ? "bg-green-400" : "bg-blue-400"
+                      } text-white font-medium shadow-md transition-all truncate`}
+                      onTouchStart={(e) => handleTouchStart(e, word)}
+                    >
+                      {word}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Türkçe Anlamlar */}
-            <div
-              className="space-y-4 overflow-y-auto"
-              style={{ maxHeight: "500px" }}
-            >
-              {shuffledMeanings.map((meaning) => {
-                const matchedWord = matches.find(
-                  (m) => m.match === meaning
-                )?.word;
-                const isCorrect = matchedWord
-                  ? words[matchedWord] === meaning
-                  : false;
+            <div className="min-w-[300px] flex-1 bg-gray-700 rounded-lg shadow-xl p-4">
+              <h3 className="text-white text-lg font-bold mb-4">
+                Türkçe Anlamlar
+              </h3>
+              <div className="space-y-3">
+                {shuffledMeanings.map((meaning) => {
+                  const matchedWord = matches.find(
+                    (m) => m.match === meaning
+                  )?.word;
+                  const isCorrect = matchedWord
+                    ? words[matchedWord] === meaning
+                    : false;
 
-                return (
-                  <div
-                    key={meaning}
-                    data-meaning={meaning}
-                    className={`px-6 py-3 rounded-lg text-lg border-2 ${
-                      isCorrect
-                        ? "bg-green-400 border-green-600"
-                        : matchedWord
-                        ? "bg-red-400 border-red-600"
-                        : "bg-gray-200 border-gray-400"
-                    } text-gray-800 font-semibold shadow-md`}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between", // Kelime ve anlam arasındaki boşluk
-                    }}
-                  >
-                    <span>{meaning}</span>
-                    {matchedWord && (
-                      <span className="text-blue-500 font-semibold">
-                        {matchedWord}
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
+                  return (
+                    <div
+                      key={meaning}
+                      data-meaning={meaning}
+                      className={`p-3 rounded-lg border-2 ${
+                        isCorrect
+                          ? "bg-green-400 border-green-600"
+                          : matchedWord
+                          ? "bg-red-400 border-red-600"
+                          : "bg-gray-200 border-gray-400"
+                      } text-gray-800 font-medium shadow-md truncate`}
+                    >
+                      {meaning}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
