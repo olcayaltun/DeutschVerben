@@ -131,13 +131,13 @@ const Tren = () => {
             fiili için eşleştirme yapın
           </h2>
 
-          <div className="flex flex-row overflow-x-auto pb-3 gap-4 sm:gap-6">
-            {/* Almanca Kelimeler */}
-            <div className="min-w-[300px] flex-1 bg-gray-700 rounded-lg shadow-xl p-4">
-              <h3 className="text-white text-lg font-bold mb-4">
+          <div className="flex flex-row overflow-x-auto pb-3 gap-3 sm:gap-4">
+            {/* Almanca Bölümü */}
+            <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
+              <h3 className="text-white text-sm sm:text-base font-bold mb-3">
                 Almanca Fiiller
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {wordKeys.map((word) => {
                   const isCorrect =
                     matches.find((m) => m.word === word)?.match === words[word];
@@ -145,9 +145,9 @@ const Tren = () => {
                     <div
                       key={word}
                       id={word}
-                      className={`p-3 rounded-lg cursor-grab touch-none ${
+                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-grab touch-none ${
                         isCorrect ? "bg-green-400" : "bg-blue-400"
-                      } text-white font-medium shadow-md transition-all truncate`}
+                      } text-white text-sm sm:text-base font-medium shadow-md transition-all`}
                       onTouchStart={(e) => handleTouchStart(e, word)}
                     >
                       {word}
@@ -157,12 +157,12 @@ const Tren = () => {
               </div>
             </div>
 
-            {/* Türkçe Anlamlar */}
-            <div className="min-w-[300px] flex-1 bg-gray-700 rounded-lg shadow-xl p-4">
-              <h3 className="text-white text-lg font-bold mb-4">
+            {/* Türkçe Bölümü */}
+            <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
+              <h3 className="text-white text-sm sm:text-base font-bold mb-3">
                 Türkçe Anlamlar
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {shuffledMeanings.map((meaning) => {
                   const matchedWord = matches.find(
                     (m) => m.match === meaning
@@ -175,13 +175,13 @@ const Tren = () => {
                     <div
                       key={meaning}
                       data-meaning={meaning}
-                      className={`p-3 rounded-lg border-2 ${
+                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md border-2 ${
                         isCorrect
                           ? "bg-green-400 border-green-600"
                           : matchedWord
                           ? "bg-red-400 border-red-600"
                           : "bg-gray-200 border-gray-400"
-                      } text-gray-800 font-medium shadow-md truncate`}
+                      } text-gray-800 text-sm sm:text-base font-medium shadow-md`}
                     >
                       {meaning}
                     </div>
@@ -191,10 +191,10 @@ const Tren = () => {
             </div>
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-6 text-center">
             <button
               onClick={checkMatches}
-              className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-semibold"
+              className="px-6 py-2 sm:px-8 sm:py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm sm:text-base font-semibold"
             >
               Kontrol Et
             </button>
