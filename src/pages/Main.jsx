@@ -54,9 +54,17 @@ const Main = () => {
       <div>
         <Link
           to="/test"
-          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-3"
+          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2"
         >
           Test
+        </Link>
+      </div>
+      <div>
+        <Link
+          to="/tren"
+          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[100px]"
+        >
+          TrenbarenVerben
         </Link>
       </div>
       <div className="flex justify-center gap-[70px] max-sm:flex max-sm:flex-col">
@@ -96,7 +104,7 @@ const Main = () => {
             {anlami}
           </p>
         </div>
-        <div className="absolute right-[50px] top-[350px] max-md:top-[600px] max-md:right-[100px] max-sm:top-[50px] max-sm:left-[130px]">
+        <div className="absolute right-[50px] top-[350px] max-md:top-[600px] max-md:right-[100px] max-sm:top-[70px] max-sm:left-[130px]">
           <img
             className="sch rounded-md shadow-2xl shadow-white h-[230px] w-[230px]"
             src={`${imgData[num]}`}

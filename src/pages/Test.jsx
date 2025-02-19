@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import err from "../utils/data";
 
 const TestComponent = () => {
-  const [questionIndex, setQuestionIndex] = useState(0); // Sırayla gitmesi için
+  const storedIndex = localStorage.getItem("questionIndex") || 0; // Kayıtlı indeks varsa al
+  const [questionIndex, setQuestionIndex] = useState(parseInt(storedIndex, 10));
   const [question, setQuestion] = useState({});
   const [options, setOptions] = useState([]);
   const [selected, setSelected] = useState(null);
@@ -12,22 +13,24 @@ const TestComponent = () => {
 
   useEffect(() => {
     generateQuestion();
-  }, [questionIndex]); // Index değiştiğinde yeni soru gelsin
+  }, [questionIndex]);
+
+  useEffect(() => {
+    localStorage.setItem("questionIndex", questionIndex); // Her değişimde kaydet
+  }, [questionIndex]);
 
   const generateQuestion = () => {
-    if (questionIndex >= err.length) return; // Son soruya gelince dur
+    if (questionIndex >= err.length) return;
 
     const randomWord = Object.keys(err[questionIndex])[0];
     const correct = err[questionIndex][randomWord];
 
     let wrongAnswers = err
-      .filter((item, index) => index !== questionIndex) // Mevcut soruyu çıkart
+      .filter((_, index) => index !== questionIndex)
       .map((item) => Object.values(item)[0]);
 
-    // Rastgele 2 yanlış şık seç
     wrongAnswers = wrongAnswers.sort(() => 0.5 - Math.random()).slice(0, 2);
 
-    // Şıkları rastgele karıştır
     const shuffledOptions = [correct, ...wrongAnswers].sort(
       () => 0.5 - Math.random()
     );
@@ -44,17 +47,17 @@ const TestComponent = () => {
 
   const handleNextQuestion = () => {
     if (questionIndex < err.length - 1) {
-      setQuestionIndex(questionIndex + 1); // Bir sonraki soruya geç
+      setQuestionIndex(questionIndex + 1);
     } else {
-      alert("Tüm soruları tamamladınız! 🎉"); // Tüm sorular bitince mesaj ver
+      alert("Tüm soruları tamamladınız! 🎉");
     }
   };
 
   return (
     <div className="p-5 max-w-md mx-auto bg-white shadow-lg rounded-lg absolute top-[200px] left-[40px]">
-      <div className="">
+      <div>
         <Link
-          className="absolute text-white   top-[-150px] text-4xl hover:text-blue-500"
+          className="absolute text-white top-[-150px] text-4xl hover:text-blue-500"
           to={-1}
         >
           <FaArrowCircleLeft />
