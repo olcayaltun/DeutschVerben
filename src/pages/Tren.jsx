@@ -25,8 +25,13 @@ const Tren = () => {
   );
   const [shuffledMeanings, setShuffledMeanings] = useState([]);
 
+  // Shuffle sadece currentIndex değiştiğinde
   useEffect(() => {
     setShuffledMeanings([...meanings].sort(() => Math.random() - 0.5));
+  }, [currentIndex]);
+
+  // LocalStorage'e kayıt için ayrı useEffect
+  useEffect(() => {
     localStorage.setItem("currentIndex", currentIndex);
     localStorage.setItem("matches", JSON.stringify(matches));
     localStorage.setItem("completed", JSON.stringify(completed));
@@ -157,7 +162,7 @@ const Tren = () => {
               </div>
             </div>
 
-            {/* Türkçe Bölümü - Genişletilmiş */}
+            {/* Türkçe Bölümü */}
             <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4 min-w-[280px] sm:min-w-[360px]">
               <h3 className="text-white text-sm sm:text-base font-bold mb-3">
                 Türkçe Anlamlar
