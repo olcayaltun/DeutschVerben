@@ -12,14 +12,12 @@ const Tren = () => {
   const words = Tr[0][currentVerb];
   const wordKeys = Object.keys(words);
   const meanings = Object.values(words);
-
   const [matches, setMatches] = useState(() => {
     const savedMatches = localStorage.getItem("matches");
     return savedMatches
       ? JSON.parse(savedMatches)
       : wordKeys.map((word) => ({ word, match: "" }));
   });
-
   const [completed, setCompleted] = useState(
     JSON.parse(localStorage.getItem("completed")) || false
   );
@@ -35,10 +33,14 @@ const Tren = () => {
     localStorage.setItem("completed", JSON.stringify(completed));
   }, [currentIndex, matches, completed]);
 
+  const handleDragStart = (event, word) => {
+    event.dataTransfer.setData("word", word);
+  };
+
   const handleTouchStart = (event, word) => {
     event.preventDefault();
     const wordElement = document.getElementById(word);
-    wordElement.dataset.dragging = "true";
+    wordElement.classList.add("dragging");
 
     const handleTouchMove = (moveEvent) => {
       moveEvent.preventDefault();
@@ -46,13 +48,13 @@ const Tren = () => {
       wordElement.style.position = "fixed";
       wordElement.style.left = `${touch.clientX - 50}px`;
       wordElement.style.top = `${touch.clientY - 20}px`;
-      wordElement.style.zIndex = "1000";
     };
 
     const handleTouchEnd = (endEvent) => {
-      wordElement.removeEventListener("touchmove", handleTouchMove);
-      wordElement.removeEventListener("touchend", handleTouchEnd);
-
+      wordElement.classList.remove("dragging");
+      wordElement.style.position = "";
+      wordElement.style.left = "";
+      wordElement.style.top = "";
       const touch = endEvent.changedTouches[0];
       const elements = document.elementsFromPoint(touch.clientX, touch.clientY);
       const meaningElement = elements.find((el) => el.dataset.meaning);
@@ -63,16 +65,19 @@ const Tren = () => {
           prev.map((m) => (m.word === word ? { ...m, match: meaning } : m))
         );
       }
-
-      wordElement.style.position = "";
-      wordElement.style.left = "";
-      wordElement.style.top = "";
-      wordElement.style.zIndex = "";
-      wordElement.dataset.dragging = "false";
     };
 
     wordElement.addEventListener("touchmove", handleTouchMove);
-    wordElement.addEventListener("touchend", handleTouchEnd);
+    wordElement.addEventListener("touchend", handleTouchEnd, { once: true });
+  };
+
+  const checkMatches = () => {
+    setMatches((prev) =>
+      prev.map((m) => ({
+        ...m,
+        isCorrect: words[m.word] === m.match,
+      }))
+    );
   };
 
   return (
@@ -88,17 +93,6 @@ const Tren = () => {
           <h2 className="text-green-500 text-2xl mb-4">
             Tebrikler! Tüm fiilleri eşleştirdiniz.
           </h2>
-          <button
-            onClick={() => {
-              setCurrentIndex(0);
-              setMatches(wordKeys.map((word) => ({ word, match: "" })));
-              setCompleted(false);
-              localStorage.clear();
-            }}
-            className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-          >
-            Baştan Başla
-          </button>
         </div>
       ) : (
         <div className="w-full max-w-6xl mx-auto py-8 px-2">
@@ -116,22 +110,22 @@ const Tren = () => {
                 Almanca Fiiller
               </h3>
               <div className="space-y-2">
-                {wordKeys.map((word) => {
-                  const isCorrect =
-                    matches.find((m) => m.word === word)?.match === words[word];
-                  return (
-                    <div
-                      key={word}
-                      id={word}
-                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-grab touch-none transition-all text-white text-sm sm:text-base font-medium shadow-md ${
-                        isCorrect ? "bg-green-400" : "bg-blue-400"
-                      }`}
-                      onTouchStart={(e) => handleTouchStart(e, word)}
-                    >
-                      {word}
-                    </div>
-                  );
-                })}
+                {wordKeys.map((word) => (
+                  <div
+                    key={word}
+                    id={word}
+                    className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-grab touch-none text-white text-sm sm:text-base font-medium shadow-md transition-all ${
+                      matches.find((m) => m.word === word)?.isCorrect
+                        ? "bg-green-500"
+                        : "bg-blue-500"
+                    }`}
+                    draggable
+                    onDragStart={(e) => handleDragStart(e, word)}
+                    onTouchStart={(e) => handleTouchStart(e, word)}
+                  >
+                    {word}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -140,30 +134,32 @@ const Tren = () => {
                 Türkçe Anlamlar
               </h3>
               <div className="space-y-2">
-                {shuffledMeanings.map((meaning) => {
-                  const matchedWord = matches.find(
-                    (m) => m.match === meaning
-                  )?.word;
-                  const isCorrect = matchedWord
-                    ? words[matchedWord] === meaning
-                    : false;
-
-                  return (
-                    <div
-                      key={meaning}
-                      data-meaning={meaning}
-                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md text-gray-800 text-sm sm:text-base font-medium shadow-md truncate ${
-                        isCorrect
-                          ? "bg-green-400 border-green-600"
-                          : "bg-gray-200 border-gray-400"
-                      }`}
-                    >
-                      {meaning}
-                    </div>
-                  );
-                })}
+                {shuffledMeanings.map((meaning) => (
+                  <div
+                    key={meaning}
+                    data-meaning={meaning}
+                    className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md border-2 text-gray-800 text-sm sm:text-base font-medium shadow-md truncate ${
+                      matches.some(
+                        (m) => m.match === meaning && words[m.word] === meaning
+                      )
+                        ? "bg-green-500 border-green-600"
+                        : "bg-gray-200 border-gray-400"
+                    }`}
+                  >
+                    {meaning}
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
+
+          <div className="mt-6 text-center">
+            <button
+              onClick={checkMatches}
+              className="px-6 py-2 sm:px-8 sm:py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm sm:text-base font-semibold"
+            >
+              Kontrol Et
+            </button>
           </div>
         </div>
       )}
