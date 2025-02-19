@@ -36,24 +36,53 @@ const Tren = () => {
     event.preventDefault();
     const touch = event.touches[0];
     const wordElement = document.getElementById(word);
-    wordElement.style.position = "absolute";
-    wordElement.style.zIndex = "1000";
-    const move = (moveEvent) => {
-      wordElement.style.left = `${moveEvent.touches[0].pageX - 50}px`;
-      wordElement.style.top = `${moveEvent.touches[0].pageY - 50}px`;
-    };
-    wordElement.addEventListener("touchmove", move);
-    wordElement.addEventListener("touchend", () => {
-      wordElement.removeEventListener("touchmove", move);
-    });
-  };
 
-  const handleDrop = (event, meaning) => {
-    event.preventDefault();
-    const word = event.dataTransfer.getData("text");
-    setMatches((prev) =>
-      prev.map((m) => (m.word === word ? { ...m, match: meaning } : m))
-    );
+    // Store initial position
+    const rect = wordElement.getBoundingClientRect();
+    wordElement.dataset.originalX = rect.left;
+    wordElement.dataset.originalY = rect.top;
+
+    // Setup drag styles
+    wordElement.style.position = "fixed";
+    wordElement.style.zIndex = "1000";
+    wordElement.style.left = `${rect.left}px`;
+    wordElement.style.top = `${rect.top}px`;
+    wordElement.style.transition = "none";
+
+    const handleTouchMove = (moveEvent) => {
+      moveEvent.preventDefault();
+      const touch = moveEvent.touches[0];
+      wordElement.style.left = `${touch.clientX - 50}px`;
+      wordElement.style.top = `${touch.clientY - 20}px`;
+    };
+
+    const handleTouchEnd = (endEvent) => {
+      // Remove event listeners
+      wordElement.removeEventListener("touchmove", handleTouchMove);
+      wordElement.removeEventListener("touchend", handleTouchEnd);
+
+      // Find drop target
+      const touch = endEvent.changedTouches[0];
+      const elements = document.elementsFromPoint(touch.clientX, touch.clientY);
+      const meaningElement = elements.find((el) => el.dataset.meaning);
+
+      if (meaningElement) {
+        const meaning = meaningElement.dataset.meaning;
+        setMatches((prev) =>
+          prev.map((m) => (m.word === word ? { ...m, match: meaning } : m))
+        );
+      }
+
+      // Reset styles
+      wordElement.style.position = "";
+      wordElement.style.left = "";
+      wordElement.style.top = "";
+      wordElement.style.zIndex = "";
+      wordElement.style.transition = "";
+    };
+
+    wordElement.addEventListener("touchmove", handleTouchMove);
+    wordElement.addEventListener("touchend", handleTouchEnd);
   };
 
   const checkMatches = () => {
@@ -110,7 +139,7 @@ const Tren = () => {
                 <div
                   key={word}
                   id={word}
-                  className="px-4 py-2 bg-blue-300 cursor-grab rounded"
+                  className="px-4 py-2 bg-blue-300 cursor-grab rounded touch-none"
                   onTouchStart={(e) => handleTouchStart(e, word)}
                 >
                   {word}
@@ -121,8 +150,7 @@ const Tren = () => {
               {shuffledMeanings.map((meaning) => (
                 <div
                   key={meaning}
-                  onDrop={(e) => handleDrop(e, meaning)}
-                  onDragOver={(e) => e.preventDefault()}
+                  data-meaning={meaning}
                   className={`px-4 py-2 border rounded ${
                     matches.some(
                       (m) => m.match === meaning && words[m.word] === meaning
