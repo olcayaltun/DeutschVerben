@@ -133,7 +133,10 @@ const Tren = () => {
 
           <div className="flex gap-8 justify-center">
             {/* Almanca Kelimeler */}
-            <div className="space-y-4">
+            <div
+              className="space-y-4 overflow-y-auto"
+              style={{ maxHeight: "500px" }}
+            >
               {wordKeys.map((word) => {
                 const isCorrect =
                   matches.find((m) => m.word === word)?.match === words[word];
@@ -153,7 +156,10 @@ const Tren = () => {
             </div>
 
             {/* Türkçe Anlamlar */}
-            <div className="space-y-4">
+            <div
+              className="space-y-4 overflow-y-auto"
+              style={{ maxHeight: "500px" }}
+            >
               {shuffledMeanings.map((meaning) => {
                 const matchedWord = matches.find(
                   (m) => m.match === meaning
