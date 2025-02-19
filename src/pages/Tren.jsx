@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Tr from "../utils/trB";
 import { Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
+import Tr from "../utils/trB";
 
 const Tren = () => {
   const [currentIndex, setCurrentIndex] = useState(
@@ -32,16 +32,28 @@ const Tren = () => {
     localStorage.setItem("completed", JSON.stringify(completed));
   }, [currentIndex, matches, completed]);
 
+  const handleTouchStart = (event, word) => {
+    event.preventDefault();
+    const touch = event.touches[0];
+    const wordElement = document.getElementById(word);
+    wordElement.style.position = "absolute";
+    wordElement.style.zIndex = "1000";
+    const move = (moveEvent) => {
+      wordElement.style.left = `${moveEvent.touches[0].pageX - 50}px`;
+      wordElement.style.top = `${moveEvent.touches[0].pageY - 50}px`;
+    };
+    wordElement.addEventListener("touchmove", move);
+    wordElement.addEventListener("touchend", () => {
+      wordElement.removeEventListener("touchmove", move);
+    });
+  };
+
   const handleDrop = (event, meaning) => {
     event.preventDefault();
     const word = event.dataTransfer.getData("text");
     setMatches((prev) =>
       prev.map((m) => (m.word === word ? { ...m, match: meaning } : m))
     );
-  };
-
-  const handleDragStart = (event, word) => {
-    event.dataTransfer.setData("text", word);
   };
 
   const checkMatches = () => {
@@ -97,9 +109,9 @@ const Tren = () => {
               {wordKeys.map((word) => (
                 <div
                   key={word}
-                  draggable
-                  onDragStart={(e) => handleDragStart(e, word)}
+                  id={word}
                   className="px-4 py-2 bg-blue-300 cursor-grab rounded"
+                  onTouchStart={(e) => handleTouchStart(e, word)}
                 >
                   {word}
                 </div>
@@ -109,8 +121,8 @@ const Tren = () => {
               {shuffledMeanings.map((meaning) => (
                 <div
                   key={meaning}
-                  onDragOver={(e) => e.preventDefault()}
                   onDrop={(e) => handleDrop(e, meaning)}
+                  onDragOver={(e) => e.preventDefault()}
                   className={`px-4 py-2 border rounded ${
                     matches.some(
                       (m) => m.match === meaning && words[m.word] === meaning
