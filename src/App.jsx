@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
 import Test from "./pages/Test";
-import TrenB from "./pages/trenB";
+import TrenB from "./pages/Tren";
 const App = () => {
   return (
     <BrowserRouter>
