@@ -25,63 +25,22 @@ const Tren = () => {
   );
   const [shuffledMeanings, setShuffledMeanings] = useState([]);
 
-  // Shuffle sadece currentIndex değiştiğinde
   useEffect(() => {
     setShuffledMeanings([...meanings].sort(() => Math.random() - 0.5));
   }, [currentIndex]);
 
-  // LocalStorage'e kayıt için ayrı useEffect
   useEffect(() => {
     localStorage.setItem("currentIndex", currentIndex);
     localStorage.setItem("matches", JSON.stringify(matches));
     localStorage.setItem("completed", JSON.stringify(completed));
   }, [currentIndex, matches, completed]);
 
-  const handleTouchStart = (event, word) => {
+  const handleDrop = (event, meaning) => {
     event.preventDefault();
-    const wordElement = document.getElementById(word);
-    const rect = wordElement.getBoundingClientRect();
-
-    wordElement.dataset.originalX = rect.left;
-    wordElement.dataset.originalY = rect.top;
-
-    wordElement.style.position = "fixed";
-    wordElement.style.zIndex = "1000";
-    wordElement.style.left = `${rect.left}px`;
-    wordElement.style.top = `${rect.top}px`;
-    wordElement.style.transition = "none";
-
-    const handleTouchMove = (moveEvent) => {
-      moveEvent.preventDefault();
-      const touch = moveEvent.touches[0];
-      wordElement.style.left = `${touch.clientX - 50}px`;
-      wordElement.style.top = `${touch.clientY - 20}px`;
-    };
-
-    const handleTouchEnd = (endEvent) => {
-      wordElement.removeEventListener("touchmove", handleTouchMove);
-      wordElement.removeEventListener("touchend", handleTouchEnd);
-
-      const touch = endEvent.changedTouches[0];
-      const elements = document.elementsFromPoint(touch.clientX, touch.clientY);
-      const meaningElement = elements.find((el) => el.dataset.meaning);
-
-      if (meaningElement) {
-        const meaning = meaningElement.dataset.meaning;
-        setMatches((prev) =>
-          prev.map((m) => (m.word === word ? { ...m, match: meaning } : m))
-        );
-      }
-
-      wordElement.style.position = "";
-      wordElement.style.left = "";
-      wordElement.style.top = "";
-      wordElement.style.zIndex = "";
-      wordElement.style.transition = "";
-    };
-
-    wordElement.addEventListener("touchmove", handleTouchMove);
-    wordElement.addEventListener("touchend", handleTouchEnd);
+    const word = event.dataTransfer.getData("text");
+    setMatches((prev) =>
+      prev.map((m) => (m.word === word ? { ...m, match: meaning } : m))
+    );
   };
 
   const checkMatches = () => {
@@ -137,32 +96,24 @@ const Tren = () => {
           </h2>
 
           <div className="flex flex-row overflow-x-auto pb-3 gap-3 sm:gap-4">
-            {/* Almanca Bölümü */}
             <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
               <h3 className="text-white text-sm sm:text-base font-bold mb-3">
                 Almanca Fiiller
               </h3>
               <div className="space-y-2">
-                {wordKeys.map((word) => {
-                  const isCorrect =
-                    matches.find((m) => m.word === word)?.match === words[word];
-                  return (
-                    <div
-                      key={word}
-                      id={word}
-                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-grab touch-none ${
-                        isCorrect ? "bg-green-400" : "bg-blue-400"
-                      } text-white text-sm sm:text-base font-medium shadow-md transition-all`}
-                      onTouchStart={(e) => handleTouchStart(e, word)}
-                    >
-                      {word}
-                    </div>
-                  );
-                })}
+                {wordKeys.map((word) => (
+                  <div
+                    key={word}
+                    draggable
+                    onDragStart={(e) => e.dataTransfer.setData("text", word)}
+                    className="px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-grab bg-blue-400 text-white text-sm sm:text-base font-medium shadow-md transition-all"
+                  >
+                    {word}
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Türkçe Bölümü */}
             <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4 min-w-[280px] sm:min-w-[360px]">
               <h3 className="text-white text-sm sm:text-base font-bold mb-3">
                 Türkçe Anlamlar
@@ -179,8 +130,9 @@ const Tren = () => {
                   return (
                     <div
                       key={meaning}
-                      data-meaning={meaning}
-                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md border-2 ${
+                      onDrop={(e) => handleDrop(e, meaning)}
+                      onDragOver={(e) => e.preventDefault()}
+                      className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md border-2 transition-all ${
                         isCorrect
                           ? "bg-green-400 border-green-600"
                           : matchedWord
