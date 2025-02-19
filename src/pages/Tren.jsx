@@ -131,9 +131,9 @@ const Tren = () => {
             fiili için eşleştirme yapın
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-8 justify-center min-h-[500px]">
-            {/* Kelimeler Sütunu - Scroll Eklendi */}
-            <div className="space-y-4 flex-1 overflow-y-auto max-h-[70vh] p-2">
+          <div className="flex gap-8 justify-center">
+            {/* Almanca Kelimeler */}
+            <div className="space-y-4">
               {wordKeys.map((word) => {
                 const isCorrect =
                   matches.find((m) => m.word === word)?.match === words[word];
@@ -152,28 +152,42 @@ const Tren = () => {
               })}
             </div>
 
-            {/* Anlamlar Sütunu - Scroll Eklendi */}
-            <div className="space-y-4 flex-1 overflow-y-auto max-h-[70vh] p-2">
-              {shuffledMeanings.map((meaning) => (
-                <div
-                  key={meaning}
-                  data-meaning={meaning}
-                  className={`px-6 py-3 rounded-lg text-lg border-2 ${
-                    matches.some(
-                      (m) => m.match === meaning && words[m.word] === meaning
-                    )
-                      ? "bg-green-400 border-green-600"
-                      : matches.some(
-                          (m) =>
-                            m.match === meaning && words[m.word] !== meaning
-                        )
-                      ? "bg-red-400 border-red-600"
-                      : "bg-gray-200 border-gray-400"
-                  } text-gray-800 font-semibold shadow-md`}
-                >
-                  {meaning}
-                </div>
-              ))}
+            {/* Türkçe Anlamlar */}
+            <div className="space-y-4">
+              {shuffledMeanings.map((meaning) => {
+                const matchedWord = matches.find(
+                  (m) => m.match === meaning
+                )?.word;
+                const isCorrect = matchedWord
+                  ? words[matchedWord] === meaning
+                  : false;
+
+                return (
+                  <div
+                    key={meaning}
+                    data-meaning={meaning}
+                    className={`px-6 py-3 rounded-lg text-lg border-2 ${
+                      isCorrect
+                        ? "bg-green-400 border-green-600"
+                        : matchedWord
+                        ? "bg-red-400 border-red-600"
+                        : "bg-gray-200 border-gray-400"
+                    } text-gray-800 font-semibold shadow-md`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between", // Kelime ve anlam arasındaki boşluk
+                    }}
+                  >
+                    <span>{meaning}</span>
+                    {matchedWord && (
+                      <span className="text-blue-500 font-semibold">
+                        {matchedWord}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
