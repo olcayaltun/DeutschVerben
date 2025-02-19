@@ -157,8 +157,8 @@ const Tren = () => {
               </div>
             </div>
 
-            {/* Türkçe Bölümü */}
-            <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
+            {/* Türkçe Bölümü - Genişletilmiş */}
+            <div className="w-auto flex-shrink-0 bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4 min-w-[280px] sm:min-w-[360px]">
               <h3 className="text-white text-sm sm:text-base font-bold mb-3">
                 Türkçe Anlamlar
               </h3>
@@ -181,7 +181,7 @@ const Tren = () => {
                           : matchedWord
                           ? "bg-red-400 border-red-600"
                           : "bg-gray-200 border-gray-400"
-                      } text-gray-800 text-sm sm:text-base font-medium shadow-md`}
+                      } text-gray-800 text-sm sm:text-base font-medium shadow-md truncate`}
                     >
                       {meaning}
                     </div>
