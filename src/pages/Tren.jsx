@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
+import { useDrag, useDrop } from "react-dnd";
 import Tr from "../utils/trB";
 
 const Tren = () => {
@@ -30,6 +31,27 @@ const Tren = () => {
     localStorage.setItem("matches", JSON.stringify(matches));
   }, [currentIndex, matches]);
 
+  const [{ isOver: isOverWord }, dropWord] = useDrop({
+    accept: "word",
+    drop: (item) => {
+      const updatedMatches = matches?.map((m) => {
+        if (m.word === item.word) {
+          return { ...m, match: item.match };
+        }
+        return m;
+      });
+      setMatches(updatedMatches);
+    },
+  });
+
+  const [{ isDragging }, dragWord] = useDrag({
+    type: "word",
+    item: (props) => ({ word: props.word, match: props.match }),
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+
   return (
     <div className="p-4 min-h-screen bg-gray-800">
       <div className="fixed top-4 left-4 z-50">
@@ -48,23 +70,38 @@ const Tren = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center items-start gap-6">
-          <div className="flex-1 min-w-[45%] bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
+          <div
+            className="flex-1 min-w-[45%] bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4"
+            ref={dropWord} // Correct ref for drop area
+          >
             <h3 className="text-white text-sm sm:text-base font-bold mb-3">
               Almanca Fiiller
             </h3>
             <div className="space-y-2">
-              {wordKeys.map((word) => (
-                <div
-                  key={word}
-                  className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-pointer text-white text-sm sm:text-base font-medium shadow-md transition-all ${
-                    matches.find((m) => m.word === word)?.match === words[word]
-                      ? "bg-green-500"
-                      : "bg-blue-500"
-                  }`}
-                >
-                  {word}
-                </div>
-              ))}
+              {wordKeys.map((word) => {
+                const [{ isDragging }, drag] = useDrag({
+                  type: "word",
+                  item: { word, match: words[word] },
+                  collect: (monitor) => ({
+                    isDragging: monitor.isDragging(),
+                  }),
+                });
+
+                return (
+                  <div
+                    key={word}
+                    ref={drag} // Correct ref for drag area
+                    className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-pointer text-white text-sm sm:text-base font-medium shadow-md transition-all ${
+                      matches?.find((m) => m.word === word)?.match ===
+                      words[word]
+                        ? "bg-green-500"
+                        : "bg-blue-500"
+                    }`}
+                  >
+                    {word}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -73,7 +110,7 @@ const Tren = () => {
               Türkçe Anlamlar
             </h3>
             <div className="space-y-2">
-              {shuffledMeanings.map((meaning) => (
+              {shuffledMeanings?.map((meaning) => (
                 <div
                   key={meaning}
                   className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md border-2 text-gray-800 text-sm sm:text-base font-medium shadow-md truncate ${
