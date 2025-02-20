@@ -113,7 +113,7 @@ const Tren = () => {
         </Link>
       </div>
 
-      <div className="w-full max-w-6xl mx-auto py-[-30px] px-2">
+      <div className="w-full max-w-6xl mx-auto py-[-px] px-2">
         <h2 className="text-xl mb-6 text-center text-white">
           <span className="text-2xl sm:text-3xl text-red-400 font-bold">
             {currentVerb}

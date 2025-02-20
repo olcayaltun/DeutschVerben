@@ -58,8 +58,7 @@ const Tr = [
       hinterlassen: "geride bırakmak, miras bırakmak",
       erlassen: "kanun çıkarmak, affetmek",
     },
-  },
-  {
+
     brechen: {
       abbrechen: "iptal etmek, kırarak koparmak",
       aufbrechen: "zorla açmak, yola çıkmak",
@@ -110,8 +109,7 @@ const Tr = [
       einziehen: "taşınmak",
       zurückziehen: "geri çekilmek",
     },
-  },
-  {
+
     fangen: {
       anfangen: "başlamak",
       auffangen: "yakalamak, toplamak",
