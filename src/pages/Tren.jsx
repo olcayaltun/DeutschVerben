@@ -1,20 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
-import { DndProvider, useDrag, useDrop } from "react-dnd";
-import { TouchBackend } from "react-dnd-touch-backend";
 import Tr from "../utils/trB";
-
-// TouchBackend'i etkinleştirmek için HOC
-const withTouchSupport = (Component) => (props) =>
-  (
-    <DndProvider
-      backend={TouchBackend}
-      options={{ enableMouseEvents: true, delayTouchStart: 200 }}
-    >
-      <Component {...props} />
-    </DndProvider>
-  );
 
 const Tren = () => {
   const [currentIndex, setCurrentIndex] = useState(
@@ -32,7 +19,6 @@ const Tren = () => {
       ? JSON.parse(savedMatches)
       : wordKeys.map((word) => ({ word, match: "" }));
   });
-
   const [shuffledMeanings, setShuffledMeanings] = useState([]);
 
   useEffect(() => {
@@ -56,15 +42,13 @@ const Tren = () => {
     );
     setMatches(updatedMatches);
     setSelectedWord(null);
-  };
 
-  const handleCheckMatches = () => {
-    const correctMatches = matches.every((m) => words[m.word] === m.match);
-    alert(
-      correctMatches
-        ? "Tüm eşleştirmeler doğru!"
-        : "Bazı eşleştirmeler hatalı. Lütfen kontrol edin."
-    );
+    if (updatedMatches.every((m) => words[m.word] === m.match)) {
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % keys.length);
+        setMatches(wordKeys.map((word) => ({ word, match: "" })));
+      }, 500);
+    }
   };
 
   return (
@@ -85,7 +69,6 @@ const Tren = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center items-start gap-6">
-          {/* Almanca Kelimeler */}
           <div className="flex-1 min-w-[45%] bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
             <h3 className="text-white text-sm sm:text-base font-bold mb-3">
               Almanca Fiiller
@@ -109,7 +92,6 @@ const Tren = () => {
             </div>
           </div>
 
-          {/* Türkçe Anlamlar */}
           <div className="flex-1 min-w-[45%] bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
             <h3 className="text-white text-sm sm:text-base font-bold mb-3">
               Türkçe Anlamlar
@@ -133,18 +115,9 @@ const Tren = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center mt-6">
-          <button
-            onClick={handleCheckMatches}
-            className="bg-blue-500 text-white px-6 py-2 rounded-lg text-lg hover:bg-blue-600 transition-colors"
-          >
-            Eşleştirmeleri Kontrol Et
-          </button>
-        </div>
       </div>
     </div>
   );
 };
 
-export default withTouchSupport(Tren);
+export default Tren;
