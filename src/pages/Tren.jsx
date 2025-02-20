@@ -84,19 +84,16 @@ const Tren = () => {
     });
   };
 
-  useEffect(() => {
-    if (matches.length === wordKeys.length) {
-      const allCorrect = matches.every((m) => words[m.word] === m.match);
-      if (allCorrect) {
-        setMatches([]);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
-        setHasError(false);
-      } else {
-        setHasError(true);
-        setTimeout(() => window.location.reload(), 1000);
-      }
+  const handleNextVerb = () => {
+    const allCorrect = matches.every((m) => words[m.word] === m.match);
+    if (allCorrect) {
+      setMatches([]);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
+      setHasError(false);
+    } else {
+      setHasError(true);
     }
-  }, [matches]);
+  };
 
   return (
     <div className="p-4 min-h-screen bg-gray-800">
@@ -147,6 +144,18 @@ const Tren = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Kontrol Butonu */}
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={handleNextVerb}
+            className={`px-6 py-2 text-white rounded-md font-bold transition-all ${
+              hasError ? "bg-red-500" : "bg-green-500"
+            }`}
+          >
+            {hasError ? "Yanlış eşleşme, tekrar dene!" : "Sonraki Fiil"}
+          </button>
         </div>
       </div>
     </div>
