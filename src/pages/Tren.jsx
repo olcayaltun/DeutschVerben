@@ -28,7 +28,7 @@ const DraggableWord = ({ word }) => {
   );
 };
 
-const DropZone = ({ meaning, onDrop, matchedWord, isCorrect }) => {
+const DropZone = ({ meaning, onDrop, matchedWord, isIncorrect }) => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: ITEM_TYPE,
     drop: (item) => onDrop(item.word, meaning),
@@ -43,10 +43,10 @@ const DropZone = ({ meaning, onDrop, matchedWord, isCorrect }) => {
       className={`p-4 rounded-md text-center text-sm sm:text-base cursor-pointer font-medium shadow-md truncate transition-all ${
         isOver
           ? "bg-green-400 text-white"
+          : isIncorrect
+          ? "bg-red-500 text-white"
           : matchedWord
-          ? isCorrect
-            ? "bg-green-500 text-white"
-            : "bg-red-500 text-white"
+          ? "bg-green-500 text-white"
           : "bg-gray-200 text-gray-800"
       }`}
     >
@@ -60,6 +60,7 @@ const Tren = () => {
     parseInt(localStorage.getItem("currentIndex")) || 0
   );
   const [matches, setMatches] = useState([]);
+  const [hasError, setHasError] = useState(false);
 
   const keys = Object.keys(Tr[0]);
   const currentVerb = keys[currentIndex];
@@ -86,16 +87,13 @@ const Tren = () => {
   useEffect(() => {
     if (matches.length === wordKeys.length) {
       const allCorrect = matches.every((m) => words[m.word] === m.match);
-
       if (allCorrect) {
-        setTimeout(() => {
-          setMatches([]);
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
-        }, 500);
+        setMatches([]);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
+        setHasError(false);
       } else {
-        setTimeout(() => {
-          window.location.reload();
-        }, 500);
+        setHasError(true);
+        setTimeout(() => window.location.reload(), 1000);
       }
     }
   }, [matches]);
@@ -142,9 +140,8 @@ const Tren = () => {
                   matchedWord={
                     matches.find((m) => m.match === meaning)?.word || ""
                   }
-                  isCorrect={
-                    matches.find((m) => m.match === meaning)?.match ===
-                    words[matches.find((m) => m.match === meaning)?.word]
+                  isIncorrect={
+                    hasError && !matches.some((m) => words[m.word] === m.match)
                   }
                 />
               ))}
@@ -160,7 +157,7 @@ const withTouchSupport = (Component) => (props) =>
   (
     <DndProvider
       backend={TouchBackend}
-      options={{ enableMouseEvents: true, delayTouchStart: 100, touchSlop: 10 }}
+      options={{ enableMouseEvents: true, delayTouchStart: 50, touchSlop: 5 }}
     >
       <Component {...props} />
     </DndProvider>
