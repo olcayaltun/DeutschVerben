@@ -1,6 +1,5 @@
 @import "tailwindcss";
 body {
-  overflow-y: hidden;
   background: #1f1f1f;
 }
 .sch {
