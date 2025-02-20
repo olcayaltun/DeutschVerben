@@ -96,8 +96,13 @@ const Tren = () => {
       setHasError(false);
     } else {
       setHasError(true);
-      setMatches([]); // Yanlış eşleşme olduğu için eşleşmeleri sıfırla
+      // Yanlış eşleşme olduğu için sadece eşleşmeleri sıfırla, fiili değiştirme
     }
+  };
+
+  const handleRetry = () => {
+    setMatches([]); // Eşleşmeleri sıfırla
+    setHasError(false); // Hata durumunu sıfırla
   };
 
   return (
@@ -108,7 +113,7 @@ const Tren = () => {
         </Link>
       </div>
 
-      <div className="w-full max-w-6xl mx-auto py-8 px-2">
+      <div className="w-full max-w-6xl mx-auto py-[-30px] px-2">
         <h2 className="text-xl mb-6 text-center text-white">
           <span className="text-2xl sm:text-3xl text-red-400 font-bold">
             {currentVerb}
@@ -158,6 +163,15 @@ const Tren = () => {
             disabled={hasError} // Yanlış eşleşme olduğunda butonu devre dışı bırak
           >
             {hasError ? "Yanlış eşleşme, tekrar dene!" : "Sonraki Fiil"}
+          </button>
+        </div>
+
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={handleRetry}
+            className="px-6 py-2 text-white rounded-md font-bold bg-yellow-500"
+          >
+            Tekrar Dene!
           </button>
         </div>
       </div>
