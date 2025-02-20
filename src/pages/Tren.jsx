@@ -86,12 +86,18 @@ const Tren = () => {
 
   const handleNextVerb = () => {
     const allCorrect = matches.every((m) => words[m.word] === m.match);
+
     if (allCorrect) {
       setMatches([]);
       setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
       setHasError(false);
     } else {
-      setHasError(true);
+      // Eğer yanlış eşleşme varsa sayfayı yenileyelim
+      const incorrectMatch = matches.find((m) => words[m.word] !== m.match);
+      if (incorrectMatch) {
+        setHasError(true);
+        setTimeout(() => window.location.reload(), 1000);
+      }
     }
   };
 
@@ -137,9 +143,7 @@ const Tren = () => {
                   matchedWord={
                     matches.find((m) => m.match === meaning)?.word || ""
                   }
-                  isIncorrect={
-                    hasError && !matches.some((m) => words[m.word] === m.match)
-                  }
+                  isIncorrect={hasError}
                 />
               ))}
             </div>
