@@ -1,24 +1,71 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
+import { DndProvider, useDrag, useDrop } from "react-dnd";
+import { TouchBackend } from "react-dnd-touch-backend";
 import Tr from "../utils/trB";
+
+const ITEM_TYPE = "WORD";
+
+const DraggableWord = ({ word }) => {
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: ITEM_TYPE,
+    item: { word },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  }));
+
+  return (
+    <div
+      ref={drag}
+      className={`px-3 py-2 rounded-md cursor-pointer text-white text-sm sm:text-base font-medium shadow-md transition-all ${
+        isDragging ? "opacity-50 bg-yellow-500" : "bg-blue-500"
+      }`}
+    >
+      {word}
+    </div>
+  );
+};
+
+const DropZone = ({ meaning, onDrop, matchedWord, isCorrect }) => {
+  const [{ isOver }, drop] = useDrop(() => ({
+    accept: ITEM_TYPE,
+    drop: (item) => onDrop(item.word, meaning),
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+    }),
+  }));
+
+  return (
+    <div
+      ref={drop}
+      className={`p-4 rounded-md text-center text-sm sm:text-base cursor-pointer font-medium shadow-md truncate transition-all ${
+        isOver
+          ? "bg-green-400 text-white"
+          : matchedWord
+          ? isCorrect
+            ? "bg-green-500 text-white"
+            : "bg-red-500 text-white"
+          : "bg-gray-200 text-gray-800"
+      }`}
+    >
+      {matchedWord || meaning}
+    </div>
+  );
+};
 
 const Tren = () => {
   const [currentIndex, setCurrentIndex] = useState(
     parseInt(localStorage.getItem("currentIndex")) || 0
   );
-  const [selectedWord, setSelectedWord] = useState(null);
+  const [matches, setMatches] = useState([]);
+
   const keys = Object.keys(Tr[0]);
   const currentVerb = keys[currentIndex];
   const words = Tr[0][currentVerb];
   const wordKeys = Object.keys(words);
   const meanings = Object.values(words);
-  const [matches, setMatches] = useState(() => {
-    const savedMatches = localStorage.getItem("matches");
-    return savedMatches
-      ? JSON.parse(savedMatches)
-      : wordKeys.map((word) => ({ word, match: "" }));
-  });
   const [shuffledMeanings, setShuffledMeanings] = useState([]);
 
   useEffect(() => {
@@ -27,29 +74,31 @@ const Tren = () => {
 
   useEffect(() => {
     localStorage.setItem("currentIndex", currentIndex);
-    localStorage.setItem("matches", JSON.stringify(matches));
-  }, [currentIndex, matches]);
+  }, [currentIndex]);
 
-  const handleWordSelect = (word) => {
-    setSelectedWord(selectedWord === word ? null : word);
+  const handleDrop = (word, meaning) => {
+    setMatches((prevMatches) => {
+      const updatedMatches = prevMatches.filter((m) => m.word !== word);
+      return [...updatedMatches, { word, match: meaning }];
+    });
   };
 
-  const handleMeaningSelect = (meaning) => {
-    if (!selectedWord) return;
+  useEffect(() => {
+    if (matches.length === wordKeys.length) {
+      const allCorrect = matches.every((m) => words[m.word] === m.match);
 
-    const updatedMatches = matches.map((match) =>
-      match.word === selectedWord ? { ...match, match: meaning } : match
-    );
-    setMatches(updatedMatches);
-    setSelectedWord(null);
-
-    if (updatedMatches.every((m) => words[m.word] === m.match)) {
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % keys.length);
-        setMatches(wordKeys.map((word) => ({ word, match: "" })));
-      }, 500);
+      if (allCorrect) {
+        setTimeout(() => {
+          setMatches([]);
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
+        }, 500);
+      } else {
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
+      }
     }
-  };
+  }, [matches]);
 
   return (
     <div className="p-4 min-h-screen bg-gray-800">
@@ -75,19 +124,7 @@ const Tren = () => {
             </h3>
             <div className="space-y-2">
               {wordKeys.map((word) => (
-                <div
-                  key={word}
-                  onClick={() => handleWordSelect(word)}
-                  className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-pointer text-white text-sm sm:text-base font-medium shadow-md transition-all ${
-                    matches.find((m) => m.word === word)?.match
-                      ? "bg-green-500"
-                      : selectedWord === word
-                      ? "bg-yellow-500"
-                      : "bg-blue-500"
-                  }`}
-                >
-                  {word}
-                </div>
+                <DraggableWord key={word} word={word} />
               ))}
             </div>
           </div>
@@ -98,19 +135,18 @@ const Tren = () => {
             </h3>
             <div className="space-y-2">
               {shuffledMeanings.map((meaning) => (
-                <div
+                <DropZone
                   key={meaning}
-                  onClick={() => handleMeaningSelect(meaning)}
-                  className={`px-3 py-2 sm:px-4 sm:py-3 rounded-md cursor-pointer text-sm sm:text-base font-medium shadow-md truncate ${
-                    matches.some(
-                      (m) => m.match === meaning && words[m.word] === meaning
-                    )
-                      ? "bg-green-500 text-white"
-                      : "bg-gray-200 text-gray-800"
-                  }`}
-                >
-                  {meaning}
-                </div>
+                  meaning={meaning}
+                  onDrop={handleDrop}
+                  matchedWord={
+                    matches.find((m) => m.match === meaning)?.word || ""
+                  }
+                  isCorrect={
+                    matches.find((m) => m.match === meaning)?.match ===
+                    words[matches.find((m) => m.match === meaning)?.word]
+                  }
+                />
               ))}
             </div>
           </div>
@@ -120,4 +156,14 @@ const Tren = () => {
   );
 };
 
-export default Tren;
+const withTouchSupport = (Component) => (props) =>
+  (
+    <DndProvider
+      backend={TouchBackend}
+      options={{ enableMouseEvents: true, delayTouchStart: 100, touchSlop: 10 }}
+    >
+      <Component {...props} />
+    </DndProvider>
+  );
+
+export default withTouchSupport(Tren);
