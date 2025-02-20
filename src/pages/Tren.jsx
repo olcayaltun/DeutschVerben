@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
-import { TouchBackend } from "react-dnd-touch-backend";
+import { HTML5Backend } from "react-dnd-html5-backend";
 import Tr from "../utils/trB";
 
 const ITEM_TYPE = "WORD";
 
+// DraggableWord Bileşenini Tanımla
 const DraggableWord = ({ word }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ITEM_TYPE,
@@ -28,6 +29,7 @@ const DraggableWord = ({ word }) => {
   );
 };
 
+// DropZone Bileşenini Tanımla
 const DropZone = ({ meaning, onDrop, matchedWord, isIncorrect }) => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: ITEM_TYPE,
@@ -55,6 +57,7 @@ const DropZone = ({ meaning, onDrop, matchedWord, isIncorrect }) => {
   );
 };
 
+// Tren Bileşeni
 const Tren = () => {
   const [currentIndex, setCurrentIndex] = useState(
     parseInt(localStorage.getItem("currentIndex")) || 0
@@ -92,7 +95,6 @@ const Tren = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
       setHasError(false);
     } else {
-      // Eğer yanlış eşleşme varsa sadece index'i sıfırlayın ve error durumunu işaretleyin
       setHasError(true);
       setMatches([]); // Yanlış eşleşme olduğu için eşleşmeleri sıfırla
     }
@@ -147,7 +149,6 @@ const Tren = () => {
           </div>
         </div>
 
-        {/* Kontrol Butonu */}
         <div className="flex justify-center mt-6">
           <button
             onClick={handleNextVerb}
@@ -165,10 +166,7 @@ const Tren = () => {
 
 const withTouchSupport = (Component) => (props) =>
   (
-    <DndProvider
-      backend={TouchBackend}
-      options={{ enableMouseEvents: true, delayTouchStart: 50, touchSlop: 5 }}
-    >
+    <DndProvider backend={HTML5Backend}>
       <Component {...props} />
     </DndProvider>
   );
