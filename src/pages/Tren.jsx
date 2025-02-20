@@ -92,12 +92,9 @@ const Tren = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
       setHasError(false);
     } else {
-      // Eğer yanlış eşleşme varsa sayfayı yenileyelim
-      const incorrectMatch = matches.find((m) => words[m.word] !== m.match);
-      if (incorrectMatch) {
-        setHasError(true);
-        setTimeout(() => window.location.reload(), 1000);
-      }
+      // Eğer yanlış eşleşme varsa sadece index'i sıfırlayın ve error durumunu işaretleyin
+      setHasError(true);
+      setMatches([]); // Yanlış eşleşme olduğu için eşleşmeleri sıfırla
     }
   };
 
