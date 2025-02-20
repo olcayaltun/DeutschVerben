@@ -155,6 +155,7 @@ const Tren = () => {
             className={`px-6 py-2 text-white rounded-md font-bold transition-all ${
               hasError ? "bg-red-500" : "bg-green-500"
             }`}
+            disabled={hasError} // Yanlış eşleşme olduğunda butonu devre dışı bırak
           >
             {hasError ? "Yanlış eşleşme, tekrar dene!" : "Sonraki Fiil"}
           </button>
