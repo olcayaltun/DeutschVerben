@@ -67,6 +67,14 @@ const Main = () => {
           TrenbarenVerben
         </Link>
       </div>
+      <div>
+        <Link
+          to="/second"
+          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[270px]"
+        >
+          Neue
+        </Link>
+      </div>
       <div className="flex justify-center gap-[70px] max-sm:flex max-sm:flex-col">
         <div className="flex justify-center gap-10">
           {/* Geri Butonu */}

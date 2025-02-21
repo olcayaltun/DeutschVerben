@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const almancaFiiller = [
   {
     fiil: "abbauen",
@@ -114,6 +114,12 @@ function Second() {
 
   return (
     <div className="cosmic-match-factory">
+      <Link
+        to="/"
+        className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[20px] text-black"
+      >
+        Zurück
+      </Link>
       <h1>Kozmik Maç Fabrikası</h1>
       <div className="factory">
         <div className="control-panel">
