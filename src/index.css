@@ -8,3 +8,200 @@ body {
 .draggable {
   touch-action: none;
 }
+.cosmic-match-factory {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  padding: 10px; /* Mobil için daha az padding */
+  background: linear-gradient(135deg, #0d1b2a, #415a77);
+  min-height: 100vh;
+  color: #e0e1dd;
+  position: relative;
+  overflow: auto; /* Mobil için kaydırma */
+}
+
+h1 {
+  font-size: clamp(24px, 5vw, 48px); /* Mobil için esnek font boyutu */
+  color: #00ffcc;
+  text-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+  margin-bottom: 20px;
+}
+
+.factory {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: rgba(27, 38, 59, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.control-panel {
+  margin-bottom: 15px;
+}
+
+.control-panel p {
+  font-size: clamp(14px, 3vw, 18px); /* Mobil için esnek */
+  margin: 5px 0;
+}
+
+button {
+  background: linear-gradient(45deg, #ff4500, #ff00ff);
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* Mobil için küçültülmüş */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(12px, 2.5vw, 16px);
+  touch-action: manipulation; /* Dokunmatik ekranlarda kaydırmayı engeller */
+}
+
+button:hover:not(:disabled) {
+  transform: scale(1.1); /* Masaüstü için */
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.95); /* Dokunmatik cihazlar için aktif efekt */
+}
+
+button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.progress-bar {
+  width: 70%; /* Mobil için daha dar */
+  height: 15px;
+  background: #415a77;
+  border-radius: 10px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffcc, #ff00ff);
+  transition: width 0.5s ease-in-out;
+}
+
+.match-board {
+  display: flex;
+  flex-direction: column; /* Mobil için sütun düzeni */
+  gap: 10px;
+  padding: 0 5px;
+}
+
+.fiil-column,
+.anlam-column {
+  flex: 1;
+  padding: 5px;
+}
+
+h2 {
+  font-size: clamp(18px, 4vw, 24px);
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.fiil-card,
+.anlam-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: clamp(14px, 3vw, 18px);
+  user-select: none; /* Metin seçimini engeller */
+  touch-action: manipulation; /* Dokunmatik kaydırmayı engeller */
+}
+
+.fiil-card.selected,
+.anlam-card.selected {
+  background: #ff00ff;
+  color: #fff;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.fiil-card.matched,
+.anlam-card.matched {
+  background: #00ffcc;
+  color: #fff;
+  opacity: 0.7;
+  cursor: default;
+}
+
+.detail-pod {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(65, 90, 119, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+  z-index: 10;
+  text-align: center;
+  width: 90%; /* Mobil için genişlik */
+  max-width: 350px;
+}
+
+.detail-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.factory.success-flash {
+  animation: flash 0.5s;
+}
+
+.factory.error-cloud {
+  animation: cloud 0.5s;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 255, 204, 1);
+  }
+}
+
+@keyframes cloud {
+  0%,
+  100% {
+    background: rgba(27, 38, 59, 0.9);
+  }
+  50% {
+    background: rgba(50, 50, 50, 0.9);
+  }
+}
+
+.factory-complete {
+  font-size: clamp(18px, 4vw, 24px);
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+  margin-top: 15px;
+}
+
+/* Mobil için medya sorgusu */
+@media (min-width: 768px) {
+  .match-board {
+    flex-direction: row; /* Masaüstü için yan yana */
+  }
+
+  .factory {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+  }
+
+  .fiil-card:hover,
+  .anlam-card:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05); /* Hover sadece masaüstünde */
+  }
+}

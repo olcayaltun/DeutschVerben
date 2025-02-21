@@ -6,7 +6,7 @@ import TrenB from "./pages/Tren";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend"; // HTML5 backend'i
 import { TouchBackend } from "react-dnd-touch-backend"; // Touch backend'i
-
+import Second from "./pages/Second";
 const isMobile = window.innerWidth <= 768; // Mobil cihazları belirlemek için basit bir kontrol
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/test" element={<Test />} />
           <Route path="/tren" element={<TrenB />} />
+          <Route path="/second" element={<Second />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>
