@@ -1,31 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const almancaFiiller = [
-  {
-    fiil: "abbauen",
-    anlam: "Parçalanmak, ayrışmak",
-    cumle: "...weil er sich in der Natur nicht von selbst abbaut.",
-    img: "https://images.unsplash.com/photo-1503595854510-3d5854c3c999?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    fiil: "atmen",
-    anlam: "Nefes almak",
-    cumle: "...die Luft, die wir atmen...",
-    img: "https://images.unsplash.com/photo-1517248135467-2c0b8dacf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    fiil: "ausstoßen",
-    anlam: "Salmak, dışarı atmak",
-    cumle: "Fabriken... stoßen viel CO₂ aus.",
-    img: "https://images.unsplash.com/photo-1544198369-0f18d7e87b38?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    fiil: "zerstören",
-    anlam: "Yok etmek",
-    cumle: "...anstatt sie zu zerstören oder auszubeuten.",
-    img: "https://images.unsplash.com/photo-1593643946890-b5b85ade24b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-  },
-];
+import almancaFiiller from "../utils/ almancakelimeler";
+// Stil dosyasını doğru yolda olduğundan emin olun
 
 function Second() {
   const [fiiller, setFiiller] = useState([]);
@@ -37,15 +13,35 @@ function Second() {
   const [timer, setTimer] = useState(30);
   const [gameStarted, setGameStarted] = useState(false);
   const [showDetails, setShowDetails] = useState(null);
+  const [currentSetIndex, setCurrentSetIndex] = useState(0);
 
-  // Fiilleri ve anlamları karıştırarak başlat
-  useEffect(() => {
-    const shuffledFiiller = [...almancaFiiller].sort(() => Math.random() - 0.5);
-    const shuffledAnlamlar = [...almancaFiiller]
+  // 4'lü setleri çekme fonksiyonu
+  const getNextSet = () => {
+    const startIndex = currentSetIndex * 4;
+    const endIndex = Math.min(startIndex + 4, almancaFiiller.length);
+    const currentSet = almancaFiiller.slice(startIndex, endIndex);
+
+    if (currentSet.length < 4 && endIndex === almancaFiiller.length) {
+      setCurrentSetIndex(0); // Veri bittiğinde başa dön
+      return almancaFiiller.slice(0, 4);
+    }
+    return currentSet;
+  };
+
+  // Fiilleri ve anlamları karıştırma
+  const shuffleSet = () => {
+    const currentSet = getNextSet();
+    const shuffledFiiller = [...currentSet].sort(() => Math.random() - 0.5);
+    const shuffledAnlamlar = [...currentSet]
       .sort(() => Math.random() - 0.5)
       .map((item) => item.anlam);
     setFiiller(shuffledFiiller);
     setAnlamlar(shuffledAnlamlar);
+  };
+
+  // İlk seti yükle
+  useEffect(() => {
+    shuffleSet();
   }, []);
 
   // Zamanlayıcı
@@ -58,6 +54,19 @@ function Second() {
       setTimer(30);
     }
   }, [gameStarted, timer]);
+
+  // Eşleşmeler tamamlandığında bir sonraki sete geç
+  useEffect(() => {
+    if (matchedPairs.length === fiiller.length && fiiller.length > 0) {
+      setCurrentSetIndex((prev) => prev + 1);
+      setMatchedPairs([]);
+      setCrystals((prev) => prev + fiiller.length);
+      setShowDetails(null);
+      shuffleSet();
+      setGameStarted(false);
+      setTimer(30);
+    }
+  }, [matchedPairs]);
 
   const handleFiilSelect = (fiil) => {
     if (!matchedPairs.includes(fiil.fiil)) {
@@ -99,24 +108,19 @@ function Second() {
   const startGame = () => {
     setGameStarted(true);
     setMatchedPairs([]);
-    setCrystals(0);
     setTimer(30);
     setShowDetails(null);
-    const shuffledFiiller = [...almancaFiiller].sort(() => Math.random() - 0.5);
-    const shuffledAnlamlar = [...almancaFiiller]
-      .sort(() => Math.random() - 0.5)
-      .map((item) => item.anlam);
-    setFiiller(shuffledFiiller);
-    setAnlamlar(shuffledAnlamlar);
+    shuffleSet();
   };
 
-  const progress = (crystals / almancaFiiller.length) * 100;
+  const progress =
+    fiiller.length > 0 ? (matchedPairs.length / fiiller.length) * 100 : 0;
 
   return (
     <div className="cosmic-match-factory">
       <Link
         to="/"
-        className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[20px] text-black"
+        className="bg-amber-300 absolute px-3 py-2 rounded-md top-2 left-[20px] text-black"
       >
         Zurück
       </Link>
@@ -150,7 +154,7 @@ function Second() {
                     : ""
                 }`}
                 onClick={() => handleFiilSelect(fiil)}
-                onTouchEnd={() => handleFiilSelect(fiil)} // Dokunmatik ekran desteği
+                onTouchEnd={() => handleFiilSelect(fiil)}
               >
                 {fiil.fiil}
               </div>
@@ -169,7 +173,7 @@ function Second() {
                     : ""
                 }`}
                 onClick={() => handleAnlamSelect(anlam)}
-                onTouchEnd={() => handleAnlamSelect(anlam)} // Dokunmatik ekran desteği
+                onTouchEnd={() => handleAnlamSelect(anlam)}
               >
                 {anlam}
               </div>
@@ -178,11 +182,13 @@ function Second() {
         </div>
         {showDetails && (
           <div className="detail-pod">
-            <img
-              src={showDetails.img}
-              alt={showDetails.fiil}
-              className="detail-image"
-            />
+            {showDetails.img && (
+              <img
+                src={showDetails.img}
+                alt={showDetails.fiil}
+                className="detail-image"
+              />
+            )}
             <p>
               <strong>Fiil:</strong> {showDetails.fiil}
             </p>
@@ -201,11 +207,17 @@ function Second() {
           </div>
         )}
       </div>
-      {matchedPairs.length === almancaFiiller.length && (
+      {matchedPairs.length === fiiller.length && fiiller.length > 0 && (
         <p className="factory-complete">
-          Fabrika Tam Kapasite! Kozmik Üretim Başarılı!
+          Set Tamamlandı! Bir Sonraki Sete Hazır!
         </p>
       )}
+      {currentSetIndex * 4 >= almancaFiiller.length &&
+        matchedPairs.length === fiiller.length && (
+          <p className="game-complete">
+            Tüm Kelimeler Eşleşti! Fabrika Üretimi Bitti!
+          </p>
+        )}
     </div>
   );
 }
