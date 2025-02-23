@@ -1,272 +1,246 @@
 import React, { useState, useEffect } from "react";
-import Tr from "../utils/trB";
 
-const VerbTest = () => {
-  const [state, setState] = useState({
-    currentQuestion: null,
-    userAnswer: "",
-    score: { correct: 0, wrong: 0 },
-    isTestCompleted: false,
-    showFeedback: false,
-    answeredQuestions: new Set(),
-    questionType: "de-tr",
-    usedMainVerbs: new Set(),
-  });
+const Tr = {
+  kommen: {
+    ankommen: "varmak",
+    mitkommen: "birlikte gelmek",
+    zurückkommen: "geri gelmek",
+  },
+  gehen: {
+    ausgehen: "dışarı çıkmak",
+    losgehen: "yola çıkmak",
+    untergehen: "batmak, yok olmak",
+  },
+  sehen: {
+    ansehen: "izlemek",
+    nachsehen: "kontrol etmek",
+    übersehen: "gözden kaçırmak",
+  },
+  hören: {
+    anhören: "dinlemek",
+    aufhören: "bırakmak, durmak",
+    mithören: "kulak misafiri olmak",
+  },
+  stehen: {
+    aufstehen: "ayağa kalkmak, uyanmak",
+    bestehen: "başarmak, var olmak",
+    verstehen: "anlamak",
+  },
+  nehmen: {
+    aufnehmen: "kaydetmek, almak",
+    mitnehmen: "yanına almak",
+    übernehmen: "devralmak",
+  },
+  fahren: {
+    abfahren: "hareket etmek",
+    losfahren: "yola çıkmak",
+    weiterfahren: "devam etmek",
+  },
+  sprechen: {
+    ansprechen: "birine hitap etmek, bahsetmek",
+    aussprechen: "telaffuz etmek, dile getirmek",
+    durchsprechen: "bir konuyu enine boyuna konuşmak",
+    einsprechen: "bir şeye ses kaydı yapmak, birine telkin vermek",
+    mitsprechen: "konuşmaya katılmak, bir konuda söz sahibi olmak",
+    nachsprechen: "tekrar etmek, ardından söylemek",
+    vorsprechen: "bir şeyi başkalarına söylemek, birine rol için deneme yapmak",
+    widersprechen: "itiraz etmek, karşı çıkmak",
+  },
+  lassen: {
+    anlassen: "çalışır durumda bırakmak, motoru açık bırakmak",
+    auslassen: "atlamak, boş bırakmak",
+    einlassen: "içeri almak, kabul etmek",
+    nachlassen: "azalmak, gevşemek",
+    zulassen: "izin vermek, kapalı tutmak",
+    überlassen: "devretmek, bırakmak",
+    verlassen: "terk etmek, ayrılmak",
+    unterlassen: "kaçınmak, yapmamak",
+    hinterlassen: "geride bırakmak, miras bırakmak",
+    erlassen: "kanun çıkarmak, affetmek",
+  },
 
-  const allVerbs = Tr[0];
-  const MAX_QUESTIONS = 20;
+  brechen: {
+    abbrechen: "iptal etmek, kırarak koparmak",
+    aufbrechen: "zorla açmak, yola çıkmak",
+    durchbrechen: "delmek, kırıp geçmek",
+    einbrechen: "zorla girmek, çökmek",
+    unterbrechen: "kesmek, ara vermek",
+    verbrechen: "suç işlemek",
+  },
+  halten: {
+    anhalten: "durmak, durdurmak",
+    aufhalten: "alıkoymak, durdurmak",
+    durchhalten: "dayanmak, sabretmek",
+    einhalten: "uymak, riayet etmek",
+    festhalten: "sıkıca tutmak",
+    zurückhalten: "geri tutmak, engellemek",
+  },
+  laden: {
+    einladen: "davet etmek",
+    aufladen: "şarj etmek, yüklemek",
+    herunterladen: "indirmek (download)",
+    überladen: "aşırı yüklemek",
+  },
+  schlagen: {
+    abschlagen: "geri çevirmek, reddetmek",
+    aufschlagen: "açmak (kitap, göz), çarpmak",
+    durchschlagen: "zorla geçmek",
+    einschlagen: "kırmak, vurmak",
+    vorschlagen: "önermek",
+  },
+  setzen: {
+    absetzen: "görevden almak, indirmek",
+    ansetzen: "başlamak, eklemek",
+    durchsetzen: "kabul ettirmek, zorla yaptırmak",
+    einsetzen: "kullanmak, görevlendirmek",
+    umsetzen: "uygulamak, hayata geçirmek",
+  },
+  stehen: {
+    aufstehen: "ayağa kalkmak, uyanmak",
+    bestehen: "var olmak, başarmak",
+    dastehen: "orada durmak, kalakalmak",
+    verstehen: "anlamak",
+    widerstehen: "karşı koymak, direnmek",
+  },
+  ziehen: {
+    abziehen: "çekip almak, çıkarmak",
+    anziehen: "giyinmek, cezbetmek",
+    aufziehen: "büyütmek, yukarı çekmek",
+    einziehen: "taşınmak",
+    zurückziehen: "geri çekilmek",
+  },
 
-  // Fisher-Yates shuffle algoritması
-  const shuffle = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  };
-
-  const normalize = (str) =>
-    str
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9ğüşıöç ]/gi, "")
-      .replace(/\s+/g, " ");
-
-  const getRandomQuestion = () => {
-    const mainVerbs = shuffle(Object.keys(allVerbs));
-    let selected = null;
-
-    for (const mainVerb of mainVerbs) {
-      const prefixVerbs = Object.entries(allVerbs[mainVerb]);
-      if (prefixVerbs.length > 0) {
-        const [german, turkish] = shuffle(prefixVerbs)[0];
-        selected = {
-          id: `${mainVerb}_${german}`,
-          german,
-          turkish,
-          mainVerb,
-        };
-        break;
-      }
-    }
-    return selected;
-  };
-
-  const handleAnswer = () => {
-    const { currentQuestion, questionType, userAnswer } = state;
-    const correctAnswer =
-      questionType === "de-tr"
-        ? currentQuestion.turkish
-        : currentQuestion.german;
-
-    const isCorrect = normalize(userAnswer) === normalize(correctAnswer);
-
-    setState((prev) => ({
-      ...prev,
-      score: {
-        correct: prev.score.correct + (isCorrect ? 1 : 0),
-        wrong: prev.score.wrong + (isCorrect ? 0 : 1),
-      },
-      showFeedback: true,
-      answeredQuestions: new Set([
-        ...prev.answeredQuestions,
-        currentQuestion.id,
-      ]),
-      usedMainVerbs: new Set([...prev.usedMainVerbs, currentQuestion.mainVerb]),
-    }));
-
-    setTimeout(() => {
-      if (state.answeredQuestions.size >= MAX_QUESTIONS - 1) {
-        setState((prev) => ({ ...prev, isTestCompleted: true }));
-      } else {
-        generateNewQuestion();
-      }
-    }, 1500);
-  };
-
-  const generateNewQuestion = () => {
-    let newQuestion;
-    do {
-      newQuestion = getRandomQuestion();
-    } while (state.answeredQuestions.has(newQuestion.id));
-
-    setState((prev) => ({
-      ...prev,
-      currentQuestion: newQuestion,
-      userAnswer: "",
-      showFeedback: false,
-    }));
-  };
-
-  const resetTest = () => {
-    setState({
-      currentQuestion: null,
-      userAnswer: "",
-      score: { correct: 0, wrong: 0 },
-      isTestCompleted: false,
-      showFeedback: false,
-      answeredQuestions: new Set(),
-      questionType: "de-tr",
-      usedMainVerbs: new Set(),
-    });
-    generateNewQuestion();
-  };
-
-  useEffect(() => {
-    generateNewQuestion();
-  }, [state.questionType]);
-
-  if (state.isTestCompleted) {
-    return (
-      <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center mb-6 text-blue-600">
-          Test Tamamlandı! 🎉
-        </h2>
-        <div className="space-y-4 mb-8">
-          <div className="flex justify-between items-center p-4 bg-gray-50 rounded">
-            <span className="text-lg">Doğru Cevaplar:</span>
-            <span className="text-2xl font-bold text-green-600">
-              {state.score.correct}
-            </span>
-          </div>
-          <div className="flex justify-between items-center p-4 bg-gray-50 rounded">
-            <span className="text-lg">Yanlış Cevaplar:</span>
-            <span className="text-2xl font-bold text-red-600">
-              {state.score.wrong}
-            </span>
-          </div>
-          <div className="flex justify-between items-center p-4 bg-gray-50 rounded">
-            <span className="text-lg">Kullanılan Ana Fiiller:</span>
-            <span className="text-xl font-semibold text-purple-600">
-              {state.usedMainVerbs.size}
-            </span>
-          </div>
-        </div>
-        <button
-          onClick={resetTest}
-          className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-        >
-          Yeni Test Başlat
-        </button>
-      </div>
-    );
-  }
-
-  return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <div className="mb-8 flex gap-4 justify-center">
-        <button
-          onClick={() =>
-            setState((prev) => ({ ...prev, questionType: "de-tr" }))
-          }
-          className={`px-6 py-2 rounded-full transition-all ${
-            state.questionType === "de-tr"
-              ? "bg-blue-600 text-white shadow-lg"
-              : "bg-gray-200 hover:bg-gray-300"
-          }`}
-        >
-          🇩🇪 → 🇹🇷
-        </button>
-        <button
-          onClick={() =>
-            setState((prev) => ({ ...prev, questionType: "tr-de" }))
-          }
-          className={`px-6 py-2 rounded-full transition-all ${
-            state.questionType === "tr-de"
-              ? "bg-blue-600 text-white shadow-lg"
-              : "bg-gray-200 hover:bg-gray-300"
-          }`}
-        >
-          🇹🇷 → 🇩🇪
-        </button>
-      </div>
-
-      {state.currentQuestion && (
-        <div className="space-y-6">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold text-gray-600">
-              Ana Fiil:{" "}
-              <span className="text-blue-600">
-                {state.currentQuestion.mainVerb}
-              </span>
-            </h3>
-          </div>
-
-          <div className="p-6 bg-gray-50 rounded-lg">
-            <p className="text-2xl font-bold text-center mb-6">
-              {state.questionType === "de-tr"
-                ? `"${state.currentQuestion.german}"`
-                : `"${state.currentQuestion.turkish}"`}
-            </p>
-
-            <input
-              type="text"
-              value={state.userAnswer}
-              onChange={(e) =>
-                setState((prev) => ({ ...prev, userAnswer: e.target.value }))
-              }
-              className="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-xl"
-              placeholder="Cevabınızı yazın..."
-              onKeyPress={(e) => e.key === "Enter" && handleAnswer()}
-            />
-          </div>
-
-          <div className="flex justify-between items-center">
-            <button
-              onClick={handleAnswer}
-              className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-semibold"
-            >
-              Cevapla →
-            </button>
-            <span className="text-gray-600">
-              {state.answeredQuestions.size + 1}/{MAX_QUESTIONS}
-            </span>
-          </div>
-
-          {state.showFeedback && (
-            <div
-              className={`p-4 rounded-lg ${
-                normalize(state.userAnswer) ===
-                normalize(
-                  state.questionType === "de-tr"
-                    ? state.currentQuestion.turkish
-                    : state.currentQuestion.german
-                )
-                  ? "bg-green-100 text-green-800"
-                  : "bg-red-100 text-red-800"
-              }`}
-            >
-              <p className="font-semibold">
-                {normalize(state.userAnswer) ===
-                normalize(
-                  state.questionType === "de-tr"
-                    ? state.currentQuestion.turkish
-                    : state.currentQuestion.german
-                )
-                  ? "✓ Doğru Cevap!"
-                  : `✗ Doğru Cevap: ${
-                      state.questionType === "de-tr"
-                        ? state.currentQuestion.turkish
-                        : state.currentQuestion.german
-                    }`}
-              </p>
-            </div>
-          )}
-
-          <div className="h-2 bg-gray-200 rounded-full">
-            <div
-              className="h-full bg-blue-500 rounded-full transition-all duration-500"
-              style={{
-                width: `${
-                  ((state.answeredQuestions.size + 1) / MAX_QUESTIONS) * 100
-                }%`,
-              }}
-            ></div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+  fangen: {
+    anfangen: "başlamak",
+    auffangen: "yakalamak, toplamak",
+    ausfangen: "tuzak kurmak",
+    einfangen: "yakalamak, hapsetmek",
+    losfahren: "yola çıkmak", // Bu zaten var, sadece örnek için
+  },
+  räumen: {
+    aufräumen: "temizlemek, toplamak",
+    ausräumen: "boşaltmak",
+    einräumen: "itiraf etmek, yerleştirmek",
+    wegräumen: "kaldırmak, ortadan kaldırmak",
+  },
+  holen: {
+    abholen: "almak (birini/bir şeyi)",
+    einholen: "yetmek, telafi etmek",
+    nachholen: "telafi etmek",
+    zurückholen: "geri almak",
+  },
+  geben: {
+    abgeben: "teslim etmek",
+    angeben: "övünmek, belirtmek",
+    aufgeben: "vazgeçmek",
+    ausgeben: "harcamak, dağıtmak",
+    umgeben: "kuşatmak",
+    vorgeben: "bahane uydurmak",
+    zurückgeben: "geri vermek",
+  },
+  kaufen: {
+    einkaufen: "alışveriş yapmak",
+    aufkaufen: "toplamak, satın almak",
+    zurückkaufen: "geri satın almak",
+  },
+  legen: {
+    ablegen: "çıkarmak (giysi)",
+    anlegen: "yatırım yapmak, başlatmak",
+    auflegen: "kapatmak (telefon)",
+    beilegen: "eklemek, iliştirmek",
+    hinlegen: "yatırmak, koymak",
+  },
+  machen: {
+    aufmachen: "açmak",
+    ausmachen: "söndürmek, anlamak",
+    durchmachen: "katlanmak, denemek",
+    nachmachen: "taklit etmek",
+    vormachen: "göstermek, numara yapmak",
+  },
+  denken: {
+    andenken: "anmak",
+    ausdenken: "uydurmak",
+    nachdenken: "düşünmek",
+    vordenken: "önceden planlamak",
+  },
+  ziehen: {
+    abziehen: "çekip almak", // Zaten var
+    anziehen: "giymek", // Zaten var
+    beziehen: "kaplamak, ilişkilendirmek",
+    umziehen: "taşınmak",
+    vorziehen: "tercih etmek",
+  },
+  arbeiten: {
+    abarbeiten: "üzerinde çalışmak",
+    aufarbeiten: "işlemek, hazmetmek",
+    ausarbeiten: "detaylandırmak",
+    mitarbeiten: "birlikte çalışmak",
+  },
 };
 
-export default VerbTest;
+const getRandomWord = () => {
+  const verbs = Object.keys(Tr);
+  const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+  const words = Object.entries(Tr[randomVerb]);
+  const [randomWord, translation] =
+    words[Math.floor(Math.random() * words.length)];
+
+  // Yanlış seçenekleri oluştur
+  let allTranslations = Object.values(Tr).flatMap((group) =>
+    Object.values(group)
+  );
+  let wrongOptions = allTranslations.filter((t) => t !== translation);
+  wrongOptions = wrongOptions.sort(() => 0.5 - Math.random()).slice(0, 2);
+
+  // Karışık seçenekler
+  let options = [translation, ...wrongOptions].sort(() => 0.5 - Math.random());
+
+  return { question: randomWord, answer: translation, options };
+};
+
+export default function GermanQuiz() {
+  const [quiz, setQuiz] = useState(getRandomWord());
+  const [selected, setSelected] = useState(null);
+  const [feedback, setFeedback] = useState(null);
+
+  const handleAnswer = (option) => {
+    if (option === quiz.answer) {
+      setFeedback("correct");
+      setTimeout(() => {
+        setQuiz(getRandomWord());
+        setSelected(null);
+        setFeedback(null);
+      }, 1000);
+    } else {
+      setFeedback("wrong");
+    }
+    setSelected(option);
+  };
+
+  return (
+    <div className="flex flex-col items-center gap-4 p-4">
+      <h1 className="text-xl font-bold">Almanca Kelime Testi</h1>
+      <p className="text-lg text-amber-50">
+        <span className="text-red-600 text-3xl"> "{quiz.question}"</span>
+        kelimesinin anlamı nedir?
+      </p>
+      <div className="flex flex-col gap-2">
+        {quiz.options.map((option, index) => (
+          <button
+            key={index}
+            onClick={() => handleAnswer(option)}
+            className={`w-64 p-2 text-white text-lg ${
+              selected === option && feedback === "correct"
+                ? "bg-green-500"
+                : selected === option && feedback === "wrong"
+                ? "bg-red-500"
+                : "bg-blue-500"
+            }`}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
