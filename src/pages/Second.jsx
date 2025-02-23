@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import almancaFiiller from "../utils/ almancakelimeler";
-// Stil dosyasını doğru yolda olduğundan emin olun
 
 function Second() {
   const [fiiller, setFiiller] = useState([]);
@@ -14,21 +13,37 @@ function Second() {
   const [gameStarted, setGameStarted] = useState(false);
   const [showDetails, setShowDetails] = useState(null);
   const [currentSetIndex, setCurrentSetIndex] = useState(0);
+  const [showFavorites, setShowFavorites] = useState(false);
 
-  // 4'lü setleri çekme fonksiyonu
+  // LocalStorage'dan favorileri yükle
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem("favorites");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Favoriler değiştiğinde LocalStorage'a kaydet
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
+
+  const toggleFavorite = (fiil) => {
+    setFavorites((prev) =>
+      prev.includes(fiil) ? prev.filter((f) => f !== fiil) : [...prev, fiil]
+    );
+  };
+
   const getNextSet = () => {
     const startIndex = currentSetIndex * 4;
     const endIndex = Math.min(startIndex + 4, almancaFiiller.length);
     const currentSet = almancaFiiller.slice(startIndex, endIndex);
 
     if (currentSet.length < 4 && endIndex === almancaFiiller.length) {
-      setCurrentSetIndex(0); // Veri bittiğinde başa dön
+      setCurrentSetIndex(0);
       return almancaFiiller.slice(0, 4);
     }
     return currentSet;
   };
 
-  // Fiilleri ve anlamları karıştırma
   const shuffleSet = () => {
     const currentSet = getNextSet();
     const shuffledFiiller = [...currentSet].sort(() => Math.random() - 0.5);
@@ -39,12 +54,10 @@ function Second() {
     setAnlamlar(shuffledAnlamlar);
   };
 
-  // İlk seti yükle
   useEffect(() => {
     shuffleSet();
   }, []);
 
-  // Zamanlayıcı
   useEffect(() => {
     if (gameStarted && timer > 0) {
       const countdown = setInterval(() => setTimer((prev) => prev - 1), 1000);
@@ -55,7 +68,6 @@ function Second() {
     }
   }, [gameStarted, timer]);
 
-  // Eşleşmeler tamamlandığında bir sonraki sete geç
   useEffect(() => {
     if (matchedPairs.length === fiiller.length && fiiller.length > 0) {
       setCurrentSetIndex((prev) => prev + 1);
@@ -124,9 +136,17 @@ function Second() {
       >
         Zurück
       </Link>
+
       <h1>Kozmik Maç Fabrikası</h1>
+
       <div className="factory">
         <div className="control-panel">
+          <button
+            className="favorites-toggle"
+            onClick={() => setShowFavorites(!showFavorites)}
+          >
+            ⭐ Favorilerim ({favorites.length})
+          </button>
           <p>Enerji Kristalleri: {crystals}</p>
           <p>Kalan Süre: {timer}s</p>
           <button
@@ -140,6 +160,7 @@ function Second() {
             <div className="progress" style={{ width: `${progress}%` }}></div>
           </div>
         </div>
+
         <div className="match-board">
           <div className="fiil-column">
             <h2>Fiiller</h2>
@@ -156,10 +177,26 @@ function Second() {
                 onClick={() => handleFiilSelect(fiil)}
                 onTouchEnd={() => handleFiilSelect(fiil)}
               >
+                <button
+                  className={`star-btn ${
+                    favorites.includes(fiil.fiil) ? "favorited" : ""
+                  }`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(fiil.fiil);
+                  }}
+                  onTouchEnd={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(fiil.fiil);
+                  }}
+                >
+                  ★
+                </button>
                 {fiil.fiil}
               </div>
             ))}
           </div>
+
           <div className="anlam-column">
             <h2>Anlamlar</h2>
             {anlamlar.map((anlam, index) => (
@@ -180,6 +217,7 @@ function Second() {
             ))}
           </div>
         </div>
+
         {showDetails && (
           <div className="detail-pod">
             {showDetails.img && (
@@ -206,7 +244,45 @@ function Second() {
             </button>
           </div>
         )}
+
+        {showFavorites && (
+          <div className="favorites-modal">
+            <div className="favorites-content">
+              <h2>⭐ Favori Kelimeleriniz</h2>
+              <button
+                className="close-btn"
+                onClick={() => setShowFavorites(false)}
+              >
+                ✖
+              </button>
+              {favorites.length === 0 ? (
+                <p>Henüz favori kelimeniz yok.</p>
+              ) : (
+                <div className="favorites-list">
+                  {almancaFiiller
+                    .filter((item) => favorites.includes(item.fiil))
+                    .map((fiil, index) => (
+                      <div key={index} className="favorite-item">
+                        <div className="favorite-info">
+                          <h3>{fiil.fiil}</h3>
+                          <p>Anlam: {fiil.anlam}</p>
+                          {fiil.cumle && <p>Örnek: {fiil.cumle}</p>}
+                        </div>
+                        <button
+                          className="remove-btn"
+                          onClick={() => toggleFavorite(fiil.fiil)}
+                        >
+                          Kaldır
+                        </button>
+                      </div>
+                    ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
+
       {matchedPairs.length === fiiller.length && fiiller.length > 0 && (
         <p className="factory-complete">
           Set Tamamlandı! Bir Sonraki Sete Hazır!
