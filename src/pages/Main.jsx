@@ -83,6 +83,14 @@ const Main = () => {
           GAME
         </Link>
       </div>
+      <div>
+        <Link
+          to="/test1"
+          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[430px]"
+        >
+          Test1
+        </Link>
+      </div>
       <div className="flex justify-center gap-[70px] max-sm:flex max-sm:flex-col">
         <div className="flex justify-center gap-10">
           {/* Geri Butonu */}

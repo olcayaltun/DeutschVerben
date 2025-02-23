@@ -7,6 +7,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend"; // HTML5 backend'i
 import { TouchBackend } from "react-dnd-touch-backend"; // Touch backend'i
 import Second from "./pages/Second";
+import TestQuestion from "./pages/TestQuestion";
 import Game from "./pages/Game";
 import Explorer from "./pages/Explorer";
 const isMobile = window.innerWidth <= 768; // Mobil cihazları belirlemek için basit bir kontrol
@@ -23,6 +24,7 @@ const App = () => {
 
           <Route path="/game" element={<Game />} />
           <Route path="/explorer" element={<Explorer />} />
+          <Route path="/test1" element={<TestQuestion />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>
