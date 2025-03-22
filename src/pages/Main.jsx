@@ -4,6 +4,7 @@ import err from "../utils/data";
 import imgData from "../utils/img";
 import verben from "../utils/verb";
 import { Link } from "react-router-dom";
+
 const Main = () => {
   const [kelime, setKelime] = useState("");
   const [anlami, setAnlami] = useState("");
@@ -51,57 +52,56 @@ const Main = () => {
 
   return (
     <div className="mt-[320px] overflow-y-hidden ml-5 mr-5">
-      <div>
+      {/* Navigation Links Container */}
+      <div className="absolute top-2 left-2 flex gap-2 flex-wrap z-10">
+        <Link
+          to="/yeni"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          Yeni
+        </Link>
         <Link
           to="/test"
-          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
           Test
         </Link>
-      </div>
-      <div>
         <Link
           to="/tren"
-          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[100px]"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors whitespace-nowrap"
         >
           TrenbarenVerben
         </Link>
-      </div>
-      <div>
         <Link
           to="/second"
-          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[270px]"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
           Neue
         </Link>
-      </div>
-      <div>
         <Link
           to="/game"
-          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[350px]"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
           GAME
         </Link>
-      </div>
-      <div>
         <Link
           to="/test1"
-          className="bg-amber-300 absolute  px-3 py-2 rounded-md top-2 left-[430px]"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
           Test1
         </Link>
       </div>
+
+      {/* Main Content */}
       <div className="flex justify-center gap-[70px] max-sm:flex max-sm:flex-col">
         <div className="flex justify-center gap-10">
-          {/* Geri Butonu */}
           <button
-            className="max-sm:absolute max-sm:left-[120px] "
+            className="max-sm:absolute max-sm:left-[120px]"
             onClick={handlePrev}
           >
-            <FaArrowCircleLeft className="text-white text-4xl  hover:text-blue-500" />
+            <FaArrowCircleLeft className="text-white text-4xl hover:text-blue-500" />
           </button>
 
-          {/* İleri Butonu */}
           <button
             className="max-sm:absolute max-sm:left-[250px]"
             onClick={handleNext}
@@ -118,16 +118,14 @@ const Main = () => {
             <FaArrowCircleRight className="text-white text-4xl hover:text-blue-500" />
           </button>
           <p
-            className={
-              `font-bold p-2 capitalize max-w-[200px] rounded-md w-[300px] text-center border-[.7px] ` +
-              (col
-                ? "bg-green-600 text-white"
-                : "bg-green-600 text-transparent")
-            }
+            className={`font-bold p-2 capitalize max-w-[200px] rounded-md w-[300px] text-center border-[.7px] ${
+              col ? "bg-green-600 text-white" : "bg-green-600 text-transparent"
+            }`}
           >
             {anlami}
           </p>
         </div>
+
         <div className="absolute right-[50px] top-[350px] max-md:top-[600px] max-md:right-[100px] max-sm:top-[70px] max-sm:left-[130px]">
           <img
             className="sch rounded-md shadow-2xl shadow-white h-[230px] w-[230px]"
@@ -135,12 +133,14 @@ const Main = () => {
             alt=""
           />
         </div>
+
         <button
           className="bg-blue-700 p-2 rounded-md text-white hover:bg-blue-500 border-[.7px]"
           onClick={handleNext}
         >
           Verben mit Satze
         </button>
+
         <div className="bg-blue-700 p-2 rounded-md text-white hover:bg-blue-500 border-[.7px] items-center flex justify-center">
           <p>{verben[num]}</p>
         </div>
