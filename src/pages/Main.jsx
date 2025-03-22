@@ -61,6 +61,12 @@ const Main = () => {
           Yeni
         </Link>
         <Link
+          to="/maintest"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          Go Test
+        </Link>
+        <Link
           to="/test"
           className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
