@@ -9,12 +9,10 @@ const Frankfurt = () => {
 
   useEffect(() => {
     try {
-      // Veri doğrulama
       if (!Array.isArray(yeni) || yeni.length === 0) {
         throw new Error("Veri bulunamadı veya hatalı format!");
       }
 
-      // LocalStorage'dan index yükleme
       const savedIndex = parseInt(localStorage.getItem("verbIndex") || 0);
       const validIndex = Math.max(0, Math.min(savedIndex, yeni.length - 1));
 
@@ -71,22 +69,20 @@ const Frankfurt = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex flex-col items-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-6">
-        {/* Navigasyon Okları */}
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-4 sm:p-6">
         <div className="flex items-center justify-between gap-4 mb-8">
           <button
             onClick={() => handleNavigation("prev")}
-            className="text-blue-500 hover:text-blue-600 transition-transform hover:scale-110"
+            className="text-blue-500 hover:text-blue-600 transition-transform hover:scale-110 hidden sm:block"
           >
             <FaArrowCircleLeft size={40} />
           </button>
 
-          {/* İçerik Alanı */}
           <div className="flex-1 space-y-8">
-            {/* Kelime */}
+            {/* Düzeltilmiş Kelime Gösterimi */}
             <h1 className="text-4xl font-extrabold text-center text-gray-800 break-words"></h1>
 
-            {/* Anlam */}
+            {/* Düzeltilmiş Anlam Bölümü */}
             <div className="bg-indigo-50 p-6 rounded-xl border-2 border-indigo-100">
               <p className="text-xl text-center">
                 <span className="font-semibold text-indigo-600">Anlamı:</span>{" "}
@@ -94,7 +90,7 @@ const Frankfurt = () => {
               </p>
             </div>
 
-            {/* Cümle */}
+            {/* Düzeltilmiş Cümle Bölümü */}
             <div className="bg-green-50 p-6 rounded-xl border-2 border-green-100">
               <p className="text-lg italic text-center text-gray-700 leading-relaxed">
                 "{currentItem.cümle}"
@@ -104,13 +100,12 @@ const Frankfurt = () => {
 
           <button
             onClick={() => handleNavigation("next")}
-            className="text-blue-500 hover:text-blue-600 transition-transform hover:scale-110"
+            className="text-blue-500 hover:text-blue-600 transition-transform hover:scale-110 hidden sm:block"
           >
             <FaArrowCircleRight size={40} />
           </button>
         </div>
 
-        {/* Progress Göstergesi */}
         <div className="text-center mt-6">
           <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
             {currentIndex + 1} / {yeni.length}
@@ -118,8 +113,8 @@ const Frankfurt = () => {
         </div>
       </div>
 
-      {/* Mobil Navigasyon Butonları */}
-      <div className="mt-8 w-full max-w-md grid gap-4 grid-cols-2">
+      {/* Mobil Butonlar */}
+      <div className="mt-8 w-full max-w-md grid gap-4 grid-cols-2 sm:hidden">
         <button
           onClick={() => handleNavigation("prev")}
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all"
