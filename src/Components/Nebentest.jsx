@@ -53,9 +53,9 @@ function Nebentest() {
     },
     {
       conjunction: "sowie",
-      meaning: "ve de, -diği gibi",
-      example: "Ich liebe sowohl Schokolade als auch Kuchen.",
-      translation: "Hem çikolatayı hem de keki severim.",
+      meaning: "hemen, olur olmaz",
+      example: "Sowie er ankam, begann die Party",
+      translation: "O gelir gelmez parti başladı",
     },
     {
       conjunction: "sooft",
@@ -89,7 +89,7 @@ function Nebentest() {
     },
     {
       conjunction: "wobei",
-      meaning: "ki bu da, -iken",
+      meaning: "ancak,bununla birlikte",
       example: "Er ist sehr nett, wobei er manchmal etwas schüchtern ist.",
       translation: "O çok kibar, ki bazen biraz utangaçtır.",
     },
@@ -125,7 +125,7 @@ function Nebentest() {
     },
     {
       conjunction: "zu als dass",
-      meaning: "bir şey için, -dığı kadar",
+      meaning: "o kadar ki",
       example: "Es ist zu kalt, als dass wir draußen bleiben könnten.",
       translation: "Dışarıda kalamayacak kadar soğuk.",
     },
