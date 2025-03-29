@@ -4,10 +4,11 @@ import kelimeler from "../utils/yeni";
 import Frank from "../utils/Frankfurter";
 import FrankTest from "../Components/FrankTest";
 import SoruKartlari from "../Components/AlmancaSoru";
-
+import NebenSatz from "../Components/NebenSätz";
+import conjunctions from "../Components/NebenSätz";
 const MainTest = () => {
   const [showTest, setShowTest] = useState(false);
-  const [testType, setTestType] = useState(null); // Yeni test türü durumu ekliyoruz
+  const [testType, setTestType] = useState(null);
 
   const handleTest1Click = () => {
     setTestType("test1");
@@ -24,6 +25,24 @@ const MainTest = () => {
     setShowTest(true);
   };
 
+  const handleNebenSatzClick = () => {
+    setTestType("nebenSatz");
+    setShowTest(true);
+  };
+
+  const buttonStyle = {
+    padding: "15px 40px",
+    fontSize: "18px",
+    backgroundColor: "#3498db",
+    color: "white",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    transition: "transform 0.2s",
+    margin: "10px",
+    width: "250px",
+  };
+
   return (
     <div>
       <div style={{ textAlign: "center", padding: "20px" }}>
@@ -32,67 +51,45 @@ const MainTest = () => {
             <h1 style={{ marginBottom: "30px", color: "#2c3e50" }}>
               Almanca Öğrenme Testleri
             </h1>
-            <button
-              onClick={handleTest1Click}
-              style={{
-                padding: "15px 40px",
-                fontSize: "18px",
-                backgroundColor: "#3498db",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-                transition: "transform 0.2s",
-                margin: "10px",
-              }}
-            >
+
+            <button onClick={handleTest1Click} style={buttonStyle}>
               Test1'i Başlat
             </button>
-            <p style={{ marginTop: "20px", color: "#666" }}>
-              Test1'de toplam {kelimeler.length} soru bulunuyor
-            </p>
-            <button
-              onClick={handleFrankTestClick}
-              style={{
-                padding: "15px 40px",
-                fontSize: "18px",
-                backgroundColor: "#3498db",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-                transition: "transform 0.2s",
-                margin: "10px",
-              }}
-            >
+
+            <button onClick={handleFrankTestClick} style={buttonStyle}>
               Frankfurter Testini Başlat
             </button>
-            <p style={{ marginTop: "20px", color: "#666" }}>
-              Frankfurter Testi'nde toplam {Frank.length} soru bulunuyor
-            </p>
-            <button
-              onClick={handleSoruKartlariClick}
-              style={{
-                padding: "15px 40px",
-                fontSize: "18px",
-                backgroundColor: "#3498db",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-                transition: "transform 0.2s",
-                margin: "10px",
-              }}
-            >
+
+            <button onClick={handleSoruKartlariClick} style={buttonStyle}>
               Soru Kartlarını Aç
             </button>
+
+            <button onClick={handleNebenSatzClick} style={buttonStyle}>
+              Bağlaçları Göster
+            </button>
+
+            <div style={{ marginTop: "30px" }}>
+              <p style={{ color: "#666" }}>
+                Test1: {kelimeler.length} soru | Frankfurter: {Frank.length}{" "}
+                soru | Bağlaçlar: {conjunctions.length} adet
+              </p>
+            </div>
           </div>
-        ) : testType === "test1" ? (
-          <TestOne onReturn={() => setShowTest(false)} />
-        ) : testType === "frankTest" ? (
-          <FrankTest onReturn={() => setShowTest(false)} />
         ) : (
-          <SoruKartlari onReturn={() => setShowTest(false)} />
+          <>
+            {testType === "test1" && (
+              <TestOne onReturn={() => setShowTest(false)} />
+            )}
+            {testType === "frankTest" && (
+              <FrankTest onReturn={() => setShowTest(false)} />
+            )}
+            {testType === "soruKartlari" && (
+              <SoruKartlari onReturn={() => setShowTest(false)} />
+            )}
+            {testType === "nebenSatz" && (
+              <NebenSatz onReturn={() => setShowTest(false)} />
+            )}
+          </>
         )}
       </div>
     </div>
