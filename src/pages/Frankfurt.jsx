@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import yeni from "../utils/Frankfurter";
+import Frankone from "../Components/Frankone";
+import Frankzwei from "../Components/Frankzwei";
+import Frankdrei from "../Components/Frankdrei";
+import Frankvier from "../Components/Frankvier";
 
 const Frankfurt = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentItem, setCurrentItem] = useState(null);
   const [error, setError] = useState("");
+  const [showComponents, setShowComponents] = useState({
+    frankone: false,
+    frankzwei: false,
+    frankdrei: false,
+    frankvier: false,
+  });
 
   useEffect(() => {
     try {
@@ -33,6 +43,13 @@ const Frankfurt = () => {
     localStorage.setItem("verbIndex", newIndex);
     setCurrentIndex(newIndex);
     setCurrentItem(yeni[newIndex]);
+  };
+
+  const toggleComponent = (component) => {
+    setShowComponents((prev) => ({
+      ...prev,
+      [component]: !prev[component],
+    }));
   };
 
   if (error) {
@@ -79,18 +96,17 @@ const Frankfurt = () => {
           </button>
 
           <div className="flex-1 space-y-8">
-            {/* Düzeltilmiş Kelime Gösterimi */}
-            <h1 className="text-4xl font-extrabold text-center text-gray-800 break-words"></h1>
+            <h1 className="text-4xl font-extrabold text-center text-gray-800 break-words">
+              {currentItem.kelime}
+            </h1>
 
-            {/* Düzeltilmiş Anlam Bölümü */}
             <div className="bg-indigo-50 p-6 rounded-xl border-2 border-indigo-100">
               <p className="text-xl text-center">
                 <span className="font-semibold text-indigo-600">Anlamı:</span>{" "}
-                <span className="text-black-700">{currentItem.kelime}</span>
+                <span className="text-black-700">{currentItem.anlam}</span>
               </p>
             </div>
 
-            {/* Düzeltilmiş Cümle Bölümü */}
             <div className="bg-green-50 p-6 rounded-xl border-2 border-green-100">
               <p className="text-lg italic text-center text-gray-700 leading-relaxed">
                 "{currentItem.cümle}"
@@ -113,7 +129,6 @@ const Frankfurt = () => {
         </div>
       </div>
 
-      {/* Mobil Butonlar */}
       <div className="mt-8 w-full max-w-md grid gap-4 grid-cols-2 sm:hidden">
         <button
           onClick={() => handleNavigation("prev")}
@@ -127,6 +142,49 @@ const Frankfurt = () => {
         >
           Sonraki →
         </button>
+      </div>
+
+      {/* Component Kontrol ve Görüntüleme Alanı */}
+      <div className="mt-6 w-full max-w-6xl">
+        <div className="flex flex-wrap gap-3 justify-center mb-4">
+          {Object.entries(showComponents).map(([key, value]) => (
+            <button
+              key={key}
+              onClick={() => toggleComponent(key)}
+              className={`px-4 py-2 rounded-lg flex items-center transition-colors ${
+                value
+                  ? "bg-amber-400 hover:bg-amber-500"
+                  : "bg-amber-200 hover:bg-amber-300"
+              }`}
+            >
+              <span className="font-medium capitalize">{key}</span>
+              <span className="ml-2 text-sm">{value ? "▲" : "▼"}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+          {showComponents.frankone && (
+            <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+              <Frankone />
+            </div>
+          )}
+          {showComponents.frankzwei && (
+            <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+              <Frankzwei />
+            </div>
+          )}
+          {showComponents.frankdrei && (
+            <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+              <Frankdrei />
+            </div>
+          )}
+          {showComponents.frankvier && (
+            <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+              <Frankvier />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
