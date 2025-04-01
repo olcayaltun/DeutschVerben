@@ -55,6 +55,12 @@ const Main = () => {
       {/* Navigation Links Container */}
       <div className="absolute top-2 left-2 flex gap-2 flex-wrap z-10">
         <Link
+          to="/soru"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          Sorular
+        </Link>
+        <Link
           to="/frank"
           className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >

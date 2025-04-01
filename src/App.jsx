@@ -13,6 +13,7 @@ import Explorer from "./pages/Explorer";
 import YeniVerb from "./pages/YeniVerb";
 import MainTest from "./pages/MainTest";
 import Frankfurt from "./pages/Frankfurt";
+import Sorular from "./pages/Sorular";
 const isMobile = window.innerWidth <= 768; // Mobil cihazları belirlemek için basit bir kontrol
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/yeni" element={<YeniVerb />} />
           <Route path="/maintest" element={<MainTest />} />
           <Route path="/frank" element={<Frankfurt />} />
+          <Route path="/soru" element={<Sorular />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>
