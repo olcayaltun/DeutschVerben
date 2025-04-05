@@ -78,7 +78,7 @@ const questions = [
       { text: "eine / ein", value: "c" },
       { text: "ein / eine", value: "d" },
     ],
-    correctAnswer: "d", // Ich habe ein Bruder und eine Schwester.
+    correctAnswer: "b", // Ich habe ein Bruder und eine Schwester.
   },
   {
     question: "Das ist _____ alte Haus.",
@@ -160,17 +160,17 @@ const questions = [
       { text: "Er", value: "c" },
       { text: "Wir", value: "d" },
     ],
-    correctAnswer: "a", // Ich lerne Deutsch seit einem Jahr.
+    correctAnswer: "c", // Ich lerne Deutsch seit einem Jahr.
   },
   {
     question: "_____ fährt nach Berlin.",
     options: [
       { text: "Wir", value: "a" },
-      { text: "Ihr", value: "b" },
+      { text: "Er", value: "b" },
       { text: "Sie", value: "c" },
       { text: "Ich", value: "d" },
     ],
-    correctAnswer: "d", // Ich fahre nach Berlin.
+    correctAnswer: "b", // Ich fahre nach Berlin.
   },
   {
     question: "_____ arbeitet in einer Firma.",
@@ -190,12 +190,12 @@ const questions = [
       { text: "sie", value: "c" },
       { text: "wir", value: "d" },
     ],
-    correctAnswer: "a", // Können du mir helfen?
+    correctAnswer: "d", // Können du mir helfen?
   },
   {
     question: "_____ geht ins Kino.",
     options: [
-      { text: "Ich", value: "a" },
+      { text: "Er", value: "a" },
       { text: "Du", value: "b" },
       { text: "Sie (3. Person Plural)", value: "c" },
       { text: "Wir", value: "d" },
@@ -1036,7 +1036,7 @@ const questions = [
       { text: "die / dem", value: "c" },
       { text: "die / das", value: "d" },
     ],
-    correctAnswer: "d", // Ich sehe die Frau mit das Kind.
+    correctAnswer: "c", // Ich sehe die Frau mit das Kind.
   },
   {
     question: "_____ Kinder spielen mit _____ Ball.",
@@ -1221,213 +1221,207 @@ const questions = [
     correctAnswer: "a", // Das Museum ist neben der Kirche.
   },
   {
-    questions: [
-      {
-        question: "Ich _____ gestern ins Kino _____.",
-        options: [
-          { text: "bin / gegangen", value: "a" },
-          { text: "habe / gegangen", value: "b" },
-          { text: "bin / gegehen", value: "c" },
-          { text: "habe / gehen", value: "d" },
-        ],
-        correctAnswer: "a", // Ich bin gestern ins Kino gegangen.
-      },
-      {
-        question: "Er _____ viel Wasser _____.",
-        options: [
-          { text: "hat / getrunken", value: "a" },
-          { text: "ist / getrunken", value: "b" },
-          { text: "hat / trinken", value: "c" },
-          { text: "ist / trinken", value: "d" },
-        ],
-        correctAnswer: "a", // Er hat viel Wasser getrunken.
-      },
-      {
-        question: "Wir _____ uns gut _____.",
-        options: [
-          { text: "sind / unterhalten", value: "a" },
-          { text: "haben / unterhalten", value: "b" },
-          { text: "sind / untergehalten", value: "c" },
-          { text: "haben / untergehalten", value: "d" },
-        ],
-        correctAnswer: "b", // Wir haben uns gut unterhalten.
-      },
-      {
-        question: "Sie _____ sehr schnell _____.",
-        options: [
-          { text: "ist / gelaufen", value: "a" },
-          { text: "hat / gelaufen", value: "b" },
-          { text: "ist / gelauft", value: "c" },
-          { text: "hat / gelauft", value: "d" },
-        ],
-        correctAnswer: "a", // Sie ist sehr schnell gelaufen.
-      },
-      {
-        question: "_____ du das Buch schon _____?",
-        options: [
-          { text: "Hast / gelesen", value: "a" },
-          { text: "Bist / gelesen", value: "b" },
-          { text: "Hast / lesen", value: "c" },
-          { text: "Bist / lesen", value: "d" },
-        ],
-        correctAnswer: "a", // Hast du das Buch schon gelesen?
-      },
-      {
-        question: "Die Kinder _____ im Garten _____.",
-        options: [
-          { text: "sind / gespielt", value: "a" },
-          { text: "haben / gespielt", value: "b" },
-          { text: "sind / gespielen", value: "c" },
-          { text: "haben / spielen", value: "d" },
-        ],
-        correctAnswer: "b", // Die Kinder haben im Garten gespielt.
-      },
-      {
-        question: "Er _____ seiner Mutter einen Brief _____.",
-        options: [
-          { text: "ist / geschrieben", value: "a" },
-          { text: "hat / geschreiben", value: "b" },
-          { text: "hat / geschrieben", value: "c" },
-          { text: "ist / schreiben", value: "d" },
-        ],
-        correctAnswer: "c", // Er hat seiner Mutter einen Brief geschrieben.
-      },
-      {
-        question: "Wir _____ in München _____.",
-        options: [
-          { text: "sind / gewesen", value: "a" },
-          { text: "haben / gewesen", value: "b" },
-          { text: "sind / gesein", value: "c" },
-          { text: "haben / sein", value: "d" },
-        ],
-        correctAnswer: "a", // Wir sind in München gewesen.
-      },
-      {
-        question: "_____ ihr schon _____ ?",
-        options: [
-          { text: "Habt / gefrühstückt", value: "a" },
-          { text: "Seid / gefrühstückt", value: "b" },
-          { text: "Habt / frühstücken", value: "c" },
-          { text: "Seid / frühstücken", value: "d" },
-        ],
-        correctAnswer: "a", // Habt ihr schon gefrühstückt?
-      },
-      {
-        question: "Das Flugzeug _____ pünktlich _____.",
-        options: [
-          { text: "hat / angekommen", value: "a" },
-          { text: "ist / angekommen", value: "b" },
-          { text: "hat / ankommen", value: "c" },
-          { text: "ist / gekommen", value: "d" },
-        ],
-        correctAnswer: "b", // Das Flugzeug ist pünktlich angekommen.
-      },
+    question: "Ich _____ gestern ins Kino _____.",
+    options: [
+      { text: "bin / gegangen", value: "a" },
+      { text: "habe / gegangen", value: "b" },
+      { text: "bin / gegehen", value: "c" },
+      { text: "habe / gehen", value: "d" },
     ],
+    correctAnswer: "a", // Ich bin gestern ins Kino gegangen.
   },
   {
-    questions: [
-      {
-        question: "Ich _____ gestern zu Hause.",
-        options: [
-          { text: "war", value: "a" },
-          { text: "warst", value: "b" },
-          { text: "waren", value: "c" },
-          { text: "sein", value: "d" },
-        ],
-        correctAnswer: "a", // Ich war gestern zu Hause.
-      },
-      {
-        question: "Er _____ ein neues Auto.",
-        options: [
-          { text: "habte", value: "a" },
-          { text: "hatte", value: "b" },
-          { text: "hatten", value: "c" },
-          { text: "haben", value: "d" },
-        ],
-        correctAnswer: "b", // Er hatte ein neues Auto.
-      },
-      {
-        question: "Wir _____ ins Kino gehen.",
-        options: [
-          { text: "wollte", value: "a" },
-          { text: "wolltest", value: "b" },
-          { text: "wollten", value: "c" },
-          { text: "wollen", value: "d" },
-        ],
-        correctAnswer: "c", // Wir wollten ins Kino gehen.
-      },
-      {
-        question: "Sie _____ mir nicht helfen.",
-        options: [
-          { text: "konnten", value: "a" },
-          { text: "könnte", value: "b" },
-          { text: "konnte", value: "c" },
-          { text: "können", value: "d" },
-        ],
-        correctAnswer: "c", // Sie konnte mir nicht helfen.
-      },
-      {
-        question: "Das Kind _____ laut.",
-        options: [
-          { text: "weinte", value: "a" },
-          { text: "weinen", value: "b" },
-          { text: "weint", value: "c" },
-          { text: "weinten", value: "d" },
-        ],
-        correctAnswer: "a", // Das Kind weinte laut.
-      },
-      {
-        question: "Ich _____ nach Berlin.",
-        options: [
-          { text: "fuhrt", value: "a" },
-          { text: "fuhrst", value: "b" },
-          { text: "fuhr", value: "c" },
-          { text: "fahren", value: "d" },
-        ],
-        correctAnswer: "c", // Ich fuhr nach Berlin.
-      },
-      {
-        question: "_____ du gestern in der Schule?",
-        options: [
-          { text: "Warst", value: "a" },
-          { text: "War", value: "b" },
-          { text: "Waren", value: "c" },
-          { text: "Bist", value: "d" },
-        ],
-        correctAnswer: "a", // Warst du gestern in der Schule?
-      },
-      {
-        question: "Die Leute _____ sehr freundlich.",
-        options: [
-          { text: "war", value: "a" },
-          { text: "warst", value: "b" },
-          { text: "waren", value: "c" },
-          { text: "sein", value: "d" },
-        ],
-        correctAnswer: "c", // Die Leute waren sehr freundlich.
-      },
-      {
-        question: "Er _____ viel Geld für das Geschenk.",
-        options: [
-          { text: "ausgebte", value: "a" },
-          { text: "gab aus", value: "b" },
-          { text: "ausgab", value: "c" },
-          { text: "gabte aus", value: "d" },
-        ],
-        correctAnswer: "c", // Er ausgab viel Geld für das Geschenk.
-      },
-      {
-        question: "Wir _____ den ganzen Tag.",
-        options: [
-          { text: "arbeitete", value: "a" },
-          { text: "arbeiteten", value: "b" },
-          { text: "arbeiten", value: "c" },
-          { text: "arbeitst", value: "d" },
-        ],
-        correctAnswer: "b", // Wir arbeiteten den ganzen Tag.
-      },
+    question: "Er _____ viel Wasser _____.",
+    options: [
+      { text: "hat / getrunken", value: "a" },
+      { text: "ist / getrunken", value: "b" },
+      { text: "hat / trinken", value: "c" },
+      { text: "ist / trinken", value: "d" },
     ],
+    correctAnswer: "a", // Er hat viel Wasser getrunken.
   },
+  {
+    question: "Wir _____ uns gut _____.",
+    options: [
+      { text: "sind / unterhalten", value: "a" },
+      { text: "haben / unterhalten", value: "b" },
+      { text: "sind / untergehalten", value: "c" },
+      { text: "haben / untergehalten", value: "d" },
+    ],
+    correctAnswer: "b", // Wir haben uns gut unterhalten.
+  },
+  {
+    question: "Sie _____ sehr schnell _____.",
+    options: [
+      { text: "ist / gelaufen", value: "a" },
+      { text: "hat / gelaufen", value: "b" },
+      { text: "ist / gelauft", value: "c" },
+      { text: "hat / gelauft", value: "d" },
+    ],
+    correctAnswer: "a", // Sie ist sehr schnell gelaufen.
+  },
+  {
+    question: "_____ du das Buch schon _____?",
+    options: [
+      { text: "Hast / gelesen", value: "a" },
+      { text: "Bist / gelesen", value: "b" },
+      { text: "Hast / lesen", value: "c" },
+      { text: "Bist / lesen", value: "d" },
+    ],
+    correctAnswer: "a", // Hast du das Buch schon gelesen?
+  },
+  {
+    question: "Die Kinder _____ im Garten _____.",
+    options: [
+      { text: "sind / gespielt", value: "a" },
+      { text: "haben / gespielt", value: "b" },
+      { text: "sind / gespielen", value: "c" },
+      { text: "haben / spielen", value: "d" },
+    ],
+    correctAnswer: "b", // Die Kinder haben im Garten gespielt.
+  },
+  {
+    question: "Er _____ seiner Mutter einen Brief _____.",
+    options: [
+      { text: "ist / geschrieben", value: "a" },
+      { text: "hat / geschreiben", value: "b" },
+      { text: "hat / geschrieben", value: "c" },
+      { text: "ist / schreiben", value: "d" },
+    ],
+    correctAnswer: "c", // Er hat seiner Mutter einen Brief geschrieben.
+  },
+  {
+    question: "Wir _____ in München _____.",
+    options: [
+      { text: "sind / gewesen", value: "a" },
+      { text: "haben / gewesen", value: "b" },
+      { text: "sind / gesein", value: "c" },
+      { text: "haben / sein", value: "d" },
+    ],
+    correctAnswer: "a", // Wir sind in München gewesen.
+  },
+  {
+    question: "_____ ihr schon _____ ?",
+    options: [
+      { text: "Habt / gefrühstückt", value: "a" },
+      { text: "Seid / gefrühstückt", value: "b" },
+      { text: "Habt / frühstücken", value: "c" },
+      { text: "Seid / frühstücken", value: "d" },
+    ],
+    correctAnswer: "a", // Habt ihr schon gefrühstückt?
+  },
+  {
+    question: "Das Flugzeug _____ pünktlich _____.",
+    options: [
+      { text: "hat / angekommen", value: "a" },
+      { text: "ist / angekommen", value: "b" },
+      { text: "hat / ankommen", value: "c" },
+      { text: "ist / gekommen", value: "d" },
+    ],
+    correctAnswer: "b", // Das Flugzeug ist pünktlich angekommen.
+  },
+
+  {
+    question: "Ich _____ gestern zu Hause.",
+    options: [
+      { text: "war", value: "a" },
+      { text: "warst", value: "b" },
+      { text: "waren", value: "c" },
+      { text: "sein", value: "d" },
+    ],
+    correctAnswer: "a", // Ich war gestern zu Hause.
+  },
+  {
+    question: "Er _____ ein neues Auto.",
+    options: [
+      { text: "habte", value: "a" },
+      { text: "hatte", value: "b" },
+      { text: "hatten", value: "c" },
+      { text: "haben", value: "d" },
+    ],
+    correctAnswer: "b", // Er hatte ein neues Auto.
+  },
+  {
+    question: "Wir _____ ins Kino gehen.",
+    options: [
+      { text: "wollte", value: "a" },
+      { text: "wolltest", value: "b" },
+      { text: "wollten", value: "c" },
+      { text: "wollen", value: "d" },
+    ],
+    correctAnswer: "c", // Wir wollten ins Kino gehen.
+  },
+  {
+    question: "Sie _____ mir nicht helfen.",
+    options: [
+      { text: "konnten", value: "a" },
+      { text: "könnte", value: "b" },
+      { text: "konnte", value: "c" },
+      { text: "können", value: "d" },
+    ],
+    correctAnswer: "c", // Sie konnte mir nicht helfen.
+  },
+  {
+    question: "Das Kind _____ laut.",
+    options: [
+      { text: "weinte", value: "a" },
+      { text: "weinen", value: "b" },
+      { text: "weint", value: "c" },
+      { text: "weinten", value: "d" },
+    ],
+    correctAnswer: "a", // Das Kind weinte laut.
+  },
+  {
+    question: "Ich _____ nach Berlin.",
+    options: [
+      { text: "fuhrt", value: "a" },
+      { text: "fuhrst", value: "b" },
+      { text: "fuhr", value: "c" },
+      { text: "fahren", value: "d" },
+    ],
+    correctAnswer: "c", // Ich fuhr nach Berlin.
+  },
+  {
+    question: "_____ du gestern in der Schule?",
+    options: [
+      { text: "Warst", value: "a" },
+      { text: "War", value: "b" },
+      { text: "Waren", value: "c" },
+      { text: "Bist", value: "d" },
+    ],
+    correctAnswer: "a", // Warst du gestern in der Schule?
+  },
+  {
+    question: "Die Leute _____ sehr freundlich.",
+    options: [
+      { text: "war", value: "a" },
+      { text: "warst", value: "b" },
+      { text: "waren", value: "c" },
+      { text: "sein", value: "d" },
+    ],
+    correctAnswer: "c", // Die Leute waren sehr freundlich.
+  },
+  {
+    question: "Er _____ viel Geld für das Geschenk.",
+    options: [
+      { text: "ausgebte", value: "a" },
+      { text: "gab aus", value: "b" },
+      { text: "ausgab", value: "c" },
+      { text: "gabte aus", value: "d" },
+    ],
+    correctAnswer: "c", // Er ausgab viel Geld für das Geschenk.
+  },
+  {
+    question: "Wir _____ den ganzen Tag.",
+    options: [
+      { text: "arbeitete", value: "a" },
+      { text: "arbeiteten", value: "b" },
+      { text: "arbeiten", value: "c" },
+      { text: "arbeitst", value: "d" },
+    ],
+    correctAnswer: "b", // Wir arbeiteten den ganzen Tag.
+  },
+
   {
     question: "Berlin ist _____ als München.",
     options: [

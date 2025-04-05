@@ -20,7 +20,7 @@ function Sorular() {
     if (savedShowResult === "true") setShowResult(true);
   }, []);
 
-  // Her soru değiştiğinde verileri kaydet
+  // Değişikliklerde verileri LocalStorage'a yaz
   useEffect(() => {
     localStorage.setItem("currentQuestion", currentQuestion);
     localStorage.setItem("score", score);
@@ -28,6 +28,7 @@ function Sorular() {
   }, [currentQuestion, score, showResult]);
 
   const handleOptionSelect = (optionValue) => {
+    if (selectedOption !== null) return; // Tekrar seçimi engelle
     setSelectedOption(optionValue);
     const correctAnswer = questions[currentQuestion].correctAnswer;
 
@@ -51,10 +52,20 @@ function Sorular() {
     setSelectedOption(null);
     setFeedback("");
     setCorrect(null);
+
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion((prev) => prev + 1);
     } else {
       setShowResult(true);
+    }
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion((prev) => prev - 1);
+      setSelectedOption(null);
+      setFeedback("");
+      setCorrect(null);
     }
   };
 
@@ -96,6 +107,7 @@ function Sorular() {
         Soru {currentQuestion + 1}/{questions.length}
       </h2>
       <p className="text-lg mb-4">{currentQ.question}</p>
+
       <div className="options flex flex-col gap-3">
         {currentQ.options.map((option) => (
           <button
@@ -115,6 +127,28 @@ function Sorular() {
         ))}
       </div>
 
+      {/* Geri / İleri butonları */}
+      <div className="mt-6 flex justify-between">
+        {currentQuestion > 0 ? (
+          <button
+            onClick={handlePreviousQuestion}
+            className="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg"
+          >
+            Geri
+          </button>
+        ) : (
+          <div />
+        )}
+
+        <button
+          onClick={handleNextQuestion}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg"
+        >
+          {currentQuestion + 1 < questions.length ? "İleri" : "Testi Bitir"}
+        </button>
+      </div>
+
+      {/* Feedback */}
       {feedback && (
         <div className="mt-4">
           <p
@@ -124,18 +158,6 @@ function Sorular() {
           >
             {feedback}
           </p>
-          <button
-            onClick={handleNextQuestion}
-            className={`mt-3 px-6 py-2 rounded-lg text-lg text-white transition-all duration-200 ${
-              correct
-                ? "bg-green-500 hover:bg-green-600"
-                : "bg-red-500 hover:bg-red-600"
-            }`}
-          >
-            {currentQuestion + 1 < questions.length
-              ? "Sonraki Soru"
-              : "Testi Bitir"}
-          </button>
         </div>
       )}
     </div>
