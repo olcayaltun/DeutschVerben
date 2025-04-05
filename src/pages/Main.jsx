@@ -61,6 +61,12 @@ const Main = () => {
           Sorular
         </Link>
         <Link
+          to="/metin"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          Metinler
+        </Link>
+        <Link
           to="/frank"
           className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
