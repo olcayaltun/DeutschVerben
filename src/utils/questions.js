@@ -3674,60 +3674,56 @@ const questions = [
     correctAnswer: "b", // Der Brief ist geschrieben worden.
   },
   {
-    questions: [
-      // 37. Passiv Çeşitleri (devamı)
-      {
-        question: "Das Auto ____ repariert ______.",
-        options: [
-          { text: "wird / werden", value: "a" },
-          { text: "ist / worden", value: "b" },
-          { text: "wurde / worden", value: "c" },
-          { text: "hat / worden", value: "d" },
-        ],
-        correctAnswer: "b", // Das Auto ist repariert worden.
-      },
-      {
-        question: "Der Text ____ übersetzt.",
-        options: [
-          { text: "wird", value: "a" },
-          { text: "ist", value: "b" },
-          { text: "wurde", value: "c" },
-          { text: "hat", value: "d" },
-        ],
-        correctAnswer: "c", // Der Text wurde übersetzt.
-      },
-      {
-        question: "Die Straße ____ gereinigt worden sein.",
-        options: [
-          { text: "will", value: "a" },
-          { text: "soll", value: "b" },
-          { text: "darf", value: "c" },
-          { text: "kann", value: "d" },
-        ],
-        correctAnswer: "b", // Die Straße soll gereinigt worden sein.
-      },
-      {
-        question: "Die Tür ____ geöffnet ______.",
-        options: [
-          { text: "wird / werden", value: "a" },
-          { text: "ist / worden", value: "b" },
-          { text: "wurde / worden", value: "c" },
-          { text: "hat / worden", value: "d" },
-        ],
-        correctAnswer: "b", // Die Tür ist geöffnet worden.
-      },
-      {
-        question: "Der Müll ____ entsorgt werden.",
-        options: [
-          { text: "darf", value: "a" },
-          { text: "kann", value: "b" },
-          { text: "muss", value: "c" },
-          { text: "will", value: "d" },
-        ],
-        correctAnswer: "c", // Der Müll muss entsorgt werden.
-      },
+    question: "Das Auto ____ repariert ______.",
+    options: [
+      { text: "wird / werden", value: "a" },
+      { text: "ist / worden", value: "b" },
+      { text: "wurde / worden", value: "c" },
+      { text: "hat / worden", value: "d" },
     ],
+    correctAnswer: "b", // Das Auto ist repariert worden.
   },
+  {
+    question: "Der Text ____ übersetzt.",
+    options: [
+      { text: "wird", value: "a" },
+      { text: "ist", value: "b" },
+      { text: "wurde", value: "c" },
+      { text: "hat", value: "d" },
+    ],
+    correctAnswer: "c", // Der Text wurde übersetzt.
+  },
+  {
+    question: "Die Straße ____ gereinigt worden sein.",
+    options: [
+      { text: "will", value: "a" },
+      { text: "soll", value: "b" },
+      { text: "darf", value: "c" },
+      { text: "kann", value: "d" },
+    ],
+    correctAnswer: "b", // Die Straße soll gereinigt worden sein.
+  },
+  {
+    question: "Die Tür ____ geöffnet ______.",
+    options: [
+      { text: "wird / werden", value: "a" },
+      { text: "ist / worden", value: "b" },
+      { text: "wurde / worden", value: "c" },
+      { text: "hat / worden", value: "d" },
+    ],
+    correctAnswer: "b", // Die Tür ist geöffnet worden.
+  },
+  {
+    question: "Der Müll ____ entsorgt werden.",
+    options: [
+      { text: "darf", value: "a" },
+      { text: "kann", value: "b" },
+      { text: "muss", value: "c" },
+      { text: "will", value: "d" },
+    ],
+    correctAnswer: "c", // Der Müll muss entsorgt werden.
+  },
+
   {
     question: "Der ____ Mann ist mein Lehrer.",
     options: [
@@ -4722,316 +4718,305 @@ const questions = [
     correctAnswer: "b",
   },
   {
-    questions: [
+    question: "Welche Form wird in der indirekten Rede verwendet?",
+    options: [
+      { text: "Nur Konjunktiv I", value: "a" },
+      { text: "Nur Konjunktiv II", value: "b" },
       {
-        question: "Welche Form wird in der indirekten Rede verwendet?",
-        options: [
-          { text: "Nur Konjunktiv I", value: "a" },
-          { text: "Nur Konjunktiv II", value: "b" },
-          {
-            text: "Zuerst Konjunktiv I, wenn nicht eindeutig, dann Konjunktiv II",
-            value: "c",
-          },
-          {
-            text: "Je nach Bedeutung entweder Konjunktiv I oder II",
-            value: "d",
-          },
-        ],
-        correctAnswer: "c", // Indirekte Rede verwendet zuerst Konjunktiv I, bei Mehrdeutigkeit Konjunktiv II.
+        text: "Zuerst Konjunktiv I, wenn nicht eindeutig, dann Konjunktiv II",
+        value: "c",
       },
       {
-        question: '"Er tat so, als ob er mich nicht _______."',
-        options: [
-          { text: "kennt", value: "a" },
-          { text: "kenne", value: "b" },
-          { text: "kannte", value: "c" },
-          { text: "kennen würde", value: "d" },
-        ],
-        correctAnswer: "c", // Er tat so, als ob er mich nicht kennte (Konjunktiv II).
-      },
-      {
-        question: "Welcher Satz ist im Konjunktiv I?",
-        options: [
-          { text: "Sie sagt, sie kommt morgen.", value: "a" },
-          { text: "Sie sagt, sie käme morgen.", value: "b" },
-          { text: "Sie sagt, sie komme morgen.", value: "c" },
-          { text: "Sie sagt, sie würde morgen kommen.", value: "d" },
-        ],
-        correctAnswer: "c", // Sie sagt, sie komme morgen (Konjunktiv I).
-      },
-      {
-        question: '"Wenn ich du _______, würde ich das nicht tun."',
-        options: [
-          { text: "wäre", value: "a" },
-          { text: "bin", value: "b" },
-          { text: "sei", value: "c" },
-          { text: "gewesen wäre", value: "d" },
-        ],
-        correctAnswer: "a", // Wenn ich du wäre, würde ich das nicht tun (Konjunktiv II).
-      },
-      {
-        question: "Welcher Konjunktiv wird bei höflichen Anfragen verwendet?",
-        options: [
-          { text: "Konjunktiv I", value: "a" },
-          { text: "Konjunktiv II", value: "b" },
-          { text: "Beide können verwendet werden", value: "c" },
-          { text: "Keiner von beiden", value: "d" },
-        ],
-        correctAnswer: "b", // Konjunktiv II wird für höfliche Anfragen genutzt (z. B. "Könnten Sie...?").
-      },
-      {
-        question: '"Es ist wichtig, dass er pünktlich _______."',
-        options: [
-          { text: "ist", value: "a" },
-          { text: "sei", value: "b" },
-          { text: "wäre", value: "c" },
-          { text: "sein würde", value: "d" },
-        ],
-        correctAnswer: "b", // Es ist wichtig, dass er pünktlich sei (Konjunktiv I).
+        text: "Je nach Bedeutung entweder Konjunktiv I oder II",
+        value: "d",
       },
     ],
+    correctAnswer: "c", // Indirekte Rede verwendet zuerst Konjunktiv I, bei Mehrdeutigkeit Konjunktiv II.
   },
   {
-    questions: [
-      {
-        question: '"Er ging ins Bett, _______ seine Zähne zu putzen."',
-        options: [
-          { text: "ohne", value: "a" },
-          { text: "statt", value: "b" },
-          { text: "um", value: "c" },
-          { text: "anstatt", value: "d" },
-        ],
-        correctAnswer: "a", // Er ging ins Bett, ohne seine Zähne zu putzen.
-      },
-      {
-        question: "Welcher Satz ist falsch?",
-        options: [
-          { text: "Er ging, ohne ein Wort zu sagen.", value: "a" },
-          { text: "Anstatt zu arbeiten, sah er fern.", value: "b" },
-          { text: "Um pünktlich zu sein, nahm er ein Taxi.", value: "c" },
-          { text: "Er ging, ohne dass er ein Wort sagte.", value: "d" },
-        ],
-        correctAnswer: "d", // "ohne dass" ist keine Infinitivkonstruktion, sondern ein Nebensatz.
-      },
-      {
-        question: '"_______ zu schlafen, lernte sie die ganze Nacht."',
-        options: [
-          { text: "Ohne", value: "a" },
-          { text: "Statt", value: "b" },
-          { text: "Um", value: "c" },
-          { text: "Anstatt", value: "d" },
-        ],
-        correctAnswer: "d", // Anstatt zu schlafen, lernte sie die ganze Nacht.
-      },
-      {
-        question: "Welche Infinitivkonstruktion drückt einen Zweck aus?",
-        options: [
-          { text: "ohne ... zu", value: "a" },
-          { text: "anstatt ... zu", value: "b" },
-          { text: "um ... zu", value: "c" },
-          { text: "statt ... zu", value: "d" },
-        ],
-        correctAnswer: "c", // "um ... zu" drückt einen Zweck aus.
-      },
-      {
-        question: '"Ich lerne Deutsch, _______ in Deutschland zu studieren."',
-        options: [
-          { text: "ohne", value: "a" },
-          { text: "statt", value: "b" },
-          { text: "um", value: "c" },
-          { text: "anstatt", value: "d" },
-        ],
-        correctAnswer: "c", // Ich lerne Deutsch, um in Deutschland zu studieren.
-      },
-      {
-        question: "Welcher Satz verwendet die Infinitivkonstruktion korrekt?",
-        options: [
-          { text: "Er ging weg, statt zu bleiben.", value: "a" },
-          { text: "Er ging weg, statt dass er bleibt.", value: "b" },
-          { text: "Er ging weg, statt er bleibt.", value: "c" },
-          { text: "Er ging weg, statt zu bleiben er.", value: "d" },
-        ],
-        correctAnswer: "a", // Er ging weg, statt zu bleiben ist korrekt.
-      },
-      {
-        question: '"Sie verließ das Haus, _______ die Tür abzuschließen."',
-        options: [
-          { text: "ohne", value: "a" },
-          { text: "anstatt", value: "b" },
-          { text: "statt", value: "c" },
-          { text: "um", value: "d" },
-        ],
-        correctAnswer: "a", // Sie verließ das Haus, ohne die Tür abzuschließen.
-      },
-      {
-        question: "Welcher Satz hat eine korrekte Infinitivkonstruktion?",
-        options: [
-          { text: "Er rennt, statt zu gehen.", value: "a" },
-          { text: "Er rennt, statt dass er geht.", value: "b" },
-          { text: "Er rennt, anstatt geht.", value: "c" },
-          { text: "Er rennt, ohne geht.", value: "d" },
-        ],
-        correctAnswer: "a", // Er rennt, statt zu gehen ist korrekt.
-      },
-      {
-        question: '"_______ zu klagen, solltest du handeln."',
-        options: [
-          { text: "Ohne", value: "a" },
-          { text: "Statt", value: "b" },
-          { text: "Um", value: "c" },
-          { text: "Für", value: "d" },
-        ],
-        correctAnswer: "b", // Statt zu klagen, solltest du handeln.
-      },
-      {
-        question: "Welche Aussage über Infinitivkonstruktionen ist richtig?",
-        options: [
-          { text: "Sie ersetzen immer einen Nebensatz.", value: "a" },
-          { text: "Sie können nur am Satzanfang stehen.", value: "b" },
-          {
-            text: "Das Subjekt muss in beiden Teilen identisch sein.",
-            value: "c",
-          },
-          { text: "Sie können nicht mit 'dass' ersetzt werden.", value: "d" },
-        ],
-        correctAnswer: "c", // Das Subjekt muss in beiden Teilen identisch sein.
-      },
+    question: '"Er tat so, als ob er mich nicht _______."',
+    options: [
+      { text: "kennt", value: "a" },
+      { text: "kenne", value: "b" },
+      { text: "kannte", value: "c" },
+      { text: "kennen würde", value: "d" },
     ],
+    correctAnswer: "c", // Er tat so, als ob er mich nicht kennte (Konjunktiv II).
   },
   {
-    questions: [
+    question: "Welcher Satz ist im Konjunktiv I?",
+    options: [
+      { text: "Sie sagt, sie kommt morgen.", value: "a" },
+      { text: "Sie sagt, sie käme morgen.", value: "b" },
+      { text: "Sie sagt, sie komme morgen.", value: "c" },
+      { text: "Sie sagt, sie würde morgen kommen.", value: "d" },
+    ],
+    correctAnswer: "c", // Sie sagt, sie komme morgen (Konjunktiv I).
+  },
+  {
+    question: '"Wenn ich du _______, würde ich das nicht tun."',
+    options: [
+      { text: "wäre", value: "a" },
+      { text: "bin", value: "b" },
+      { text: "sei", value: "c" },
+      { text: "gewesen wäre", value: "d" },
+    ],
+    correctAnswer: "a", // Wenn ich du wäre, würde ich das nicht tun (Konjunktiv II).
+  },
+  {
+    question: "Welcher Konjunktiv wird bei höflichen Anfragen verwendet?",
+    options: [
+      { text: "Konjunktiv I", value: "a" },
+      { text: "Konjunktiv II", value: "b" },
+      { text: "Beide können verwendet werden", value: "c" },
+      { text: "Keiner von beiden", value: "d" },
+    ],
+    correctAnswer: "b", // Konjunktiv II wird für höfliche Anfragen genutzt (z. B. "Könnten Sie...?").
+  },
+  {
+    question: '"Es ist wichtig, dass er pünktlich _______."',
+    options: [
+      { text: "ist", value: "a" },
+      { text: "sei", value: "b" },
+      { text: "wäre", value: "c" },
+      { text: "sein würde", value: "d" },
+    ],
+    correctAnswer: "b", // Es ist wichtig, dass er pünktlich sei (Konjunktiv I).
+  },
+  {
+    question: '"Er ging ins Bett, _______ seine Zähne zu putzen."',
+    options: [
+      { text: "ohne", value: "a" },
+      { text: "statt", value: "b" },
+      { text: "um", value: "c" },
+      { text: "anstatt", value: "d" },
+    ],
+    correctAnswer: "a", // Er ging ins Bett, ohne seine Zähne zu putzen.
+  },
+  {
+    question: "Welcher Satz ist falsch?",
+    options: [
+      { text: "Er ging, ohne ein Wort zu sagen.", value: "a" },
+      { text: "Anstatt zu arbeiten, sah er fern.", value: "b" },
+      { text: "Um pünktlich zu sein, nahm er ein Taxi.", value: "c" },
+      { text: "Er ging, ohne dass er ein Wort sagte.", value: "d" },
+    ],
+    correctAnswer: "d", // "ohne dass" ist keine Infinitivkonstruktion, sondern ein Nebensatz.
+  },
+  {
+    question: '"_______ zu schlafen, lernte sie die ganze Nacht."',
+    options: [
+      { text: "Ohne", value: "a" },
+      { text: "Statt", value: "b" },
+      { text: "Um", value: "c" },
+      { text: "Anstatt", value: "d" },
+    ],
+    correctAnswer: "d", // Anstatt zu schlafen, lernte sie die ganze Nacht.
+  },
+  {
+    question: "Welche Infinitivkonstruktion drückt einen Zweck aus?",
+    options: [
+      { text: "ohne ... zu", value: "a" },
+      { text: "anstatt ... zu", value: "b" },
+      { text: "um ... zu", value: "c" },
+      { text: "statt ... zu", value: "d" },
+    ],
+    correctAnswer: "c", // "um ... zu" drückt einen Zweck aus.
+  },
+  {
+    question: '"Ich lerne Deutsch, _______ in Deutschland zu studieren."',
+    options: [
+      { text: "ohne", value: "a" },
+      { text: "statt", value: "b" },
+      { text: "um", value: "c" },
+      { text: "anstatt", value: "d" },
+    ],
+    correctAnswer: "c", // Ich lerne Deutsch, um in Deutschland zu studieren.
+  },
+  {
+    question: "Welcher Satz verwendet die Infinitivkonstruktion korrekt?",
+    options: [
+      { text: "Er ging weg, statt zu bleiben.", value: "a" },
+      { text: "Er ging weg, statt dass er bleibt.", value: "b" },
+      { text: "Er ging weg, statt er bleibt.", value: "c" },
+      { text: "Er ging weg, statt zu bleiben er.", value: "d" },
+    ],
+    correctAnswer: "a", // Er ging weg, statt zu bleiben ist korrekt.
+  },
+  {
+    question: '"Sie verließ das Haus, _______ die Tür abzuschließen."',
+    options: [
+      { text: "ohne", value: "a" },
+      { text: "anstatt", value: "b" },
+      { text: "statt", value: "c" },
+      { text: "um", value: "d" },
+    ],
+    correctAnswer: "a", // Sie verließ das Haus, ohne die Tür abzuschließen.
+  },
+  {
+    question: "Welcher Satz hat eine korrekte Infinitivkonstruktion?",
+    options: [
+      { text: "Er rennt, statt zu gehen.", value: "a" },
+      { text: "Er rennt, statt dass er geht.", value: "b" },
+      { text: "Er rennt, anstatt geht.", value: "c" },
+      { text: "Er rennt, ohne geht.", value: "d" },
+    ],
+    correctAnswer: "a", // Er rennt, statt zu gehen ist korrekt.
+  },
+  {
+    question: '"_______ zu klagen, solltest du handeln."',
+    options: [
+      { text: "Ohne", value: "a" },
+      { text: "Statt", value: "b" },
+      { text: "Um", value: "c" },
+      { text: "Für", value: "d" },
+    ],
+    correctAnswer: "b", // Statt zu klagen, solltest du handeln.
+  },
+  {
+    question: "Welche Aussage über Infinitivkonstruktionen ist richtig?",
+    options: [
+      { text: "Sie ersetzen immer einen Nebensatz.", value: "a" },
+      { text: "Sie können nur am Satzanfang stehen.", value: "b" },
       {
-        question: "Welcher Satz enthält eine stilistische Verkürzung?",
-        options: [
-          { text: "Nachdem er gegessen hatte, ging er schlafen.", value: "a" },
-          { text: "Nach dem Essen ging er schlafen.", value: "b" },
-          { text: "Er ging schlafen, nachdem er gegessen hatte.", value: "c" },
-          { text: "Er aß und ging dann schlafen.", value: "d" },
-        ],
-        correctAnswer: "b", // "Nach dem Essen" ist eine stilistische Verkürzung von "Nachdem er gegessen hatte".
+        text: "Das Subjekt muss in beiden Teilen identisch sein.",
+        value: "c",
+      },
+      { text: "Sie können nicht mit 'dass' ersetzt werden.", value: "d" },
+    ],
+    correctAnswer: "c", // Das Subjekt muss in beiden Teilen identisch sein.
+  },
+  {
+    question: "Welcher Satz enthält eine stilistische Verkürzung?",
+    options: [
+      { text: "Nachdem er gegessen hatte, ging er schlafen.", value: "a" },
+      { text: "Nach dem Essen ging er schlafen.", value: "b" },
+      { text: "Er ging schlafen, nachdem er gegessen hatte.", value: "c" },
+      { text: "Er aß und ging dann schlafen.", value: "d" },
+    ],
+    correctAnswer: "b", // "Nach dem Essen" ist eine stilistische Verkürzung von "Nachdem er gegessen hatte".
+  },
+  {
+    question: "Welcher Satz hat eine Inversion?",
+    options: [
+      { text: "Ich gehe heute ins Kino.", value: "a" },
+      { text: "Heute gehe ich ins Kino.", value: "b" },
+      { text: "Ins Kino gehe ich heute.", value: "c" },
+      { text: "b und c sind richtig.", value: "d" },
+    ],
+    correctAnswer: "d", // Sowohl b als auch c enthalten eine Inversion.
+  },
+  {
+    question: "Welche Verkürzung ist stilistisch falsch?",
+    options: [
+      {
+        text: "Am Fenster stehend, beobachtete er die Straße.",
+        value: "a",
+      },
+      { text: "Im Park angekommen, suchten wir einen Platz.", value: "b" },
+      {
+        text: "Nach Hause gekommen, er machte sich Abendessen.",
+        value: "c",
+      },
+      { text: "Von der Reise erschöpft, legte sie sich hin.", value: "d" },
+    ],
+    correctAnswer: "c", // "Nach Hause gekommen, er machte" ist stilistisch falsch; das Subjekt sollte nicht wiederholt werden.
+  },
+  {
+    question: "Welcher Satz hat eine besondere stilistische Form?",
+    options: [
+      { text: "Der Mann, der dort steht, ist mein Vater.", value: "a" },
+      { text: "Dort steht der Mann, der mein Vater ist.", value: "b" },
+      { text: "Dort steht mein Vater.", value: "c" },
+      { text: "Mein Vater steht dort.", value: "d" },
+    ],
+    correctAnswer: "b", // "Dort steht der Mann, der mein Vater ist" hat eine Inversion und einen Relativsatz.
+  },
+  {
+    question: '"_______, verließ er das Haus."',
+    options: [
+      { text: "Verärgert über die Nachricht", value: "a" },
+      { text: "Er war verärgert über die Nachricht", value: "b" },
+      { text: "Weil er über die Nachricht verärgert war", value: "c" },
+      { text: "Da er über die Nachricht verärgert war", value: "d" },
+    ],
+    correctAnswer: "a", // "Verärgert über die Nachricht" ist eine stilistisch anspruchsvolle Partizipialkonstruktion.
+  },
+  {
+    question: "Welcher Satz hat eine komplexe stilistische Struktur?",
+    options: [
+      { text: "Er liest ein Buch.", value: "a" },
+      { text: "Ein Buch lesend, vergaß er die Zeit.", value: "b" },
+      { text: "Er vergaß die Zeit, während er ein Buch las.", value: "c" },
+      { text: "Während er ein Buch las, vergaß er die Zeit.", value: "d" },
+    ],
+    correctAnswer: "b", // "Ein Buch lesend, vergaß er die Zeit" ist eine komplexe Verkürzung mit Partizip I.
+  },
+  {
+    question: "Welche Satzverkürzung ist korrekt?",
+    options: [
+      { text: "Obwohl müde, ging sie zur Arbeit.", value: "a" },
+      { text: "Obwohl sie müde war, ging sie zur Arbeit.", value: "b" },
+      { text: "Obwohl müde war, ging sie zur Arbeit.", value: "c" },
+      { text: "Müde, ging sie zur Arbeit.", value: "d" },
+    ],
+    correctAnswer: "a", // "Obwohl müde" ist eine korrekte stilistische Verkürzung.
+  },
+  {
+    question: "Welcher Satz hat eine stilistisch anspruchsvolle Inversion?",
+    options: [
+      { text: "Gestern habe ich ein Buch gekauft.", value: "a" },
+      { text: "Ein Buch habe ich gestern gekauft.", value: "b" },
+      { text: "Gekauft habe ich gestern ein Buch.", value: "c" },
+      { text: "Ich habe gestern ein Buch gekauft.", value: "d" },
+    ],
+    correctAnswer: "c", // "Gekauft habe ich gestern ein Buch" ist eine starke und anspruchsvolle Inversion.
+  },
+  {
+    question: "Welche Aussage zur stilistischen Grammatik ist richtig?",
+    options: [
+      {
+        text: "Inversionen sind in der deutschen Sprache nicht erlaubt.",
+        value: "a",
       },
       {
-        question: "Welcher Satz hat eine Inversion?",
-        options: [
-          { text: "Ich gehe heute ins Kino.", value: "a" },
-          { text: "Heute gehe ich ins Kino.", value: "b" },
-          { text: "Ins Kino gehe ich heute.", value: "c" },
-          { text: "b und c sind richtig.", value: "d" },
-        ],
-        correctAnswer: "d", // Sowohl b als auch c enthalten eine Inversion.
+        text: "Satzverkürzungen werden nur in informellen Texten verwendet.",
+        value: "b",
       },
       {
-        question: "Welche Verkürzung ist stilistisch falsch?",
-        options: [
-          {
-            text: "Am Fenster stehend, beobachtete er die Straße.",
-            value: "a",
-          },
-          { text: "Im Park angekommen, suchten wir einen Platz.", value: "b" },
-          {
-            text: "Nach Hause gekommen, er machte sich Abendessen.",
-            value: "c",
-          },
-          { text: "Von der Reise erschöpft, legte sie sich hin.", value: "d" },
-        ],
-        correctAnswer: "c", // "Nach Hause gekommen, er machte" ist stilistisch falsch; das Subjekt sollte nicht wiederholt werden.
+        text: "Stilistisch anspruchsvolle Strukturen sind typisch für literarische Texte.",
+        value: "c",
       },
       {
-        question: "Welcher Satz hat eine besondere stilistische Form?",
-        options: [
-          { text: "Der Mann, der dort steht, ist mein Vater.", value: "a" },
-          { text: "Dort steht der Mann, der mein Vater ist.", value: "b" },
-          { text: "Dort steht mein Vater.", value: "c" },
-          { text: "Mein Vater steht dort.", value: "d" },
-        ],
-        correctAnswer: "b", // "Dort steht der Mann, der mein Vater ist" hat eine Inversion und einen Relativsatz.
-      },
-      {
-        question: '"_______, verließ er das Haus."',
-        options: [
-          { text: "Verärgert über die Nachricht", value: "a" },
-          { text: "Er war verärgert über die Nachricht", value: "b" },
-          { text: "Weil er über die Nachricht verärgert war", value: "c" },
-          { text: "Da er über die Nachricht verärgert war", value: "d" },
-        ],
-        correctAnswer: "a", // "Verärgert über die Nachricht" ist eine stilistisch anspruchsvolle Partizipialkonstruktion.
-      },
-      {
-        question: "Welcher Satz hat eine komplexe stilistische Struktur?",
-        options: [
-          { text: "Er liest ein Buch.", value: "a" },
-          { text: "Ein Buch lesend, vergaß er die Zeit.", value: "b" },
-          { text: "Er vergaß die Zeit, während er ein Buch las.", value: "c" },
-          { text: "Während er ein Buch las, vergaß er die Zeit.", value: "d" },
-        ],
-        correctAnswer: "b", // "Ein Buch lesend, vergaß er die Zeit" ist eine komplexe Verkürzung mit Partizip I.
-      },
-      {
-        question: "Welche Satzverkürzung ist korrekt?",
-        options: [
-          { text: "Obwohl müde, ging sie zur Arbeit.", value: "a" },
-          { text: "Obwohl sie müde war, ging sie zur Arbeit.", value: "b" },
-          { text: "Obwohl müde war, ging sie zur Arbeit.", value: "c" },
-          { text: "Müde, ging sie zur Arbeit.", value: "d" },
-        ],
-        correctAnswer: "a", // "Obwohl müde" ist eine korrekte stilistische Verkürzung.
-      },
-      {
-        question: "Welcher Satz hat eine stilistisch anspruchsvolle Inversion?",
-        options: [
-          { text: "Gestern habe ich ein Buch gekauft.", value: "a" },
-          { text: "Ein Buch habe ich gestern gekauft.", value: "b" },
-          { text: "Gekauft habe ich gestern ein Buch.", value: "c" },
-          { text: "Ich habe gestern ein Buch gekauft.", value: "d" },
-        ],
-        correctAnswer: "c", // "Gekauft habe ich gestern ein Buch" ist eine starke und anspruchsvolle Inversion.
-      },
-      {
-        question: "Welche Aussage zur stilistischen Grammatik ist richtig?",
-        options: [
-          {
-            text: "Inversionen sind in der deutschen Sprache nicht erlaubt.",
-            value: "a",
-          },
-          {
-            text: "Satzverkürzungen werden nur in informellen Texten verwendet.",
-            value: "b",
-          },
-          {
-            text: "Stilistisch anspruchsvolle Strukturen sind typisch für literarische Texte.",
-            value: "c",
-          },
-          {
-            text: "Man sollte stilistische Variationen in formalen Texten vermeiden.",
-            value: "d",
-          },
-        ],
-        correctAnswer: "c", // Stilistisch anspruchsvolle Strukturen sind typisch für literarische Texte.
-      },
-      {
-        question: "Welche Verkürzung ist stilistisch elegant?",
-        options: [
-          {
-            text: "Kaum hatte er das Haus verlassen, als es zu regnen begann.",
-            value: "a",
-          },
-          {
-            text: "Er hatte kaum das Haus verlassen, als es zu regnen begann.",
-            value: "b",
-          },
-          {
-            text: "Als er kaum das Haus verlassen hatte, begann es zu regnen.",
-            value: "c",
-          },
-          {
-            text: "Es begann zu regnen, als er kaum das Haus verlassen hatte.",
-            value: "d",
-          },
-        ],
-        correctAnswer: "a", // "Kaum hatte er..." ist eine elegante und stilistische Verkürzung.
+        text: "Man sollte stilistische Variationen in formalen Texten vermeiden.",
+        value: "d",
       },
     ],
+    correctAnswer: "c", // Stilistisch anspruchsvolle Strukturen sind typisch für literarische Texte.
   },
+  {
+    question: "Welche Verkürzung ist stilistisch elegant?",
+    options: [
+      {
+        text: "Kaum hatte er das Haus verlassen, als es zu regnen begann.",
+        value: "a",
+      },
+      {
+        text: "Er hatte kaum das Haus verlassen, als es zu regnen begann.",
+        value: "b",
+      },
+      {
+        text: "Als er kaum das Haus verlassen hatte, begann es zu regnen.",
+        value: "c",
+      },
+      {
+        text: "Es begann zu regnen, als er kaum das Haus verlassen hatte.",
+        value: "d",
+      },
+    ],
+    correctAnswer: "a", // "Kaum hatte er..." ist eine elegante und stilistische Verkürzung.
+  },
+
   {
     question: '"_______, desto besser."',
     options: [
