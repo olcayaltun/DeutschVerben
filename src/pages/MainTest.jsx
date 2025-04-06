@@ -5,7 +5,8 @@ import Frank from "../utils/Frankfurter";
 import FrankTest from "../Components/FrankTest";
 import SoruKartlari from "../Components/AlmancaSoru";
 import NebenSatz from "../Components/NebenSätz";
-import conjunctions from "../Components/NebenSätz";
+import Baglactest from "../Components/Baglactest";
+
 const MainTest = () => {
   const [showTest, setShowTest] = useState(false);
   const [testType, setTestType] = useState(null);
@@ -30,6 +31,11 @@ const MainTest = () => {
     setShowTest(true);
   };
 
+  const handleBaglacTestClick = () => {
+    setTestType("baglacTest");
+    setShowTest(true);
+  };
+
   const buttonStyle = {
     padding: "15px 40px",
     fontSize: "18px",
@@ -43,6 +49,10 @@ const MainTest = () => {
     width: "250px",
   };
 
+  const hoverStyle = {
+    transform: "scale(1.05)",
+  };
+
   return (
     <div>
       <div style={{ textAlign: "center", padding: "20px" }}>
@@ -52,26 +62,65 @@ const MainTest = () => {
               Almanca Öğrenme Testleri
             </h1>
 
-            <button onClick={handleTest1Click} style={buttonStyle}>
+            <button
+              onClick={handleTest1Click}
+              style={buttonStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = hoverStyle.transform)
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
               Test1'i Başlat
             </button>
 
-            <button onClick={handleFrankTestClick} style={buttonStyle}>
+            <button
+              onClick={handleFrankTestClick}
+              style={buttonStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = hoverStyle.transform)
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
               Frankfurter Testini Başlat
             </button>
 
-            <button onClick={handleSoruKartlariClick} style={buttonStyle}>
+            <button
+              onClick={handleSoruKartlariClick}
+              style={buttonStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = hoverStyle.transform)
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
               Soru Kartlarını Aç
             </button>
 
-            <button onClick={handleNebenSatzClick} style={buttonStyle}>
-              Bağlaçları Göster
+            <button
+              onClick={handleNebenSatzClick}
+              style={buttonStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = hoverStyle.transform)
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
+              NebenSatz Testini Başlat
+            </button>
+
+            <button
+              onClick={handleBaglacTestClick}
+              style={buttonStyle}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = hoverStyle.transform)
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
+              Bağlaç Testini Başlat
             </button>
 
             <div style={{ marginTop: "30px" }}>
               <p style={{ color: "#666" }}>
                 Test1: {kelimeler.length} soru | Frankfurter: {Frank.length}{" "}
-                soru | Bağlaçlar: {conjunctions.length} adet
+                soru | Bağlaçlar: {Baglactest.length} adet
               </p>
             </div>
           </div>
@@ -88,6 +137,9 @@ const MainTest = () => {
             )}
             {testType === "nebenSatz" && (
               <NebenSatz onReturn={() => setShowTest(false)} />
+            )}
+            {testType === "baglacTest" && (
+              <Baglactest onReturn={() => setShowTest(false)} />
             )}
           </>
         )}
