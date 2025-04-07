@@ -15,6 +15,7 @@ import MainTest from "./pages/MainTest";
 import Frankfurt from "./pages/Frankfurt";
 import Sorular from "./pages/Sorular";
 import Metinler from "./pages/Metinler";
+import Mektup from "./pages/Mektup";
 const isMobile = window.innerWidth <= 768; // Mobil cihazları belirlemek için basit bir kontrol
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/frank" element={<Frankfurt />} />
           <Route path="/soru" element={<Sorular />} />
           <Route path="/metin" element={<Metinler />} />
+          <Route path="/mektup" element={<Mektup />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>

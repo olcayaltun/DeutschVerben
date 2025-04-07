@@ -103,10 +103,10 @@ const Main = () => {
           Neue
         </Link>
         <Link
-          to="/game"
+          to="/mektup"
           className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
-          GAME
+          MEKTUPLAR
         </Link>
         <Link
           to="/test1"
