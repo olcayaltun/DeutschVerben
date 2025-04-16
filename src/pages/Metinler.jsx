@@ -1,56 +1,62 @@
 import React, { useState } from "react";
-import digitalisierung from "../utils/digitalisierung";
+import Metin1 from "../Components/Metin1";
+import Metin2 from "../Components/Metin2";
+import Metin3 from "../Components/Metin3";
+import Metin4 from "../Components/Metin4";
+import Metin5 from "../Components/Metin5";
+import Metin6 from "../Components/Metin6";
+import Metin7 from "../Components/Metin7";
+import Metin8 from "../Components/Metin8";
+import Metin9 from "../Components/Metin9";
+import Metin10 from "../Components/Metin10";
+
 const Metinler = () => {
-  const [index, setIndex] = useState(0);
-  const [showTranslation, setShowTranslation] = useState(false);
+  const [selectedComponent, setSelectedComponent] = useState(null);
 
-  const next = () => {
-    setShowTranslation(false);
-    setIndex((prev) => (prev + 1) % digitalisierung.length);
+  const components = [
+    { name: "Metin1", component: Metin1 },
+    { name: "Metin2", component: Metin2 },
+    { name: "Metin3", component: Metin3 },
+    { name: "Metin4", component: Metin4 },
+    { name: "Metin5", component: Metin5 },
+    { name: "Metin6", component: Metin6 },
+    { name: "Metin7", component: Metin7 },
+    { name: "Metin8", component: Metin8 },
+    { name: "Metin9", component: Metin9 },
+    { name: "Metin10", component: Metin10 },
+  ];
+
+  const handleComponentClick = (name) => {
+    setSelectedComponent(name === selectedComponent ? null : name);
   };
 
-  const prev = () => {
-    setShowTranslation(false);
-    setIndex(
-      (prev) => (prev - 1 + digitalisierung.length) % digitalisierung.length
-    );
-  };
+  const selected = components.find((c) => c.name === selectedComponent);
+  const SelectedComponent = selected?.component;
 
   return (
-    <div className="max-w-xl mx-auto mt-10 px-4">
-      <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
-        <p className="text-xl font-semibold mb-4 text-gray-800">
-          {digitalisierung[index].sentence}
-        </p>
+    <div className="metinler-container flex justify-center gap-1 ">
+      <div className="buttons-list">
+        {components.map(({ name }) => (
+          <button
+            key={name}
+            onClick={() => handleComponentClick(name)}
+            className={`component-button ${
+              selectedComponent === name ? "active" : ""
+            }`}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
 
-        {showTranslation && (
-          <p className="text-green-600 text-lg mb-4">
-            {digitalisierung[index].translation}
-          </p>
+      <div className="component-display">
+        {SelectedComponent ? (
+          <div className="component-preview">
+            <SelectedComponent />
+          </div>
+        ) : (
+          <p className="prompt-message">👆 Bir metin bileşeni seçiniz</p>
         )}
-
-        <div className="flex justify-center gap-4 mt-6">
-          <button
-            onClick={prev}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium px-4 py-2 rounded-lg transition"
-          >
-            ◀ Geri
-          </button>
-
-          <button
-            onClick={() => setShowTranslation((prev) => !prev)}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition"
-          >
-            {showTranslation ? "Açıklamayı Gizle" : "Açıklamayı Göster"}
-          </button>
-
-          <button
-            onClick={next}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium px-4 py-2 rounded-lg transition"
-          >
-            İleri ▶
-          </button>
-        </div>
       </div>
     </div>
   );
