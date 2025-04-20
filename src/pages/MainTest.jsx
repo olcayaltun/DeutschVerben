@@ -7,33 +7,54 @@ import SoruKartlari from "../Components/AlmancaSoru";
 import NebenSatz from "../Components/NebenSätz";
 import Baglactest from "../Components/Baglactest";
 
+import GermanVerbTest from "../Components/GermanVerbTest"; // Added missing import
+import germanVerbs from "../utils/germanVerbs"; // Added missing import
+
 const MainTest = () => {
   const [showTest, setShowTest] = useState(false);
   const [testType, setTestType] = useState(null);
 
-  const handleTest1Click = () => {
-    setTestType("test1");
+  const testButtons = [
+    {
+      id: "test1",
+      label: "Temel Kelime Testi",
+      handler: () => handleTestClick("test1"),
+    },
+    {
+      id: "frankTest",
+      label: "Frankfurter Testi",
+      handler: () => handleTestClick("frankTest"),
+    },
+    {
+      id: "soruKartlari",
+      label: "Soru Kartları",
+      handler: () => handleTestClick("soruKartlari"),
+    },
+    {
+      id: "nebenSatz",
+      label: "Nebensatz Testi",
+      handler: () => handleTestClick("nebenSatz"),
+    },
+    {
+      id: "baglacTest",
+      label: "Bağlaç Testi",
+      handler: () => handleTestClick("baglacTest"),
+    },
+    {
+      id: "verbTest",
+      label: "Fiil Testi",
+      handler: () => handleTestClick("verbTest"),
+    },
+  ];
+
+  const handleTestClick = (type) => {
+    setTestType(type);
     setShowTest(true);
   };
 
-  const handleFrankTestClick = () => {
-    setTestType("frankTest");
-    setShowTest(true);
-  };
-
-  const handleSoruKartlariClick = () => {
-    setTestType("soruKartlari");
-    setShowTest(true);
-  };
-
-  const handleNebenSatzClick = () => {
-    setTestType("nebenSatz");
-    setShowTest(true);
-  };
-
-  const handleBaglacTestClick = () => {
-    setTestType("baglacTest");
-    setShowTest(true);
+  const handleReturn = () => {
+    setShowTest(false);
+    setTestType(null);
   };
 
   const buttonStyle = {
@@ -53,95 +74,91 @@ const MainTest = () => {
     transform: "scale(1.05)",
   };
 
+  const renderTestComponent = () => {
+    switch (testType) {
+      case "test1":
+        return <TestOne onReturn={handleReturn} />;
+      case "frankTest":
+        return <FrankTest onReturn={handleReturn} />;
+      case "soruKartlari":
+        return <SoruKartlari onReturn={handleReturn} />;
+      case "nebenSatz":
+        return <NebenSatz onReturn={handleReturn} />;
+      case "baglacTest":
+        return <Baglactest onReturn={handleReturn} />;
+      case "verbTest":
+        return <GermanVerbTest onReturn={handleReturn} />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div>
-      <div style={{ textAlign: "center", padding: "20px" }}>
+    <div style={{ minHeight: "100vh", backgroundColor: "#f5f5f5" }}>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "20px",
+          maxWidth: "800px",
+          margin: "0 auto",
+        }}
+      >
         {!showTest ? (
           <div>
-            <h1 style={{ marginBottom: "30px", color: "#2c3e50" }}>
+            <h1
+              style={{
+                marginBottom: "30px",
+                color: "#2c3e50",
+                fontSize: "2.5rem",
+              }}
+            >
               Almanca Öğrenme Testleri
             </h1>
 
-            <button
-              onClick={handleTest1Click}
-              style={buttonStyle}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.transform = hoverStyle.transform)
-              }
-              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
             >
-              Test1'i Başlat
-            </button>
+              {testButtons.map((button) => (
+                <button
+                  key={button.id}
+                  onClick={button.handler}
+                  style={buttonStyle}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.style.transform = hoverStyle.transform)
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
+                >
+                  {button.label}
+                </button>
+              ))}
+            </div>
 
-            <button
-              onClick={handleFrankTestClick}
-              style={buttonStyle}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.transform = hoverStyle.transform)
-              }
-              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            <div
+              style={{
+                marginTop: "30px",
+                backgroundColor: "white",
+                padding: "20px",
+                borderRadius: "10px",
+              }}
             >
-              Frankfurter Testini Başlat
-            </button>
-
-            <button
-              onClick={handleSoruKartlariClick}
-              style={buttonStyle}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.transform = hoverStyle.transform)
-              }
-              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              Soru Kartlarını Aç
-            </button>
-
-            <button
-              onClick={handleNebenSatzClick}
-              style={buttonStyle}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.transform = hoverStyle.transform)
-              }
-              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              NebenSatz Testini Başlat
-            </button>
-
-            <button
-              onClick={handleBaglacTestClick}
-              style={buttonStyle}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.transform = hoverStyle.transform)
-              }
-              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-            >
-              Bağlaç Testini Başlat
-            </button>
-
-            <div style={{ marginTop: "30px" }}>
+              <h3 style={{ color: "#2c3e50", marginBottom: "15px" }}>
+                Test İstatistikleri
+              </h3>
               <p style={{ color: "#666" }}>
-                Test1: {kelimeler.length} soru | Frankfurter: {Frank.length}{" "}
-                soru | Bağlaçlar: {Baglactest.length} adet
+                Temel Kelimeler: {kelimeler.length} | Frankfurter:{" "}
+                {Frank.length} | Bağlaçlar: {Baglactest.length} | Fiiller:{" "}
+                {Object.keys(germanVerbs).length}
               </p>
             </div>
           </div>
         ) : (
-          <>
-            {testType === "test1" && (
-              <TestOne onReturn={() => setShowTest(false)} />
-            )}
-            {testType === "frankTest" && (
-              <FrankTest onReturn={() => setShowTest(false)} />
-            )}
-            {testType === "soruKartlari" && (
-              <SoruKartlari onReturn={() => setShowTest(false)} />
-            )}
-            {testType === "nebenSatz" && (
-              <NebenSatz onReturn={() => setShowTest(false)} />
-            )}
-            {testType === "baglacTest" && (
-              <Baglactest onReturn={() => setShowTest(false)} />
-            )}
-          </>
+          renderTestComponent()
         )}
       </div>
     </div>

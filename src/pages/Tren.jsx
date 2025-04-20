@@ -1,189 +1,100 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { DndProvider, useDrag, useDrop } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import Tr from "../utils/trB";
+import React, { useState } from "react";
+import germanVerbs from "../utils/germanVerbs";
 
-const ITEM_TYPE = "WORD";
-
-// DraggableWord Bileşenini Tanımla
-const DraggableWord = ({ word }) => {
-  const [{ isDragging }, drag] = useDrag(() => ({
-    type: ITEM_TYPE,
-    item: { word },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  }));
-
+const VerbCard = ({ verb, meaning, prefixes, isSelected, onClick }) => {
   return (
     <div
-      ref={drag}
-      className={`px-3 py-2 rounded-md cursor-pointer text-white text-sm sm:text-base font-medium shadow-md transition-all ${
-        isDragging ? "opacity-50 bg-yellow-500" : "bg-blue-500"
-      }`}
+      className={`p-4 mb-3 rounded-lg cursor-pointer transition-all 
+        ${
+          isSelected
+            ? "bg-blue-100 border-l-4 border-blue-500"
+            : "bg-gray-50 hover:bg-gray-100"
+        }`}
+      onClick={onClick}
     >
-      {word}
+      <div className="flex justify-between items-center">
+        <h3 className="font-bold text-lg text-gray-800">
+          {verb} <span className="text-gray-600 font-normal">- {meaning}</span>
+        </h3>
+        <span className="text-sm text-gray-500">
+          {Object.keys(prefixes).length} prefix
+        </span>
+      </div>
+
+      {isSelected && (
+        <div className="mt-3 pt-3 border-t border-gray-200">
+          <h4 className="text-sm font-semibold text-gray-700 mb-2">
+            Prefixli Halleri:
+          </h4>
+          <div className="space-y-2">
+            {Object.entries(prefixes).map(([prefixVerb, prefixMeaning]) => (
+              <div key={prefixVerb} className="flex">
+                <span className="font-medium text-gray-900 w-1/3">
+                  {prefixVerb}
+                </span>
+                <span className="text-gray-700 flex-1">{prefixMeaning}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-// DropZone Bileşenini Tanımla
-const DropZone = ({ meaning, onDrop, matchedWord, isIncorrect }) => {
-  const [{ isOver }, drop] = useDrop(() => ({
-    accept: ITEM_TYPE,
-    drop: (item) => onDrop(item.word, meaning),
-    collect: (monitor) => ({
-      isOver: monitor.isOver(),
-    }),
-  }));
-
-  return (
-    <div
-      ref={drop}
-      className={`p-4 rounded-md text-center text-sm sm:text-base cursor-pointer font-medium shadow-md truncate transition-all ${
-        isOver
-          ? "bg-green-400 text-white"
-          : isIncorrect
-          ? "bg-red-500 text-white"
-          : matchedWord
-          ? "bg-green-500 text-white"
-          : "bg-gray-200 text-gray-800"
-      }`}
-    >
-      {matchedWord || meaning}
-    </div>
-  );
-};
-
-// Tren Bileşeni
 const Tren = () => {
-  const [currentIndex, setCurrentIndex] = useState(
-    parseInt(localStorage.getItem("currentIndex")) || 0
-  );
-  const [matches, setMatches] = useState([]);
-  const [hasError, setHasError] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedVerb, setSelectedVerb] = useState(null);
 
-  const keys = Object.keys(Tr[0]);
-  const currentVerb = keys[currentIndex];
-  const words = Tr[0][currentVerb];
-  const wordKeys = Object.keys(words);
-  const meanings = Object.values(words);
-  const [shuffledMeanings, setShuffledMeanings] = useState([]);
-
-  useEffect(() => {
-    setShuffledMeanings([...meanings].sort(() => Math.random() - 0.5));
-  }, [currentIndex]);
-
-  useEffect(() => {
-    localStorage.setItem("currentIndex", currentIndex);
-  }, [currentIndex]);
-
-  const handleDrop = (word, meaning) => {
-    setMatches((prevMatches) => {
-      const updatedMatches = prevMatches.filter((m) => m.word !== word);
-      return [...updatedMatches, { word, match: meaning }];
-    });
-  };
-
-  const handleNextVerb = () => {
-    const allCorrect = matches.every((m) => words[m.word] === m.match);
-
-    if (allCorrect) {
-      setMatches([]);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % keys.length);
-      setHasError(false);
-    } else {
-      setHasError(true);
-      // Yanlış eşleşme olduğu için sadece eşleşmeleri sıfırla, fiili değiştirme
-    }
-  };
-
-  const handleRetry = () => {
-    setMatches([]); // Eşleşmeleri sıfırla
-    setHasError(false); // Hata durumunu sıfırla
-  };
+  const filteredVerbs = Object.entries(germanVerbs).filter(([verb, data]) => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      verb.toLowerCase().includes(searchLower) ||
+      data.meaning.toLowerCase().includes(searchLower) ||
+      Object.keys(data.prefixes).some((prefix) =>
+        prefix.toLowerCase().includes(searchLower)
+      )
+    );
+  });
 
   return (
-    <div className="p-4 min-h-screen bg-gray-800">
-      <div className="fixed top-4 left-4 z-50">
-        <Link className="text-white text-4xl hover:text-blue-500" to="/">
-          <FaArrowCircleLeft />
-        </Link>
+    <div className="container mx-auto px-4 py-8 max-w-2xl">
+      <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
+        Almanca Fiiller ve Prefixleri
+      </h1>
+
+      <div className="mb-6">
+        <input
+          type="text"
+          placeholder="Fiil, anlamı veya prefix ara..."
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
 
-      <div className="w-full max-w-6xl mx-auto py-[-px] px-2">
-        <h2 className="text-xl mb-6 text-center text-white">
-          <span className="text-2xl sm:text-3xl text-red-400 font-bold">
-            {currentVerb}
-          </span>
-          <br />
-          fiili için eşleştirme yapın
-        </h2>
-
-        <div className="flex flex-wrap justify-center items-start gap-6">
-          <div className="flex-1 min-w-[45%] bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
-            <h3 className="text-white text-sm sm:text-base font-bold mb-3">
-              Almanca Fiiller
-            </h3>
-            <div className="space-y-2">
-              {wordKeys.map((word) => (
-                <DraggableWord key={word} word={word} />
-              ))}
-            </div>
+      <div className="space-y-3">
+        {filteredVerbs.length > 0 ? (
+          filteredVerbs.map(([verb, { meaning, prefixes }]) => (
+            <VerbCard
+              key={verb}
+              verb={verb}
+              meaning={meaning}
+              prefixes={prefixes}
+              isSelected={selectedVerb === verb}
+              onClick={() =>
+                setSelectedVerb(selectedVerb === verb ? null : verb)
+              }
+            />
+          ))
+        ) : (
+          <div className="text-center py-8 text-gray-500">
+            Sonuç bulunamadı. Farklı bir arama terimi deneyin.
           </div>
-
-          <div className="flex-1 min-w-[45%] bg-gray-700 rounded-lg shadow-xl p-3 sm:p-4">
-            <h3 className="text-white text-sm sm:text-base font-bold mb-3">
-              Türkçe Anlamlar
-            </h3>
-            <div className="space-y-2">
-              {shuffledMeanings.map((meaning) => (
-                <DropZone
-                  key={meaning}
-                  meaning={meaning}
-                  onDrop={handleDrop}
-                  matchedWord={
-                    matches.find((m) => m.match === meaning)?.word || ""
-                  }
-                  isIncorrect={hasError}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-6">
-          <button
-            onClick={handleNextVerb}
-            className={`px-6 py-2 text-white rounded-md font-bold transition-all ${
-              hasError ? "bg-red-500" : "bg-green-500"
-            }`}
-            disabled={hasError} // Yanlış eşleşme olduğunda butonu devre dışı bırak
-          >
-            {hasError ? "Yanlış eşleşme, tekrar dene!" : "Sonraki Fiil"}
-          </button>
-        </div>
-
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={handleRetry}
-            className="px-6 py-2 text-white rounded-md font-bold bg-yellow-500"
-          >
-            Tekrar Dene!
-          </button>
-        </div>
+        )}
       </div>
     </div>
   );
 };
 
-const withTouchSupport = (Component) => (props) =>
-  (
-    <DndProvider backend={HTML5Backend}>
-      <Component {...props} />
-    </DndProvider>
-  );
-
-export default withTouchSupport(Tren);
+export default Tren;
