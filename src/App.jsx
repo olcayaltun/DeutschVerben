@@ -17,6 +17,9 @@ import Sorular from "./pages/Sorular";
 import Metinler from "./pages/Metinler";
 import Mektup from "./pages/Mektup";
 import Sifatlar from "./pages/Sifatlar";
+import Präpos from "./pages/Präpos";
+
+import MainBuch from "./pages/Buch/MainBuch";
 const isMobile = window.innerWidth <= 768; // Mobil cihazları belirlemek için basit bir kontrol
 
 const App = () => {
@@ -39,6 +42,8 @@ const App = () => {
           <Route path="/metin" element={<Metinler />} />
           <Route path="/mektup" element={<Mektup />} />
           <Route path="/sifat" element={<Sifatlar />} />
+          <Route path="/buch" element={<MainBuch />} />
+          <Route path="/prä" element={<Präpos />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>

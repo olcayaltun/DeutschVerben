@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import Metin1 from "../Components/Metin1";
-import Metin2 from "../Components/Metin2";
-import Metin3 from "../Components/Metin3";
-import Metin4 from "../Components/Metin4";
-import Metin5 from "../Components/Metin5";
-import Metin6 from "../Components/Metin6";
-import Metin7 from "../Components/Metin7";
-import Metin8 from "../Components/Metin8";
-import Metin9 from "../Components/Metin9";
-import Metin10 from "../Components/Metin10";
 
+import Metin2 from "../Components/Thema/Metin2";
+import Metin5 from "../Components/Thema/Metin5";
+import Metin6 from "../Components/Thema/Metin6";
+import Metin9 from "../Components/Thema/Metin9";
+import Metin10 from "../Components/Thema/Metin10";
+import Metin3 from "../Components/Thema/Metin3";
+import Metin1 from "../Components/Thema/Metin1";
+import Metin4 from "../Components/Thema/Metin4";
+import Metin7 from "../Components/Thema/Metin7";
+import Metin8 from "../Components/Thema/Metin8";
+import Metin11 from "../Components/Thema/Metin11";
+import Metin12 from "../Components/Thema/Metin12";
 const Metinler = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
 
@@ -24,6 +26,8 @@ const Metinler = () => {
     { name: "Metin8", component: Metin8 },
     { name: "Metin9", component: Metin9 },
     { name: "Metin10", component: Metin10 },
+    { name: "Metin11", component: Metin11 },
+    { name: "Metin12", component: Metin12 },
   ];
 
   const handleComponentClick = (name) => {

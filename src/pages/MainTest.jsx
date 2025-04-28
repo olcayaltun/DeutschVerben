@@ -6,7 +6,7 @@ import FrankTest from "../Components/FrankTest";
 import SoruKartlari from "../Components/AlmancaSoru";
 import NebenSatz from "../Components/NebenSätz";
 import Baglactest from "../Components/Baglactest";
-
+import Prätest from "../Components/Präpo../Prätest";
 import GermanVerbTest from "../Components/GermanVerbTest"; // Added missing import
 import germanVerbs from "../utils/germanVerbs"; // Added missing import
 
@@ -44,6 +44,11 @@ const MainTest = () => {
       id: "verbTest",
       label: "Fiil Testi",
       handler: () => handleTestClick("verbTest"),
+    },
+    {
+      id: "prätest",
+      label: "Präpositionen",
+      handler: () => handleTestClick("prätest"),
     },
   ];
 
@@ -88,6 +93,8 @@ const MainTest = () => {
         return <Baglactest onReturn={handleReturn} />;
       case "verbTest":
         return <GermanVerbTest onReturn={handleReturn} />;
+      case "prätest":
+        return <Prätest onReturn={handleReturn} />;
       default:
         return null;
     }

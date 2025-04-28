@@ -1,28 +1,30 @@
 import React, { useState } from "react";
-import ed from "../utils/ed";
-const Metin4 = () => {
+import demok from "../../utils/demok";
+const Metin8 = () => {
   const [index, setIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
 
   const next = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev + 1) % ed.length);
+    setIndex((prev) => (prev + 1) % demok.length);
   };
 
   const prev = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev - 1 + ed.length) % ed.length);
+    setIndex((prev) => (prev - 1 + demok.length) % demok.length);
   };
 
   return (
     <div className="max-w-xl mx-auto mt-10 px-4">
       <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
         <p className="text-xl font-semibold mb-4 text-gray-800">
-          {ed[index].sentence}
+          {demok[index].sentence}
         </p>
 
         {showTranslation && (
-          <p className="text-green-600 text-lg mb-4">{ed[index].translation}</p>
+          <p className="text-green-600 text-lg mb-4">
+            {demok[index].translation}
+          </p>
         )}
 
         <div className="flex justify-center gap-4 mt-6">
@@ -52,4 +54,4 @@ const Metin4 = () => {
   );
 };
 
-export default Metin4;
+export default Metin8;

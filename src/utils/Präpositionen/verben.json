@@ -1,0 +1,842 @@
+{
+  "VerbenMitAkkusativ": [
+    {
+      "verb": "sich freuen auf (etwas/jemanden)",
+      "meaning": "Bir şeyi/birini dört gözle beklemek",
+      "exampleSentence": "Nach einem anstrengenden Jahr freue ich mich sehr auf einen erholsamen Urlaub am Meer.",
+      "exampleTranslation": "Yorucu bir yıldan sonra deniz kenarında dinlendirici bir tatili dört gözle bekliyorum."
+    },
+    {
+      "verb": "warten auf (etwas/jemanden)",
+      "meaning": "Bir şeyi/birini beklemek",
+      "exampleSentence": "Die Wissenschaftler warten gespannt auf die Ergebnisse der neuen Studie.",
+      "exampleTranslation": "Bilim insanları, yeni çalışmanın sonuçlarını heyecanla bekliyor."
+    },
+    {
+      "verb": "achten auf (etwas)",
+      "meaning": "Bir şeye dikkat etmek",
+      "exampleSentence": "Bei der Durchführung des Experiments musst du genau auf die Sicherheitsvorschriften achten.",
+      "exampleTranslation": "Deneyi gerçekleştirirken güvenlik kurallarına tam olarak dikkat etmelisin."
+    },
+    {
+      "verb": "sich konzentrieren auf (etwas)",
+      "meaning": "Bir şeye konsantre olmak",
+      "exampleSentence": "Um die Frist einzuhalten, konzentrieren wir uns ausschließlich auf die wesentlichen Aufgaben.",
+      "exampleTranslation": "Süreyi yakalamak için yalnızca temel görevlere odaklanıyoruz."
+    },
+    {
+      "verb": "sich verlassen auf (jemanden)",
+      "meaning": "Birine güvenmek",
+      "exampleSentence": "In schwierigen Zeiten kann ich mich stets auf die Unterstützung meiner Familie verlassen.",
+      "exampleTranslation": "Zor zamanlarda her zaman ailemin desteğine güvenebilirim."
+    },
+    {
+      "verb": "sich vorbereiten auf (etwas)",
+      "meaning": "Bir şeye hazırlanmak",
+      "exampleSentence": "Die Studenten bereiten sich intensiv auf die bevorstehende Abschlussprüfung vor.",
+      "exampleTranslation": "Öğrenciler, yaklaşan final sınavına yoğun bir şekilde hazırlanıyor."
+    },
+    {
+      "verb": "denken an (etwas/jemanden)",
+      "meaning": "Bir şeyi/birini düşünmek",
+      "exampleSentence": "Beim Anblick der alten Fotos denke ich oft an meine unbeschwerte Kindheit zurück.",
+      "exampleTranslation": "Eski fotoğrafları görünce sık sık kaygısız çocukluğumu düşünürüm."
+    },
+    {
+      "verb": "glauben an (etwas)",
+      "meaning": "Bir şeye inanmak",
+      "exampleSentence": "Trotz aller Rückschläge glaube ich fest an den Erfolg unseres Projekts.",
+      "exampleTranslation": "Tüm aksiliklere rağmen projemizin başarısına kesinlikle inanıyorum."
+    },
+    {
+      "verb": "sich erinnern an (etwas)",
+      "meaning": "Bir şeyi hatırlamak",
+      "exampleSentence": "Ich erinnere mich lebhaft an den Moment, als wir das Ziel unserer Reise erreichten.",
+      "exampleTranslation": "Seyahatimizin hedefine ulaştığımız anı canlı bir şekilde hatırlıyorum."
+    },
+    {
+      "verb": "sich gewöhnen an (etwas)",
+      "meaning": "Bir şeye alışmak",
+      "exampleSentence": "Es hat einige Zeit gedauert, bis ich mich an das hektische Leben in der Großstadt gewöhnt habe.",
+      "exampleTranslation": "Büyük şehirdeki hareketli yaşama alışmam biraz zaman aldı."
+    },
+    {
+      "verb": "bitten um (etwas)",
+      "meaning": "Bir şey için rica etmek",
+      "exampleSentence": "Ich habe meinen Chef um eine Verlängerung der Frist für das Projekt gebeten.",
+      "exampleTranslation": "Patronumdan proje için sürenin uzatılmasını rica ettim."
+    },
+    {
+      "verb": "sich kümmern um (etwas)",
+      "meaning": "Bir şeyle ilgilenmek",
+      "exampleSentence": "Wer kümmert sich um die Organisation der Veranstaltung, wenn du abwesend bist?",
+      "exampleTranslation": "Sen yokken etkinliğin organizasyonuyla kim ilgilenecek?"
+    },
+    {
+      "verb": "kämpfen für (etwas)",
+      "meaning": "Bir şey için savaşmak",
+      "exampleSentence": "Die Aktivisten kämpfen unermüdlich für den Schutz bedrohter Tierarten.",
+      "exampleTranslation": "Aktivistler, tehdit altındaki hayvan türlerinin korunması için yorulmadan mücadele ediyor."
+    },
+    {
+      "verb": "sich entscheiden für (etwas)",
+      "meaning": "Bir şeyi seçmek",
+      "exampleSentence": "Nach reiflicher Überlegung habe ich mich für ein Studium im Ausland entschieden.",
+      "exampleTranslation": "Dikkatli bir değerlendirmeden sonra yurtdışında eğitim almaya karar verdim."
+    },
+    {
+      "verb": "danken für (etwas)",
+      "meaning": "Bir şey için teşekkür etmek",
+      "exampleSentence": "Ich danke dir herzlich für deine Unterstützung in dieser schwierigen Phase.",
+      "exampleTranslation": "Bu zor dönemde verdiğin destek için sana içtenlikle teşekkür ederim."
+    },
+    {
+      "verb": "sich interessieren für (etwas)",
+      "meaning": "Bir şeye ilgi duymak",
+      "exampleSentence": "Er interessiert sich leidenschaftlich für die Erforschung erneuerbarer Energien.",
+      "exampleTranslation": "Yenilenebilir enerji araştırmalarına tutkuyla ilgi duyuyor."
+    },
+    {
+      "verb": "sorgen für (jemanden)",
+      "meaning": "Birinin bakımını üstlenmek",
+      "exampleSentence": "Die Organisation sorgt für die Versorgung der Flüchtlinge in der Region.",
+      "exampleTranslation": "Örgüt, bölgedeki mültecilerin ihtiyaçlarını karşılıyor."
+    },
+    {
+      "verb": "sich bewerben um (etwas)",
+      "meaning": "Bir şeye başvurmak",
+      "exampleSentence": "Sie hat sich um eine Stelle als Marketingmanagerin in einem internationalen Unternehmen beworben.",
+      "exampleTranslation": "Uluslararası bir şirkette pazarlama müdürü pozisyonuna başvurdu."
+    },
+    {
+      "verb": "sich bemühen um (etwas)",
+      "meaning": "Bir şey için çabalamak",
+      "exampleSentence": "Das Team bemüht sich um eine nachhaltige Lösung für das Abfallproblem.",
+      "exampleTranslation": "Ekip, atık sorunu için sürdürülebilir bir çözüm bulmak için çabalıyor."
+    },
+    {
+      "verb": "appellieren an (jemanden)",
+      "meaning": "Birine hitap etmek/çağrıda bulunmak",
+      "exampleSentence": "Die Politikerin appellierte an die Bürger, sich aktiv an der Wahl zu beteiligen.",
+      "exampleTranslation": "Politikacı, vatandaşlara seçimlere aktif olarak katılmaları için çağrıda bulundu."
+    },
+    {
+      "verb": "sich wenden an (jemanden)",
+      "meaning": "Birine başvurmak/yönelmek",
+      "exampleSentence": "Bei technischen Problemen wenden Sie sich bitte an unseren Kundendienst.",
+      "exampleTranslation": "Teknik sorunlarda lütfen müşteri hizmetlerimize başvurun."
+    },
+    {
+      "verb": "sich anpassen an (etwas)",
+      "meaning": "Bir şeye uyum sağlamak",
+      "exampleSentence": "Neue Mitarbeiter müssen sich schnell an die Unternehmenskultur anpassen.",
+      "exampleTranslation": "Yeni çalışanlar, şirket kültürüne hızla uyum sağlamalıdır."
+    },
+    {
+      "verb": "jemanden hinweisen auf (etwas)",
+      "meaning": "Birinin dikkatini bir şeye çekmek",
+      "exampleSentence": "Der Lehrer wies die Schüler auf die Bedeutung einer gründlichen Vorbereitung hin.",
+      "exampleTranslation": "Öğretmen, öğrencilerin dikkatini kapsamlı bir hazırlığın önemine çekti."
+    },
+    {
+      "verb": "verzichten auf (etwas)",
+      "meaning": "Bir şeyden vazgeçmek",
+      "exampleSentence": "Aus gesundheitlichen Gründen verzichtet sie auf den Konsum von Alkohol.",
+      "exampleTranslation": "Sağlık nedenleriyle alkol tüketiminden vazgeçiyor."
+    },
+    {
+      "verb": "zurückführen auf (etwas)",
+      "meaning": "Bir şeye bağlamak/dayandırmak",
+      "exampleSentence": "Die Experten führen den Anstieg der Preise auf die weltweite Rohstoffknappheit zurück.",
+      "exampleTranslation": "Uzmanlar, fiyatlardaki artışı küresel hammadde kıtlığına bağlıyor."
+    },
+    {
+      "verb": "hindeuten auf (etwas)",
+      "meaning": "Bir şeye işaret etmek",
+      "exampleSentence": "Die aktuellen Daten deuten auf eine baldige Erholung der Wirtschaft hin.",
+      "exampleTranslation": "Mevcut veriler, ekonominin yakında toparlanacağına işaret ediyor."
+    },
+    {
+      "verb": "eingehen auf (etwas)",
+      "meaning": "Bir şeyi ele almak/bir şeye değinmek",
+      "exampleSentence": "In seiner Rede ging der Redner ausführlich auf die Herausforderungen der Digitalisierung ein.",
+      "exampleTranslation": "Konuşmacı, konuşmasında dijitalleşmenin zorluklarını ayrıntılı bir şekilde ele aldı."
+    },
+    {
+      "verb": "sich beziehen auf (etwas)",
+      "meaning": "Bir şeye atıfta bulunmak",
+      "exampleSentence": "Seine Aussage bezog sich auf die jüngsten Entwicklungen im Klimaschutz.",
+      "exampleTranslation": "Onun açıklaması, iklim korumasındaki son gelişmelere atıfta bulundu."
+    },
+    {
+      "verb": "jemanden aufmerksam machen auf (etwas)",
+      "meaning": "Birinin dikkatini bir şeye çekmek",
+      "exampleSentence": "Der Bericht machte die Öffentlichkeit auf die Dringlichkeit des Umweltschutzes aufmerksam.",
+      "exampleTranslation": "Rapor, halkın dikkatini çevre korumanın aciliyetine çekti."
+    },
+    {
+      "verb": "anspielen auf (etwas)",
+      "meaning": "Bir şeye ima etmek",
+      "exampleSentence": "In seiner Rede spielte der Politiker auf mögliche Reformen im Bildungssystem an.",
+      "exampleTranslation": "Politikacı, konuşmasında eğitim sistemindeki olası reformlara ima etti."
+    },
+    {
+      "verb": "abzielen auf (etwas)",
+      "meaning": "Bir şeyi hedeflemek",
+      "exampleSentence": "Die neue Strategie zielt darauf ab, die Kundenzufriedenheit nachhaltig zu steigern.",
+      "exampleTranslation": "Yeni strateji, müşteri memnuniyetini sürdürülebilir bir şekilde artırmayı hedefliyor."
+    },
+    {
+      "verb": "sich einlassen auf (etwas)",
+      "meaning": "Bir şeye girişmek/bulaşmak",
+      "exampleSentence": "Er ließ sich auf eine kontroverse Diskussion über politische Reformen ein.",
+      "exampleTranslation": "Siyasi reformlar üzerine tartışmalı bir tartışmaya girişti."
+    },
+    {
+      "verb": "sich verstehen auf (etwas)",
+      "meaning": "Bir konuda uzman olmak",
+      "exampleSentence": "Sie versteht sich hervorragend auf die Entwicklung innovativer Softwarelösungen.",
+      "exampleTranslation": "Yenilikçi yazılım çözümleri geliştirme konusunda son derece uzman."
+    },
+    {
+      "verb": "überreden zu (etwas)",
+      "meaning": "Bir şeye ikna etmek",
+      "exampleSentence": "Es gelang ihr, das Team zu einer neuen Arbeitsmethode zu überreden.",
+      "exampleTranslation": "Ekibi yeni bir çalışma yöntemine ikna etmeyi başardı."
+    },
+    {
+      "verb": "zwingen zu (etwas)",
+      "meaning": "Bir şeye zorlamak",
+      "exampleSentence": "Die Umstände zwangen das Unternehmen dazu, drastische Einsparungen vorzunehmen.",
+      "exampleTranslation": "Koşullar, şirketi sert tasarruf önlemleri almaya zorladı."
+    },
+    {
+      "verb": "verleiten zu (etwas)",
+      "meaning": "Bir şeye sevk etmek/yönlendirmek",
+      "exampleSentence": "Die attraktiven Angebote verleiteten viele Kunden zu Spontankäufen.",
+      "exampleTranslation": "Cazip teklifler, birçok müşteriyi plansız satın almalara yönlendirdi."
+    }
+  ],
+  "VerbenMitDativ": [
+    {
+      "verb": "helfen bei (etwas)",
+      "meaning": "Bir konuda yardım etmek",
+      "exampleSentence": "Meine Kollegen haben mir bei der Erstellung des Jahresberichts tatkräftig geholfen.",
+      "exampleTranslation": "Meslektaşlarım, yıllık raporun hazırlanmasında bana büyük destek oldu."
+    },
+    {
+      "verb": "beginnen mit (etwas)",
+      "meaning": "Bir şeyle başlamak",
+      "exampleSentence": "Das Meeting begann mit einer kurzen Einführung in die neuen Projekte.",
+      "exampleTranslation": "Toplantı, yeni projelere kısa bir girişle başladı."
+    },
+    {
+      "verb": "sprechen mit (jemandem)",
+      "meaning": "Biriyle konuşmak",
+      "exampleSentence": "Ich habe mit dem Abteilungsleiter über die Möglichkeiten einer Beförderung gesprochen.",
+      "exampleTranslation": "Bölüm müdürüyle terfi imkanları hakkında konuştum."
+    },
+    {
+      "verb": "sich beschäftigen mit (etwas)",
+      "meaning": "Bir şeyle meşgul olmak",
+      "exampleSentence": "Der Forscher beschäftigt sich intensiv mit den Auswirkungen des Klimawandels.",
+      "exampleTranslation": "Araştırmacı, iklim değişikliğinin etkileriyle yoğun bir şekilde meşgul."
+    },
+    {
+      "verb": "teilnehmen an (etwas)",
+      "meaning": "Bir şeye katılmak",
+      "exampleSentence": "Sie nahm an einem internationalen Symposium über erneuerbare Energien teil.",
+      "exampleTranslation": "Yenilenebilir enerjiler üzerine uluslararası bir sempozyuma katıldı."
+    },
+    {
+      "verb": "zweifeln an (etwas)",
+      "meaning": "Bir şeyden şüphelenmek",
+      "exampleSentence": "Manche Experten zweifeln an der Wirksamkeit der neuen Umweltgesetze.",
+      "exampleTranslation": "Bazı uzmanlar, yeni çevre yasalarının etkinliğinden şüpheleniyor."
+    },
+    {
+      "verb": "leiden an (etwas)",
+      "meaning": "Bir şeyden muzdarip olmak",
+      "exampleSentence": "Viele Arbeitnehmer leiden an den Folgen von Stress und Überlastung.",
+      "exampleTranslation": "Birçok çalışan, stres ve aşırı yüklenmenin sonuçlarından muzdarip."
+    },
+    {
+      "verb": "bestehen aus (etwas)",
+      "meaning": "Bir şeyden oluşmak",
+      "exampleSentence": "Das Team besteht aus hochqualifizierten Experten aus verschiedenen Ländern.",
+      "exampleTranslation": "Ekip, farklı ülkelerden yüksek nitelikli uzmanlardan oluşuyor."
+    },
+    {
+      "verb": "gratulieren zu (etwas)",
+      "meaning": "Bir şey için tebrik etmek",
+      "exampleSentence": "Ich gratuliere dir herzlich zu deinem beeindruckenden Erfolg bei dem Wettbewerb!",
+      "exampleTranslation": "Yarışmadaki etkileyici başarından dolayı seni içtenlikle tebrik ederim!"
+    },
+    {
+      "verb": "gehören zu (etwas)",
+      "meaning": "Bir şeye ait olmak",
+      "exampleSentence": "Diese Aufgaben gehören zu den täglichen Pflichten eines Managers.",
+      "exampleTranslation": "Bu görevler, bir yöneticinin günlük sorumluluklarına aittir."
+    },
+    {
+      "verb": "raten zu (etwas)",
+      "meaning": "Bir şeyi tavsiye etmek",
+      "exampleSentence": "Ich rate dir zu einer gründlichen Analyse, bevor du investierst.",
+      "exampleTranslation": "Yatırım yapmadan önce kapsamlı bir analiz yapmanı tavsiye ederim."
+    },
+    {
+      "verb": "passen zu (etwas)",
+      "meaning": "Bir şeye uymak",
+      "exampleSentence": "Die neuen Möbel passen perfekt zu dem modernen Design des Hauses.",
+      "exampleTranslation": "Yeni mobilyalar, evin modern tasarımına mükemmel uyuyor."
+    },
+    {
+      "verb": "träumen von (etwas)",
+      "meaning": "Bir şeyi hayal etmek",
+      "exampleSentence": "Seit ihrer Kindheit träumt sie von einer Reise durch Südamerika.",
+      "exampleTranslation": "Çocukluğundan beri Güney Amerika’ya bir yolculuk hayali kuruyor."
+    },
+    {
+      "verb": "abhängen von (etwas)",
+      "meaning": "Bir şeye bağlı olmak",
+      "exampleSentence": "Der Erfolg des Projekts hängt von der Finanzierung durch die Investoren ab.",
+      "exampleTranslation": "Projenin başarısı, yatırımcıların finansmanına bağlı."
+    },
+    {
+      "verb": "wissen von (etwas)",
+      "meaning": "Bir şey hakkında bilgi sahibi olmak",
+      "exampleSentence": "Hast du schon von den neuesten Entwicklungen in der Robotik gewusst?",
+      "exampleTranslation": "Robotik alanındaki en son gelişmelerden haberin var mı?"
+    },
+    {
+      "verb": "profitieren von (etwas)",
+      "meaning": "Bir şeyden faydalanmak",
+      "exampleSentence": "Viele Unternehmen profitieren von den Vorteilen der Digitalisierung.",
+      "exampleTranslation": "Birçok şirket, dijitalleşmenin avantajlarından faydalanıyor."
+    },
+    {
+      "verb": "handeln von (etwas)",
+      "meaning": "Bir şey hakkında olmak",
+      "exampleSentence": "Der Roman handelt von den Herausforderungen einer jungen Immigrantin.",
+      "exampleTranslation": "Roman, genç bir göçmenin karşılaştığı zorluklar hakkında."
+    },
+    {
+      "verb": "leben von (etwas)",
+      "meaning": "Bir şeyle geçinmek",
+      "exampleSentence": "Er lebt ausschließlich von den Einnahmen seiner freiberuflichen Tätigkeit.",
+      "exampleTranslation": "Yalnızca serbest meslek faaliyetlerinden elde ettiği gelirle geçiniyor."
+    },
+    {
+      "verb": "erzählen von (etwas)",
+      "meaning": "Bir şeyden bahsetmek",
+      "exampleSentence": "Sie erzählte begeistert von ihren Erlebnissen während der Weltreise.",
+      "exampleTranslation": "Dünya gezisi sırasındaki deneyimlerinden heyecanla bahsetti."
+    },
+    {
+      "verb": "berichten über (etwas)",
+      "meaning": "Bir şey hakkında rapor vermek",
+      "exampleSentence": "Die Journalistin berichtete ausführlich über die politischen Unruhen im Land.",
+      "exampleTranslation": "Gazeteci, ülkedeki siyasi huzursuzluklar hakkında ayrıntılı bir rapor verdi."
+    },
+    {
+      "verb": "klagen über (etwas)",
+      "meaning": "Bir şeyden şikayet etmek",
+      "exampleSentence": "Die Anwohner klagen über die ständigen Verkehrsstaus in der Innenstadt.",
+      "exampleTranslation": "Şehir sakinleri, şehir merkezindeki sürekli trafik sıkışıklığından şikayet ediyor."
+    },
+    {
+      "verb": "nachdenken über (etwas)",
+      "meaning": "Bir şey hakkında düşünmek",
+      "exampleSentence": "Bevor ich zustimme, möchte ich gründlich über die Konsequenzen nachdenken.",
+      "exampleTranslation": "Kabul etmeden önce sonuçlar hakkında iyice düşünmek istiyorum."
+    },
+    {
+      "verb": "urteilen über (etwas/jemanden)",
+      "meaning": "Bir şey/biri hakkında yargıda bulunmak",
+      "exampleSentence": "Man sollte nicht vorschnell über andere urteilen, ohne ihre Motive zu kennen.",
+      "exampleTranslation": "Başkalarının motivasyonlarını bilmeden onlar hakkında aceleyle yargıda bulunmamalı."
+    },
+    {
+      "verb": "verfügen über (etwas)",
+      "meaning": "Bir şeye sahip olmak",
+      "exampleSentence": "Das Unternehmen verfügt über modernste Technologien zur Datenanalyse.",
+      "exampleTranslation": "Şirket, veri analizi için en modern teknolojilere sahip."
+    },
+    {
+      "verb": "sich äußern zu (etwas)",
+      "meaning": "Bir şey hakkında görüş bildirmek",
+      "exampleSentence": "Der Experte äußerte sich kritisch zu den neuen Steuerreformen.",
+      "exampleTranslation": "Uzman, yeni vergi reformları hakkında eleştirel bir görüş bildirdi."
+    },
+    {
+      "verb": "beitragen zu (etwas)",
+      "meaning": "Bir şeye katkıda bulunmak",
+      "exampleSentence": "Durch bewussten Konsum können wir zur Reduzierung von Plastikmüll beitragen.",
+      "exampleTranslation": "Bilinçli tüketimle plastik atıkların azaltılmasına katkıda bulunabiliriz."
+    },
+    {
+      "verb": "neigen zu (etwas)",
+      "meaning": "Bir şeye eğilimli olmak",
+      "exampleSentence": "Er neigt dazu, in Diskussionen seine Meinung zu stark zu verteidigen.",
+      "exampleTranslation": "Tartışmalarda fikrini fazla sert bir şekilde savunmaya eğilimli."
+    },
+    {
+      "verb": "tendieren zu (etwas)",
+      "meaning": "Bir şeye meyletmek",
+      "exampleSentence": "Die Mehrheit der Wähler tendiert zu einer konservativen Politik.",
+      "exampleTranslation": "Seçmenlerin çoğunluğu muhafazakar bir politikaya meyilli."
+    },
+    {
+      "verb": "sich bekennen zu (etwas)",
+      "meaning": "Bir şeyi itiraf etmek/kabul etmek",
+      "exampleSentence": "Sie bekannte sich offen zu ihrer Unterstützung für die Umweltbewegung.",
+      "exampleTranslation": "Çevreci harekete olan desteğini açıkça kabul etti."
+    },
+    {
+      "verb": "sich eignen zu (etwas)",
+      "meaning": "Bir şey için uygun olmak",
+      "exampleSentence": "Dieses Programm eignet sich hervorragend zur Analyse großer Datenmengen.",
+      "exampleTranslation": "Bu program, büyük veri miktarlarını analiz etmek için son derece uygun."
+    },
+    {
+      "verb": "ermutigen zu (etwas)",
+      "meaning": "Bir şeye cesaretlendirmek",
+      "exampleSentence": "Der Lehrer ermutigte die Schüler dazu, ihre kreativen Ideen zu präsentieren.",
+      "exampleTranslation": "Öğretmen, öğrencileri yaratıcı fikirlerini sunmaya cesaretlendirdi."
+    },
+    {
+      "verb": "verhelfen zu (etwas)",
+      "meaning": "Bir şeyi sağlamaya yardımcı olmak",
+      "exampleSentence": "Sein Mentor verhalf ihm zu einer Stelle in einem renommierten Unternehmen.",
+      "exampleTranslation": "Danışmanı, ona prestijli bir şirkette bir pozisyon elde etmesine yardımcı oldu."
+    },
+    {
+      "verb": "sich hingeben zu (etwas)",
+      "meaning": "Kendini bir şeye adamak",
+      "exampleSentence": "Sie gab sich ganz ihrer Leidenschaft für die Malerei hin.",
+      "exampleTranslation": "Kendisini tamamen resim tutkusuna adadı."
+    },
+    {
+      "verb": "sich entschließen zu (etwas)",
+      "meaning": "Bir şeye karar vermek",
+      "exampleSentence": "Nach langem Überlegen entschloss er sich zu einem Berufswechsel.",
+      "exampleTranslation": "Uzun bir değerlendirmeden sonra meslek değiştirmeye karar verdi."
+    },
+    {
+      "verb": "sich gesellen zu (jemanden)",
+      "meaning": "Birine katılmak",
+      "exampleSentence": "Er gesellte sich zu den Kollegen, die bereits an der Diskussion teilnahmen.",
+      "exampleTranslation": "Zaten tartışmaya katılan meslektaşlarına katıldı."
+    },
+    {
+      "verb": "sich fügen in (etwas)",
+      "meaning": "Bir şeye boyun eğmek",
+      "exampleSentence": "Er fügte sich widerwillig in die Entscheidung des Vorstands.",
+      "exampleTranslation": "İsteksizce yönetim kurulunun kararına boyun eğdi."
+    },
+    {
+      "verb": "sich ergeben aus (etwas)",
+      "meaning": "Bir şeyden kaynaklanmak",
+      "exampleSentence": "Die Probleme ergeben sich aus einer unzureichenden Planung des Projekts.",
+      "exampleTranslation": "Sorunlar, projenin yetersiz planlamasından kaynaklanıyor."
+    },
+    {
+      "verb": "übereinstimmen mit (etwas)",
+      "meaning": "Bir şeyle uyuşmak",
+      "exampleSentence": "Seine Aussagen stimmen nicht mit den offiziellen Berichten überein.",
+      "exampleTranslation": "Onun açıklamaları resmi raporlarla uyuşmuyor."
+    },
+    {
+      "verb": "sich befassen mit (etwas)",
+      "meaning": "Bir şeyle uğraşmak",
+      "exampleSentence": "Das Komitee befasst sich derzeit mit der Frage der Bildungsreform.",
+      "exampleTranslation": "Komite, şu anda eğitim reformu konusuyla uğraşıyor."
+    },
+    {
+      "verb": "sich auseinandersetzen mit (etwas)",
+      "meaning": "Bir şeyle yüzleşmek/hesaplaşmak",
+      "exampleSentence": "Wir müssen uns ernsthaft mit den sozialen Folgen der Globalisierung auseinandersetzen.",
+      "exampleTranslation": "Küreselleşmenin sosyal sonuçlarıyla ciddi bir şekilde yüzleşmeliyiz."
+    }
+  ],
+  "VerbenMitGenitiv": [
+    {
+      "verb": "sich bedienen eines (etwas)",
+      "meaning": "Bir şeyden faydalanmak",
+      "exampleSentence": "Die Wissenschaftler bedienten sich eines neuen Algorithmus zur Datenverarbeitung.",
+      "exampleTranslation": "Bilim insanları, veri işleme için yeni bir algoritmadan faydalandı."
+    },
+    {
+      "verb": "sich enthalten eines (etwas)",
+      "meaning": "Bir şeyden kaçınmak",
+      "exampleSentence": "Er enthielt sich eines Kommentars, um die Diskussion nicht zu eskalieren.",
+      "exampleTranslation": "Tartışmayı alevlendirmemek için yorum yapmaktan kaçındı."
+    },
+    {
+      "verb": "sich erinnern eines (etwas)",
+      "meaning": "Bir şeyi hatırlamak (resmi/eski)",
+      "exampleSentence": "Ich erinnere mich eines Gesprächs, das wir vor vielen Jahren führten.",
+      "exampleTranslation": "Yıllar önce yaptığımız bir konuşmayı hatırlıyorum."
+    },
+    {
+      "verb": "sich schämen eines (etwas)",
+      "meaning": "Bir şeyden utanmak",
+      "exampleSentence": "Er schämte sich eines Fehltritts, den er in der Öffentlichkeit begangen hatte.",
+      "exampleTranslation": "Kamuoyu önünde yaptığı bir hatadan utandı."
+    },
+    {
+      "verb": "sich rühmen eines (etwas)",
+      "meaning": "Bir şeyle övünmek",
+      "exampleSentence": "Das Unternehmen rühmt sich eines nachhaltigen Produktionsprozesses.",
+      "exampleTranslation": "Şirket, sürdürülebilir bir üretim süreciyle övünüyor."
+    },
+    {
+      "verb": "sich annehmen eines (jemanden)",
+      "meaning": "Birinin bakımını üstlenmek",
+      "exampleSentence": "Die Organisation nahm sich eines obdachlosen Kindes an.",
+      "exampleTranslation": "Örgüt, evsiz bir çocuğun bakımını üstlendi."
+    },
+    {
+      "verb": "sich bemächtigen eines (etwas)",
+      "meaning": "Bir şeyi ele geçirmek",
+      "exampleSentence": "Die Rebellen bemächtigten sich eines strategisch wichtigen Gebiets.",
+      "exampleTranslation": "İsyancılar, stratejik açıdan önemli bir bölgeyi ele geçirdi."
+    },
+    {
+      "verb": "sich entledigen eines (etwas)",
+      "meaning": "Bir şeyden kurtulmak",
+      "exampleSentence": "Sie entledigte sich eines alten Vertrags, der keine Gültigkeit mehr hatte.",
+      "exampleTranslation": "Artık geçerli olmayan eski bir sözleşmeden kurtuldu."
+    },
+    {
+      "verb": "sich besinnen eines (etwas)",
+      "meaning": "Bir şeyi hatırlamak",
+      "exampleSentence": "Er besann sich eines Versprechens, das er vor Jahren gegeben hatte.",
+      "exampleTranslation": "Yıllar önce verdiği bir sözü hatırladı."
+    },
+    {
+      "verb": "sich vergewissern eines (etwas)",
+      "meaning": "Bir şeyden emin olmak",
+      "exampleSentence": "Vor der Unterzeichnung vergewisserte er sich eines jeden Details des Vertrags.",
+      "exampleTranslation": "Sözleşmeyi imzalamadan önce her ayrıntısından emin oldu."
+    },
+    {
+      "verb": "sich erbarmen eines (jemanden)",
+      "meaning": "Birine merhamet etmek",
+      "exampleSentence": "Sie erbarmte sich eines Fremden, der in Not geraten war.",
+      "exampleTranslation": "Zor durumda kalan bir yabancıya merhamet etti."
+    },
+    {
+      "verb": "sich entsinnen eines (etwas)",
+      "meaning": "Bir şeyi anımsamak",
+      "exampleSentence": "Er entsann sich eines Ereignisses, das sein Leben nachhaltig geprägt hatte.",
+      "exampleTranslation": "Hayatını kalıcı olarak etkileyen bir olayı anımsadı."
+    },
+    {
+      "verb": "sich erwehren eines (etwas)",
+      "meaning": "Bir şeye karşı koymak",
+      "exampleSentence": "Sie erwehrte sich eines ungerechtfertigten Vorwurfs mit Nachdruck.",
+      "exampleTranslation": "Haksız bir suçlamaya kararlılıkla karşı koydu."
+    },
+    {
+      "verb": "harren eines (etwas)",
+      "meaning": "Bir şeyi sabırla beklemek",
+      "exampleSentence": "Die Bürger harrten eines positiven Signals von der Regierung.",
+      "exampleTranslation": "Vatandaşlar, hükümetten olumlu bir işaret bekledi."
+    },
+    {
+      "verb": "gedenken eines (etwas/jemanden)",
+      "meaning": "Bir şeyi/birini anmak",
+      "exampleSentence": "Wir gedenken jedes Jahr eines historischen Ereignisses, das unsere Stadt prägte.",
+      "exampleTranslation": "Her yıl şehrimizi etkileyen tarihi bir olayı anıyoruz."
+    },
+    {
+      "verb": "sich entäußern eines (etwas)",
+      "meaning": "Bir şeyden feragat etmek",
+      "exampleSentence": "Er entäußerte sich eines großen Teils seines Vermögens zugunsten einer Stiftung.",
+      "exampleTranslation": "Servetinin büyük bir kısmından bir vakıf lehine feragat etti."
+    },
+    {
+      "verb": "sich entschlagen eines (etwas)",
+      "meaning": "Bir şeyden kaçınmak/uzak durmak",
+      "exampleSentence": "Er entschlag sich eines riskanten Geschäfts, um Verluste zu vermeiden.",
+      "exampleTranslation": "Kayıplardan kaçınmak için riskli bir işten uzak durdu."
+    },
+    {
+      "verb": "sich befleißigen eines (etwas)",
+      "meaning": "Bir şeye gayret göstermek",
+      "exampleSentence": "Der Redner befleißigte sich eines präzisen und klaren Ausdrucks.",
+      "exampleTranslation": "Konuşmacı, kesin ve net bir ifade kullanmaya gayret gösterdi."
+    },
+    {
+      "verb": "sich entraten eines (etwas)",
+      "meaning": "Bir şeyi vazgeçilebilir bulmak",
+      "exampleSentence": "Er entrat sich eines unnötigen Streits, um die Harmonie zu wahren.",
+      "exampleTranslation": "Uyumu korumak için gereksiz bir tartışmadan vazgeçti."
+    },
+    {
+      "verb": "jemanden anklagen eines (etwas)",
+      "meaning": "Birini bir şeyle suçlamak",
+      "exampleSentence": "Der Politiker wurde eines Korruptionsskandals angeklagt.",
+      "exampleTranslation": "Politikacı, bir yolsuzluk skandalıyla suçlandı."
+    },
+    {
+      "verb": "jemanden bezichtigen eines (etwas)",
+      "meaning": "Birini bir şeyle itham etmek",
+      "exampleSentence": "Er wurde eines Betrugs bezichtigt, konnte jedoch seine Unschuld beweisen.",
+      "exampleTranslation": "Dolandırıcılıkla itham edildi, ancak masumiyetini kanıtlayabildi."
+    },
+    {
+      "verb": "jemanden beschuldigen eines (etwas)",
+      "meaning": "Birini bir şeyle suçlamak",
+      "exampleSentence": "Die Firma beschuldigte den Mitarbeiter eines Datenmissbrauchs.",
+      "exampleTranslation": "Şirket, çalışanı veri kötüye kullanımıyla suçladı."
+    },
+    {
+      "verb": "jemanden überführen eines (etwas)",
+      "meaning": "Birini bir şeyle ilgili suçlu bulmak",
+      "exampleSentence": "Der Täter wurde eines Einbruchs überführt und verurteilt.",
+      "exampleTranslation": "Suçlu, hırsızlık suçundan suçlu bulundu ve mahkum edildi."
+    },
+    {
+      "verb": "jemanden verdächtigen eines (etwas)",
+      "meaning": "Birini bir şeyden şüphelenmek",
+      "exampleSentence": "Die Ermittler verdächtigten ihn eines Verbrechens, hatten jedoch keine Beweise.",
+      "exampleTranslation": "Dedektifler, onu bir suçtan şüphelendi, ancak kanıtları yoktu."
+    }
+  ],
+  "KomplexeVerbkonstruktionen": [
+    {
+      "verb": "Anstoß nehmen an (etwas)",
+      "meaning": "Bir şeye gücenmek/alınmak",
+      "exampleSentence": "Sie nahm Anstoß an der respektlosen Art, wie er das Thema behandelte.",
+      "exampleTranslation": "Onun konuyu saygısızca ele alış biçimine alındı."
+    },
+    {
+      "verb": "in Verbindung stehen mit (etwas)",
+      "meaning": "Bir şeyle bağlantılı olmak",
+      "exampleSentence": "Der Vorfall steht in direktem Zusammenhang mit den jüngsten politischen Spannungen.",
+      "exampleTranslation": "Olay, son siyasi gerginliklerle doğrudan bağlantılı."
+    },
+    {
+      "verb": "Abstand nehmen von (etwas)",
+      "meaning": "Bir şeyden vazgeçmek",
+      "exampleSentence": "Er nahm Abstand von seinem ursprünglichen Plan aufgrund neuer Informationen.",
+      "exampleTranslation": "Yeni bilgiler nedeniyle orijinal planından vazgeçti."
+    },
+    {
+      "verb": "in Einklang bringen mit (etwas)",
+      "meaning": "Bir şeyle uyumlu hale getirmek",
+      "exampleSentence": "Wir müssen unsere Strategie mit den internationalen Standards in Einklang bringen.",
+      "exampleTranslation": "Stratejimizi uluslararası standartlarla uyumlu hale getirmeliyiz."
+    },
+    {
+      "verb": "Rechnung tragen mit (etwas)",
+      "meaning": "Bir şeyi hesaba katmak/dikkate almak",
+      "exampleSentence": "Bei der Planung tragen wir den Bedürfnissen aller Beteiligten Rechnung.",
+      "exampleTranslation": "Planlamada tüm ilgili tarafların ihtiyaçlarını dikkate alıyoruz."
+    },
+    {
+      "verb": "Einfluss nehmen auf (etwas)",
+      "meaning": "Bir şeyi etkilemek",
+      "exampleSentence": "Die neuen Gesetze werden erheblichen Einfluss auf die Wirtschaft nehmen.",
+      "exampleTranslation": "Yeni yasalar, ekonomi üzerinde önemli bir etkiye sahip olacak."
+    },
+    {
+      "verb": "in Zweifel ziehen an (etwas)",
+      "meaning": "Bir şeyi sorgulamak",
+      "exampleSentence": "Die Studie zog die Zuverlässigkeit der bisherigen Daten in Zweifel.",
+      "exampleTranslation": "Çalışma, mevcut verilerin güvenilirliğini sorguladı."
+    },
+    {
+      "verb": "zur Verantwortung ziehen für (etwas)",
+      "meaning": "Bir şey için sorumlu tutmak",
+      "exampleSentence": "Die Behörden zogen die Firma für die Umweltverschmutzung zur Verantwortung.",
+      "exampleTranslation": "Yetkililer, şirketi çevre kirliliğinden sorumlu tuttu."
+    },
+    {
+      "verb": "Stellung nehmen zu (etwas)",
+      "meaning": "Bir şey hakkında tavır almak/görüş bildirmek",
+      "exampleSentence": "Die Regierung nahm eindeutig Stellung zu den Vorschlägen der Opposition.",
+      "exampleTranslation": "Hükümet, muhalefetin önerilerine açıkça tavır aldı."
+    },
+    {
+      "verb": "zum Ausdruck bringen in (etwas)",
+      "meaning": "Bir şeyde ifade etmek",
+      "exampleSentence": "Er brachte seine Dankbarkeit in einem bewegenden Brief zum Ausdruck.",
+      "exampleTranslation": "Minnettarlığını dokunaklı bir mektupta ifade etti."
+    },
+    {
+      "verb": "in Anspruch nehmen für (etwas)",
+      "meaning": "Bir şey için talep etmek/kullanmak",
+      "exampleSentence": "Sie nahm die Unterstützung des Teams für das komplexe Projekt in Anspruch.",
+      "exampleTranslation": "Karmaşık proje için ekibin desteğini talep etti."
+    },
+    {
+      "verb": "Bezug nehmen auf (etwas)",
+      "meaning": "Bir şeye atıfta bulunmak",
+      "exampleSentence": "In seiner Rede nahm er Bezug auf die historischen Wurzeln des Konflikts.",
+      "exampleTranslation": "Konuşmasında çatışmanın tarihsel köklerine atıfta bulundu."
+    },
+    {
+      "verb": "zur Verfügung stehen für (etwas)",
+      "meaning": "Bir şey için mevcut olmak",
+      "exampleSentence": "Unsere Experten stehen Ihnen für weitere Fragen jederzeit zur Verfügung.",
+      "exampleTranslation": "Uzmanlarımız, ek sorularınız için her zaman hazır."
+    },
+    {
+      "verb": "in Betracht ziehen für (etwas)",
+      "meaning": "Bir şeyi dikkate almak/düşünmek",
+      "exampleSentence": "Wir ziehen alle Optionen für die Finanzierung des Projekts in Betracht.",
+      "exampleTranslation": "Projenin finansmanı için tüm seçenekleri düşünüyoruz."
+    },
+    {
+      "verb": "in Kauf nehmen für (etwas)",
+      "meaning": "Bir şeyi göze almak",
+      "exampleSentence": "Für den Erfolg des Unternehmens nahm er hohe Risiken in Kauf.",
+      "exampleTranslation": "Şirketin başarısı için yüksek riskleri göze aldı."
+    },
+    {
+      "verb": "Wert legen auf (etwas)",
+      "meaning": "Bir şeye önem vermek",
+      "exampleSentence": "In unserer Organisation legen wir großen Wert auf ethisches Verhalten.",
+      "exampleTranslation": "Kuruluşumuzda etik davranışlara büyük önem veriyoruz."
+    }
+  ],
+  "PrapositionalobjekteMitMehrerenMoglichenPrapositionen": [
+    {
+      "verb": "sprechen mit (jemandem) / über (etwas) / von (etwas)",
+      "meaning": "Biriyle konuşmak / bir şey hakkında konuşmak / bir şeyden bahsetmek",
+      "exampleSentence": "Ich sprach mit meinem Kollegen über die Herausforderungen von nachhaltiger Entwicklung.",
+      "exampleTranslation": "Meslektaşımla sürdürülebilir kalkınmanın zorlukları hakkında konuştum."
+    },
+    {
+      "verb": "schreiben an (jemanden) / über (etwas)",
+      "meaning": "Birine yazmak / bir şey hakkında yazmak",
+      "exampleSentence": "Sie schrieb einen ausführlichen Artikel über die kulturellen Unterschiede in Europa.",
+      "exampleTranslation": "Avrupa’daki kültürel farklılıklar hakkında kapsamlı bir makale yazdı."
+    },
+    {
+      "verb": "diskutieren mit (jemandem) / über (etwas)",
+      "meaning": "Biriyle tartışmak / bir şey hakkında tartışmak",
+      "exampleSentence": "Wir diskutierten mit dem Team über die Umsetzung der neuen Strategie.",
+      "exampleTranslation": "Ekip ile yeni stratejinin uygulanmasını tartıştık."
+    },
+    {
+      "verb": "denken an (jemanden/etwas) / über (etwas)",
+      "meaning": "Birini/bir şeyi düşünmek / bir şey hakkında düşünmek",
+      "exampleSentence": "Bevor ich handle, denke ich gründlich über die möglichen Konsequenzen nach.",
+      "exampleTranslation": "Harekete geçmeden önce olası sonuçları iyice düşünürüm."
+    },
+    {
+      "verb": "sich freuen auf (etwas Zukünftiges) / über (etwas Gegenwärtiges/Vergangenes)",
+      "meaning": "Gelecekteki bir şeyi dört gözle beklemek / mevcut/geçmiş bir şey için sevinmek",
+      "exampleSentence": "Ich freue mich über den erfolgreichen Abschluss des Projekts.",
+      "exampleTranslation": "Projenin başarılı bir şekilde tamamlanmasından dolayı seviniyorum."
+    },
+    {
+      "verb": "sorgen für (jemanden/etwas) / um (jemanden/etwas)",
+      "meaning": "Birinin/bir şeyin bakımını üstlenmek / biri/bir şey için endişelenmek",
+      "exampleSentence": "Die Eltern sorgen sich um die Zukunft ihrer Kinder in unsicheren Zeiten.",
+      "exampleTranslation": "Ebeveynler, belirsiz zamanlarda çocuklarının geleceği için endişeleniyor."
+    },
+    {
+      "verb": "bestehen aus (etwas) / auf (etwas) / in (etwas)",
+      "meaning": "Bir şeyden oluşmak / bir şeyde ısrar etmek / bir şeyden ibaret olmak",
+      "exampleSentence": "Er besteht darauf, dass alle Details vor der Veröffentlichung überprüft werden.",
+      "exampleTranslation": "Tüm detayların yayınlanmadan önce kontrol edilmesi konusunda ısrar ediyor."
+    },
+    {
+      "verb": "verfügen über (etwas) / von (etwas)",
+      "meaning": "Bir şeye sahip olmak / bir şeyi emretmek",
+      "exampleSentence": "Der Direktor verfügt über die Befugnis, solche Entscheidungen zu treffen.",
+      "exampleTranslation": "Müdür, bu tür kararları alma yetkisine sahip."
+    }
+  ],
+  "FunktionsverbgefugeMitPrapositionen": [
+    {
+      "verb": "in Erfahrung bringen über (etwas)",
+      "meaning": "Bir şey hakkında bilgi edinmek",
+      "exampleSentence": "Wir brachten in Erfahrung, dass die Lieferung aufgrund von Streiks verzögert wird.",
+      "exampleTranslation": "Teslimatın grevler nedeniyle ertelendiğini öğrendik."
+    },
+    {
+      "verb": "in Verbindung setzen mit (etwas/jemandem)",
+      "meaning": "Bir şeyle/biriyle irtibat kurmak",
+      "exampleSentence": "Ich setzte mich mit dem Support-Team in Verbindung, um das Problem zu klären.",
+      "exampleTranslation": "Sorunu çözmek için destek ekibiyle irtibat kurdum."
+    },
+    {
+      "verb": "zur Kenntnis nehmen von (etwas)",
+      "meaning": "Bir şeyi bilgi edinmek",
+      "exampleSentence": "Die Geschäftsleitung nahm die Beschwerden der Kunden zur Kenntnis.",
+      "exampleTranslation": "Yönetim, müşterilerin şikayetlerini dikkate aldı."
+    },
+    {
+      "verb": "zu dem Schluss kommen über (etwas)",
+      "meaning": "Bir şey hakkında sonuca varmak",
+      "exampleSentence": "Nach der Analyse kamen wir zu dem Schluss, dass Änderungen notwendig sind.",
+      "exampleTranslation": "Analizden sonra değişikliklerin gerekli olduğu sonucuna vardık."
+    },
+    {
+      "verb": "zu der Überzeugung gelangen von (etwas)",
+      "meaning": "Bir şeye ikna olmak",
+      "exampleSentence": "Ich gelangte zu der Überzeugung, dass Teamarbeit entscheidend für den Erfolg ist.",
+      "exampleTranslation": "Başarı için ekip çalışmasının belirleyici olduğuna ikna oldum."
+    },
+    {
+      "verb": "unter dem Einfluss stehen von (etwas)",
+      "meaning": "Bir şeyin etkisi altında olmak",
+      "exampleSentence": "Seine Entscheidungen standen oft unter dem Einfluss seiner Berater.",
+      "exampleTranslation": "Kararları sıklıkla danışmanlarının etkisi altındaydı."
+    },
+    {
+      "verb": "in den Verdacht geraten von (etwas)",
+      "meaning": "Bir şeyden şüphelenilmek",
+      "exampleSentence": "Er geriet in den Verdacht, vertrauliche Informationen weitergegeben zu haben.",
+      "exampleTranslation": "Gizli bilgileri paylaşmakla suçlanmaktan şüphelenildi."
+    },
+    {
+      "verb": "in Beziehung stehen zu (etwas)",
+      "meaning": "Bir şeyle ilişkili olmak",
+      "exampleSentence": "Die neuen Regelungen stehen in enger Beziehung zu den EU-Richtlinien.",
+      "exampleTranslation": "Yeni düzenlemeler, AB direktifleriyle yakından ilişkilidir."
+    },
+    {
+      "verb": "in Widerspruch stehen zu (etwas)",
+      "meaning": "Bir şeyle çelişki içinde olmak",
+      "exampleSentence": "Seine Aussagen stehen in Widerspruch zu den offiziellen Statistiken.",
+      "exampleTranslation": "Onun açıklamaları resmi istatistiklerle çelişiyor."
+    },
+    {
+      "verb": "in Übereinstimmung bringen mit (etwas)",
+      "meaning": "Bir şeyle uyumlu hale getirmek",
+      "exampleSentence": "Die Pläne wurden mit den Vorgaben des Umweltministeriums in Übereinstimmung gebracht.",
+      "exampleTranslation": "Planlar, Çevre Bakanlığı’nın yönergeleriyle uyumlu hale getirildi."
+    },
+    {
+      "verb": "zum Ausdruck kommen in (etwas)",
+      "meaning": "Bir şeyde ifade edilmek",
+      "exampleSentence": "Ihre Überzeugung kam in ihrem neuesten Buch deutlich zum Ausdruck.",
+      "exampleTranslation": "Onun inancı, en son kitabında açıkça ifade edildi."
+    },
+    {
+      "verb": "zur Geltung kommen bei (etwas)",
+      "meaning": "Bir şeyde kendini göstermek",
+      "exampleSentence": "Seine Führungsqualitäten kamen bei der Leitung des Projekts zur Geltung.",
+      "exampleTranslation": "Liderlik nitelikleri, projeyi yönetirken kendini gösterdi."
+    },
+    {
+      "verb": "aus der Fassung geraten wegen (etwas)",
+      "meaning": "Bir şey yüzünden sinirlenmek",
+      "exampleSentence": "Er geriet wegen der unfairen Kritik völlig aus der Fassung.",
+      "exampleTranslation": "Haksız eleştiriler yüzünden tamamen sinirlendi."
+    },
+    {
+      "verb": "aus dem Gleichgewicht geraten durch (etwas)",
+      "meaning": "Bir şey nedeniyle dengesi bozulmak",
+      "exampleSentence": "Die Firma geriet durch die plötzliche Marktschwankung aus dem Gleichgewicht.",
+      "exampleTranslation": "Şirket, ani piyasa dalgalanmaları nedeniyle dengesini kaybetti."
+    }
+  ]
+}

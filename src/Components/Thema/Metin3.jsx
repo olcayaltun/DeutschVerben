@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import deu from "../utils/sprach";
-const Metin8 = () => {
+import migration from "../../utils/migration";
+const Metin1 = () => {
   const [index, setIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
 
   const next = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev + 1) % deu.length);
+    setIndex((prev) => (prev + 1) % migration.length);
   };
 
   const prev = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev - 1 + deu.length) % deu.length);
+    setIndex((prev) => (prev - 1 + migration.length) % migration.length);
   };
 
   return (
     <div className="max-w-xl mx-auto mt-10 px-4">
       <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
         <p className="text-xl font-semibold mb-4 text-gray-800">
-          {deu[index].sentence}
+          {migration[index].sentence}
         </p>
 
         {showTranslation && (
           <p className="text-green-600 text-lg mb-4">
-            {deu[index].translation}
+            {migration[index].translation}
           </p>
         )}
 
@@ -54,4 +54,4 @@ const Metin8 = () => {
   );
 };
 
-export default Metin8;
+export default Metin1;

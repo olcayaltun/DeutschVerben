@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import klima from "../utils/klima";
-const Metin2 = () => {
+import deu from "../../utils/sprach";
+const Metin8 = () => {
   const [index, setIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
 
   const next = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev + 1) % klima.length);
+    setIndex((prev) => (prev + 1) % deu.length);
   };
 
   const prev = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev - 1 + klima.length) % klima.length);
+    setIndex((prev) => (prev - 1 + deu.length) % deu.length);
   };
 
   return (
     <div className="max-w-xl mx-auto mt-10 px-4">
       <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
         <p className="text-xl font-semibold mb-4 text-gray-800">
-          {klima[index].sentence}
+          {deu[index].sentence}
         </p>
 
         {showTranslation && (
           <p className="text-green-600 text-lg mb-4">
-            {klima[index].translation}
+            {deu[index].translation}
           </p>
         )}
 
@@ -54,4 +54,4 @@ const Metin2 = () => {
   );
 };
 
-export default Metin2;
+export default Metin8;

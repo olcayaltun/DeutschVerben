@@ -61,6 +61,18 @@ const Main = () => {
           Sorular
         </Link>
         <Link
+          to="/prä"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          VerbenMitPo..
+        </Link>
+        <Link
+          to="/buch"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          Kitap
+        </Link>
+        <Link
           to="/sifat"
           className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >

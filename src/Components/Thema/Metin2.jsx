@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import familie from "../utils/familie";
-const Metin5 = () => {
+import klima from "../../utils/klima";
+const Metin2 = () => {
   const [index, setIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
 
   const next = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev + 1) % familie.length);
+    setIndex((prev) => (prev + 1) % klima.length);
   };
 
   const prev = () => {
     setShowTranslation(false);
-    setIndex((prev) => (prev - 1 + familie.length) % familie.length);
+    setIndex((prev) => (prev - 1 + klima.length) % klima.length);
   };
 
   return (
     <div className="max-w-xl mx-auto mt-10 px-4">
       <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-200">
         <p className="text-xl font-semibold mb-4 text-gray-800">
-          {familie[index].sentence}
+          {klima[index].sentence}
         </p>
 
         {showTranslation && (
           <p className="text-green-600 text-lg mb-4">
-            {familie[index].translation}
+            {klima[index].translation}
           </p>
         )}
 
@@ -54,4 +54,4 @@ const Metin5 = () => {
   );
 };
 
-export default Metin5;
+export default Metin2;
