@@ -8,6 +8,7 @@ const Baglactest = () => {
       meaning: "ve",
       example: "Ich trinke Tee und esse Kuchen.",
     },
+
     {
       conjunction: "oder",
       meaning: "veya",
@@ -257,6 +258,187 @@ const Baglactest = () => {
       conjunction: "in Anbetracht dessen, dass",
       meaning: "... dikkate alındığında",
       example: "In Anbetracht dessen, dass es regnet, bleiben wir drinnen.",
+    },
+    {
+      conjunction: "ungeachtet",
+      meaning: "-e rağmen, bakılmaksızın",
+      example: "Ungeachtet des Wetters gingen wir spazieren.",
+    },
+    {
+      conjunction: "in Folge",
+      meaning: "sonucunda, neticesinde",
+      example: "In Folge des Unfalls kam es zu Stau.",
+    },
+    {
+      conjunction: "wohin",
+      meaning: "nereye",
+      example: "Wohin gehst du?",
+    },
+    {
+      conjunction: "gegen",
+      meaning: "-e karşı",
+      example: "Das Medikament hilft gegen Kopfschmerzen.",
+    },
+    {
+      conjunction: "dagegen",
+      meaning: "buna karşı, öte yandan",
+      example: "Ich bin müde, dagegen bist du sehr aktiv.",
+    },
+    {
+      conjunction: "denn",
+      meaning: "çünkü",
+      example: "Ich bleibe zu Hause, denn ich bin krank.",
+    },
+    {
+      conjunction: "gegenüber",
+      meaning: "-e karşı, karşısında",
+      example: "Dem Haus gegenüber ist ein Park.",
+    },
+    {
+      conjunction: "also",
+      meaning: "yani, öyleyse",
+      example: "Es regnet, also bleiben wir drinnen.",
+    },
+    {
+      conjunction: "folglich",
+      meaning: "sonuç olarak",
+      example: "Er war krank, folglich konnte er nicht kommen.",
+    },
+    {
+      conjunction: "infolgedessen",
+      meaning: "bu sebeple, bunun sonucunda",
+      example:
+        "Es gab einen Stromausfall, infolgedessen fiel der Unterricht aus.",
+    },
+    {
+      conjunction: "aus diesem Grund",
+      meaning: "bu sebeple",
+      example: "Ich habe viel gearbeitet, aus diesem Grund bin ich müde.",
+    },
+    {
+      conjunction: "somit",
+      meaning: "böylece, sonuç olarak",
+      example: "Er hat bestanden, somit kann er studieren.",
+    },
+    {
+      conjunction: "demnach",
+      meaning: "dolayısıyla, buna göre",
+      example: "Die Prüfung war schwer, demnach sind viele durchgefallen.",
+    },
+    {
+      conjunction: "allerdings",
+      meaning: "fakat, gerçi, doğrusu",
+      example: "Er ist nett, allerdings etwas schüchtern.",
+    },
+    {
+      conjunction: "nämlich",
+      meaning: "çünkü, yani, şöyle ki",
+      example: "Ich gehe nicht mit, ich bin nämlich müde.",
+    },
+    {
+      conjunction: "andernfalls",
+      meaning: "aksi takdirde",
+      example: "Beeil dich, andernfalls verpassen wir den Bus!",
+    },
+    {
+      conjunction: "vorausgesetzt (dass)",
+      meaning: "şartıyla, eğer … ise",
+      example: "Du kannst mitkommen, vorausgesetzt, dass du leise bist.",
+    },
+    {
+      conjunction: "es sei denn",
+      meaning: "olmadıkça, ancak … olmazsa",
+      example: "Ich gehe spazieren, es sei denn, es regnet.",
+    },
+    {
+      conjunction: "zwecks",
+      meaning: "-mek amacıyla, için",
+      example: "Zwecks Anmeldung wenden Sie sich bitte an das Büro.",
+    },
+    {
+      conjunction: "um … zu",
+      meaning: "-mek için",
+      example: "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+    },
+    {
+      conjunction: "dazu",
+      meaning: "buna, bu konuda",
+      example: "Ich habe keine Meinung dazu.",
+    },
+    {
+      conjunction: "mittels",
+      meaning: "aracılığıyla, vasıtasıyla",
+      example: "Die Daten wurden mittels Software analysiert.",
+    },
+    {
+      conjunction: "mithilfe (von)",
+      meaning: "yardımıyla",
+      example: "Mithilfe seiner Freunde bestand er die Prüfung.",
+    },
+    {
+      conjunction: "dadurch",
+      meaning: "bu sayede, bu şekilde",
+      example: "Er trainierte täglich, dadurch wurde er stärker.",
+    },
+    {
+      conjunction: "wodurch",
+      meaning: "neyle, hangi yolla",
+      example: "Wodurch ist das passiert?",
+    },
+    {
+      conjunction: "ohne dass",
+      meaning: "-meden/-madan",
+      example: "Er ging, ohne dass er sich verabschiedete.",
+    },
+    {
+      conjunction: "ohne zu",
+      meaning: "-meden/-madan (fiil mastar)",
+      example: "Er ging, ohne zu sprechen.",
+    },
+    {
+      conjunction: "auf diese Weise",
+      meaning: "bu şekilde",
+      example: "Auf diese Weise sparen wir Zeit.",
+    },
+    {
+      conjunction: "stattdessen",
+      meaning: "onun yerine",
+      example: "Ich trinke keinen Kaffee, stattdessen Tee.",
+    },
+    {
+      conjunction: "gemäß",
+      meaning: "-e göre",
+      example: "Gemäß dem Gesetz ist das verboten.",
+    },
+    {
+      conjunction: "entsprechend",
+      meaning: "-e uygun olarak, uyarınca",
+      example: "Die Schüler wurden entsprechend ihrer Leistungen bewertet.",
+    },
+    {
+      conjunction: "indes",
+      meaning: "bu sırada, halbuki, oysa ki",
+      example: "Er arbeitete fleißig, indes seine Freunde feierten.",
+    },
+    {
+      conjunction: "inwiefern",
+      meaning: "ne ölçüde, hangi bakımdan",
+      example: "Inwiefern das Projekt erfolgreich war, bleibt unklar.",
+    },
+    {
+      conjunction: "sofern",
+      meaning: "şartıyla, eğer … ise",
+      example: "Sofern das Wetter gut bleibt, grillen wir im Garten.",
+    },
+    {
+      conjunction: "inwieweit",
+      meaning: "ne dereceye kadar, ne ölçüde",
+      example: "Inwieweit er die Wahrheit sagte, weiß niemand.",
+    },
+    {
+      conjunction: "wenngleich",
+      meaning: "olmasına rağmen",
+      example: "Wenngleich er krank war, kam er zur Arbeit.",
     },
   ];
 
@@ -781,6 +963,11 @@ const Baglactest = () => {
       feedback =
         "Daha fazla pratik yapmalısın. Almanca bağlaçları öğrenmek için çalışmaya devam et.";
 
+    // Filter incorrect answers
+    const incorrectAnswers = Object.values(userAnswers).filter(
+      (answer) => !answer.isCorrect
+    );
+
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
@@ -821,6 +1008,48 @@ const Baglactest = () => {
               </div>
             </div>
           </div>
+
+          {/* Incorrect Answers Section */}
+          {incorrectAnswers.length > 0 && (
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold mb-4">
+                Yanlış Cevapladığınız Sorular
+              </h2>
+              <div className="space-y-4">
+                {incorrectAnswers.map((answer, index) => (
+                  <div
+                    key={index}
+                    className="p-4 bg-red-50 rounded-lg border border-red-200"
+                  >
+                    <p className="font-medium mb-2">
+                      Soru: {answer.question.question}
+                    </p>
+                    <p className="text-sm text-gray-600 mb-1">
+                      Sizin Cevabınız:{" "}
+                      {answer.question.type === "matchPairs"
+                        ? Object.entries(answer.userAnswer)
+                            .map(([german, turkish]) => `${german}: ${turkish}`)
+                            .join(", ")
+                        : answer.question.multiSelect
+                        ? answer.userAnswer.join(", ")
+                        : answer.userAnswer}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Doğru Cevap:{" "}
+                      {answer.question.type === "matchPairs"
+                        ? answer.question.correctPairs
+                            .map((pair) => `${pair.german}: ${pair.turkish}`)
+                            .join(", ")
+                        : answer.question.multiSelect
+                        ? answer.question.correctAnswer.join(", ")
+                        : answer.question.correctAnswer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <button
             className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition"
             onClick={resetQuiz}
