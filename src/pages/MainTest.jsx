@@ -9,7 +9,7 @@ import Baglactest from "../Components/Baglactest";
 import Prätest from "../Components/Präpo../Prätest";
 import GermanVerbTest from "../Components/GermanVerbTest"; // Added missing import
 import germanVerbs from "../utils/germanVerbs"; // Added missing import
-
+import Relativp from "../Components/Relativp";
 const MainTest = () => {
   const [showTest, setShowTest] = useState(false);
   const [testType, setTestType] = useState(null);
@@ -49,6 +49,11 @@ const MainTest = () => {
       id: "prätest",
       label: "Präpositionen",
       handler: () => handleTestClick("prätest"),
+    },
+    {
+      id: "relativ",
+      label: "Relativpronomen",
+      handler: () => handleTestClick("relativ"),
     },
   ];
 
@@ -95,6 +100,8 @@ const MainTest = () => {
         return <GermanVerbTest onReturn={handleReturn} />;
       case "prätest":
         return <Prätest onReturn={handleReturn} />;
+      case "relativ":
+        return <Relativp onReturn={handleReturn} />;
       default:
         return null;
     }

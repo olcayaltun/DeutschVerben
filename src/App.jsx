@@ -10,7 +10,7 @@ import Second from "./pages/Second";
 import TestQuestion from "./pages/TestQuestion";
 import Game from "./pages/Game";
 import Explorer from "./pages/Explorer";
-import YeniVerb from "./pages/YeniVerb";
+import Yenibilgiler from "./pages/Yenibilgiler";
 import MainTest from "./pages/MainTest";
 import Frankfurt from "./pages/Frankfurt";
 import Sorular from "./pages/Sorular";
@@ -18,7 +18,7 @@ import Metinler from "./pages/Metinler";
 import Mektup from "./pages/Mektup";
 import Sifatlar from "./pages/Sifatlar";
 import Präpos from "./pages/Präpos";
-
+import YeniVerb from "./pages/YeniVerb";
 import MainBuch from "./pages/Buch/MainBuch";
 const isMobile = window.innerWidth <= 768; // Mobil cihazları belirlemek için basit bir kontrol
 
@@ -44,6 +44,7 @@ const App = () => {
           <Route path="/sifat" element={<Sifatlar />} />
           <Route path="/buch" element={<MainBuch />} />
           <Route path="/prä" element={<Präpos />} />
+          <Route path="/yeniverb" element={<Yenibilgiler />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>
