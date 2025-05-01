@@ -154,62 +154,55 @@ const data = [
   },
 
   {
-    section: "Position of information in sentences",
-    questions: [
-      {
-        question:
-          "Welche Position hat die Modalangabe (Art und Weise) im Satz?",
-        options: {
-          A: "Am Anfang des Satzes",
-          B: "Nach dem Subjekt",
-          C: "Vor der Zeitangabe",
-          D: "Vor der Ortsangabe",
-        },
-        correct: "D",
-      },
-      {
-        question: "Welcher Satz hat die richtige Anordnung der Informationen?",
-        options: {
-          A: "Ich fahre nächste Woche nach Hamburg mit dem Zug gerne.",
-          B: "Ich fahre gerne nächste Woche mit dem Zug nach Hamburg.",
-          C: "Ich fahre gerne mit dem Zug nächste Woche nach Hamburg.",
-          D: "Ich fahre mit dem Zug gerne nach Hamburg nächste Woche.",
-        },
-        correct: "B",
-      },
-      {
-        question:
-          "Was ist die richtige Position für eine kausale Angabe (Grund)?",
-        options: {
-          A: "Nach der Zeitangabe und vor der Ortsangabe",
-          B: "Nach dem finiten Verb und vor der Zeitangabe",
-          C: "Am Ende des Satzes, nach der Ortsangabe",
-          D: "Es gibt keine feste Regel, hängt vom Kontext ab",
-        },
-        correct: "D",
-      },
-      {
-        question:
-          "Ergänzen Sie den Satz mit der richtigen Anordnung: 'Sie lernt ...'",
-        options: {
-          A: "in der Bibliothek fleißig jeden Tag Deutsch.",
-          B: "fleißig jeden Tag in der Bibliothek Deutsch.",
-          C: "jeden Tag fleißig Deutsch in der Bibliothek.",
-          D: "Deutsch fleißig jeden Tag in der Bibliothek.",
-        },
-        correct: "C",
-      },
-      {
-        question: "Welche Reihenfolge entspricht dem 'Tekamolo'-Prinzip?",
-        options: {
-          A: "Temporal - Kausal - Modal - Lokal",
-          B: "Temporal - Lokal - Modal - Kausal",
-          C: "Temporal - Kausal - Lokal - Modal",
-          D: "Temporal - Modal - Kausal - Lokal",
-        },
-        correct: "A",
-      },
-    ],
+    question: "Welche Position hat die Modalangabe (Art und Weise) im Satz?",
+    options: {
+      A: "Am Anfang des Satzes",
+      B: "Nach dem Subjekt",
+      C: "Vor der Zeitangabe",
+      D: "Vor der Ortsangabe",
+    },
+    correct: "D",
+  },
+  {
+    question: "Welcher Satz hat die richtige Anordnung der Informationen?",
+    options: {
+      A: "Ich fahre nächste Woche nach Hamburg mit dem Zug gerne.",
+      B: "Ich fahre gerne nächste Woche mit dem Zug nach Hamburg.",
+      C: "Ich fahre gerne mit dem Zug nächste Woche nach Hamburg.",
+      D: "Ich fahre mit dem Zug gerne nach Hamburg nächste Woche.",
+    },
+    correct: "B",
+  },
+  {
+    question: "Was ist die richtige Position für eine kausale Angabe (Grund)?",
+    options: {
+      A: "Nach der Zeitangabe und vor der Ortsangabe",
+      B: "Nach dem finiten Verb und vor der Zeitangabe",
+      C: "Am Ende des Satzes, nach der Ortsangabe",
+      D: "Es gibt keine feste Regel, hängt vom Kontext ab",
+    },
+    correct: "D",
+  },
+  {
+    question:
+      "Ergänzen Sie den Satz mit der richtigen Anordnung: 'Sie lernt ...'",
+    options: {
+      A: "in der Bibliothek fleißig jeden Tag Deutsch.",
+      B: "fleißig jeden Tag in der Bibliothek Deutsch.",
+      C: "jeden Tag fleißig Deutsch in der Bibliothek.",
+      D: "Deutsch fleißig jeden Tag in der Bibliothek.",
+    },
+    correct: "C",
+  },
+  {
+    question: "Welche Reihenfolge entspricht dem 'Tekamolo'-Prinzip?",
+    options: {
+      A: "Temporal - Kausal - Modal - Lokal",
+      B: "Temporal - Lokal - Modal - Kausal",
+      C: "Temporal - Kausal - Lokal - Modal",
+      D: "Temporal - Modal - Kausal - Lokal",
+    },
+    correct: "A",
   },
   {
     question: "Was gehört zu den Ergänzungen, die direkt zum Verb gehören?",
@@ -262,63 +255,59 @@ const data = [
     },
     correct: "C",
   },
+
   {
-    section: "Position of nicht",
-    questions: [
-      {
-        question: "Wo steht 'nicht' bei der Negation eines Verbs?",
-        options: {
-          A: "Direkt vor dem Verb",
-          B: "Am Ende des Satzes",
-          C: "Nach dem Subjekt",
-          D: "Vor dem Objekt",
-        },
-        correct: "B",
-      },
-      {
-        question: "Wo steht 'nicht' bei der Negation eines Nomens?",
-        options: {
-          A: "Vor dem Artikel",
-          B: "Nach dem Artikel",
-          C: "Nach dem Nomen",
-          D: "Direkt vor dem Nomen (nach dem Artikel)",
-        },
-        correct: "D",
-      },
-      {
-        question:
-          "Wo steht 'nicht' im folgenden Satz? 'Ich komme ___ zur Party.'",
-        options: {
-          A: "Direkt nach dem Verb",
-          B: "Am Ende des Satzes",
-          C: "Vor der Präposition 'zur'",
-          D: "Nach 'zur Party'",
-        },
-        correct: "C",
-      },
-      {
-        question: "Welcher Satz zeigt die korrekte Position von 'nicht'?",
-        options: {
-          A: "Ich habe nicht das Buch gelesen.",
-          B: "Ich habe das Buch nicht gelesen.",
-          C: "Ich nicht habe das Buch gelesen.",
-          D: "Ich habe das nicht Buch gelesen.",
-        },
-        correct: "B",
-      },
-      {
-        question:
-          "Welche Regel gilt für die Position von 'nicht' bei trennbaren Verben im Hauptsatz?",
-        options: {
-          A: "Nicht steht vor dem abgetrennten Präfix.",
-          B: "Nicht steht direkt nach dem konjugierten Verbteil.",
-          C: "Nicht steht immer direkt vor dem Objekt.",
-          D: "Nicht steht immer am Ende des Satzes.",
-        },
-        correct: "A",
-      },
-    ],
+    question: "Wo steht 'nicht' bei der Negation eines Verbs?",
+    options: {
+      A: "Direkt vor dem Verb",
+      B: "Am Ende des Satzes",
+      C: "Nach dem Subjekt",
+      D: "Vor dem Objekt",
+    },
+    correct: "B",
   },
+  {
+    question: "Wo steht 'nicht' bei der Negation eines Nomens?",
+    options: {
+      A: "Vor dem Artikel",
+      B: "Nach dem Artikel",
+      C: "Nach dem Nomen",
+      D: "Direkt vor dem Nomen (nach dem Artikel)",
+    },
+    correct: "D",
+  },
+  {
+    question: "Wo steht 'nicht' im folgenden Satz? 'Ich komme ___ zur Party.'",
+    options: {
+      A: "Direkt nach dem Verb",
+      B: "Am Ende des Satzes",
+      C: "Vor der Präposition 'zur'",
+      D: "Nach 'zur Party'",
+    },
+    correct: "C",
+  },
+  {
+    question: "Welcher Satz zeigt die korrekte Position von 'nicht'?",
+    options: {
+      A: "Ich habe nicht das Buch gelesen.",
+      B: "Ich habe das Buch nicht gelesen.",
+      C: "Ich nicht habe das Buch gelesen.",
+      D: "Ich habe das nicht Buch gelesen.",
+    },
+    correct: "B",
+  },
+  {
+    question:
+      "Welche Regel gilt für die Position von 'nicht' bei trennbaren Verben im Hauptsatz?",
+    options: {
+      A: "Nicht steht vor dem abgetrennten Präfix.",
+      B: "Nicht steht direkt nach dem konjugierten Verbteil.",
+      C: "Nicht steht immer direkt vor dem Objekt.",
+      D: "Nicht steht immer am Ende des Satzes.",
+    },
+    correct: "A",
+  },
+
   {
     question:
       "Wo steht 'auch' im folgenden Satz? 'Sie hat ___ ein neues Auto gekauft.'",
