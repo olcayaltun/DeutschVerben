@@ -4,6 +4,7 @@ import data from "../utils/Data/data"; // Bu dosya bir dizi veya bir nesne olabi
 const B2c1 = () => {
   // Eğer data bir dizi ise:
   const questions = data;
+  console.log(questions.length);
 
   // Eğer data bir nesne ve içinde questions varsa:
   // const questions = data.questions;

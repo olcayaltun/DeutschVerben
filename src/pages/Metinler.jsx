@@ -12,6 +12,8 @@ import Metin7 from "../Components/Thema/Metin7";
 import Metin8 from "../Components/Thema/Metin8";
 import Metin11 from "../Components/Thema/Metin11";
 import Metin12 from "../Components/Thema/Metin12";
+import Kelimeler from "../Components/Thema/Kelimeler";
+
 const Metinler = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
 
@@ -28,40 +30,47 @@ const Metinler = () => {
     { name: "Metin10", component: Metin10 },
     { name: "Metin11", component: Metin11 },
     { name: "Metin12", component: Metin12 },
+    { name: "Kelimeler", component: Kelimeler },
   ];
 
   const handleComponentClick = (name) => {
-    setSelectedComponent(name === selectedComponent ? null : name);
+    setSelectedComponent(name);
+  };
+
+  const handleBackClick = () => {
+    setSelectedComponent(null);
   };
 
   const selected = components.find((c) => c.name === selectedComponent);
   const SelectedComponent = selected?.component;
 
   return (
-    <div className="metinler-container flex justify-center gap-1 ">
-      <div className="buttons-list">
-        {components.map(({ name }) => (
+    <div className="min-h-screen p-5 flex justify-center">
+      {selectedComponent ? (
+        <div className="w-full max-w-2xl">
           <button
-            key={name}
-            onClick={() => handleComponentClick(name)}
-            className={`component-button ${
-              selectedComponent === name ? "active" : ""
-            }`}
+            onClick={handleBackClick}
+            className="mb-5 px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
           >
-            {name}
+            Geri
           </button>
-        ))}
-      </div>
-
-      <div className="component-display">
-        {SelectedComponent ? (
-          <div className="component-preview">
+          <div className="border border-gray-200 p-5 rounded-md">
             <SelectedComponent />
           </div>
-        ) : (
-          <p className="prompt-message">👆 Bir metin bileşeni seçiniz</p>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-3 max-w-xs w-full">
+          {components.map(({ name }) => (
+            <button
+              key={name}
+              onClick={() => handleComponentClick(name)}
+              className="px-4 py-2 text-gray-800 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 transition-colors"
+            >
+              {name}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

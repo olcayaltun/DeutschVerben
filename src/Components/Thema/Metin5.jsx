@@ -22,7 +22,7 @@ const Metin5 = () => {
         </p>
 
         {showTranslation && (
-          <p className="text-green-600 text-lg mb-4">
+          <p className="text-green-800 text-lg mb-4  bg-green-50 p-1 rounded-md">
             {gesund[index].translation}
           </p>
         )}

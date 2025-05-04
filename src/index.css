@@ -2,3 +2,13 @@
 body {
   background: #1f1f1f;
 }
+.component-button {
+  background-color: rgb(135, 135, 246);
+
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: aliceblue;
+  font-weight: 600;
+}

@@ -1,0 +1,355 @@
+[
+  {
+    "kelime": "Wetterphänomenen",
+    "anlam": "hava olayları"
+  },
+  {
+    "kelime": "Dürren",
+    "anlam": "kuraklıklar"
+  },
+  {
+    "kelime": "Überschwemmungen",
+    "anlam": ["seller", "su baskınları"]
+  },
+  {
+    "kelime": "Stürme",
+    "anlam": "fırtınalar"
+  },
+  {
+    "kelime": "Leiden",
+    "anlam": ["acı çekmek", "ıstırap duymak"]
+  },
+  {
+    "kelime": "bedroht",
+    "anlam": ["tehdit altında", "tehlikede"]
+  },
+  {
+    "kelime": "Küstenstädte",
+    "anlam": "sahil şehirleri"
+  },
+  {
+    "kelime": "weltweit",
+    "anlam": ["dünya çapında", "dünya genelinde"]
+  },
+  {
+    "kelime": "ein deutliches Zeichen",
+    "anlam": ["açık bir işaret", "belirgin bir gösterge"]
+  },
+  {
+    "kelime": "reagieren",
+    "anlam": ["tepki vermek", "karşılık vermek"]
+  },
+  {
+    "kelime": "empfindlich",
+    "anlam": ["hassas", "duyarlı"]
+  },
+  {
+    "kelime": "Hauptursache",
+    "anlam": ["ana sebep", "başlıca neden"]
+  },
+  {
+    "kelime": "verschärft",
+    "anlam": ["şiddetlendirilmiş", "ağırlaştırılmış", "kötüleştirilmiş"]
+  },
+  {
+    "kelime": "Der Konsum",
+    "anlam": ["tüketim", "harcama", "kullanma"]
+  },
+  {
+    "kelime": "Maßnahmen",
+    "anlam": ["önlemler", "tedbirler"]
+  },
+  {
+    "kelime": "leisten",
+    "anlam": ["başarmak", "yapmak", "yerine getirmek", "katkıda bulunmak"]
+  },
+  {
+    "kelime": "Verzicht auf",
+    "anlam": ["feragat", "vazgeçme", "terk etme"]
+  },
+  {
+    "kelime": "Brennstoffen",
+    "anlam": ["yakıtlar", "yakıcı maddeler"]
+  },
+  {
+    "kelime": "Abkommen",
+    "anlam": ["anlaşma", "protokol", "sözleşme"]
+  },
+  {
+    "kelime": "Anstrengungen",
+    "anlam": ["çabalar", "gayretler"]
+  },
+  {
+    "kelime": "handeln",
+    "anlam": [
+      "hareket etmek",
+      "davranmak",
+      "ticaret yapmak",
+      "bir şey üzerinde işlem yapmak"
+    ]
+  },
+  {
+    "kelime": "faire",
+    "anlam": ["adil", "dürüst", "eşitlikçi"]
+  },
+  {
+    "kelime": "Lieferketten",
+    "anlam": "tedarik zincirleri"
+  },
+  {
+    "kelime": "gefordert",
+    "anlam": ["talep edilen", "istenen", "zorlanan"]
+  },
+  {
+    "kelime": "Bestandteil",
+    "anlam": ["parça", "bileşen", "unsur", "öğe"]
+  },
+  {
+    "kelime": "fördern",
+    "anlam": ["desteklemek", "teşvik etmek", "ilerletmek", "geliştirme"]
+  },
+  {
+    "kelime": "erwerben",
+    "anlam": ["edinmek", "kazanmak", "almak", "sahip olmak"]
+  },
+  {
+    "kelime": "erfordern",
+    "anlam": ["gerektirmek", "istemek", "zorunlu kılmak"]
+  },
+  {
+    "kelime": "Lebenslanges",
+    "anlam": ["ömür boyu", "hayat boyu"]
+  },
+  {
+    "kelime": "kehren",
+    "anlam": ["süpürmek", "geri dönmek", "yönünü çevirmek"]
+  },
+  {
+    "kelime": "Bildungsquellen",
+    "anlam": ["eğitim kaynakları", "bilgi kaynakları"]
+  },
+  {
+    "kelime": "Rahmenbedingungen",
+    "anlam": ["çerçeve koşulları", "temel şartlar", "genel koşullar"]
+  },
+  {
+    "kelime": "langfristig",
+    "anlam": ["uzun vadeli", "uzun süreli"]
+  },
+  {
+    "kelime": "Maßen",
+    "anlam": ["ölçüler", "miktarlar"]
+  },
+  {
+    "kelime": "Herz-Kreislauf-System",
+    "anlam": "kalp-dolaşım sistemi"
+  },
+  {
+    "kelime": "das Immunsystem",
+    "anlam": "bağışıklık sistemi"
+  },
+  {
+    "kelime": "seelische",
+    "anlam": ["ruhsal", "psikolojik"]
+  },
+  {
+    "kelime": "Wohlbefinden",
+    "anlam": ["iyi hissetme", "esenlik", "sağlık durumu"]
+  },
+  {
+    "kelime": "ausgewogene",
+    "anlam": "dengeli"
+  },
+  {
+    "kelime": "Work-Life-Balance",
+    "anlam": "iş-yaşam dengesi"
+  },
+  {
+    "kelime": "Burnout",
+    "anlam": "tükenmişlik sendromu"
+  },
+  {
+    "kelime": "gönnen",
+    "anlam": [
+      "(birine) gönül rahatlığıyla bir şeyi vermek",
+      "kendine bir şey hak görmek",
+      "layık görmek"
+    ]
+  },
+  {
+    "kelime": "verhindern",
+    "anlam": ["engellemek", "önlemek"]
+  },
+  {
+    "kelime": "Anspruch",
+    "anlam": ["hak", "talep", "beklenti"]
+  },
+  {
+    "kelime": "Werte",
+    "anlam": "değerler"
+  },
+  {
+    "kelime": "Verhaltensweisen",
+    "anlam": "davranış biçimleri"
+  },
+  {
+    "kelime": "bewältigen",
+    "anlam": ["üstesinden gelmek", "başa çıkmak", "yenmek"]
+  },
+  {
+    "kelime": "Phasen",
+    "anlam": ["evreler", "aşamalar"]
+  },
+  {
+    "kelime": "Trennung",
+    "anlam": "ayrılık"
+  },
+  {
+    "kelime": "beeinflussen",
+    "anlam": "etkilemek"
+  },
+  {
+    "kelime": "unerlässlich",
+    "anlam": ["vazgeç666ilmez", "kaçınılmaz", "olmazsa olmaz"]
+  },
+  {
+    "kelime": "erfüllen",
+    "anlam": ["yerine getirmek", "gerçekleştirmek"]
+  },
+  {
+    "kelime": "sinnvollen",
+    "anlam": ["anlamlı", "mantıklı", "faydalı"]
+  },
+  {
+    "kelime": "freiwilliges",
+    "anlam": [" Gönüllü, isteğe bağlı"]
+  },
+  {
+    "kelime": "Abständen",
+    "anlam": ["aralıklar", "mesafeler"]
+  },
+  {
+    "kelime": "Bevölkerung",
+    "anlam": ["nüfus", "halk"]
+  },
+  {
+    "kelime": "vertreten",
+    "anlam": ["temsil etmek", "savunmak"]
+  },
+  {
+    "kelime": "mündige",
+    "anlam": ["ergin", "olgun", "reşit"]
+  },
+  {
+    "kelime": "Engagement",
+    "anlam": ["taahhüt", "bağlılık", "gönüllü katılım"]
+  },
+  {
+    "kelime": "legitimes",
+    "anlam": ["meşru", "yasal"]
+  },
+  {
+    "kelime": "Meinungsäußerung",
+    "anlam": ["görüş bildirme", "fikir açıklama"]
+  },
+  {
+    "kelime": "gilt",
+    "anlam": ["geçerlidir", "hüküm sürer", "uygulanır"]
+  },
+  {
+    "kelime": "Geschlecht",
+    "anlam": ["cinsiyet", "cinsiyet kimliği"]
+  },
+  {
+    "kelime": "Sinn",
+    "anlam": ["anlam", "mantık", "amaç"]
+  },
+  {
+    "kelime": "frühzeitig",
+    "anlam": ["erken", "zamanında"]
+  },
+  {
+    "kelime": "verwirren",
+    "anlam": ["kafasını karıştırmak", "şaşırtmak", "belirsiz hale getirmek"]
+  },
+  {
+    "kelime": "abschreckend",
+    "anlam": ["caydırıcı", "korkutucu", "ürkütücü"]
+  },
+  {
+    "kelime": "geprägt",
+    "anlam": ["şekillendirilmiş", "etkilenmiş", "belirginleşmiş"]
+  },
+  {
+    "kelime": "Forscher",
+    "anlam": ["araştırmacı", "bilim insanı"]
+  },
+  {
+    "kelime": "Lithium-Eisen-Phosphat (LiFePO₄)",
+    "anlam": "Lityum Demir Fosfat"
+  },
+  {
+    "kelime": "Ladezyklen",
+    "anlam": "şarj döngüleri"
+  },
+  {
+    "kelime": "sogenannte",
+    "anlam": ["sözde", "denilen", "adı verilen"]
+  },
+  {
+    "kelime": "geschont",
+    "anlam": ["korunmuş", "zarar görmemiş", "dokunulmamış"]
+  },
+  {
+    "kelime": "Ersatz",
+    "anlam": ["yedek", "yerine geçen", "telafi", "ikame"]
+  },
+  {
+    "kelime": "neurodegenerativen",
+    "anlam": [
+      "sinir hücrelerini (nöronları) tahrip eden",
+      "sinir sistemi bozucu",
+      "sinirsel dejeneratif"
+    ]
+  },
+  {
+    "kelime": "betroffen",
+    "anlam": ["etkilenen", "mağdur olan", "ilgili", "etkilenmiş"]
+  },
+  {
+    "kelime": "Eiweißablagerungen",
+    "anlam": "protein birikintileri"
+  },
+  {
+    "kelime": "Gehirn",
+    "anlam": "beyin"
+  },
+  {
+    "kelime": "abbauen",
+    "anlam": ["parçalamak", "çözmek", "sökmek"]
+  },
+  {
+    "kelime": "Ablagerungen",
+    "anlam": ["birikintiler", "tortular"]
+  },
+  {
+    "kelime": "Beta-Amyloid",
+    "anlam": "Beta-amiloid (beyinde anormal şekilde biriken protein parçacıkları)"
+  },
+  {
+    "kelime": "Aducanumab",
+    "anlam": "Aducanumab (Alzheimer hastalığının tedavisinde kullanılan bir antikor; beyindeki beta-amiloid plaklarını hedef alır ve temizlemeye çalışır.)"
+  },
+  {
+    "kelime": "ansetzen",
+    "anlam": ["başlatmak", "uygulamak", "dayandırmak", "hedef almak"]
+  },
+  {
+    "kelime": "Entzündungshemmung",
+    "anlam": ["iltihap önleme", "iltihap giderme", "enflamasyonu azaltma"]
+  },
+  {
+    "kelime": "verschlimmern",
+    "anlam": ["kötüleşmek", "kötüleştirmek", "daha da kötü duruma getirmek"]
+  }
+]

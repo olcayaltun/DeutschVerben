@@ -11,6 +11,7 @@ import GermanVerbTest from "../Components/GermanVerbTest"; // Added missing impo
 import germanVerbs from "../utils/germanVerbs"; // Added missing import
 import Relativp from "../Components/Relativp";
 import B2c1 from "../Components/B2c2";
+import Deyim from "../Components/Deyimler/Deyim";
 const MainTest = () => {
   const [showTest, setShowTest] = useState(false);
   const [testType, setTestType] = useState(null);
@@ -61,6 +62,11 @@ const MainTest = () => {
       label: "B2-C1 sorular",
       handler: () => handleTestClick("b2c1"),
     },
+    {
+      id: "deyim",
+      label: "Deyimler",
+      handler: () => handleTestClick("deyim"),
+    },
   ];
 
   const handleTestClick = (type) => {
@@ -110,6 +116,8 @@ const MainTest = () => {
         return <Relativp onReturn={handleReturn} />;
       case "b2c1":
         return <B2c1 onReturn={handleReturn} />;
+      case "deyim":
+        return <Deyim onReturn={handleReturn} />;
       default:
         return null;
     }

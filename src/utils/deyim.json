@@ -1,0 +1,616 @@
+{
+  "is_ve_resmi_ortamlar": [
+    {
+      "deyim": "zur Sprache bringen",
+      "anlam": "dile getirmek",
+      "ornek_cumle_almanca": "Ich muss ein wichtiges Thema bei der nächsten Sitzung zur Sprache bringen.",
+      "ornek_cumle_turkce": "Gelecek toplantıda önemli bir konuyu dile getirmem gerekiyor."
+    },
+    {
+      "deyim": "in Frage stellen",
+      "anlam": "sorgulamak",
+      "ornek_cumle_almanca": "Niemand darf seine Kompetenz in Frage stellen.",
+      "ornek_cumle_turkce": "Kimse onun yetkinliğini sorgulamaya cesaret edemez."
+    },
+    {
+      "deyim": "eine Entscheidung treffen",
+      "anlam": "bir karar almak",
+      "ornek_cumle_almanca": "Wir müssen bis morgen eine Entscheidung treffen, ob wir das Projekt fortsetzen.",
+      "ornek_cumle_turkce": "Projeye devam edip etmeyeceğimize dair yarına kadar bir karar almamız gerekiyor."
+    },
+    {
+      "deyim": "auf die Nerven gehen",
+      "anlam": "sinir bozmak",
+      "ornek_cumle_almanca": "Sein ständiges Klopfen geht mir wirklich auf die Nerven.",
+      "ornek_cumle_turkce": "Sürekli tıklatması gerçekten sinirimi bozuyor."
+    },
+    {
+      "deyim": "einen Vorschlag machen",
+      "anlam": "bir teklif yapmak",
+      "ornek_cumle_almanca": "Darf ich einen Vorschlag zur Verbesserung des Prozesses machen?",
+      "ornek_cumle_turkce": "Süreci iyileştirmek için bir teklif yapabilir miyim?"
+    },
+    {
+      "deyim": "zur Verfügung stehen",
+      "anlam": "mevcut olmak, hizmete sunulmak",
+      "ornek_cumle_almanca": "Unsere Mitarbeiter stehen Ihnen rund um die Uhr zur Verfügung.",
+      "ornek_cumle_turkce": "Çalışanlarımız size günün her saati hizmet vermek için hazır."
+    },
+    {
+      "deyim": "in Betracht ziehen",
+      "anlam": "göz önünde bulundurmak",
+      "ornek_cumle_almanca": "Wir sollten alle Alternativen in Betracht ziehen, bevor wir uns entscheiden.",
+      "ornek_cumle_turkce": "Karar vermeden önce tüm alternatifleri göz önünde bulundurmalıyız."
+    },
+    {
+      "deyim": "in Kauf nehmen",
+      "anlam": "göze almak",
+      "ornek_cumle_almanca": "Für diesen Job muss man lange Arbeitstage in Kauf nehmen.",
+      "ornek_cumle_turkce": "Bu iş için uzun çalışma saatlerini göze alman gerekiyor."
+    },
+    {
+      "deyim": "in Erinnerung rufen",
+      "anlam": "hatırlatmak",
+      "ornek_cumle_almanca": "Ich möchte Ihnen die Hausregeln noch einmal in Erinnerung rufen.",
+      "ornek_cumle_turkce": "Size ev kurallarını bir kez daha hatırlatmak istiyorum."
+    },
+    {
+      "deyim": "unter Druck setzen",
+      "anlam": "baskı yapmak",
+      "ornek_cumle_almanca": "Der Chef hat das Team unter Druck gesetzt, den Bericht früher fertigzustellen.",
+      "ornek_cumle_turkce": "Patron, raporu daha erken bitirmeleri için ekibe baskı yaptı."
+    },
+    {
+      "deyim": "zur Kenntnis nehmen",
+      "anlam": "farkına varmak",
+      "ornek_cumle_almanca": "Bitte nehmen Sie zur Kenntnis, dass das Büro am Freitag geschlossen bleibt.",
+      "ornek_cumle_turkce": "Lütfen ofisin Cuma günü kapalı kalacağının farkına varın/bilin."
+    },
+    {
+      "deyim": "in Verbindung stehen",
+      "anlam": "bağlantılı olmak",
+      "ornek_cumle_almanca": "Diese Symptome stehen in Verbindung mit zu viel Stress am Arbeitsplatz.",
+      "ornek_cumle_turkce": "Bu belirtiler işyerindeki aşırı stresle bağlantılıdır."
+    },
+    {
+      "deyim": "eine Rolle spielen",
+      "anlam": "rol oynamak",
+      "ornek_cumle_almanca": "Geld spielt in diesem Fall keine Rolle für uns.",
+      "ornek_cumle_turkce": "Para bu durumda bizim için rol oynamıyor/önemli değil."
+    },
+    {
+      "deyim": "in Frage kommen",
+      "anlam": "söz konusu olmak",
+      "ornek_cumle_almanca": "Für diesen Job kommen nur qualifizierte Bewerber in Frage.",
+      "ornek_cumle_turkce": "Bu iş için sadece nitelikli adaylar söz konusu olabilir."
+    },
+    {
+      "deyim": "Beachtung finden",
+      "anlam": "dikkate alınmak",
+      "ornek_cumle_almanca": "Seine Ideen haben in der wissenschaftlichen Gemeinschaft viel Beachtung gefunden.",
+      "ornek_cumle_turkce": "Fikirleri bilimsel toplulukta çok dikkate alındı."
+    },
+    {
+      "deyim": "eine Antwort geben",
+      "anlam": "bir cevap vermek",
+      "ornek_cumle_almanca": "Kannst du mir bitte eine ehrliche Antwort auf meine Frage geben?",
+      "ornek_cumle_turkce": "Lütfen soruma dürüst bir cevap verebilir misin?"
+    },
+    {
+      "deyim": "eine Erklärung abgeben",
+      "anlam": "açıklama yapmak",
+      "ornek_cumle_almanca": "Der Politiker musste zu den Vorwürfen eine Erklärung abgeben.",
+      "ornek_cumle_turkce": "Politikacı suçlamalara ilişkin bir açıklama yapmak zorunda kaldı."
+    },
+    {
+      "deyim": "Verantwortung übernehmen",
+      "anlam": "sorumluluk almak",
+      "ornek_cumle_almanca": "Als Teamleiter muss man für Fehler Verantwortung übernehmen.",
+      "ornek_cumle_turkce": "Takım lideri olarak hatalar için sorumluluk almak gerekir."
+    },
+    {
+      "deyim": "in Angriff nehmen",
+      "anlam": "başlamak, işe koyulmak",
+      "ornek_cumle_almanca": "Wir sollten das Projekt so schnell wie möglich in Angriff nehmen.",
+      "ornek_cumle_turkce": "Projeye mümkün olan en kısa sürede başlamalıyız."
+    },
+    {
+      "deyim": "zum Ausdruck bringen",
+      "anlam": "ifade etmek",
+      "ornek_cumle_almanca": "Sie hat ihre Gefühle in einem Brief zum Ausdruck gebracht.",
+      "ornek_cumle_turkce": "Duygularını bir mektupta ifade etti."
+    }
+  ],
+  "gunluk_hayat": [
+    {
+      "deyim": "sich in Acht nehmen",
+      "anlam": "dikkatli olmak",
+      "ornek_cumle_almanca": "Nimm dich in Acht vor dem streunenden Hund!",
+      "ornek_cumle_turkce": "Başıboş köpeğe karşı dikkatli ol!"
+    },
+    {
+      "deyim": "einen Eindruck hinterlassen",
+      "anlam": "izlenim bırakmak",
+      "ornek_cumle_almanca": "Er hat bei dem Vorstellungsgespräch einen sehr guten Eindruck hinterlassen.",
+      "ornek_cumle_turkce": "İş görüşmesinde çok iyi bir izlenim bıraktı."
+    },
+    {
+      "deyim": "Daumen drücken",
+      "anlam": "başarı dilemek, parmak tutmak",
+      "ornek_cumle_almanca": "Ich drücke dir die Daumen für deine Prüfung morgen.",
+      "ornek_cumle_turkce": "Yarınki sınavın için sana başarılar diliyorum."
+    },
+    {
+      "deyim": "ins Gras beißen",
+      "anlam": "ölmek",
+      "ornek_cumle_almanca": "Der arme Kerl hat leider viel zu früh ins Gras gebissen.",
+      "ornek_cumle_turkce": "Zavallı adam ne yazık ki çok erken öldü."
+    },
+    {
+      "deyim": "die Daumen drehen",
+      "anlam": "hiçbir şey yapmamak, tembellik etmek",
+      "ornek_cumle_almanca": "Er sitzt nur herum und dreht Daumen, während wir alle arbeiten.",
+      "ornek_cumle_turkce": "Biz hepimiz çalışırken o sadece oturup tembellik ediyor."
+    },
+    {
+      "deyim": "Hals über Kopf",
+      "anlam": "alelacele",
+      "ornek_cumle_almanca": "Sie verließ das Land Hals über Kopf, ohne sich zu verabschieden.",
+      "ornek_cumle_turkce": "Veda etmeden, alelacele ülkeden ayrıldı."
+    },
+    {
+      "deyim": "die Nase voll haben",
+      "anlam": "bıkmak, usanmak",
+      "ornek_cumle_almanca": "Ich habe die Nase voll von deinen leeren Versprechungen!",
+      "ornek_cumle_turkce": "Boş vaatlerinden bıktım!"
+    },
+    {
+      "deyim": "über die Runden kommen",
+      "anlam": "ayın sonunu getirmek, idare etmek",
+      "ornek_cumle_almanca": "Mit diesem geringen Gehalt komme ich kaum über die Runden.",
+      "ornek_cumle_turkce": "Bu düşük maaşla ay sonunu zar zor getiriyorum."
+    },
+    {
+      "deyim": "jemandem einen Bären aufbinden",
+      "anlam": "birine yalan söylemek",
+      "ornek_cumle_almanca": "Er versucht ständig, seinen Eltern einen Bären aufzubinden.",
+      "ornek_cumle_turkce": "Sürekli anne babasına yalan söylemeye çalışıyor."
+    },
+    {
+      "deyim": "den Nagel auf den Kopf treffen",
+      "anlam": "tam isabet etmek",
+      "ornek_cumle_almanca": "Mit deiner Analyse hast du den Nagel auf den Kopf getroffen.",
+      "ornek_cumle_turkce": "Analizinle tam isabet ettin."
+    },
+    {
+      "deyim": "sich Gedanken machen über",
+      "anlam": "bir şey hakkında düşünmek",
+      "ornek_cumle_almanca": "Ich mache mir Gedanken über unsere finanzielle Zukunft.",
+      "ornek_cumle_turkce": "Mali geleceğimiz hakkında düşünüyorum/endişeleniyorum."
+    },
+    {
+      "deyim": "auf dem Laufenden sein",
+      "anlam": "güncel olmak, haberleri takip etmek",
+      "ornek_cumle_almanca": "Er ist immer auf dem Laufenden, was politische Entwicklungen betrifft.",
+      "ornek_cumle_turkce": "Siyasi gelişmelerle ilgili her zaman güncel bilgiye sahip."
+    },
+    {
+      "deyim": "jemanden an der Nase herumführen",
+      "anlam": "birini kandırmak",
+      "ornek_cumle_almanca": "Lass dich nicht von ihm an der Nase herumführen!",
+      "ornek_cumle_turkce": "Onun tarafından kandırılmana izin verme!"
+    },
+    {
+      "deyim": "die Ohren spitzen",
+      "anlam": "kulak kabartmak",
+      "ornek_cumle_almanca": "Als sie seinen Namen hörte, spitzte sie die Ohren.",
+      "ornek_cumle_turkce": "Onun adını duyunca kulak kabarttı."
+    },
+    {
+      "deyim": "den Kopf verlieren",
+      "anlam": "paniğe kapılmak",
+      "ornek_cumle_almanca": "In Krisensituationen darf man nicht den Kopf verlieren.",
+      "ornek_cumle_turkce": "Kriz durumlarında paniğe kapılmamalısın."
+    },
+    {
+      "deyim": "ein Auge zudrücken",
+      "anlam": "görmezden gelmek, hoşgörülü olmak",
+      "ornek_cumle_almanca": "Bei kleinen Fehlern drückt der Lehrer oft ein Auge zu.",
+      "ornek_cumle_turkce": "Öğretmen küçük hataları genellikle görmezden gelir."
+    },
+    {
+      "deyim": "auf eigene Faust",
+      "anlam": "kendi başına",
+      "ornek_cumle_almanca": "Er hat das Problem auf eigene Faust gelöst, ohne jemanden zu fragen.",
+      "ornek_cumle_turkce": "Kimseye sormadan, kendi başına sorunu çözdü."
+    },
+    {
+      "deyim": "seinen Senf dazugeben",
+      "anlam": "istenmeyen fikrini belirtmek",
+      "ornek_cumle_almanca": "Er muss immer seinen Senf dazugeben, auch wenn niemand nach seiner Meinung fragt.",
+      "ornek_cumle_turkce": "Kimse fikrini sormasa bile, her zaman istenmeyen görüşlerini belirtmek zorunda."
+    },
+    {
+      "deyim": "Schwein haben",
+      "anlam": "şanslı olmak",
+      "ornek_cumle_almanca": "Du hast echt Schwein gehabt, dass du die letzte Karte bekommen hast!",
+      "ornek_cumle_turkce": "Son bileti aldığın için gerçekten şanslıydın!"
+    },
+    {
+      "deyim": "die Katze im Sack kaufen",
+      "anlam": "görmeden satın almak",
+      "ornek_cumle_almanca": "Beim Online-Shopping kauft man manchmal die Katze im Sack.",
+      "ornek_cumle_turkce": "İnternetten alışveriş yaparken bazen görmeden satın alırsın."
+    }
+  ],
+  "duygular_ve_iliskiler": [
+    {
+      "deyim": "jemandem das Herz brechen",
+      "anlam": "kalbini kırmak",
+      "ornek_cumle_almanca": "Seine Untreue hat ihr das Herz gebrochen.",
+      "ornek_cumle_turkce": "Onun sadakatsizliği kalbini kırdı."
+    },
+    {
+      "deyim": "eine Beziehung eingehen",
+      "anlam": "ilişki kurmak",
+      "ornek_cumle_almanca": "Nach ihrer Scheidung war sie nicht bereit, eine neue Beziehung einzugehen.",
+      "ornek_cumle_turkce": "Boşanmasından sonra yeni bir ilişki kurmaya hazır değildi."
+    },
+    {
+      "deyim": "auf Wolke sieben schweben",
+      "anlam": "çok mutlu olmak",
+      "ornek_cumle_almanca": "Seit sie verliebt ist, schwebt sie auf Wolke sieben.",
+      "ornek_cumle_turkce": "Aşık olduğundan beri çok mutlu."
+    },
+    {
+      "deyim": "jemanden zum Narren halten",
+      "anlam": "birisiyle alay etmek",
+      "ornek_cumle_almanca": "Hör auf, mich zum Narren zu halten, ich weiß, dass du lügst.",
+      "ornek_cumle_turkce": "Benimle alay etmeyi bırak, yalan söylediğini biliyorum."
+    },
+    {
+      "deyim": "sich zum Affen machen",
+      "anlam": "kendini rezil etmek",
+      "ornek_cumle_almanca": "Er hat sich auf der Party total betrunken und sich zum Affen gemacht.",
+      "ornek_cumle_turkce": "Partide tamamen sarhoş oldu ve kendini rezil etti."
+    },
+    {
+      "deyim": "Liebe geht durch den Magen",
+      "anlam": "aşk mideden geçer",
+      "ornek_cumle_almanca": "Er kocht jeden Tag für sie – Liebe geht ja durch den Magen!",
+      "ornek_cumle_turkce": "Her gün onun için yemek pişiriyor - aşk mideden geçer!"
+    },
+    {
+      "deyim": "jemanden im Stich lassen",
+      "anlam": "yüzüstü bırakmak",
+      "ornek_cumle_almanca": "Ein echter Freund würde dich niemals im Stich lassen.",
+      "ornek_cumle_turkce": "Gerçek bir arkadaş seni asla yüzüstü bırakmaz."
+    },
+    {
+      "deyim": "kein Blatt vor den Mund nehmen",
+      "anlam": "dobra konuşmak",
+      "ornek_cumle_almanca": "Sie nimmt kein Blatt vor den Mund und sagt immer direkt, was sie denkt.",
+      "ornek_cumle_turkce": "Dobra konuşur ve her zaman ne düşündüğünü direkt söyler."
+    },
+    {
+      "deyim": "jemanden auf die Palme bringen",
+      "anlam": "birini çileden çıkarmak",
+      "ornek_cumle_almanca": "Seine ständigen Verspätungen bringen mich auf die Palme.",
+      "ornek_cumle_turkce": "Sürekli geç kalması beni çileden çıkarıyor."
+    },
+    {
+      "deyim": "sich in die Haare geraten",
+      "anlam": "kavga etmek",
+      "ornek_cumle_almanca": "Die Geschwister geraten sich oft wegen Kleinigkeiten in die Haare.",
+      "ornek_cumle_turkce": "Kardeşler sık sık ufak şeyler yüzünden kavga ederler."
+    }
+  ],
+  "dusunme_ve_karar_verme": [
+    {
+      "deyim": "zur Einsicht kommen",
+      "anlam": "farkına varmak",
+      "ornek_cumle_almanca": "Nach langer Diskussion kam er zur Einsicht, dass er falsch lag.",
+      "ornek_cumle_turkce": "Uzun tartışmadan sonra yanıldığının farkına vardı."
+    },
+    {
+      "deyim": "in der Lage sein",
+      "anlam": "yapabilmek, kapasitesi olmak",
+      "ornek_cumle_almanca": "Trotz seiner Verletzung ist er immer noch in der Lage zu spielen.",
+      "ornek_cumle_turkce": "Yaralanmasına rağmen hâlâ oynayabilecek durumda."
+    },
+    {
+      "deyim": "in der Tat",
+      "anlam": "gerçekte, aslında",
+      "ornek_cumle_almanca": "Es war in der Tat ein schwierigeres Problem, als wir zuerst dachten.",
+      "ornek_cumle_turkce": "Gerçekten ilk düşündüğümüzden daha zor bir problemdi."
+    },
+    {
+      "deyim": "zum Ergebnis kommen",
+      "anlam": "sonuca varmak",
+      "ornek_cumle_almanca": "Die Forscher sind zum Ergebnis gekommen, dass die Theorie falsch ist.",
+      "ornek_cumle_turkce": "Araştırmacılar teorinin yanlış olduğu sonucuna vardılar."
+    },
+    {
+      "deyim": "zu dem Schluss kommen",
+      "anlam": "sonuca varmak",
+      "ornek_cumle_almanca": "Nach reiflicher Überlegung bin ich zu dem Schluss gekommen, dass wir umziehen sollten.",
+      "ornek_cumle_turkce": "İyice düşündükten sonra taşınmamız gerektiği sonucuna vardım."
+    },
+    {
+      "deyim": "sich ein Bild machen von",
+      "anlam": "bir şey hakkında fikir edinmek",
+      "ornek_cumle_almanca": "Ich möchte mir selbst ein Bild von der Situation machen, bevor ich urteile.",
+      "ornek_cumle_turkce": "Karar vermeden önce durum hakkında kendim bir fikir edinmek istiyorum."
+    },
+    {
+      "deyim": "unter Beweis stellen",
+      "anlam": "kanıtlamak",
+      "ornek_cumle_almanca": "Er hat seine Fähigkeiten als Führungskraft bereits mehrfach unter Beweis gestellt.",
+      "ornek_cumle_turkce": "Liderlik yeteneklerini defalarca kanıtladı."
+    },
+    {
+      "deyim": "Rücksicht nehmen auf",
+      "anlam": "dikkate almak",
+      "ornek_cumle_almanca": "Wir müssen auf die Bedürfnisse älterer Menschen Rücksicht nehmen.",
+      "ornek_cumle_turkce": "Yaşlı insanların ihtiyaçlarını dikkate almalıyız."
+    },
+    {
+      "deyim": "über etwas nachdenken",
+      "anlam": "bir şey üzerine düşünmek",
+      "ornek_cumle_almanca": "Ich muss über deinen Vorschlag noch gründlich nachdenken.",
+      "ornek_cumle_turkce": "Öneriniz üzerinde daha derinlemesine düşünmeliyim."
+    },
+    {
+      "deyim": "zwischen den Zeilen lesen",
+      "anlam": "satır aralarını okumak",
+      "ornek_cumle_almanca": "Man muss bei seinen E-Mails oft zwischen den Zeilen lesen, um zu verstehen, was er wirklich meint.",
+      "ornek_cumle_turkce": "E-postalarında gerçekte ne demek istediğini anlamak için çoğu zaman satır aralarını okumak gerekir."
+    }
+  ],
+  "sorunlar_ve_zorluklar": [
+    {
+      "deyim": "in Konflikt geraten",
+      "anlam": "çatışmaya girmek",
+      "ornek_cumle_almanca": "Er ist mit seinem Chef wegen der Arbeitszeiten in Konflikt geraten.",
+      "ornek_cumle_turkce": "Çalışma saatleri yüzünden patronuyla çatışmaya girdi."
+    },
+    {
+      "deyim": "eine Auswirkung haben auf",
+      "anlam": "üzerinde etkisi olmak",
+      "ornek_cumle_almanca": "Die neue Steuerreform hat eine große Auswirkung auf kleine Unternehmen.",
+      "ornek_cumle_turkce": "Yeni vergi reformunun küçük işletmeler üzerinde büyük bir etkisi var."
+    },
+    {
+      "deyim": "in der Patsche sitzen",
+      "anlam": "zor durumda olmak",
+      "ornek_cumle_almanca": "Ohne seine Hilfe würde ich jetzt ganz schön in der Patsche sitzen.",
+      "ornek_cumle_turkce": "Onun yardımı olmadan şimdi çok zor durumda olurdum."
+    },
+    {
+      "deyim": "das Handtuch werfen",
+      "anlam": "pes etmek",
+      "ornek_cumle_almanca": "Nach drei erfolglosen Versuchen hat er das Handtuch geworfen.",
+      "ornek_cumle_turkce": "Üç başarısız denemeden sonra pes etti."
+    },
+    {
+      "deyim": "durch dick und dünn gehen",
+      "anlam": "iyi günde kötü günde birlikte olmak",
+      "ornek_cumle_almanca": "Wir sind schon seit zwanzig Jahren befreundet und gehen durch dick und dünn zusammen.",
+      "ornek_cumle_turkce": "Yirmi yıldır arkadaşız ve iyi günde kötü günde birlikteyiz."
+    },
+    {
+      "deyim": "jemanden im Regen stehen lassen",
+      "anlam": "zor durumda yalnız bırakmak",
+      "ornek_cumle_almanca": "Ein echter Freund würde dich nie im Regen stehen lassen.",
+      "ornek_cumle_turkce": "Gerçek bir arkadaş seni asla zor durumda yalnız bırakmaz."
+    },
+    {
+      "deyim": "die Nerven verlieren",
+      "anlam": "sabrını kaybetmek",
+      "ornek_cumle_almanca": "Bei so viel Stress kann man leicht die Nerven verlieren.",
+      "ornek_cumle_turkce": "Bu kadar stresle insan kolayca sabrını kaybedebilir."
+    },
+    {
+      "deyim": "aus einer Mücke einen Elefanten machen",
+      "anlam": "pireyi deve yapmak",
+      "ornek_cumle_almanca": "Reg dich nicht so auf, du machst aus einer Mücke einen Elefanten!",
+      "ornek_cumle_turkce": "Bu kadar heyecanlanma, pireyi deve yapıyorsun!"
+    },
+    {
+      "deyim": "mit dem Feuer spielen",
+      "anlam": "ateşle oynamak",
+      "ornek_cumle_almanca": "Wenn du weiter lügst, spielst du mit dem Feuer.",
+      "ornek_cumle_turkce": "Yalan söylemeye devam edersen, ateşle oynuyorsun demektir."
+    },
+    {
+      "deyim": "auf dem Holzweg sein",
+      "anlam": "yanılmak",
+      "ornek_cumle_almanca": "Wenn du denkst, dass ich dir helfe, bist du auf dem Holzweg.",
+      "ornek_cumle_turkce": "Eğer sana yardım edeceğimi düşünüyorsan, yanılıyorsun."
+    }
+  ],
+  "basari_ve_calisma": [
+    {
+      "deyim": "einen Beitrag leisten",
+      "anlam": "katkıda bulunmak",
+      "ornek_cumle_almanca": "Jeder kann einen Beitrag zum Umweltschutz leisten.",
+      "ornek_cumle_turkce": "Herkes çevre korumasına katkıda bulunabilir."
+    },
+    {
+      "deyim": "eine Bitte äußern",
+      "anlam": "bir ricada bulunmak",
+      "ornek_cumle_almanca": "Darf ich eine Bitte äußern? Könnten Sie bitte etwas leiser sein?",
+      "ornek_cumle_turkce": "Bir ricada bulunabilir miyim? Lütfen biraz daha sessiz olabilir misiniz?"
+    },
+    {
+      "deyim": "im Stande sein",
+      "anlam": "yapabilmek",
+      "ornek_cumle_almanca": "Trotz seiner Behinderung ist er im Stande, ein selbstständiges Leben zu führen.",
+      "ornek_cumle_turkce": "Engeline rağmen bağımsız bir hayat sürdürebilecek durumdadır."
+    },
+    {
+      "deyim": "eine Anfrage stellen",
+      "anlam": "bir soru sormak, başvuru yapmak",
+      "ornek_cumle_almanca": "Ich habe eine Anfrage bezüglich der offenen Stelle gestellt.",
+      "ornek_cumle_turkce": "Açık pozisyonla ilgili bir başvuru yaptım/soru sordum."
+    },
+    {
+      "deyim": "in Zusammenhang stehen mit",
+      "anlam": "ile bağlantılı olmak",
+      "ornek_cumle_almanca": "Diese Krankheit steht in Zusammenhang mit ungesunder Ernährung.",
+      "ornek_cumle_turkce": "Bu hastalık sağlıksız beslenmeyle bağlantılıdır."
+    },
+    {
+      "deyim": "eine Lösung finden",
+      "anlam": "bir çözüm bulmak",
+      "ornek_cumle_almanca": "Wir müssen schnell eine Lösung für dieses Problem finden.",
+      "ornek_cumle_turkce": "Bu sorun için hızlıca bir çözüm bulmamız gerekiyor."
+    },
+    {
+      "deyim": "in Übereinstimmung mit",
+      "anlam": "ile uyumlu olmak",
+      "ornek_cumle_almanca": "Unsere Maßnahmen stehen in Übereinstimmung mit den gesetzlichen Vorschriften.",
+      "ornek_cumle_turkce": "Aldığımız önlemler yasal düzenlemelerle uyumludur."
+    },
+    {
+      "deyim": "einen Plan erstellen",
+      "anlam": "bir plan hazırlamak",
+      "ornek_cumle_almanca": "Wir müssen einen detaillierten Plan für das nächste Jahr erstellen.",
+      "ornek_cumle_turkce": "Gelecek yıl için ayrıntılı bir plan hazırlamamız gerekiyor."
+    },
+    {
+      "deyim": "auf die Dauer wirken",
+      "anlam": "uzun vadede etki yapmak",
+      "ornek_cumle_almanca": "Diese Medikamente wirken erst auf die Dauer richtig gut.",
+      "ornek_cumle_turkce": "Bu ilaçlar ancak uzun vadede gerçekten iyi etki eder."
+    },
+    {
+      "deyim": "eine Position einnehmen",
+      "anlam": "bir pozisyon almak, görüş belirlemek",
+      "ornek_cumle_almanca": "In dieser Debatte hat sie eine neutrale Position eingenommen.",
+      "ornek_cumle_turkce": "Bu tartışmada tarafsız bir pozisyon aldı."
+    },
+    {
+      "deyim": "etwas auf die Beine stellen",
+      "anlam": "bir şey organize etmek",
+      "ornek_cumle_almanca": "Sie hat in kurzer Zeit eine erfolgreiche Veranstaltung auf die Beine gestellt.",
+      "ornek_cumle_turkce": "Kısa sürede başarılı bir etkinlik organize etti."
+    },
+    {
+      "deyim": "alle Hände voll zu tun haben",
+      "anlam": "çok meşgul olmak",
+      "ornek_cumle_almanca": "In dieser Woche habe ich alle Hände voll zu tun mit dem neuen Projekt.",
+      "ornek_cumle_turkce": "Bu hafta yeni projeyle çok meşgulüm."
+    },
+    {
+      "deyim": "die Ärmel hochkrempeln",
+      "anlam": "kolları sıvamak",
+      "ornek_cumle_almanca": "Jetzt müssen wir die Ärmel hochkrempeln und die Arbeit erledigen.",
+      "ornek_cumle_turkce": "Şimdi kolları sıvayıp işi bitirmemiz gerekiyor."
+    },
+    {
+      "deyim": "die Früchte seiner Arbeit ernten",
+      "anlam": "emeğinin karşılığını almak",
+      "ornek_cumle_almanca": "Nach Jahren harter Arbeit erntet er endlich die Früchte seiner Arbeit.",
+      "ornek_cumle_turkce": "Yıllarca süren sıkı çalışmanın ardından nihayet emeğinin karşılığını alıyor."
+    },
+    {
+      "deyim": "aus allen Wolken fallen",
+      "anlam": "şaşkınlıktan dona kalmak",
+      "ornek_cumle_almanca": "Als ich die Nachricht hörte, bin ich aus allen Wolken gefallen.",
+      "ornek_cumle_turkce": "Haberi duyduğumda, şaşkınlıktan dona kaldım."
+    }
+  ],
+  "iletisim_ve_davranis": [
+    {
+      "deyim": "eine Meinung vertreten",
+      "anlam": "bir görüşü savunmak",
+      "ornek_cumle_almanca": "In diesem Punkt vertrete ich eine andere Meinung als mein Kollege.",
+      "ornek_cumle_turkce": "Bu konuda meslektaşımdan farklı bir görüşü savunuyorum."
+    },
+    {
+      "deyim": "in der Verantwortung stehen",
+      "anlam": "sorumluluk taşımak",
+      "ornek_cumle_almanca": "Als Eltern stehen wir in der Verantwortung für unsere Kinder.",
+      "ornek_cumle_turkce": "Ebeveyn olarak çocuklarımız için sorumluluk taşıyoruz."
+    },
+    {
+      "deyim": "zur Folge haben",
+      "anlam": "sonucu olmak",
+      "ornek_cumle_almanca": "Sein Verhalten wird ernste Konsequenzen zur Folge haben.",
+      "ornek_cumle_turkce": "Davranışının ciddi sonuçları olacak."
+    },
+    {
+      "deyim": "mit jemandem unter einer Decke stecken",
+      "anlam": "birisiyle işbirliği yapmak, gizlice",
+      "ornek_cumle_almanca": "Ich vermute, dass die beiden bei dem Betrug unter einer Decke stecken.",
+      "ornek_cumle_turkce": "İkisinin bu dolandırıcılıkta gizlice işbirliği yaptıklarından şüpheleniyorum."
+    },
+    {
+      "deyim": "jemanden an den Pranger stellen",
+      "anlam": "birini teşhir etmek",
+      "ornek_cumle_almanca": "Es ist unfair, ihn wegen eines kleinen Fehlers an den Pranger zu stellen.",
+      "ornek_cumle_turkce": "Küçük bir hata yüzünden onu teşhir etmek adil değil."
+    },
+    {
+      "deyim": "etwas unter den Teppich kehren",
+      "anlam": "bir şeyi örtbas etmek",
+      "ornek_cumle_almanca": "Die Firma versucht, den Skandal unter den Teppich zu kehren.",
+      "ornek_cumle_turkce": "Şirket skandalı örtbas etmeye çalışıyor."
+    },
+    {
+      "deyim": "jemandem auf die Füße treten",
+      "anlam": "birinin duygularını incitmek",
+      "ornek_cumle_almanca": "Mit seiner direkten Art tritt er oft anderen auf die Füße.",
+      "ornek_cumle_turkce": "Direkt tarzıyla sık sık başkalarının duygularını incitiyor."
+    },
+    {
+      "deyim": "jemandem auf den Schlips treten",
+      "anlam": "birini gücendirmek",
+      "ornek_cumle_almanca": "Ich wollte dir nicht auf den Schlips treten mit meiner Bemerkung.",
+      "ornek_cumle_turkce": "Yorumumla seni gücendirmek istemedim."
+    },
+    {
+      "deyim": "hinter dem Berg halten",
+      "anlam": "çekingen davranmak",
+      "ornek_cumle_almanca": "Er hält mit seiner Meinung nie hinter dem Berg.",
+      "ornek_cumle_turkce": "Görüşlerini belirtirken asla çekingen davranmaz."
+    },
+    {
+      "deyim": "aus der Haut fahren",
+      "anlam": "çileden çıkmak",
+      "ornek_cumle_almanca": "Bei so viel Lärm könnte ich aus der Haut fahren!",
+      "ornek_cumle_turkce": "Bu kadar gürültüyle çileden çıkabilirim!"
+    },
+    {
+      "deyim": "mit offenen Karten spielen",
+      "anlam": "dürüst davranmak",
+      "ornek_cumle_almanca": "In unserer Beziehung spielen wir immer mit offenen Karten.",
+      "ornek_cumle_turkce": "İlişkimizde her zaman dürüst davranırız."
+    },
+    {
+      "deyim": "sein Gesicht wahren",
+      "anlam": "itibarını korumak",
+      "ornek_cumle_almanca": "Trotz der Niederlage hat er sein Gesicht gewahrt.",
+      "ornek_cumle_turkce": "Yenilgiye rağmen itibarını korudu."
+    },
+    {
+      "deyim": "jemandem Honig um den Mund schmieren",
+      "anlam": "dalkavukluk yapmak",
+      "ornek_cumle_almanca": "Er schmiert dem Chef immer Honig um den Mund, um befördert zu werden.",
+      "ornek_cumle_turkce": "Terfi etmek için patrona her zaman dalkavukluk yapar."
+    },
+    {
+      "deyim": "etwas auf die lange Bank schieben",
+      "anlam": "bir şeyi ertelemek, ağırdan almak",
+      "ornek_cumle_almanca": "Diese Entscheidung können wir nicht auf die lange Bank schieben.",
+      "ornek_cumle_turkce": "Bu kararı erteleyemeyiz/ağırdan alamayız."
+    },
+    {
+      "deyim": "jemandem ein Dorn im Auge sein",
+      "anlam": "birinin gözüne batmak, rahatsız etmek",
+      "ornek_cumle_almanca": "Seine Erfolge sind seinem Konkurrenten ein Dorn im Auge.",
+      "ornek_cumle_turkce": "Başarıları rakibinin gözüne batıyor/onu rahatsız ediyor."
+    }
+  ]
+}

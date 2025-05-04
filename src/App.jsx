@@ -44,7 +44,7 @@ const App = () => {
           <Route path="/sifat" element={<Sifatlar />} />
           <Route path="/buch" element={<MainBuch />} />
           <Route path="/prä" element={<Präpos />} />
-          <Route path="/yeniverb" element={<Yenibilgiler />} />
+          <Route path="/yenibilgiler" element={<Yenibilgiler />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>

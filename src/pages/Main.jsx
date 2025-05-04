@@ -115,10 +115,10 @@ const Main = () => {
           TrenbarenVerben
         </Link>
         <Link
-          to="/second"
+          to="/yenibilgiler"
           className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
         >
-          Neue
+          Yeni Bilgiler
         </Link>
         <Link
           to="/mektup"

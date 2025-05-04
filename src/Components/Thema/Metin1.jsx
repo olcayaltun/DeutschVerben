@@ -24,7 +24,7 @@ const Metin1 = () => {
         </p>
 
         {showTranslation && (
-          <p className="text-green-600 text-lg mb-4">
+          <p className="text-green-700 text-lg mb-4 bg-green-100 p-1 rounded-md">
             {digitalisierung[index].translation}
           </p>
         )}

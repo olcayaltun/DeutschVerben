@@ -22,7 +22,9 @@ const Metin4 = () => {
         </p>
 
         {showTranslation && (
-          <p className="text-green-600 text-lg mb-4">{ed[index].translation}</p>
+          <p className="text-green-800 text-lg mb-4  bg-green-50 p-1 rounded-md">
+            {ed[index].translation}
+          </p>
         )}
 
         <div className="flex justify-center gap-4 mt-6">
