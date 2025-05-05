@@ -2114,5 +2114,1146 @@
     "turkish": "hoş",
     "germanSentence": "Das hübsche Arrangement aus Wildblumen bildete einen natürlichen Blickfang auf dem Tisch.",
     "turkishTranslation": "Yabani çiçeklerden oluşan hoş düzenleme, masada doğal bir dikkat çekici unsur oluşturdu."
+  },
+  {
+    "id": 303,
+    "german": "hübsch",
+    "turkish": "hoş",
+    "germanSentence": "Das hübsche Arrangement aus Wildblumen bildete einen natürlichen Blickfang auf dem Tisch.",
+    "turkishTranslation": "Yabani çiçeklerden oluşan hoş düzenleme, masada doğal bir dikkat çekici unsur oluşturdu."
+  },
+  {
+    "id": 304,
+    "german": "renommiert",
+    "turkish": "saygın",
+    "germanSentence": "Der renommierte Wissenschaftler erhielt einen internationalen Preis für seine Forschung.",
+    "turkishTranslation": "Saygın bilim insanı, araştırmaları için uluslararası bir ödül aldı."
+  },
+  {
+    "id": 305,
+    "german": "begehrt",
+    "turkish": "aranan",
+    "germanSentence": "Das begehrte Kunstwerk wurde bei der Auktion für Millionen verkauft.",
+    "turkishTranslation": "Aranan sanat eseri, müzayedede milyonlara satıldı."
+  },
+  {
+    "id": 306,
+    "german": "einzigartig",
+    "turkish": "eşsiz",
+    "germanSentence": "Die einzigartige Atmosphäre des Festivals zog Besucher aus aller Welt an.",
+    "turkishTranslation": "Festivalin eşsiz atmosferi, dünyanın her yerinden ziyaretçi çekti."
+  },
+  {
+    "id": 307,
+    "german": "staunend",
+    "turkish": "şaşırmış",
+    "germanSentence": "Die Kinder standen staunend vor dem riesigen Weihnachtsbaum.",
+    "turkishTranslation": "Çocuklar, devasa Noel ağacının önünde şaşırmış bir şekilde duruyordu."
+  },
+  {
+    "id": 308,
+    "german": "langwierig",
+    "turkish": "uzun süren",
+    "germanSentence": "Die langwierige Renovierung des alten Hauses dauerte über ein Jahr.",
+    "turkishTranslation": "Eski evin uzun süren yenileme çalışması bir yıldan fazla sürdü."
+  },
+  {
+    "id": 309,
+    "german": "zahlreiche",
+    "turkish": "çok sayıda",
+    "germanSentence": "Zahlreiche Touristen besuchen jedes Jahr die historische Stadt.",
+    "turkishTranslation": "Çok sayıda turist her yıl tarihi şehri ziyaret ediyor."
+  },
+  {
+    "id": 310,
+    "german": "brutal",
+    "turkish": "acımasız",
+    "germanSentence": "Der brutale Angriff schockierte die gesamte Gemeinschaft.",
+    "turkishTranslation": "Acımasız saldırı, tüm toplumu şoke etti."
+  },
+  {
+    "id": 311,
+    "german": "eindrucksvoll",
+    "turkish": "etkileyici",
+    "germanSentence": "Die eindrucksvolle Architektur des Schlosses faszinierte die Besucher.",
+    "turkishTranslation": "Sarayın etkileyici mimarisi ziyaretçileri büyüledi."
+  },
+  {
+    "id": 312,
+    "german": "Neuigkeiten",
+    "turkish": "haberler",
+    "germanSentence": "Die Neuigkeiten über den Friedensvertrag verbreiteten sich schnell.",
+    "turkishTranslation": "Barış anlaşmasına dair haberler hızla yayıldı."
+  },
+  {
+    "id": 313,
+    "german": "konkret",
+    "turkish": "somut",
+    "germanSentence": "Er gab konkrete Beispiele, um seine Argumente zu untermauern.",
+    "turkishTranslation": "Argümanlarını desteklemek için somut örnekler verdi."
+  },
+  {
+    "id": 314,
+    "german": "Leistungen",
+    "turkish": "başarılar",
+    "germanSentence": "Ihre schulischen Leistungen wurden mit einem Stipendium belohnt.",
+    "turkishTranslation": "Okul başarıları bir bursla ödüllendirildi."
+  },
+  {
+    "id": 315,
+    "german": "bezüglich",
+    "turkish": "ile ilgili",
+    "germanSentence": "Bezüglich Ihrer Anfrage haben wir eine Lösung gefunden.",
+    "turkishTranslation": "Talebinizle ilgili bir çözüm bulduk."
+  },
+  {
+    "id": 316,
+    "german": "größzügig",
+    "turkish": "cömert",
+    "germanSentence": "Seine großzügige Spende half, das Waisenhaus zu renovieren.",
+    "turkishTranslation": "Cömert bağışı, yetimhanenin yenilenmesine yardımcı oldu."
+  },
+  {
+    "id": 317,
+    "german": "unheimlich",
+    "turkish": "ürkütücü",
+    "germanSentence": "Der unheimliche Wald war bei Nacht besonders furchterregend.",
+    "turkishTranslation": "Ürkütücü orman, geceleri özellikle korkutucuydu."
+  },
+  {
+    "id": 318,
+    "german": "aufgeregt",
+    "turkish": "heyecanlı",
+    "germanSentence": "Die Kinder waren aufgeregt vor der großen Reise.",
+    "turkishTranslation": "Çocuklar büyük yolculuk öncesinde heyecanlıydı."
+  },
+  {
+    "id": 319,
+    "german": "ausreichend",
+    "turkish": "yeterli",
+    "germanSentence": "Wir haben ausreichend Vorräte für die Expedition.",
+    "turkishTranslation": "Sefer için yeterli erzağımız var."
+  },
+  {
+    "id": 320,
+    "german": "bekannt",
+    "turkish": "bilinen",
+    "germanSentence": "Er ist ein bekannter Schriftsteller in der ganzen Welt.",
+    "turkishTranslation": "O, dünya çapında bilinen bir yazardır."
+  },
+  {
+    "id": 321,
+    "german": "belebt",
+    "turkish": "canlı",
+    "germanSentence": "Die belebte Innenstadt war voller Menschen und Aktivitäten.",
+    "turkishTranslation": "Canlı şehir merkezi, insanlar ve etkinliklerle doluydu."
+  },
+  {
+    "id": 322,
+    "german": "besonders",
+    "turkish": "özel",
+    "germanSentence": "Dieser Tag war für sie besonders unvergesslich.",
+    "turkishTranslation": "Bu gün onun için özellikle unutulmazdı."
+  },
+  {
+    "id": 323,
+    "german": "einfach",
+    "turkish": "basit",
+    "germanSentence": "Die Lösung des Problems war überraschend einfach.",
+    "turkishTranslation": "Sorunun çözümü şaşırtıcı derecede basitti."
+  },
+  {
+    "id": 324,
+    "german": "früh",
+    "turkish": "erken",
+    "germanSentence": "Sie stand früh auf, um den Sonnenaufgang zu sehen.",
+    "turkishTranslation": "Gün doğumunu görmek için erken kalktı."
+  },
+  {
+    "id": 325,
+    "german": "gemütlich",
+    "turkish": "rahat",
+    "germanSentence": "Das gemütliche Café war der perfekte Ort zum Entspannen.",
+    "turkishTranslation": "Rahat kafe, dinlenmek için mükemmel bir yerdi."
+  },
+  {
+    "id": 326,
+    "german": "gespannt",
+    "turkish": "meraklı",
+    "germanSentence": "Wir waren gespannt auf die Ergebnisse der Wahl.",
+    "turkishTranslation": "Seçim sonuçları konusunda meraklıydık."
+  },
+  {
+    "id": 327,
+    "german": "gut",
+    "turkish": "iyi",
+    "germanSentence": "Das Essen im Restaurant war wirklich gut.",
+    "turkishTranslation": "Restorandaki yemek gerçekten iyiydi."
+  },
+  {
+    "id": 328,
+    "german": "hoch",
+    "turkish": "yüksek",
+    "germanSentence": "Die hohen Berge boten eine atemberaubende Aussicht.",
+    "turkishTranslation": "Yüksek dağlar nefes kesici bir manzara sunuyordu."
+  },
+  {
+    "id": 329,
+    "german": "kurz",
+    "turkish": "kısa",
+    "germanSentence": "Die kurze Pause reichte nicht, um sich zu erholen.",
+    "turkishTranslation": "Kısa mola, dinlenmek için yeterli olmadı."
+  },
+  {
+    "id": 330,
+    "german": "motiviert",
+    "turkish": "motive",
+    "germanSentence": "Das Team war hochmotiviert, das Projekt zu vollenden.",
+    "turkishTranslation": "Ekip, projeyi tamamlamak için oldukça motiveydi."
+  },
+  {
+    "id": 331,
+    "german": "neu",
+    "turkish": "yeni",
+    "germanSentence": "Das neue Auto glänzte in der Sonne.",
+    "turkishTranslation": "Yeni araba güneşte parlıyordu."
+  },
+  {
+    "id": 332,
+    "german": "unterschiedlich",
+    "turkish": "farklı",
+    "germanSentence": "Die unterschiedlichen Meinungen führten zu einer lebhaften Diskussion.",
+    "turkishTranslation": "Farklı görüşler, canlı bir tartışmaya yol açtı."
+  },
+  {
+    "id": 333,
+    "german": "vielfältig",
+    "turkish": "çeşitli",
+    "germanSentence": "Das Museum bietet vielfältige Ausstellungen für alle Altersgruppen.",
+    "turkishTranslation": "Müze, her yaş grubu için çeşitli sergiler sunuyor."
+  },
+  {
+    "id": 334,
+    "german": "wichtig",
+    "turkish": "önemli",
+    "germanSentence": "Regelmäßige Bewegung ist wichtig für die Gesundheit.",
+    "turkishTranslation": "Düzenli egzersiz, sağlık için önemlidir."
+  },
+  {
+    "id": 335,
+    "german": "einwandfrei",
+    "turkish": "kusursuz",
+    "germanSentence": "Die Maschine funktionierte einwandfrei nach der Reparatur.",
+    "turkishTranslation": "Makine, tamirden sonra kusursuz çalıştı."
+  },
+  {
+    "id": 336,
+    "german": "sehnsüchtig",
+    "turkish": "özlem dolu",
+    "germanSentence": "Sie wartete sehnsüchtig auf die Rückkehr ihrer Familie.",
+    "turkishTranslation": "Ailesinin dönüşünü özlem dolu bir şekilde bekledi."
+  },
+  {
+    "id": 337,
+    "german": "einzige",
+    "turkish": "tek",
+    "germanSentence": "Das war die einzige Lösung, die uns blieb.",
+    "turkishTranslation": "Bu, bize kalan tek çözümdü."
+  },
+  {
+    "id": 338,
+    "german": "international",
+    "turkish": "uluslararası",
+    "germanSentence": "Das internationale Filmfestival zog viele Besucher an.",
+    "turkishTranslation": "Uluslararası film festivali birçok ziyaretçi çekti."
+  },
+  {
+    "id": 339,
+    "german": "deutsch",
+    "turkish": "Alman",
+    "germanSentence": "Die deutsche Küche ist für ihre Vielfalt bekannt.",
+    "turkishTranslation": "Alman mutfağı, çeşitliliğiyle bilinir."
+  },
+  {
+    "id": 340,
+    "german": "tausend",
+    "turkish": "bin",
+    "germanSentence": "Tausend Sterne leuchteten am Nachthimmel.",
+    "turkishTranslation": "Bin yıldız gece gökyüzünde parlıyordu."
+  },
+  {
+    "id": 341,
+    "german": "bestimmt",
+    "turkish": "belirli",
+    "germanSentence": "Zu einem bestimmten Zeitpunkt trafen sich alle Teilnehmer.",
+    "turkishTranslation": "Belirli bir zamanda tüm katılımcılar bir araya geldi."
+  },
+  {
+    "id": 342,
+    "german": "viel",
+    "turkish": "çok",
+    "germanSentence": "Es gab viel zu lernen in diesem Kurs.",
+    "turkishTranslation": "Bu kursta öğrenecek çok şey vardı."
+  },
+  {
+    "id": 343,
+    "german": "fast",
+    "turkish": "neredeyse",
+    "germanSentence": "Fast alle Gäste kamen pünktlich zur Feier.",
+    "turkishTranslation": "Neredeyse tüm konuklar kutlamaya zamanında geldi."
+  },
+  {
+    "id": 344,
+    "german": "verblüfft",
+    "turkish": "şaşkın",
+    "germanSentence": "Er war verblüfft über die unerwartete Nachricht.",
+    "turkishTranslation": "Beklenmedik haber karşısında şaşkına döndü."
+  },
+  {
+    "id": 345,
+    "german": "riesig",
+    "turkish": "devasa",
+    "germanSentence": "Das riesige Stadion war komplett ausverkauft.",
+    "turkishTranslation": "Devasa stadyum tamamen doluydu."
+  },
+  {
+    "id": 346,
+    "german": "circa",
+    "turkish": "yaklaşık",
+    "germanSentence": "Circa tausend Menschen nahmen an der Demonstration teil.",
+    "turkishTranslation": "Yaklaşık bin kişi gösteriye katıldı."
+  },
+  {
+    "id": 347,
+    "german": "groß",
+    "turkish": "büyük",
+    "germanSentence": "Die große Halle war festlich geschmückt.",
+    "turkishTranslation": "Büyük salon şenlikli bir şekilde süslenmişti."
+  },
+  {
+    "id": 348,
+    "german": "freundlich",
+    "turkish": "dostça",
+    "germanSentence": "Die freundliche Bedienung machte den Abend angenehm.",
+    "turkishTranslation": "Dostça hizmet, akşamı keyifli hale getirdi."
+  },
+  {
+    "id": 349,
+    "german": "neu",
+    "turkish": "yeni",
+    "germanSentence": "Die neue Kollektion wurde mit Begeisterung aufgenommen.",
+    "turkishTranslation": "Yeni koleksiyon büyük bir coşkuyla karşılandı."
+  },
+  {
+    "id": 350,
+    "german": "herzlich",
+    "turkish": "içten",
+    "germanSentence": "Sie begrüßte ihre Gäste herzlich und einladend.",
+    "turkishTranslation": "Konuklarını içten ve davetkâr bir şekilde karşıladı."
+  },
+  {
+    "id": 351,
+    "german": "etwa",
+    "turkish": "yaklaşık",
+    "germanSentence": "Die Reise dauert etwa drei Stunden.",
+    "turkishTranslation": "Yolculuk yaklaşık üç saat sürer."
+  },
+  {
+    "id": 352,
+    "german": "aufmerksam",
+    "turkish": "dikkatli",
+    "germanSentence": "Der aufmerksame Lehrer bemerkte sofort das Problem.",
+    "turkishTranslation": "Dikkatli öğretmen, sorunu hemen fark etti."
+  },
+  {
+    "id": 353,
+    "german": "schwarz",
+    "turkish": "siyah",
+    "germanSentence": "Das schwarze Kleid passte perfekt zu ihr.",
+    "turkishTranslation": "Siyah elbise ona mükemmel uyuyordu."
+  },
+  {
+    "id": 354,
+    "german": "jung",
+    "turkish": "genç",
+    "germanSentence": "Die junge Künstlerin stellte ihre Werke aus.",
+    "turkishTranslation": "Genç sanatçı eserlerini sergiledi."
+  },
+  {
+    "id": 355,
+    "german": "italienisch",
+    "turkish": "İtalyan",
+    "germanSentence": "Das italienische Restaurant serviert köstliche Pasta.",
+    "turkishTranslation": "İtalyan restoranı lezzetli makarna servis ediyor."
+  },
+  {
+    "id": 356,
+    "german": "ironisch",
+    "turkish": "ironik",
+    "germanSentence": "Sein ironischer Kommentar brachte alle zum Lachen.",
+    "turkishTranslation": "İronik yorumu herkesi güldürdü."
+  },
+  {
+    "id": 357,
+    "german": "klein",
+    "turkish": "küçük",
+    "germanSentence": "Das kleine Café war immer gut besucht.",
+    "turkishTranslation": "Küçük kafe her zaman kalabalıktı."
+  },
+  {
+    "id": 358,
+    "german": "eng",
+    "turkish": "yakın",
+    "germanSentence": "Die enge Freundschaft hielt ein Leben lang.",
+    "turkishTranslation": "Yakın dostluk bir ömür boyu sürdü."
+  },
+  {
+    "id": 359,
+    "german": "abendlich",
+    "turkish": "akşamla ilgili",
+    "germanSentence": "Der abendliche Spaziergang war sehr entspannend.",
+    "turkishTranslation": "Akşamla ilgili yürüyüş çok rahatlatıcıydı."
+  },
+  {
+    "id": 360,
+    "german": "chaotisch",
+    "turkish": "kaotik",
+    "germanSentence": "Die chaotische Situation im Büro verzögerte das Projekt.",
+    "turkishTranslation": "Ofisteki kaotik durum projeyi geciktirdi."
+  },
+  {
+    "id": 361,
+    "german": "schnell",
+    "turkish": "hızlı",
+    "germanSentence": "Der schnelle Zug brachte uns in kürzester Zeit ans Ziel.",
+    "turkishTranslation": "Hızlı tren bizi en kısa sürede hedefe ulaştırdı."
+  },
+  {
+    "id": 362,
+    "german": "gut",
+    "turkish": "iyi",
+    "germanSentence": "Das gute Wetter machte den Ausflug unvergesslich.",
+    "turkishTranslation": "İyi hava, geziyi unutulmaz kıldı."
+  },
+  {
+    "id": 363,
+    "german": "grenzenlos",
+    "turkish": "sınırsız",
+    "germanSentence": "Ihre grenzenlose Fantasie inspirierte viele Geschichten.",
+    "turkishTranslation": "Onun sınırsız hayal gücü birçok hikâyeye ilham verdi."
+  },
+  {
+    "id": 364,
+    "german": "international",
+    "turkish": "uluslararası",
+    "germanSentence": "Die internationale Konferenz war ein großer Erfolg.",
+    "turkishTranslation": "Uluslararası konferans büyük bir başarıydı."
+  },
+  {
+    "id": 365,
+    "german": "intensiv",
+    "turkish": "yoğun",
+    "germanSentence": "Das intensive Training bereitete das Team gut vor.",
+    "turkishTranslation": "Yoğun eğitim, takımı iyi hazırladı."
+  },
+  {
+    "id": 366,
+    "german": "deutlich",
+    "turkish": "belirgin",
+    "germanSentence": "Der Unterschied zwischen den beiden Produkten war deutlich.",
+    "turkishTranslation": "İki ürün arasındaki fark belirgindi."
+  },
+  {
+    "id": 367,
+    "german": "beheizt",
+    "turkish": "ısıtılmış",
+    "germanSentence": "Das beheizte Schwimmbad war auch im Winter beliebt.",
+    "turkishTranslation": "Isıtılmış yüzme havuzu kışın da popülerdi."
+  },
+  {
+    "id": 368,
+    "german": "bedrückt",
+    "turkish": "üzgün",
+    "germanSentence": "Sie war bedrückt nach den schlechten Nachrichten.",
+    "turkishTranslation": "Kötü haberlerden sonra üzgündü."
+  },
+  {
+    "id": 369,
+    "german": "wenig",
+    "turkish": "az",
+    "germanSentence": "Es gab wenig Hoffnung auf eine schnelle Lösung.",
+    "turkishTranslation": "Hızlı bir çözüm için az umut vardı."
+  },
+  {
+    "id": 370,
+    "german": "besorgt",
+    "turkish": "endişeli",
+    "germanSentence": "Die Eltern waren besorgt um die Sicherheit ihrer Kinder.",
+    "turkishTranslation": "Ebeveynler, çocuklarının güvenliği konusunda endişeliydi."
+  },
+  {
+    "id": 371,
+    "german": "still",
+    "turkish": "sessiz",
+    "germanSentence": "Die stille Nacht war nur vom Rauschen des Windes unterbrochen.",
+    "turkishTranslation": "Sessiz gece, sadece rüzgârın uğultusuyla kesiliyordu."
+  },
+  {
+    "id": 372,
+    "german": "groß",
+    "turkish": "büyük",
+    "germanSentence": "Das große Fest zog viele Gäste an.",
+    "turkishTranslation": "Büyük festival birçok konuk çekti."
+  },
+  {
+    "id": 373,
+    "german": "komplett",
+    "turkish": "tamamen",
+    "germanSentence": "Das Projekt war komplett abgeschlossen.",
+    "turkishTranslation": "Proje tamamen tamamlanmıştı."
+  },
+  {
+    "id": 374,
+    "german": "passend",
+    "turkish": "uygun",
+    "germanSentence": "Die passende Musik schuf eine festliche Atmosphäre.",
+    "turkishTranslation": "Uygun müzik, şenlikli bir atmosfer yarattı."
+  },
+  {
+    "id": 375,
+    "german": "schrecklich",
+    "turkish": "korkunç",
+    "germanSentence": "Das schreckliche Unglück erschütterte die Stadt.",
+    "turkishTranslation": "Korkunç felaket şehri sarstı."
+  },
+  {
+    "id": 376,
+    "german": "legal",
+    "turkish": "yasal",
+    "germanSentence": "Die Handlung war vollkommen legal und transparent.",
+    "turkishTranslation": "Eylem tamamen yasal ve şeffaftı."
+  },
+  {
+    "id": 377,
+    "german": "schockiert",
+    "turkish": "şok olmuş",
+    "germanSentence": "Die Zuschauer waren schockiert über die plötzliche Wendung.",
+    "turkishTranslation": "İzleyiciler, ani değişim karşısında şok olmuştu."
+  },
+  {
+    "id": 378,
+    "german": "schwierig",
+    "turkish": "zor",
+    "germanSentence": "Die schwierige Aufgabe erforderte viel Geduld.",
+    "turkishTranslation": "Zor görev, çok sabır gerektiriyordu."
+  },
+  {
+    "id": 379,
+    "german": "verzweifelt",
+    "turkish": "çaresiz",
+    "germanSentence": "Er war verzweifelt auf der Suche nach einer Lösung.",
+    "turkishTranslation": "Bir çözüm arayışında çaresizdi."
+  },
+  {
+    "id": 380,
+    "german": "extrem",
+    "turkish": "aşırı",
+    "germanSentence": "Die extremen Wetterbedingungen erschwerten die Reise.",
+    "turkishTranslation": "Aşırı hava koşulları yolculuğu zorlaştırdı."
+  },
+  {
+    "id": 381,
+    "german": "hart",
+    "turkish": "sert",
+    "germanSentence": "Die harte Arbeit zahlte sich am Ende aus.",
+    "turkishTranslation": "Sert çalışma sonunda meyvesini verdi."
+  },
+  {
+    "id": 382,
+    "german": "umkämpft",
+    "turkish": "çekişmeli",
+    "germanSentence": "Das umkämpfte Spiel endete mit einem Unentschieden.",
+    "turkishTranslation": "Çekişmeli maç beraberlikle sonuçlandı."
+  },
+  {
+    "id": 383,
+    "german": "mindestens",
+    "turkish": "en az",
+    "germanSentence": "Mindestens hundert Personen nahmen an der Veranstaltung teil.",
+    "turkishTranslation": "Etkinliğe en az yüz kişi katıldı."
+  },
+  {
+    "id": 384,
+    "german": "schön",
+    "turkish": "güzel",
+    "germanSentence": "Der schöne Sonnenuntergang war ein unvergesslicher Anblick.",
+    "turkishTranslation": "Güzel gün batımı unutulmaz bir manzaraydı."
+  },
+  {
+    "id": 385,
+    "german": "geräumig",
+    "turkish": "ferah",
+    "germanSentence": "Das geräumige Wohnzimmer bot Platz für alle Gäste.",
+    "turkishTranslation": "Ferah oturma odası tüm konuklar için yer sağladı."
+  },
+  {
+    "id": 386,
+    "german": "neu",
+    "turkish": "yeni",
+    "germanSentence": "Die neue Technologie revolutionierte die Industrie.",
+    "turkishTranslation": "Yeni teknoloji, endüstriyi devrimleştirdi."
+  },
+  {
+    "id": 387,
+    "german": "allein",
+    "turkish": "yalnız",
+    "germanSentence": "Sie saß allein am Strand und schaute aufs Meer.",
+    "turkishTranslation": "Denize bakarak yalnız başına sahilde oturuyordu."
+  },
+  {
+    "id": 388,
+    "german": "verantwortlich",
+    "turkish": "sorumlu",
+    "germanSentence": "Er fühlte sich verantwortlich für das Missgeschick.",
+    "turkishTranslation": "Olaydan dolayı kendini sorumlu hissetti."
+  },
+  {
+    "id": 389,
+    "german": "unbekannt",
+    "turkish": "bilinmeyen",
+    "germanSentence": "Der unbekannte Künstler überraschte mit seinem Talent.",
+    "turkishTranslation": "Bilinmeyen sanatçı, yeteneğiyle şaşırttı."
+  },
+  {
+    "id": 390,
+    "german": "später",
+    "turkish": "daha sonraki",
+    "germanSentence": "Die späteren Verhandlungen führten zu einem Kompromiss.",
+    "turkishTranslation": "Daha sonraki görüşmeler bir uzlaşmayla sonuçlandı."
+  },
+  {
+    "id": 391,
+    "german": "klein",
+    "turkish": "küçük",
+    "germanSentence": "Das kleine Dorf war idyllisch und friedlich.",
+    "turkishTranslation": "Küçük köy, huzurlu ve pastoral bir yerdi."
+  },
+  {
+    "id": 392,
+    "german": "sicher",
+    "turkish": "emin",
+    "germanSentence": "Ich bin sicher, dass wir die richtige Entscheidung getroffen haben.",
+    "turkishTranslation": "Doğru kararı verdiğimizden eminim."
+  },
+  {
+    "id": 393,
+    "german": "prima",
+    "turkish": "harika",
+    "germanSentence": "Das Essen war einfach prima!",
+    "turkishTranslation": "Yemek basitçe harikaydı!"
+  },
+  {
+    "id": 394,
+    "german": "warm",
+    "turkish": "sıcak",
+    "germanSentence": "Die warme Suppe war perfekt für den kalten Tag.",
+    "turkishTranslation": "Sıcak çorba, soğuk gün için mükemmeldi."
+  },
+  {
+    "id": 395,
+    "german": "toll",
+    "turkish": "harika",
+    "germanSentence": "Das Konzert war wirklich toll und unvergesslich.",
+    "turkishTranslation": "Konser gerçekten harika ve unutulmazdı."
+  },
+  {
+    "id": 396,
+    "german": "fantastisch",
+    "turkish": "fantastik",
+    "germanSentence": "Die fantastische Aussicht vom Berggipfel war atemberaubend.",
+    "turkishTranslation": "Dağ zirvesinden fantastik manzara nefes kesiciydi."
+  },
+  {
+    "id": 397,
+    "german": "hoch",
+    "turkish": "yüksek",
+    "germanSentence": "Die hohen Erwartungen wurden voll erfüllt.",
+    "turkishTranslation": "Yüksek beklentiler tamamen karşılandı."
+  },
+  {
+    "id": 398,
+    "german": "ruhig",
+    "turkish": "sakin",
+    "germanSentence": "Der ruhige See spiegelte die umliegenden Berge wider.",
+    "turkishTranslation": "Sakin göl, çevredeki dağları yansıtıyordu."
+  },
+  {
+    "id": 399,
+    "german": "richtig",
+    "turkish": "gerçek",
+    "germanSentence": "Das war die richtige Entscheidung für uns alle.",
+    "turkishTranslation": "Bu, hepimiz için gerçek bir karardı."
+  },
+  {
+    "id": 400,
+    "german": "breit",
+    "turkish": "geniş",
+    "germanSentence": "Die breite Straße war ideal für den Verkehr.",
+    "turkishTranslation": "Geniş cadde, trafik için idealdi."
+  },
+  {
+    "id": 401,
+    "german": "gemeinsam",
+    "turkish": "ortak",
+    "germanSentence": "Das gemeinsame Projekt stärkte die Zusammenarbeit.",
+    "turkishTranslation": "Ortak proje, işbirliğini güçlendirdi."
+  },
+  {
+    "id": 402,
+    "german": "italienisch",
+    "turkish": "İtalyan",
+    "germanSentence": "Die italienische Oper war ein kulturelles Highlight.",
+    "turkishTranslation": "İtalyan operası, kültürel bir zirveydi."
+  },
+  {
+    "id": 403,
+    "german": "best",
+    "turkish": "en iyi",
+    "germanSentence": "Er war der beste Spieler im gesamten Turnier.",
+    "turkishTranslation": "Tüm turnuvada en iyi oyuncuydu."
+  },
+  {
+    "id": 404,
+    "german": "glücklich",
+    "turkish": "mutlu",
+    "germanSentence": "Die glückliche Familie feierte den Geburtstag zusammen.",
+    "turkishTranslation": "Mutlu aile, doğum gününü birlikte kutladı."
+  },
+  {
+    "id": 405,
+    "german": "dick",
+    "turkish": "kalın",
+    "germanSentence": "Das dicke Buch war schwer zu tragen.",
+    "turkishTranslation": "Kalın kitap taşımak için ağırdı."
+  },
+  {
+    "id": 406,
+    "german": "belebt",
+    "turkish": "canlı",
+    "germanSentence": "Der belebte Markt war voller Farben und Geräusche.",
+    "turkishTranslation": "Canlı pazar, renkler ve seslerle doluydu."
+  },
+  {
+    "id": 407,
+    "german": "zahlreich",
+    "turkish": "çok sayıda",
+    "germanSentence": "Zahlreiche Vögel flogen über das Naturschutzgebiet.",
+    "turkishTranslation": "Çok sayıda kuş, doğa koruma alanı üzerinde uçuyordu."
+  },
+  {
+    "id": 408,
+    "german": "warm",
+    "turkish": "sıcak",
+    "germanSentence": "Die warme Decke hielt uns in der kalten Nacht warm.",
+    "turkishTranslation": "Sıcak battaniye, soğuk gecede bizi sıcak tuttu."
+  },
+  {
+    "id": 409,
+    "german": "perfekt",
+    "turkish": "mükemmel",
+    "germanSentence": "Das perfekte Timing führte zum Erfolg des Plans.",
+    "turkishTranslation": "Mükemmel zamanlama, planın başarısına yol açtı."
+  },
+  {
+    "id": 410,
+    "german": "erste",
+    "turkish": "ilk",
+    "germanSentence": "Der erste Schnee des Jahres fiel im November.",
+    "turkishTranslation": "Yılın ilk karı kasımda yağdı."
+  },
+  {
+    "id": 411,
+    "german": "groß",
+    "turkish": "büyük",
+    "germanSentence": "Das große Schiff legte im Hafen an.",
+    "turkishTranslation": "Büyük gemi limana yanaştı."
+  },
+  {
+    "id": 412,
+    "german": "intensiv",
+    "turkish": "yoğun",
+    "germanSentence": "Die intensive Diskussion führte zu neuen Ideen.",
+    "turkishTranslation": "Yoğun tartışma, yeni fikirlere yol açtı."
+  },
+  {
+    "id": 413,
+    "german": "alt",
+    "turkish": "eski",
+    "germanSentence": "Das alte Haus hatte einen besonderen Charme.",
+    "turkishTranslation": "Eski evin özel bir cazibesi vardı."
+  },
+  {
+    "id": 414,
+    "german": "prägend",
+    "turkish": "şekillendirici",
+    "germanSentence": "Seine prägende Kindheit beeinflusste seine Kunst.",
+    "turkishTranslation": "Şekillendirici çocukluğu, sanatını etkiledi."
+  },
+  {
+    "id": 415,
+    "german": "bedeutend",
+    "turkish": "önemli",
+    "germanSentence": "Er war ein bedeutender Politiker seiner Zeit.",
+    "turkishTranslation": "Döneminin önemli bir politikacısıydı."
+  },
+  {
+    "id": 416,
+    "german": "nötig",
+    "turkish": "gerekli",
+    "germanSentence": "Eine gründliche Vorbereitung war nötig für den Erfolg.",
+    "turkishTranslation": "Başarı için kapsamlı bir hazırlık gerekliydi."
+  },
+  {
+    "id": 417,
+    "german": "relevant",
+    "turkish": "ilgili",
+    "germanSentence": "Die relevanten Informationen wurden sorgfältig gesammelt.",
+    "turkishTranslation": "İlgili bilgiler özenle toplandı."
+  },
+  {
+    "id": 418,
+    "german": "begeistert",
+    "turkish": "coşkulu",
+    "germanSentence": "Die begeisterte Menge jubelte dem Sieger zu.",
+    "turkishTranslation": "Coşkulu kalabalık, kazanan için tezahürat yaptı."
+  },
+  {
+    "id": 419,
+    "german": "unverkennbar",
+    "turkish": "belirgin",
+    "germanSentence": "Sein unverkennbarer Stil machte ihn berühmt.",
+    "turkishTranslation": "Belirgin tarzı onu ünlü yaptı."
+  },
+  {
+    "id": 420,
+    "german": "nervös",
+    "turkish": "gergin",
+    "germanSentence": "Sie war nervös vor ihrer ersten Rede.",
+    "turkishTranslation": "İlk konuşması öncesinde gergindi."
+  },
+  {
+    "id": 421,
+    "german": "etwa",
+    "turkish": "yaklaşık",
+    "germanSentence": "Etwa fünfzig Gäste waren zur Hochzeit eingeladen.",
+    "turkishTranslation": "Düğüne yaklaşık elli konuk davet edilmişti."
+  },
+  {
+    "id": 422,
+    "german": "recht",
+    "turkish": "oldukça",
+    "germanSentence": "Das Buch war recht interessant und lehrreich.",
+    "turkishTranslation": "Kitap oldukça ilginç ve öğreticiydi."
+  },
+  {
+    "id": 423,
+    "german": "gut",
+    "turkish": "iyi",
+    "germanSentence": "Die gute Zusammenarbeit führte zu hervorragenden Ergebnissen.",
+    "turkishTranslation": "İyi işbirliği, mükemmel sonuçlara yol açtı."
+  },
+  {
+    "id": 424,
+    "german": "schwierig",
+    "turkish": "zor",
+    "germanSentence": "Die schwierige Prüfung erforderte viel Vorbereitung.",
+    "turkishTranslation": "Zor sınav, çok hazırlık gerektiriyordu."
+  },
+  {
+    "id": 425,
+    "german": "faszinierend",
+    "turkish": "büyüleyici",
+    "germanSentence": "Die faszinierende Dokumentation zeigte die Wunder der Natur.",
+    "turkishTranslation": "Büyüleyici belgesel, doğanın harikalarını gösterdi."
+  },
+  {
+    "id": 426,
+    "german": "kulturell",
+    "turkish": "kültürel",
+    "germanSentence": "Die kulturellen Veranstaltungen bereicherten die Stadt.",
+    "turkishTranslation": "Kültürel etkinlikler, şehri zenginleştirdi."
+  },
+  {
+    "id": 427,
+    "german": "politisch",
+    "turkish": "siyasi",
+    "germanSentence": "Die politische Debatte war hitzig und kontrovers.",
+    "turkishTranslation": "Siyasi tartışma hararetli ve tartışmalıydı."
+  },
+  {
+    "id": 428,
+    "german": "historisch",
+    "turkish": "tarihi",
+    "germanSentence": "Das historische Gebäude wurde sorgfältig restauriert.",
+    "turkishTranslation": "Tarihi bina özenle restore edildi."
+  },
+  {
+    "id": 429,
+    "german": "klein",
+    "turkish": "küçük",
+    "germanSentence": "Die kleine Katze spielte fröhlich im Garten.",
+    "turkishTranslation": "Küçük kedi, bahçede neşeyle oynuyordu."
+  },
+  {
+    "id": 430,
+    "german": "kurfürstlich",
+    "turkish": "seçmen prensliğe ait",
+    "germanSentence": "Das kurfürstliche Schloss ist ein beliebtes Ausflugsziel.",
+    "turkishTranslation": "Seçmen prensliğe ait saray, popüler bir gezi noktasıdır."
+  },
+  {
+    "id": 431,
+    "german": "königlich",
+    "turkish": "kraliyetle ilgili",
+    "germanSentence": "Die königliche Familie nahm an der Zeremonie teil.",
+    "turkishTranslation": "Kraliyet ailesi, törene katıldı."
+  },
+  {
+    "id": 432,
+    "german": "preußisch",
+    "turkish": "Prusya’ya ait",
+    "germanSentence": "Die preußische Architektur prägt viele Gebäude in Berlin.",
+    "turkishTranslation": "Prusya’ya ait mimari, Berlin’deki birçok binayı şekillendiriyor."
+  },
+  {
+    "id": 433,
+    "german": "aufmerksam",
+    "turkish": "dikkatli",
+    "germanSentence": "Die aufmerksame Zuhörerin stellte kluge Fragen.",
+    "turkishTranslation": "Dikkatli dinleyici, akıllı sorular sordu."
+  },
+  {
+    "id": 434,
+    "german": "lebendig",
+    "turkish": "canlı",
+    "germanSentence": "Die lebendige Musik brachte alle zum Tanzen.",
+    "turkishTranslation": "Canlı müzik, herkesi dans ettirdi."
+  },
+  {
+    "id": 435,
+    "german": "vergangen",
+    "turkish": "geçmiş",
+    "germanSentence": "Die vergangenen Jahre waren voller Herausforderungen.",
+    "turkishTranslation": "Geçmiş yıllar, zorluklarla doluydu."
+  },
+  {
+    "id": 436,
+    "german": "undenkbar",
+    "turkish": "düşünülemez",
+    "germanSentence": "Ein Leben ohne Musik wäre für sie undenkbar.",
+    "turkishTranslation": "Müziksiz bir yaşam onun için düşünülemezdi."
+  },
+  {
+    "id": 437,
+    "german": "modern",
+    "turkish": "modern",
+    "germanSentence": "Das moderne Design des Hauses beeindruckte alle.",
+    "turkishTranslation": "Evin modern tasarımı herkesi etkiledi."
+  },
+  {
+    "id": 438,
+    "german": "hautnah",
+    "turkish": "yakından",
+    "germanSentence": "Das Konzert war ein hautnahes Erlebnis für die Fans.",
+    "turkishTranslation": "Konser, hayranlar için yakından yaşanan bir deneyimdi."
+  },
+  {
+    "id": 439,
+    "german": "fasziniert",
+    "turkish": "büyülenmiş",
+    "germanSentence": "Die Kinder waren fasziniert von den Geschichten des alten Mannes.",
+    "turkishTranslation": "Çocuklar, yaşlı adamın hikâyelerinden büyülenmişti."
+  },
+  {
+    "id": 440,
+    "german": "anerkennend",
+    "turkish": "takdir edici",
+    "germanSentence": "Sie nickte anerkennend nach seiner beeindruckenden Rede.",
+    "turkishTranslation": "Etkileyici konuşmasından sonra takdir edici bir şekilde başını salladı."
+  },
+  {
+    "id": 441,
+    "german": "erleichtert",
+    "turkish": "rahatlamış",
+    "germanSentence": "Er war erleichtert, als die Prüfung vorbei war.",
+    "turkishTranslation": "Sınav bittiğinde rahatlamıştı."
+  },
+  {
+    "id": 442,
+    "german": "zufrieden",
+    "turkish": "memnun",
+    "germanSentence": "Die Kunden waren sehr zufrieden mit dem Service.",
+    "turkishTranslation": "Müşteriler, hizmetten çok memnun kaldı."
+  },
+  {
+    "id": 443,
+    "german": "eigen",
+    "turkish": "kendi",
+    "germanSentence": "Er hatte einen ganz eigenen Stil in seiner Kunst.",
+    "turkishTranslation": "Sanatında tamamen kendine özgü bir tarzı vardı."
+  },
+  {
+    "id": 444,
+    "german": "persönlich",
+    "turkish": "kişisel",
+    "germanSentence": "Die persönliche Note machte den Brief besonders herzlich.",
+    "turkishTranslation": "Kişisel dokunuş, mektubu özellikle içten kıldı."
+  },
+  {
+    "id": 445,
+    "german": "Köstlichkeit",
+    "turkish": "leziz şey",
+    "germanSentence": "Die Köstlichkeiten auf dem Buffet waren ein Genuss.",
+    "turkishTranslation": "Büfedeki leziz şeyler bir ziyafetti."
+  },
+  {
+    "id": 446,
+    "german": "bedroht",
+    "turkish": "tehdit altında",
+    "germanSentence": "Die bedrohte Tierart benötigt dringend Schutz.",
+    "turkishTranslation": "Tehdit altındaki hayvan türü acilen korunmaya ihtiyaç duyuyor."
+  },
+  {
+    "id": 447,
+    "german": "deutlich",
+    "turkish": "belirgin",
+    "germanSentence": "Seine Fortschritte waren deutlich sichtbar.",
+    "turkishTranslation": "Onun ilerlemeleri belirgin bir şekilde görülebiliyordu."
+  },
+  {
+    "id": 448,
+    "german": "empfindlich",
+    "turkish": "hassas",
+    "germanSentence": "Die empfindliche Pflanze benötigt viel Pflege.",
+    "turkishTranslation": "Hassas bitki, çok bakım gerektiriyor."
+  },
+  {
+    "id": 449,
+    "german": "verschärft",
+    "turkish": "şiddetli",
+    "germanSentence": "Die verschärften Sicherheitsmaßnahmen sorgten für Verzögerungen.",
+    "turkishTranslation": "Şiddetli güvenlik önlemleri gecikmelere yol açtı."
+  },
+  {
+    "id": 450,
+    "german": "fair",
+    "turkish": "adil",
+    "germanSentence": "Das faire Verhalten des Schiedsrichters wurde geschätzt.",
+    "turkishTranslation": "Hakemin adil davranışı takdir edildi."
+  },
+  {
+    "id": 451,
+    "german": "gefordert",
+    "turkish": "talep edilen",
+    "germanSentence": "Die geforderten Dokumente wurden fristgerecht eingereicht.",
+    "turkishTranslation": "Talep edilen belgeler zamanında teslim edildi."
+  },
+  {
+    "id": 452,
+    "german": "langfristig",
+    "turkish": "uzun vadeli",
+    "germanSentence": "Die langfristige Planung sicherte den Erfolg des Unternehmens.",
+    "turkishTranslation": "Uzun vadeli planlama, şirketin başarısını garantiledi."
+  },
+  {
+    "id": 453,
+    "german": "seelisch",
+    "turkish": "ruhsal",
+    "germanSentence": "Die seelische Unterstützung half ihr, die Krise zu bewältigen.",
+    "turkishTranslation": "Ruhsal destek, onun krizi atlatmasına yardımcı oldu."
+  },
+  {
+    "id": 454,
+    "german": "ausgewogen",
+    "turkish": "dengeli",
+    "germanSentence": "Eine ausgewogene Ernährung ist wichtig für die Gesundheit.",
+    "turkishTranslation": "Dengeli beslenme, sağlık için önemlidir."
+  },
+  {
+    "id": 455,
+    "german": "sinnvoll",
+    "turkish": "anlamlı",
+    "germanSentence": "Die sinnvolle Nutzung der Ressourcen schonte die Umwelt.",
+    "turkishTranslation": "Kaynakların anlamlı kullanımı çevreyi korudu."
+  },
+  {
+    "id": 456,
+    "german": "freiwillig",
+    "turkish": "gönüllü",
+    "germanSentence": "Viele Helfer beteiligten sich freiwillig an der Aktion.",
+    "turkishTranslation": "Pek çok gönüllü, etkinliğe katıldı."
+  },
+  {
+    "id": 457,
+    "german": "unerlässlich",
+    "turkish": "vazgeçilmez",
+    "germanSentence": "Teamarbeit ist unerlässlich für den Projekterfolg.",
+    "turkishTranslation": "Ekip çalışması, proje başarısı için vazgeçilmezdir."
+  },
+  {
+    "id": 458,
+    "german": "geschont",
+    "turkish": "korunmuş",
+    "germanSentence": "Die geschonte Natur blieb unberührt und wild.",
+    "turkishTranslation": "Korunmuş doğa, dokunulmamış ve vahşi kaldı."
+  },
+  {
+    "id": 459,
+    "german": "legitim",
+    "turkish": "meşru",
+    "germanSentence": "Seine Forderungen waren völlig legitim und nachvollziehbar.",
+    "turkishTranslation": "Talepleri tamamen meşru ve anlaşılırdı."
+  },
+  {
+    "id": 460,
+    "german": "mündig",
+    "turkish": "reşit",
+    "germanSentence": "Als mündiger Bürger nahm er an den Wahlen teil.",
+    "turkishTranslation": "Reşit bir vatandaş olarak seçimlere katıldı."
+  },
+  {
+    "id": 461,
+    "german": "betroffen",
+    "turkish": "etkilenmiş",
+    "germanSentence": "Die betroffenen Familien erhielten sofortige Hilfe.",
+    "turkishTranslation": "Etkilenmiş aileler anında yardım aldı."
+  },
+  {
+    "id": 462,
+    "german": "neurodegenerativ",
+    "turkish": "sinirsel dejeneratif",
+    "germanSentence": "Die neurodegenerative Erkrankung beeinträchtigte seine Beweglichkeit.",
+    "turkishTranslation": "Sinirsel dejeneratif hastalık, onun hareket kabiliyetini etkiledi."
+  },
+  {
+    "id": 463,
+    "german": "abschreckend",
+    "turkish": "caydırıcı",
+    "germanSentence": "Die abschreckenden Strafen sollten Verbrechen verhindern.",
+    "turkishTranslation": "Caydırıcı cezalar, suçları önlemeyi amaçlıyordu."
+  },
+  {
+    "id": 464,
+    "german": "verwirrend",
+    "turkish": "kafa karıştırıcı",
+    "germanSentence": "Die verwirrenden Anweisungen führten zu Missverständnissen.",
+    "turkishTranslation": "Kafa karıştırıcı talimatlar, yanlış anlamalara yol açtı."
+  },
+  {
+    "id": 465,
+    "german": "geprägt",
+    "turkish": "etkilenmiş",
+    "germanSentence": "Seine Kindheit war stark von der Natur geprägt.",
+    "turkishTranslation": "Çocukluğu, doğadan güçlü bir şekilde etkilenmişti."
   }
 ]

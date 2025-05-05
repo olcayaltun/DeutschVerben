@@ -11,6 +11,8 @@ import Buch7 from "../../Components/Buch/Buch7";
 import Buch8 from "../../Components/Buch/Buch8";
 import Buch9 from "../../Components/Buch/Buch9";
 import Buch10 from "../../Components/Buch/Buch10";
+import Kitap from "../../Components/Buch/Kitap";
+import Deyim from "../../Components/Buch/Deyim";
 
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
@@ -27,6 +29,8 @@ const components = {
   Buch8,
   Buch9,
   Buch10,
+  Kitap,
+  Deyim,
   // ... add Buch3 to Buch30
 };
 
