@@ -19,7 +19,7 @@ import Kitap4 from "../../Components/Buch/Kitap4";
 import Kitap5 from "../../Components/Buch/Kitap5";
 import Edat from "../../Components/Buch/Edat";
 import Sifat2 from "../../Components/Buch/Sifat2";
-import Test from "../../Components/Buch/test";
+import Test from "../../Components/Buch/Test2";
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
 
