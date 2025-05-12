@@ -27,7 +27,7 @@ const sätze = [
     präposition: "auf",
     reflexiv: null,
     satz: "Es kommt auf den richtigen Preis an.",
-    anlam: "Bağlı olmak (bir şeye)",
+    anlam: "Önemli olan..",
   },
   {
     verben: "antworten",

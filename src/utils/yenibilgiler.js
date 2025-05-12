@@ -137,5 +137,261 @@ const data = [
     id: 35,
     veri: "Funktionsverbgefüge\n\n✅ Açıklama: Anlamı zayıf bir fiilin (örn. machen, kommen) bir isimle birleşerek belirli bir anlam oluşturduğu yapıdır.\nÖrnekler:\n1. zur Sprache bringen – dile getirmek\n2. in Frage stellen – sorgulamak\n3. eine Entscheidung treffen – bir karar almak\n4. auf die Nerven gehen – sinir bozmak\n5. einen Vorschlag machen – bir teklif yapmak\n6. zur Verfügung stehen – mevcut olmak, hizmete sunulmak\n7. in Betracht ziehen – göz önünde bulundurmak\n8. in Kauf nehmen – göze almak\n9. in Erinnerung rufen – hatırlatmak\n10. Unter Druck setzen – baskı yapmak\n11. zur Kenntnis nehmen – farkına varmak\n12. in Verbindung stehen – bağlantılı olmak\n13. eine Rolle spielen – rol oynamak\n14. in Frage kommen – söz konusu olmak\n15. Beachtung finden – dikkate alınmak\n16. eine Antwort geben – bir cevap vermek\n17. eine Erklärung abgeben – açıklama yapmak\n18. Verantwortung übernehmen – sorumluluk almak\n19. in Angriff nehmen – başlamak, işe koyulmak\n20. sich in Acht nehmen – dikkatli olmak\n21. einen Eindruck hinterlassen – izlenim bırakmak\n22. zur Folge haben – sonucu olmak\n23. eine Meinung vertreten – bir görüşü savunmak\n24. sich Gedanken machen über – bir şey hakkında düşünmek\n25. zur Einsicht kommen – farkına varmak\n26. in der Lage sein – yapabilmek, kapasitesi olmak\n27. in der Tat – gerçekte, aslında\n28. zum Ergebnis kommen – sonuca varmak\n29. in Konflikt geraten – çatışmaya girmek\n30. zum Ausdruck bringen – ifade etmek\n31. eine Auswirkung haben auf – üzerinde etkisi olmak\n32. einen Beitrag leisten – katkıda bulunmak\n33. eine Bitte äußern – bir ricada bulunmak\n34. im Stande sein – yapabilmek\n35. eine Anfrage stellen – bir soru sormak, başvuru yapmak\n36. in Zusammenhang stehen mit – ile bağlantılı olmak\n37. eine Lösung finden – bir çözüm bulmak\n38. in Übereinstimmung mit – ile uyumlu olmak\n39. einen Plan erstellen – bir plan hazırlamak\n40. zu dem Schluss kommen – sonuca varmak\n41. sich ein Bild machen von – bir şey hakkında fikir edinmek\n42. eine Entscheidung treffen – karar almak\n43. unter Beweis stellen – kanıtlamak\n44. Rücksicht nehmen auf – dikkate almak\n45. in der Verantwortung stehen – sorumluluk taşımak\n46. auf die Dauer wirken – uzun vadede etki yapmak\n47. auf dem Laufenden sein – güncel olmak, haberleri takip etmek\n48. eine Beziehung eingehen – ilişki kurmak\n49. in Angriff nehmen – işe başlamak, ele almak\n50. eine Position einnehmen – bir pozisyon almak, görüş belirlemek\n51. zur Verfügung stellen – hizmete sunmak\n52. einen Beitrag leisten – katkıda bulunmak\n53. eine Rolle spielen – önemli olmak, rol oynamak\n54. in Betracht ziehen – göz önünde bulundurmak\n55. zur Kenntnis nehmen – bilmek, farkına varmak\n56. in Frage stellen – sorgulamak, şüpheye düşürmek\n57. Verantwortung übernehmen – sorumluluk almak\n58. eine Entscheidung treffen – karar almak\n59. einen Vorschlag machen – bir öneri yapmak\n60. in Betracht ziehen – göz önünde bulundurmak",
   },
+  {
+    id: 36,
+    veri: "prägen\n\n✅ Açıklama: Genel anlamda şekil vermek, iz bırakmak, etkilemek, kalıp basmak gibi anlamlara gelir.\n📌 Kullanım: 'Sie prägten…' gibi çoğul öznelerle geçmiş zamanda kullanılır.\nÖrnekler:\n1. Die Erlebnisse in der Kindheit prägten seine Persönlichkeit. – Çocukluktaki deneyimler onun kişiliğini şekillendirdi.\n2. Die Philosophen der Antike prägten das moderne Denken. – Antik filozoflar modern düşünceyi etkilediler.",
+  },
+  {
+    id: 37,
+    veri: "entkommen\n\n✅ Açıklama: Kaçmak veya kurtulmak anlamına gelir. Genellikle tehlikeli bir durumdan ya da istenmeyen bir şeyden kurtulmak için kullanılır.\n📌 Anlamları:\n- Bir yerden kaçmak\n- Bir şeyden kurtulmak, sıyrılmak\nÖrnekler:\n1. Der Gefangene ist aus dem Gefängnis entkommen. – Mahkûm hapishaneden kaçtı.",
+  },
+  {
+    id: 38,
+    veri: "kursieren\n\n✅ Açıklama: Dolaşmak, yayılmak veya söylenti olarak yayılmak anlamına gelir. Genellikle haberler, söylentiler, dedikodular veya bilgiler için kullanılır.\n📌 Anlamları:\n- Yayılmak, dolaşmak (bilgi, haber, söylenti)\n- Gezinmek, dağılım göstermek\nÖrnekler:\n1. Gerüchte kursieren über seinen Rücktritt. – Onun istifasıyla ilgili söylentiler dolaşıyor.",
+  },
+  {
+    id: 39,
+    veri: "begleiten\n\n✅ Açıklama: Eşlik etmek, refakat etmek, yanında gitmek anlamına gelir. Hem insanlar hem de olaylar/duygular için kullanılabilir.\n📌 Anlamları:\n- Birine bir yere kadar eşlik etmek\n- Bir sürece ya da duruma eşlik etmek (mecaz anlamda)\nÖrnekler:\n1. Ich begleite dich zum Bahnhof. – Seni tren istasyonuna kadar eşlik ederim.",
+  },
+  {
+    id: 40,
+    veri: "gemeinsam näherten sich\n\n✅ Açıklama: Almanca bir cümle olan 'Gemeinsam näherten sie sich dem Haus' Türkçeye 'Birlikte eve doğru yaklaşıyorlardı' şeklinde çevrilir.\n📌 Dil Bilgisel İnceleme:\n- Gemeinsam: Birlikte veya ortaklaşa anlamına gelir.\n- näherten sich: 'sich nähern' fiilinin geçmiş zamanıdır, yaklaşmak anlamına gelir.\nÖrnekler:\n1. Gemeinsam näherten sie sich dem Haus. – Birlikte eve doğru yaklaşıyorlardı.",
+  },
+  {
+    id: 41,
+    veri: "wirkten\n\n✅ Açıklama: 'wirken' fiilinin geçmiş zaman (Präteritum) hâlidir. Etki yapmak, izlenim bırakmak veya bir şeyin etkisi altında olmak anlamlarına gelir.\n📌 Anlamları:\n- Etki yapmak\n- Bir şeyin izlenimi olmak\nÖrnekler:\n1. Ihre Worte wirkten sehr stark auf mich. – Onun sözleri bende çok güçlü bir etki bıraktı.",
+  },
+  {
+    id: 42,
+    veri: "flüsterte\n\n✅ Açıklama: 'flüstern' fiilinin geçmiş zaman (Präteritum) hâlidir ve fısıldamak veya sessizce konuşmak anlamına gelir.\n📌 Kullanım: Çok sessiz bir şekilde konuşmak veya düşük sesle birine bir şey söylemek için kullanılır.\nÖrnekler:\n1. Er flüsterte ihr etwas ins Ohr. – O, ona kulağına bir şey fısıldadı.",
+  },
+  {
+    id: 43,
+    veri: "schufen\n\n✅ Açıklama: 'schaffen' fiilinin geçmiş zaman (Präteritum) hâlidir ve yapmak, oluşturmak ya da yaratmak anlamına gelir.\n📌 Kullanım: Bir şeyin meydana getirilmesi, inşa edilmesi veya var edilmesi anlamında kullanılır.\nÖrnekler:\n1. Die Künstler schufen beeindruckende Werke. – Sanatçılar etkileyici eserler yarattılar.",
+  },
+  {
+    id: 44,
+    veri: "Stadtrand\n\n✅ Açıklama: Şehrin kenarı, şehir dışı, şehir sınırı anlamına gelir. Bir şehrin merkezine uzak, dış bölgeleri ifade eder.\n📌 Gramer Bilgisi:\n- Artikel: der\n- Plural: die Stadtränder\nÖrnekler:\n1. Der Stadtrand – Şehrin kenarı.",
+  },
+  {
+    id: 45,
+    veri: "Entdeckung\n\n✅ Açıklama: Keşif, bulgu, ortaya çıkarma anlamına gelir. Bir şeyin daha önce bilinmeyen bir şekilde ortaya çıkarılması.\n📌 Gramer Bilgisi:\n- Artikel: die\n- Plural: die Entdeckungen\nÖrnekler:\n1. Die Entdeckung – Keşif.",
+  },
+  {
+    id: 46,
+    veri: "vorging\n\n✅ Açıklama: 'vorgehen' fiilinin geçmiş zaman (Präteritum) hâlidir.\n📌 Anlamları:\n- İlerlemek / önceden gitmek\n- Bir olayın nasıl gerçekleştiğini anlatmak\n- Davranmak, hareket etmek\n- Öncelikli olmak\nÖrnekler:\n1. Die Sicherheit geht vor. – Güvenlik önceliklidir.",
+  },
+  {
+    id: 47,
+    veri: "enthielt\n\n✅ Açıklama: 'enthalten' fiilinin geçmiş zaman (Präteritum) hâlidir.\n📌 Anlamları:\n- İçermek, kapsamak\n- Kendini tutmak (refleksiv formda: sich enthalten)\nÖrnekler:\n1. Das Buch enthielt viele Bilder. – Kitap birçok resim içeriyordu.",
+  },
+  {
+    id: 48,
+    veri: "Ehe\n\n✅ Açıklama: Evlilik, izdivaç anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: die\n- Plural: die Ehen\nÖrnekler:\n1. Die Ehe – Evlilik.",
+  },
+  {
+    id: 49,
+    veri: "verborgen\n\n✅ Açıklama: 'verbergen' fiilinden türemiştir, gizlemek, saklamak anlamına gelir. Sıfat olarak 'gizli', 'saklı' anlamında kullanılır.\n📌 Gramer Bilgisi:\n- Präteritum: verbarg\n- Partizip II: verborgen\nÖrnekler:\n1. Er hat seine Gefühle verborgen. – Duygularını gizledi.\n2. Eine verborgene Tür – Gizli bir kapı.",
+  },
+  {
+    id: 50,
+    veri: "die Gemälde\n\n✅ Açıklama: 'das Gemälde' kelimesinin çoğuludur, resim, tablo (özellikle sanat eseri olarak) anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: das\n- Plural: die Gemälde\nÖrnekler:\n1. Die Gemälde – Tablolar.",
+  },
+  {
+    id: 51,
+    veri: "übergeben\n\n✅ Açıklama: Teslim etmek, devretmek, vermek anlamına gelir. Ayrıca refleksiv olarak 'sich übergeben' kusmak anlamında kullanılır.\n📌 Kullanım:\n1. Düz fiil (ayrılmaz): jemandem etwas übergeben – teslim etmek, devretmek.\n- Präsens: Ich übergebe\n- Präteritum: Ich übergab\n- Perfekt: Ich habe übergeben\n2. Refleksiv: sich übergeben – kusmak\nÖrnekler:\n1. Er übergab dem Polizisten die gestohlenen Sachen. – Çalınan eşyaları polise teslim etti.\n2. Die Firma wurde an den Sohn übergeben. – Şirket oğula devredildi.\n3. Ich muss mich übergeben. – Kusmam gerekiyor.\n4. Sie hat sich zweimal übergeben. – İki kez kustu.",
+  },
+  {
+    id: 52,
+    veri: "Triumph\n\n✅ Açıklama: Zafer, büyük başarı, utku anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: der\n- Plural: die Triumphe\nÖrnekler:\n1. Der Triumph – Zafer, büyük başarı.",
+  },
+  {
+    id: 53,
+    veri: "begleiten\n\n✅ Açıklama: Birine eşlik etmek, refakat etmek anlamına gelir. Düz (ayrılmayan) bir fiildir.\n📌 Gramer Bilgisi:\n- Infinitiv: begleiten\n- Präsens: ich begleite\n- Präteritum: ich begleitete\n- Perfekt: ich habe begleitet\nÖrnekler:\n1. Ich begleite dich zum Bahnhof. – Seni tren istasyonuna kadar eşlik ederim.",
+  },
+  {
+    id: 54,
+    veri: "beschloss\n\n✅ Açıklama: 'beschließen' fiilinin geçmiş zaman (Präteritum) hâlidir, karar vermek anlamına gelir.\n📌 Kullanım: Ardından genellikle 'zu + fiil' yapısı gelir.\nÖrnekler:\n1. Er beschloss, Deutsch zu lernen. – Almanca öğrenmeye karar verdi.",
+  },
+  {
+    id: 55,
+    veri: "entschlossen\n\n✅ Açıklama: 'entschließen' fiilinden türemiştir, karar vermek veya kesin karar vermek anlamındadır. Çoğu zaman sıfat olarak 'kararlı, azimli' anlamında kullanılır.\n📌 Kullanım:\n- Partizip II: hat sich entschlossen\n- Sıfat: entschlossen\nÖrnekler:\n1. Sie ist eine sehr entschlossene Frau. – O, çok kararlı bir kadındır.\n2. Er hat sich entschlossen, das Land zu verlassen. – Ülkeyi terk etmeye karar verdi.",
+  },
+  {
+    id: 56,
+    veri: "Ihre neugierige Natur trieb sie an\n\n✅ Açıklama: Türkçeye 'Meraklı doğası onu harekete geçirdi' şeklinde çevrilir.\n📌 Yapısal Analiz:\n- ihre: onun (kadın için)\n- neugierige Natur: meraklı doğası/yapısı\n- trieb … an: 'antreiben' fiilinin Präteritum hâli, motive etmek, harekete geçirmek anlamına gelir\nÖrnekler:\n1. Ihre neugierige Natur trieb sie an. – Meraklı doğası onu harekete geçirdi.",
+  },
+  {
+    id: 57,
+    veri: "bemerken\n\n✅ Açıklama: Fark etmek, gözüne çarpmak, bir şeyi algılamak anlamına gelir.\n📌 Geçmiş Zaman: bemerkte – (o) fark etti\nÖrnekler:\n1. Sie bemerkte den Fehler sofort. – Hatayı hemen fark etti.\n2. Niemand bemerkte, dass er gegangen war. – Kimse onun gittiğini fark etmedi.\n3. Er bemerkte eine Veränderung in ihrer Stimme. – Onun sesindeki bir değişikliği fark etti.",
+  },
+  {
+    id: 58,
+    veri: "am Rande der Stadt\n\n✅ Açıklama: Şehrin kenarında, şehrin kıyısında anlamına gelir. Bağlama göre 'şehrin dışında, kenar mahallesinde' de olabilir.\nÖrnekler:\n1. Am Rande der Stadt – Şehrin kenarında.",
+  },
+  {
+    id: 59,
+    veri: "Die Einheimischen erzählten\n\n✅ Açıklama: Türkçeye 'Yerliler anlattı(lar)' veya 'Yerel halk anlattı' şeklinde çevrilir.\n📌 Kelime Analizi:\n- die Einheimischen: yerliler, yerel halk\n- erzählten: 'erzählen' fiilinin geçmiş zaman hâli, anlatmak\nÖrnekler:\n1. Die Einheimischen erzählten – Yerliler anlattı.",
+  },
+  {
+    id: 60,
+    veri: "das Anwesen\n\n✅ Açıklama: Malikâne, mülk, arsa içindeki büyük ev anlamına gelir. Resmi veya edebi metinlerde kullanılır.\n📌 Gramer Bilgisi:\n- Artikel: das\n- Plural: die Anwesen\nÖrnekler:\n1. Das Anwesen – Malikâne, mülk.",
+  },
+  {
+    id: 61,
+    veri: "Gegenstände\n\n✅ Açıklama: Eşyalar, nesneler, objeler anlamına gelir.\n📌 Gramer Bilgisi:\n- Tekil: der Gegenstand\n- Çoğul: die Gegenstände\nÖrnekler:\n1. Die Gegenstände – Eşyalar, nesneler.",
+  },
+  {
+    id: 62,
+    veri: "entdeckten\n\n✅ Açıklama: 'entdecken' fiilinin geçmiş zaman (Präteritum) hâlidir, keşfettiler, ortaya çıkardılar anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: entdecken\n- 3. tekil: er/sie entdeckte\n- 3. çoğul: sie entdeckten\nÖrnekler:\n1. Sie entdeckten – Onlar keşfettiler.",
+  },
+  {
+    id: 63,
+    veri: "knarren\n\n✅ Açıklama: Gıcırdamak, kütürdemek, çatırdamak anlamına gelir. Genellikle ahşap kapılar, merdivenler veya eski zeminler için kullanılır.\nÖrnekler:\n1. Die Tür knarrte laut. – Kapı yüksek sesle gıcırdadı.",
+  },
+  {
+    id: 64,
+    veri: "Untersuchte die Quelle des Geräuschs gründlich\n\n✅ Açıklama: Türkçeye 'Sesin kaynağını dikkatlice inceledi' şeklinde çevrilir.\n📌 Kelime Analizi:\n- untersuchte: 'untersuchen' fiilinin Präteritum hâli, incelemek\n- die Quelle: kaynak\n- des Geräuschs: sesin (genitiv)\n- gründlich: iyice, dikkatlice\nÖrnekler:\n1. Untersuchte die Quelle des Geräuschs gründlich. – Sesin kaynağını dikkatlice inceledi.",
+  },
+  {
+    id: 65,
+    veri: "stammte\n\n✅ Açıklama: 'stammen' fiilinin geçmiş zaman (Präteritum) hâlidir, geliyordu, -den köken alıyordu, -den kaynaklanıyordu anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: stammen\n- 3. tekil: er/sie stammte\nÖrnekler:\n1. Er stammte aus einer alten Familie. – Eski bir aileden geliyordu.",
+  },
+  {
+    id: 66,
+    veri: "bewiesen\n\n✅ Açıklama: 'beweisen' fiilinin Partizip II hâlidir, kanıtladı, ispatladı, kanıtlanmış anlamına gelir. Perfekt, Plusquamperfekt veya Passiv yapılarında kullanılır.\n📌 Gramer Bilgisi:\n- Infinitiv: beweisen\n- Präteritum: bewies\n- Partizip II: bewiesen\nÖrnekler:\n1. Er hat es bewiesen. – Onu kanıtladı.",
+  },
+  {
+    id: 67,
+    veri: "Die Aufzeichnungen\n\n✅ Açıklama: Kayıtlar, notlar, belgeler anlamına gelir. 'die Aufzeichnung' kelimesinin çoğul hâlidir.\n📌 Anlamı: Bir şeyin kaydedilmesi, not edilmesi, yazılı belge veya ses kaydı\nÖrnekler:\n1. Die Aufzeichnungen – Kayıtlar, notlar.",
+  },
+  {
+    id: 68,
+    veri: "…die sie seit dem Studium nicht mehr gesehen hatte\n\n✅ Açıklama: Türkçeye '…öğrencilikten beri bir daha görmediği (kadın) arkadaşı' şeklinde çevrilir.\n📌 Kelime Analizi:\n- nicht mehr: artık değil, bir daha değil\nÖrnekler:\n1. Die sie seit dem Studium nicht mehr gesehen hatte. – Öğrencilikten beri görmediği arkadaşı.",
+  },
+  {
+    id: 69,
+    veri: "Wochenendtrip\n\n✅ Açıklama: Hafta sonu gezisi, seyahati anlamına gelir.\n📌 Kelime Analizi:\n- Wochenende: hafta sonu\n- Trip: gezi, seyahat\n- Artikel: der\nÖrnekler:\n1. Der Wochenendtrip – Hafta sonu gezisi.",
+  },
+  {
+    id: 70,
+    veri: "Am Freitagmorgen wartete sie auf den Zug, der sie in die Hauptstadt bringen sollte\n\n✅ Açıklama: Türkçeye 'Cuma sabahı, onu başkente götürmesi beklenen treni bekliyordu' şeklinde çevrilir.\n📌 Gramer Analizi:\n- sollte: 'sollen' fiilinin geçmiş zaman (Konjunktiv II veya Präteritum) hâli, beklenen görev veya planlanmış amaç bildirir\nÖrnekler:\n1. Am Freitagmorgen wartete sie auf den Zug, der sie in die Hauptstadt bringen sollte. – Cuma sabahı, onu başkente götürmesi beklenen treni bekliyordu.\n2. Er traf sich mit einem Mann, der ihm helfen sollte. – Ona yardım etmesi beklenen bir adamla buluştu.",
+  },
+  {
+    id: 71,
+    veri: "dürfen\n\n✅ Açıklama: İzinli olmak anlamına gelir.\n📌 Kullanım: Bir şey yapmaya izin verilip verilmediğini ifade eder.\nÖrnekler:\n1. Ich habe einen Hund, der nicht ins Schlafzimmer darf. – Yatak odasına girmesine izin verilmeyen bir köpeğim var.",
+  },
+  {
+    id: 72,
+    veri: "können\n\n✅ Açıklama: Yapabilmek anlamına gelir.\n📌 Kullanım: Bir beceri veya yeteneği ifade eder.\nÖrnekler:\n1. Sie hat ein Kind, das schon mit drei Jahren lesen kann. – Daha üç yaşında okumayı bilen (okuyabilen) bir çocuğu var.",
+  },
+  {
+    id: 73,
+    veri: "müssen\n\n✅ Açıklama: Zorunda olmak anlamına gelir.\n📌 Kullanım: Bir zorunluluğu veya gerekliliği ifade eder.\nÖrnekler:\n1. Er sucht ein Auto, das auch im Winter zuverlässig fahren muss. – Kışın da güvenilir şekilde çalışması gereken bir araba arıyor.",
+  },
+  {
+    id: 74,
+    veri: "sollen\n\n✅ Açıklama: Gereklilik veya başkasının beklentisini ifade eder.\n📌 Kullanım: Bir görevin veya planın beklendiğini gösterir.\nÖrnekler:\n1. Ich traf einen Lehrer, der mir bei der Prüfungsvorbereitung helfen sollte. – Sınav hazırlığında bana yardım etmesi beklenen bir öğretmenle karşılaştım.",
+  },
+  {
+    id: 75,
+    veri: "wollen\n\n✅ Açıklama: İstemekte kararlı olmak anlamına gelir.\n📌 Kullanım: Güçlü bir isteği ifade eder.\nÖrnekler:\n1. Sie liebt einen Mann, der unbedingt auswandern will. – Mutlaka yurtdışına göç etmek isteyen bir adama âşık.",
+  },
+  {
+    id: 76,
+    veri: "mögen\n\n✅ Açıklama: İstemek, sevmek anlamına gelir, genellikle Konjunktiv II ile kullanılır.\n📌 Kullanım: Hoşlanmayı veya hafif bir isteği ifade eder.\nÖrnekler:\n1. Sie erinnerte sich an ein Lied, das sie als Kind immer hören mochte. – Çocukken hep dinlemekten hoşlandığı bir şarkıyı hatırladı.",
+  },
+  {
+    id: 77,
+    veri: "sich beschweren bei\n\n✅ Açıklama: Birine şikayette bulunmak anlamına gelir.\n📌 Kullanım: 'bei' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Er beschwerte sich bei dem Chef über die Arbeitsbedingungen. – İş koşulları hakkında patronuna şikayette bulundu.",
+  },
+  {
+    id: 78,
+    veri: "sich unterhalten mit\n\n✅ Açıklama: Birisiyle sohbet etmek anlamına gelir.\n📌 Kullanım: 'mit' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Sie unterhielt sich mit ihren Freunden. – Arkadaşlarıyla sohbet etti.",
+  },
+  {
+    id: 79,
+    veri: "litt an\n\n✅ Açıklama: 'leiden an' fiilinin Präteritum hâlidir, bir şeyden veya durumdan acı çekmek anlamına gelir.\n📌 Kullanım: 'an' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Er litt an einer Krankheit. – Bir hastalıktan dolayı acı çekiyordu.",
+  },
+  {
+    id: 80,
+    veri: "verabredete sich mit\n\n✅ Açıklama: 'sich verabreden' fiilinin Präteritum hâlidir, biriyle buluşmak için sözleşmek, randevulaşmak anlamına gelir.\n📌 Kullanım: 'mit' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Sie verabredete sich mit ihm im Café. – Onunla kafede buluşmak için randevulaştı.",
+  },
+  {
+    id: 81,
+    veri: "sich bewerben bei\n\n✅ Açıklama: Birine veya bir kuruma başvuruda bulunmak anlamına gelir.\n📌 Kullanım: 'bei' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Sie hat sich bei der Firma beworben. – Şirkete başvurdu.",
+  },
+  {
+    id: 82,
+    veri: "sich bewerben um\n\n✅ Açıklama: Bir pozisyon, görev veya fırsat için başvurmak anlamına gelir.\n📌 Kullanım: 'um' edatı ile Akkusativ kullanılır.\nÖrnekler:\n1. Er hat sich um die Stelle beworben. – Pozisyona başvurdu.",
+  },
+  {
+    id: 83,
+    veri: "erzählen von\n\n✅ Açıklama: Bir şeyden yüzeysel olarak bahsetmek, anmak anlamına gelir.\n📌 Kullanım: 'von' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Er erzählte von seiner Kindheit. – Çocukluğundan bahsetti.\n2. Sie erzählte von ihrem Urlaub. – Tatilinden söz etti.",
+  },
+  {
+    id: 84,
+    veri: "erzählen über\n\n✅ Açıklama: Bir şeyi ayrıntılı ve derinlemesine anlatmak anlamına gelir.\n📌 Kullanım: 'über' edatı ile Akkusativ kullanılır.\nÖrnekler:\n1. Er erzählte über seine Erfahrungen im Ausland. – Yurt dışındaki deneyimlerini ayrıntılı anlattı.",
+  },
+  {
+    id: 85,
+    veri: "schmecken nach\n\n✅ Açıklama: Bir şeyin tadı olmak, bir şey gibi tatmak anlamına gelir.\n📌 Kullanım: 'nach' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Der Kuchen schmeckte nach Schokolade. – Kek çikolata gibi tatlıydı.",
+  },
+  {
+    id: 86,
+    veri: "sich erkundigen nach\n\n✅ Açıklama: Bir şey hakkında bilgi almak, bir konuda soru sormak anlamına gelir.\n📌 Kullanım: 'nach' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Sie erkundigte sich nach dem Weg zum Bahnhof. – Tren istasyonuna giden yolu sordu.",
+  },
+  {
+    id: 87,
+    veri: "fortgeschritten\n\n✅ Açıklama: İlerlemiş anlamına gelir, genellikle bir durum veya zaman için kullanılır.\nÖrnekler:\n1. Fortgeschrittene Stunde – Geç saat.",
+  },
+  {
+    id: 88,
+    veri: "stimmte\n\n✅ Açıklama: 'zustimmen' fiilinin Präteritum hâlidir, bir fikri onaylamak veya katılmak anlamına gelir.\n📌 Kullanım: 'zu' ayrılabilir fiildir, Dativ ile kullanılır.\nÖrnekler:\n1. Er stimmte dem Vorschlag zu. – Öneriye katıldı.",
+  },
+  {
+    id: 89,
+    veri: "fesselnd\n\n✅ Açıklama: Sürükleyici, büyüleyici, heyecan verici anlamına gelir.\n📌 Köken: 'fesseln' (bağlamak) fiilinden türemiştir, mecazi anlamda kullanılır.\nÖrnekler:\n1. Ein fesselndes Buch – Sürükleyici bir kitap.",
+  },
+  {
+    id: 90,
+    veri: "suchen nach\n\n✅ Açıklama: Bir şeyi aramak (henüz bulmamış olmak) anlamına gelir.\n📌 Kullanım: 'nach' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Ich habe lange nach dieser Wohnung gesucht. – Uzun süre bu evi aradım.",
+  },
+  {
+    id: 91,
+    veri: "bezahlbaren\n\n✅ Açıklama: 'bezahlbar' sıfatının Dativ veya Akkusativ hâlidir, ödenebilir, fiyatı uygun anlamına gelir.\n📌 Köken: bezahlbar – ödenebilir, karşılanabilir\nÖrnekler:\n1. Ein bezahlbares Auto – Fiyatı uygun bir araba.",
+  },
+  {
+    id: 92,
+    veri: "Das besonders hitzig debattiert wurde\n\n✅ Açıklama: Türkçeye 'Bu özellikle hararetli bir şekilde tartışıldı' şeklinde çevrilir.\n📌 Kullanım Detayları:\n- hitzig: hararetli\n- debattieren: tartışmak\n- wurde: geçmiş zaman (Passiv)\nÖrnekler:\n1. Das besonders hitzig debattiert wurde. – Bu özellikle hararetli bir şekilde tartışıldı.",
+  },
+  {
+    id: 93,
+    veri: "während eine Frau an der Wirksamkeit individueller Maßnahmen zweifelte\n\n✅ Açıklama: Türkçeye 'Bir kadın, bireysel önlemlerin etkinliğinden şüphe ediyordu' şeklinde çevrilir.\n📌 Kelime Analizi:\n- zweifeln an: bir şeye şüphe duymak, 'an' Dativ ile\n- Wirksamkeit: etkinlik (Dativ)\n- individueller Maßnahmen: bireysel önlemler\nÖrnekler:\n1. Während eine Frau an der Wirksamkeit individueller Maßnahmen zweifelte. – Bir kadın, bireysel önlemlerin etkinliğinden şüphe ediyordu.",
+  },
+  {
+    id: 94,
+    veri: "Was hältst du von Berlin?\n\n✅ Açıklama: Türkçeye 'Berlin hakkında ne düşünüyorsun?' şeklinde çevrilir.\n📌 Yapısal Açıklama:\n- halten von: bir şey hakkında düşünmek, Dativ ile\n- du hältst: 'halten' fiilinin çekimi\nÖrnekler:\n1. Was hältst du von Berlin? – Berlin hakkında ne düşünüyorsun?\n2. Ich halte viel von Berlin. – Berlin hakkında olumlu düşünüyorum.",
+  },
+  {
+    id: 95,
+    veri: "Die besteht auf ihrer Einzigartigkeit\n\n✅ Açıklama: Türkçeye 'O (kadın), kendi benzersizliğinde ısrar ediyor' şeklinde çevrilir.\n📌 Yapısal Açıklama:\n- bestehen auf: ısrar etmek, Dativ ile\n- ihrer Einzigartigkeit: onun benzersizliği (Dativ)\nÖrnekler:\n1. Die besteht auf ihrer Einzigartigkeit. – O, kendi benzersizliğinde ısrar ediyor.",
+  },
+  {
+    id: 96,
+    veri: "Beim Abschied\n\n✅ Açıklama: Veda sırasında veya vedalaşırken anlamına gelir.\nÖrnekler:\n1. Beim Abschied – Veda sırasında.",
+  },
+  {
+    id: 97,
+    veri: "erwähnt\n\n✅ Açıklama: 'erwähnen' fiilinin Partizip II hâlidir, bahsetmek, sözünü etmek anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: erwähnen\n- Partizip II: erwähnt\nÖrnekler:\n1. Er hat es erwähnt. – Ondan bahsetti.",
+  },
+  {
+    id: 98,
+    veri: "würde\n\n✅ Açıklama: 'werden' fiilinin Konjunktiv II (dilek-şart kipi) hâlidir, gerçekleşmesi kesin olmayan durumlar, şaşkınlık, nazik istekler için kullanılır.\n📌 Kullanım: Beklenmedik veya olasılık dışı durumları ifade eder.\nÖrnekler:\n1. Dass sein Chef einen solchen Schritt machen würde. – Patronunun böyle bir adım atacağını beklememişti.\n2. Er sagte, dass sie ihm helfen würde. – Onun kendisine yardım edeceğini söyledi (kesin değil).",
+  },
+  {
+    id: 99,
+    veri: "Konkurrenzunternehmen\n\n✅ Açıklama: Rakip firma, rakip şirket anlamına gelir.\nÖrnekler:\n1. Das Konkurrenzunternehmen – Rakip firma.",
+  },
 ];
 export default data;
