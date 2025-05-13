@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const textData = [
   {
@@ -2865,82 +2865,85 @@ const textData = [
         translation: "Lukas profesöre anlatmak istediklerini not etti.",
         explanation: "Fiil notierte (not etti) ikinci konum",
       },
+    ],
+  },
 
+  {
+    title: "1. Verben mit Akkusativ und Dativ",
+    sentences: [
       {
-        title: "1. Verben mit Akkusativ und Dativ",
-        sentences: [
-          {
-            text: "Lukas saß auf einer Bank am Ufer des Bodensees.",
-            translation: "Lukas Bodensee kıyısındaki bir bankta oturuyordu.",
-            explanation:
-              "Fiil 'saß' (oturuyordu) ikinci konumdadır. 'Auf einer Bank' ve 'am Ufer des Bodensees' yer zarflarıdır, dativ ile kullanılır.",
-          },
-          {
-            text: "Er beobachtete die Möwen, die über das schimmernde Wasser kreisten.",
-            translation:
-              "Martıları gözlemledi, onlar pırıldayan suyun üzerinde daireler çiziyordu.",
-            explanation:
-              "Fiil 'beobachtete' (gözlemledi) ikinci konumdadır. 'Die Möwen' akkusativ nesnesidir. Yan cümlede 'kreisten' fiili sonda yer alır.",
-          },
-          {
-            text: "Der kühle Herbstwind strich ihm durch das Haar.",
-            translation: "Serin sonbahar rüzgarı saçlarından geçti.",
-            explanation:
-              "Fiil 'strich' (geçti) ikinci konumdadır. 'Ihm' dativ nesnesidir, 'durch das Haar' yer zarfıdır.",
-          },
-          {
-            text: "Er sah dem Sonnenuntergang zu.",
-            translation: "Güneş batışını izledi.",
-            explanation:
-              "Fiil 'sah' (izledi) ikinci konumdadır. 'Dem Sonnenuntergang' dativ nesnesidir, 'zusehen' fiili dativ ile kullanılır.",
-          },
-          {
-            text: "Er nahm ein Buch aus seiner Tasche.",
-            translation: "Çantasından bir kitap aldı.",
-            explanation:
-              "Fiil 'nahm' (aldı) ikinci konumdadır. 'Ein Buch' akkusativ nesnesidir, 'aus seiner Tasche' yer zarfıdır.",
-          },
-          {
-            text: "Er hatte seinem Freund Marcus dieses Buch empfohlen.",
-            translation: "Arkadaşı Marcus'a bu kitabı önermişti.",
-            explanation:
-              "Fiil 'hatte' (yardımcı fiil) ikinci konumdadır, 'empfohlen' geçmiş zaman formunu oluşturur. 'Seinem Freund Marcus' dativ, 'dieses Buch' akkusativ nesnesidir.",
-          },
-          {
-            text: "Marcus zeigte kein Interesse daran.",
-            translation: "Marcus buna ilgi göstermedi.",
-            explanation:
-              "Fiil 'zeigte' (göstermedi) ikinci konumdadır. 'Kein Interesse' akkusativ nesnesidir, 'daran' dativ ile kullanılan bir zamirdir.",
-          },
-          {
-            text: "Ich kaufe dir ein Exemplar zum Geburtstag.",
-            translation: "Sana doğum gününde bir kopya alacağım.",
-            explanation:
-              "Fiil 'kaufe' (alacağım) ikinci konumdadır. 'Dir' dativ, 'ein Exemplar' akkusativ nesnesidir.",
-          },
-          {
-            text: "Er legte dem alten Mann, der sich neben ihn gesetzt hatte, seine Jacke über die Schultern.",
-            translation: "Yanına oturan yaşlı adama ceketini omuzlarına örttü.",
-            explanation:
-              "Fiil 'legte' (örttü) ikinci konumdadır. 'Dem alten Mann' dativ, 'seine Jacke' akkusativ nesnesidir. Yan cümlede 'hatte' fiili sonda yer alır.",
-          },
-          {
-            text: "Der Fremde schenkte ihm ein dankbares Lächeln.",
-            translation: "Yabancı ona minnettar bir gülümseme sundu.",
-            explanation:
-              "Fiil 'schenkte' (sundu) ikinci konumdadır. 'Ihm' dativ, 'ein dankbares Lächeln' akkusativ nesnesidir.",
-          },
-          {
-            text: "Er stellte sich als Professor Eichendorff vor.",
-            translation: "Kendisini Profesör Eichendorff olarak tanıttı.",
-            explanation:
-              "Fiil 'stellte' (tanıttı) ikinci konumdadır. 'Sich' dönüşlü zamir, 'als Professor Eichendorff' tanıtım ifadesidir.",
-          },
-        ],
+        text: "Lukas saß auf einer Bank am Ufer des Bodensees.",
+        translation: "Lukas Bodensee kıyısındaki bir bankta oturuyordu.",
+        explanation:
+          "Fiil 'saß' (oturuyordu) ikinci konumdadır. 'Auf einer Bank' ve 'am Ufer des Bodensees' yer zarflarıdır, dativ ile kullanılır.",
       },
       {
-        title: "2. Verben mit Genitiv",
-
+        text: "Er beobachtete die Möwen, die über das schimmernde Wasser kreisten.",
+        translation:
+          "Martıları gözlemledi, onlar pırıldayan suyun üzerinde daireler çiziyordu.",
+        explanation:
+          "Fiil 'beobachtete' (gözlemledi) ikinci konumdadır. 'Die Möwen' akkusativ nesnesidir. Yan cümlede 'kreisten' fiili sonda yer alır.",
+      },
+      {
+        text: "Der kühle Herbstwind strich ihm durch das Haar.",
+        translation: "Serin sonbahar rüzgarı saçlarından geçti.",
+        explanation:
+          "Fiil 'strich' (geçti) ikinci konumdadır. 'Ihm' dativ nesnesidir, 'durch das Haar' yer zarfıdır.",
+      },
+      {
+        text: "Er sah dem Sonnenuntergang zu.",
+        translation: "Güneş batışını izledi.",
+        explanation:
+          "Fiil 'sah' (izledi) ikinci konumdadır. 'Dem Sonnenuntergang' dativ nesnesidir, 'zusehen' fiili dativ ile kullanılır.",
+      },
+      {
+        text: "Er nahm ein Buch aus seiner Tasche.",
+        translation: "Çantasından bir kitap aldı.",
+        explanation:
+          "Fiil 'nahm' (aldı) ikinci konumdadır. 'Ein Buch' akkusativ nesnesidir, 'aus seiner Tasche' yer zarfıdır.",
+      },
+      {
+        text: "Er hatte seinem Freund Marcus dieses Buch empfohlen.",
+        translation: "Arkadaşı Marcus'a bu kitabı önermişti.",
+        explanation:
+          "Fiil 'hatte' (yardımcı fiil) ikinci konumdadır, 'empfohlen' geçmiş zaman formunu oluşturur. 'Seinem Freund Marcus' dativ, 'dieses Buch' akkusativ nesnesidir.",
+      },
+      {
+        text: "Marcus zeigte kein Interesse daran.",
+        translation: "Marcus buna ilgi göstermedi.",
+        explanation:
+          "Fiil 'zeigte' (göstermedi) ikinci konumdadır. 'Kein Interesse' akkusativ nesnesidir, 'daran' dativ ile kullanılan bir zamirdir.",
+      },
+      {
+        text: "Ich kaufe dir ein Exemplar zum Geburtstag.",
+        translation: "Sana doğum gününde bir kopya alacağım.",
+        explanation:
+          "Fiil 'kaufe' (alacağım) ikinci konumdadır. 'Dir' dativ, 'ein Exemplar' akkusativ nesnesidir.",
+      },
+      {
+        text: "Er legte dem alten Mann, der sich neben ihn gesetzt hatte, seine Jacke über die Schultern.",
+        translation: "Yanına oturan yaşlı adama ceketini omuzlarına örttü.",
+        explanation:
+          "Fiil 'legte' (örttü) ikinci konumdadır. 'Dem alten Mann' dativ, 'seine Jacke' akkusativ nesnesidir. Yan cümlede 'hatte' fiili sonda yer alır.",
+      },
+      {
+        text: "Der Fremde schenkte ihm ein dankbares Lächeln.",
+        translation: "Yabancı ona minnettar bir gülümseme sundu.",
+        explanation:
+          "Fiil 'schenkte' (sundu) ikinci konumdadır. 'Ihm' dativ, 'ein dankbares Lächeln' akkusativ nesnesidir.",
+      },
+      {
+        text: "Er stellte sich als Professor Eichendorff vor.",
+        translation: "Kendisini Profesör Eichendorff olarak tanıttı.",
+        explanation:
+          "Fiil 'stellte' (tanıttı) ikinci konumdadır. 'Sich' dönüşlü zamir, 'als Professor Eichendorff' tanıtım ifadesidir.",
+      },
+    ],
+  },
+  {
+    title: "2. Verben mit Genitiv",
+    sentences: [
+      {
         text: "Er annahm sich des kulturellen Erbes der Region besonders.",
         translation: "Bölgenin kültürel mirasını özellikle üstlendi.",
         explanation:
@@ -4657,17 +4660,2900 @@ const textData = [
       },
     ],
   },
+  {
+    title: "1. Modalverben in der Grundbedeutung",
+    sentences: [
+      {
+        text: "Sara musste früh aufstehen.",
+        translation: "Sara erken kalkmak zorundaydı.",
+        explanation:
+          "Modal fiil 'musste' (zorundaydı) Präteritum, zorunluluğu ifade eder. Mastar 'aufstehen' sonda.",
+      },
+      {
+        text: "Sie sollte heute in der alten Stadtbibliothek arbeiten.",
+        translation: "Bugün eski şehir kütüphanesinde çalışması gerekiyordu.",
+        explanation:
+          "Modal fiil 'sollte' (gerekliydi) Präteritum, bir beklenti veya görevi ifade eder. Mastar 'arbeiten' sonda.",
+      },
+      {
+        text: "Sie durfte auf keinen Fall zu spät kommen.",
+        translation: "Hiçbir şekilde geç kalmamalıydı.",
+        explanation:
+          "Modal fiil 'durfte' (izinliydi/olmamalıydı) Präteritum, izin veya yasaklamayı ifade eder. Mastar 'kommen' sonda.",
+      },
+      {
+        text: "Sie konnte endlich praktische Erfahrungen sammeln.",
+        translation: "Sonunda pratik deneyimler toplayabiliyordu.",
+        explanation:
+          "Modal fiil 'konnte' (biliyordu) Präteritum, yeteneği ifade eder. Mastar 'sammeln' sonda.",
+      },
+      {
+        text: "Sie wollte einen guten Eindruck machen.",
+        translation: "İyi bir izlenim bırakmak istiyordu.",
+        explanation:
+          "Modal fiil 'wollte' (istiyordu) Präteritum, isteği ifade eder. Mastar 'machen' sonda.",
+      },
+      {
+        text: "Ich mag vielleicht neu sein, aber ich kann schon viel.",
+        translation: "Belki yeni olabilirim, ama zaten çok şey yapabilirim.",
+        explanation:
+          "Modal fiiller 'mag' (olabilir) ve 'kann' (yapabilirim) Präsens, olasılık ve yeteneği ifade eder. 'Sein' ve fiil sonda.",
+      },
+      {
+        text: "Sie müssen um acht Uhr da sein.",
+        translation: "Saat sekizde orada olmalısınız.",
+        explanation:
+          "Modal fiil 'müssen' (olmalısınız) Präsens, zorunluluğu ifade eder. Mastar 'sein' sonda.",
+      },
+      {
+        text: "Wir wollen mit der Katalogisierung beginnen.",
+        translation: "Kataloglamaya başlamak istiyoruz.",
+        explanation:
+          "Modal fiil 'wollen' (istiyoruz) Präsens, isteği ifade eder. Mastar 'beginnen' sonda.",
+      },
+      {
+        text: "Sie durfte ihren Studentenausweis nicht vergessen.",
+        translation: "Öğrenci kimliğini unutmamalıydı.",
+        explanation:
+          "Modal fiil 'durfte' (izinliydi/olmamalıydı) Präteritum, yasaklamayı ifade eder. Mastar 'vergessen' sonda.",
+      },
+      {
+        text: "Sie soll pünktlich sein.",
+        translation: "Zamanında olmalı.",
+        explanation:
+          "Modal fiil 'soll' (olmalı) Präsens, bir beklenti veya görevi ifade eder. Mastar 'sein' sonda.",
+      },
+    ],
+  },
+  {
+    title:
+      "2. Andere Bedeutung von Modalverben: Vermutungen über die Gegenwart",
+    sentences: [
+      {
+        text: "Herr Weber muss noch nicht hier sein.",
+        translation: "Bay Weber henüz burada değildir herhalde.",
+        explanation:
+          "Modal fiil 'muss' (herhalde) Präsens, mevcut durum hakkında tahmini ifade eder. Mastar 'sein' sonda.",
+      },
+      {
+        text: "Er könnte vielleicht den Hintereingang benutzen.",
+        translation: "Belki arka girişi kullanıyordur.",
+        explanation:
+          "Modal fiil 'könnte' (belki) Konjunktiv II, mevcut durum hakkında tahmini ifade eder. Mastar 'benutzen' sonda.",
+      },
+      {
+        text: "Sie dürften auf Herrn Weber warten.",
+        translation: "Bay Weber’i bekliyor olmalısınız.",
+        explanation:
+          "Modal fiil 'dürften' (olmalısınız) Konjunktiv II, mevcut durum hakkında nazik bir tahmini ifade eder. Mastar 'warten' sonda.",
+      },
+      {
+        text: "Er mag normalerweise pünktlich sein.",
+        translation: "Normalde zamanında olabilir.",
+        explanation:
+          "Modal fiil 'mag' (olabilir) Präsens, mevcut durum hakkında olasılığı ifade eder. Mastar 'sein' sonda.",
+      },
+      {
+        text: "Er soll bei einer Besprechung im Rathaus sein.",
+        translation: "Belediye binasında bir toplantıda olmalı.",
+        explanation:
+          "Modal fiil 'soll' (olmalı) Präsens, mevcut durum hakkında tahmini ifade eder. Mastar 'sein' sonda.",
+      },
+      {
+        text: "Er müsste aber bald kommen.",
+        translation: "Ama yakında gelmesi gerekir.",
+        explanation:
+          "Modal fiil 'müsste' (gerekir) Konjunktiv II, mevcut durum hakkında tahmini ifade eder. Mastar 'kommen' sonda.",
+      },
+      {
+        text: "Das kann stimmen.",
+        translation: "Bu doğru olabilir.",
+        explanation:
+          "Modal fiil 'kann' (olabilir) Präsens, mevcut durum hakkında olasılığı ifade eder. Mastar 'stimmen' sonda.",
+      },
+      {
+        text: "Er kann die Zeit vergessen haben.",
+        translation: "Zamanı unutmuş olabilir.",
+        explanation:
+          "Modal fiil 'kann' (olabilir) Präsens, mevcut durum hakkında tahmini ifade eder. Perfekt mastar 'vergessen haben' sonda.",
+      },
+      {
+        text: "Sie müssen die neue Praktikantin sein.",
+        translation: "Yeni stajyer olmalısınız.",
+        explanation:
+          "Modal fiil 'müssen' (olmalısınız) Präsens, mevcut durum hakkında tahmini ifade eder. Mastar 'sein' sonda.",
+      },
+      {
+        text: "Herr Weber will immer alles perfekt organisieren.",
+        translation: "Bay Weber her şeyi mükemmel organize etmek ister.",
+        explanation:
+          "Modal fiil 'will' (ister) Präsens, alışkanlık veya eğilimi ifade eder. Mastar 'organisieren' sonda.",
+      },
+      {
+        text: "Er kann manchmal wichtige Informationen vergessen.",
+        translation: "Bazen önemli bilgileri unutabilir.",
+        explanation:
+          "Modal fiil 'kann' (unutabilir) Präsens, mevcut durum hakkında olasılığı ifade eder. Mastar 'vergessen' sonda.",
+      },
+    ],
+  },
+  {
+    title:
+      "3. Andere Bedeutung von Modalverben: Vermutungen über die Vergangenheit",
+    sentences: [
+      {
+        text: "Sie müssen die U-Bahn erwischt haben.",
+        translation: "Metroyu yakalamış olmalısınız.",
+        explanation:
+          "Modal fiil 'müssen' (olmalısınız) Präsens, geçmiş hakkında tahmini ifade eder. Perfekt mastar 'erwischt haben' sonda.",
+      },
+      {
+        text: "Ich sollte pünktlich sein und bin deshalb früher losgegangen.",
+        translation: "Zamanında olmalıydım ve bu yüzden erken yola çıktım.",
+        explanation:
+          "Modal fiil 'sollte' (olmalıydım) Präteritum, geçmişteki bir görevi ifade eder. Mastar 'sein' sonda.",
+      },
+      {
+        text: "Sie müssten sie erhalten haben?",
+        translation: "Onu almış olmalısınız, değil mi?",
+        explanation:
+          "Modal fiil 'müssten' (olmalısınız) Konjunktiv II, geçmiş hakkında tahmini ifade eder. Perfekt mastar 'erhalten haben' sonda.",
+      },
+      {
+        text: "Der letzte Praktikant konnte mit den alten Handschriften nicht umgehen.",
+        translation: "Son stajyer eski el yazmalarıyla başa çıkamadı.",
+        explanation:
+          "Modal fiil 'konnte' (başarabildi) Präteritum, geçmişteki yeteneksizliği ifade eder. Mastar 'umgehen' sonda.",
+      },
+      {
+        text: "Er mag wohl nicht so sorgfältig gewesen sein.",
+        translation: "Muhtemelen o kadar dikkatli olmamıştır.",
+        explanation:
+          "Modal fiil 'mag' (olabilir) Präsens, geçmiş hakkında tahmini ifade eder. Perfekt mastar 'gewesen sein' sonda.",
+      },
+      {
+        text: "Er sollte eigentlich die Sammlung im Keller ordnen.",
+        translation: "Aslında bodrumdaki koleksiyonu düzenlemeliydi.",
+        explanation:
+          "Modal fiil 'sollte' (gerekliydi) Präteritum, geçmişteki bir görevi ifade eder. Mastar 'ordnen' sonda.",
+      },
+      {
+        text: "Er dürfte die Aufgabe zu langweilig gefunden haben.",
+        translation: "Görevi çok sıkıcı bulmuş olmalı.",
+        explanation:
+          "Modal fiil 'dürfte' (olmalı) Konjunktiv II, geçmiş hakkında tahmini ifade eder. Perfekt mastar 'gefunden haben' sonda.",
+      },
+      {
+        text: "Wir hätten genauere Anweisungen geben müssen.",
+        translation: "Daha kesin talimatlar vermeliydik.",
+        explanation:
+          "Modal fiil 'hätten ... müssen' Konjunktiv II Perfekt, geçmişteki bir zorunluluğu ifade eder. Mastar 'geben' sonda.",
+      },
+    ],
+  },
+  {
+    title: "4. Das Verb lassen",
+    sentences: [
+      {
+        text: "Herr Weber ließ Sara an einem alten Schreibtisch Platz nehmen.",
+        translation: "Bay Weber, Sara’yı eski bir masada oturtmaya bıraktı.",
+        explanation:
+          "Fiil 'ließ' (bıraktı) Präteritum, causative anlamında, bir eylemin yapılmasını sağlama. Mastar 'Platz nehmen' sonda.",
+      },
+      {
+        text: "Ich lasse Sie hier allein arbeiten.",
+        translation: "Sizi burada yalnız çalışmaya bırakıyorum.",
+        explanation:
+          "Fiil 'lasse' (bırakıyorum) Präsens, causative anlamında, bir eylemin yapılmasına izin verme. Mastar 'arbeiten' sonda.",
+      },
+      {
+        text: "Lassen Sie bitte die besonders wertvollen Dokumente in ihren Schutzhüllen.",
+        translation:
+          "Lütfen özellikle değerli belgeleri koruyucu kaplarında bırakın.",
+        explanation:
+          "Fiil 'lassen' (bırakın) Imperativ, rica anlamında, bir eylemin yapılmasını isteme. Mastar 'bleiben' sonda (örtük).",
+      },
+      {
+        text: "Diese Sammlung lässt mich immer wieder staunen.",
+        translation: "Bu koleksiyon beni her zaman hayrete düşürüyor.",
+        explanation:
+          "Fiil 'lässt' (düşürüyor) Präsens, duygusal etki anlamında, bir şeyin bir duyguya yol açması. Mastar 'staunen' sonda.",
+      },
+      {
+        text: "Lassen Sie sich Zeit, um sich mit allem vertraut zu machen.",
+        translation: "Her şeye alışmak için kendinize zaman tanıyın.",
+        explanation:
+          "Fiil 'lassen' (tanıyın) Imperativ, reflexive anlamında, bir eylemin rahatça yapılmasını isteme. Mastar 'vertraut machen' sonda.",
+      },
+      {
+        text: "Ich lasse mich nicht so leicht ablenken.",
+        translation: "Kolayca dikkatin dağılmasına izin vermem.",
+        explanation:
+          "Fiil 'lasse' (izin vermem) Präsens, reflexive anlamında, bir duruma izin vermeme. Mastar 'ablenken' sonda.",
+      },
+      {
+        text: "Wo haben Sie die Katalogisierungssoftware installieren lassen?",
+        translation: "Kataloglama yazılımını nerede kurdurdunuz?",
+        explanation:
+          "Fiil 'haben ... lassen' Perfekt, causative anlamında, bir eylemin başkasına yaptırılması. Mastar 'installieren' sonda.",
+      },
+      {
+        text: "Ich habe sie auf dem Computer einrichten lassen.",
+        translation: "Onu bilgisayara kurdurdum.",
+        explanation:
+          "Fiil 'habe ... lassen' Perfekt, causative anlamında, bir eylemin başkasına yaptırılması. Mastar 'einrichten' sonda.",
+      },
+      {
+        text: "Lassen Sie uns gemeinsam die ersten Einträge machen.",
+        translation: "İlk girişleri birlikte yapmamıza izin verin.",
+        explanation:
+          "Fiil 'lassen' (izin verin) Imperativ, ortak bir eylemi önerme. Mastar 'machen' sonda.",
+      },
+      {
+        text: "Die alten Karten lassen sich besonders schwer kategorisieren.",
+        translation: "Eski haritalar özellikle zor kategorize ediliyor.",
+        explanation:
+          "Fiil 'lassen' (ediliyor) Präsens, reflexive anlamında, bir eylemin zorluğunu ifade eder. Mastar 'kategorisieren' sonda.",
+      },
+    ],
+  },
+  {
+    title: "5. Trennbare und untrennbare Verben 1",
+    sentences: [
+      {
+        text: "Sara fing sofort mit der Arbeit an.",
+        translation: "Sara hemen işe başladı.",
+        explanation:
+          "Trennbare fiil 'anfangen' (başlamak), Präteritum 'fing ... an'. Önek 'an' cümle sonunda yer alır.",
+      },
+      {
+        text: "Sie nahm vorsichtig eine alte Karte heraus.",
+        translation: "Dikkatlice eski bir harita çıkardı.",
+        explanation:
+          "Trennbare fiil 'herausnehmen' (çıkarmak), Präteritum 'nahm ... heraus'. Önek 'heraus' cümle sonunda yer alır.",
+      },
+      {
+        text: "Herr Weber kam zurück und beobachtete ihre sorgfältige Arbeit.",
+        translation:
+          "Bay Weber geri geldi ve onun dikkatli çalışmasını gözlemledi.",
+        explanation:
+          "Trennbare fiil 'zurückkommen' (geri gelmek), Präteritum 'kam ... zurück'. Önek 'zurück' cümle sonunda yer alır.",
+      },
+      {
+        text: "Sie verstehen schnell.",
+        translation: "Hızlı anlıyorsunuz.",
+        explanation:
+          "Untrennbare fiil 'verstehen' (anlamak), Präsens 'verstehen'. Önek 'ver-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Ich bereite gerade die Einträge für die ersten zehn Dokumente vor.",
+        translation: "Şu anda ilk on belge için girişleri hazırlıyorum.",
+        explanation:
+          "Trennbare fiil 'vorbereiten' (hazırlamak), Präsens 'bereite ... vor'. Önek 'vor' cümle sonunda yer alır.",
+      },
+      {
+        text: "Ich stelle eine Liste der beschädigten Exemplare zusammen.",
+        translation: "Hasarlı kopyaların bir listesini derliyorum.",
+        explanation:
+          "Trennbare fiil 'zusammenstellen' (derlemek), Präsens 'stelle ... zusammen'. Önek 'zusammen' cümle sonunda yer alır.",
+      },
+      {
+        text: "Ich umreiße später den Plan für die nächsten Wochen.",
+        translation:
+          "Daha sonra gelecek haftalar için planı ana hatlarıyla çizeceğim.",
+        explanation:
+          "Untrennbare fiil 'umreißen' (ana hatlarıyla çizmek), Präsens 'umreiße'. Önek 'um-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Ich stelle Ihnen die anderen Mitarbeiter vor.",
+        translation: "Size diğer çalışanları tanıtacağım.",
+        explanation:
+          "Trennbare fiil 'vorstellen' (tanıtmak), Präsens 'stelle ... vor'. Önek 'vor' cümle sonunda yer alır.",
+      },
+      {
+        text: "Ich habe bereits einige ungewöhnliche Merkmale entdeckt.",
+        translation: "Zaten bazı olağandışı özellikleri keşfettim.",
+        explanation:
+          "Untrennbare fiil 'entdecken' (keşfetmek), Perfekt 'habe ... entdeckt'. Önek 'ent-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Ich habe sie aufgeschrieben.",
+        translation: "Onları yazdım.",
+        explanation:
+          "Trennbare fiil 'aufschreiben' (yazmak), Perfekt 'habe ... aufgeschrieben'. Önek 'auf-' cümle sonunda yer alır.",
+      },
+      {
+        text: "Sie erkennen wirklich interessante Details!",
+        translation: "Gerçekten ilginç detayları fark ediyorsunuz!",
+        explanation:
+          "Untrennbare fiil 'erkennen' (fark etmek), Präsens 'erkennen'. Önek 'er-' ayrılmaz, fiille birleşik kalır.",
+      },
+    ],
+  },
+  {
+    title: "6. Trennbare und untrennbare Verben 2",
+    sentences: [
+      {
+        text: "Sie entdeckte eine Sammlung alter Briefe zwischen den Karten.",
+        translation:
+          "Haritalar arasında eski mektuplardan oluşan bir koleksiyon keşfetti.",
+        explanation:
+          "Untrennbare fiil 'entdecken' (keşfetmek), Präteritum 'entdeckte'. Önek 'ent-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Sie entschloss sich, diese separat zu katalogisieren.",
+        translation: "Bunları ayrı ayrı kataloglamaya karar verdi.",
+        explanation:
+          "Untrennbare fiil 'entschließen' (karar vermek), Präteritum 'entschloss'. Önek 'ent-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Sie besprach ihre Idee mit Herrn Weber.",
+        translation: "Fikrini Bay Weber ile tartıştı.",
+        explanation:
+          "Untrennbare fiil 'besprechen' (tartışmak), Präteritum 'besprach'. Önek 'be-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Er umarmte symbolisch die alten Dokumente.",
+        translation: "Eski belgeleri sembolik olarak kucakladı.",
+        explanation:
+          "Untrennbare fiil 'umarmen' (kucaklamak), Präteritum 'umarmte'. Önek 'um-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Sara erholte sich kurz bei einer Tasse Tee.",
+        translation: "Sara bir fincan çay ile kısa bir dinlenme molası verdi.",
+        explanation:
+          "Untrennbare fiil 'erholen' (dinlenmek), Präteritum 'erholte'. Önek 'er-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Sie erzählte dabei von ihrem Studium.",
+        translation: "Bu sırada eğitiminden bahsetti.",
+        explanation:
+          "Untrennbare fiil 'erzählen' (anlatmak), Präteritum 'erzählte'. Önek 'er-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Ich empfehle Ihnen, sich besonders mit der Geschichte des 19. Jahrhunderts zu beschäftigen.",
+        translation:
+          "Size özellikle 19. yüzyıl tarihiyle ilgilenmenizi öneriyorum.",
+        explanation:
+          "Untrennbare fiil 'empfehlen' (önermek), Präsens 'empfehle'. Önek 'em-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Wir bewahren hier viele Dokumente aus dieser Zeit auf.",
+        translation: "Burada bu dönemden birçok belgeyi saklıyoruz.",
+        explanation:
+          "Trennbare fiil 'aufbewahren' (saklamak), Präsens 'bewahren ... auf'. Önek 'auf' cümle sonunda yer alır.",
+      },
+      {
+        text: "Ich entspanne mich am besten bei der Arbeit mit historischen Dokumenten.",
+        translation: "En iyi tarihi belgelerle çalışırken rahatlarım.",
+        explanation:
+          "Untrennbare fiil 'entspannen' (rahatlamak), Präsens 'entspanne'. Önek 'ent-' ayrılmaz, fiille birleşik kalır.",
+      },
+      {
+        text: "Ich entscheide mich wahrscheinlich für eine Spezialisierung in diesem Bereich.",
+        translation: "Muhtemelen bu alanda bir uzmanlaşma seçeceğim.",
+        explanation:
+          "Untrennbare fiil 'entscheiden' (karar vermek), Präsens 'entscheide'. Önek 'ent-' ayrılmaz, fiille birleşik kalır.",
+      },
+    ],
+  },
+  {
+    title: "1. Genusregeln",
+    sentences: [
+      {
+        text: "Der Student Alex plante einen Ausflug.",
+        translation: "Öğrenci Alex bir gezi planladı.",
+        explanation:
+          "‘Der Student’ maskulin, nominativ. ‘Student’ erkek öğrenciler için maskulin cinsiyet kuralına uyar.",
+      },
+      {
+        text: "Die Reise sollte durch ganz Deutschland führen.",
+        translation: "Seyahat tüm Almanya’yı kapsamalıydı.",
+        explanation:
+          "‘Die Reise’ feminin, nominativ. ‘Reise’ soyut bir kavram olarak genellikle feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Abenteuer begann an einem sonnigen Morgen.",
+        translation: "Macera güneşli bir sabah başladı.",
+        explanation:
+          "‘Das Abenteuer’ nötr, nominativ. ‘Abenteuer’ soyut olaylar için nötr cinsiyet kuralına uyar.",
+      },
+      {
+        text: "Der Rucksack war gepackt.",
+        translation: "Sırt çantası hazırlanmıştı.",
+        explanation:
+          "‘Der Rucksack’ maskulin, nominativ. ‘Rucksack’ somut bir nesne olarak maskulin cinsiyet alır.",
+      },
+      {
+        text: "Die Landkarte lag bereit.",
+        translation: "Harita hazır duruyordu.",
+        explanation:
+          "‘Die Landkarte’ feminin, nominativ. ‘Landkarte’ somut bir nesne olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Handy war aufgeladen.",
+        translation: "Telefon şarj edilmişti.",
+        explanation:
+          "‘Das Handy’ nötr, nominativ. ‘Handy’ teknolojik aletler için nötr cinsiyet kuralına uyar.",
+      },
+      {
+        text: "Die Begeisterung war groß.",
+        translation: "Heyecan büyüktü.",
+        explanation:
+          "‘Die Begeisterung’ feminin, nominativ. ‘Begeisterung’ soyut duygu olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Der Zug einfuhr.",
+        translation: "Tren istasyona girdi.",
+        explanation:
+          "‘Der Zug’ maskulin, nominativ. ‘Zug’ ulaşım aracı olarak maskulin cinsiyet kuralına uyar.",
+      },
+      {
+        text: "Die Namen der Städte klangen verheißungsvoll.",
+        translation: "Şehirlerin isimleri umut verici geliyordu.",
+        explanation:
+          "‘Die Namen’ feminin, nominativ plural. ‘Name’ soyut bir kavram olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Der Schwarzwald mit seinen dichten Wäldern.",
+        translation: "Yoğun ormanlarıyla Kara Orman.",
+        explanation:
+          "‘Der Schwarzwald’ maskulin, nominativ. Bölge isimleri genellikle maskulin cinsiyet alır.",
+      },
+      {
+        text: "Die Ostsee mit ihren weiten Stränden.",
+        translation: "Geniş plajlarıyla Baltık Denizi.",
+        explanation:
+          "‘Die Ostsee’ feminin, nominativ. Deniz isimleri genellikle feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Allgäu mit seinen grünen Wiesen.",
+        translation: "Yeşil çayırlarıyla Allgäu.",
+        explanation:
+          "‘Das Allgäu’ nötr, nominativ. Bazı bölge isimleri nötr cinsiyet kuralına uyar.",
+      },
+      {
+        text: "In seinem Notizbuch hatte Alex wichtige Informationen gesammelt.",
+        translation: "Alex not defterinde önemli bilgiler toplamıştı.",
+        explanation:
+          "‘Seinem Notizbuch’ nötr, dativ. ‘Notizbuch’ somut bir nesne olarak nötr cinsiyet alır.",
+      },
+      {
+        text: "Der Preis für das Ticket.",
+        translation: "Biletin fiyatı.",
+        explanation:
+          "‘Der Preis’ maskulin, nominativ. ‘Preis’ soyut bir kavram olarak maskulin cinsiyet alır.",
+      },
+      {
+        text: "Die Adresse der ersten Unterkunft.",
+        translation: "İlk konaklama yerinin adresi.",
+        explanation:
+          "‘Die Adresse’ feminin, nominativ. ‘Adresse’ soyut bir kavram olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Datum der Rückreise.",
+        translation: "Dönüş yolculuğunun tarihi.",
+        explanation:
+          "‘Das Datum’ nötr, nominativ. ‘Datum’ soyut bir kavram olarak nötr cinsiyet alır.",
+      },
+      {
+        text: "Der Tipp eines Freundes führte ihn zur Jugendherberge.",
+        translation:
+          "Bir arkadaşının önerisi onu gençlik hostelına yönlendirdi.",
+        explanation:
+          "‘Der Tipp’ maskulin, nominativ. ‘Tipp’ soyut bir öneri olarak maskulin cinsiyet alır.",
+      },
+      {
+        text: "Die Empfehlung eines Reiseblogs.",
+        translation: "Bir seyahat blogunun tavsiyesi.",
+        explanation:
+          "‘Die Empfehlung’ feminin, nominativ. ‘Empfehlung’ soyut bir kavram olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Angebot einer lokalen Tour.",
+        translation: "Yerel bir turun teklifi.",
+        explanation:
+          "‘Das Angebot’ nötr, nominativ. ‘Angebot’ soyut bir kavram olarak nötr cinsiyet alır.",
+      },
+      {
+        text: "Der Bahnhof war voller Menschen.",
+        translation: "Tren istasyonu insanlarla doluydu.",
+        explanation:
+          "‘Der Bahnhof’ maskulin, nominativ. ‘Bahnhof’ bir yapı olarak maskulin cinsiyet alır.",
+      },
+      {
+        text: "Die Atmosphäre aufregend.",
+        translation: "Atmosfer heyecan vericiydi.",
+        explanation:
+          "‘Die Atmosphäre’ feminin, nominativ. ‘Atmosphäre’ soyut bir kavram olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Gefühl von Freiheit unbeschreiblich.",
+        translation: "Özgürlük hissi tarif edilemezdi.",
+        explanation:
+          "‘Das Gefühl’ nötr, nominativ. ‘Gefühl’ soyut bir duygu olarak nötr cinsiyet alır.",
+      },
+      {
+        text: "Der Gedanke an die kommenden Wochen ließ sein Herz höher schlagen.",
+        translation: "Gelecek haftalar düşüncesi kalbini daha hızlı attırdı.",
+        explanation:
+          "‘Der Gedanke’ maskulin, nominativ. ‘Gedanke’ soyut bir kavram olarak maskulin cinsiyet alır.",
+      },
+      {
+        text: "Die Vorfreude überwog alle Bedenken.",
+        translation: "Heyecan tüm endişeleri bastırdı.",
+        explanation:
+          "‘Die Vorfreude’ feminin, nominativ. ‘Vorfreude’ soyut bir duygu olarak feminin cinsiyet alır.",
+      },
+      {
+        text: "Das Lächeln wich nicht mehr von seinem Gesicht.",
+        translation: "Gülümseme yüzünden hiç kaybolmadı.",
+        explanation:
+          "‘Das Lächeln’ nötr, nominativ. ‘Lächeln’ soyut bir ifade olarak nötr cinsiyet alır.",
+      },
+    ],
+  },
+  {
+    title: "2. Artikelgebrauch",
+    sentences: [
+      {
+        text: "Alex liebte das Reisen mehr als alles andere.",
+        translation: "Alex seyahat etmeyi her şeyden çok severdi.",
+        explanation:
+          "‘Das Reisen’ nötr, akkusativ, belirli artikel. Soyut bir kavram olarak genel bir ifadede kullanılır.",
+      },
+      {
+        text: "Die Erfahrungen einer Reise waren für ihn unbezahlbar.",
+        translation: "Bir seyahatin deneyimleri onun için paha biçilemezdi.",
+        explanation:
+          "‘Die Erfahrungen’ feminin, nominativ plural, belirli artikel. ‘Einer Reise’ belirsiz artikel, genellemeyi belirtir.",
+      },
+      {
+        text: "Er trank gerne den Kaffee in kleinen, gemütlichen Cafés.",
+        translation: "Küçük, rahat kafelerde kahve içmeyi severdi.",
+        explanation:
+          "‘Den Kaffee’ maskulin, akkusativ, belirli artikel. Genel bir alışkanlığı ifade eder.",
+      },
+      {
+        text: "Er aß das traditionelle Essen jeder Region.",
+        translation: "Her bölgenin geleneksel yemeğini yedi.",
+        explanation:
+          "‘Das traditionelle Essen’ nötr, akkusativ, belirli artikel. Genel bir kategoriyi ifade eder.",
+      },
+      {
+        text: "Das Leben eines Reisenden gefiel ihm.",
+        translation: "Bir gezginin hayatı ona cazip geliyordu.",
+        explanation:
+          "‘Das Leben’ nötr, nominativ, belirli artikel. ‘Eines Reisenden’ belirsiz artikel, genellemeyi belirtir.",
+      },
+      {
+        text: "Er besuchte den Reichstag und die Museumsinsel.",
+        translation: "Reichstag’ı ve Müzeler Adası’nı ziyaret etti.",
+        explanation:
+          "‘Den Reichstag’ maskulin, akkusativ, belirli artikel. ‘Die Museumsinsel’ feminin, akkusativ, belirli artikel. Özel isimlerde kullanılır.",
+      },
+      {
+        text: "Er bewunderte die Architektur der Gebäude.",
+        translation: "Binaların mimarisini hayranlıkla izledi.",
+        explanation:
+          "‘Die Architektur’ feminin, akkusativ, belirli artikel. Genel bir kavramı ifade eder.",
+      },
+      {
+        text: "Er fotografierte das Brandenburger Tor im Abendlicht.",
+        translation: "Brandenburg Kapısı’nı akşam ışığında fotoğrafladı.",
+        explanation:
+          "‘Das Brandenburger Tor’ nötr, akkusativ, belirli artikel. Özel bir yapıyı belirtir.",
+      },
+      {
+        text: "Ohne einen Stadtplan hätte er sich verlaufen.",
+        translation: "Bir şehir haritası olmadan kaybolurdu.",
+        explanation:
+          "‘Einen Stadtplan’ maskulin, akkusativ, belirsiz artikel. Belirli olmayan bir nesneyi ifade eder.",
+      },
+      {
+        text: "Mit dem Smartphone fand er leicht den Weg.",
+        translation: "Akıllı telefonla kolayca yolu buldu.",
+        explanation:
+          "‘Dem Smartphone’ nötr, dativ, belirli artikel. Belirli bir nesneyi ifade eder.",
+      },
+      {
+        text: "Hast du die Eintrittskarten für das Konzert?",
+        translation: "Konser için giriş biletlerin var mı?",
+        explanation:
+          "‘Die Eintrittskarten’ feminin, akkusativ plural, belirli artikel. Belirli nesneleri ifade eder.",
+      },
+      {
+        text: "Er hatte _ Tickets für ein Orchester am Abend gekauft.",
+        translation: "Akşam için bir orkestra için biletler almıştı.",
+        explanation:
+          "‘_ Tickets’ nötr, akkusativ plural, artikel yok. İngilizce kelime, artikel olmadan kullanılır.",
+      },
+      {
+        text: "Er mochte _ klassische Musik sehr.",
+        translation: "Klasik müziği çok severdi.",
+        explanation:
+          "‘_ klassische Musik’ feminin, akkusativ, artikel yok. Genel bir kategoriyi ifade eder.",
+      },
+      {
+        text: "In einem Restaurant _ Berliner Currywurst zu probieren.",
+        translation: "Bir restoranda Berlin usulü sosis denemeyi planladı.",
+        explanation:
+          "‘_ Berliner Currywurst’ feminin, akkusativ, artikel yok. Özel bir yemeği genellemeyle ifade eder.",
+      },
+      {
+        text: "In Deutschland isst man _ Brot zu fast jeder Mahlzeit.",
+        translation: "Almanya’da neredeyse her öğünde ekmek yenir.",
+        explanation:
+          "‘_ Brot’ nötr, akkusativ, artikel yok. Genel bir alışkanlığı ifade eder.",
+      },
+      {
+        text: "Alex war gespannt auf _ deutsche Küche.",
+        translation: "Alex Alman mutfağına merakla bakıyordu.",
+        explanation:
+          "‘_ deutsche Küche’ feminin, akkusativ, artikel yok. Genel bir kategoriyi ifade eder.",
+      },
+      {
+        text: "Und _ kulturellen Unterschiede zwischen den Regionen.",
+        translation: "Ve bölgeler arasındaki kültürel farklılıklar.",
+        explanation:
+          "‘_ kulturellen Unterschiede’ maskulin, akkusativ plural, artikel yok. Genel bir kavramı ifade eder.",
+      },
+    ],
+  },
+  {
+    title: "3. Genitiv",
+    sentences: [
+      {
+        text: "Alex führte ein Tagebuch des Abenteuers.",
+        translation: "Alex maceranın günlüğünü tuttu.",
+        explanation:
+          "‘Des Abenteuers’ nötr, genitiv, belirli artikel. Sahiplik veya ilişki belirtir, ‘Abenteuer’ genitiv eki ‘-s’.",
+      },
+      {
+        text: "Die Eindrücke der verschiedenen Städte füllten bald viele Seiten.",
+        translation:
+          "Farklı şehirlerin izlenimleri kısa sürede birçok sayfayı doldurdu.",
+        explanation:
+          "‘Der verschiedenen Städte’ feminin, genitiv plural, belirli artikel. İlişki belirtir, ‘Stadt’ plural genitiv eki ‘-e’.",
+      },
+      {
+        text: "Die Schönheit der Landschaft übertraf seine Erwartungen.",
+        translation: "Manzaranın güzelliği beklentilerini aştı.",
+        explanation:
+          "‘Der Landschaft’ feminin, genitiv, belirli artikel. Özellik belirtir, ‘Landschaft’ genitiv eki ‘-Ø’.",
+      },
+      {
+        text: "Die Freundlichkeit der Menschen überraschte ihn angenehm.",
+        translation: "İnsanların nezaketi onu hoş bir şekilde şaşırttı.",
+        explanation:
+          "‘Der Menschen’ maskulin, genitiv plural, belirli artikel. Özellik belirtir, ‘Mensch’ plural genitiv eki ‘-Ø’.",
+      },
+      {
+        text: "Die Pracht des Schlosses Nymphenburg.",
+        translation: "Nymphenburg Sarayı’nın ihtişamı.",
+        explanation:
+          "‘Des Schlosses’ nötr, genitiv, belirli artikel. Özellik belirtir, ‘Schloss’ genitiv eki ‘-es’.",
+      },
+      {
+        text: "Das Museum der Bayerischen Geschichte.",
+        translation: "Bavyera Tarihi Müzesi.",
+        explanation:
+          "‘Der Bayerischen Geschichte’ feminin, genitiv, belirli artikel. İlişki belirtir, ‘Geschichte’ genitiv eki ‘-Ø’.",
+      },
+      {
+        text: "Der Charme der Altstadt verzauberte ihn.",
+        translation: "Eski şehrin cazibesi onu büyüledi.",
+        explanation:
+          "‘Der Altstadt’ feminin, genitiv, belirli artikel. Özellik belirtir, ‘Altstadt’ genitiv eki ‘-Ø’.",
+      },
+      {
+        text: "Die Atmosphäre des berühmten Biergartens ließ ihn länger bleiben.",
+        translation:
+          "Ünlü bira bahçesinin atmosferi onu daha uzun kalmaya ikna etti.",
+        explanation:
+          "‘Des berühmten Biergartens’ maskulin, genitiv, belirli artikel. Özellik belirtir, ‘Biergarten’ genitiv eki ‘-s’.",
+      },
+      {
+        text: "Die Farbe des Himmels wechselte von strahlendem Blau zu tiefem Rot.",
+        translation: "Gökyüzünün rengi parlak maviden koyu kırmızıya değişti.",
+        explanation:
+          "‘Des Himmels’ maskulin, genitiv, belirli artikel. Özellik belirtir, ‘Himmel’ genitiv eki ‘-s’.",
+      },
+      {
+        text: "Die Ufer der Isar waren voller Menschen.",
+        translation: "Isar’ın kıyıları insanlarla doluydu.",
+        explanation:
+          "‘Der Isar’ feminin, genitiv, belirli artikel. İlişki belirtir, ‘Isar’ genitiv eki ‘-Ø’.",
+      },
+      {
+        text: "Das ist wirklich die Stadt des Bieres und der guten Laune.",
+        translation: "Bu gerçekten biranın ve iyi ruh halinin şehri.",
+        explanation:
+          "‘Des Bieres’ nötr, genitiv, belirli artikel. İlişki belirtir, ‘Bier’ genitiv eki ‘-es’. ‘Der guten Laune’ feminin, genitiv.",
+      },
+      {
+        text: "Im Tagebuch eines glücklichen Reisenden.",
+        translation: "Mutlu bir gezginin günlüğünde.",
+        explanation:
+          "‘Eines glücklichen Reisenden’ maskulin, genitiv, belirsiz artikel. İlişki belirtir, ‘Reisender’ genitiv eki ‘-n’ (n-deklination).",
+      },
+      {
+        text: "Die Besichtigung des Deutschen Museums nahm den größten Teil des Tages in Anspruch.",
+        translation: "Alman Müzesi’nin ziyareti günün büyük bir kısmını aldı.",
+        explanation:
+          "‘Des Deutschen Museums’ nötr, genitiv, belirli artikel. İlişki belirtir, ‘Museum’ genitiv eki ‘-s’.",
+      },
+      {
+        text: "Die Geschichte der Technologie faszinierte Alex.",
+        translation: "Teknolojinin tarihi Alex’i büyüledi.",
+        explanation:
+          "‘Der Technologie’ feminin, genitiv, belirli artikel. İlişki belirtir, ‘Technologie’ genitiv eki ‘-Ø’.",
+      },
+      {
+        text: "Die Experimente des Museums machten komplexe wissenschaftliche Phänomene verständlich.",
+        translation:
+          "Müzenin deneyleri karmaşık bilimsel fenomenleri anlaşılır kıldı.",
+        explanation:
+          "‘Des Museums’ nötr, genitiv, belirli artikel. İlişki belirtir, ‘Museum’ genitiv eki ‘-s’.",
+      },
+      {
+        text: "Im Laden des Museums kaufte er einige Souvenirs.",
+        translation: "Müzenin mağazasında bazı hediyelik eşyalar aldı.",
+        explanation:
+          "‘Des Museums’ nötr, genitiv, belirli artikel. İlişki belirtir, ‘Museum’ genitiv eki ‘-s’.",
+      },
+      {
+        text: "Für die Familie seines besten Freundes.",
+        translation: "En iyi arkadaşının ailesi için.",
+        explanation:
+          "‘Seines besten Freundes’ maskulin, genitiv, possessiv pronomen. İlişki belirtir, ‘Freund’ genitiv eki ‘-es’.",
+      },
+    ],
+  },
+  {
+    title: "4. n-Deklination",
+    sentences: [
+      {
+        text: "In Köln traf Alex einen Studenten.",
+        translation: "Köln’de Alex bir öğrenciyle tanıştı.",
+        explanation:
+          "‘Einen Studenten’ maskulin, akkusativ, n-deklination. ‘Student’ akkusativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Der Student kannte jeden Winkel seiner Heimatstadt.",
+        translation: "Öğrenci memleketinin her köşesini biliyordu.",
+        explanation:
+          "‘Der Student’ maskulin, nominativ, n-deklination. ‘Student’ nominativde ‘-Ø’ eki alır.",
+      },
+      {
+        text: "Sie besichtigten den Dom, das Wahrzeichen der Stadt.",
+        translation: "Şehrin simgesi olan Katedrali ziyaret ettiler.",
+        explanation:
+          "‘Den Dom’ maskulin, akkusativ, n-deklination. ‘Dom’ akkusativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Alex machte ein Foto von dem Elefanten im Zoo.",
+        translation: "Alex hayvanat bahçesindeki filden bir fotoğraf çekti.",
+        explanation:
+          "‘Dem Elefanten’ maskulin, dativ, n-deklination. ‘Elefant’ dativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Er bewunderte den Löwen, der majestätisch in der Sonne döste.",
+        translation:
+          "Güneşte mağrur bir şekilde uyuklayan aslanı hayranlıkla izledi.",
+        explanation:
+          "‘Den Löwen’ maskulin, akkusativ, n-deklination. ‘Löwe’ akkusativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Kennst du die Geschichte von dem Bären?",
+        translation:
+          "Orta Çağ’da Köln’de dolaştığı söylenen ayının hikayesini biliyor musun?",
+        explanation:
+          "‘Dem Bären’ maskulin, dativ, n-deklination. ‘Bär’ dativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Er half dem Touristen, den Weg zum Museum zu finden.",
+        translation: "Turiste müzeye giden yolu bulmasında yardım etti.",
+        explanation:
+          "‘Dem Touristen’ maskulin, dativ, n-deklination. ‘Tourist’ dativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Die Freundlichkeit des Menschen beeindruckte den Japaner.",
+        translation: "İnsanın nezaketi Japon’u etkiledi.",
+        explanation:
+          "‘Des Menschen’ maskulin, genitiv, n-deklination. ‘Mensch’ genitivde ‘-n’ eki alır.",
+      },
+      {
+        text: "Sie beschlossen, gemeinsam einen Kollegen des Studenten zu besuchen.",
+        translation:
+          "Birlikte öğrencinin bir meslektaşını ziyaret etmeye karar verdiler.",
+        explanation:
+          "‘Des Studenten’ maskulin, genitiv, n-deklination. ‘Student’ genitivde ‘-n’ eki alır.",
+      },
+      {
+        text: "Der Architekt erzählte von dem Präsidenten eines bekannten Bauunternehmens.",
+        translation:
+          "Mimar, tanınmış bir inşaat şirketinin başkanından bahsetti.",
+        explanation:
+          "‘Dem Präsidenten’ maskulin, dativ, n-deklination. ‘Präsident’ dativde ‘-n’ eki alır.",
+      },
+      {
+        text: "Die Vision des Unternehmers hatte schon vielen alten Strukturen neues Leben eingehaucht.",
+        translation:
+          "Girişimcinin vizyonu birçok eski yapıya yeni bir hayat vermişti.",
+        explanation:
+          "‘Des Unternehmers’ maskulin, genitiv, n-deklination. ‘Unternehmer’ genitivde ‘-n’ eki alır.",
+      },
+      {
+        text: "Ohne die Hilfe des Millionärs wären viele Projekte nicht möglich gewesen.",
+        translation: "Milyonerin yardımı olmadan birçok proje mümkün olmazdı.",
+        explanation:
+          "‘Des Millionärs’ maskulin, genitiv, n-deklination. ‘Millionär’ genitivde ‘-n’ eki alır.",
+      },
+    ],
+  },
+  {
+    title: "5. Drei Deklinationen",
+    sentences: [
+      {
+        text: "Ein alter Fischer erzählte ihm Geschichten vom Meer.",
+        translation: "Yaşlı bir balıkçı ona denizden hikayeler anlattı.",
+        explanation:
+          "‘Ein alter Fischer’ maskulin, nominativ, stark deklination. Sıfat ‘alt’ nominativde ‘-er’. ‘Fischer’ maskulin.",
+      },
+      {
+        text: "Kleine Kinder spielten am Strand.",
+        translation: "Küçük çocuklar sahilde oynuyordu.",
+        explanation:
+          "‘Kleine Kinder’ nötr, nominativ plural, stark deklination. Sıfat ‘klein’ nominativde ‘-e’. ‘Kind’ nötr.",
+      },
+      {
+        text: "Junge Männer segelten auf der Alster.",
+        translation: "Genç adamlar Alster’de yelken açtı.",
+        explanation:
+          "‘Junge Männer’ maskulin, nominativ plural, stark deklination. Sıfat ‘jung’ nominativde ‘-e’. ‘Mann’ maskulin.",
+      },
+      {
+        text: "Alex beobachtete einen klugen Hund.",
+        translation: "Alex zeki bir köpeği izledi.",
+        explanation:
+          "‘Einen klugen Hund’ maskulin, akkusativ, stark deklination. Sıfat ‘klug’ akkusativde ‘-en’. ‘Hund’ maskulin.",
+      },
+      {
+        text: "Der seinem fröhlichen Besitzer Tricks vorführte.",
+        translation: "Neşeli sahibine numaralar sergileyen.",
+        explanation:
+          "‘Seinem fröhlichen Besitzer’ maskulin, dativ, schwach deklination. Sıfat ‘fröhlich’ dativde ‘-en’. ‘Besitzer’ maskulin.",
+      },
+      {
+        text: "Ist das Ihr Hund?",
+        translation: "Bu sizin köpeğiniz mi?",
+        explanation:
+          "‘Ihr Hund’ maskulin, nominativ, gemischt deklination. Possessiv ‘Ihr’ nominativde ‘-Ø’. ‘Hund’ maskulin.",
+      },
+      {
+        text: "Ich kenne den netten Herrn, dem er gehört.",
+        translation: "Ona sahip olan nazik beyefendiyi tanıyorum.",
+        explanation:
+          "‘Den netten Herrn’ maskulin, akkusativ, schwach deklination. Sıfat ‘nett’ akkusativde ‘-en’. ‘Herr’ maskulin.",
+      },
+      {
+        text: "Welche Sehenswürdigkeiten haben Sie schon besucht?",
+        translation: "Hangi turistik yerleri ziyaret ettiniz?",
+        explanation:
+          "‘Welche Sehenswürdigkeiten’ feminin, akkusativ plural, stark deklination. Sıfat ‘welch’ akkusativde ‘-e’. ‘Sehenswürdigkeit’ feminin.",
+      },
+      {
+        text: "Hohe Berge, weite Täler, tiefe Wälder.",
+        translation: "Yüksek dağlar, geniş vadiler, derin ormanlar.",
+        explanation:
+          "‘Hohe Berge’ maskulin, nominativ plural, stark deklination. Sıfat ‘hoch’ nominativde ‘-e’. ‘Berg’ maskulin.",
+      },
+      {
+        text: "Der aufmerksame Kellner empfahl ihm frischen Fisch.",
+        translation: "Dikkatli garson ona taze balık önerdi.",
+        explanation:
+          "‘Der aufmerksame Kellner’ maskulin, nominativ, stark deklination. Sıfat ‘aufmerksam’ nominativde ‘-e’. ‘Kellner’ maskulin.",
+      },
+      {
+        text: "Unsere talentierte Köchin bereitet ihn nach einem alten Rezept zu.",
+        translation: "Yetenekli aşçımız onu eski bir tarife göre hazırlar.",
+        explanation:
+          "‘Unsere talentierte Köchin’ feminin, nominativ, gemischt deklination. Sıfat ‘talentiert’ nominativde ‘-e’. ‘Köchin’ feminin.",
+      },
+      {
+        text: "Die norddeutsche Küche ist eine besondere Entdeckung!",
+        translation: "Kuzey Alman mutfağı özel bir keşif!",
+        explanation:
+          "‘Die norddeutsche Küche’ feminin, nominativ, stark deklination. Sıfat ‘norddeutsch’ nominativde ‘-e’. ‘Küche’ feminin.",
+      },
+    ],
+  },
+  {
+    title: "6. Deklination der Indefinit- und Possessivpronomen",
+    sentences: [
+      {
+        text: "Haben Sie Ihre Karte schon?",
+        translation: "Biletinizi aldınız mı?",
+        explanation:
+          "‘Ihre Karte’ feminin, akkusativ, possessiv pronomen. ‘Ihr’ akkusativde ‘-e’, ‘Karte’ feminin ile uyumlu.",
+      },
+      {
+        text: "Alex zeigte ihr seine Eintrittskarte.",
+        translation: "Alex ona giriş biletini gösterdi.",
+        explanation:
+          "‘Seine Eintrittskarte’ feminin, akkusativ, possessiv pronomen. ‘Sein’ akkusativde ‘-e’, ‘Eintrittskarte’ feminin ile uyumlu.",
+      },
+      {
+        text: "Ist dieser Platz noch frei?",
+        translation: "Bu yer hâlâ boş mu?",
+        explanation:
+          "‘Dieser Platz’ maskulin, nominativ, demonstrativ pronomen. ‘Dieser’ nominativde ‘-er’, ‘Platz’ maskulin ile uyumlu.",
+      },
+      {
+        text: "Mein Platz ist daneben.",
+        translation: "Benim yerim hemen yanında.",
+        explanation:
+          "‘Mein Platz’ maskulin, nominativ, possessiv pronomen. ‘Mein’ nominativde ‘-Ø’, ‘Platz’ maskulin ile uyumlu.",
+      },
+      {
+        text: "Wie gefällt Ihnen unsere Stadt?",
+        translation: "Şehrimiz size nasıl geliyor?",
+        explanation:
+          "‘Unsere Stadt’ feminin, nominativ, possessiv pronomen. ‘Unser’ nominativde ‘-e’, ‘Stadt’ feminin ile uyumlu.",
+      },
+      {
+        text: "Ihre Architektur ist atemberaubend.",
+        translation: "Mimarisi nefes kesici.",
+        explanation:
+          "‘Ihre Architektur’ feminin, nominativ, possessiv pronomen. ‘Ihr’ nominativde ‘-e’, ‘Architektur’ feminin ile uyumlu.",
+      },
+      {
+        text: "Ihr kulturelles Angebot ist beeindruckend.",
+        translation: "Kültürel teklifleri etkileyici.",
+        explanation:
+          "‘Ihr kulturelles Angebot’ nötr, nominativ, possessiv pronomen. ‘Ihr’ nominativde ‘-Ø’, ‘Angebot’ nötr ile uyumlu.",
+      },
+      {
+        text: "Ist euer Hotel in der Nähe des Zwingers?",
+        translation: "Oteliniz Zwinger’in yakınında mı?",
+        explanation:
+          "‘Euer Hotel’ nötr, nominativ, possessiv pronomen. ‘Euer’ nominativde ‘-Ø’, ‘Hotel’ nötr ile uyumlu.",
+      },
+      {
+        text: "Unser Hotel liegt direkt gegenüber.",
+        translation: "Otelimiz tam karşısında yer alıyor.",
+        explanation:
+          "‘Unser Hotel’ nötr, nominativ, possessiv pronomen. ‘Unser’ nominativde ‘-Ø’, ‘Hotel’ nötr ile uyumlu.",
+      },
+      {
+        text: "Dieser Weg sollte der kürzeste sein.",
+        translation: "Bu yol en kısa olmalı.",
+        explanation:
+          "‘Dieser Weg’ maskulin, nominativ, demonstrativ pronomen. ‘Dieser’ nominativde ‘-er’, ‘Weg’ maskulin ile uyumlu.",
+      },
+      {
+        text: "Eure Unterkunft liegt in einer schönen Gegend!",
+        translation: "Konaklama yeriniz güzel bir bölgede!",
+        explanation:
+          "‘Eure Unterkunft’ feminin, nominativ, possessiv pronomen. ‘Euer’ nominativde ‘-e’, ‘Unterkunft’ feminin ile uyumlu.",
+      },
+    ],
+  },
+  {
+    title: "7. Indefinitpronomen für Menschen",
+    sentences: [
+      {
+        text: "Man konnte dort Autoren aus aller Welt treffen.",
+        translation: "Orada dünyanın her yerinden yazarlarla tanışılabilirdi.",
+        explanation:
+          "‘Man’ indefinit pronomen, nominativ, genel bir kişiyi ifade eder. Fiil ‘konnte’ ile uyumlu.",
+      },
+      {
+        text: "Jemand hatte ihm empfohlen, an einer Lesung teilzunehmen.",
+        translation: "Birisi ona bir okuma etkinliğine katılmasını önermişti.",
+        explanation:
+          "‘Jemand’ indefinit pronomen, nominativ, belirsiz bir kişiyi ifade eder. Fiil ‘hatte’ ile uyumlu.",
+      },
+      {
+        text: "Hat jemand einen Stift, den ich ausleihen könnte?",
+        translation: "Birinde ödünç alabileceğim bir kalem var mı?",
+        explanation:
+          "‘Jemand’ indefinit pronomen, nominativ, belirsiz bir kişiyi sorgular. Fiil ‘hat’ ile uyumlu.",
+      },
+      {
+        text: "Niemand in seiner Nähe hatte einen.",
+        translation: "Yakınında kimse kalem taşımıyordu.",
+        explanation:
+          "‘Niemand’ indefinit pronomen, nominativ, hiçbir kişiyi ifade eder. Fiil ‘hatte’ ile uyumlu.",
+      },
+      {
+        text: "Hat irgendjemand Erfahrungen mit diesem Autor?",
+        translation: "Bu yazarla ilgili deneyimi olan biri var mı?",
+        explanation:
+          "‘Irgendjemand’ indefinit pronomen, nominativ, belirsiz bir kişiyi sorgular. Fiil ‘hat’ ile uyumlu.",
+      },
+      {
+        text: "Ich habe alle seine Bücher gelesen.",
+        translation: "Onun tüm kitaplarını okudum.",
+        explanation:
+          "‘Alle’ indefinit pronomen, akkusativ plural, tüm nesneleri ifade eder. Fiil ‘habe’ ile uyumlu.",
+      },
+      {
+        text: "Man sagt, dass sein neuer Roman autobiografisch ist.",
+        translation: "Onun yeni romanının otobiyografik olduğu söyleniyor.",
+        explanation:
+          "‘Man’ indefinit pronomen, nominativ, genel bir kişiyi ifade eder. Fiil ‘sagt’ ile uyumlu.",
+      },
+      {
+        text: "Jeder durfte seine Meinung äußern.",
+        translation: "Herkes fikrini ifade edebilirdi.",
+        explanation:
+          "‘Jeder’ indefinit pronomen, nominativ maskulin, her bir kişiyi ifade eder. Fiil ‘durfte’ ile uyumlu.",
+      },
+      {
+        text: "Was denkt man in Ihrem Land über deutsche Literatur?",
+        translation: "Ülkenizde Alman edebiyatı hakkında ne düşünülüyor?",
+        explanation:
+          "‘Man’ indefinit pronomen, nominativ, genel bir kişiyi ifade eder. Fiil ‘denkt’ ile uyumlu.",
+      },
+      {
+        text: "Bei uns liest man vor allem die Klassiker wie Goethe und Schiller.",
+        translation:
+          "Bizde özellikle Goethe ve Schiller gibi klasikler okunur.",
+        explanation:
+          "‘Man’ indefinit pronomen, nominativ, genel bir kişiyi ifade eder. Fiil ‘liest’ ile uyumlu.",
+      },
+      {
+        text: "Niemand kennt viele zeitgenössische deutsche Autoren.",
+        translation: "Çağdaş Alman yazarları pek kimse tanımıyor.",
+        explanation:
+          "‘Niemand’ indefinit pronomen, nominativ, hiçbir kişiyi ifade eder. Fiil ‘kennt’ ile uyumlu.",
+      },
+      {
+        text: "Jemand sprach ihn an: 'Würden Sie morgen an unserem Workshop teilnehmen?'",
+        translation: "Biri ona seslendi: 'Yarın atölyemize katılır mısınız?'",
+        explanation:
+          "‘Jemand’ indefinit pronomen, nominativ, belirsiz bir kişiyi ifade eder. Fiil ‘sprach’ ile uyumlu.",
+      },
+      {
+        text: "Wir brauchen jemanden mit einer internationalen Perspektive.",
+        translation:
+          "Uluslararası bir bakış açısına sahip birine ihtiyacımız var.",
+        explanation:
+          "‘Jemanden’ indefinit pronomen, akkusativ, belirsiz bir kişiyi ifade eder. Fiil ‘brauchen’ ile uyumlu.",
+      },
+    ],
+  },
+  {
+    title: "8. Indefinitpronomen für Menschen und Dinge",
+    sentences: [
+      {
+        text: "Hast du alles für deinen Aufenthalt vorbereitet?",
+        translation: "Konaklaman için her şeyi hazırladın mı?",
+        explanation:
+          "‘Alles’ indefinit pronomen, akkusativ nötr, tüm şeyleri ifade eder. Fiil ‘hast’ ile uyumlu.",
+      },
+      {
+        text: "Ich habe nichts vergessen.",
+        translation: "Hiçbir şeyi unutmadım.",
+        explanation:
+          "‘Nichts’ indefinit pronomen, akkusativ nötr, hiçbir şeyi ifade eder. Fiil ‘habe’ ile uyumlu.",
+      },
+      {
+        text: "Ich habe so vieles gesehen und erlebt!",
+        translation: "O kadar çok şey gördüm ve yaşadım ki!",
+        explanation:
+          "‘Vieles’ indefinit pronomen, akkusativ nötr, birçok şeyi ifade eder. Fiil ‘habe’ ile uyumlu.",
+      },
+      {
+        text: "Jede Stadt hat etwas Besonderes zu bieten.",
+        translation: "Her şehir özel bir şey sunuyor.",
+        explanation:
+          "‘Etwas’ indefinit pronomen, akkusativ nötr, belirsiz bir şeyi ifade eder. Fiil ‘hat’ ile uyumlu.",
+      },
+      {
+        text: "Alle deutschen Regionen haben ihre eigene Kultur und Traditionen.",
+        translation: "Tüm Alman bölgeleri kendi kültür ve geleneklerine sahip.",
+        explanation:
+          "‘Alle’ indefinit pronomen, nominativ plural, tüm nesneleri ifade eder. Fiil ‘haben’ ile uyumlu.",
+      },
+      {
+        text: "Hast du schon etwas von unserer lokalen Spezialität probiert?",
+        translation: "Yerel spesiyalitemizden bir şey denedin mi?",
+        explanation:
+          "‘Etwas’ indefinit pronomen, akkusativ nötr, belirsiz bir şeyi ifade eder. Fiil ‘hast’ ile uyumlu.",
+      },
+      {
+        text: "Gibt es hier irgendetwas, das man unbedingt gesehen haben muss?",
+        translation: "Burada mutlaka görülmesi gereken bir şey var mı?",
+        explanation:
+          "‘Irgendetwas’ indefinit pronomen, nominativ nötr, belirsiz bir şeyi sorgular. Fiil ‘gibt’ ile uyumlu.",
+      },
+      {
+        text: "Einiges! Der Main Tower bietet einen fantastischen Blick.",
+        translation: "Bazı şeyler! Main Kulesi harika bir manzara sunuyor.",
+        explanation:
+          "‘Einiges’ indefinit pronomen, nominativ nötr, belirli bir miktar şeyi ifade eder. Fiil ‘bietet’ ile uyumlu.",
+      },
+      {
+        text: "In dieser Gegend gibt es nichts Besseres als das 'Apfelwein-Haus'.",
+        translation: "Bu bölgede ‘Apfelwein-Haus’tan daha iyisi yok.",
+        explanation:
+          "‘Nichts’ indefinit pronomen, nominativ nötr, hiçbir şeyi ifade eder. Fiil ‘gibt’ ile uyumlu.",
+      },
+      {
+        text: "Dort kann man alles probieren, was die hessische Küche zu bieten hat.",
+        translation:
+          "Orada Hessen mutfağının sunduğu her şeyi deneyebilirsiniz.",
+        explanation:
+          "‘Alles’ indefinit pronomen, akkusativ nötr, tüm şeyleri ifade eder. Fiil ‘probiren’ ile uyumlu.",
+      },
+      {
+        text: "Etwas Vergleichbares findet man nirgendwo sonst.",
+        translation: "Buna benzer bir şey başka hiçbir yerde bulunmaz.",
+        explanation:
+          "‘Etwas’ indefinit pronomen, nominativ nötr, belirsiz bir şeyi ifade eder. Fiil ‘findet’ ile uyumlu.",
+      },
+    ],
+  },
+  {
+    title: "9. Deklination – Würfelspiel",
+    sentences: [
+      {
+        text: "Man würfelt und bildet einen korrekten Satz mit dem entsprechenden Fall.",
+        translation: "Zar atılır ve ilgili durumla doğru bir cümle kurulur.",
+        explanation:
+          "‘Man’ indefinit pronomen, nominativ. ‘Einen korrekten Satz’ maskulin, akkusativ, belirsiz artikel. Fiil ‘bildet’ Präsens.",
+      },
+      {
+        text: "Ein freundlicher Mitreisender – Alex würfelte eine Drei für den Dativ.",
+        translation: "Nazik bir yol arkadaşı – Alex dativ için üç attı.",
+        explanation:
+          "‘Ein freundlicher Mitreisender’ maskulin, nominativ, stark deklination. Sıfat ‘freundlich’ nominativde ‘-er’. ‘Mitreisender’ maskulin.",
+      },
+      {
+        text: "Ich habe einem freundlichen Mitreisenden geholfen, seinen Koffer zu tragen.",
+        translation: "Nazik bir yol arkadaşına valizini taşımada yardım ettim.",
+        explanation:
+          "‘Einem freundlichen Mitreisenden’ maskulin, dativ, stark deklination. Sıfat ‘freundlich’ dativde ‘-en’. ‘Mitreisender’ maskulin.",
+      },
+      {
+        text: "Die interessante Geschichte – Eine Vier zeigte der Würfel, das bedeutete Genitiv.",
+        translation: "İlginç hikaye – Zar dört gösterdi, bu genitiv demekti.",
+        explanation:
+          "‘Die interessante Geschichte’ feminin, nominativ, stark deklination. Sıfat ‘interessant’ nominativde ‘-e’. ‘Geschichte’ feminin.",
+      },
+      {
+        text: "Wegen der interessanten Geschichte blieb ich länger in dieser Stadt.",
+        translation: "İlginç hikaye yüzünden bu şehirde daha uzun kaldım.",
+        explanation:
+          "‘Der interessanten Geschichte’ feminin, genitiv, stark deklination. Sıfat ‘interessant’ genitivde ‘-en’. ‘Geschichte’ feminin.",
+      },
+      {
+        text: "Das alte Schloss – Bei der Zwei musste man den Akkusativ bilden.",
+        translation: "Eski kale – İki, akkusativ oluşturmayı gerektiriyordu.",
+        explanation:
+          "‘Das alte Schloss’ nötr, nominativ, stark deklination. Sıfat ‘alt’ nominativde ‘-e’. ‘Schloss’ nötr.",
+      },
+      {
+        text: "Gestern haben wir das alte Schloss besichtigt.",
+        translation: "Dün eski kaleyi ziyaret ettik.",
+        explanation:
+          "‘Das alte Schloss’ nötr, akkusativ, stark deklination. Sıfat ‘alt’ akkusativde ‘-e’. ‘Schloss’ nötr.",
+      },
+      {
+        text: "Der berühmte Komponist – Die Eins stand für den Nominativ.",
+        translation: "Ünlü besteci – Bir, nominativ içindi.",
+        explanation:
+          "‘Der berühmte Komponist’ maskulin, nominativ, stark deklination. Sıfat ‘berühmt’ nominativde ‘-e’. ‘Komponist’ maskulin.",
+      },
+      {
+        text: "Der berühmte Komponist lebte viele Jahre in dieser Stadt.",
+        translation: "Ünlü besteci bu şehirde yıllarca yaşadı.",
+        explanation:
+          "‘Der berühmte Komponist’ maskulin, nominativ, stark deklination. Sıfat ‘berühmt’ nominativde ‘-e’. ‘Komponist’ maskulin.",
+      },
+      {
+        text: "Die deutsche Sprache ist wie ein Puzzle.",
+        translation: "Almanca bir yapboz gibi.",
+        explanation:
+          "‘Die deutsche Sprache’ feminin, nominativ, stark deklination. Sıfat ‘deutsch’ nominativde ‘-e’. ‘Sprache’ feminin.",
+      },
+      {
+        text: "Wenn man die Regeln versteht, ergibt alles einen Sinn.",
+        translation: "Kuralları anladığında her şey anlam kazanıyor.",
+        explanation:
+          "‘Man’ indefinit pronomen, nominativ. ‘Alles’ indefinit pronomen, nominativ nötr, tüm şeyleri ifade eder.",
+      },
+    ],
+  },
+  {
+    title: "1. Adjektivdeklination",
+    sentences: [
+      {
+        text: "Der talentierte junge Künstler betrat die große Ausstellungshalle.",
+        translation: "Yetenekli genç sanatçı büyük sergi salonuna girdi.",
+        explanation:
+          "‘Talentierte junge Künstler’ maskulin, nominativ, stark deklination. Sıfatlar ‘talentiert’ ve ‘jung’ nominativde ‘-e’. ‘Künstler’ maskulin.",
+      },
+      {
+        text: "Sein neues Projekt hatte eine ungewöhnliche Thematik.",
+        translation: "Yeni projesi alışılmadık bir temaya sahipti.",
+        explanation:
+          "‘Neues Projekt’ nötr, nominativ, gemischt deklination. Sıfat ‘neu’ nominativde ‘-es’. ‘Projekt’ nötr.",
+      },
+      {
+        text: "Frischer Wind in der zeitgenössischen Kunstszene war dringend nötig.",
+        translation:
+          "Çağdaş sanat sahnesinde taze bir rüzgar acilen gerekliydi.",
+        explanation:
+          "‘Frischer Wind’ maskulin, nominativ, stark deklination. Sıfat ‘frisch’ nominativde ‘-er’. ‘Wind’ maskulin.",
+      },
+      {
+        text: "Die bekannte Kuratorin hatte ihm diese einmalige Chance gegeben.",
+        translation: "Tanınmış küratör ona bu eşsiz şansı vermişti.",
+        explanation:
+          "‘Bekannte Kuratorin’ feminin, nominativ, stark deklination. Sıfat ‘bekannt’ nominativde ‘-e’. ‘Kuratorin’ feminin.",
+      },
+      {
+        text: "Ein mutiger Schritt für eine konservative Institution.",
+        translation: "Muhafazakâr bir kurum için cesur bir adım.",
+        explanation:
+          "‘Mutiger Schritt’ maskulin, nominativ, stark deklination. Sıfat ‘mutig’ nominativde ‘-er’. ‘Schritt’ maskulin.",
+      },
+      {
+        text: "Die strahlenden Farben kontrastierten wunderbar mit dem schlichten Hintergrund.",
+        translation:
+          "Parlayan renkler sade arka planla harika bir kontrast oluşturuyordu.",
+        explanation:
+          "‘Strahlenden Farben’ feminin, dativ plural, stark deklination. Sıfat ‘strahlend’ dativde ‘-en’. ‘Farben’ feminin plural.",
+      },
+      {
+        text: "Den ganzen Tag hatte er mit der komplizierten Installation verbracht.",
+        translation: "Bütün günü karmaşık enstalasyonla geçirmişti.",
+        explanation:
+          "‘Komplizierten Installation’ feminin, dativ, stark deklination. Sıfat ‘kompliziert’ dativde ‘-en’. ‘Installation’ feminin.",
+      },
+      {
+        text: "Das kreative Konzept hatte monatelange Arbeit erfordert.",
+        translation: "Yaratıcı konsept aylarca süren çalışma gerektirmişti.",
+        explanation:
+          "‘Kreative Konzept’ nötr, nominativ, stark deklination. Sıfat ‘kreativ’ nominativde ‘-e’. ‘Konzept’ nötr.",
+      },
+      {
+        text: "Eine elegante Dame betrat den stillen Raum.",
+        translation: "Zarif bir kadın sessiz odaya girdi.",
+        explanation:
+          "‘Elegante Dame’ feminin, nominativ, stark deklination. Sıfat ‘elegant’ nominativde ‘-e’. ‘Dame’ feminin.",
+      },
+      {
+        text: "Ist dies die neue Ausstellung?",
+        translation: "Bu yeni sergi mi?",
+        explanation:
+          "‘Neue Ausstellung’ feminin, nominativ, stark deklination. Sıfat ‘neu’ nominativde ‘-e’. ‘Ausstellung’ feminin.",
+      },
+      {
+        text: "Ja, die offizielle Eröffnung findet morgen statt.",
+        translation: "Evet, resmi açılış yarın gerçekleşecek.",
+        explanation:
+          "‘Offizielle Eröffnung’ feminin, nominativ, stark deklination. Sıfat ‘offiziell’ nominativde ‘-e’. ‘Eröffnung’ feminin.",
+      },
+      {
+        text: "Er antwortete mit höflichem Ton.",
+        translation: "Nazik bir tonda cevap verdi.",
+        explanation:
+          "‘Höflichem Ton’ maskulin, dativ, stark deklination. Sıfat ‘höflich’ dativde ‘-em’. ‘Ton’ maskulin.",
+      },
+    ],
+  },
+  {
+    title: "2. Artikelwörter und Adjektivdeklination",
+    sentences: [
+      {
+        text: "Diese wunderbare Gelegenheit kam wie gerufen.",
+        translation: "Bu harika fırsat tam zamanında geldi.",
+        explanation:
+          "‘Wunderbare Gelegenheit’ feminin, nominativ, schwach deklination. Sıfat ‘wunderbar’ nominativde ‘-e’. ‘Gelegenheit’ feminin, demonstrativ ‘diese’ ile.",
+      },
+      {
+        text: "Sein letztes erfolgreiches Projekt lag schon einige Zeit zurück.",
+        translation: "Son başarılı projesi bir süredir geride kalmıştı.",
+        explanation:
+          "‘Erfolgreiches Projekt’ nötr, nominativ, gemischt deklination. Sıfat ‘erfolgreich’ nominativde ‘-es’. ‘Projekt’ nötr, possessiv ‘sein’ ile.",
+      },
+      {
+        text: "Jedes einzelne Kunstwerk erzählte eine persönliche Geschichte.",
+        translation: "Her bir sanat eseri kişisel bir hikaye anlatıyordu.",
+        explanation:
+          "‘Einzelne Kunstwerk’ nötr, nominativ, gemischt deklination. Sıfat ‘einzeln’ nominativde ‘-e’. ‘Kunstwerk’ nötr, indefinit ‘jedes’ ile.",
+      },
+      {
+        text: "Manche kritischen Stimmen würden sich sicher melden.",
+        translation: "Bazı eleştirel sesler kesinlikle ortaya çıkacaktı.",
+        explanation:
+          "‘Kritischen Stimmen’ feminin, dativ plural, schwach deklination. Sıfat ‘kritisch’ dativde ‘-en’. ‘Stimmen’ feminin, indefinit ‘manche’ ile.",
+      },
+      {
+        text: "Eine interessierte Besucherin betrachtete das großformatige Gemälde.",
+        translation: "İlgili bir ziyaretçi büyük formatlı tabloyu inceledi.",
+        explanation:
+          "‘Interessierte Besucherin’ feminin, nominativ, stark deklination. Sıfat ‘interessiert’ nominativde ‘-e’. ‘Besucherin’ feminin.",
+      },
+      {
+        text: "Welche tiefe Symbolik!",
+        translation: "Ne derin bir sembolizm!",
+        explanation:
+          "‘Tiefe Symbolik’ feminin, nominativ, stark deklination. Sıfat ‘tief’ nominativde ‘-e’. ‘Symbolik’ feminin, artikel yok.",
+      },
+      {
+        text: "Dieses besondere Werk hatte ihm viel bedeutet.",
+        translation: "Bu özel eser onun için çok şey ifade etmişti.",
+        explanation:
+          "‘Besondere Werk’ nötr, nominativ, schwach deklination. Sıfat ‘besonder’ nominativde ‘-e’. ‘Werk’ nötr, demonstrativ ‘dieses’ ile.",
+      },
+      {
+        text: "Alle anwesenden Journalisten stellten Fragen.",
+        translation: "Tüm mevcut gazeteciler sorular sordu.",
+        explanation:
+          "‘Anwesenden Journalisten’ maskulin, nominativ plural, schwach deklination. Sıfat ‘anwesend’ nominativde ‘-en’. ‘Journalisten’ maskulin, indefinit ‘alle’ ile.",
+      },
+      {
+        text: "Mehrere bekannte Kritiker machten sich Notizen.",
+        translation: "Birçok tanınmış eleştirmen notlar aldı.",
+        explanation:
+          "‘Bekannte Kritiker’ maskulin, nominativ plural, schwach deklination. Sıfat ‘bekannt’ nominativde ‘-e’. ‘Kritiker’ maskulin, indefinit ‘mehrere’ ile.",
+      },
+      {
+        text: "Ein renommierter Galerist zeigte Interesse an einigen abstrakten Gemälden.",
+        translation: "Saygın bir galerici bazı soyut tablolara ilgi gösterdi.",
+        explanation:
+          "‘Renommierter Galerist’ maskulin, nominativ, stark deklination. Sıfat ‘renommiert’ nominativde ‘-er’. ‘Galerist’ maskulin.",
+      },
+      {
+        text: "Viele verschiedene Interpretationen wurden diskutiert.",
+        translation: "Birçok farklı yorum tartışıldı.",
+        explanation:
+          "‘Verschiedene Interpretationen’ feminin, nominativ plural, schwach deklination. Sıfat ‘verschieden’ nominativde ‘-e’. ‘Interpretationen’ feminin, indefinit ‘viele’ ile.",
+      },
+      {
+        text: "Seine ehemalige Professorin nickte anerkennend.",
+        translation: "Eski profesörü takdirle başını salladı.",
+        explanation:
+          "‘Ehemalige Professorin’ feminin, nominativ, gemischt deklination. Sıfat ‘ehemalig’ nominativde ‘-e’. ‘Professorin’ feminin, possessiv ‘seine’ ile.",
+      },
+      {
+        text: "Sie lobte dessen innovativen Ansatz.",
+        translation: "Onun yenilikçi yaklaşımını övdü.",
+        explanation:
+          "‘Innovativen Ansatz’ maskulin, akkusativ, schwach deklination. Sıfat ‘innovativ’ akkusativde ‘-en’. ‘Ansatz’ maskulin, demonstrativ ‘dessen’ ile.",
+      },
+    ],
+  },
+  {
+    title: "3. Komparation",
+    sentences: [
+      {
+        text: "Der Eröffnungsabend war erfolgreicher als erwartet.",
+        translation: "Açılış akşamı beklenenden daha başarılıydı.",
+        explanation:
+          "‘Erfolgreicher’ sıfat, komparativ, ‘-er’ ekiyle. ‘Als’ karşılaştırma bağlacı, beklenenden üstünlüğü ifade eder.",
+      },
+      {
+        text: "Die Ausstellung zog mehr Besucher an als die vorherige.",
+        translation: "Sergi, bir öncekinden daha fazla ziyaretçi çekti.",
+        explanation:
+          "‘Mehr’ sıfat, komparativ, miktar karşılaştırması. ‘Als’ önceki sergiyle kıyaslamayı belirtir.",
+      },
+      {
+        text: "Deine Werke sind ausdrucksvoller geworden.",
+        translation: "Eserlerin daha etkileyici hale geldi.",
+        explanation:
+          "‘Ausdrucksvoller’ sıfat, komparativ, ‘-er’ ekiyle. Geçmişle kıyaslamayı ifade eder.",
+      },
+      {
+        text: "Du bist jetzt viel mutiger in deiner Farbwahl.",
+        translation: "Şimdi renk seçiminde çok daha cesursun.",
+        explanation:
+          "‘Mutiger’ sıfat, komparativ, ‘-er’ ekiyle. ‘Viel’ üstünlüğü vurgular, önceki duruma kıyaslar.",
+      },
+      {
+        text: "Die Kritiken sind besser als beim letzten Mal.",
+        translation: "Eleştiriler geçen seferkinden daha iyi.",
+        explanation:
+          "‘Besser’ sıfat, komparativ, ‘gut’ fiilinin düzensiz hali. ‘Als’ önceki etkinlikle karşılaştırır.",
+      },
+      {
+        text: "Am wichtigsten ist, dass ich mich künstlerisch weiterentwickelt habe.",
+        translation: "En önemlisi, sanatsal olarak gelişmiş olmam.",
+        explanation:
+          "‘Wichtigsten’ sıfat, superlativ, ‘-sten’ ekiyle. ‘Am’ en üstün derecede önem ifade eder.",
+      },
+      {
+        text: "Welches Ihrer Werke halten Sie für das gelungenste?",
+        translation: "Eserlerinizden hangisini en başarılı buluyorsunuz?",
+        explanation:
+          "‘Gelungenste’ sıfat, superlativ, ‘-ste’ ekiyle. ‘Das’ en üstün başarıyı ifade eder.",
+      },
+      {
+        text: "Das großformatige Bild im Hauptraum war am herausforderndsten.",
+        translation: "Ana salondaki büyük formatlı tablo en zorlayıcıydı.",
+        explanation:
+          "‘Herausforderndsten’ sıfat, superlativ, ‘-sten’ ekiyle. ‘Am’ en yüksek zorluk derecesini belirtir.",
+      },
+      {
+        text: "Die Ausstellung wurde immer beliebter.",
+        translation: "Sergi giderek daha popüler hale geldi.",
+        explanation:
+          "‘Beliebter’ sıfat, komparativ, ‘-er’ ekiyle. ‘Immer’ artan popülerliği ifade eder.",
+      },
+      {
+        text: "Die Schlange vor dem Museum wurde täglich länger.",
+        translation: "Müze önündeki kuyruk her gün daha uzundu.",
+        explanation:
+          "‘Länger’ sıfat, komparativ, ‘-er’ ekiyle. Günlük artışı ifade eder.",
+      },
+      {
+        text: "Dies ist die meistbesuchte Ausstellung des Jahres.",
+        translation: "Bu, yılın en çok ziyaret edilen sergisi.",
+        explanation:
+          "‘Meistbesuchte’ sıfat, superlativ, ‘-ste’ ekiyle. ‘Die’ en yüksek ziyaret oranını belirtir.",
+      },
+      {
+        text: "Der Künstler war am glücklichsten, als er sah, wie intensiv die Besucher interagierten.",
+        translation:
+          "Sanatçı, ziyaretçilerin eserlerle yoğun etkileşimini görünce en mutlu oldu.",
+        explanation:
+          "‘Glücklichsten’ sıfat, superlativ, ‘-sten’ ekiyle. ‘Am’ en yüksek mutluluğu ifade eder.",
+      },
+    ],
+  },
+  {
+    title: "4. Partizip I und II als Adjektiv",
+    sentences: [
+      {
+        text: "Eine lächelnde Kuratorin führte die Besucher.",
+        translation: "Gülümseyen bir küratör ziyaretçilere rehberlik etti.",
+        explanation:
+          "‘Lächelnde’ Partizip I, sıfat olarak, nominativ feminin, stark deklination. ‘Lächeln’ fiilinden, ‘-e’ ekiyle.",
+      },
+      {
+        text: "Die faszinierende, zum Nachdenken anregende Ausstellung begeisterte das Publikum.",
+        translation:
+          "Büyüleyici, düşündürücü sergi izleyicileri heyecanlandırdı.",
+        explanation:
+          "‘Faszinierende’ ve ‘anregende’ Partizip I, sıfat olarak, nominativ feminin, stark deklination. ‘Faszinieren’ ve ‘anregen’ fiillerinden, ‘-e’ ekiyle.",
+      },
+      {
+        text: "Das in dunklen Tönen gehaltene Hauptwerk dominierte den Raum.",
+        translation: "Koyu tonlarda yapılmış ana eser odaya hakimdi.",
+        explanation:
+          "‘Gehaltene’ Partizip II, sıfat olarak, nominativ nötr, stark deklination. ‘Halten’ fiilinden, ‘-e’ ekiyle.",
+      },
+      {
+        text: "Die verstörenden, die Seele berührenden Elemente wurden diskutiert.",
+        translation: "Rahatsız edici, ruhu dokunan unsurlar tartışıldı.",
+        explanation:
+          "‘Verstörenden’ ve ‘berührenden’ Partizip I, sıfat olarak, nominativ plural, stark deklination. ‘Verstören’ ve ‘berühren’ fiillerinden, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Die aus recycelten Materialien geschaffenen Skulpturen standen im Nebenraum.",
+        translation:
+          "Geri dönüştürülmüş malzemelerden yaratılmış heykeller yan odadaydı.",
+        explanation:
+          "‘Geschaffenen’ Partizip II, sıfat olarak, nominativ plural, stark deklination. ‘Schaffen’ fiilinden, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Ein weinender Junge, in Bronze gegossen, zog Aufmerksamkeit auf sich.",
+        translation: "Bronzdan dökülmüş ağlayan bir çocuk dikkat çekti.",
+        explanation:
+          "‘Weinender’ Partizip I, sıfat olarak, nominativ maskulin, stark deklination. ‘Weinen’ fiilinden, ‘-er’ ekiyle. ‘Gegossen’ Partizip II, ‘gießen’ fiilinden.",
+      },
+      {
+        text: "Die zerbrechlich wirkenden, überraschend stabilen Konstruktionen beeindruckten.",
+        translation:
+          "Kırılgan görünen, şaşırtıcı derecede sağlam yapılar etkiledi.",
+        explanation:
+          "‘Wirkenden’ Partizip I, sıfat olarak, nominativ plural, stark deklination. ‘Wirken’ fiilinden, ‘-en’ ekiyle. ‘Stabilen’ sıfat, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Die von Ihnen gewählte Technik ist außergewöhnlich.",
+        translation: "Sizin seçtiğiniz teknik olağanüstü.",
+        explanation:
+          "‘Gewählte’ Partizip II, sıfat olarak, nominativ feminin, stark deklination. ‘Wählen’ fiilinden, ‘-e’ ekiyle.",
+      },
+      {
+        text: "Die während der Pandemie entstandenen Werke spiegelten die Isolation wider.",
+        translation:
+          "Pandemi sırasında ortaya çıkan eserler izolasyonu yansıtıyordu.",
+        explanation:
+          "‘Entstandenen’ Partizip II, sıfat olarak, nominativ plural, stark deklination. ‘Entstehen’ fiilinden, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Das überraschend optimistische Finale der Ausstellung ließ niemanden unberührt.",
+        translation:
+          "Serginin şaşırtıcı derecede iyimser finali kimseyi duyarsız bırakmadı.",
+        explanation:
+          "‘Optimistische’ sıfat, nominativ nötr, stark deklination. ‘-e’ ekiyle. ‘Überraschend’ zarf olarak destekler.",
+      },
+      {
+        text: "Die bemalten, kunstvoll beleuchteten Wände rundeten das Erlebnis ab.",
+        translation:
+          "Boyalı, sanatsal olarak aydınlatılmış duvarlar deneyimi tamamladı.",
+        explanation:
+          "‘Bemalten’ Partizip II, sıfat olarak, nominativ plural, stark deklination. ‘Bemalen’ fiilinden, ‘-en’ ekiyle. ‘Beleuchteten’ Partizip II, ‘beleuchten’ fiilinden.",
+      },
+    ],
+  },
+  {
+    title: "5. Adjektivendungen – Bildbeschreibung",
+    sentences: [
+      {
+        text: "Ein großes Gemälde einer idyllischen Landschaft.",
+        translation: "İdil bir manzaranın büyük bir tablosu.",
+        explanation:
+          "‘Großes Gemälde’ nötr, nominativ, stark deklination. Sıfat ‘groß’ nominativde ‘-es’. ‘Idyllischen Landschaft’ feminin, genitiv, stark deklination, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Ein klarer blauer Himmel erstreckte sich über grünen Hügeln.",
+        translation: "Açık mavi bir gökyüzü yeşil tepeler üzerinde uzanıyordu.",
+        explanation:
+          "‘Klarer blauer Himmel’ maskulin, nominativ, stark deklination. Sıfatlar ‘klar’ ve ‘blau’ nominativde ‘-er’. ‘Grünen Hügeln’ maskulin, dativ plural, stark deklination, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Ein alter knorriger Baum stand auf einem steilen felsigen Abhang.",
+        translation:
+          "Yaşlı, budaklı bir ağaç dik, kayalık bir yamaçta duruyordu.",
+        explanation:
+          "‘Alter knorriger Baum’ maskulin, nominativ, stark deklination. Sıfatlar ‘alt’ ve ‘knorrig’ nominativde ‘-er’. ‘Steilen felsigen Abhang’ maskulin, dativ, stark deklination, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Die warme goldene Abendsonne tauchte die Szenerie in weiches Licht.",
+        translation:
+          "Sıcak altın rengi akşam güneşi sahneyi yumuşak bir ışığa batırdı.",
+        explanation:
+          "‘Warme goldene Abendsonne’ feminin, nominativ, stark deklination. Sıfatlar ‘warm’ ve ‘golden’ nominativde ‘-e’. ‘Weiches Licht’ nötr, akkusativ, stark deklination, ‘-es’ ekiyle.",
+      },
+      {
+        text: "Ein schmaler gewundener Pfad führte zu einem kleinen versteckten See.",
+        translation:
+          "Dar, kıvrımlı bir patika küçük, gizli bir göle gidiyordu.",
+        explanation:
+          "‘Schmaler gewundener Pfad’ maskulin, nominativ, stark deklination. Sıfatlar ‘schmal’ ve ‘gewunden’ nominativde ‘-er’. ‘Kleinen versteckten See’ maskulin, dativ, stark deklination, ‘-en’ ekiyle.",
+      },
+      {
+        text: "Dichter grüner Wald umgab das ruhige Gewässer.",
+        translation: "Yoğun yeşil orman sakin suyu çevreliyordu.",
+        explanation:
+          "‘Dichter grüner Wald’ maskulin, nominativ, stark deklination. Sıfatlar ‘dicht’ ve ‘grün’ nominativde ‘-er’. ‘Ruhige Gewässer’ nötr, akkusativ, stark deklination, ‘-e’ ekiyle.",
+      },
+      {
+        text: "Am gegenüberliegenden sandigen Ufer stand ein einsames verlassenes Boot.",
+        translation:
+          "Karşıdaki kumlu kıyıda yalnız, terk edilmiş bir tekne duruyordu.",
+        explanation:
+          "‘Gegenüberliegenden sandigen Ufer’ nötr, dativ, schwach deklination. Sıfatlar ‘gegenüberliegend’ ve ‘sandig’ dativde ‘-en’. ‘Einsames verlassenes Boot’ nötr, nominativ, stark deklination, ‘-es’ ekiyle.",
+      },
+      {
+        text: "Auf einer sanften grasigen Anhöhe erhob sich ein traditionelles bayerisches Haus.",
+        translation:
+          "Yumuşak çimli bir tepede geleneksel bir Bavyera evi yükseliyordu.",
+        explanation:
+          "‘Sanften grasigen Anhöhe’ feminin, dativ, stark deklination. Sıfatlar ‘sanft’ ve ‘grasig’ dativde ‘-en’. ‘Traditionelles bayerisches Haus’ nötr, nominativ, stark deklination, ‘-es’ ekiyle.",
+      },
+      {
+        text: "Aus dem roten ziegelgedeckten Dach stieg dünner grauer Rauch auf.",
+        translation:
+          "Kırmızı kiremit kaplı çatıdan ince gri duman yükseliyordu.",
+        explanation:
+          "‘Roten ziegelgedeckten Dach’ nötr, dativ, schwach deklination. Sıfatlar ‘rot’ ve ‘ziegelgedeckt’ dativde ‘-en’. ‘Dünner grauer Rauch’ maskulin, nominativ, stark deklination, ‘-er’ ekiyle.",
+      },
+      {
+        text: "Die kraftvolle emotionale Wirkung des Bildes überraschte die Besucher.",
+        translation: "Resmin güçlü duygusal etkisi ziyaretçileri şaşırttı.",
+        explanation:
+          "‘Kraftvolle emotionale Wirkung’ feminin, nominativ, stark deklination. Sıfatlar ‘kraftvoll’ ve ‘emotional’ nominativde ‘-e’. ‘Bildes’ nötr, genitiv.",
+      },
+      {
+        text: "Die solch romantische deutsche Landschaftsmalerei nicht erwartet hatten.",
+        translation:
+          "Böylesine romantik Alman manzara resmini beklememişlerdi.",
+        explanation:
+          "‘Romantische deutsche Landschaftsmalerei’ feminin, akkusativ, stark deklination. Sıfatlar ‘romantisch’ ve ‘deutsch’ akkusativde ‘-e’. ‘Solch’ sıfatı destekler.",
+      },
+    ],
+  },
+  {
+    title: "1. Indirekte Rede und Konjunktiv 1",
+    sentences: [
+      {
+        text: "Der Journalist notierte, der Künstler habe jahrelang an diesem Konzept gearbeitet.",
+        translation:
+          "Gazeteci, sanatçının bu konsept üzerinde yıllarca çalıştığını not etti.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir eylemi ifade eder. Ana cümle ‘notierte’ Präteritum.",
+      },
+      {
+        text: "Die Natur sei seine größte Inspirationsquelle.",
+        translation: "Doğa onun en büyük ilham kaynağıymış.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, mevcut bir durumu ifade eder. Ana cümle ‘fügte’ Präteritum.",
+      },
+      {
+        text: "Der Künstler betone, dass er täglich male.",
+        translation: "Sanatçı her gün resim yaptığını vurguluyormuş.",
+        explanation:
+          "Konjunktiv I ‘male’ ile dolaylı anlatım, düzenli bir eylemi ifade eder. Ana cümle ‘betone’ Präsens.",
+      },
+      {
+        text: "Er erwähne auch, dass er früher als Restaurator tätig gewesen sei.",
+        translation:
+          "Ayrıca daha önce restoratör olarak çalıştığını belirtmiş.",
+        explanation:
+          "Konjunktiv I ‘gewesen sei’ ile dolaylı anlatım, geçmişteki bir durumu ifade eder. Ana cümle ‘erwähne’ Präsens.",
+      },
+      {
+        text: "Die Kuratorin erzählte, die Ausstellung werde noch zwei Monate zu sehen sein.",
+        translation: "Küratör, serginin iki ay daha görülebileceğini anlattı.",
+        explanation:
+          "Konjunktiv I ‘werde’ ile dolaylı anlatım, gelecekteki bir durumu ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Sie sei besonders stolz auf die Zusammenarbeit.",
+        translation: "İş birliğinden özellikle gurur duyuyormuş.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, mevcut bir duyguyu ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Man könne die Werke auch online betrachten.",
+        translation: "Eserlerin çevrimiçi de incelenebileceği söylenmiş.",
+        explanation:
+          "Konjunktiv I ‘könne’ ile dolaylı anlatım, bir olasılığı ifade eder. Ana cümle ‘erklärte’ Präteritum.",
+      },
+      {
+        text: "Die physische Erfahrung sei unvergleichlich.",
+        translation: "Fiziksel deneyimin eşsiz olduğu belirtilmiş.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, mevcut bir durumu ifade eder. Ana cümle ‘erklärte’ Präteritum.",
+      },
+      {
+        text: "Es gebe auch ein umfangreiches Begleitprogramm mit Workshops.",
+        translation: "Atölyelerle birlikte kapsamlı bir yan program da varmış.",
+        explanation:
+          "Konjunktiv I ‘gebe’ ile dolaylı anlatım, mevcut bir durumu ifade eder. Ana cümle ‘versicherte’ Präteritum.",
+      },
+      {
+        text: "Die Ausstellung setze neue Maßstäbe.",
+        translation: "Sergi yeni standartlar belirliyormuş.",
+        explanation:
+          "Konjunktiv I ‘setze’ ile dolaylı anlatım, mevcut bir etkiyi ifade eder. Ana cümle ‘behauptete’ Präteritum.",
+      },
+      {
+        text: "Der Künstler werfe wichtige gesellschaftliche Fragen auf.",
+        translation: "Sanatçı önemli toplumsal sorular ortaya atıyormuş.",
+        explanation:
+          "Konjunktiv I ‘werfe’ ile dolaylı anlatım, mevcut bir eylemi ifade eder. Ana cümle ‘fügte’ Präteritum.",
+      },
+      {
+        text: "Der Künstler finde die Balance zwischen Ästhetik und Botschaft.",
+        translation: "Sanatçı estetik ve mesaj arasında denge buluyormuş.",
+        explanation:
+          "Konjunktiv I ‘finde’ ile dolaylı anlatım, mevcut bir durumu ifade eder. Ana cümle ‘fügte’ Präteritum.",
+      },
+      {
+        text: "Seine Werke seien sowohl schön als auch bedeutsam.",
+        translation: "Eserleri hem güzel hem de anlamlıymış.",
+        explanation:
+          "Konjunktiv I ‘seien’ ile dolaylı anlatım, mevcut bir özelliği ifade eder. Ana cümle ‘fügte’ Präteritum.",
+      },
+    ],
+  },
+  {
+    title: "2. Indirekte Rede – Vergangenheitsaussagen",
+    sentences: [
+      {
+        text: "Er habe schon als Kind ständig gezeichnet.",
+        translation: "Çocukken sürekli çizim yaptığını söylemiş.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir alışkanlığı ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Seine Eltern hätten seine Begabung früh erkannt und gefördert.",
+        translation: "Ebeveynleri yeteneğini erken fark etmiş ve desteklemiş.",
+        explanation:
+          "Konjunktiv I ‘hätten’ ile dolaylı anlatım, geçmişteki bir eylemi ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Er sei mit zwölf Jahren auf eine Kunstschule gekommen.",
+        translation: "On iki yaşında bir sanat okuluna gitmiş.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, geçmişteki bir durumu ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Dort habe er verschiedene Techniken erlernt.",
+        translation: "Orada çeşitli teknikler öğrenmiş.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir eylemi ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Der junge Mann sei immer sein begabtester Student gewesen.",
+        translation: "Genç adam her zaman en yetenekli öğrencisiymiş.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, geçmişteki bir durumu ifade eder. Ana cümle ‘berichtete’ Präteritum.",
+      },
+      {
+        text: "Er habe bereits damals unkonventionelle Ideen gehabt.",
+        translation: "O zamanlar zaten alışılmadık fikirler üretmiş.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir özelliği ifade eder. Ana cümle ‘berichtete’ Präteritum.",
+      },
+      {
+        text: "Die anderen Studenten hätten oft versucht, seinen Stil zu kopieren.",
+        translation:
+          "Diğer öğrenciler sık sık onun tarzını taklit etmeye çalışmış.",
+        explanation:
+          "Konjunktiv I ‘hätten’ ile dolaylı anlatım, geçmişteki bir eylemi ifade eder. Ana cümle ‘berichtete’ Präteritum.",
+      },
+      {
+        text: "Der Professor habe ihm geraten, seinen eigenen Weg zu gehen.",
+        translation: "Profesör ona kendi yolunu izlemesini önermiş.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir tavsiyeyi ifade eder. Ana cümle ‘berichtete’ Präteritum.",
+      },
+      {
+        text: "Ihr Enkel habe als Jugendlicher das Familienfotoalbum neu gestaltet.",
+        translation:
+          "Torunu gençken aile fotoğraf albümünü yeniden tasarlamış.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir eylemi ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Er sei schon immer ein Träumer gewesen.",
+        translation: "Her zaman bir hayalperestmiş.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, geçmişteki bir özelliği ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Sie habe gewusst, dass er eines Tages erfolgreich sein würde.",
+        translation: "Onun bir gün başarılı olacağını biliyormuş.",
+        explanation:
+          "Konjunktiv I ‘habe’ ile dolaylı anlatım, geçmişteki bir bilgiyi ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+      {
+        text: "Die ganze Familie sei sehr stolz auf ihn.",
+        translation: "Tüm aile onunla çok gurur duyuyormuş.",
+        explanation:
+          "Konjunktiv I ‘sei’ ile dolaylı anlatım, mevcut bir duyguyu ifade eder. Ana cümle ‘erzählte’ Präteritum.",
+      },
+    ],
+  },
+  {
+    title: "3. Wiedergabe von Aufforderungen, Gerüchten und Selbstaussagen",
+    sentences: [
+      {
+        text: "Die Museumsdirektorin bat die Besucher, die Kunstwerke nicht zu fotografieren.",
+        translation:
+          "Müze direktörü ziyaretçilerden sanat eserlerini fotoğraflamamalarını rica etti.",
+        explanation:
+          "Dolaylı emir, ‘bat’ fiiliyle. ‘Nicht zu fotografieren’ mastar, fotoğraf çekme yasağını ifade eder.",
+      },
+      {
+        text: "Sie forderte alle auf, die Sicherheitsabstände zu respektieren.",
+        translation:
+          "Herkesten güvenlik mesafelerine saygı göstermelerini istedi.",
+        explanation:
+          "Dolaylı emir, ‘forderte’ fiiliyle. ‘Zu respektieren’ mastar, mesafeye uyulmasını ifade eder.",
+      },
+      {
+        text: "Die Aufsicht wies darauf hin, dass man keine Taschen mit in die Ausstellung nehmen solle.",
+        translation: "Gözetmen, sergiye çanta alınmaması gerektiğini belirtti.",
+        explanation:
+          "Dolaylı emir, ‘wies’ fiiliyle. Konjunktiv I ‘sole’ ile, çanta yasağını ifade eder.",
+      },
+      {
+        text: "Ein Schild empfahl den Besuchern, sich mindestens zwei Stunden Zeit zu nehmen.",
+        translation:
+          "Bir tabela ziyaretçilere en az iki saat ayırmalarını önerdi.",
+        explanation:
+          "Dolaylı öneri, ‘empfahl’ fiiliyle. ‘Sich Zeit zu nehmen’ mastar, zaman ayırmayı ifade eder.",
+      },
+      {
+        text: "Man sage, er habe einen millionenschweren Vertrag abgeschlossen.",
+        translation: "Onun milyonluk bir sözleşme imzaladığı söyleniyormuş.",
+        explanation:
+          "Dolaylı söylenti, ‘man sage’ ile. Konjunktiv I ‘habe’ ile geçmişteki bir eylemi ifade eder.",
+      },
+      {
+        text: "Angeblich plane er bereits seine nächste internationale Ausstellung.",
+        translation:
+          "İddiaya göre bir sonraki uluslararası sergisini planlıyormuş.",
+        explanation:
+          "Dolaylı söylenti, ‘angeblich’ ile. Konjunktiv I ‘plane’ ile mevcut bir eylemi ifade eder.",
+      },
+      {
+        text: "Es heiße, mehrere Museen bemühten sich um den Ankauf seiner Werke.",
+        translation:
+          "Birkaç müzenin eserlerini satın almak için çaba gösterdiği söyleniyormuş.",
+        explanation:
+          "Dolaylı söylenti, ‘es heiße’ ile. Konjunktiv I ‘bemühten’ ile mevcut bir çabayı ifade eder.",
+      },
+      {
+        text: "Einige behaupteten, er lebe zurückgezogen in einem Schloss.",
+        translation:
+          "Bazıları onun bir şatoda münzevi bir hayat yaşadığını iddia etti.",
+        explanation:
+          "Dolaylı söylenti, ‘behaupteten’ fiiliyle. Konjunktiv I ‘lebe’ ile mevcut bir durumu ifade eder.",
+      },
+      {
+        text: "Er sagte, er arbeite am liebsten nachts.",
+        translation: "En çok geceleri çalışmayı sevdiğini söyledi.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘sagte’ fiiliyle. Konjunktiv I ‘arbeite’ ile mevcut bir alışkanlığı ifade eder.",
+      },
+      {
+        text: "Er fühle sich dann inspirierter.",
+        translation:
+          "O zamanlar kendini daha ilham almış hissettiğini söylemiş.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘sagte’ fiiliyle. Konjunktiv I ‘fühle’ ile mevcut bir duyguyu ifade eder.",
+      },
+      {
+        text: "Er behaupte nicht, ein Genie zu sein.",
+        translation: "Dahi olduğunu iddia etmediğini söylemiş.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘behaupte’ fiiliyle. Konjunktiv I ‘behaupte’ ile mevcut bir durumu ifade eder.",
+      },
+      {
+        text: "Er arbeite einfach hart.",
+        translation: "Sadece çok çalıştığını söylemiş.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘sagte’ fiiliyle. Konjunktiv I ‘arbeite’ ile mevcut bir eylemi ifade eder.",
+      },
+      {
+        text: "Er glaube, dass Kunst die Welt verändern könne.",
+        translation: "Sanatın dünyayı değiştirebileceğine inandığını söylemiş.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘glaube’ fiiliyle. Konjunktiv I ‘glaube’ ve ‘könne’ ile bir olasılığı ifade eder.",
+      },
+      {
+        text: "Er sei überzeugt, dass jeder Mensch kreatives Potenzial habe.",
+        translation:
+          "Herkesin yaratıcı potansiyeli olduğuna ikna olduğunu söylemiş.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘sei’ fiiliyle. Konjunktiv I ‘sei’ ve ‘habe’ ile mevcut bir inancı ifade eder.",
+      },
+      {
+        text: "Er hoffe, mit seiner Kunst Menschen zum Nachdenken anzuregen.",
+        translation:
+          "Sanatıyla insanları düşünmeye teşvik etmeyi umduğunu söylemiş.",
+        explanation:
+          "Dolaylı kendi ifadesi, ‘hoffe’ fiiliyle. Konjunktiv I ‘hoffe’ ile mevcut bir umudu ifade eder.",
+      },
+    ],
+  },
+
+  {
+    title: "1. Temporale Nebensätze",
+    sentences: [
+      {
+        text: "Als Kommissar Weber in Bad Reichenhall ankam, regnete es in Strömen.",
+        translation:
+          "Komiser Weber Bad Reichenhall’a vardığında, yağmur bardaktan boşanırcasına yağıyordu.",
+        explanation:
+          "‘Als’ ile temporale nebensatz, geçmişteki tek seferlik bir olayı belirtir. Ana cümle Präteritum ‘regnete’.",
+      },
+      {
+        text: "Er zog seinen Mantel enger, während er zum Hotel eilte.",
+        translation: "Otel’e acele ederken paltosunu daha sıkı çekti.",
+        explanation:
+          "‘Während’ ile temporale nebensatz, eşzamanlı bir eylemi ifade eder. Ana cümle Präteritum ‘zog’.",
+      },
+      {
+        text: "Die kleine Stadt wirkte verschlafen, obwohl es erst früher Nachmittag war.",
+        translation:
+          "Küçük kasaba uykulu görünüyordu, oysa henüz öğleden sonra erken saatlerdi.",
+        explanation:
+          "‘Obwohl’ ile konzessive nebensatz, beklenenin aksine bir durumu belirtir. Ana cümle Präteritum ‘wirkte’.",
+      },
+      {
+        text: "Nachdem er sein Gepäck im Zimmer abgestellt hatte, machte er sich auf den Weg zum Polizeirevier.",
+        translation:
+          "Valizini odaya bıraktıktan sonra karakola doğru yola çıktı.",
+        explanation:
+          "‘Nachdem’ ile temporale nebensatz, önceki bir eylemi belirtir. Ana cümle Präteritum ‘machte’.",
+      },
+      {
+        text: "Bevor wir zum Tatort fahren, sollte ich Ihnen die bisherigen Erkenntnisse mitteilen.",
+        translation:
+          "Olay yerine gitmeden önce, size şimdiye kadarki bulguları anlatmalıyım.",
+        explanation:
+          "‘Bevor’ ile temporale nebensatz, gelecekteki bir sırayı belirtir. Ana cümle Präsens ‘sollte’.",
+      },
+      {
+        text: "Seit der Entdeckung des gestohlenen Gemäldes waren bereits zwei Tage vergangen.",
+        translation: "Çalınan tablonun keşfinden bu yana iki gün geçmişti.",
+        explanation:
+          "‘Seit’ ile temporale nebensatz, bir zaman diliminden beri olan durumu ifade eder. Ana cümle Plusquamperfekt ‘waren’.",
+      },
+      {
+        text: "Weber hörte aufmerksam zu, bis sie ihre Ausführungen beendet hatte.",
+        translation:
+          "Weber dikkatle dinledi, ta ki o açıklamalarını bitirene kadar.",
+        explanation:
+          "‘Bis’ ile temporale nebensatz, bir eylemin sonlanma zamanını belirtir. Ana cümle Präteritum ‘hörte’.",
+      },
+      {
+        text: "Sobald Sie die Verdächtigen befragt haben, wird sich das Bild klarer zeichnen.",
+        translation: "Şüphelileri sorgular sorgulamaz tablo daha netleşecek.",
+        explanation:
+          "‘Sobald’ ile temporale nebensatz, bir eylemin hemen sonrasını belirtir. Ana cümle Futur I ‘wird’.",
+      },
+      {
+        text: "Immer wenn er an einem neuen Fall arbeitete, ließ er sich Zeit.",
+        translation: "Ne zaman yeni bir dava üzerinde çalışsa, acele etmezdi.",
+        explanation:
+          "‘Immer wenn’ ile temporale nebensatz, tekrarlanan bir durumu belirtir. Ana cümle Präteritum ‘ließ’.",
+      },
+      {
+        text: "Sooft er konnte, besichtigte er den Tatort persönlich.",
+        translation: "Ne zaman mümkün olsa, olay yerini bizzat incelerdi.",
+        explanation:
+          "‘So oft’ ile temporale nebensatz, sık tekrarlanan bir eylemi belirtir. Ana cümle Präteritum ‘besichtigte’.",
+      },
+      {
+        text: "Warten wir, bis der Regen nachlässt, dann fahren wir hin.",
+        translation: "Yağmur dinene kadar bekleyelim, sonra oraya gideriz.",
+        explanation:
+          "‘Bis’ ile temporale nebensatz, bir eylemin tamamlanmasını belirtir. Ana cümle Präsens ‘warten’.",
+      },
+    ],
+  },
+  {
+    title: "2. Kausale und konzessive Nebensätze",
+    sentences: [
+      {
+        text: "Die Villa am Stadtrand stand unter Denkmalschutz, weil sie ein hervorragendes Beispiel für den Jugendstil war.",
+        translation:
+          "Şehir kenarındaki villa, Jugendstil’in mükemmel bir örneği olduğu için koruma altındaydı.",
+        explanation:
+          "‘Weil’ ile kausale nebensatz, bir neden belirtir. Ana cümle Präteritum ‘stand’.",
+      },
+      {
+        text: "Da das gestohlene Gemälde sehr wertvoll gewesen war, hatte man die Landeskriminalpolizei eingeschaltet.",
+        translation:
+          "Çalınan tablo çok değerli olduğu için eyalet kriminal polisi devreye sokulmuştu.",
+        explanation:
+          "‘Da’ ile kausale nebensatz, bir sebep belirtir. Ana cümle Plusquamperfekt ‘hatte’.",
+      },
+      {
+        text: "Der Eigentümer wirkte nervös, weil er keine Versicherung für das Kunstwerk abgeschlossen hatte.",
+        translation:
+          "Sahibi gergin görünüyordu, çünkü sanat eseri için sigorta yaptırmamıştı.",
+        explanation:
+          "‘Weil’ ile kausale nebensatz, bir nedeni ifade eder. Ana cümle Präteritum ‘wirkte’.",
+      },
+      {
+        text: "Obwohl die örtliche Polizei bereits alle Anwesenden befragt hatte, wollte Kommissar Weber seine eigenen Gespräche führen.",
+        translation:
+          "Yerel polis herkesi sorgulamış olmasına rağmen, Komiser Weber kendi görüşmelerini yapmak istedi.",
+        explanation:
+          "‘Obwohl’ ile konzessive nebensatz, beklenenin aksine bir durumu belirtir. Ana cümle Präteritum ‘wollte’.",
+      },
+      {
+        text: "Obschon die Spurensicherung keine Einbruchsspuren gefunden hatte, ging man von einem Diebstahl aus.",
+        translation:
+          "Delil toplama ekibi hırsızlık izi bulamamış olmasına rağmen, bir hırsızlık olduğu düşünüldü.",
+        explanation:
+          "‘Obschon’ ile konzessive nebensatz, ters bir durumu belirtir. Ana cümle Präteritum ‘ging’.",
+      },
+      {
+        text: "Trotzdem dieser Fall auf den ersten Blick eindeutig erscheint, habe ich Zweifel.",
+        translation:
+          "Bu dava ilk bakışta açık gibi görünmesine rağmen, şüphelerim var.",
+        explanation:
+          "‘Trotzdem’ ile konzessive nebensatz, görünüşe rağmen bir şüpheyi ifade eder. Ana cümle Präsens ‘habe’.",
+      },
+      {
+        text: "Wenngleich die Beweise gegen den Gärtner sprachen, wollte der Kommissar auch andere Möglichkeiten in Betracht ziehen.",
+        translation:
+          "Bahçıvana karşı kanıtlar olmasına rağmen, Komiser diğer olasılıkları da değerlendirmek istedi.",
+        explanation:
+          "‘Wenngleich’ ile konzessive nebensatz, ters bir durumu belirtir. Ana cümle Präteritum ‘wollte’.",
+      },
+      {
+        text: "Obzwar er müde von der langen Fahrt war, begann er sofort mit der Arbeit.",
+        translation:
+          "Uzun yolculuktan yorgun olmasına rağmen, hemen çalışmaya başladı.",
+        explanation:
+          "‘Obzwar’ ile konzessive nebensatz, bir zıtlığı ifade eder. Ana cümle Präteritum ‘begann’.",
+      },
+      {
+        text: "Die Villa war weitläufig, sodass es für einen Einzeltäter schwierig gewesen wäre, unbemerkt zu entkommen.",
+        translation:
+          "Villa genişti, bu yüzden tek bir hırsızın fark edilmeden kaçması zor olurdu.",
+        explanation:
+          "‘Sodass’ ile konsekutive nebensatz, bir sonucu belirtir. Ana cümle Präteritum ‘war’.",
+      },
+    ],
+  },
+  {
+    title: "3. Konsekutive Nebensätze",
+    sentences: [
+      {
+        text: "Das Gemälde war so wertvoll, dass es normalerweise in einem Tresor aufbewahrt wurde.",
+        translation:
+          "Tablo o kadar değerliydi ki normalde bir kasada saklanırdı.",
+        explanation:
+          "‘So…dass’ ile konsekutive nebensatz, bir sonucu belirtir. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Die Sicherheitsmaßnahmen waren derart umfassend, dass ein gewöhnlicher Einbrecher kaum eine Chance gehabt hätte.",
+        translation:
+          "Güvenlik önlemleri o kadar kapsamlıydı ki sıradan bir hırsızın şansı neredeyse olmazdı.",
+        explanation:
+          "‘Derart…dass’ ile konsekutive nebensatz, bir sonucu ifade eder. Ana cümle Präteritum ‘waren’.",
+      },
+      {
+        text: "Der Dieb musste die Gewohnheiten im Haus gut genug gekannt haben, sodass er genau wusste, wann die Küste frei war.",
+        translation:
+          "Hırsız evdeki alışkanlıkları yeterince iyi bilmiş olmalıydı ki ne zaman uygun olduğunu tam olarak biliyordu.",
+        explanation:
+          "‘Sodass’ ile konsekutive nebensatz, bir sonucu belirtir. Ana cümle Perfekt ‘musste’.",
+      },
+      {
+        text: "Der Alarm wurde deaktiviert, sodass der Täter ohne Probleme eindringen konnte.",
+        translation:
+          "Alarm devre dışı bırakılmıştı, böylece hırsız sorunsuzca girebildi.",
+        explanation:
+          "‘Sodass’ ile konsekutive nebensatz, bir sonucu ifade eder. Ana cümle Passiv Präteritum ‘wurde’.",
+      },
+      {
+        text: "Die Spuren waren so professionell verwischt worden, dass die Polizei kaum verwertbare Hinweise fand.",
+        translation:
+          "İzler o kadar profesyonelce silinmişti ki polis neredeyse hiçbir kullanılabilir ipucu bulamadı.",
+        explanation:
+          "‘So…dass’ ile konsekutive nebensatz, bir sonucu belirtir. Ana cümle Passiv Plusquamperfekt ‘waren’.",
+      },
+      {
+        text: "Das Zeitfenster war zu knapp, als dass ein Fremder es hätte schaffen können.",
+        translation:
+          "Zaman aralığı o kadar dardı ki bir yabancı bunu başaramazdı.",
+        explanation:
+          "‘Zu…als dass’ ile konsekutive nebensatz, imkânsız bir sonucu ifade eder. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Die Hausdame wirkte dermaßen aufgelöst, dass der Kommissar sie beruhigen musste.",
+        translation:
+          "Hizmetçi o kadar perişandı ki Komiser onu sakinleştirmek zorunda kaldı.",
+        explanation:
+          "‘Dermaßen…dass’ ile konsekutive nebensatz, bir sonucu belirtir. Ana cümle Präteritum ‘wirkte’.",
+      },
+      {
+        text: "Die Situation war dergestalt verfahren, dass Weber beschloss, noch einmal ganz von vorne anzufangen.",
+        translation:
+          "Durum o kadar karışıktı ki Weber baştan başlamaya karar verdi.",
+        explanation:
+          "‘Dergestalt…dass’ ile konsekutive nebensatz, bir sonucu ifade eder. Ana cümle Präteritum ‘beschloss’.",
+      },
+    ],
+  },
+  {
+    title: "4. Konditionale und konzessive Nebensätze",
+    sentences: [
+      {
+        text: "Falls der Dieb das Gemälde über die Grenze bringen will, haben wir ein Problem.",
+        translation:
+          "Eğer hırsız tabloyu sınırdan geçirmek isterse, bir sorunumuz var.",
+        explanation:
+          "‘Falls’ ile konditionale nebensatz, bir koşulu belirtir. Ana cümle Präsens ‘haben’.",
+      },
+      {
+        text: "Wenn Weber seine Vermutung bestätigen könnte, wäre der Fall schnell gelöst.",
+        translation:
+          "Eğer Weber şüphesini doğrulayabilse, dava çabucak çözülürdü.",
+        explanation:
+          "‘Wenn’ ile konditionale nebensatz, hipotetik bir durumu belirtir. Ana cümle Konjunktiv II ‘wäre’.",
+      },
+      {
+        text: "Sofern keine neuen Beweise auftauchten, müssten sie sich auf die Befragungen konzentrieren.",
+        translation:
+          "Yeni kanıtlar ortaya çıkmazsa, sorgulamalara odaklanmaları gerekirdi.",
+        explanation:
+          "‘Sofern’ ile konditionale nebensatz, bir koşulu ifade eder. Ana cümle Konjunktiv II ‘müssten’.",
+      },
+      {
+        text: "Sollte jemand aus dem Personal beteiligt sein, müsste dieser Person der Wert des Gemäldes bekannt gewesen sein.",
+        translation:
+          "Eğer personelden biri dahil olsaydı, bu kişi tablonun değerini bilmiş olmalıydı.",
+        explanation:
+          "‘Sollte’ ile konditionale nebensatz, bir olasılığı belirtir. Ana cümle Konjunktiv II ‘müsste’.",
+      },
+      {
+        text: "Falls sie die Überwachungsvideos nochmals überprüften, könnten ihnen vielleicht Details auffallen.",
+        translation:
+          "Eğer güvenlik videolarını tekrar inceleseler, belki bazı detaylar dikkatlerini çekebilirdi.",
+        explanation:
+          "‘Falls’ ile konditionale nebensatz, bir olasılığı ifade eder. Ana cümle Konjunktiv II ‘könnten’.",
+      },
+      {
+        text: "Selbst wenn der Dieb professionell vorgegangen war, hatte er sicher Spuren hinterlassen.",
+        translation:
+          "Hırsız profesyonelce hareket etmiş olsa bile, kesinlikle iz bırakmıştı.",
+        explanation:
+          "‘Selbst wenn’ ile konzessive nebensatz, bir zıtlığı belirtir. Ana cümle Perfekt ‘hatte’.",
+      },
+      {
+        text: "Auch wenn der Verdacht auf den Gärtner fiel, wollte Weber alle Möglichkeiten offen halten.",
+        translation:
+          "Şüphe bahçıvana yönelse de, Weber tüm olasılıkları açık tutmak istedi.",
+        explanation:
+          "‘Auch wenn’ ile konzessive nebensatz, bir zıtlığı ifade eder. Ana cümle Präteritum ‘wollte’.",
+      },
+      {
+        text: "Die Villa war gut gesichert, es sei denn, jemand hatte einen Schlüssel.",
+        translation:
+          "Villa iyi korunuyordu, tabii biri anahtar sahibi değilse.",
+        explanation:
+          "‘Es sei denn’ ile konzessive nebensatz, bir istisnayı belirtir. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Wenn der Täter nicht aus dem inneren Kreis kam, dann hatte er jedenfalls Insiderwissen.",
+        translation:
+          "Eğer suçlu iç çevreden değilse, her halükârda içeriden bilgi sahibiydi.",
+        explanation:
+          "‘Wenn’ ile konditionale nebensatz, bir koşulu belirtir. Ana cümle Perfekt ‘hatte’.",
+      },
+    ],
+  },
+  {
+    title: "5. Modale Nebensätze",
+    sentences: [
+      {
+        text: "Kommissar Weber untersuchte den Tatort, indem er jeden Winkel genau betrachtete.",
+        translation:
+          "Komiser Weber olay yerini her köşeyi dikkatlice inceleyerek araştırdı.",
+        explanation:
+          "‘Indem’ ile modale nebensatz, bir eylemin nasıl gerçekleştiğini belirtir. Ana cümle Präteritum ‘untersuchte’.",
+      },
+      {
+        text: "Die Hausdame beschrieb den normalen Tagesablauf, wobei sie besonders die Sicherheitsroutinen betonte.",
+        translation:
+          "Hizmetçi günlük rutini tarif ederken özellikle güvenlik prosedürlerini vurguladı.",
+        explanation:
+          "‘Wobei’ ile modale nebensatz, bir eylemin detayını belirtir. Ana cümle Präteritum ‘beschrieb’.",
+      },
+      {
+        text: "Der Besitzer hatte das Gemälde erworben, ohne dessen wahre Herkunft zu kennen.",
+        translation:
+          "Sahibi, tablonun gerçek kökenini bilmeden tabloyu satın almıştı.",
+        explanation:
+          "‘Ohne…zu’ ile modale nebensatz, bir eylemin gerçekleşmediğini belirtir. Ana cümle Plusquamperfekt ‘hatte’.",
+      },
+      {
+        text: "Die Polizisten durchsuchten das Anwesen, ohne dabei auf weitere Hinweise zu stoßen.",
+        translation: "Polisler malikâneyi aradı, ancak başka ipucu bulmadan.",
+        explanation:
+          "‘Ohne…zu’ ile modale nebensatz, bir eylemin eksikliğini ifade eder. Ana cümle Präteritum ‘durchsuchten’.",
+      },
+      {
+        text: "Der Dieb hatte das Alarmsystem umgangen, anstatt es zu deaktivieren.",
+        translation:
+          "Hırsız alarm sistemini devre dışı bırakmak yerine atlattı.",
+        explanation:
+          "‘Anstatt…zu’ ile modale nebensatz, alternatif bir eylemi belirtir. Ana cümle Perfekt ‘hatte’.",
+      },
+      {
+        text: "Er muss das Haus verlassen haben, ohne gesehen zu werden.",
+        translation: "Evden görülmeden ayrılmış olmalı.",
+        explanation:
+          "‘Ohne…zu’ ile modale nebensatz, bir eylemin gizli gerçekleştiğini ifade eder. Ana cümle Perfekt ‘muss’.",
+      },
+      {
+        text: "Je länger er die Beweise betrachtete, desto mehr Zweifel kamen ihm.",
+        translation:
+          "Kanıtları ne kadar uzun incelerse, o kadar çok şüphe duyuyordu.",
+        explanation:
+          "‘Je…desto’ ile modale nebensatz, bir orantıyı belirtir. Ana cümle Präteritum ‘kamen’.",
+      },
+      {
+        text: "Der Täter hatte gehandelt, als ob er jede Ecke des Hauses kannte.",
+        translation: "Suçlu, evin her köşesini biliyormuş gibi davranmıştı.",
+        explanation:
+          "‘Als ob’ ile modale nebensatz, bir varsayımı ifade eder. Ana cümle Perfekt ‘hatte’.",
+      },
+      {
+        text: "Die Kameras waren ausgeschaltet worden, wie wenn jemand genau wusste, wo sich die Kontrolleinheit befand.",
+        translation:
+          "Kameralar, biri kontrol ünitesinin yerini tam biliyormuş gibi kapatılmıştı.",
+        explanation:
+          "‘Wie wenn’ ile modale nebensatz, bir benzetmeyi belirtir. Ana cümle Passiv Plusquamperfekt ‘waren’.",
+      },
+      {
+        text: "Das Gemälde verschwand, ohne dass die Sensoren ausgelöst wurden.",
+        translation: "Tablo, sensörler tetiklenmeden kayboldu.",
+        explanation:
+          "‘Ohne dass’ ile modale nebensatz, bir eylemin eksikliğini ifade eder. Ana cümle Präteritum ‘verschwand’.",
+      },
+    ],
+  },
+  {
+    title: "6. Infinitiv mit und ohne zu",
+    sentences: [
+      {
+        text: "Weber konnte das Motiv für den Diebstahl nicht verstehen.",
+        translation: "Weber hırsızlığın motifini anlayamadı.",
+        explanation:
+          "Infinitiv ‘verstehen’ ohne ‘zu’, modal fiil ‘konnte’ ile kullanılır. Ana cümle Präteritum.",
+      },
+      {
+        text: "Der Besitzer schien etwas zu verbergen.",
+        translation: "Sahibi bir şey saklıyor gibiydi.",
+        explanation:
+          "Infinitiv ‘verbergen’ mit ‘zu’, fiil ‘schien’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Die Ermittler hofften, bald eine Spur zu finden.",
+        translation: "Dedektifler yakında bir iz bulmayı umuyordu.",
+        explanation:
+          "Infinitiv ‘finden’ mit ‘zu’, fiil ‘hofften’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Es war schwer, in diesem Fall klar zu sehen.",
+        translation: "Bu davada net görmek zordu.",
+        explanation:
+          "Infinitiv ‘sehen’ mit ‘zu’, sıfat ‘schwer’ ile. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Wir müssen versuchen, die Überwachungsvideos der Nachbarhäuser zu bekommen.",
+        translation: "Komşu evlerin güvenlik videolarını almayı denemeliyiz.",
+        explanation:
+          "Infinitiv ‘bekommen’ mit ‘zu’, fiil ‘versuchen’ ile. Ana cümle Präsens ‘müssen’.",
+      },
+      {
+        text: "Er begann, systematisch jeden Verdächtigen zu überprüfen.",
+        translation: "Her şüpheliyi sistematik olarak kontrol etmeye başladı.",
+        explanation:
+          "Infinitiv ‘überprüfen’ mit ‘zu’, fiil ‘begann’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Die Hausdame ließ sich bereitwillig befragen.",
+        translation: "Hizmetçi isteyerek sorgulanmasına izin verdi.",
+        explanation:
+          "Infinitiv ‘befragen’ ohne ‘zu’, fiil ‘ließ’ ile kausativ. Ana cümle Präteritum.",
+      },
+      {
+        text: "Der Kommissar hatte den Gärtner kommen lassen, um ihn persönlich zu verhören.",
+        translation: "Komiser bahçıvanı çağırttı, onu bizzat sorgulamak için.",
+        explanation:
+          "Infinitiv ‘kommen’ ohne ‘zu’, kausativ ‘lassen’. ‘Verhören’ mit ‘zu’, final. Ana cümle Perfekt.",
+      },
+      {
+        text: "Ich habe das Gemälde hängen sehen, als ich die Pflanzen gegossen habe.",
+        translation: "Bitkileri sularken tablonun asılı olduğunu gördüm.",
+        explanation:
+          "Infinitiv ‘hängen’ ohne ‘zu’, algı fiili ‘sehen’ ile. Ana cümle Perfekt.",
+      },
+      {
+        text: "Weber beschloss, die Geschichte genauer zu recherchieren.",
+        translation: "Weber hikayeyi daha detaylı araştırmaya karar verdi.",
+        explanation:
+          "Infinitiv ‘recherchieren’ mit ‘zu’, fiil ‘beschloss’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Es galt nun, das Alibi jedes Verdächtigen zu überprüfen.",
+        translation:
+          "Şimdi her şüphelinin alibisini kontrol etmek gerekiyordu.",
+        explanation:
+          "Infinitiv ‘überprüfen’ mit ‘zu’, ifade ‘es galt’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Der Besitzer schien etwas zu verschweigen, anstatt offen zu kooperieren.",
+        translation:
+          "Sahibi açıkça işbirliği yapmak yerine bir şey gizliyor gibiydi.",
+        explanation:
+          "Infinitiv ‘verschweigen’ ve ‘kooperieren’ mit ‘zu’, fiil ‘schien’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Ich höre Sie telefonieren.",
+        translation: "Sizi telefonla konuşurken duyuyorum.",
+        explanation:
+          "Infinitiv ‘telefonieren’ ohne ‘zu’, algı fiili ‘höre’ ile. Ana cümle Präsens.",
+      },
+      {
+        text: "Lassen Sie mich wissen, wenn Sie bereit sind zu reden.",
+        translation: "Konuşmaya hazır olduğunuzda bana haber verin.",
+        explanation:
+          "Infinitiv ‘wissen’ ohne ‘zu’, kausativ ‘lassen’. ‘Reden’ mit ‘zu’, final. Ana cümle Imperativ.",
+      },
+    ],
+  },
+  {
+    title: "7. Nebensätze mit dass und Infinitiv mit zu",
+    sentences: [
+      {
+        text: "Der Hausherr behauptete, dass er zum Zeitpunkt des Diebstahls nicht anwesend gewesen sei.",
+        translation: "Ev sahibi, hırsızlık anında orada olmadığını iddia etti.",
+        explanation:
+          "‘Dass’ ile nebensatz, Konjunktiv I ‘sei’ ile geçmiş durumu belirtir. Ana cümle Präteritum ‘behauptete’.",
+      },
+      {
+        text: "Es war bekannt, dass das Gemälde erst kürzlich erworben worden war.",
+        translation: "Tablonun yakın zamanda satın alındığı biliniyordu.",
+        explanation:
+          "‘Dass’ ile nebensatz, Passiv Plusquamperfekt ‘war’ ile bir bilgiyi ifade eder. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Weber hatte den Verdacht, dass mehr hinter der Geschichte steckte.",
+        translation:
+          "Weber, hikayenin ardında daha fazlası olduğundan şüpheleniyordu.",
+        explanation:
+          "‘Dass’ ile nebensatz, bir şüpheyi belirtir. Ana cümle Perfekt ‘hatte’.",
+      },
+      {
+        text: "Es ist wichtig, dass wir alle Fakten kennen.",
+        translation: "Tüm gerçekleri bilmemiz önemli.",
+        explanation:
+          "‘Dass’ ile nebensatz, bir gerekliliği ifade eder. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Die Tatsache, dass keine Einbruchsspuren gefunden wurden, ließ vermuten, dass es sich um einen Insider handelte.",
+        translation:
+          "Hırsızlık izi bulunmaması, içeriden birinin yaptığına işaret ediyordu.",
+        explanation:
+          "‘Dass’ ile nebensatz, bir sonucu destekler. Ana cümle Präteritum ‘ließ’.",
+      },
+      {
+        text: "Es schien, dass der Dieb mit dem Sicherheitssystem vertraut war.",
+        translation: "Hırsızın güvenlik sistemiyle aşina olduğu anlaşılıyordu.",
+        explanation:
+          "‘Dass’ ile nebensatz, bir gözlemi belirtir. Ana cümle Präteritum ‘schien’.",
+      },
+      {
+        text: "Der Kommissar bat darum, die Finanzunterlagen des Besitzers zu überprüfen.",
+        translation:
+          "Komiser, sahibinin mali kayıtlarını kontrol etmeyi talep etti.",
+        explanation:
+          "Infinitiv ‘überprüfen’ mit ‘zu’, fiil ‘bat’ ile. Ana cümle Präteritum.",
+      },
+      {
+        text: "Es war notwendig, jeden Hinweis zu verfolgen.",
+        translation: "Her ipucunu takip etmek gerekliydi.",
+        explanation:
+          "Infinitiv ‘verfolgen’ mit ‘zu’, sıfat ‘notwendig’ ile. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Er hatte vor, auch mit den Nachbarn zu sprechen.",
+        translation: "Komşularla da konuşmayı planlıyordu.",
+        explanation:
+          "Infinitiv ‘sprechen’ mit ‘zu’, ifade ‘hatte vor’ ile. Ana cümle Perfekt.",
+      },
+      {
+        text: "Weber hielt es für unwahrscheinlich, dass niemand etwas bemerkt hatte.",
+        translation:
+          "Weber, kimsenin bir şey fark etmemiş olmasını olası görmüyordu.",
+        explanation:
+          "‘Dass’ ile nebensatz, bir olasılığı reddeder. Ana cümle Präteritum ‘hielt’.",
+      },
+      {
+        text: "Ich glaube nicht, dass der Gärtner allein gehandelt hat.",
+        translation: "Bahçıvanın tek başına hareket ettiğine inanmıyorum.",
+        explanation:
+          "‘Dass’ ile nebensatz, bir şüpheyi ifade eder. Ana cümle Präsens ‘glaube’.",
+      },
+      {
+        text: "Es ist schwer, ein so großes Gemälde unbemerkt zu transportieren.",
+        translation: "Böylesine büyük bir tabloyu fark edilmeden taşımak zor.",
+        explanation:
+          "Infinitiv ‘transportieren’ mit ‘zu’, sıfat ‘schwer’ ile. Ana cümle Präsens ‘ist’.",
+      },
+    ],
+  },
+  {
+    title: "8. Finale und modale Infinitiv- und Nebensätze",
+    sentences: [
+      {
+        text: "Der Kommissar setzte sich mit dem Sicherheitsexperten zusammen, um die Alarmanlagen zu überprüfen.",
+        translation:
+          "Komiser, alarm sistemlerini kontrol etmek için güvenlik uzmanıyla bir araya geldi.",
+        explanation:
+          "Infinitiv ‘überprüfen’ mit ‘zu’, final, amaç belirtir. Ana cümle Präteritum ‘setzte’.",
+      },
+      {
+        text: "Er war nach Bad Reichenhall gekommen, um diesen mysteriösen Fall zu lösen.",
+        translation:
+          "Bu gizemli davayı çözmek için Bad Reichenhall’a gelmişti.",
+        explanation:
+          "Infinitiv ‘lösen’ mit ‘zu’, final, amacı ifade eder. Ana cümle Plusquamperfekt ‘war’.",
+      },
+      {
+        text: "Man hatte einen Kunstexperten hinzugezogen, damit er den Wert des Gemäldes genau bestimmen konnte.",
+        translation:
+          "Tablonun değerini tam olarak belirlemesi için bir sanat uzmanı çağrılmıştı.",
+        explanation:
+          "‘Damit’ ile final nebensatz, bir amacı belirtir. Ana cümle Passiv Plusquamperfekt ‘hatte’.",
+      },
+      {
+        text: "Weber untersuchte alle Akten, anstatt sich nur auf die Aussagen zu verlassen.",
+        translation:
+          "Weber, sadece ifadelere dayanmak yerine tüm dosyaları inceledi.",
+        explanation:
+          "Infinitiv ‘verlassen’ mit ‘zu’, modale, alternatif bir eylemi reddeder. Ana cümle Präteritum ‘untersuchte’.",
+      },
+      {
+        text: "Die Polizei hatte Straßensperren errichtet, um mögliche Fluchtwege zu kontrollieren.",
+        translation:
+          "Polis, olası kaçış yollarını kontrol etmek için yol bariyerleri kurmuştu.",
+        explanation:
+          "Infinitiv ‘kontrollieren’ mit ‘zu’, final, amacı ifade eder. Ana cümle Plusquamperfekt ‘hatte’.",
+      },
+      {
+        text: "Der Besitzer schien nervös, ohne dass es dafür einen ersichtlichen Grund gab.",
+        translation: "Sahibi, görünür bir sebep olmaksızın gergin görünüyordu.",
+        explanation:
+          "‘Ohne dass’ ile modale nebensatz, bir eksikliği belirtir. Ana cümle Präteritum ‘schien’.",
+      },
+      {
+        text: "Der Kommissar ging zum Fenster, um den Garten zu überblicken.",
+        translation: "Komiser bahçeyi görmek için pencereye gitti.",
+        explanation:
+          "Infinitiv ‘überblicken’ mit ‘zu’, final, amacı ifade eder. Ana cümle Präteritum ‘ging’.",
+      },
+      {
+        text: "Ich habe das Team gebeten, das Grundstück zu durchsuchen, ohne dabei Aufsehen zu erregen.",
+        translation: "Ekipten, dikkat çekmeden araziyi aramasını rica ettim.",
+        explanation:
+          "Infinitiv ‘durchsuchen’ ve ‘erregen’ mit ‘zu’, final ve modale. Ana cümle Perfekt ‘habe’.",
+      },
+      {
+        text: "Sie waren nach Bad Reichenhall gefahren, um herauszufinden, was wirklich passiert war.",
+        translation:
+          "Gerçekte ne olduğunu öğrenmek için Bad Reichenhall’a gitmişlerdi.",
+        explanation:
+          "Infinitiv ‘herauszufinden’ mit ‘zu’, final, amacı ifade eder. Ana cümle Plusquamperfekt ‘waren’.",
+      },
+      {
+        text: "Wir sollten mit dem Nachbarn sprechen, statt nur Vermutungen anzustellen.",
+        translation: "Sadece tahmin yürütmek yerine komşuyla konuşmalıyız.",
+        explanation:
+          "Infinitiv ‘anzustellen’ mit ‘zu’, modale, alternatif bir eylemi reddeder. Ana cümle Präsens ‘sollten’.",
+      },
+      {
+        text: "Um Zeit zu sparen, teilten sie sich auf.",
+        translation: "Zaman kazanmak için görevleri bölüştüler.",
+        explanation:
+          "Infinitiv ‘sparen’ mit ‘zu’, final, amacı ifade eder. Ana cümle Präteritum ‘teilten’.",
+      },
+    ],
+  },
+  {
+    title: "9. Relativpronomen im Nominativ, Akkusativ und Dativ",
+    sentences: [
+      {
+        text: "Die Villa, die am Stadtrand stand, gehörte einem bekannten Industriellen.",
+        translation:
+          "Şehir kenarında bulunan villa, tanınmış bir sanayiciye aitti.",
+        explanation:
+          "Relativpronomen ‘die’ nominativ, feminin, ‘Villa’ için. Nebensatz bir tanımlama yapar.",
+      },
+      {
+        text: "Der Mann, der das Gemälde als Erster vermisst hatte, war der Butler.",
+        translation: "Tabloyu ilk fark eden adam, uşaktı.",
+        explanation:
+          "Relativpronomen ‘der’ nominativ, maskulin, ‘Mann’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Das Team, das aus München angereist war, unterstützte die örtliche Polizei.",
+        translation: "Münih’ten gelen ekip, yerel polisi destekledi.",
+        explanation:
+          "Relativpronomen ‘das’ nominativ, nötr, ‘Team’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Weber befragte die Köchin, die am Abend des Diebstahls Dienst hatte.",
+        translation: "Weber, hırsızlık akşamı görevde olan aşçıyı sorguladı.",
+        explanation:
+          "Relativpronomen ‘die’ akkusativ, feminin, ‘Köchin’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Gärtner, den die Polizei zunächst verdächtigt hatte, konnte ein Alibi vorweisen.",
+        translation:
+          "Polisin başlangıçta şüphelendiği bahçıvan, bir alibi sunabildi.",
+        explanation:
+          "Relativpronomen ‘den’ akkusativ, maskulin, ‘Gärtner’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Das Sicherheitssystem, das erst kürzlich installiert worden war, hatte versagt.",
+        translation:
+          "Yakın zamanda kurulan güvenlik sistemi başarısız olmuştu.",
+        explanation:
+          "Relativpronomen ‘das’ nominativ, nötr, ‘Sicherheitssystem’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Nachbarin, der das Grundstück nebenan gehörte, hatte einen verdächtigen Wagen gesehen.",
+        translation:
+          "Yan araziye sahip olan komşu kadın, şüpheli bir araba görmüştü.",
+        explanation:
+          "Relativpronomen ‘der’ dativ, feminin, ‘Nachbarin’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Kunsthändler, dem der Besitzer das Gemälde abgekauft hatte, wurde ebenfalls befragt.",
+        translation:
+          "Sahibin tabloyu satın aldığı sanat tüccarı da sorgulandı.",
+        explanation:
+          "Relativpronomen ‘dem’ dativ, maskulin, ‘Kunsthändler’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Das Team, mit dem Weber zusammenarbeitete, war sehr erfahren.",
+        translation: "Weber’in birlikte çalıştığı ekip çok deneyimliydi.",
+        explanation:
+          "Relativpronomen ‘dem’ dativ, nötr, ‘Team’ için, prep. ‘mit’. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Mann, dem das Gemälde ursprünglich gehörte, lebt nicht mehr.",
+        translation: "Tablonun orijinal sahibi olan adam artık hayatta değil.",
+        explanation:
+          "Relativpronomen ‘dem’ dativ, maskulin, ‘Mann’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Kunstsammlung, die er hinterlassen hat, wird vom Museum verwaltet.",
+        translation:
+          "Onun geride bıraktığı sanat koleksiyonu müze tarafından yönetiliyor.",
+        explanation:
+          "Relativpronomen ‘die’ nominativ, feminin, ‘Kunstsammlung’ için. Nebensatz tanımlayıcı.",
+      },
+    ],
+  },
+  {
+    title: "10. Relativpronomen im Genitiv",
+    sentences: [
+      {
+        text: "Der Besitzer, dessen Villa am Stadtrand lag, war ein zurückgezogener Mann.",
+        translation:
+          "Villası şehir kenarında olan sahip, içine kapanık bir adamdı.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Besitzer’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Die Hausdame, deren Aussage besonders wichtig war, kannte alle Gewohnheiten des Haushalts.",
+        translation:
+          "İfadesi özellikle önemli olan hizmetçi, evin tüm alışkanlıklarını biliyordu.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, feminin, ‘Hausdame’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Das Gemälde, dessen Wert auf mehrere Millionen geschätzt wurde, war nicht versichert.",
+        translation:
+          "Değeri milyonlarla tahmin edilen tablo sigortalanmamıştı.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, nötr, ‘Gemälde’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Die Überwachungskamera, deren Aufzeichnungen gelöscht worden waren, hätte wichtige Hinweise liefern können.",
+        translation:
+          "Kayıtları silinen güvenlik kamerası önemli ipuçları sağlayabilirdi.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, feminin, ‘Überwachungskamera’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Der Tresor, dessen Code nur wenigen bekannt war, wurde nicht aufgebrochen.",
+        translation: "Kodu sadece birkaç kişiye bilinen kasa açılmamıştı.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Tresor’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Die Ermittler, deren Arbeit methodisch voranschritt, entdeckten immer mehr Ungereimtheiten.",
+        translation:
+          "Çalışmaları metodik ilerleyen dedektifler, giderek daha fazla tutarsızlık keşfetti.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, plural, ‘Ermittler’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Der Kunstexperte, dessen Gutachten wir erwarten, hat sich verspätet.",
+        translation: "Raporunu beklediğimiz sanat uzmanı gecikti.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Kunstexperte’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Die Familie, deren Vermögen aus der Stahlindustrie stammte, lebte seit Generationen in der Villa.",
+        translation:
+          "Serveti çelik endüstrisinden gelen aile, nesillerdir villada yaşıyordu.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, feminin, ‘Familie’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Das Museum, dessen Direktor sich für das Gemälde interessiert hatte, lag in München.",
+        translation: "Müdürü tabloyla ilgilenen müze, Münih’teydi.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, nötr, ‘Museum’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Die junge Frau, deren Auto in der Nähe gesehen wurde, ist die Nichte des Besitzers.",
+        translation: "Arabası yakınlarda görülen genç kadın, sahibin yeğeni.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, feminin, ‘Frau’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Der Fall, dessen Lösung immer komplizierter schien, beschäftigte ihn Tag und Nacht.",
+        translation:
+          "Çözümü giderek karmaşıklaşan dava, onu gece gündüz meşgul ediyordu.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Fall’ için, özelliğe işaret eder.",
+      },
+    ],
+  },
+  {
+    title: "11. Relativpronomen mit w- und als",
+    sentences: [
+      {
+        text: "Das Gemälde, wofür der Besitzer angeblich eine hohe Summe bezahlt hatte, war ein Renoir.",
+        translation:
+          "Sahibin sözde yüksek bir meblağ ödediği tablo, bir Renoir’di.",
+        explanation:
+          "Relativpronomen ‘wofür’ prep. ‘für’ ile, nötr ‘Gemälde’ için, amacı belirtir.",
+      },
+      {
+        text: "Die Sicherheitsmaßnahmen, worauf der Hausherr besonders stolz war, hatten versagt.",
+        translation:
+          "Ev sahibinin özellikle gurur duyduğu güvenlik önlemleri başarısız olmuştu.",
+        explanation:
+          "Relativpronomen ‘worauf’ prep. ‘auf’ ile, feminin ‘Sicherheitsmaßnahmen’ için, bir özelliği belirtir.",
+      },
+      {
+        text: "Die Alarmanlage, wodurch jeder Eindringling hätte entdeckt werden müssen, war manipuliert worden.",
+        translation:
+          "Her davetsiz misafiri tespit etmesi gereken alarm sistemi manipüle edilmişti.",
+        explanation:
+          "Relativpronomen ‘wodurch’ prep. ‘durch’ ile, feminin ‘Alarmanlage’ için, aracı belirtir.",
+      },
+      {
+        text: "Die Situation, worin sich der Kommissar befand, war komplex.",
+        translation: "Komiserin bulunduğu durum karmaşıktı.",
+        explanation:
+          "Relativpronomen ‘worin’ prep. ‘in’ ile, feminin ‘Situation’ için, yeri belirtir.",
+      },
+      {
+        text: "Das Verhör, wobei der Gärtner seine Unschuld beteuerte, brachte keine neuen Erkenntnisse.",
+        translation:
+          "Bahçıvanın masumiyetini savunduğu sorgulama yeni bilgiler getirmedi.",
+        explanation:
+          "Relativpronomen ‘wobei’ prep. ‘bei’ ile, nötr ‘Verhör’ için, eşzamanlı durumu belirtir.",
+      },
+      {
+        text: "Das Gespräch, woran sich die Hausdame nur vage erinnern konnte, fand am Vorabend des Diebstahls statt.",
+        translation:
+          "Hizmetçinin sadece belirsiz hatırladığı konuşma, hırsızlıktan önceki akşam gerçekleşti.",
+        explanation:
+          "Relativpronomen ‘woran’ prep. ‘an’ ile, nötr ‘Gespräch’ için, bağlantıyı belirtir.",
+      },
+      {
+        text: "Das war der Moment, als mir klar wurde, dass etwas nicht stimmte.",
+        translation: "Bir şeylerin yanlış olduğunu anladığım an buydu.",
+        explanation:
+          "‘Als’ ile relativsatz, belirli bir zamanı belirtir. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Der Kommissar, als erfahrener Ermittler, spürte, dass der Schlüssel zur Lösung im Verhalten des Besitzers lag.",
+        translation:
+          "Deneyimli bir dedektif olarak Komiser, çözümün sahibin davranışlarında yattığını hissetti.",
+        explanation:
+          "‘Als’ ile relativsatz, bir sıfatı nitelendirir. Ana cümle Präteritum ‘spürte’.",
+      },
+      {
+        text: "Das Jahr 1989, als das Gemälde zuerst auftauchte, war entscheidend für die Ermittlungen.",
+        translation:
+          "Tablonun ilk ortaya çıktığı 1989 yılı, soruşturma için kritikti.",
+        explanation:
+          "‘Als’ ile relativsatz, belirli bir zamanı belirtir. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Der Tag, an dem das Kunstwerk verschwand, war ausgerechnet der Jahrestag seines Erwerbs.",
+        translation:
+          "Sanat eserinin kaybolduğu gün, tesadüfen satın alınmasının yıldönümüydü.",
+        explanation:
+          "Relativpronomen ‘dem’ dativ, maskulin, ‘Tag’ için, prep. ‘an’. Nebensatz zamanı belirtir.",
+      },
+      {
+        text: "Der Besitzer, als Sammler moderner Kunst bekannt, hatte das Gemälde erst vor kurzem in seine Sammlung aufgenommen.",
+        translation:
+          "Modern sanat koleksiyoncusu olarak bilinen sahip, tabloyu yakın zamanda koleksiyonuna eklemişti.",
+        explanation:
+          "‘Als’ ile relativsatz, bir özelliği nitelendirir. Ana cümle Plusquamperfekt ‘hatte’.",
+      },
+    ],
+  },
+  {
+    title: "12. Relativsätze – Löst gemeinsam einen Kriminalfall",
+    sentences: [
+      {
+        text: "Die Villa, deren prunkvolle Einrichtung von dem Reichtum des Besitzers zeugte, war der Schauplatz.",
+        translation:
+          "Sahibin zenginliğini yansıtan gösterişli mobilyalara sahip villa, olay yeriydi.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, feminin, ‘Villa’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Das Gemälde, das gestohlen wurde, ist nicht wirklich verschwunden.",
+        translation: "Çalınan tablo aslında kaybolmadı.",
+        explanation:
+          "Relativpronomen ‘das’ nominativ, nötr, ‘Gemälde’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Mann, dem das Anwesen gehörte, hat den Diebstahl inszeniert.",
+        translation: "Malikâneye sahip olan adam, hırsızlığı düzenledi.",
+        explanation:
+          "Relativpronomen ‘dem’ dativ, maskulin, ‘Mann’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Hausdame, die seit zwanzig Jahren für die Familie arbeitete, keuchte erschrocken auf.",
+        translation:
+          "Yirmi yıldır aile için çalışan hizmetçi, şaşkınlıkla nefesini tuttu.",
+        explanation:
+          "Relativpronomen ‘die’ nominativ, feminin, ‘Hausdame’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Butler, dessen Gesicht bisher keine Regung gezeigt hatte, runzelte die Stirn.",
+        translation:
+          "Yüzü şimdiye kadar hiçbir tepki göstermeyen uşak, kaşlarını çattı.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Butler’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Die Versicherungssumme, für die das Gemälde angeblich nicht versichert war, existiert tatsächlich.",
+        translation:
+          "Tablonun sözde sigortalanmadığı sigorta miktarı aslında mevcut.",
+        explanation:
+          "Relativpronomen ‘die’ akkusativ, feminin, ‘Versicherungssumme’ için, prep. ‘für’. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Alarmanlage, die angeblich manipuliert wurde, hat man absichtlich deaktiviert.",
+        translation:
+          "Sözde manipüle edilen alarm sistemi, kasıtlı olarak devre dışı bırakılmıştı.",
+        explanation:
+          "Relativpronomen ‘die’ nominativ, feminin, ‘Alarmanlage’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Besitzer, den alle bisher für das Opfer gehalten hatten, wurde blass.",
+        translation: "Herkesin şimdiye kadar kurban sandığı sahip, soldu.",
+        explanation:
+          "Relativpronomen ‘den’ akkusativ, maskulin, ‘Besitzer’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Finanzunterlagen, die wir überprüft haben, zeigen erhebliche Schulden.",
+        translation: "İncelediğimiz mali kayıtlar, büyük borçları gösteriyor.",
+        explanation:
+          "Relativpronomen ‘die’ akkusativ, feminin, ‘Finanzunterlagen’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Nichte, deren Auto in der Nähe gesehen wurde, hat das Gemälde auf Anweisung ihres Onkels in Sicherheit gebracht.",
+        translation:
+          "Arabası yakınlarda görülen yeğen, amcasının talimatıyla tabloyu güvenli bir yere taşıdı.",
+        explanation:
+          "Relativpronomen ‘deren’ genitiv, feminin, ‘Nichte’ için, sahip olmayı belirtir.",
+      },
+      {
+        text: "Der Keller des Nachbarhauses, worin wir heute Morgen gesucht haben, enthielt einen Geheimgang.",
+        translation:
+          "Bu sabah aradığımız komşu evin bodrumu, gizli bir geçit içeriyordu.",
+        explanation:
+          "Relativpronomen ‘worin’ prep. ‘in’ ile, maskulin ‘Keller’ için, yeri belirtir.",
+      },
+      {
+        text: "Der Besitzer, dessen Nervosität nun offensichtlich war, brach zusammen.",
+        translation: "Gerginliği artık açık olan sahip, çöktü.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Besitzer’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Das Gemälde, das ich vor einem Jahr erworben habe, hat mich finanziell ruiniert.",
+        translation:
+          "Bir yıl önce satın aldığım tablo, beni mali olarak mahvetti.",
+        explanation:
+          "Relativpronomen ‘das’ akkusativ, nötr, ‘Gemälde’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Schulden, die ich angehäuft habe, konnte ich nicht mehr bedienen.",
+        translation: "Biriktirdiğim borçları artık ödeyemedim.",
+        explanation:
+          "Relativpronomen ‘die’ akkusativ, feminin, ‘Schulden’ için. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Plan, auf den Sie so stolz waren, hatte einen entscheidenden Fehler.",
+        translation:
+          "Çok gurur duyduğunuz planın belirleyici bir hatası vardı.",
+        explanation:
+          "Relativpronomen ‘den’ akkusativ, maskulin, ‘Plan’ için, prep. ‘auf’. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Überwachungskamera des Nachbarhauses, an die Sie nicht gedacht hatten, hat alles aufgezeichnet.",
+        translation:
+          "Düşünmediğiniz komşu evin güvenlik kamerası her şeyi kaydetmiş.",
+        explanation:
+          "Relativpronomen ‘die’ akkusativ, feminin, ‘Überwachungskamera’ için, prep. ‘an’. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Die Assistentin, mit der Weber den Fall gelöst hatte, lächelte zufrieden.",
+        translation: "Weber’in davayı çözdüğü asistan, memnuniyetle gülümsedi.",
+        explanation:
+          "Relativpronomen ‘der’ dativ, feminin, ‘Assistentin’ için, prep. ‘mit’. Nebensatz tanımlayıcı.",
+      },
+      {
+        text: "Der Versicherungsbetrug, als der sich dieser Fall herausgestellt hat, wird nun juristisch verfolgt werden.",
+        translation:
+          "Bu davanın bir sigorta dolandırıcılığı olduğu ortaya çıktı ve şimdi hukuken takip edilecek.",
+        explanation:
+          "‘Als’ ile relativsatz, bir özelliği nitelendirir. Ana cümle Futur I ‘wird’.",
+      },
+      {
+        text: "Der Fall in Bad Reichenhall, dessen Lösung einfacher erschien, als sie tatsächlich war, fand damit sein Ende.",
+        translation:
+          "Bad Reichenhall’daki dava, çözümü göründüğünden daha basit gibiydi, böylece sona erdi.",
+        explanation:
+          "Relativpronomen ‘dessen’ genitiv, maskulin, ‘Fall’ için, özelliğe işaret eder.",
+      },
+      {
+        text: "Die Villa, in der sich das Drama abgespielt hatte, würde bald neue Besitzer finden.",
+        translation: "Dramın yaşandığı villa, yakında yeni sahipler bulacaktı.",
+        explanation:
+          "Relativpronomen ‘der’ dativ, feminin, ‘Villa’ için, prep. ‘in’. Nebensatz tanımlayıcı.",
+      },
+    ],
+  },
 ];
 
 function Gramatik() {
   const [modalContent, setModalContent] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  // Save scroll position to localStorage on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+      localStorage.setItem("scrollPosition", window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Restore scroll position when component mounts
+  useEffect(() => {
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      window.scrollTo({ top: parseInt(savedScrollPosition), behavior: "auto" });
+    }
+  }, []);
 
   const handleSentenceClick = (sentence, translation, explanation) => {
+    setScrollPosition(window.scrollY);
+    localStorage.setItem("scrollPosition", window.scrollY); // Save position before opening modal
     setModalContent({ sentence, translation, explanation });
   };
 
   const closeModal = () => {
     setModalContent(null);
+    // Scroll to the saved position
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPosition, behavior: "auto" });
+    }, 0);
   };
 
   return (
@@ -4702,6 +7588,7 @@ function Gramatik() {
             </div>
           ))}
         </div>
+
         {modalContent && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-white rounded-lg p-6 max-w-md w-full">
