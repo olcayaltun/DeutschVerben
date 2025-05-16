@@ -20,10 +20,12 @@ import Kitap5 from "../../Components/Buch/Kitap5";
 import Edat from "../../Components/Buch/Edat";
 import Sifat2 from "../../Components/Buch/Sifat2";
 import Test from "../../Components/Buch/Test2";
-import Konusma from "../../Components/Buch/Konusma";
+import KonusmakA from "../../Components/Konusmak/KonusmakA";
 import Edat2 from "../../Components/Buch/Edat2";
 import Gramatik from "../../Components/Buch/Granmatik";
 import Sifat3 from "../../Components/Buch/Sifat3";
+import Makale from "../../Components/Buch/makale/makale";
+
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
 
@@ -48,10 +50,11 @@ const components = {
   Edat,
   Sifat2,
   Test,
-  Konusma,
+  KonusmakA,
   Edat2,
   Gramatik,
   Sifat3,
+  Makale,
   // ... add Buch3 to Buch30
 };
 

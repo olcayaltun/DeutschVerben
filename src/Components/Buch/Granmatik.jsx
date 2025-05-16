@@ -7517,6 +7517,731 @@ const textData = [
       },
     ],
   },
+  {
+    title: "1. Doppelkonnektoren",
+    sentences: [
+      {
+        text: "Professor Weber saß an seinem Schreibtisch, während Lukas ungeduldig im Türrahmen wartete.",
+        translation:
+          "Profesör Weber masasında oturuyordu, bu sırada Lukas sabırsızca kapı eşiğinde bekliyordu.",
+        explanation:
+          "‘Während’ doppelkonnektor, eşzamanlı eylemi belirtir. Ana cümle Präteritum ‘saß’.",
+      },
+      {
+        text: "Sowohl die Universität als auch das Museum sind an der Entdeckung interessiert.",
+        translation: "Hem üniversite hem de müze keşifle ilgileniyor.",
+        explanation:
+          "‘Sowohl…als auch’ doppelkonnektor, iki unsuru bağlar. Ana cümle Präsens ‘sind’.",
+      },
+      {
+        text: "Einerseits benötigen wir finanzielle Unterstützung, andererseits wollen wir die wissenschaftliche Unabhängigkeit bewahren.",
+        translation:
+          "Bir yandan mali destek gerekiyor, diğer yandan bilimsel bağımsızlığı korumak istiyoruz.",
+        explanation:
+          "‘Einerseits…andererseits’ doppelkonnektor, iki karşıt durumu ifade eder. Ana cümle Präsens ‘benötigen’, ‘wollen’.",
+      },
+      {
+        text: "Je länger wir warten, desto schwieriger wird es, das Manuskript zu finden.",
+        translation:
+          "Ne kadar uzun beklersek, elyazmasını bulmak o kadar zorlaşır.",
+        explanation:
+          "‘Je…desto’ doppelkonnektor, orantılı ilişkiyi belirtir. Ana cümle Futur I ‘wird’.",
+      },
+      {
+        text: "Zwar haben wir nur begrenzte Ressourcen, dennoch sollten wir bald aufbrechen.",
+        translation:
+          "Gerçi sadece sınırlı kaynaklarımız var, yine de yakında yola çıkmalıyız.",
+        explanation:
+          "‘Zwar…dennoch’ doppelkonnektor, bir zıtlığı ifade eder. Ana cümle Präsens ‘sollten’.",
+      },
+    ],
+  },
+  {
+    title: "2. Negationswörter",
+    sentences: [
+      {
+        text: "Niemand hat bisher das vollständige Manuskript gesehen.",
+        translation: "Şimdiye kadar kimse tam elyazmasını görmedi.",
+        explanation:
+          "‘Niemand’ negationswort, özne olarak tüm kişileri reddeder. Ana cümle Perfekt ‘hat’.",
+      },
+      {
+        text: "Nichts ist wichtiger als diese Entdeckung.",
+        translation: "Bu keşiften daha önemli hiçbir şey yok.",
+        explanation:
+          "‘Nichts’ negationswort, nesne olarak tüm varlıkları reddeder. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Ich habe niemals an seiner Existenz gezweifelt.",
+        translation: "Onun varlığından asla şüphe etmedim.",
+        explanation:
+          "‘Niemals’ negationswort, zaman açısından reddeder. Ana cümle Perfekt ‘habe’.",
+      },
+      {
+        text: "Keiner der früheren Expeditionsleiter hat je die richtige Stelle gefunden.",
+        translation: "Önceki sefer liderlerinden hiçbiri doğru yeri bulamadı.",
+        explanation:
+          "‘Keiner’ negationswort, belirli bir grubu reddeder. Ana cümle Perfekt ‘hat’.",
+      },
+      {
+        text: "Wir haben keinerlei Garantie für Erfolg.",
+        translation: "Başarı için hiçbir garantimiz yok.",
+        explanation:
+          "‘Keinerlei’ negationswort, herhangi bir türü reddeder. Ana cümle Präsens ‘haben’.",
+      },
+      {
+        text: "Ich bin keineswegs entmutigt, aber wir sollten nicht übereilt handeln.",
+        translation: "Kesinlikle cesaretim kırılmadı, ama acele etmemeliyiz.",
+        explanation:
+          "‘Keineswegs’ negationswort, bir durumu tamamen reddeder. Ana cümle Präsens ‘bin’.",
+      },
+    ],
+  },
+  {
+    title: "3. Wörter mit irgend-",
+    sentences: [
+      {
+        text: "Hat irgendjemand die Übersetzung überprüft?",
+        translation: "Birisi çeviriyi kontrol etti mi?",
+        explanation:
+          "‘Irgendjemand’ belirsiz zamir, belirli olmayan bir kişiyi ifade eder. Ana cümle Perfekt ‘hat’.",
+      },
+      {
+        text: "Nein, das hat noch niemand getan.",
+        translation: "Hayır, bunu henüz kimse yapmadı.",
+        explanation:
+          "‘Niemand’ ile ‘irgendjemand’a yanıt, eylemi reddeder. Ana cümle Perfekt ‘hat’.",
+      },
+      {
+        text: "Irgendwann müssen wir das nachholen.",
+        translation: "Bir ara bunu telafi etmeliyiz.",
+        explanation:
+          "‘Irgendwann’ belirsiz zaman zarfı, belirli olmayan bir zamanı belirtir. Ana cümle Präsens ‘müssen’.",
+      },
+      {
+        text: "Irgendwie habe ich das Gefühl, dass wir irgendwo einen Hinweis übersehen haben.",
+        translation:
+          "Nedense bir ipucunu gözden kaçırdığımız hissine kapılıyorum.",
+        explanation:
+          "‘Irgendwie’ belirsiz zarf, yöntemi; ‘irgendwo’ belirsiz yer zarfı, yeri belirtir. Ana cümle Präsens ‘habe’.",
+      },
+      {
+        text: "Wir könnten irgendwelche wichtigen Details übersehen haben.",
+        translation: "Bazı önemli detayları gözden kaçırmış olabiliriz.",
+        explanation:
+          "‘Irgendwelche’ belirsiz sıfat, belirli olmayan nesneleri niteler. Ana cümle Konjunktiv II ‘könnten’.",
+      },
+      {
+        text: "Ich überprüfe es irgendwann heute Nachmittag.",
+        translation: "Bunu bugün öğleden sonra bir ara kontrol ederim.",
+        explanation:
+          "‘Irgendwann’ belirsiz zaman zarfı, belirli olmayan zaman dilimini ifade eder. Ana cümle Präsens ‘überprüfe’.",
+      },
+    ],
+  },
+  {
+    title: "4. Position und Direktion",
+    sentences: [
+      {
+        text: "Die Karte liegt oben auf dem Schrank.",
+        translation: "Harita dolabın üstünde duruyor.",
+        explanation:
+          "‘Oben’ pozisyon zarfı, yeri belirtir. Ana cümle Präsens ‘liegt’.",
+      },
+      {
+        text: "Gehen Sie geradeaus durch den Korridor und dann links die Treppe hinauf.",
+        translation:
+          "Koridordan düz gidin ve sonra sola dönüp merdivenlerden yukarı çıkın.",
+        explanation:
+          "‘Geradeaus’, ‘links’, ‘hinauf’ direktion zarfları, yönü belirtir. Ana cümle Imperativ ‘gehen’.",
+      },
+      {
+        text: "Das Archiv befindet sich unten im Keller.",
+        translation: "Arşiv bodrum katında yer alıyor.",
+        explanation:
+          "‘Unten’ pozisyon zarfı, yeri belirtir. Ana cümle Präsens ‘befindet’.",
+      },
+      {
+        text: "Die wertvollsten Dokumente sind drinnen im Safe.",
+        translation: "En değerli belgeler kasanın içinde.",
+        explanation:
+          "‘Drinnen’ pozisyon zarfı, iç mekânı belirtir. Ana cümle Präsens ‘sind’.",
+      },
+      {
+        text: "Ich stelle die Materialien hierhin.",
+        translation: "Malzemeleri buraya koyuyorum.",
+        explanation:
+          "‘Hierhin’ direktion zarfı, hedef yeri belirtir. Ana cümle Präsens ‘stelle’.",
+      },
+      {
+        text: "Dorthin kommen die Übersetzungen.",
+        translation: "Çeviriler oraya konacak.",
+        explanation:
+          "‘Dorthin’ direktion zarfı, hedef yeri ifade eder. Ana cümle Präsens ‘kommen’.",
+      },
+      {
+        text: "Der Professor will, dass alles aufwärts sortiert wird.",
+        translation:
+          "Profesör her şeyin eskiden yeniye doğru sıralanmasını istiyor.",
+        explanation:
+          "‘Aufwärts’ direktion zarfı, sıralama yönünü belirtir. Ana cümle Präsens ‘will’.",
+      },
+    ],
+  },
+  {
+    title: "5. Es",
+    sentences: [
+      {
+        text: "Es regnete, als Lukas am nächsten Morgen aufbrach.",
+        translation: "Lukas ertesi sabah yola çıktığında yağmur yağıyordu.",
+        explanation:
+          "‘Es’ hava durumu için yalın özne. Ana cümle Präteritum ‘regnete’.",
+      },
+      {
+        text: "Es handelte sich um eine komplizierte Forschungsreise.",
+        translation: "Bu karmaşık bir araştırma yolculuğuydu.",
+        explanation:
+          "‘Es’ sabit ifadede (‘sich handeln um’), durumu tanımlar. Ana cümle Präteritum ‘handelte’.",
+      },
+      {
+        text: "Es gab zahlreiche Hindernisse zu überwinden.",
+        translation: "Aşılması gereken çok sayıda engel vardı.",
+        explanation:
+          "‘Es’ yalın özne, varlığı belirtir. Ana cümle Präteritum ‘gab’.",
+      },
+      {
+        text: "Es ist wichtig, alle Dokumente zu sichern.",
+        translation: "Tüm belgeleri güvence altına almak önemli.",
+        explanation:
+          "‘Es’ yalın özne, sıfat cümlesinde önem ifade eder. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Es fehlte an präzisen Übersetzungen.",
+        translation: "Hassas çeviriler eksikti.",
+        explanation:
+          "‘Es’ yalın özne, eksikliği ifade eder. Ana cümle Präteritum ‘fehlte’.",
+      },
+      {
+        text: "Es wurde Abend, bevor er alle Vorbereitungen abgeschlossen hatte.",
+        translation: "Tüm hazırlıkları tamamlamadan akşam oldu.",
+        explanation:
+          "‘Es’ zamanı ifade eden yalın özne. Ana cümle Präteritum ‘wurde’.",
+      },
+      {
+        text: "Es freut mich, dass Sie so engagiert sind.",
+        translation: "Bu kadar hevesli olmanız beni sevindiriyor.",
+        explanation:
+          "‘Es’ yalın özne, duygu ifade eder. Ana cümle Präsens ‘freut’.",
+      },
+      {
+        text: "Es klang, als sei er zufrieden.",
+        translation: "Sanki memnunmuş gibi geliyordu.",
+        explanation:
+          "‘Es’ yalın özne, bir izlenimi ifade eder. Ana cümle Präteritum ‘klang’.",
+      },
+    ],
+  },
+  {
+    title: "6. Funktionsverbgefüge 1",
+    sentences: [
+      {
+        text: "Der Professor brachte seine Bedenken zum Ausdruck.",
+        translation: "Profesör endişelerini dile getirdi.",
+        explanation:
+          "‘Zum Ausdruck bringen’ funktionsverbgefüge, görüş bildirmeyi ifade eder. Ana cümle Präteritum ‘brachte’.",
+      },
+      {
+        text: "Wir müssen Rücksicht auf die lokalen Behörden nehmen.",
+        translation: "Yerel makamlara saygı göstermeliyiz.",
+        explanation:
+          "‘Rücksicht nehmen’ funktionsverbgefüge, dikkat etmeyi ifade eder. Ana cümle Präsens ‘müssen’.",
+      },
+      {
+        text: "Kontakt mit ihnen aufnehmen.",
+        translation: "Onlarla iletişime geçmek.",
+        explanation:
+          "‘Kontakt aufnehmen’ funktionsverbgefüge, iletişim kurmayı ifade eder. Ana cümle Infinitiv.",
+      },
+      {
+        text: "Ich werde die Verantwortung übernehmen.",
+        translation: "Sorumluluğu üstleneceğim.",
+        explanation:
+          "‘Verantwortung übernehmen’ funktionsverbgefüge, yükümlülük almayı ifade eder. Ana cümle Futur I ‘werde’.",
+      },
+      {
+        text: "Zur Verfügung stehen, falls Fragen auftauchen.",
+        translation: "Sorular çıkarsa hazır bulunmak.",
+        explanation:
+          "‘Zur Verfügung stehen’ funktionsverbgefüge, erişilebilir olmayı ifade eder. Ana cümle Infinitiv.",
+      },
+      {
+        text: "Die Universität stellte finanzielle Mittel zur Verfügung.",
+        translation: "Üniversite mali kaynak sağladı.",
+        explanation:
+          "‘Zur Verfügung stellen’ funktionsverbgefüge, kaynak sağlamayı ifade eder. Ana cümle Präteritum ‘stellte’.",
+      },
+      {
+        text: "In Betracht ziehen, dass die Expedition länger dauern könnte.",
+        translation: "Seferin daha uzun sürebileceğini dikkate almak.",
+        explanation:
+          "‘In Betracht ziehen’ funktionsverbgefüge, olasılığı değerlendirmeyi ifade eder. Ana cümle Infinitiv.",
+      },
+      {
+        text: "Wir sollten das Risiko in Kauf nehmen.",
+        translation: "Riski göze almalıyız.",
+        explanation:
+          "‘In Kauf nehmen’ funktionsverbgefüge, risk kabul etmeyi ifade eder. Ana cümle Präsens ‘sollten’.",
+      },
+    ],
+  },
+  {
+    title: "7. Funktionsverbgefüge 2",
+    sentences: [
+      {
+        text: "Die Expedition geriet ins Stocken, als ein Unwetter Schaden anrichtete.",
+        translation: "Bir fırtına zarar verdiğinde sefer aksadı.",
+        explanation:
+          "‘Ins Stocken geraten’ funktionsverbgefüge, ilerlemenin durmasını ifade eder. Ana cümle Präteritum ‘geriet’.",
+      },
+      {
+        text: "Lukas musste seine Pläne in Einklang mit den neuen Umständen bringen.",
+        translation:
+          "Lukas planlarını yeni koşullarla uyumlu hale getirmek zorundaydı.",
+        explanation:
+          "‘In Einklang bringen’ funktionsverbgefüge, uyum sağlamayı ifade eder. Ana cümle Präteritum ‘musste’.",
+      },
+      {
+        text: "Wir müssen die Situation unter Kontrolle bringen.",
+        translation: "Durumu kontrol altına almalıyız.",
+        explanation:
+          "‘Unter Kontrolle bringen’ funktionsverbgefüge, hâkimiyet kurmayı ifade eder. Ana cümle Präsens ‘müssen’.",
+      },
+      {
+        text: "Die Forscher zogen die Möglichkeit in Erwägung, die Route zu ändern.",
+        translation:
+          "Araştırmacılar rotayı değiştirme olasılığını değerlendirdi.",
+        explanation:
+          "‘In Erwägung ziehen’ funktionsverbgefüge, bir seçeneği düşünmeyi ifade eder. Ana cümle Präteritum ‘zogen’.",
+      },
+      {
+        text: "Alles stand auf dem Spiel.",
+        translation: "Her şey tehlikede idi.",
+        explanation:
+          "‘Auf dem Spiel stehen’ funktionsverbgefüge, risk altında olmayı ifade eder. Ana cümle Präteritum ‘stand’.",
+      },
+      {
+        text: "Sie setzten ihre Hoffnung darauf, dass das Wetter sich bessern würde.",
+        translation: "Havanın düzeleceğine dair umut beslediler.",
+        explanation:
+          "‘Hoffnung setzen’ funktionsverbgefüge, umut bağlamayı ifade eder. Ana cümle Präteritum ‘setzten’.",
+      },
+      {
+        text: "Der Professor hielt mit seiner Meinung nicht zurück.",
+        translation: "Profesör fikrini sakınmadı.",
+        explanation:
+          "‘Zurückhalten’ funktionsverbgefüge, gizlememeyi ifade eder. Ana cümle Präteritum ‘hielt’.",
+      },
+      {
+        text: "Wir müssen die Entscheidung in Angriff nehmen.",
+        translation: "Kararı hayata geçirmeliyiz.",
+        explanation:
+          "‘In Angriff nehmen’ funktionsverbgefüge, bir eylemi başlatmayı ifade eder. Ana cümle Präsens ‘müssen’.",
+      },
+    ],
+  },
+  {
+    title: "8. Wörter mit da-",
+    sentences: [
+      {
+        text: "Darüber habe ich schon nachgedacht.",
+        translation: "Bunu zaten düşündüm.",
+        explanation:
+          "‘Darüber’ da-kelimesi, ‘über’ prep. ile düşünce konusunu belirtir. Ana cümle Perfekt ‘habe’.",
+      },
+      {
+        text: "Damit kommen wir nicht weiter.",
+        translation: "Bununla ilerleyemeyiz.",
+        explanation:
+          "‘Damit’ da-kelimesi, ‘mit’ prep. ile aracı reddeder. Ana cümle Präsens ‘kommen’.",
+      },
+      {
+        text: "Darin liegt das Problem.",
+        translation: "Sorun burada yatıyor.",
+        explanation:
+          "‘Darin’ da-kelimesi, ‘in’ prep. ile sorunu belirtir. Ana cümle Präsens ‘liegt’.",
+      },
+      {
+        text: "Daran arbeite ich bereits.",
+        translation: "Bunun üzerinde zaten çalışıyorum.",
+        explanation:
+          "‘Daran’ da-kelimesi, ‘an’ prep. ile çalışılan konuyu ifade eder. Ana cümle Präsens ‘arbeite’.",
+      },
+      {
+        text: "Davon hängt unser Erfolg ab.",
+        translation: "Başarımız buna bağlı.",
+        explanation:
+          "‘Davon’ da-kelimesi, ‘von’ prep. ile bağımlılığı belirtir. Ana cümle Präsens ‘hängt’.",
+      },
+      {
+        text: "Daraus können wir lernen.",
+        translation: "Bundan ders çıkarabiliriz.",
+        explanation:
+          "‘Daraus’ da-kelimesi, ‘aus’ prep. ile öğrenme kaynağını belirtir. Ana cümle Präsens ‘können’.",
+      },
+      {
+        text: "Damit zukünftige Expeditionen erfolgreicher sind.",
+        translation: "Böylece gelecekteki seferler daha başarılı olur.",
+        explanation:
+          "‘Damit’ da-kelimesi, amaç bağlacı, sonucu ifade eder. Ana cümle Präsens ‘sind’.",
+      },
+    ],
+  },
+  {
+    title: "9. Modalpartikeln",
+    sentences: [
+      {
+        text: "Das Manuskript ist ja angeblich in einer Höhle versteckt.",
+        translation: "Elyazması güya bir mağarada gizliymiş.",
+        explanation:
+          "‘Ja’ modalpartikel, şüphe veya söylenti vurgular. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Wir haben doch alle Hinweise sorgfältig geprüft.",
+        translation: "Tüm ipuçlarını dikkatle incelemedik mi zaten?",
+        explanation:
+          "‘Doch’ modalpartikel, doğruluğu hatırlatır. Ana cümle Perfekt ‘haben’.",
+      },
+      {
+        text: "Es war halt nicht so einfach wie gedacht.",
+        translation: "İşte düşündüğümüz kadar basit değildi.",
+        explanation:
+          "‘Halt’ modalpartikel, durumu kabullenmeyi vurgular. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Die Koordinaten waren eben falsch übersetzt.",
+        translation: "Koordinatlar işte yanlış çevrilmiş.",
+        explanation:
+          "‘Eben’ modalpartikel, bir gerçeği vurgular. Ana cümle Präteritum ‘waren’.",
+      },
+      {
+        text: "Wir sollten mal die alternative Route prüfen.",
+        translation: "Bir alternatif rotayı kontrol etsek iyi olur.",
+        explanation:
+          "‘Mal’ modalpartikel, öneriyi hafifletir. Ana cümle Präsens ‘sollten’.",
+      },
+      {
+        text: "Das ist eigentlich ganz logisch, wenn man die alten Karten betrachtet.",
+        translation: "Eski haritalara bakarsan bu aslında tamamen mantıklı.",
+        explanation:
+          "‘Eigentlich’ modalpartikel, mantığı vurgular. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Die ursprüngliche Theorie war schon ziemlich gewagt.",
+        translation: "Orijinal teori zaten epey cesurdu.",
+        explanation:
+          "‘Schon’ modalpartikel, değerlendirmeyi güçlendirir. Ana cümle Präteritum ‘war’.",
+      },
+    ],
+  },
+  {
+    title: "10. Nominalisierung",
+    sentences: [
+      {
+        text: "Die Entdeckung des Manuskripts erfolgte durch sie.",
+        translation: "Elyazmasının keşfi onlar tarafından gerçekleşti.",
+        explanation:
+          "‘Entdeckung’ nominalisierung, fiil ‘entdecken’den. Ana cümle Präteritum ‘erfolgte’.",
+      },
+      {
+        text: "Die Erforschung der alten Schriften war die Aufgabe des Professors.",
+        translation: "Eski yazıların araştırılması profesörün göreviydi.",
+        explanation:
+          "‘Erforschung’ nominalisierung, fiil ‘erforschen’den. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Die präzise Übersetzung des Textes verdanken wir Lukas.",
+        translation: "Metnin hassas çevirisini Lukas’a borçluyuz.",
+        explanation:
+          "‘Übersetzung’ nominalisierung, fiil ‘übersetzen’den. Ana cümle Präsens ‘verdanken’.",
+      },
+      {
+        text: "Die Überwindung aller Hindernisse gelang dem Team.",
+        translation: "Tüm engellerin aşılması ekibe nasip oldu.",
+        explanation:
+          "‘Überwindung’ nominalisierung, fiil ‘überwinden’den. Ana cümle Präteritum ‘gelang’.",
+      },
+    ],
+  },
+  {
+    title: "11. Links- und Rechtsattribute",
+    sentences: [
+      {
+        text: "Der Professor, der jahrelang geforscht hatte, fand endlich das gesuchte, jahrhundertealte Manuskript.",
+        translation:
+          "Yıllarca araştırma yapmış olan profesör, nihayet aranan, yüzyıllık elyazmasını buldu.",
+        explanation:
+          "‘Der jahrelang geforscht hatte’ linksattribut, relativsatz; ‘gesuchte, jahrhundertealte’ rechtsattribut, sıfat tamlaması.",
+      },
+      {
+        text: "Die in der Höhle versteckte, mit seltsamen Symbolen verzierte Schriftrolle enthielt die vom Team lang ersehnten Informationen.",
+        translation:
+          "Mağarada gizlenmiş, tuhaf sembollerle süslenmiş yazıt rulosu, ekibin uzun süredir beklediği bilgileri içeriyordu.",
+        explanation:
+          "‘In der Höhle versteckte, mit seltsamen Symbolen verzierte’ linksattribut, Partizip I; ‘vom Team lang ersehnten’ rechtsattribut, sıfat tamlaması.",
+      },
+      {
+        text: "Lukas, ein erfahrener Linguist mit ausgezeichneten Kenntnissen alter Sprachen, begann sofort mit der Übersetzung des in einer unbekannten Sprache verfassten Textes.",
+        translation:
+          "Eski dillerde mükemmel bilgiye sahip deneyimli bir dilbilimci olan Lukas, bilinmeyen bir dilde yazılmış metnin çevirisine hemen başladı.",
+        explanation:
+          "‘Ein erfahrener Linguist mit ausgezeichneten Kenntnissen alter Sprachen’ linksattribut, apozisyon; ‘in einer unbekannten Sprache verfassten’ rechtsattribut, Partizip II.",
+      },
+    ],
+  },
+  {
+    title: "12. Präposition – Adverb – Konnektor 1",
+    sentences: [
+      {
+        text: "Trotz der Schwierigkeiten kommen wir voran.",
+        translation: "Zorluklara rağmen ilerliyoruz.",
+        explanation:
+          "‘Trotz’ präposition, engeli belirtir. Ana cümle Präsens ‘kommen’.",
+      },
+      {
+        text: "Trotzdem müssen wir vorsichtig sein.",
+        translation: "Yine de dikkatli olmalıyız.",
+        explanation:
+          "‘Trotzdem’ konnektor, zıtlığı ifade eder. Ana cümle Präsens ‘müssen’.",
+      },
+      {
+        text: "Während der Expedition haben wir viel gelernt.",
+        translation: "Sefer sırasında çok şey öğrendik.",
+        explanation:
+          "‘Während’ präposition, zamanı belirtir. Ana cümle Perfekt ‘haben’.",
+      },
+      {
+        text: "Währenddessen haben wir wichtige Entdeckungen gemacht.",
+        translation: "Bu arada önemli keşifler yaptık.",
+        explanation:
+          "‘Währenddessen’ adverb, eşzamanlılığı ifade eder. Ana cümle Perfekt ‘haben’.",
+      },
+      {
+        text: "Wegen des schlechten Wetters mussten wir umkehren.",
+        translation: "Kötü hava nedeniyle geri dönmek zorunda kaldık.",
+        explanation:
+          "‘Wegen’ präposition, nedeni belirtir. Ana cümle Präteritum ‘mussten’.",
+      },
+      {
+        text: "Deswegen haben wir Zeit verloren.",
+        translation: "Bu yüzden zaman kaybettik.",
+        explanation:
+          "‘Deswegen’ konnektor, sonucu ifade eder. Ana cümle Perfekt ‘haben’.",
+      },
+    ],
+  },
+  {
+    title: "13. Präposition – Adverb – Konnektor 2",
+    sentences: [
+      {
+        text: "Anstatt aufzugeben, finden wir einen neuen Weg.",
+        translation: "Vazgeçmek yerine yeni bir yol buluyoruz.",
+        explanation:
+          "‘Anstatt’ präposition, alternatifi reddeder. Ana cümle Präsens ‘finden’.",
+      },
+      {
+        text: "Stattdessen konzentrieren wir uns auf die zweite Höhle.",
+        translation: "Onun yerine ikinci mağaraya odaklanıyoruz.",
+        explanation:
+          "‘Stattdessen’ adverb, alternatifi ifade eder. Ana cümle Präsens ‘konzentrieren’.",
+      },
+      {
+        text: "Seit unserer Ankunft haben wir viel erreicht.",
+        translation: "Varışımızdan beri çok şey başardık.",
+        explanation:
+          "‘Seit’ präposition, zaman dilimini belirtir. Ana cümle Perfekt ‘haben’.",
+      },
+      {
+        text: "Seitdem ist eine Woche vergangen.",
+        translation: "O zamandan beri bir hafta geçti.",
+        explanation:
+          "‘Seitdem’ konnektor, zaman geçişini ifade eder. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Nach dem Fund müssen wir alles dokumentieren.",
+        translation: "Buluntudan sonra her şeyi belgele meliyiz.",
+        explanation:
+          "‘Nach’ präposition, sırayı belirtir. Ana cümle Präsens ‘müssen’.",
+      },
+      {
+        text: "Nachdem wir das erledigt haben, kehren wir zurück.",
+        translation: "Bunu hallettikten sonra geri döneriz.",
+        explanation:
+          "‘Nachdem’ konnektor, tamamlanan bir eylemi ifade eder. Ana cümle Futur I ‘kehren’.",
+      },
+    ],
+  },
+  {
+    title: "14. Präposition – Adverb – Konnektor 3",
+    sentences: [
+      {
+        text: "Ich arbeite mit Ihnen zusammen. Mithin teilen wir die Verantwortung.",
+        translation:
+          "Sizinle birlikte çalışıyorum. Dolayısıyla sorumluluğu paylaşıyoruz.",
+        explanation:
+          "‘Mithin’ konnektor, sonucu mantıksal olarak bağlar. Ana cümle Präsens ‘teilen’.",
+      },
+      {
+        text: "Gegen alle Erwartungen haben wir es geschafft!",
+        translation: "Tüm beklentilere karşı başardık!",
+        explanation:
+          "‘Gegen’ präposition, zıtlığı belirtir. Ana cümle Perfekt ‘haben’.",
+      },
+      {
+        text: "Dagegen kann niemand etwas einwenden.",
+        translation: "Buna kimse itiraz edemez.",
+        explanation:
+          "‘Dagegen’ adverb, karşı çıkmayı reddeder. Ana cümle Präsens ‘kann’.",
+      },
+      {
+        text: "Innerhalb der Höhle ist es kühl.",
+        translation: "Mağaranın içinde serin.",
+        explanation:
+          "‘Innerhalb’ präposition, mekân sınırını belirtir. Ana cümle Präsens ‘ist’.",
+      },
+      {
+        text: "Innerhalb von Stunden werden wir die Übersetzung abschließen.",
+        translation: "Saatler içinde çeviriyi tamamlayacağız.",
+        explanation:
+          "‘Innerhalb’ präposition, zaman sınırını belirtir. Ana cümle Futur I ‘werden’.",
+      },
+    ],
+  },
+  {
+    title: "15. Kommaregeln",
+    sentences: [
+      {
+        text: "Die Expedition, die monatelang vorbereitet wurde, begann endlich.",
+        translation: "Aylar boyunca hazırlanan sefer nihayet başladı.",
+        explanation:
+          "Relativsatz ‘die monatelang vorbereitet wurde’ virgülle ayrılır, ek bilgi verir. Ana cümle Präteritum ‘begann’.",
+      },
+      {
+        text: "Lukas, ein erfahrener Archäologe, führte das Team an.",
+        translation: "Deneyimli bir arkeolog olan Lukas, ekibi yönetti.",
+        explanation:
+          "Apozisyon ‘ein erfahrener Archäologe’ virgülle ayrılır, tanımlayıcı bilgi. Ana cümle Präteritum ‘führte’.",
+      },
+      {
+        text: "Als sie die Höhle erreichten, war es bereits dunkel.",
+        translation: "Mağaraya ulaştıklarında, hava zaten kararmıştı.",
+        explanation:
+          "Temporale nebensatz ‘als sie die Höhle erreichten’ virgülle ayrılır. Ana cümle Präteritum ‘war’.",
+      },
+      {
+        text: "Der Professor, erschöpft, aber glücklich, dokumentierte jeden Schritt.",
+        translation: "Yorgun ama mutlu olan profesör, her adımı belgeledi.",
+        explanation:
+          "Ekleme ‘erschöpft, aber glücklich’ virgülle ayrılır, ek bilgi. Ana cümle Präteritum ‘dokumentierte’.",
+      },
+      {
+        text: "Das Manuskript, falls sie es fänden, würde die Geschichte umschreiben.",
+        translation: "Eğer bulurlarsa elyazması, tarihi yeniden yazacaktı.",
+        explanation:
+          "Konditionale nebensatz ‘falls sie es fänden’ virgülle ayrılır. Ana cümle Konjunktiv II ‘würde’.",
+      },
+    ],
+  },
+  {
+    title: "16. Besondere Formen der mündlichen Sprache",
+    sentences: [
+      {
+        text: "Haste die Kamera dabei?",
+        translation: "Kamerayı yanına aldın mı?",
+        explanation:
+          "‘Haste’ = ‘hast du’, konuşma dilinde kısaltma. Ana cümle Präsens, soru.",
+      },
+      {
+        text: "Klar, hab ich alles mit.",
+        translation: "Tabii, her şeyi aldım.",
+        explanation:
+          "‘Hab ich’ = ‘habe ich’, konuşma dilinde. Ana cümle Präsens.",
+      },
+      {
+        text: "Komm ma her und hilf mir!",
+        translation: "Bi’ gel de yardım et!",
+        explanation:
+          "‘Ma’ = ‘mal’, konuşma dilinde hafifletici. Ana cümle Imperativ.",
+      },
+      {
+        text: "Nu macht mal langsam, Leute.",
+        translation: "Şimdi yavaş olun, millet.",
+        explanation:
+          "‘Nu’ = ‘nun’, ‘mal’ konuşma dilinde vurgu. Ana cümle Imperativ.",
+      },
+      {
+        text: "Woll’n wir nich erstmal frühstücken?",
+        translation: "Önce kahvaltı yapmayalım mı?",
+        explanation:
+          "‘Woll’n’ = ‘wollen’, ‘nich’ = ‘nicht’, konuşma dilinde. Ana cümle Präsens, soru.",
+      },
+      {
+        text: "Ne, lieber gleich loslegen.",
+        translation: "Yok, hemen başlayalım.",
+        explanation: "‘Ne’ = ‘nein’, konuşma dilinde. Ana cümle Infinitiv.",
+      },
+      {
+        text: "’türlich müssen wir noch warten, bis es hell wird.",
+        translation: "Tabii ki hava aydınlanana kadar beklemeliyiz.",
+        explanation:
+          "‘’türlich’ = ‘natürlich’, konuşma dilinde. Ana cümle Präsens ‘müssen’.",
+      },
+    ],
+  },
+  {
+    title: "17. Anhang",
+    sentences: [
+      {
+        text: "Während sie die letzten Meter zur geheimnisvollen Kammer zurücklegten, ging Lukas die vielen grammatikalischen Strukturen durch.",
+        translation:
+          "Gizemli odaya son metreleri kat ederken, Lukas birçok dilbilgisi yapısını gözden geçirdi.",
+        explanation:
+          "‘Während’ temporale nebensatz, eşzamanlı eylemi belirtir. Ana cümle Präteritum ‘ging’.",
+      },
+      {
+        text: "Die Präpositionen mit verschiedenen Fällen, die Verben mit Präpositionen, die unregelmäßigen Verbformen – all das half ihm.",
+        translation:
+          "Farklı durumlarla prepozisyonlar, prepozisyonlu fiiller, düzensiz fiil formları – tüm bunlar ona yardımcı oldu.",
+        explanation:
+          "Sıralama, tire ile ayrılır, ek bilgi verir. Ana cümle Präteritum ‘half’.",
+      },
+      {
+        text: "Als sie schließlich vor dem verschollenen Manuskript standen, wusste er, dass sein Deutsch auf C1-Niveau ihm ermöglicht hatte, diesen Moment festzuhalten.",
+        translation:
+          "Nihayet kayıp elyazmasının önünde durduklarında, C1 seviyesindeki Almancasının bu anı kaydetmesini sağladığını biliyordu.",
+        explanation:
+          "‘Als’ temporale nebensatz, belirli bir zamanı belirtir. Ana cümle Präteritum ‘wusste’.",
+      },
+      {
+        text: "Die Satzumformungen und besonderen Wortkombinationen würden ihm helfen, einen wissenschaftlichen Artikel zu verfassen.",
+        translation:
+          "Cümle dönüşümleri ve özel kelime kombinasyonları, bilimsel bir makale yazmasına yardımcı olacaktı.",
+        explanation:
+          "Nominal ifadeler, amacı belirtir. Ana cümle Konjunktiv II ‘würden’.",
+      },
+      {
+        text: "Das Manuskript, nach dem sie so lange gesucht hatten, lag nun vor ihnen.",
+        translation: "Uzun süredir aradıkları elyazması şimdi önlerindeydi.",
+        explanation:
+          "Relativpronomen ‘dem’ dativ, nötr, ‘Manuskript’ için, prep. ‘nach’. Ana cümle Präteritum ‘lag’.",
+      },
+      {
+        text: "Bereit, seine Geheimnisse zu offenbaren.",
+        translation: "Sırlarını açığa vurmaya hazır.",
+        explanation:
+          "Infinitiv ‘offenbaren’ mit ‘zu’, final, amacı ifade eder. Ana cümle eksik, bağlamsal.",
+      },
+    ],
+  },
 ];
 
 function Gramatik() {
@@ -7572,7 +8297,7 @@ function Gramatik() {
                 {section.sentences?.map((sentence, sIndex) => (
                   <span
                     key={sIndex}
-                    className="cursor-pointer hover:bg-yellow-100 transition-colors duration-200"
+                    className="cursor-pointer hover:bg-red-300  transition-colors duration-200"
                     onClick={() =>
                       handleSentenceClick(
                         sentence.text,
