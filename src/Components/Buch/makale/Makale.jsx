@@ -1,6 +1,6 @@
 // src/components/Makale.jsx
 import React, { useState } from "react";
-import Makale1 from "./makale1";
+import Makale1 from "./Makale11";
 import Makale2 from "./Makale2";
 import Makale3 from "./Makale3";
 import Makale4 from "./Makale4";
