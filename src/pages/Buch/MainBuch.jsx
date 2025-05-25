@@ -24,7 +24,7 @@ import KonusmakA from "../../Components/Konusmak/KonusmakA";
 import Edat2 from "../../Components/Buch/Edat2";
 import Gramatik from "../../Components/Buch/Granmatik";
 import Sifat3 from "../../Components/Buch/Sifat3";
-import Makale from "../../Components/Buch/makale/makale";
+import Makale from "../../Components/Buch/makale/Makale";
 import Video from "../../Components/Buch/makale/Video";
 
 // ... import others up to Buch30
