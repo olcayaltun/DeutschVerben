@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const textContent = [
   {
@@ -379,7 +379,45 @@ function Kitap2() {
     position: { x: 0, y: 0 },
   });
 
-  // Metni parse eden fonksiyon
+  // Adjust tooltip position to stay within viewport
+  const adjustTooltipPosition = (x, y) => {
+    const tooltipWidth = 200; // Approximate width
+    const tooltipHeight = 40; // Approximate height
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    return {
+      x: Math.min(x, windowWidth - tooltipWidth),
+      y: Math.min(y, windowHeight - tooltipHeight),
+    };
+  };
+
+  // Handle click and keyboard events
+  const handleClick = (e, translation) => {
+    const rect = e.target.getBoundingClientRect();
+    const adjustedPos = adjustTooltipPosition(
+      rect.left,
+      rect.bottom + window.scrollY
+    );
+    setTooltip({
+      visible: true,
+      content: translation,
+      position: adjustedPos,
+    });
+  };
+
+  // Cleanup timeout on unmount or when tooltip visibility changes
+  useEffect(() => {
+    let timeoutId;
+    if (tooltip.visible) {
+      timeoutId = setTimeout(() => {
+        setTooltip((prev) => ({ ...prev, visible: false }));
+      }, 2000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [tooltip.visible]);
+
+  // Parse text function
   const parseText = (text, index) => {
     const regex = /\*\*([^\*]+)\*\*\s*\(([^\)]+)\)/g;
     let lastIndex = 0;
@@ -390,20 +428,22 @@ function Kitap2() {
       const [fullMatch, word, translation] = match;
       const beforeText = text.slice(lastIndex, match.index);
       if (beforeText) {
-        elements.push(<span key={`${index}-${lastIndex}`}>{beforeText}</span>);
+        elements.push(
+          <span key={`${index}-before-${lastIndex}`}>{beforeText}</span>
+        );
       }
       elements.push(
         <span
-          key={`${index}-${match.index}`}
+          key={`${index}-match-${match.index}`}
           className="font-bold text-blue-600 cursor-pointer relative"
-          onClick={(e) => {
-            const rect = e.target.getBoundingClientRect();
-            setTooltip({
-              visible: true,
-              content: translation,
-              position: { x: rect.left, y: rect.bottom + window.scrollY },
-            });
-            setTimeout(() => setTooltip({ ...tooltip, visible: false }), 2000); // 2 saniye sonra tooltip kaybolur
+          role="button"
+          aria-label={`Show translation for ${word}`}
+          tabIndex={0}
+          onClick={(e) => handleClick(e, translation)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              handleClick(e, translation);
+            }
           }}
         >
           {word}
@@ -414,7 +454,9 @@ function Kitap2() {
 
     const remainingText = text.slice(lastIndex);
     if (remainingText) {
-      elements.push(<span key={`${index}-${lastIndex}`}>{remainingText}</span>);
+      elements.push(
+        <span key={`${index}-remaining-${lastIndex}`}>{remainingText}</span>
+      );
     }
 
     return elements;
@@ -423,7 +465,7 @@ function Kitap2() {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
-        Der Neuanfang
+        Der Weg nach Hause
       </h1>
       {textContent.map((paragraph, index) => (
         <p key={index} className="mb-4 text-gray-700 leading-relaxed">
@@ -432,7 +474,7 @@ function Kitap2() {
       ))}
       {tooltip.visible && (
         <div
-          className="fixed bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg z-50"
+          className="fixed bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg z-[1000]"
           style={{ top: tooltip.position.y + 5, left: tooltip.position.x }}
         >
           {tooltip.content}

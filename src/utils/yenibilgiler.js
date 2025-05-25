@@ -393,5 +393,222 @@ const data = [
     id: 99,
     veri: "Konkurrenzunternehmen\n\n✅ Açıklama: Rakip firma, rakip şirket anlamına gelir.\nÖrnekler:\n1. Das Konkurrenzunternehmen – Rakip firma.",
   },
+  {
+    id: 2000000,
+    veri: "##########################",
+  },
+
+  {
+    id: 100,
+    veri: "Professor Müller betrat den Konferenzsaal\n\n✅ Açıklama: Türkçeye 'Profesör Müller konferans salonuna girdi' şeklinde çevrilir.\n📌 Dilbilgisel Analiz:\n- betreten: bir yere adım atmak, girmek\n- betrat: 'betreten' fiilinin Präteritum (geçmiş zaman) hali\n- Çekim: ich betrat, du betratst, er/sie/es betrat, wir betraten, ihr betratet, sie/Sie betraten\n- den Konferenzsaal: 'konferans salonu', akkusativ hali, çünkü 'betreten' yönelme fiilidir\nÖrnekler:\n1. Professor Müller betrat den Konferenzsaal. – Profesör Müller konferans salonuna girdi.",
+  },
+  {
+    id: 101,
+    veri: "füllte sich\n\n✅ Açıklama: 'sich füllen' fiilinin Präteritum hâlidir, dolmak anlamına gelir.\n📌 Yapı:\n- füllen: doldurmak\n- sich füllen: dolmak (dönüşlü fiil)\n- füllte sich: doldu (3. tekil, geçmiş zaman)\nÖrnekler:\n1. Der Saal füllte sich langsam mit Gästen. – Salon yavaş yavaş misafirlerle doldu.",
+  },
+  {
+    id: 102,
+    veri: "verstummten\n\n✅ Açıklama: 'verstummen' fiilinin Präteritum hâlidir, susmak, sessizleşmek anlamına gelir.\n📌 Kullanım: 3. çoğul (sie) için kullanılır, 'sustular' veya 'sesleri kesildi' anlamındadır.\nÖrnekler:\n1. Als der Lehrer den Raum betrat, verstummten die Schüler. – Öğretmen sınıfa girdiğinde öğrenciler sustu.",
+  },
+  {
+    id: 103,
+    veri: "verehrten\n\n✅ Açıklama: 'verehren' fiilinin Präteritum hâlidir, saygı duymak, hayran olmak anlamına gelir.\n📌 Yapı:\n- verehrten: onlar saygı duydu(lar) (3. çoğul, sie) veya siz saygı duydunuz (Höflichkeitsform)\nÖrnekler:\n1. Sie verehrten den Künstler. – Sanatçıya hayran oldular.",
+  },
+  {
+    id: 104,
+    veri: "die Ehre\n\n✅ Açıklama: Onur, şeref, saygınlık anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: die\n- Plural: die Ehren\nÖrnekler:\n1. Die Ehre – Onur, şeref.",
+  },
+  {
+    id: 105,
+    veri: "erläuterte\n\n✅ Açıklama: 'erläutern' fiilinin Präteritum hâlidir, açıklamak, izah etmek anlamına gelir.\n📌 Kullanım: Resmi veya yazılı dilde sık kullanılır.\nÖrnekler:\n1. Er erläuterte ausführlich die Gründe seiner Entscheidung. – Kararının nedenlerini ayrıntılı şekilde açıkladı.",
+  },
+  {
+    id: 106,
+    veri: "festgestellt\n\n✅ Açıklama: 'feststellen' fiilinin Partizip II hâlidir, tespit etmek, saptamak, fark etmek anlamına gelir.\nÖrnekler:\n1. Die Polizei hat den Täter schnell festgestellt. – Polis suçluyu hızlıca tespit etti.",
+  },
+  {
+    id: 107,
+    veri: "vorangeschritten\n\n✅ Açıklama: 'voranschreiten' fiilinin Partizip II hâlidir, ilerlemiş, gelişmiş anlamına gelir.\nÖrnekler:\n1. Das Projekt ist schon weit vorangeschritten. – Proje zaten oldukça ilerlemiş durumda.",
+  },
+  {
+    id: 108,
+    veri: "zuvor\n\n✅ Açıklama: Zarf, daha önce, evvelden anlamına gelir.\nÖrnekler:\n1. Ich habe ihn zuvor noch nie gesehen. – Onu daha önce hiç görmemiştim.",
+  },
+  {
+    id: 109,
+    veri: "Nachdruck\n\n✅ Açıklama: Vurgu, önem verme anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: der\n- Plural: die Nachdrücke\nÖrnekler:\n1. Er sprach mit Nachdruck über die Verantwortung. – Sorumluluk hakkında vurgulu bir şekilde konuştu.",
+  },
+  {
+    id: 110,
+    veri: "Geschwindigkeit\n\n✅ Açıklama: Hız anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: die\n- Plural: die Geschwindigkeiten\nÖrnekler:\n1. Die Geschwindigkeit des Autos war zu hoch. – Arabanın hızı çok yüksekti.",
+  },
+  {
+    id: 111,
+    veri: "massiv\n\n✅ Açıklama: Yoğun, büyük çapta, ağır, masif (katı), güçlü, şiddetli anlamına gelir.\n📌 Anlamları:\n1. Yoğun/şiddetli (soyut)\n2. Katı/saf (madde olarak)\n3. Fiziksel olarak güçlü/iri\nÖrnekler:\n1. Die Kritik war massiv. – Eleştiri çok sertti/yoğundu.\n2. Der Tisch ist aus massivem Holz. – Masa saf ağaçtan yapılmış.\n3. Er ist ein massiver Mann. – O iri yapılı bir adam.",
+  },
+  {
+    id: 112,
+    veri: "verschwenden\n\n✅ Açıklama: İsraf etmek, boşa harcamak, ziyan etmek anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: verschwenden\n- Präsens: ich verschwende, du verschwendest, er/sie/es verschwendet\n- Präteritum: ich verschwendete\n- Partizip II: verschwendet\n- Perfekt: ich habe verschwendet\nÖrnekler:\n1. Er hat sein Geld verschwendet. – Parasını boşa harcadı.",
+  },
+  {
+    id: 113,
+    veri: "ignorieren\n\n✅ Açıklama: Görmezden gelmek, yok saymak, aldırmamak anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: ignorieren\n- Präsens: ich ignoriere, du ignorierst, er/sie/es ignoriert\n- Präteritum: ich ignorierte\n- Partizip II: ignoriert\n- Perfekt: ich habe ignoriert\nÖrnekler:\n1. Er ignorierte die Warnung. – Uyarıyı görmezden geldi.",
+  },
+  {
+    id: 114,
+    veri: "ehemalig\n\n✅ Açıklama: Eski, önceki anlamına gelir.\nÖrnekler:\n1. Ein ehemaliger Kollege – Eski bir iş arkadaşı.",
+  },
+  {
+    id: 115,
+    veri: "Einen wichtigen Aspekt möchte ich noch hervorheben\n\n✅ Açıklama: Türkçeye 'Önemli bir noktayı daha vurgulamak istiyorum' şeklinde çevrilir.\nÖrnekler:\n1. Einen wichtigen Aspekt möchte ich noch hervorheben. – Önemli bir noktayı daha vurgulamak istiyorum.",
+  },
+  {
+    id: 116,
+    veri: "Die gesellschaftlichen Auswirkungen dieser sprachlichen Veränderungen müssen wir in Zukunft genauer untersuchen\n\n✅ Açıklama: Türkçeye 'Bu dilsel değişimlerin toplumsal etkilerini gelecekte daha ayrıntılı incelemeliyiz' şeklinde çevrilir.\n📌 Kelime Analizi:\n- untersuchen: incelemek, araştırmak\n- genauer: daha ayrıntılı (komparativ)\n- gesellschaftlich: toplumsal\n- sprachlich: dilsel\nÖrnekler:\n1. Die gesellschaftlichen Auswirkungen dieser sprachlichen Veränderungen müssen wir in Zukunft genauer untersuchen. – Bu dilsel değişimlerin toplumsal etkilerini gelecekte daha ayrıntılı incelemeliyiz.",
+  },
+  {
+    id: 117,
+    veri: "sich vertraut machen mit\n\n✅ Açıklama: Bir konuda bilgi edinmek, alışmak anlamına gelir. 'sollen' fiiliyle tavsiye ifade eder.\n📌 Kullanım: 'mit' edatı ile Dativ kullanılır.\nÖrnekler:\n1. Sie sollten sich mit dem Thema vertraut machen. – Konuya aşina olmalısınız.",
+  },
+  {
+    id: 118,
+    veri: "Unsere Entdeckung ist so bedeutend, als hätten wir einen neuen Kontinent entdeckt\n\n✅ Açıklama: Türkçeye 'Keşfimiz o kadar önemli ki, sanki yeni bir kıta keşfetmişiz gibi' şeklinde çevrilir.\n📌 Yapı: Gerçek dışı kıyaslama (irrealer Vergleich), Konjunktiv II ile.\nÖrnekler:\n1. Unsere Entdeckung ist so bedeutend, als hätten wir einen neuen Kontinent entdeckt. – Keşfimiz o kadar önemli ki, sanki yeni bir kıta keşfetmişiz gibi.",
+  },
+  {
+    id: 119,
+    veri: "Die Daten sind so überzeugend, als wären sie unter Laborbedingungen entstanden\n\n✅ Açıklama: Türkçeye 'Veriler o kadar ikna edici ki, sanki laboratuvar koşullarında elde edilmiş gibi' şeklinde çevrilir.\n📌 Yapı: Gerçek dışı kıyaslama (irrealer Vergleich), Konjunktiv II ile.\nÖrnekler:\n1. Die Daten sind so überzeugend, als wären sie unter Laborbedingungen entstanden. – Veriler o kadar ikna edici ki, sanki laboratuvar koşullarında elde edilmiş gibi.",
+  },
+  {
+    id: 120,
+    veri: "vertraut, eingesetzt, überfordert, gestaltet, eingeführt, vermitteln\n\n✅ Açıklama: Çeşitli fiillerin Partizip II veya yalın hâlleri.\n📌 Anlamları:\n- vertraut: aşina, alışık (vertrauen)\n- eingesetzt: kullanılmış, görevlendirilmiş (einsetzen)\n- überfordert: bunalmış, yetersiz hisseden (überfordern)\n- gestaltet: şekillendirilmiş, tasarlanmış (gestalten)\n- eingeführt: tanıtılmış, başlatılmış (einführen)\n- vermitteln: aktarmak, öğretmek\nÖrnekler:\n1. Der neue Lehrer, der in einem modern gestalteten Klassenzimmer eingesetzt wurde, war an die digitale Technik noch nicht vertraut, fühlte sich überfordert, obwohl ihm ein Kollege helfen sollte, den Stoff zu vermitteln, der gerade neu eingeführt worden war. – Yeni öğretmen, modern tasarlanmış bir sınıfta görevlendirilmişti, ancak dijital teknolojiye henüz aşina değildi, kendini yetersiz hissetti, bir meslektaşı yeni tanıtılan materyali aktarmada ona yardım etmesi gerekmesine rağmen.",
+  },
+  {
+    id: 121,
+    veri: "verschärft, gefördert, setzen, gefordert, verhindern, erhalten\n\n✅ Açıklama: Çeşitli fiillerin Partizip II veya yalın hâlleri.\n📌 Anlamları:\n- verschärft: sertleştirilmiş (verschärfen)\n- gefördert: desteklenmiş (fördern)\n- setzen: oturtmak, yerleştirmek\n- gefordert: talep edilmiş (fordern)\n- verhindern: engellemek, önlemek\n- erhalten: almak, korumak\nÖrnekler:\n1. Um die Umwelt zu schützen, wurden neue Regeln verschärft und Maßnahmen gefördert, die darauf abzielen, Probleme zu verhindern, klare Ziele zu setzen, Unterstützung zu fordern und den Erhalt der natürlichen Ressourcen zu sichern. – Çevreyi korumak için yeni kurallar sıkılaştırıldı ve sorunları önlemeyi, net hedefler koymayı, destek talep etmeyi ve doğal kaynakların korunmasını sağlamayı amaçlayan önlemler teşvik edildi.",
+  },
+  {
+    id: 122,
+    veri: "beherrscht, erfordert, Begegnung, Förderung, gelingt, schüren\n\n✅ Açıklama: Çeşitli fiillerin ve isimlerin yalın veya Partizip II hâlleri.\n📌 Anlamları:\n- beherrscht: hâkim olmak (beherrschen)\n- erfordert: gerektirmek (erfordern)\n- Begegnung: karşılaşma (begegnen)\n- Förderung: teşvik, destek (fördern)\n- gelingt: başarmak (gelingen)\n- schüren: körüklemek, kışkırtmak\nÖrnekler:\n1. Der soziale Zusammenhalt in einer Gesellschaft erfordert nicht nur die Förderung des Dialogs und der Bildung, sondern gelingt auch durch die bewusste Begegnung unterschiedlicher Gruppen, während Hass vermieden und kein Misstrauen geschürt, sondern Vertrauen beherrscht wird. – Toplumdaki sosyal uyum, yalnızca diyaloğun ve eğitimin teşvikini gerektirmez, aynı zamanda farklı grupların bilinçli karşılaşmalarıyla başarılır, nefret önlenirken güvensizlik körüklenmez, aksine güven hâkim olur.",
+  },
+  {
+    id: 123,
+    veri: "Genusregeln\n\n✅ Açıklama: Almanca’da isimlerin cinsiyetine (der, die, das) dair kurallar.\n📌 Kurallar:\n1. Maskulin (der): Mevsimler, aylar, günler, erkek insanlar, -er, -ling, -or, -ismus son ekleri\n2. Feminin (die): Kadın insanlar, -e, -heit, -keit, -ung, -schaft son ekleri, sayılar\n3. Neutrum (das): Çocuklar, -chen, -lein son ekleri, fiilden türeyen isimler, metaller\nÖrnekler:\n1. der Sommer – yaz\n2. die Blume – çiçek\n3. das Kind – çocuk",
+  },
+  {
+    id: 124,
+    veri: "es sei denn\n\n✅ Açıklama: Koşullu istisna bağlacı, 'aksi takdirde', '-medikçe', 'istisna olarak' anlamına gelir.\n📌 Kullanım: Hauptsatz, es sei denn + Hauptsatz\nÖrnekler:\n1. Die Villa war gut gesichert, es sei denn, jemand hatte einen Schlüssel. – Villa iyi korunuyordu, tabii biri anahtara sahip değilse.",
+  },
+  {
+    id: 125,
+    veri: "Modalpartikeln (ja, doch, ruhig, wohl, schon, bloß, eben, halt, einfach, ohnehin, freilich)\n\n✅ Açıklama: Cümlenin tonunu veya anlamını güçlendiren kelimeler.\n📌 Anlamları:\n- ja: zaten, gerçekten\n- doch: ama, yine de\n- ruhig: rahat ol, çekinme\n- wohl: herhalde, muhtemelen\n- schon: zaten, merak etme\n- bloß: sakın, aman\n- eben: işte böyle\n- halt: öyle işte\n- einfach: sadece yap\n- ohnehin: zaten, nasıl olsa\n- freilich: elbette\nÖrnekler:\n1. Du weißt ja, dass sie nicht gern früh aufsteht. – Onun erken kalkmayı sevmediğini biliyorsun ya.\n2. Komm doch mit! – Hadi ama gel bizimle ya!\n3. Du kannst ruhig fragen. – Rahatça sorabilirsin.\n4. Er ist wohl noch im Büro. – Herhalde hâlâ ofiste.\n5. Das wird schon klappen. – Bu iş olur, merak etme.\n6. Mach bloß keinen Fehler! – Sakın hata yapma!\n7. So ist das eben. – İşte durum bu.\n8. Das ist halt so. – Yani öyle işte.\n9. Mach das einfach! – Yap işte gitsin!\n10. Wir hätten das ohnehin machen müssen. – Zaten bunu yapmak zorundaydık.\n11. Freilich komme ich mit! – Elbette geliyorum!",
+  },
+  {
+    id: 126,
+    veri: "kein vs nicht\n\n✅ Açıklama: 'kein' belirsiz veya çoğul isimleri olumsuzlar, 'nicht' fiili, sıfatı veya belirli nesneleri olumsuzlar.\nÖrnekler:\n1. Er mag keine Äpfel. – Hiç elma sevmez.\n2. Ich mochte diesen Film nicht. – Bu filmi beğenmedim.",
+  },
+  {
+    id: 127,
+    veri: "dennoch, immer noch, nur noch, noch nicht\n\n✅ Açıklama: Zaman veya durum bildiren zarflar.\n📌 Anlamları:\n- dennoch: yine de\n- immer noch: hâlâ\n- nur noch: artık sadece\n- noch nicht: henüz değil\nÖrnekler:\n1. Er war müde, dennoch arbeitete er weiter. – Yorgundu, yine de çalışmaya devam etti.\n2. Ich warte immer noch auf dich. – Hâlâ seni bekliyorum.\n3. Ich habe nur noch 5 Euro. – Artık sadece 5 Euro’m kaldı.\n4. Ich habe noch nicht gegessen. – Henüz yemedim.",
+  },
+  {
+    id: 128,
+    veri: "Das liegt daran\n\n✅ Açıklama: 'Bunun sebebi şu ki' anlamına gelir.\nÖrnekler:\n1. Das liegt daran, dass er krank ist. – Bunun sebebi onun hasta olması.",
+  },
+  {
+    id: 129,
+    veri: "so\n\n✅ Açıklama: Çeşitli anlamlarda kullanılan bir kelime.\n📌 Kullanımlar:\n1. so … wie: … kadar (karşılaştırma)\n2. so: bu şekilde, böylece\n3. so: bu kadar, şu kadar (miktar)\n4. so … dass: öyle ki (sonuç)\n5. so: örneğin, diyelim ki\n6. so war das nicht gemeint: öyle düşünülmedi\n7. so viel ich weiß: bildiğim kadarıyla\nÖrnekler:\n1. Er ist so groß wie sein Bruder. – Kardeşi kadar uzun.\n2. Mach das bitte so! – Lütfen bunu böyle yap!\n3. Es ist so kalt heute! – Bugün çok soğuk!\n4. Er ist so müde, dass er sofort eingeschlafen ist. – O kadar yorgundu ki hemen uyuyakaldı.\n5. Viele Tiere, so zum Beispiel Katzen und Hunde, sind beliebte Haustiere. – Pek çok hayvan, örneğin kedi ve köpekler, sevilen evcil hayvanlardır.\n6. So war das nicht gemeint. – Öyle demek istemedim.\n7. So viel ich weiß … – Bildiğim kadarıyla …",
+  },
+  {
+    id: 130,
+    veri: "aufeinandertreffen\n\n✅ Açıklama: Birbirleriyle karşılaşmak, bir araya gelmek anlamına gelir, ayrılabilir fiildir.\n📌 Gramer Bilgisi:\n- Präsens: treffen … aufeinander\n- Perfekt: sind aufeinandergetroffen\nÖrnekler:\n1. Sie sind aufeinandergetroffen. – Birbirleriyle karşılaştılar.",
+  },
+  {
+    id: 131,
+    veri: "Pauls sanfte Art\n\n✅ Açıklama: Türkçeye 'Paul’un yumuşak/nazik tarzı' şeklinde çevrilir.\nÖrnekler:\n1. Pauls sanfte Art – Paul’un yumuşak tarzı.",
+  },
+  {
+    id: 132,
+    veri: "um … zu\n\n✅ Açıklama: Bir amaç belirtir, …mek için anlamına gelir.\nÖrnekler:\n1. Sie kam, um ihre Anspannung zu verbergen. – Gerginliğini gizlemek için geldi.",
+  },
+  {
+    id: 133,
+    veri: "unberechenbar, hervorragend, charmant\n\n✅ Açıklama: Sıfatlar.\n📌 Anlamları:\n- unberechenbar: öngörülemez\n- hervorragend: mükemmel, harika\n- charmant: çekici, sevimli, nazik\nÖrnekler:\n1. Ein unberechenbares Ereignis – Öngörülemez bir olay.\n2. Hervorragende Leistung – Harika performans.\n3. Ein charmanter Mann – Çekici bir adam.",
+  },
+  {
+    id: 134,
+    veri: "Zeitraum, bisher, behandelte ihn\n\n✅ Açıklama: Çeşitli kelimeler ve ifadeler.\n📌 Anlamları:\n- Zeitraum: zaman aralığı, süre\n- bisher: şimdiye kadar\n- behandelte ihn: ona öyle davrandı\nÖrnekler:\n1. In diesem Zeitraum – Bu süre içinde.\n2. Bisher habe ich nichts gehört. – Şimdiye kadar bir şey duymadım.\n3. Sie behandelte ihn freundlich. – Ona nazikçe davrandı.",
+  },
+  {
+    id: 135,
+    veri: "Übrigens\n\n✅ Açıklama: Bu arada, sırası gelmişken, ayrıca anlamına gelir.\nÖrnekler:\n1. Übrigens, ich habe ihn gestern gesehen. – Bu arada, onu dün gördüm.",
+  },
+  {
+    id: 136,
+    veri: "Was sind Hausregeln bezüglich Besuch\n\n✅ Açıklama: 'Ziyaretle ilgili ev kuralları nelerdir' anlamına gelir.\n📌 Kelime Analizi:\n- Was sind: neler var\n- Hausregeln: ev kuralları\n- bezüglich: ile ilgili (resmi)\n- Besuch: ziyaret, misafir\nÖrnekler:\n1. Was sind Hausregeln bezüglich Besuch? – Ziyaretle ilgili ev kuralları nelerdir?",
+  },
+  {
+    id: 137,
+    veri: "irgendein, irgendeinem\n\n✅ Açıklama: Herhangi bir anlamına gelir.\n📌 Gramer Bilgisi:\n- irgendein: nominativ, herhangi bir\n- irgendeinem: dativ, herhangi bir (maskulin/neutrum)\nÖrnekler:\n1. Ich brauche irgendein Buch. – Herhangi bir kitaba ihtiyacım var.\n2. Ich habe mit irgendeinem Mann gesprochen. – Herhangi bir adamla konuştum.",
+  },
+  {
+    id: 138,
+    veri: "interessiert an vs interessiere mich für\n\n✅ Açıklama: Sıfat ve fiil yapılarının farklı edatlarla kullanımı.\n📌 Kullხ: \n- interessiert an + Dativ: sanata ilgi duyuyorum\n- interessiere mich für + Akkusativ: sanatla ilgileniyorum\nÖrnekler:\n1. Ich bin an Kunst interessiert. – Sanata ilgi duyuyorum.\n2. Ich interessiere mich für Kunst. – Sanatla ilgileniyorum.",
+  },
+  {
+    id: 139,
+    veri: "Das will nichts heißen\n\n✅ Açıklama: 'Bu bir şey iddia etmez/ifade etmez' anlamına gelir.\nÖrnekler:\n1. Das will nichts heißen. – Bu bir şey ifade etmez.",
+  },
+  {
+    id: 140,
+    veri: "Er mag etwa 40 Jahre alt sein\n\n✅ Açıklama: 'mag' burada tahmin etmek anlamına gelir.\nÖrnekler:\n1. Er mag etwa 40 Jahre alt sein. – Yaklaşık 40 yaşında olabilir.",
+  },
+  {
+    id: 141,
+    veri: "Sie will eine berühmte Schauspielerin sein\n\n✅ Açıklama: 'will' burada iddia/istek anlamı taşır.\nÖrnekler:\n1. Sie will eine berühmte Schauspielerin sein. – Ünlü bir aktris olmak istiyor.",
+  },
+  {
+    id: 142,
+    veri: "Er tut so, als ob er alles wüsste\n\n✅ Açıklama: 'Sanki her şeyi biliyormuş gibi davranıyor' anlamına gelir.\nÖrnekler:\n1. Er tut so, als ob er alles wüsste. – Sanki her şeyi biliyormuş gibi davranıyor.",
+  },
+  {
+    id: 143,
+    veri: "Beinahe wäre ich gestürzt\n\n✅ Açıklama: 'Neredeyse düşüyordum' anlamına gelir.\nÖrnekler:\n1. Beinahe wäre ich gestürzt. – Neredeyse düşüyordum.",
+  },
+  {
+    id: 144,
+    veri: "Dadurch dass\n\n✅ Açıklama: 'Bunun vasıtasıyla, bunun yoluyla' anlamına gelir, araç/yol bildirir.\nÖrnekler:\n1. Dadurch dass er fleißig arbeitet, hat er Erfolg. – Çalışkanlığı sayesinde başarılı oldu.",
+  },
+  {
+    id: 145,
+    veri: "Das ist zu machen\n\n✅ Açıklama: 'Bu yapılabilir' anlamına gelir.\nÖrnekler:\n1. Das ist zu machen. – Bu yapılabilir.",
+  },
+  {
+    id: 146,
+    veri: "haben + zu + Infinitiv\n\n✅ Açıklama: Zorunluluk (aktif) ifade eder.\nÖrnekler:\n1. Du hast pünktlich zu sein. – Zamanında olmalısın.",
+  },
+  {
+    id: 147,
+    veri: "Gerundiv yapısı\n\n✅ Açıklama: Zorunluluk veya olasılık ifade eder.\nÖrnekler:\n1. Der zu reparierende Computer – Tamir edilecek bilgisayar.\n2. Die nicht zu unterschätzende Gefahr – Göz ardı edilemeyecek tehlike.",
+  },
+  {
+    id: 148,
+    veri: "scheinen + zu + Infinitiv\n\n✅ Açıklama: Özne aynı olmalı.\nÖrnekler:\n1. Er scheint zu wissen, was er tut. – Ne yaptığını biliyor gibi görünüyor.",
+  },
+  {
+    id: 149,
+    veri: "pflegen + zu\n\n✅ Açıklama: Alışkanlık veya düzenli bir eylemi ifade eder.\nÖrnekler:\n1. Er pflegt jeden Abend zu lesen. – Her akşam okumayı alışkanlık haline getirdi.",
+  },
+  {
+    id: 150,
+    veri: "drohen + zu + Infinitiv\n\n✅ Açıklama: Tehlike belirtir.\nÖrnekler:\n1. Es droht zu regnen. – Yağmur yağma tehlikesi var.",
+  },
+  {
+    id: 151,
+    veri: "verzichten, in, für\n\n✅ Açıklama: Farklı edatlarla kullanılan ifadeler.\n📌 Anlamları:\n- verzichten auf: vazgeçmek\n- gut in: bir konuda iyi\n- verantwortlich für: bir şeyden sorumlu\nÖrnekler:\n1. Sie verzichtet auf das Dessert. – Tatlıdan vazgeçti.\n2. Er ist in Mathematik gut. – Matematikte iyi.\n3. Sie ist für ihre Fehler verantwortlich. – Hatalarından sorumlu.",
+  },
+  {
+    id: 152,
+    veri: "leider\n\n✅ Açıklama: Modaladverb, üzüntü veya pişmanlık ifade eder.\nÖrnekler:\n1. Leider kann ich nicht kommen. – Maalesef gelemiyorum.",
+  },
 ];
 export default data;

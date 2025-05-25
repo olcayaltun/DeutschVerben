@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const data = [
+/* const data = [
   {
     cumle: "Ich hätte gern einen Kaffee.",
     turkce: "Bir kahve almak isterdim.",
@@ -1720,10 +1720,954 @@ const data = [
     level: "B2",
     notes: "Kibar bir niyet",
   },
+]; */
+const data = [
+  {
+    cumle: "Er hat das Lied komponiert.",
+    turkce: "O (erkek) şarkıyı besteledi.",
+    level: "A2",
+    notes:
+      "Partizip II: komponiert - 'komponieren' fiilinin Partizip 2 hali, '-ieren' ile bittiği için 'ge-' öneki almaz",
+  },
+  {
+    cumle: "Ich habe den Termin abgesagt.",
+    turkce: "Randevuyu iptal ettim.",
+    level: "A2",
+    notes:
+      "Partizip II: abgesagt - absagen fiilinin Partizip 2 hali, ayrılabilir fiil",
+  },
+  {
+    cumle: "Ich habe gestern schwimmen können.",
+    turkce: "Dün yüzebildim.",
+    level: "B1",
+    notes:
+      "Partizip II: können - Modal fiil können ile kullanımı, Perfekt zamanda infinitif formda kalır",
+  },
+  {
+    cumle: "Sie hat ihren Urlaub in Italien verbracht.",
+    turkce: "O (kadın) tatilini İtalya'da geçirdi.",
+    level: "B1",
+    notes:
+      "Partizip II: verbracht - verbringen fiilinin Partizip 2 hali, ayrılamaz fiil",
+  },
+  {
+    cumle: "Wir haben uns über das bestandene Examen gefreut.",
+    turkce: "Geçilen sınavdan dolayı sevindik.",
+    level: "B1",
+    notes:
+      "Partizip II: bestandene - bestehen fiilinin Partizip 2 hali sıfat olarak: bestandene",
+  },
+  {
+    cumle: "Die von mir gekochte Suppe schmeckt gut.",
+    turkce: "Benim pişirdiğim çorba lezzetli.",
+    level: "B1",
+    notes:
+      "Partizip II: gekochte - kochen fiilinin Partizip 2 hali sıfat olarak: gekochte",
+  },
+  {
+    cumle: "Er hat mir zu helfen versprochen.",
+    turkce: "O (erkek) bana yardım etmeyi söz verdi.",
+    level: "B1",
+    notes:
+      "Partizip II: versprochen - versprechen fiilinin Partizip 2 hali, ayrılamaz fiil ve zu infinitif yapısıyla kullanımı",
+  },
+  {
+    cumle: "Der gestrige Regen hat die Straßen überschwemmt.",
+    turkce: "Dünkü yağmur sokakları sel altında bıraktı.",
+    level: "B1",
+    notes:
+      "Partizip II: überschwemmt - überschwemmen fiilinin Partizip 2 hali, ayrılamaz fiil",
+  },
+  {
+    cumle: "Die gestellte Frage war schwer zu beantworten.",
+    turkce: "Sorulan soru yanıtlaması zordu.",
+    level: "B1",
+    notes:
+      "Partizip II: gestellte - stellen fiilinin Partizip 2 hali sıfat olarak: gestellte",
+  },
+  {
+    cumle: "Er hat den ganzen Film gedreht.",
+    turkce: "O (erkek) tüm filmi çekti.",
+    level: "B1",
+    notes: "Partizip II: gedreht - drehen fiilinin Partizip 2 hali: gedreht",
+  },
+  {
+    cumle: "Sie hat mir den Weg gezeigt.",
+    turkce: "O (kadın) bana yolu gösterdi.",
+    level: "B1",
+    notes: "Partizip II: gezeigt - zeigen fiilinin Partizip 2 hali: gezeigt",
+  },
+  {
+    cumle: "Der beschädigte Computer funktioniert nicht mehr.",
+    turkce: "Hasarlı bilgisayar artık çalışmıyor.",
+    level: "B1",
+    notes:
+      "Partizip II: beschädigte - beschädigen fiilinin Partizip 2 hali sıfat olarak: beschädigte",
+  },
+  {
+    cumle: "Wir haben die Nachricht übermittelt.",
+    turkce: "Haberi ilettik.",
+    level: "B1",
+    notes:
+      "Partizip II: übermittelt - übermitteln fiilinin Partizip 2 hali, ayrılamaz fiil",
+  },
+  {
+    cumle: "Die Tür ist geschlossen worden.",
+    turkce: "Kapı kapatılmış.",
+    level: "B2",
+    notes:
+      "Partizip II: geschlossen - Vorgangspassiv, Perfekt: ist + Partizip 2 + worden",
+  },
+  {
+    cumle: "In München angekommen, suchte er ein Hotel.",
+    turkce: "Münih'e vardığında, bir otel aradı.",
+    level: "B2",
+    notes:
+      "Partizip II: angekommen - Partizipialsatz, yan cümle yerine kısaltılmış cümle yapısı",
+  },
+  {
+    cumle: "Der Dieb ist von der Polizei verhaftet worden.",
+    turkce: "Hırsız polis tarafından tutuklandı.",
+    level: "B2",
+    notes:
+      "Partizip II: verhaftet - Vorgangspassiv, von + Dativ ile fail belirtimi",
+  },
+  {
+    cumle: "Die im Kühlschrank aufbewahrten Lebensmittel sind frisch.",
+    turkce: "Buzdolabında saklanan yiyecekler taze.",
+    level: "B2",
+    notes:
+      "Partizip II: aufbewahrten - aufbewahren fiilinin genişletilmiş Partizip 2 sıfat yapısı",
+  },
+  {
+    cumle: "Das gestohlene Auto wurde gefunden.",
+    turkce: "Çalınan araba bulundu.",
+    level: "B2",
+    notes:
+      "Partizip II: gestohlene - stehlen fiilinin Partizip 2 sıfat hali: gestohlene + Vorgangspassiv",
+  },
+  {
+    cumle: "Das Problem konnte gelöst werden.",
+    turkce: "Problem çözülebildi.",
+    level: "B2",
+    notes: "Partizip II: gelöst - Vorgangspassiv ile modal fiil kombinasyonu",
+  },
+  {
+    cumle: "Die vom Chef getroffene Entscheidung war richtig.",
+    turkce: "Şef tarafından alınan karar doğruydu.",
+    level: "B2",
+    notes:
+      "Partizip II: getroffene - treffen fiilinin Partizip 2 sıfat hali: getroffene",
+  },
+  {
+    cumle: "Das ist eine weitverbreitete Meinung.",
+    turkce: "Bu, yaygın bir görüştür.",
+    level: "B2",
+    notes:
+      "Partizip II: verbreitete - verbreiten fiilinin Partizip 2 sıfat hali: verbreitete, weit- ile birleşimi",
+  },
+  {
+    cumle: "In der Stadt angekommen, regnete es stark.",
+    turkce: "Şehre vardığımızda, şiddetli yağmur yağıyordu.",
+    level: "B2",
+    notes:
+      "Partizip II: angekommen - Partizipialsatz, zaman ilişkisi belirten kısaltılmış cümle",
+  },
+  {
+    cumle: "Die neu eingerichtete Wohnung gefällt mir.",
+    turkce: "Yeni döşenmiş daire hoşuma gidiyor.",
+    level: "B2",
+    notes:
+      "Partizip II: eingerichtete - einrichten fiilinin Partizip 2 sıfat hali: eingerichtete",
+  },
+  {
+    cumle: "Der lang erwartete Brief ist endlich gekommen.",
+    turkce: "Uzun zamandır beklenen mektup sonunda geldi.",
+    level: "B2",
+    notes:
+      "Partizip II: erwartete - erwarten fiilinin Partizip 2 sıfat hali: erwartete",
+  },
+  {
+    cumle: "Das Konzert musste verschoben werden.",
+    turkce: "Konser ertelenmek zorunda kaldı.",
+    level: "B2",
+    notes: "Partizip II: verschoben - Vorgangspassiv ile müssen modal fiili",
+  },
+  {
+    cumle: "Die Arbeit ist getan worden.",
+    turkce: "İş yapılmış.",
+    level: "B2",
+    notes:
+      "Partizip II: getan - Vorgangspassiv, Perfekt: ist + Partizip 2 + worden",
+  },
+  {
+    cumle: "Das gut versteckte Geschenk wurde nicht gefunden.",
+    turkce: "İyi saklanmış hediye bulunmadı.",
+    level: "B2",
+    notes:
+      "Partizip II: versteckte - verstecken fiilinin Partizip 2 sıfat hali: versteckte + Vorgangspassiv",
+  },
+  {
+    cumle: "Die Tür wird geöffnet sein.",
+    turkce: "Kapı açılmış olacak.",
+    level: "B2",
+    notes:
+      "Partizip II: geöffnet - Zustandspassiv + Futur I: wird + Partizip 2 + sein",
+  },
+  {
+    cumle: "Wärst du so nett?",
+    turkce: "Nazik olur muydun?",
+    level: "A1",
+    notes: "Rica ifadesi",
+  },
+  {
+    cumle: "Würdest du mir einen Gefallen tun?",
+    turkce: "Bana bir iyilik yapar mısın?",
+    level: "A1",
+    notes: "Rica etme",
+  },
+  {
+    cumle: "Könnten Sie mir zeigen, wie das geht?",
+    turkce: "Bana bunun nasıl yapıldığını gösterebilir misiniz?",
+    level: "A1",
+    notes: "Yardım isteme",
+  },
+  {
+    cumle: "Ich wäre froh, wenn du kommst.",
+    turkce: "Gelirsen sevinirim.",
+    level: "A1",
+    notes: "Davet ifadesi",
+  },
+  {
+    cumle: "An deiner Stelle würde ich früher aufstehen.",
+    turkce: "Senin yerinde olsaydım daha erken kalkardım.",
+    level: "A2",
+    notes: "Tavsiye verme",
+  },
+  {
+    cumle: "Ich wünschte, ich könnte schwimmen.",
+    turkce: "Keşke yüzebilseydim.",
+    level: "A2",
+    notes: "Dilek ifadesi",
+  },
+  {
+    cumle: "Was würdest du in meiner Situation tun?",
+    turkce: "Benim durumumda ne yapardın?",
+    level: "A2",
+    notes: "Tavsiye isteme",
+  },
+  {
+    cumle: "Wenn es nicht regnen würde, könnten wir spazieren gehen.",
+    turkce: "Yağmur yağmasaydı, yürüyüşe çıkabilirdik.",
+    level: "A2",
+    notes: "Koşullu ifade",
+  },
+  {
+    cumle: "Ich hätte gern eine größere Wohnung.",
+    turkce: "Daha büyük bir eve sahip olmak isterdim.",
+    level: "A2",
+    notes: "İstek belirtme",
+  },
+  {
+    cumle: "Ohne deine Hilfe hätte ich es nicht geschafft.",
+    turkce: "Senin yardımın olmadan başaramazdım.",
+    level: "A2",
+    notes: "Minnettarlık",
+  },
+  {
+    cumle: "Ich würde lieber zu Hause bleiben.",
+    turkce: "Evde kalmayı tercih ederdim.",
+    level: "A2",
+    notes: "Tercih belirtme",
+  },
+  {
+    cumle: "Könntest du mir bei den Hausaufgaben helfen?",
+    turkce: "Ödevlerimde bana yardım edebilir misin?",
+    level: "A2",
+    notes: "Yardım isteme",
+  },
+  {
+    cumle: "Hättest du Lust, ins Kino zu gehen?",
+    turkce: "Sinemaya gitmeye hevesli olur muydun?",
+    level: "A2",
+    notes: "Davet",
+  },
+  {
+    cumle: "Was würdest du mit einer Million Euro machen?",
+    turkce: "Bir milyon Euro ile ne yapardın?",
+    level: "A2",
+    notes: "Hayali durum",
+  },
+  {
+    cumle: "Ich hätte lieber einen Tee als Kaffee.",
+    turkce: "Kahve yerine çay tercih ederdim.",
+    level: "A2",
+    notes: "Tercih",
+  },
+  {
+    cumle: "Es wäre toll, wenn wir uns bald wiedersehen könnten.",
+    turkce: "Yakında tekrar görüşebilsek harika olurdu.",
+    level: "A2",
+    notes: "Dilek",
+  },
+  {
+    cumle:
+      "Wenn ich mehr Zeit gehabt hätte, hätte ich den Film fertig gesehen.",
+    turkce: "Daha fazla zamanım olsaydı, filmi bitirmiş olurdum.",
+    level: "B1",
+    notes: "Geçmişteki hayali durum",
+  },
+  {
+    cumle: "Ohne den Stau wären wir pünktlich angekommen.",
+    turkce: "Trafik sıkışıklığı olmasaydı, zamanında varmış olurduk.",
+    level: "B1",
+    notes: "Geçmişteki imkansız durum",
+  },
+  {
+    cumle: "Es wäre besser gewesen, wenn du früher gekommen wärst.",
+    turkce: "Daha erken gelseydin daha iyi olurdu.",
+    level: "B1",
+    notes: "Pişmanlık ifadesi",
+  },
+  {
+    cumle: "Könntest du mir bitte erklären, wie das funktioniert?",
+    turkce: "Bunun nasıl çalıştığını bana açıklayabilir misin?",
+    level: "B1",
+    notes: "Açıklama isteme",
+  },
+  {
+    cumle: "Ich hätte nicht gedacht, dass es so schwer sein würde.",
+    turkce: "Bu kadar zor olacağını düşünmezdim.",
+    level: "B1",
+    notes: "Beklentinin tersine durum",
+  },
+  {
+    cumle: "Was hättest du an meiner Stelle getan?",
+    turkce: "Benim yerimde olsaydın ne yapardın?",
+    level: "B1",
+    notes: "Geçmiş hakkında fikir sorma",
+  },
+  {
+    cumle: "Ich wünschte, ich könnte fliegen.",
+    turkce: "Keşke uçabilseydim.",
+    level: "B1",
+    notes: "İmkansız dilek",
+  },
+  {
+    cumle: "Hätte ich das gewusst, hätte ich anders entschieden.",
+    turkce: "Bunu bilseydim, farklı karar verirdim.",
+    level: "B1",
+    notes: "Pişmanlık",
+  },
+  {
+    cumle: "Sie sieht aus, als ob sie müde wäre.",
+    turkce: "Yorgunmuş gibi görünüyor.",
+    level: "B1",
+    notes: "Benzetme",
+  },
+  {
+    cumle: "Wenn es nach mir ginge, würden wir sofort abreisen.",
+    turkce: "Bana kalsaydı, hemen yola çıkardık.",
+    level: "B1",
+    notes: "Kişisel tercih",
+  },
+  {
+    cumle: "Ich hätte nie gedacht, dass du das schaffen würdest.",
+    turkce: "Bunu başaracağını hiç düşünmezdim.",
+    level: "B1",
+    notes: "Şaşkınlık ifadesi",
+  },
+  {
+    cumle: "Es wäre schön, wenn wir mehr Zeit füreinander hätten.",
+    turkce: "Birbirimiz için daha fazla zamanımız olsaydı güzel olurdu.",
+    level: "B1",
+    notes: "İstek",
+  },
+  {
+    cumle:
+      "Wenn du mich früher angerufen hättest, hätte ich dir helfen können.",
+    turkce: "Beni daha erken arasaydın, sana yardım edebilirdim.",
+    level: "B1",
+    notes: "Geçmişteki imkansız yardım",
+  },
+  {
+    cumle: "Selbst wenn ich es gewollt hätte, hätte ich nichts ändern können.",
+    turkce: "İsteseydim bile, hiçbir şeyi değiştiremezdim.",
+    level: "B2",
+    notes: "İmkansızlık vurgusu",
+  },
+  {
+    cumle: "Als hätten wir nicht genug Probleme!",
+    turkce: "Sanki yeterince sorunumuz yokmuş gibi!",
+    level: "B2",
+    notes: "İroni",
+  },
+  {
+    cumle:
+      "Wenn du mir damals geholfen hättest, wäre ich jetzt nicht in dieser Situation.",
+    turkce: "O zaman bana yardım etseydin, şimdi bu durumda olmazdım.",
+    level: "B2",
+    notes: "Nedensellik bağlantısı",
+  },
+  {
+    cumle: "Es sei denn, du hättest eine bessere Idee.",
+    turkce: "Daha iyi bir fikrin olmadığı sürece.",
+    level: "B2",
+    notes: "Koşullu istisna",
+  },
+  {
+    cumle: "Das hätte ich dir gleich sagen können!",
+    turkce: "Bunu sana hemen söyleyebilirdim!",
+    level: "B2",
+    notes: "Öngörü ifadesi",
+  },
+  {
+    cumle: "Wenn du nur ein bisschen vorsichtiger gewesen wärest!",
+    turkce: "Keşke biraz daha dikkatli olsaydın!",
+    level: "B2",
+    notes: "Eleştirel pişmanlık",
+  },
+  {
+    cumle: "Man könnte meinen, er hätte noch nie einen Computer benutzt.",
+    turkce: "Sanki hiç bilgisayar kullanmamış gibi düşünülebilir.",
+    level: "B2",
+    notes: "Kınayıcı benzetme",
+  },
+  {
+    cumle:
+      "Ich hätte schwören können, dass ich den Schlüssel hier gelassen habe.",
+    turkce: "Anahtarı buraya koyduğuma yemin edebilirdim.",
+    level: "B2",
+    notes: "Güçlü inanç",
+  },
+  {
+    cumle: "Sie tat so, als ob sie mich nicht gesehen hätte.",
+    turkce: "Beni görmemiş gibi davrandı.",
+    level: "B2",
+    notes: "Davranış betimleme",
+  },
+  {
+    cumle:
+      "Ohne deine Unterstützung wäre dieses Projekt nie zustande gekommen.",
+    turkce: "Senin desteğin olmadan bu proje asla gerçekleşmezdi.",
+    level: "B2",
+    notes: "Minnettarlık",
+  },
+  {
+    cumle: "Das hätte ins Auge gehen können!",
+    turkce: "Bu kötü sonuçlanabilirdi!",
+    level: "B2",
+    notes: "Tehlikeli durum",
+  },
+  {
+    cumle: "Es hätte schlimmer kommen können.",
+    turkce: "Daha kötü olabilirdi.",
+    level: "B2",
+    notes: "Teselli",
+  },
+  {
+    cumle: "Das hätte ich mir denken können!",
+    turkce: "Bunu düşünebilirdim!",
+    level: "B2",
+    notes: "Kendini eleştirme",
+  },
+  {
+    cumle: "Als ob ich nichts Besseres zu tun hätte!",
+    turkce: "Sanki yapacak daha iyi bir işim yokmuş gibi!",
+    level: "B2",
+    notes: "Sinirli tepki",
+  },
+  {
+    cumle: "Es sähe besser aus, wenn du die Farben anders kombiniert hättest.",
+    turkce: "Renkleri farklı kombine etseydin daha iyi görünürdü.",
+    level: "B2",
+    notes: "Estetik tavsiye",
+  },
+  {
+    cumle: "Diese Aufgabe hätte eigentlich nicht so schwierig sein sollen.",
+    turkce: "Bu görev aslında bu kadar zor olmamalıydı.",
+    level: "B2",
+    notes: "Beklenti-gerçeklik tezatlığı",
+  },
+  {
+    cumle: "Man könnte fast denken, du hättest das mit Absicht getan.",
+    turkce: "Neredeyse bunu kasten yaptığını düşünebilirdim.",
+    level: "B2",
+    notes: "Hafif suçlama",
+  },
+  {
+    cumle: "Wer hätte das gedacht?",
+    turkce: "Kim düşünürdü?",
+    level: "B2",
+    notes: "Şaşkınlık ünlemi",
+  },
+  {
+    cumle: "Wenn ich das früher gewusst hätte, hätte ich anders gehandelt.",
+    turkce: "Bunu daha önce bilseydim, farklı davranırdım.",
+    level: "B2",
+    notes: "Pişmanlık",
+  },
+  {
+    cumle: "Sie sprach, als wäre sie eine Expertin auf diesem Gebiet.",
+    turkce: "Bu alanda uzmanmış gibi konuştu.",
+    level: "B2",
+    notes: "Davranış eleştirisi",
+  },
+  {
+    cumle: "Das hätte dir eine Lehre sein sollen!",
+    turkce: "Bu sana bir ders olmalıydı!",
+    level: "B2",
+    notes: "Ders çıkarma",
+  },
+  {
+    cumle: "Es hätte mich gewundert, wenn er pünktlich gekommen wäre.",
+    turkce: "Zamanında gelseydi şaşırırdım.",
+    level: "B2",
+    notes: "İroni",
+  },
+  {
+    cumle:
+      "Hätte er doch nur ein bisschen nachgedacht, bevor er das gesagt hat!",
+    turkce: "Keşke bunu söylemeden önce biraz düşünseydi!",
+    level: "B2",
+    notes: "Eleştirel pişmanlık",
+  },
+  {
+    cumle: "Ich würde es nicht so ausdrücken wollen, aber...",
+    turkce: "Bu şekilde ifade etmek istemezdim, ama...",
+    level: "B2",
+    notes: "Nazikçe eleştiri girişi",
+  },
+  {
+    cumle:
+      "Es wäre vielleicht besser gewesen, wenn wir das unter vier Augen besprochen hätten.",
+    turkce: "Belki bunu baş başa konuşsaydık daha iyi olurdu.",
+    level: "B2",
+    notes: "Durum değerlendirmesi",
+  },
+  {
+    cumle: "Hätten Sie vielleicht einen Moment Zeit für mich?",
+    turkce: "Acaba bana biraz zaman ayırabilir miydiniz?",
+    level: "B2",
+    notes: "Resmi rica",
+  },
+  {
+    cumle: "Das Buch wird gelesen.",
+    turkce: "Kitap okunuyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Die Straße wurde gesperrt.",
+    turkce: "Cadde kapatıldı.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Die Frage wird beantwortet.",
+    turkce: "Soru cevaplanıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Paket wurde verschickt.",
+    turkce: "Paket gönderildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Das Essen wurde serviert.",
+    turkce: "Yemek servis edildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Der Fehler wurde korrigiert.",
+    turkce: "Hata düzeltildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Der Termin wurde verschoben.",
+    turkce: "Randevu ertelendi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Die Rechnung wurde bezahlt.",
+    turkce: "Hesap ödendi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Der Text wurde übersetzt.",
+    turkce: "Metin çevrildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Die Nachricht wurde gesendet.",
+    turkce: "Mesaj gönderildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Das Handy wurde repariert.",
+    turkce: "Cep telefonu tamir edildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Der Brief wird morgen geschickt werden.",
+    turkce: "Mektup yarın gönderilecek.",
+    level: "A2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
+    cumle: "Die Aufgabe wird erledigt werden.",
+    turkce: "Görev tamamlanacak.",
+    level: "A2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
+    cumle: "Das Museum ist von einem berühmten Architekten gebaut worden.",
+    turkce: "Müze ünlü bir mimar tarafından inşa edildi.",
+    level: "B1",
+    notes: "Geçmiş zaman edilgen, ajan belirtilmiş",
+  },
+  {
+    cumle: "Der Dieb ist von der Polizei gefangen worden.",
+    turkce: "Hırsız polis tarafından yakalandı.",
+    level: "B1",
+    notes: "Geçmiş zaman edilgen, ajan belirtilmiş",
+  },
+  {
+    cumle: "Die Straße war wegen des Unfalls gesperrt worden.",
+    turkce: "Cadde kaza nedeniyle kapatılmıştı.",
+    level: "B1",
+    notes: "Plusquamperfekt edilgen",
+  },
+  {
+    cumle: "Das Buch war in mehrere Sprachen übersetzt worden.",
+    turkce: "Kitap birçok dile çevrilmişti.",
+    level: "B1",
+    notes: "Plusquamperfekt edilgen",
+  },
+  {
+    cumle: "Der Film wird von Millionen Menschen gesehen werden.",
+    turkce: "Film milyonlarca insan tarafından izlenecek.",
+    level: "B1",
+    notes: "Gelecek zaman edilgen, ajan belirtilmiş",
+  },
+  {
+    cumle: "Die Wohnung ist schon renoviert worden.",
+    turkce: "Daire çoktan yenilenmiş.",
+    level: "B1",
+    notes: "Geçmiş zaman edilgen, zaman zarfı",
+  },
+  {
+    cumle: "Die Prüfung war von allen Studenten bestanden worden.",
+    turkce: "Sınav tüm öğrenciler tarafından geçilmişti.",
+    level: "B1",
+    notes: "Plusquamperfekt edilgen, ajan belirtilmiş",
+  },
+  {
+    cumle: "Es wird viel darüber diskutiert.",
+    turkce: "Bu konu hakkında çok tartışılıyor.",
+    level: "B1",
+    notes: "Edilgen yapı, 'es' ile genel ifade",
+  },
+  {
+    cumle: "Es wurde bis spät in die Nacht gefeiert.",
+    turkce: "Gece geç saatlere kadar kutlama yapıldı.",
+    level: "B1",
+    notes: "Geçmiş zaman edilgen, 'es' ile genel ifade",
+  },
+  {
+    cumle: "Es wird vermutet, dass er schuldig ist.",
+    turkce: "Onun suçlu olduğu tahmin ediliyor.",
+    level: "B1",
+    notes: "Edilgen yapı, yan cümle ile",
+  },
+  {
+    cumle: "Es wird gesagt, dass der Film sehr gut ist.",
+    turkce: "Filmin çok iyi olduğu söyleniyor.",
+    level: "B1",
+    notes: "Edilgen yapı, yan cümle ile",
+  },
+  {
+    cumle: "Es wird daran gearbeitet, eine Lösung zu finden.",
+    turkce: "Bir çözüm bulmak için çalışılıyor.",
+    level: "B1",
+    notes: "Edilgen yapı, 'es' ile genel ifade",
+  },
+  {
+    cumle: "Hier darf nicht geraucht werden.",
+    turkce: "Burada sigara içilmez.",
+    level: "B1",
+    notes: "Edilgen yapı, yasak ifadesi",
+  },
+  {
+    cumle: "Es muss noch aufgeräumt werden.",
+    turkce: "Hala toplanması gerekiyor.",
+    level: "B1",
+    notes: "Edilgen yapı, zorunluluk ifadesi",
+  },
+  {
+    cumle: "Der Schlüssel konnte nicht gefunden werden.",
+    turkce: "Anahtar bulunamadı.",
+    level: "B1",
+    notes: "Edilgen yapı, olumsuz modal fiil",
+  },
+  {
+    cumle: "Die Arbeit sollte bis morgen erledigt werden.",
+    turkce: "İş yarına kadar bitirilmeli.",
+    level: "B1",
+    notes: "Edilgen yapı, öneri/zorunluluk",
+  },
+  {
+    cumle: "Das Formular muss ausgefüllt werden.",
+    turkce: "Form doldurulmalı.",
+    level: "B1",
+    notes: "Edilgen yapı, zorunluluk ifadesi",
+  },
+  {
+    cumle: "Das Gesetz wird im nächsten Monat verabschiedet worden sein.",
+    turkce: "Yasa önümüzdeki ay çıkarılmış olacak.",
+    level: "B2",
+    notes: "Futura II edilgen",
+  },
+  {
+    cumle:
+      "Der Vertrag wäre längst unterschrieben worden, wenn alle einverstanden gewesen wären.",
+    turkce: "Herkes razı olsaydı, sözleşme çoktan imzalanmış olurdu.",
+    level: "B2",
+    notes: "Konjunktiv II edilgen, koşullu cümle",
+  },
+  {
+    cumle: "Bevor das Gebäude renoviert wurde, sah es ganz anders aus.",
+    turkce: "Bina yenilenmeden önce tamamen farklı görünüyordu.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, zaman bağlacı",
+  },
+  {
+    cumle: "Ohne dass ein Wort gesagt worden wäre, verließ er den Raum.",
+    turkce: "Bir kelime söylenmeden odadan ayrıldı.",
+    level: "B2",
+    notes: "Konjunktiv II edilgen, bağlaç",
+  },
+  {
+    cumle: "Indem die Strukturen verbessert werden, steigt die Effizienz.",
+    turkce: "Yapılar iyileştirilerek verimlilik artıyor.",
+    level: "B2",
+    notes: "Edilgen yapı, neden-sonuç ifadesi",
+  },
+  {
+    cumle: "Täglich werden Tausende von E-Mails verschickt.",
+    turkce: "Her gün binlerce e-posta gönderiliyor.",
+    level: "B2",
+    notes: "Edilgen yapı, genelleme",
+  },
+  {
+    cumle: "Momentan wird das System aktualisiert.",
+    turkce: "Şu anda sistem güncelleniyor.",
+    level: "B2",
+    notes: "Edilgen yapı, şu anki durum",
+  },
+  {
+    cumle: "Während der Renovierung wurde das Museum geschlossen.",
+    turkce: "Yenileme sırasında müze kapatıldı.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, zaman bağlacı",
+  },
+  {
+    cumle:
+      "Es wird angenommen, dass das Gebäude im 18. Jahrhundert errichtet wurde.",
+    turkce: "Binanın 18. yüzyılda inşa edildiği varsayılıyor.",
+    level: "B2",
+    notes: "Edilgen yapı, yan cümle ile",
+  },
+  {
+    cumle:
+      "Das Auto hätte repariert werden können, wenn wir mehr Zeit gehabt hätten.",
+    turkce: "Daha fazla zamanımız olsaydı araba tamir edilebilirdi.",
+    level: "B2",
+    notes: "Konjunktiv II edilgen, koşullu cümle",
+  },
+  {
+    cumle: "Die Stadt ist im Krieg komplett zerstört worden.",
+    turkce: "Şehir savaşta tamamen yok edildi.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, tamamlama",
+  },
+  {
+    cumle: "Der Diebstahl soll letzten Freitag begangen worden sein.",
+    turkce: "Hırsızlığın geçen Cuma işlenmiş olduğu söyleniyor.",
+    level: "B2",
+    notes: "Edilgen yapı, söylenti ifadesi",
+  },
+  {
+    cumle: "Bei dem Unfall wurde niemand verletzt.",
+    turkce: "Kazada kimse yaralanmadı.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, olumsuz",
+  },
+  {
+    cumle: "In diesem Restaurant wird alles frisch zubereitet.",
+    turkce: "Bu restoranda her şey taze hazırlanıyor.",
+    level: "B2",
+    notes: "Edilgen yapı, genelleme",
+  },
+  {
+    cumle: "Die Entscheidung wird später getroffen werden.",
+    turkce: "Karar daha sonra verilecek.",
+    level: "B2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
+    cumle: "Ein neues Gesetz ist verabschiedet worden.",
+    turkce: "Yeni bir yasa çıkarıldı.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Die Stelle muss neu besetzt werden.",
+    turkce: "Pozisyon yeniden doldurulmalı.",
+    level: "B2",
+    notes: "Edilgen yapı, zorunluluk",
+  },
+  {
+    cumle: "Die Türen werden automatisch geschlossen.",
+    turkce: "Kapılar otomatik olarak kapanıyor.",
+    level: "B2",
+    notes: "Edilgen yapı, otomasyon ifadesi",
+  },
+  {
+    cumle: "Das Konzert musste wegen schlechten Wetters abgesagt werden.",
+    turkce: "Konser kötü hava koşulları nedeniyle iptal edilmek zorunda kaldı.",
+    level: "B2",
+    notes: "Edilgen yapı, zorunluluk ve neden",
+  },
+  {
+    cumle: "Der Patient wird vom besten Arzt behandelt.",
+    turkce: "Hasta en iyi doktor tarafından tedavi ediliyor.",
+    level: "B2",
+    notes: "Edilgen yapı, ajan belirtilmiş",
+  },
+  {
+    cumle:
+      "Es wird vermutet, dass das Gebäude im nächsten Jahr fertiggestellt wird.",
+    turkce: "Binanın gelecek yıl tamamlanacağı tahmin ediliyor.",
+    level: "B2",
+    notes: "Edilgen yapı, yan cümle ile",
+  },
+  {
+    cumle: "Die Arbeiten sind bereits erledigt worden.",
+    turkce: "İşler çoktan halledildi.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, zaman zarfı",
+  },
+  {
+    cumle: "Die Straße wird seit letztem Monat repariert.",
+    turkce: "Cadde geçen aydan beri onarılıyor.",
+    level: "B2",
+    notes: "Edilgen yapı, süreklilik",
+  },
+  {
+    cumle: "Die Wohnung wird seit drei Monaten renoviert.",
+    turkce: "Daire üç aydır yenileniyor.",
+    level: "B2",
+    notes: "Edilgen yapı, süreklilik",
+  },
+  {
+    cumle: "Der Text muss noch korrigiert werden.",
+    turkce: "Metin hala düzeltilmeli.",
+    level: "B2",
+    notes: "Edilgen yapı, zorunluluk",
+  },
+  {
+    cumle: "Alle Fehler wurden beseitigt.",
+    turkce: "Tüm hatalar giderildi.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Der Vorschlag wurde von allen akzeptiert.",
+    turkce: "Öneri herkes tarafından kabul edildi.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, ajan belirtilmiş",
+  },
+  {
+    cumle: "Die Stadt wird täglich von Tausenden Touristen besucht.",
+    turkce: "Şehir her gün binlerce turist tarafından ziyaret ediliyor.",
+    level: "B2",
+    notes: "Edilgen yapı, genelleme ve ajan",
+  },
+  {
+    cumle: "Der Schlüssel wird irgendwo versteckt worden sein.",
+    turkce: "Anahtar bir yerlerde saklanmış olmalı.",
+    level: "B2",
+    notes: "Futura II edilgen, olasılık",
+  },
+  {
+    cumle: "Der Fehler hätte vermieden werden können.",
+    turkce: "Hata önlenebilirdi.",
+    level: "B2",
+    notes: "Konjunktiv II edilgen, olasılık",
+  },
+  {
+    cumle: "Die Qualität muss verbessert werden.",
+    turkce: "Kalite iyileştirilmelidir.",
+    level: "B2",
+    notes: "Edilgen yapı, zorunluluk",
+  },
+  {
+    cumle: "Es darf nicht vergessen werden, dass...",
+    turkce: "Unutulmamalıdır ki...",
+    level: "B2",
+    notes: "Edilgen yapı, uyarı ifadesi",
+  },
+  {
+    cumle: "Die Trauung wird von einem Priester durchgeführt.",
+    turkce: "Nikah bir rahip tarafından gerçekleştiriliyor.",
+    level: "B2",
+    notes: "Edilgen yapı, ajan belirtilmiş",
+  },
+  {
+    cumle: "Das Projekt wird nächste Woche abgeschlossen werden.",
+    turkce: "Proje gelecek hafta tamamlanacak.",
+    level: "B2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
+    cumle: "Die Hauptstadt wurde mehrmals erobert.",
+    turkce: "Başkent birkaç kez fethedildi.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, tekrar ifadesi",
+  },
+  {
+    cumle: "Sein Name wird nie vergessen werden.",
+    turkce: "Onun adı asla unutulmayacak.",
+    level: "B2",
+    notes: "Gelecek zaman edilgen, vurgu",
+  },
+  {
+    cumle: "Damals wurde weniger Plastik verwendet.",
+    turkce: "O zamanlar daha az plastik kullanılıyordu.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, genelleme",
+  },
+  {
+    cumle: "Hätten Sie vielleicht einen Moment Zeit für mich?",
+    turkce: "Acaba bana biraz zaman ayırabilir miydiniz?",
+    level: "B2",
+    notes: "Resmi rica",
+  },
 ];
-
 function Test() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(
+    parseInt(localStorage.getItem("currentIndex")) || 0 // localStorage'dan mevcut indeksi al, yoksa 0
+  );
   const [showTurkish, setShowTurkish] = useState(true);
   const [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || []
@@ -1731,15 +2675,10 @@ function Test() {
   const [showFavorites, setShowFavorites] = useState(false);
   const [repeatCount, setRepeatCount] = useState(0); // Aynı cümlenin kaç kez gösterildiğini takip eder
 
-  // Rasgele indeks seçme fonksiyonu
-  const getRandomIndex = () => {
-    return Math.floor(Math.random() * data.length);
-  };
-
-  // İlk yüklemede rasgele bir cümle seç
+  // currentIndex değiştiğinde localStorage'a kaydet
   useEffect(() => {
-    setCurrentIndex(getRandomIndex());
-  }, []);
+    localStorage.setItem("currentIndex", currentIndex);
+  }, [currentIndex]);
 
   // Almanca'dan bir sonraki adıma otomatik geçiş (5 saniye)
   useEffect(() => {
@@ -1752,8 +2691,8 @@ function Test() {
           setShowTurkish(true);
           setRepeatCount((prev) => prev + 1);
         } else {
-          // İkinci gösterim: Yeni rasgele cümle ve sıfırla
-          setCurrentIndex(getRandomIndex());
+          // İkinci gösterim: Bir sonraki cümleye geç ve sıfırla
+          setCurrentIndex((prev) => (prev + 1) % data.length); // Sırasıyla bir sonraki cümle
           setShowTurkish(true);
           setRepeatCount(0);
         }

@@ -6,24 +6,22 @@ import Konusmak2 from "./Konusmak2";
 import Konusmak3 from "./Konusmak3";
 import Konusmak4 from "./Konusmak4";
 import Test from "./Test";
+import Konusmak5 from "./Konusmak5";
+
 const KonusmakA = () => {
   // Aktif makale ID'sini tutmak için state
   const [activeArticle, setActiveArticle] = useState(1);
 
   // Makale bileşenlerini bir obje içinde tanımla
   const articles = [
-    { id: 1, component: <Konusma />, title: "Genel" },
-    { id: 2, component: <Konusmak1 />, title: "Yan cümle" },
-    { id: 3, component: <Konusmak2 />, title: "Modalverben" },
-    { id: 4, component: <Konusmak3 />, title: "Perfect" },
-    { id: 5, component: <Konusmak4 />, title: "Konjunktiv2" },
-    { id: 6, component: <Test />, title: "Test" },
+    { id: 1, component: Konusma, title: "Genel" },
+    { id: 2, component: Konusmak1, title: "Yan cümle" },
+    { id: 3, component: Konusmak2, title: "Modalverben" },
+    { id: 4, component: Konusmak3, title: "Perfect" },
+    { id: 5, component: Konusmak4, title: "Konjunktiv2" },
+    { id: 6, component: Test, title: "Test" },
+    { id: 7, component: Konusmak5, title: "Passiv" },
   ];
-
-  // Aktif makale bileşenini bul
-  const currentArticle = articles.find(
-    (article) => article.id === activeArticle
-  );
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10">
@@ -48,7 +46,14 @@ const KonusmakA = () => {
 
       {/* Makale İçeriği */}
       <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg">
-        {currentArticle.component}
+        {articles.map((article) => (
+          <div
+            key={article.id}
+            style={{ display: activeArticle === article.id ? "block" : "none" }}
+          >
+            <article.component />
+          </div>
+        ))}
       </div>
     </div>
   );

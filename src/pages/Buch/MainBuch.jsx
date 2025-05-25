@@ -25,6 +25,7 @@ import Edat2 from "../../Components/Buch/Edat2";
 import Gramatik from "../../Components/Buch/Granmatik";
 import Sifat3 from "../../Components/Buch/Sifat3";
 import Makale from "../../Components/Buch/makale/makale";
+import Video from "../../Components/Buch/makale/Video";
 
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
@@ -55,6 +56,7 @@ const components = {
   Gramatik,
   Sifat3,
   Makale,
+  Video,
   // ... add Buch3 to Buch30
 };
 

@@ -1,0 +1,996 @@
+[
+  {
+    "id": 1,
+    "german": "müssen",
+    "turkish": "zorunda olmak",
+    "germanSentence": "Musst du in die Hauptstadt.",
+    "turkishTranslation": "Başkente gitmek zorunda mısın?"
+  },
+  {
+    "id": 2,
+    "german": "wissen",
+    "turkish": "bilmek",
+    "germanSentence": "Die uns länger hören, wissen, dass…",
+    "turkishTranslation": "Bizi daha uzun süre dinleyenler, şunu bilir ki..."
+  },
+  {
+    "id": 3,
+    "german": "finden",
+    "turkish": "bulmak, düşünmek",
+    "germanSentence": "Findet ihr den Link.",
+    "turkishTranslation": "Linki buluyorsunuz."
+  },
+  {
+    "id": 4,
+    "german": "fahren",
+    "turkish": "sürmek, gitmek",
+    "germanSentence": "Mit dem Fahrrad zum Nordkap gefahren ist.",
+    "turkishTranslation": "Bisikletle Nordkap'a gittim."
+  },
+  {
+    "id": 5,
+    "german": "sagen",
+    "turkish": "söylemek",
+    "germanSentence": "Sagst du, Rennradfahren hat dich fasziniert.",
+    "turkishTranslation": "Yarış bisikleti sürmenin seni büyülediğini söylüyorsun."
+  },
+  {
+    "id": 6,
+    "german": "machen",
+    "turkish": "yapmak",
+    "germanSentence": "Was macht man da den ganzen Tag?",
+    "turkishTranslation": "Bütün gün orada ne yapar insan?"
+  },
+  {
+    "id": 7,
+    "german": "denken",
+    "turkish": "düşünmek",
+    "germanSentence": "Dachte ich, wow.",
+    "turkishTranslation": "Vay canına, diye düşündüm."
+  },
+  {
+    "id": 8,
+    "german": "gucken",
+    "turkish": "bakmak",
+    "germanSentence": "Schaut in der Podcast-App vorbei.",
+    "turkishTranslation": "Podcast uygulamasında bir göz atın."
+  },
+  {
+    "id": 9,
+    "german": "lernen",
+    "turkish": "öğrenmek",
+    "germanSentence": "Fahrradfahren gelernt.",
+    "turkishTranslation": "Bisiklet sürmeyi öğrendim."
+  },
+  {
+    "id": 10,
+    "german": "gehen",
+    "turkish": "gitmek",
+    "germanSentence": "Geht ums Fahrradfahren heute.",
+    "turkishTranslation": "Bugün konu bisiklet sürmek."
+  },
+  {
+    "id": 11,
+    "german": "kommen",
+    "turkish": "gelmek",
+    "germanSentence": "Nach Berlin gekommen bist.",
+    "turkishTranslation": "Berlin'e geldin."
+  },
+  {
+    "id": 12,
+    "german": "aussehen",
+    "turkish": "görünmek",
+    "germanSentence": "So sieht’s aus.",
+    "turkishTranslation": "Durum böyle görünüyor."
+  },
+  {
+    "id": 13,
+    "german": "lieben",
+    "turkish": "sevmek",
+    "germanSentence": "Sehr doll geliebt, das Rennradfahren.",
+    "turkishTranslation": "Yarış bisikleti sürmeyi çok sevdim."
+  },
+  {
+    "id": 14,
+    "german": "fragen",
+    "turkish": "sormak",
+    "germanSentence": "Mama gefragt habe.",
+    "turkishTranslation": "Anneme sordum."
+  },
+  {
+    "id": 15,
+    "german": "erzählen",
+    "turkish": "anlatmak",
+    "germanSentence": "Ein Beispiel erzählen.",
+    "turkishTranslation": "Bir örnek anlat."
+  },
+  {
+    "id": 16,
+    "german": "schreiben",
+    "turkish": "yazmak",
+    "germanSentence": "Ein Buch schreibe.",
+    "turkishTranslation": "Bir kitap yazıyorum."
+  },
+  {
+    "id": 17,
+    "german": "berichten",
+    "turkish": "bildirmek, anlatmak",
+    "germanSentence": "Auf Instagram berichte.",
+    "turkishTranslation": "Instagram'da bildiriyorum."
+  },
+  {
+    "id": 18,
+    "german": "verpassen",
+    "turkish": "kaçırmak",
+    "germanSentence": "Alle anderen Episoden nicht verpasst.",
+    "turkishTranslation": "Diğer bölümleri kaçırmadınız."
+  },
+  {
+    "id": 19,
+    "german": "kaufen",
+    "turkish": "satın almak",
+    "germanSentence": "Was muss ich mir für ein Fahrrad kaufen?",
+    "turkishTranslation": "Kendime ne tür bir bisiklet almalıyım?"
+  },
+  {
+    "id": 20,
+    "german": "bleiben",
+    "turkish": "kalmak",
+    "germanSentence": "Selten länger an einem Ort geblieben.",
+    "turkishTranslation": "Nadiren bir yerde uzun süre kaldım."
+  },
+  {
+    "id": 21,
+    "german": "essen",
+    "turkish": "yemek",
+    "germanSentence": "Viel Kartoffeln essen.",
+    "turkishTranslation": "Çok patates yemek."
+  },
+  {
+    "id": 22,
+    "german": "wachsen",
+    "turkish": "büyümek, yetişmek",
+    "germanSentence": "Das wächst da nicht so gut.",
+    "turkishTranslation": "Bu orada pek iyi yetişmiyor."
+  },
+  {
+    "id": 23,
+    "german": "schlafen",
+    "turkish": "uyumak",
+    "germanSentence": "Im Hotel geschlafen.",
+    "turkishTranslation": "Otelde uyudum."
+  },
+  {
+    "id": 24,
+    "german": "ausgeben",
+    "turkish": "harcamak",
+    "germanSentence": "Fünfhundert Euro für ein Rennrad auszugeben.",
+    "turkishTranslation": "Yarış bisikleti için beş yüz euro harcamak."
+  },
+  {
+    "id": 25,
+    "german": "trainieren",
+    "turkish": "antrenman yapmak",
+    "germanSentence": "Man trainiert auf der einen Seite.",
+    "turkishTranslation": "Bir yandan antrenman yapıyorsun."
+  },
+  {
+    "id": 26,
+    "german": "zuschauen",
+    "turkish": "seyretmek",
+    "germanSentence": "Bei einem Radrennen zugeschaut.",
+    "turkishTranslation": "Bir bisiklet yarışını izledim."
+  },
+  {
+    "id": 27,
+    "german": "anfangen",
+    "turkish": "başlamak",
+    "germanSentence": "Man kann immer direkt vor der Haustür anfangen.",
+    "turkishTranslation": "Her zaman kapının önünde başlayabilirsin."
+  },
+  {
+    "id": 28,
+    "german": "regen",
+    "turkish": "yağmur yağmak",
+    "germanSentence": "Zwischendurch hat es auch geregnet.",
+    "turkishTranslation": "Arada yağmur da yağdı."
+  },
+  {
+    "id": 29,
+    "german": "vergleichen",
+    "turkish": "karşılaştırmak",
+    "germanSentence": "Kann man irgendwie schwierig vergleichen.",
+    "turkishTranslation": "Bir şekilde karşılaştırmak zor."
+  },
+  {
+    "id": 30,
+    "german": "beantragen",
+    "turkish": "başvurmak",
+    "germanSentence": "Viele Visa beantragen.",
+    "turkishTranslation": "Birçok vize için başvurmak."
+  },
+  {
+    "id": 31,
+    "german": "aufpassen",
+    "turkish": "dikkat etmek",
+    "germanSentence": "Überall auf der Welt aufpassen.",
+    "turkishTranslation": "Dünyanın her yerinde dikkat etmek."
+  },
+  {
+    "id": 32,
+    "german": "verarbeiten",
+    "turkish": "işlemek, sindirmek",
+    "germanSentence": "Verarbeitest du es im Moment.",
+    "turkishTranslation": "Şu anda bunu sindiriyor musun?"
+  },
+  {
+    "id": 33,
+    "german": "beschäftigen",
+    "turkish": "meşgul etmek, ilgilenmek",
+    "germanSentence": "Die dich gerade beschäftigt.",
+    "turkishTranslation": "Şu anda seni meşgul eden."
+  },
+  {
+    "id": 34,
+    "german": "führen",
+    "turkish": "yönetmek, tutmak",
+    "germanSentence": "Ein Tagebuch geführt.",
+    "turkishTranslation": "Bir günlük tuttum."
+  },
+  {
+    "id": 35,
+    "german": "posten",
+    "turkish": "paylaşmak, yayımlamak",
+    "germanSentence": "Viel auch gepostet.",
+    "turkishTranslation": "Çok da paylaşım yaptım."
+  },
+  {
+    "id": 36,
+    "german": "fotografieren",
+    "turkish": "fotoğraf çekmek",
+    "germanSentence": "Fotografiert und auch geschrieben.",
+    "turkishTranslation": "Fotoğraf çektim ve yazdım."
+  },
+  {
+    "id": 37,
+    "german": "berühren",
+    "turkish": "dokunmak, etkilemek",
+    "germanSentence": "Mich sehr berührt hat.",
+    "turkishTranslation": "Beni çok etkiledi."
+  },
+  {
+    "id": 38,
+    "german": "checken",
+    "turkish": "kontrol etmek",
+    "germanSentence": "Um zu checken: Alles okay bei dir?",
+    "turkishTranslation": "Kontrol etmek için: Her şey yolunda mı?"
+  },
+  {
+    "id": 39,
+    "german": "verstehen",
+    "turkish": "anlamak",
+    "germanSentence": "Ich verstehe das total.",
+    "turkishTranslation": "Bunu tamamen anlıyorum."
+  },
+  {
+    "id": 40,
+    "german": "kennen",
+    "turkish": "tanımak, bilmek",
+    "germanSentence": "Die sich auch auskennen.",
+    "turkishTranslation": "Kendilerini de bilenler."
+  },
+  {
+    "id": 41,
+    "german": "auskennen",
+    "turkish": "bilmek, anlamak",
+    "germanSentence": "Die sich auch auskennen.",
+    "turkishTranslation": "Kendilerini de bilenler."
+  },
+  {
+    "id": 42,
+    "german": "sich freuen",
+    "turkish": "sevinmek",
+    "germanSentence": "Wir freuen uns auf das Buch.",
+    "turkishTranslation": "Kitap için seviniyoruz."
+  },
+  {
+    "id": 43,
+    "german": "sich fühlen",
+    "turkish": "hissetmek",
+    "germanSentence": "Dich auch überfordert gefühlt hast.",
+    "turkishTranslation": "Kendini bunalmış hissettin."
+  },
+  {
+    "id": 44,
+    "german": "sich vorstellen",
+    "turkish": "hayal etmek, düşünmek",
+    "germanSentence": "Stelle ich mir … schwierig vor.",
+    "turkishTranslation": "Bunu … zor hayal ediyorum."
+  },
+  {
+    "id": 45,
+    "german": "sich verändern",
+    "turkish": "değişmek",
+    "germanSentence": "Wie ich mich jetzt verändert habe.",
+    "turkishTranslation": "Şimdi nasıl değiştim."
+  },
+  {
+    "id": 46,
+    "german": "sich hineinversetzen",
+    "turkish": "kendini yerine koymak, empati yapmak",
+    "germanSentence": "Können sich wenig da hineinversetzen.",
+    "turkishTranslation": "Kendilerini buna pek az empati yapabilirler."
+  },
+  {
+    "id": 47,
+    "german": "sich benehmen",
+    "turkish": "davranmak",
+    "germanSentence": "Du benimmst dich ja auch anders.",
+    "turkishTranslation": "Sen de farklı davranıyorsun."
+  },
+  {
+    "id": 48,
+    "german": "zurückkommen",
+    "turkish": "geri dönmek",
+    "germanSentence": "Endlich mal wieder zurück.",
+    "turkishTranslation": "Nihayet geri döndüm."
+  },
+  {
+    "id": 49,
+    "german": "vorbeischauen",
+    "turkish": "uğramak, bakmak",
+    "germanSentence": "Schaut mal auf unserem YouTube-Kanal vorbei.",
+    "turkishTranslation": "YouTube kanalımıza bir göz atın."
+  },
+  {
+    "id": 50,
+    "german": "aufstehen",
+    "turkish": "kalkmak",
+    "germanSentence": "Aufstehen, Zelt zusammenbauen.",
+    "turkishTranslation": "Kalkmak, çadırı toplamak."
+  },
+  {
+    "id": 51,
+    "german": "einpacken",
+    "turkish": "paketlemek",
+    "germanSentence": "Alles einpacken.",
+    "turkishTranslation": "Her şeyi paketlemek."
+  },
+  {
+    "id": 52,
+    "german": "verstauen",
+    "turkish": "saklamak, yerleştirmek",
+    "germanSentence": "Sachen zu verstauen.",
+    "turkishTranslation": "Eşyaları yerleştirmek."
+  },
+  {
+    "id": 53,
+    "german": "aufnehmen",
+    "turkish": "almak, kabul etmek",
+    "germanSentence": "Aufnehmen in die Community.",
+    "turkishTranslation": "Topluluğa kabul etmek."
+  },
+  {
+    "id": 54,
+    "german": "mitnehmen",
+    "turkish": "yanına almak",
+    "germanSentence": "Das mitnehmen.",
+    "turkishTranslation": "Bunu yanına almak."
+  },
+  {
+    "id": 55,
+    "german": "losfahren",
+    "turkish": "hareket etmek, yola çıkmak",
+    "germanSentence": "Bis ich überhaupt losfahre.",
+    "turkishTranslation": "Hareket edene kadar."
+  },
+  {
+    "id": 56,
+    "german": "weiterfahren",
+    "turkish": "devam etmek, sürmeye devam etmek",
+    "germanSentence": "Und weiterfährt.",
+    "turkishTranslation": "Ve sürmeye devam eder."
+  },
+  {
+    "id": 57,
+    "german": "aufgeben",
+    "turkish": "tükenmek, bitkin düşmek",
+    "germanSentence": "Nicht völlig k.o. bin.",
+    "turkishTranslation": "Tamamen bitkin düşmedim."
+  },
+  {
+    "id": 58,
+    "german": "anbauen",
+    "turkish": "yetiştirmek",
+    "germanSentence": "Wo auch Kartoffeln angebaut werden.",
+    "turkishTranslation": "Patateslerin de yetiştirildiği yerde."
+  },
+  {
+    "id": 59,
+    "german": "auschecken",
+    "turkish": "kontrol etmek, incelemek",
+    "germanSentence": "So ausgecheckt wurde.",
+    "turkishTranslation": "Böyle kontrol edildi."
+  },
+  {
+    "id": 60,
+    "german": "zurückziehen",
+    "turkish": "geri çekilmek",
+    "germanSentence": "In dein Zimmer zurückziehen.",
+    "turkishTranslation": "Odana geri çekilmek."
+  },
+  {
+    "id": 61,
+    "german": "abbrechen",
+    "turkish": "sökmek, kaldırmak",
+    "germanSentence": "Zelt wieder aufbaut und abräumt.",
+    "turkishTranslation": "Çadırı tekrar kurup kaldırır."
+  },
+  {
+    "id": 62,
+    "german": "nachverfolgen",
+    "turkish": "takip etmek",
+    "germanSentence": "Route nachverfolgen.",
+    "turkishTranslation": "Rotayı takip etmek."
+  },
+  {
+    "id": 63,
+    "german": "weiterverfolgen",
+    "turkish": "takip etmeye devam etmek",
+    "germanSentence": "Dass ihr weiterverfolgt.",
+    "turkishTranslation": "Takip etmeye devam etmeniz."
+  },
+  {
+    "id": 64,
+    "german": "nachdenken",
+    "turkish": "düşünmek",
+    "germanSentence": "Über die du gerade nachdenkst.",
+    "turkishTranslation": "Şu anda düşündüğün şeyler üzerine."
+  },
+  {
+    "id": 65,
+    "german": "überqueren",
+    "turkish": "geçmek, aşmak",
+    "germanSentence": "Einen ganzen Kontinent überqueren.",
+    "turkishTranslation": "Bütün bir kıtayı aşmak."
+  },
+  {
+    "id": 66,
+    "german": "entscheiden",
+    "turkish": "karar vermek",
+    "germanSentence": "Habe ich dann entschieden.",
+    "turkishTranslation": "Sonra karar verdim."
+  },
+  {
+    "id": 67,
+    "german": "vergrößern",
+    "turkish": "büyütmek",
+    "germanSentence": "Radius weiter vergrößern.",
+    "turkishTranslation": "Yarıçapı daha da büyütmek."
+  },
+  {
+    "id": 68,
+    "german": "betrieben",
+    "turkish": "yürütmek, yapmak",
+    "germanSentence": "Wettkampfsport betrieben.",
+    "turkishTranslation": "Yarış sporu yaptım."
+  },
+  {
+    "id": 69,
+    "german": "verändern",
+    "turkish": "değiştirmek",
+    "germanSentence": "Mein Leben wirklich verändert hat.",
+    "turkishTranslation": "Hayatımı gerçekten değiştirdi."
+  },
+  {
+    "id": 70,
+    "german": "optimieren",
+    "turkish": "optimize etmek",
+    "germanSentence": "Alles optimieren.",
+    "turkishTranslation": "Her şeyi optimize etmek."
+  },
+  {
+    "id": 71,
+    "german": "erledigen",
+    "turkish": "halletmek",
+    "germanSentence": "Alles mit dem Fahrrad erledigen.",
+    "turkishTranslation": "Her şeyi bisikletle halletmek."
+  },
+  {
+    "id": 72,
+    "german": "vermissen",
+    "turkish": "özlemek",
+    "germanSentence": "Hast du das Brot vermisst?",
+    "turkishTranslation": "Ekmeği özledin mi?"
+  },
+  {
+    "id": 73,
+    "german": "überwinden",
+    "turkish": "kışlamak, geçirmek",
+    "germanSentence": "Die da auch überwintern.",
+    "turkishTranslation": "Orada kışlayanlar."
+  },
+  {
+    "id": 74,
+    "german": "anfragen",
+    "turkish": "sormak, talep etmek",
+    "germanSentence": "In Schulen angefragt.",
+    "turkishTranslation": "Okullarda talep ettim."
+  },
+  {
+    "id": 75,
+    "german": "entstehen",
+    "turkish": "ortaya çıkmak",
+    "germanSentence": "Dadurch entsteht keine tiefe Verbindung.",
+    "turkishTranslation": "Bu yüzden derin bir bağlantı oluşmuyor."
+  },
+  {
+    "id": 76,
+    "german": "integrieren",
+    "turkish": "entegre etmek",
+    "germanSentence": "Bist du wieder integriert?",
+    "turkishTranslation": "Tekrar entegre oldun mu?"
+  },
+  {
+    "id": 77,
+    "german": "reaktivieren",
+    "turkish": "yeniden etkinleştirmek",
+    "germanSentence": "Erinnerungen wieder reaktiviere.",
+    "turkishTranslation": "Anıları tekrar etkinleştiriyorum."
+  },
+  {
+    "id": 78,
+    "german": "präsentieren",
+    "turkish": "sunmak",
+    "germanSentence": "Eine Episode präsentieren können.",
+    "turkishTranslation": "Bir bölümü sunabilmek."
+  },
+  {
+    "id": 79,
+    "german": "verlinken",
+    "turkish": "bağlantı vermek",
+    "germanSentence": "Wir verlinken all diese Links.",
+    "turkishTranslation": "Tüm bu bağlantıları veriyoruz."
+  },
+  {
+    "id": 80,
+    "german": "losgehen",
+    "turkish": "iyi geçmesini sağlamak",
+    "germanSentence": "Es mir mal gutgehen lassen.",
+    "turkishTranslation": "Kendime bir kez iyi geçmesini sağlamak."
+  },
+  {
+    "id": 81,
+    "german": "quatschen",
+    "turkish": "sohbet etmek",
+    "germanSentence": "Wollen quatschen und wollen spielen.",
+    "turkishTranslation": "Sohbet etmek ve oynamak istiyoruz."
+  },
+  {
+    "id": 82,
+    "german": "schieben",
+    "turkish": "itmek",
+    "germanSentence": "Manchmal nur schieben.",
+    "turkishTranslation": "Bazen sadece itmek."
+  },
+  {
+    "id": 83,
+    "german": "wunderbar",
+    "turkish": "harika, muhteşem",
+    "germanSentence": "Manuel, wir haben heute einen wunderbaren Gast und ein wunderbares Thema...",
+    "turkishTranslation": "Manuel, bugün harika bir konuğumuz ve harika bir konumuz var..."
+  },
+  {
+    "id": 84,
+    "german": "schick",
+    "turkish": "şık, hoş",
+    "germanSentence": "So sieht's aus. Ich habe mein Fahrräder-T-Shirt an. Sehr schick.",
+    "turkishTranslation": "Durum böyle. Bisiklet tişörtümü giydim. Çok şık."
+  },
+  {
+    "id": 85,
+    "german": "lange",
+    "turkish": "uzun (zaman anlamında)",
+    "germanSentence": "Und zwar ist das ja ein Thema, was mich schon lange verfolgt.",
+    "turkishTranslation": "Bu, beni uzun zamandır takip eden bir konu."
+  },
+  {
+    "id": 86,
+    "german": "viel",
+    "turkish": "çok",
+    "germanSentence": "Mittlerweile bist du noch viel weiter gefahren, nämlich auch ans Südkap.",
+    "turkishTranslation": "Bu arada çok daha uzağa gittin, hatta Güneyburnu'na kadar."
+  },
+  {
+    "id": 87,
+    "german": "cool",
+    "turkish": "harika, havalı",
+    "germanSentence": "Ja. Voll cool, dass euch das Thema interessiert und, ja, gibt sicher viel zu erzählen.",
+    "turkishTranslation": "Evet, konunun sizi ilgilendirmesi çok havalı ve evet, anlatacak çok şey var."
+  },
+  {
+    "id": 88,
+    "german": "klassisch",
+    "turkish": "klasik, geleneksel",
+    "germanSentence": "Und vom Kap zum Kap ist auch so eine klassische Route.",
+    "turkishTranslation": "Ve burundan buruna da böyle klasik bir rota."
+  },
+  {
+    "id": 89,
+    "german": "gut",
+    "turkish": "iyi",
+    "germanSentence": "Ich dachte, das ist ein guter Anlass, das jetzt mit dreißig zu verbinden.",
+    "turkishTranslation": "Bunun, otuz yaşında bunu birleştirmek için iyi bir fırsat olduğunu düşündüm."
+  },
+  {
+    "id": 90,
+    "german": "riesig",
+    "turkish": "devasa, çok büyük",
+    "germanSentence": "Also der afrikanische Kontinent ist wirklich riesig.",
+    "turkishTranslation": "Afrika kıtası gerçekten devasa."
+  },
+  {
+    "id": 91,
+    "german": "weiter",
+    "turkish": "daha uzak, daha geniş",
+    "germanSentence": "Und habe das erst mal als Geheimnis mit mir herumgetragen, bis ich irgendwann meine Mama gefragt habe, ob sie denkt, dass das völlig verrückt sei oder irgendwie okay, so fünfhundert Euro für ein teures Rennrad auszugeben.",
+    "turkishTranslation": "Ve bunu bir süre sır olarak içimde taşıdım, ta ki bir gün anneme, beş yüz euroyu pahalı bir yarış bisikletine harcamanın tamamen çılgınca mı yoksa bir şekilde uygun mu olduğunu düşünüp düşünmediğini sorana kadar."
+  },
+  {
+    "id": 92,
+    "german": "teuer",
+    "turkish": "pahalı",
+    "germanSentence": "…ob sie denkt, dass das völlig verrückt sei oder irgendwie okay, so fünfhundert Euro für ein teures Rennrad auszugeben.",
+    "turkishTranslation": "…onun tamamen çılgınca mı yoksa bir şekilde uygun mu olduğunu düşünüp düşünmediğini, beş yüz euroyu pahalı bir yarış bisikletine harcamayı."
+  },
+  {
+    "id": 93,
+    "german": "schnell",
+    "turkish": "hızlı",
+    "germanSentence": "Und habe es dann aber gemacht und auch superschnell, also, sehr, sehr doll geliebt, das Rennradfahren.",
+    "turkishTranslation": "Ve sonra yaptım ve çok hızlı bir şekilde, yani gerçekten çok sevdim, yarış bisikleti sürmeyi."
+  },
+  {
+    "id": 94,
+    "german": "verrückt",
+    "turkish": "çılgın, delice",
+    "germanSentence": "Vierzehn Monate warst du unterwegs. Für die allermeisten Menschen klingt das schon verrückt.",
+    "turkishTranslation": "On dört ay boyunca yoldaydın. Çoğu insan için bu zaten çılgınca geliyor."
+  },
+  {
+    "id": 95,
+    "german": "gebräuchlich",
+    "turkish": "yaygın, alışılmış",
+    "germanSentence": "In Deutschland ist es ja schon ein gebräuchliches Verkehrsmittel.",
+    "turkishTranslation": "Almanya'da bu zaten yaygın bir ulaşım aracı."
+  },
+  {
+    "id": 96,
+    "german": "früh",
+    "turkish": "erken",
+    "germanSentence": "Also, wir lernen das schon, finde ich, sehr, sehr früh und das gehört irgendwie dazu...",
+    "turkishTranslation": "Yani, bunu zaten bence çok, çok erken öğreniyoruz ve bu bir şekilde buna dahil..."
+  },
+  {
+    "id": 97,
+    "german": "selbstständig",
+    "turkish": "bağımsız",
+    "germanSentence": "Einfach der Weg zum Schwimmbad, dass man da selbstständig hinkommt, ohne dass man irgendwie gefahren werden muss oder eine Stunde zu Fuß geht.",
+    "turkishTranslation": "Yüzme havuzuna giden yol, oraya bağımsız bir şekilde ulaşmak, birinin seni götürmesine gerek kalmadan ya da bir saat yürümeden."
+  },
+  {
+    "id": 98,
+    "german": "kompetitiv",
+    "turkish": "rekabetçi",
+    "germanSentence": "Ich habe dann im Studium, war ich in einem Triathlon-Verein und habe auch kompetitiv Wettkampfsport betrieben.",
+    "turkishTranslation": "Sonra üniversitede bir triatlon kulübündeydim ve rekabetçi bir şekilde yarış sporu yaptım."
+  },
+  {
+    "id": 99,
+    "german": "unabhängig",
+    "turkish": "bağımsız",
+    "germanSentence": "Und die erste lange Radreise war in Südamerika, um Spanisch zu lernen. Und damals habe ich den Sport nicht zu Hause lassen wollen, sondern ich wollte unbedingt das mitnehmen und gleichzeitig aber auch die Freiheit und Unabhängigkeit, die mir das Radfahren gibt, mitnehmen.",
+    "turkishTranslation": "Ve ilk uzun bisiklet yolculuğu Güney Amerika’daydı, İspanyolca öğrenmek için. O zamanlar sporu evde bırakmak istemedim, aksine bunu mutlaka yanımda götürmek ve aynı zamanda bisiklet sürmenin bana verdiği özgürlüğü ve bağımsızlığı da almak istedim."
+  },
+  {
+    "id": 100,
+    "german": "monoton",
+    "turkish": "tekdüze, monoton",
+    "germanSentence": "Der Alltag unterwegs ist oft sehr monoton.",
+    "turkishTranslation": "Yoldaki günlük yaşam sıkça çok tekdüze."
+  },
+  {
+    "id": 101,
+    "german": "autonom",
+    "turkish": "özerk, bağımsız",
+    "germanSentence": "Ja, also man ist super autonom, weil man dank dem Fahrrad ganz viele Möglichkeiten hat, Sachen zu verstauen.",
+    "turkishTranslation": "Evet, yani bisiklet sayesinde eşyaları yerleştirmek için birçok olasılığın olduğu için süper bağımsızsın."
+  },
+  {
+    "id": 102,
+    "german": "spannend",
+    "turkish": "heyecan verici, ilginç",
+    "germanSentence": "Das war für mich als Organisationsfan sehr spannend.",
+    "turkishTranslation": "Bu, organizasyon tutkunu biri olarak benim için çok heyecan vericiydi."
+  },
+  {
+    "id": 103,
+    "german": "minimalistisch",
+    "turkish": "minimalist",
+    "germanSentence": "Ja, also, man lernt auf jeden Fall, minimalistisch zu sein.",
+    "turkishTranslation": "Evet, yani kesinlikle minimalist olmayı öğreniyorsun."
+  },
+  {
+    "id": 104,
+    "german": "nett",
+    "turkish": "nazik, hoş",
+    "germanSentence": "Mit viel Auswahl, netten Bäckerei-Fachverkäuferinnen, sauberen Toiletten.",
+    "turkishTranslation": "Çok çeşit, nazik fırın çalışanları, temiz tuvaletler ile."
+  },
+  {
+    "id": 105,
+    "german": "sauber",
+    "turkish": "temiz",
+    "germanSentence": "Mit viel Auswahl, netten Bäckerei-Fachverkäuferinnen, sauberen Toiletten.",
+    "turkishTranslation": "Çok çeşit, nazik fırın çalışanları, temiz tuvaletler ile."
+  },
+  {
+    "id": 106,
+    "german": "deutsch",
+    "turkish": "Alman",
+    "germanSentence": "Campingplätze sind auch sehr deutsch, würde ich sagen.",
+    "turkishTranslation": "Kamp yerleri de çok Almanvari, diyebilirim."
+  },
+  {
+    "id": 107,
+    "german": "toll",
+    "turkish": "harika, güzel",
+    "germanSentence": "Toll. War sehr schön.",
+    "turkishTranslation": "Harika. Çok güzeldi."
+  },
+  {
+    "id": 108,
+    "german": "sicher",
+    "turkish": "güvenli",
+    "germanSentence": "Ja, oder sicherer wahrscheinlich auch, ja.",
+    "turkishTranslation": "Evet, ya da muhtemelen daha güvenli, evet."
+  },
+  {
+    "id": 109,
+    "german": "anstrengend",
+    "turkish": "yorucu",
+    "germanSentence": "Es war da schon ziemlich anstrengend.",
+    "turkishTranslation": "Orada oldukça yorucuydu."
+  },
+  {
+    "id": 110,
+    "german": "groß",
+    "turkish": "büyük",
+    "germanSentence": "Das ist die richtige Antwort. Gute Wahl. Ja, es war wirklich traumhaft, weil da nicht nur Schimpansen zu sehen sind oder Affen, sondern auch halt noch viel mehr wilde Tiere am Straßenrand. Und das war schon sehr, sehr schön.",
+    "turkishTranslation": "Bu doğru cevap. İyi seçim. Evet, gerçekten rüya gibiydi, çünkü orada sadece şempanzeler ya da maymunlar değil, yol kenarında çok daha fazla vahşi hayvan vardı. Ve bu zaten çok, çok güzeldi."
+  },
+  {
+    "id": 111,
+    "german": "traumhaft",
+    "turkish": "rüya gibi, muhteşem",
+    "germanSentence": "Ja, es war wirklich traumhaft, weil da nicht nur Schimpansen zu sehen sind oder Affen...",
+    "turkishTranslation": "Evet, gerçekten rüya gibiydi, çünkü orada sadece şempanzeler ya da maymunlar değil..."
+  },
+  {
+    "id": 112,
+    "german": "wild",
+    "turkish": "vahşi",
+    "germanSentence": "Und es gibt auch wilde Schimpansen da, die man einfach am Straßenrand hört und wenn man in den Wald geht, sieht.",
+    "turkishTranslation": "Ve orada vahşi şempanzeler de var, yol kenarında duyuyorsun ve ormana gittiğinde görüyorsun."
+  },
+  {
+    "id": 129,
+    "german": "herzlich",
+    "turkish": "içten, samimi bir şekilde",
+    "germanSentence": "Hallihallo und herzlich willkommen zurück, beim Easy German Podcast.",
+    "turkishTranslation": "Merhaba ve Easy German Podcast’ine içten bir hoş geldiniz."
+  },
+  {
+    "id": 130,
+    "german": "endlich",
+    "turkish": "nihayet, sonunda",
+    "germanSentence": "Endlich mal wieder ein Gast bei uns im Studio.",
+    "turkishTranslation": "Nihayet stüdyomuzda tekrar bir konuk var."
+  },
+  {
+    "id": 131,
+    "german": "heute",
+    "turkish": "bugün",
+    "germanSentence": "Und heute sitzen wir in unserem Videostudio.",
+    "turkishTranslation": "Ve bugün video stüdyomuzda oturuyoruz."
+  },
+  {
+    "id": 132,
+    "german": "gerade",
+    "turkish": "şu anda, tam",
+    "germanSentence": "Das heißt, wenn ihr heute gerade den Podcast in eurer Podcast-Audio-App hört...",
+    "turkishTranslation": "Yani, eğer bugün tam şu anda podcast’i ses uygulamanızda dinliyorsanız..."
+  },
+  {
+    "id": 133,
+    "german": "mal",
+    "turkish": "bir kez, bir ara",
+    "germanSentence": "Dann schaut mal auf unserem YouTube-Kanal vorbei.",
+    "turkishTranslation": "O zaman YouTube kanalımıza bir göz atın."
+  },
+  {
+    "id": 134,
+    "german": "auch",
+    "turkish": "ayrıca, de/da",
+    "germanSentence": "Und wenn ihr das auf YouTube seht, dann findet ihr den Link.",
+    "turkishTranslation": "Ve eğer bunu YouTube’da görüyorsanız, linki bulursunuz."
+  },
+  {
+    "id": 135,
+    "german": "meistens",
+    "turkish": "çoğunlukla",
+    "germanSentence": "Damit ihr auch alle anderen Episoden nicht verpasst, die ja meistens nur Audio sind, ohne Video.",
+    "turkishTranslation": "Böylece diğer bölümleri kaçırmazsınız, ki bunlar çoğunlukla sadece sesli, videosuz oluyor."
+  },
+  {
+    "id": 136,
+    "german": "schon",
+    "turkish": "zaten, şimdiden",
+    "germanSentence": "Und zwar ist das ja ein Thema, was mich schon lange verfolgt.",
+    "turkishTranslation": "Bu, beni zaten uzun zamandır takip eden bir konu."
+  },
+  {
+    "id": 137,
+    "german": "seitdem",
+    "turkish": "o zamandan beri",
+    "germanSentence": "Den habe ich auf YouTube gesehen. Folge ihr seitdem auf Instagram.",
+    "turkishTranslation": "Onu YouTube’da gördüm. O zamandan beri Instagram’da takip ediyorum."
+  },
+  {
+    "id": 138,
+    "german": "mittlerweile",
+    "turkish": "bu arada, şimdiye kadar",
+    "germanSentence": "Mittlerweile bist du noch viel weiter gefahren, nämlich auch ans Südkap.",
+    "turkishTranslation": "Bu arada çok daha uzağa gittin, hatta Güneyburnu’na kadar."
+  },
+  {
+    "id": 139,
+    "german": "sicher",
+    "turkish": "kesinlikle, emin bir şekilde",
+    "germanSentence": "Ja. Voll cool, dass euch das Thema interessiert und, ja, gibt sicher viel zu erzählen.",
+    "turkishTranslation": "Evet, konunun sizi ilgilendirmesi çok havalı ve evet, kesinlikle anlatacak çok şey var."
+  },
+  {
+    "id": 140,
+    "german": "eigentlich",
+    "turkish": "aslında",
+    "germanSentence": "Und deswegen habe ich mir eigentlich auf der Reise durch Norwegen ans Nordkap gedacht...",
+    "turkishTranslation": "Ve bu yüzden aslında Norveç üzerinden Nordkap’a yaptığım yolculukta düşündüm..."
+  },
+  {
+    "id": 141,
+    "german": "letztes",
+    "turkish": "geçen",
+    "germanSentence": "Und ich bin letztes Jahr dreißig geworden...",
+    "turkishTranslation": "Ve geçen yıl otuz oldum..."
+  },
+  {
+    "id": 142,
+    "german": "jetzt",
+    "turkish": "şimdi",
+    "germanSentence": "Ich dachte, das ist ein guter Anlass, das jetzt mit dreißig zu verbinden.",
+    "turkishTranslation": "Bunun, şimdi otuz yaşında bunu birleştirmek için iyi bir fırsat olduğunu düşündüm."
+  },
+  {
+    "id": 143,
+    "german": "wirklich",
+    "turkish": "gerçekten",
+    "germanSentence": "Also der afrikanische Kontinent ist wirklich riesig.",
+    "turkishTranslation": "Afrika kıtası gerçekten devasa."
+  },
+  {
+    "id": 144,
+    "german": "erst",
+    "turkish": "ilk, ancak",
+    "germanSentence": "Und erst nach fünfzehntausend Kilometern bin ich über den Äquator gefahren.",
+    "turkishTranslation": "Ve ancak on beş bin kilometre sonra ekvatoru geçtim."
+  },
+  {
+    "id": 145,
+    "german": "sehr",
+    "turkish": "çok",
+    "germanSentence": "Und es ist einfach wirklich sehr, sehr, sehr weit.",
+    "turkishTranslation": "Ve bu gerçekten çok, çok, çok uzak."
+  },
+  {
+    "id": 146,
+    "german": "völlig",
+    "turkish": "tamamen",
+    "germanSentence": "…ob sie denkt, dass das völlig verrückt sei oder irgendwie okay...",
+    "turkishTranslation": "…onun tamamen çılgınca mı yoksa bir şekilde uygun mu olduğunu düşünüp düşünmediğini..."
+  },
+  {
+    "id": 147,
+    "german": "irgendwie",
+    "turkish": "bir şekilde",
+    "germanSentence": "…ob sie denkt, dass das völlig verrückt sei oder irgendwie okay...",
+    "turkishTranslation": "…onun tamamen çılgınca mı yoksa bir şekilde uygun mu olduğunu düşünüp düşünmediğini..."
+  },
+  {
+    "id": 148,
+    "german": "superschnell",
+    "turkish": "çok hızlı",
+    "germanSentence": "Und habe es dann aber gemacht und auch superschnell, also, sehr, sehr doll geliebt, das Rennradfahren.",
+    "turkishTranslation": "Ve sonra yaptım ve çok hızlı bir şekilde, yani gerçekten çok sevdim, yarış bisikleti sürmeyi."
+  },
+  {
+    "id": 149,
+    "german": "doll",
+    "turkish": "çok, oldukça",
+    "germanSentence": "Und habe es dann aber gemacht und auch superschnell, also, sehr, sehr doll geliebt, das Rennradfahren.",
+    "turkishTranslation": "Ve sonra yaptım ve çok hızlı bir şekilde, yani gerçekten çok sevdim, yarış bisikleti sürmeyi."
+  },
+  {
+    "id": 150,
+    "german": "oft",
+    "turkish": "sıkça",
+    "germanSentence": "Der Alltag unterwegs ist oft sehr monoton.",
+    "turkishTranslation": "Yoldaki günlük yaşam sıkça çok tekdüze."
+  },
+  {
+    "id": 151,
+    "german": "super",
+    "turkish": "süper, çok iyi",
+    "germanSentence": "Ja, also man ist super autonom, weil man dank dem Fahrrad ganz viele Möglichkeiten hat, Sachen zu verstauen.",
+    "turkishTranslation": "Evet, yani bisiklet sayesinde eşyaları yerleştirmek için birçok olasılığın olduğu için süper bağımsızsın."
+  },
+  {
+    "id": 152,
+    "german": "schnell",
+    "turkish": "hızlıca",
+    "germanSentence": "Man findet, glaube ich, schnell coole Ziele.",
+    "turkishTranslation": "Bence hızlıca havalı hedefler buluyorsun."
+  },
+  {
+    "id": 153,
+    "german": "ziemlich",
+    "turkish": "oldukça",
+    "germanSentence": "Es war da schon ziemlich anstrengend.",
+    "turkishTranslation": "Orada oldukça yorucuydu."
+  },
+  {
+    "id": 154,
+    "german": "leider",
+    "turkish": "ne yazık ki",
+    "germanSentence": "Ja, die sind leider nicht direkt vor mir gewesen...",
+    "turkishTranslation": "Evet, ne yazık ki onlar doğrudan önümde değildi..."
+  },
+  {
+    "id": 155,
+    "german": "direkt",
+    "turkish": "doğrudan",
+    "germanSentence": "Ja, die sind leider nicht direkt vor mir gewesen...",
+    "turkishTranslation": "Evet, ne yazık ki onlar doğrudan önümde değildi..."
+  },
+  {
+    "id": 156,
+    "german": "wahrscheinlich",
+    "turkish": "muhtemelen",
+    "germanSentence": "Ja, oder sicherer wahrscheinlich auch, ja.",
+    "turkishTranslation": "Evet, ya da muhtemelen daha güvenli, evet."
+  },
+  {
+    "id": 157,
+    "german": "immer",
+    "turkish": "her zaman",
+    "germanSentence": "Das heißt so irgendwie auch ein bisschen dieses: Bist du wieder integriert?",
+    "turkishTranslation": "Bu biraz da şu anlama geliyor: Tekrar entegre oldun mu?"
+  },
+  {
+    "id": 158,
+    "german": "ständig",
+    "turkish": "sürekli",
+    "germanSentence": "Ach, wie ist das? Musst du ja ständig erzählen.",
+    "turkishTranslation": "Ah, bu nasıl bir şey? Sürekli anlatmak zorunda mısın?"
+  }
+]

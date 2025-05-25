@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const textContent = [
   {
@@ -475,26 +475,50 @@ function Kitap5() {
   const [tooltip, setTooltip] = useState({
     visible: false,
     content: "",
-    x: 0,
-    y: 0,
+    position: { x: 0, y: 0 },
   });
 
-  const handleWordClick = (word, translation, event) => {
-    const rect = event.target.getBoundingClientRect();
+  // Adjust tooltip position to stay within viewport
+  const adjustTooltipPosition = (x, y) => {
+    const tooltipWidth = 200; // Approximate width
+    const tooltipHeight = 40; // Approximate height
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    return {
+      x: Math.min(x, windowWidth - tooltipWidth),
+      y: Math.min(y, windowHeight - tooltipHeight),
+    };
+  };
+
+  // Handle click and keyboard events
+  const handleClick = (e, translation) => {
+    const rect = e.target.getBoundingClientRect();
+    const adjustedPos = adjustTooltipPosition(
+      rect.left,
+      rect.bottom + window.scrollY
+    );
     setTooltip({
       visible: true,
-      content: `${word}: ${translation}`,
-      x: rect.left + window.scrollX,
-      y: rect.bottom + window.scrollY + 5,
+      content: translation,
+      position: adjustedPos,
     });
   };
 
-  const handleClickOutside = () => {
-    setTooltip({ visible: false, content: "", x: 0, y: 0 });
-  };
+  // Cleanup timeout on unmount or when tooltip visibility changes
+  useEffect(() => {
+    let timeoutId;
+    if (tooltip.visible) {
+      timeoutId = setTimeout(() => {
+        setTooltip((prev) => ({ ...prev, visible: false }));
+      }, 2000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [tooltip.visible]);
 
-  const parseText = (text) => {
-    const regex = /\*\*(.*?)\*\*\s*\((.*?)\)/g;
+  // Parse text function
+  const parseText = (text, index) => {
+    const regex = /\*\*([^\*]+)\*\*\s*\(([^\)]+)\)/g;
     let lastIndex = 0;
     const elements = [];
     let match;
@@ -503,13 +527,23 @@ function Kitap5() {
       const [fullMatch, word, translation] = match;
       const beforeText = text.slice(lastIndex, match.index);
       if (beforeText) {
-        elements.push(<span key={lastIndex}>{beforeText}</span>);
+        elements.push(
+          <span key={`${index}-before-${lastIndex}`}>{beforeText}</span>
+        );
       }
       elements.push(
         <span
-          key={match.index}
-          className="font-bold cursor-pointer text-blue-600 hover:underline"
-          onClick={(e) => handleWordClick(word, translation, e)}
+          key={`${index}-match-${match.index}`}
+          className="font-bold text-blue-600 cursor-pointer relative"
+          role="button"
+          aria-label={`Show translation for ${word}`}
+          tabIndex={0}
+          onClick={(e) => handleClick(e, translation)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              handleClick(e, translation);
+            }
+          }}
         >
           {word}
         </span>
@@ -519,35 +553,32 @@ function Kitap5() {
 
     const remainingText = text.slice(lastIndex);
     if (remainingText) {
-      elements.push(<span key={lastIndex}>{remainingText}</span>);
+      elements.push(
+        <span key={`${index}-remaining-${lastIndex}`}>{remainingText}</span>
+      );
     }
 
     return elements;
   };
 
   return (
-    <div
-      className="min-h-screen bg-gray-100 flex justify-center p-4"
-      onClick={handleClickOutside}
-    >
-      <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6">
-        <h1 className="text-3xl font-bold text-center mb-6">
-          Eine unerwartete Wendung
-        </h1>
-        {textContent.map((item, index) => (
-          <p key={index} className="mb-4 text-lg leading-relaxed">
-            {parseText(item.text)}
-          </p>
-        ))}
-        {tooltip.visible && (
-          <div
-            className="fixed bg-gray-800 text-white text-sm px-3 py-2 rounded shadow-lg"
-            style={{ top: tooltip.y, left: tooltip.x }}
-          >
-            {tooltip.content}
-          </div>
-        )}
-      </div>
+    <div className="max-w-3xl mx-auto p-6 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        Der Weg nach Hause
+      </h1>
+      {textContent.map((paragraph, index) => (
+        <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+          {parseText(paragraph.text, index)}
+        </p>
+      ))}
+      {tooltip.visible && (
+        <div
+          className="fixed bg-gray-800 text-white text-sm px-2 py-1 rounded shadow-lg z-[1000]"
+          style={{ top: tooltip.position.y + 5, left: tooltip.position.x }}
+        >
+          {tooltip.content}
+        </div>
+      )}
     </div>
   );
 }
