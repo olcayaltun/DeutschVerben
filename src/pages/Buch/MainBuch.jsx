@@ -25,8 +25,9 @@ import Edat2 from "../../Components/Buch/Edat2";
 import Gramatik from "../../Components/Buch/Granmatik";
 import Sifat3 from "../../Components/Buch/Sifat3";
 import Makale from "../../Components/Buch/makale/Makale";
-import Video from "../../Components/Buch/makale/Video";
-
+import Video from "../../Components/Buch/Video";
+import B2c1 from "../../Components/Buch/B2c1";
+import Anatest from "../../Components/Buch/Anatest";
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
 
@@ -57,6 +58,8 @@ const components = {
   Sifat3,
   Makale,
   Video,
+  B2c1,
+  Anatest,
   // ... add Buch3 to Buch30
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import adjectivesData from "../../../utils/video.json";
+import adjectivesData from "../../utils/video.json";
 import { FaStar } from "react-icons/fa"; // Install: npm install react-icons
 
 function Video() {
