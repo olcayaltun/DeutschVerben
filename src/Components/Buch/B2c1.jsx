@@ -860,10 +860,19 @@ const debounce = (func, delay) => {
 };
 
 const B2c1 = () => {
-  // State'ler
-  const [currentStep, setCurrentStep] = useState(0);
-  const [showMeaning, setShowMeaning] = useState(false);
+  // State'leri localStorage'dan başlat
+  const [currentStep, setCurrentStep] = useState(() => {
+    const savedStep = localStorage.getItem("currentStep");
+    return savedStep !== null ? parseInt(savedStep) : 0;
+  });
+
+  const [showMeaning, setShowMeaning] = useState(() => {
+    const savedShowMeaning = localStorage.getItem("showMeaning");
+    return savedShowMeaning !== null ? JSON.parse(savedShowMeaning) : false;
+  });
+
   const [showFavorites, setShowFavorites] = useState(false);
+
   const [favorites, setFavorites] = useState(() => {
     try {
       const saved = localStorage.getItem("favorites");
@@ -951,24 +960,37 @@ const B2c1 = () => {
   }, [words.length]);
 
   const sequence = generateSequence();
-  const [currentWords, setCurrentWords] = useState(sequence[0]?.indices || []);
+  const [currentWords, setCurrentWords] = useState([]);
 
-  // Favorileri localStorage'a kaydetme (debounce'lu)
-  const debouncedSaveFavorites = useRef(
-    debounce((favorites) => {
-      localStorage.setItem("favorites", JSON.stringify(favorites));
+  // Favorileri ve mevcut durumu localStorage'a kaydetme (debounce'lu)
+  const debouncedSave = useRef(
+    debounce((data) => {
+      localStorage.setItem("favorites", JSON.stringify(data.favorites));
+      localStorage.setItem("currentStep", data.currentStep.toString());
+      localStorage.setItem("showMeaning", JSON.stringify(data.showMeaning));
     }, 500)
   ).current;
 
   useEffect(() => {
-    debouncedSaveFavorites(favorites);
-  }, [favorites, debouncedSaveFavorites]);
+    // Sayfa ilk yüklendiğinde mevcut kelimeleri ayarla
+    if (sequence.length > 0) {
+      setCurrentWords(sequence[currentStep]?.indices || []);
+    }
+  }, [sequence, currentStep]);
+
+  useEffect(() => {
+    // Tüm state'leri tek seferde kaydet
+    debouncedSave({
+      favorites,
+      currentStep,
+      showMeaning,
+    });
+  }, [favorites, currentStep, showMeaning, debouncedSave]);
 
   // Navigasyon fonksiyonları
   const handleNext = () => {
     setCurrentStep((prev) => {
       const nextStep = (prev + 1) % sequence.length;
-      setCurrentWords(sequence[nextStep]?.indices || []);
       setShowMeaning(false);
       return nextStep;
     });
@@ -977,7 +999,6 @@ const B2c1 = () => {
   const handlePrevious = () => {
     setCurrentStep((prev) => {
       const prevStep = (prev - 1 + sequence.length) % sequence.length;
-      setCurrentWords(sequence[prevStep]?.indices || []);
       setShowMeaning(false);
       return prevStep;
     });
@@ -1115,7 +1136,5 @@ const B2c1 = () => {
     </div>
   );
 };
-
-// Kelime veri seti
 
 export default B2c1;
