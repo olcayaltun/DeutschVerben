@@ -610,5 +610,707 @@ const data = [
     id: 152,
     veri: "leider\n\n✅ Açıklama: Modaladverb, üzüntü veya pişmanlık ifade eder.\nÖrnekler:\n1. Leider kann ich nicht kommen. – Maalesef gelemiyorum.",
   },
+
+  {
+    id: 153,
+    veri: "begeistert\n\n✅ Açıklama: Sıfat, heyecanlı, coşkulu, hevesli, ilgili anlamına gelir.\n📌 Detaylı Anlam: Bir şeyden çok etkilenmiş ve büyük bir ilgiyle dolu olmak.\nÖrnekler:\n1. Sie ist begeistert von der Idee. – Fikre çok hevesli/coşkulu.",
+  },
+  {
+    id: 154,
+    veri: "Zugabe\n\n✅ Açıklama: İsim, tekrar, ek gösteri, bis, ek anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: die\n- Plural: die Zugaben\nÖrnekler:\n1. Die Zugabe – Ek gösteri, bis.",
+  },
+  {
+    id: 155,
+    veri: "dreiviertel Stunde\n\n✅ Açıklama: Üç çeyrek saat, yani 45 dakika anlamına gelir.\nÖrnekler:\n1. Eine dreiviertel Stunde – 45 dakika.",
+  },
+  {
+    id: 156,
+    veri: "anhaben\n\n✅ Açıklama: Giymiş olmak, üzerinde olmak anlamına gelir. Kıyafet, gözlük, takı gibi şeyler için kullanılır.\n📌 Gramer Bilgisi:\n- Infinitiv: anhaben\n- Perfekt: haben angehabt\nÖrnekler:\n1. Was hast du heute an? – Bugün ne giyiyorsun?\n2. Er hatte ein rotes T-Shirt an. – Üzerinde kırmızı bir tişört vardı.",
+  },
+  {
+    id: 157,
+    veri: "Und zwar ist das ja ein Thema, was mich schon lange verfolgt\n\n✅ Açıklama: Türkçeye 'Bu gerçekten de beni uzun zamandır takip eden/düşündüren bir konu' şeklinde çevrilir.\n📌 Kelime Analizi:\n- und zwar: özellikle, daha doğrusu\n- ja: zaten, gerçekten\n- verfolgt: 'verfolgen' fiilinin mecaz anlamı, sürekli aklımda olan, ilgimi çeken\nÖrnekler:\n1. Und zwar ist das ja ein Thema, was mich schon lange verfolgt. – Bu gerçekten de beni uzun zamandır düşündüren bir konu.",
+  },
+  {
+    id: 158,
+    veri: "ausfallen\n\n✅ Açıklama: Üç farklı anlamda kullanılır:\n1. (Planlanmış bir şeyin) gerçekleşmemesi, iptal olması\n2. (Sonuç olarak) bir şekilde çıkmak, sonuçlanmak\n3. (Vücut parçası, elektrik vb.) çalışmamak, devre dışı kalmak, dökülmek\n📌 Gramer Bilgisi:\n- Infinitiv: ausfallen\n- Perfekt: ist ausgefallen (1. ve 3. anlamlar), haben ausgefallen (2. anlam)\nÖrnekler:\n1. Der Unterricht fällt heute aus. – Ders bugün iptal oldu.\n2. Die Prüfung ist gut ausgefallen. – Sınav iyi sonuçlandı.\n3. Der Strom ist ausgefallen. – Elektrik kesildi.\n4. Mir sind drei Haare ausgefallen. – Üç saç telim döküldü.",
+  },
+  {
+    id: 159,
+    veri: "Und ein Film ist mir dabei aufgefallen\n\n✅ Açıklama: Türkçeye 'Ve bu sırada bir film dikkatimi çekti' şeklinde çevrilir.\n📌 Kelime Analizi:\n- ein Film: bir film\n- ist mir aufgefallen: bana fark ettirdi, dikkatimi çekti\n- dabei: bu sırada, bu esnada\n📌 Gramer Bilgisi:\n- auffallen: dikkat çekmek, göze çarpmak, yardımcı fiil 'sein', Perfekt: ist aufgefallen\n- Dativ: mir, dir, ihm\nÖrnekler:\n1. Und ein Film ist mir dabei aufgefallen. – Ve bu sırada bir film dikkatimi çekti.",
+  },
+
+  {
+    id: 160,
+    veri: "der Kontinent\n\n✅ Açıklama: Kıta anlamına gelir.\n📌 Gramer Bilgisi:\n- Artikel: der\n- Çoğul: die Kontinente\nÖrnekler:\n1. Der Kontinent – Kıta\n2. Die Kontinente – Kıtalar",
+  },
+  {
+    id: 161,
+    veri: "Ausbeulung\n\n✅ Açıklama: Şişkinlik, dışa doğru eğilme anlamına gelir. Genellikle metal yüzeylerdeki deformasyonu ifade eder.\n📌 Gramer Bilgisi:\n- Artikel: die\n- Çoğul: die Ausbeulungen\nÖrnekler:\n1. Die Ausbeulung – Şişkinlik, deformasyon",
+  },
+  {
+    id: 162,
+    veri: "zugucken\n\n✅ Açıklama: Ayrılabilir fiil, izlemek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'zu' başta gelir, çekimlenince sona gider\n- Präsens: ich gucke zu, du guckst zu, einige gucken zu\nÖrnekler:\n1. Ich gucke zu. – Ben izliyorum.\n2. Einige gucken zu. – Bazıları izliyor.",
+  },
+  {
+    id: 163,
+    veri: "ausnehmen\n\n✅ Açıklama: Dışarıda tutmak, hariç tutmak veya içini boşaltmak (balık, tavuk vb.) anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: ausnehmen\n- Perfekt: haben ausgenommen\nÖrnekler:\n1. Alle waren eingeladen, ihn ausgenommen. – Herkes davetliydi, o hariç.\n2. Der Koch nimmt den Fisch aus. – Aşçı balığın içini çıkarıyor.",
+  },
+  {
+    id: 164,
+    veri: "erwähnen\n\n✅ Açıklama: Bahsetmek, değinmek, anmak, sözünü etmek anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: erwähnen\n- Perfekt: haben erwähnt\nÖrnekler:\n1. Er erwähnte den Vorfall. – Olaydan bahsetti.",
+  },
+  {
+    id: 165,
+    veri: "zelten\n\n✅ Açıklama: Çadır kurmak, kamp yapmak anlamına gelir.\n📌 Gramer Bilgisi:\n- Infinitiv: zelten\n- Perfekt: haben gezeltet\nÖrnekler:\n1. Wir gehen zelten. – Kamp yapmaya gidiyoruz.",
+  },
+  {
+    id: 166,
+    veri: "entsprechend ihrer Leistungen\n\n✅ Açıklama: Başarılarına göre, başarılarına uygun olarak anlamına gelir.\n📌 Kelime Analizi:\n- entsprechend: -e uygun olarak, -e göre (Dativ ile)\n- ihrer Leistungen: onların başarılarına (Dativ, die Leistung’in çoğul hali)\nÖrnekler:\n1. Entsprechend ihrer Leistungen – Başarılarına göre.",
+  },
+  {
+    id: 167,
+    veri: "annehmen\n\n✅ Açıklama: Kabul etmek, varsaymak, almak, benimsemek anlamına gelir. Ayrılabilir fiildir.\n📌 Gramer Bilgisi:\n- Infinitiv: annehmen\n- Perfekt: haben angenommen\n- Çekim: düzensiz\n📌 Anlamları:\n1. Kabul etmek\n2. Teslim almak\n3. Varsaymak\n4. Benimsemek\nÖrnekler:\n1. Ich nehme den Vorschlag an. – Teklifi kabul ediyorum.\n2. Die Post wurde vom Nachbarn angenommen. – Posta komşu tarafından alındı.\n3. Ich nehme an, dass er heute nicht kommt. – Sanıyorum ki o bugün gelmeyecek.\n4. Er hat die Herausforderung angenommen. – Meydan okumayı üstlendi.",
+  },
+  {
+    id: 168,
+    veri: "Dürfte ich Sie um einen Gefallen bitten?\n\n✅ Açıklama: Türkçeye 'Sizden bir ricada bulunabilir miyim?' şeklinde çevrilir.\n📌 Gramer Bilgisi:\n- dürfen: izin istemek için\n- Konjunktiv II: nazik istek\nÖrnekler:\n1. Dürfte ich Sie um einen Gefallen bitten? – Sizden bir ricada bulunabilir miyim?",
+  },
+  {
+    id: 169,
+    veri: "Das Auto hätte repariert werden können\n\n✅ Açıklama: Türkçeye 'Araba tamir edilebilirdi' şeklinde çevrilir.\n📌 Gramer Bilgisi:\n- Subjekt + hätte (Konjunktiv II von 'haben') + Partizip II (repariert) + werden + können\n- Konjunktiv II: gerçekleşmemiş olasılık\nÖrnekler:\n1. Das Auto hätte repariert werden können. – Araba tamir edilebilirdi.",
+  },
+
+  {
+    id: 170,
+    veri: "Wenn ich doch mehr Zeit hätte!\n\n✅ Açıklama: Türkçeye 'Keşke daha çok vaktim olsa!' şeklinde çevrilir. Konjunktiv II ile dilek kipi.\nÖrnekler:\n1. Wenn ich doch mehr Zeit gehabt hätte! – Keşke daha çok vaktim olsaydı!\n2. Wäre er doch hier gewesen! – Keşke burada olsaydı!\n3. Hätte ich doch früher angefangen! – Keşke daha erken başlasaydım!",
+  },
+  {
+    id: 171,
+    veri: "Sie ist zu jung, als dass sie allein verreisen dürfte\n\n✅ Açıklama: Türkçeye 'Tek başına seyahat edemeyecek kadar genç' şeklinde çevrilir.\n📌 Gramer Açıklaması:\n- 'zu … als dass …': …amayacak kadar … (zu + sıfat + als dass + Konjunktiv II)\nÖrnekler:\n1. Sie ist zu jung, als dass sie allein verreisen dürfte. – Tek başına seyahat edemeyecek kadar genç.\n2. Er ist nicht so fit, als dass er den Marathon laufen könnte. – Maraton koşabilecek kadar formda değil.\n3. Das Wetter ist nicht so schön, als dass wir draußen essen könnten. – Dışarıda yemek yiyebileceğimiz kadar güzel değil hava.",
+  },
+  {
+    id: 172,
+    veri: "Konjunktiv II (machte vs ginge)\n\n✅ Açıklama: Konjunktiv II, dilek-şart kipi, gerçekleşmemiş durumları ifade eder.\n📌 Gramer Bilgisi:\n- Düzenli fiillerde: Präteritum kökü (machte)\n- Düzensiz fiillerde: Präteritum köküne -e- eklenir, ünlü değişimi olur (gehen → ginge)\nÖrnekler:\n1. Wenn er nur mehr Zeit machte! – Daha çok vakti olsa!\n2. Wenn er mehr Zeit ginge! – (Yanlış, doğru: ginge ile Konjunktiv II)",
+  },
+  {
+    id: 173,
+    veri: "sodass vs so … dass\n\n✅ Açıklama:\n- 'sodass': doğrudan sonuç bildirir\n- 'so … dass': dereceyi vurgular, sonucu getirir\nÖrnekler:\n1. Es regnete stark, sodass wir zu Hause blieben. – Şiddetli yağmur yağdı, bu yüzden evde kaldık.\n2. Er war so müde, dass er sofort einschlief. – O kadar yorgundu ki hemen uyuyakaldı.",
+  },
+  {
+    id: 174,
+    veri: "Bezüglich des Projekts wurden zusätzliche Mittel bereitgestellt\n\n✅ Açıklama: Türkçeye 'Proje ile ilgili ek kaynaklar sağlandı' şeklinde çevrilir.\n📌 Kelime Analizi:\n- bezüglich: ile ilgili\n- zusätzliche: ek, ilave (sıfat)\n- Mittel: kaynaklar (çoğul isim)\n- bereitgestellt: sağlanmış ('bereitstellen' fiilinin Partizip II hali)\nÖrnekler:\n1. Bezüglich des Projekts wurden zusätzliche Mittel bereitgestellt. – Proje ile ilgili ek kaynaklar sağlandı.",
+  },
+  {
+    id: 175,
+    veri: "um … willen, zuliebe\n\n✅ Açıklama: 'um … willen' ve 'zuliebe', uğruna, hatırı için anlamına gelir.\n📌 Kullanım:\n- um … willen: sabit ifade\n- zuliebe: birinin hatırı için (Dativ ile)\nÖrnekler:\n1. Sie hat alles getan, um ihres Kindes willen. – Çocuğunun hatırı için her şeyi yaptı.\n2. Er hat den Job angenommen, seiner Familie zuliebe. – Ailesinin hatırı için işi kabul etti.",
+  },
+  {
+    id: 176,
+    veri: "Auch wenn\n\n✅ Açıklama: 'Az zamanı olsa da' gibi karşıtlık bildirir.\nÖrnekler:\n1. Auch wenn sie wenig Zeit hatte, hat sie das Buch gelesen. – Az zamanı olsa da kitabı okudu.",
+  },
+  {
+    id: 177,
+    veri: "Wie schnell er auch lief, konnte er den Zug nicht erreichen\n\n✅ Açıklama: Türkçeye 'Ne kadar hızlı koşarsa koşsun, treni yakalayamadı' şeklinde çevrilir.\n📌 Gramer Açıklaması:\n- 'Wie … auch': her ne kadar … olsa da, karşıtlık bildirir\nÖrnekler:\n1. Wie schnell er auch lief, konnte er den Zug nicht erreichen. – Ne kadar hızlı koşarsa koşsun, treni yakalayamadı.",
+  },
+  {
+    id: 178,
+    veri: "Selbst wenn\n\n✅ Açıklama: '-sa bile' anlamında, koşula bağlı karşıtlık bildirir.\nÖrnekler:\n1. Selbst wenn es regnet, gehe ich spazieren. – Yağmur yağsa bile yürüyüşe çıkarım.",
+  },
+  {
+    id: 179,
+    veri: "Sogar wenn\n\n✅ Açıklama: 'Hatta … olsa bile' anlamına gelir.\nÖrnekler:\n1. Sogar wenn es stürmt, geht er joggen. – Fırtına olsa bile koşuya çıkar.",
+  },
+  {
+    id: 180,
+    veri: "Ob … oder nicht\n\n✅ Açıklama: 'Olsa da olmasa da' anlamına gelir.\nÖrnekler:\n1. Ob sie Zeit hat oder nicht, sie hilft immer. – Zamanı olsa da olmasa da, o her zaman yardım eder.\n2. Ob es regnet oder nicht, wir gehen spazieren. – Yağmur yağsa da yağmasa da yürüyüşe çıkıyoruz.",
+  },
+  {
+    id: 181,
+    veri: "es sei denn, dass\n\n✅ Açıklama: '-medikçe', 'ancak … olmazsa' anlamında istisna bildirir.\nÖrnekler:\n1. Er kommt zur Party, es sei denn, dass er krank ist. – Bir tek hasta olması dışında partiye gelir.",
+  },
+  {
+    id: 182,
+    veri: "außer wenn\n\n✅ Açıklama: '… olmadıkça', '… dışında' anlamına gelir.\nÖrnekler:\n1. Ich komme immer pünktlich, außer wenn ich im Stau stehe. – Her zaman zamanında gelirim, trafikte sıkışıp kalmadığım sürece.",
+  },
+  {
+    id: 183,
+    veri: "außer dass\n\n✅ Açıklama: '… dışında' anlamına gelir, istisna bildirir.\n📌 Yapı: Hauptsatz + außer dass + Nebensatz\nÖrnekler:\n1. Das Konzert war toll, außer dass die Musik zu laut war. – Konser harikaydı, müziğin çok yüksek olması dışında.",
+  },
+  {
+    id: 184,
+    veri: "nur dass\n\n✅ Açıklama: 'sadece …' anlamında istisna bildirir.\n📌 Yapı: Hauptsatz + nur dass + Nebensatz\nÖrnekler:\n1. Er isst gern Pizza, nur dass er keinen Käse mag. – Pizza yemeyi sever, sadece peynir sevmez.",
+  },
+
+  {
+    id: 185,
+    veri: "haben + zu + Infinitiv\n\n✅ Açıklama: Yapmak zorunda olmak, yapılması gereken bir şey olmak anlamına gelir. Zorunluluk ifade eder, daha resmi veya yazılı dilde kullanılır.\n📌 Gramer Bilgisi:\n- haben + zu + Verb: aktif zorunluluk\n- sein + zu + Infinitiv: edilgen zorunluluk\nÖrnekler:\n1. Ich habe noch viel zu tun. – Hâlâ yapacak çok işim var.\n2. Das Auto ist zu reparieren. – Araba tamir edilmeli.",
+  },
+  {
+    id: 186,
+    veri: "Fiiller ve 'zu' kullanımı\n\n✅ Açıklama: Bazı fiil türlerinde 'zu' kullanılır, bazılarında kullanılmaz.\n📌 Kullanım:\n- Algı fiilleri: zu kullanılmaz\n- İzin/verme/yaptırma (lassen): zu kullanılmaz\n- Hareket fiilleri: genellikle zu kullanılmaz\n- Zihin/başlama/çaba fiilleri: zu kullanılır\nÖrnekler:\n1. Sie hat ihn kommen gesehen. – Onun geldiğini gördü.\n2. Ich habe ihn nicht kommen lassen. – Onun gelmesine izin vermedim.\n3. Wir gehen schwimmen. – Yüzmeye gidiyoruz.\n4. Ich versuche zu helfen. – Yardım etmeye çalışıyorum.",
+  },
+  {
+    id: 187,
+    veri: "beabsichtigten\n\n✅ Açıklama: 'beabsichtigen' fiilinin Präteritum hali, niyet etmek, amaçlamak anlamına gelir.\nÖrnekler:\n1. Wir beabsichtigten, den Plan umzusetzen. – Planı uygulamayı amaçladık.",
+  },
+  {
+    id: 188,
+    veri: "Die Parteien vereinbarten, zu handeln\n\n✅ Açıklama: Türkçeye 'Taraflar harekete geçme konusunda anlaştılar' şeklinde çevrilir.\n📌 Gramer Bilgisi:\n- vereinbarten: 'vereinbaren' fiilinin Präteritum hali, anlaşmak\n- zu handeln: harekete geçmek için\nÖrnekler:\n1. Die Parteien vereinbarten, zu handeln. – Taraflar harekete geçme konusunda anlaştılar.",
+  },
+  {
+    id: 189,
+    veri: "treu sein\n\n✅ Açıklama: Bir şeye bağlı/sadık olmak anlamına gelir.\nÖrnekler:\n1. Er ist den Regeln treu. – Kurallara sadıktır.",
+  },
+  {
+    id: 190,
+    veri: "Vorteil gegenüber\n\n✅ Açıklama: '-e karşı, -e kıyasla' anlamına gelir, 'gegenüber' edatı Dativ ile kullanılır.\n📌 Kelime Analizi:\n- Vorteil: avantaj\n- gegenüber der Konkurrenz: rakibe karşı\nÖrnekler:\n1. Das ist ein Vorteil gegenüber der Konkurrenz. – Bu, rakibe karşı bir avantajdır.",
+  },
+  {
+    id: 191,
+    veri: "Anlass zur Diskussion\n\n✅ Açıklama: Tartışmaya neden olmak, sebep olmak anlamına gelir.\n📌 Kelime Analizi:\n- Anlass: sebep, neden\n- zur Diskussion: tartışmaya\nÖrnekler:\n1. Er gibt Anlass zur Diskussion. – Tartışmaya neden oluyor.",
+  },
+  {
+    id: 192,
+    veri: "etwas zur Verfügung stellen\n\n✅ Açıklama: Bir şeyi kullanım için sunmak, olanak sağlamak anlamına gelir.\nÖrnekler:\n1. Wir stellen die Gelegenheit zur Verfügung. – Fırsatı sunuyoruz.",
+  },
+  {
+    id: 193,
+    veri: "mit etwas einverstanden sein\n\n✅ Açıklama: Bir şeye katılmak, razı olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- mit: Dativ ile, 'damit' (bununla) kullanılabilir\n- zuzufügen: eklemek\nÖrnekler:\n1. Sie ist damit einverstanden, die Ergebnisse zuzufügen. – Sonuçları eklemeye razı.",
+  },
+  {
+    id: 194,
+    veri: "in Augenschein nehmen\n\n✅ Açıklama: Bir şeyi dikkatle incelemek, gözlemlemek anlamına gelir.\nÖrnekler:\n1. Er nimmt die Situation in Augenschein. – Durumu dikkatle inceliyor.",
+  },
+  {
+    id: 195,
+    veri: "zur Eile antreiben\n\n✅ Açıklama: Birini acele etmeye sevk etmek, hızlandırmak anlamına gelir.\nÖrnekler:\n1. Sie treibt ihn zur Eile an. – Onu acele etmeye sevk ediyor.",
+  },
+  {
+    id: 196,
+    veri: "in Kauf nehmen\n\n✅ Açıklama: Bir şeyi (genellikle olumsuz bir sonucu) kabullenmek, göze almak anlamına gelir.\nÖrnekler:\n1. Wir nehmen die Verantwortung in Kauf. – Sorumluluğu göze alıyoruz.",
+  },
+  {
+    id: 197,
+    veri: "zuständig für\n\n✅ Açıklama: Bir şeyden sorumlu olmak anlamına gelir.\n📌 Kelime Analizi:\n- zuständig: sorumlu\n- für: için (Akkusativ)\n- Kundenbetreuung: müşteri hizmetleri\nÖrnekler:\n1. Sie ist zuständig für die Kundenbetreuung. – Müşteri hizmetlerinden sorumlu.",
+  },
+  {
+    id: 198,
+    veri: "gespannt auf\n\n✅ Açıklama: Bir şeyi merakla/sabırsızlıkla beklemek anlamına gelir.\n📌 Kelime Analizi:\n- gespannt: merakla bekleyen\n- auf: için (Akkusativ)\n- bevorstehende Veranstaltung: yaklaşmakta olan etkinlik\nÖrnekler:\n1. Er ist gespannt auf die bevorstehende Veranstaltung. – Yaklaşmakta olan etkinliği merakla bekliyor.",
+  },
+
+  {
+    id: 199,
+    veri: "sauer auf\n\n✅ Açıklama: Birine kızgın/alıngan olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Sie ist sauer auf ihren Kollegen wegen der Verspätung. – Gecikme yüzünden meslektaşına kızgın.",
+  },
+  {
+    id: 200,
+    veri: "scharf auf\n\n✅ Açıklama: Bir şeye çok hevesli, istekli olmak, gayriresmî olarak 'deli gibi istemek' anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Er ist scharf auf die neueste Technologie. – En yeni teknolojiye çok hevesli.",
+  },
+  {
+    id: 201,
+    veri: "erfreut über\n\n✅ Açıklama: Bir şeyden memnun olmak, sevinmek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'über': Akkusativ ile kullanılır\nÖrnekler:\n1. Sie ist erfreut über die positive Nachricht. – Olumlu habere sevindi.",
+  },
+  {
+    id: 202,
+    veri: "verwundert über\n\n✅ Açıklama: Bir şeye şaşırmak, hayrete düşmek (olumsuz olmayan bir şaşkınlık) anlamına gelir.\n📌 Gramer Bilgisi:\n- 'über': Akkusativ ile kullanılır\nÖrnekler:\n1. Er ist verwundert über die unerwartete Entscheidung. – Beklenmeyen karara şaşırdı.",
+  },
+  {
+    id: 203,
+    veri: "entsetzt über\n\n✅ Açıklama: Bir şeye dehşete kapılmak, şok olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'über': Akkusativ ile kullanılır\nÖrnekler:\n1. Sie war entsetzt über die schrecklichen Nachrichten. – Korkunç haberlere dehşete kapıldı.",
+  },
+  {
+    id: 204,
+    veri: "beunruhigt über\n\n✅ Açıklama: Bir şey hakkında endişeli, tedirgin olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'über': Akkusativ ile kullanılır\nÖrnekler:\n1. Er ist beunruhigt über die aktuelle politische Lage. – Mevcut siyasi durum hakkında endişeli.",
+  },
+  {
+    id: 205,
+    veri: "erstaunt über\n\n✅ Açıklama: Bir şeye şaşırmak, hayrete düşmek (genellikle olumlu bir şaşkınlık) anlamına gelir.\n📌 Gramer Bilgisi:\n- 'über': Akkusativ ile kullanılır\nÖrnekler:\n1. Er war erstaunt über die schnellen Fortschritte. – Hızlı gelişmelere şaşırdı.",
+  },
+  {
+    id: 206,
+    veri: "Ausbau zu\n\n✅ Açıklama: Bir şeyin geliştirilmesi, büyütülmesi, dönüştürülmesi anlamına gelir.\n📌 Gramer Bilgisi:\n- 'zu': Dativ ile kullanılır\nÖrnekler:\n1. Der Ausbau zu einem modernen Zentrum wurde gefördert. – Modern bir merkeze dönüşümün geliştirilmesi desteklendi.",
+  },
+  {
+    id: 207,
+    veri: "Anlass zu\n\n✅ Açıklama: Bir şey için sebep, vesile, gerekçe anlamına gelir.\n📌 Gramer Bilgisi:\n- 'zu': Dativ ile kullanılır\nÖrnekler:\n1. Das war ein Anlass zu einer intensiven Diskussion. – Bu, yoğun bir tartışma için bir sebep oldu.",
+  },
+  {
+    id: 208,
+    veri: "Bekenntnis zu\n\n✅ Açıklama: Bir şeye bağlılık, bağlılık ifadesi anlamına gelir.\n📌 Gramer Bilgisi:\n- 'zu': Dativ ile kullanılır\nÖrnekler:\n1. Sein Bekenntnis zu den Grundwerten war beeindruckend. – Temel değerlere bağlılığı etkileyiciydi.",
+  },
+  {
+    id: 209,
+    veri: "Anlass für\n\n✅ Açıklama: Bir şey için sebep, vesile anlamına gelir.\n📌 Gramer Bilgisi:\n- 'für': Akkusativ ile kullanılır\nÖrnekler:\n1. Ein Anlass für ein Treffen wurde gesucht. – Bir buluşma için bir sebep arandı.",
+  },
+  {
+    id: 210,
+    veri: "Beispiel für\n\n✅ Açıklama: Bir şeyin örneği anlamına gelir, 'Beispiel zu' daha az kullanılır.\n📌 Gramer Bilgisi:\n- 'für': Akkusativ ile kullanılır\nÖrnekler:\n1. Das ist ein Beispiel für eine erfolgreiche Zusammenarbeit. – Bu, başarılı bir iş birliğinin bir örneğidir.",
+  },
+
+  {
+    id: 211,
+    veri: "Beispiel für\n\n✅ Açıklama: Bir şeyin örneği anlamına gelir.\n📌 Gramer Bilgisi:\n- 'für': Akkusativ ile kullanılır\nÖrnekler:\n1. Sie gab ein Beispiel für nachhaltigen Erfolg. – Sürdürülebilir başarının bir örneğini verdi.",
+  },
+  {
+    id: 212,
+    veri: "Anspruch an\n\n✅ Açıklama: Bir şeyden talep, beklenti anlamına gelir.\n📌 Gramer Bilgisi:\n- 'an': genellikle Akkusativ ile kullanılır\nÖrnekler:\n1. Der Anspruch an die Qualität ist hoch. – Kaliteye yönelik talep yüksektir.",
+  },
+  {
+    id: 213,
+    veri: "Anspruch auf\n\n✅ Açıklama: Bir şey üzerinde hak talep etmek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Er hat einen Anspruch auf eine Entschädigung. – Tazminat hakkına sahip.",
+  },
+  {
+    id: 214,
+    veri: "Bezug auf\n\n✅ Açıklama: Bir şeye atıf, referans anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Der Bezug auf historische Ereignisse war wichtig. – Tarihî olaylara atıf önemliydi.",
+  },
+  {
+    id: 215,
+    veri: "Einfluss auf\n\n✅ Açıklama: Bir şey üzerinde etki, nüfuz anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Sein Einfluss auf die Entscheidungen war groß. – Kararlar üzerindeki etkisi büyüktü.",
+  },
+  {
+    id: 216,
+    veri: "Hinweis auf\n\n✅ Açıklama: Bir şeye işaret, dikkat çekme anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Der Hinweis auf ein Problem wurde ignoriert. – Bir probleme yönelik işaret göz ardı edildi.",
+  },
+  {
+    id: 217,
+    veri: "Debatte um\n\n✅ Açıklama: Bir konu etrafında tartışma anlamına gelir.\n📌 Gramer Bilgisi:\n- 'um': Akkusativ ile kullanılır\nÖrnekler:\n1. Die Debatte um die Reformen war kontrovers. – Reformlarla ilgili tartışma tartışmalıydı.",
+  },
+  {
+    id: 218,
+    veri: "Kampf um\n\n✅ Açıklama: Bir şey için mücadele/savaş anlamına gelir.\n📌 Gramer Bilgisi:\n- 'um': Akkusativ ile kullanılır\nÖrnekler:\n1. Der Kampf um Ressourcen wurde intensiver. – Kaynaklar için mücadele daha da yoğunlaştı.",
+  },
+  {
+    id: 219,
+    veri: "Verdienst um\n\n✅ Açıklama: Bir alana yapılan katkı, hizmet anlamına gelir.\n📌 Gramer Bilgisi:\n- 'um': Akkusativ ile kullanılır (sabit kalıp)\nÖrnekler:\n1. Sein Verdienst um die Wissenschaft ist unbestreitbar. – Bilim alanındaki katkısı inkâr edilemez.",
+  },
+  {
+    id: 220,
+    veri: "Wissen um\n\n✅ Açıklama: Bir şey hakkında bilgi sahibi olma anlamına gelir.\n📌 Gramer Bilgisi:\n- 'um': Akkusativ ile kullanılır\nÖrnekler:\n1. Das Wissen um die Risiken war entscheidend. – Riskler hakkındaki bilgi belirleyiciydi.",
+  },
+  {
+    id: 221,
+    veri: "Mangel an\n\n✅ Açıklama: Bir şeyin eksikliği anlamına gelir.\n📌 Gramer Bilgisi:\n- 'an': Dativ ile kullanılır\nÖrnekler:\n1. Der Mangel an Ressourcen war ein Problem. – Kaynak eksikliği bir problemdi.",
+  },
+  {
+    id: 222,
+    veri: "Misstrauen gegenüber\n\n✅ Açıklama: Birine ya da bir kuruma karşı güvensizlik anlamına gelir.\n📌 Gramer Bilgisi:\n- 'gegenüber': Dativ ile kullanılır\nÖrnekler:\n1. Das Misstrauen gegenüber der Regierung wuchs. – Hükümete karşı güvensizlik arttı.",
+  },
+  {
+    id: 223,
+    veri: "Mittel gegen\n\n✅ Açıklama: Bir şeye karşı kullanılan araç, ilaç ya da çözüm anlamına gelir.\n📌 Gramer Bilgisi:\n- 'gegen': Akkusativ ile kullanılır\nÖrnekler:\n1. Ein wirksames Mittel gegen Krankheiten wurde entwickelt. – Hastalıklara karşı etkili bir çare geliştirildi.\n2. Sie suchten ein Mittel gegen die Probleme. – Sorunlara karşı bir çözüm aradılar.",
+  },
+  {
+    id: 224,
+    veri: "Monopol auf\n\n✅ Açıklama: Bir şey üzerinde tekel sahibi olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Das Unternehmen hatte ein Monopol auf den Markt. – Şirket, piyasa üzerinde bir tekele sahipti.\n2. Monopol auf ein Produkt – Bir ürün üzerinde tekel.",
+  },
+  {
+    id: 225,
+    veri: "Recht auf\n\n✅ Açıklama: Bir şeye hakkı olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'auf': Akkusativ ile kullanılır\nÖrnekler:\n1. Jeder hat ein Recht auf Bildung. – Herkesin eğitim hakkı vardır.\n2. Recht auf Freiheit – Özgürlük hakkı.",
+  },
+  {
+    id: 226,
+    veri: "Streben nach\n\n✅ Açıklama: Bir şeyi güçlü şekilde istemek, çabalamak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'nach': Dativ ile kullanılır\nÖrnekler:\n1. Sein Streben nach Erfolg war unermüdlich. – Başarıya olan çabası yorulmazdı.",
+  },
+  {
+    id: 227,
+    veri: "Verlangen nach\n\n✅ Açıklama: Bir şeyi arzulamak, istemek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'nach': Dativ ile kullanılır\nÖrnekler:\n1. Ihr Verlangen nach Abenteuer war groß. – Macera arzusu büyüktü.",
+  },
+  {
+    id: 228,
+    veri: "Talent zu\n\n✅ Açıklama: Bir şeye yetenek sahibi olmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'zu': Dativ ile kullanılır\nÖrnekler:\n1. Sein Talent zu Musik war offensichtlich. – Müzik yeteneği belirgindi.",
+  },
+  {
+    id: 229,
+    veri: "Verhalten gegenüber\n\n✅ Açıklama: Birine karşı davranış anlamına gelir.\n📌 Gramer Bilgisi:\n- 'gegenüber': Dativ ile kullanılır\nÖrnekler:\n1. Sein Verhalten gegenüber Kollegen war respektvoll. – Meslektaşlarına karşı davranışı saygılıydı.",
+  },
+  {
+    id: 230,
+    veri: "Verständnis für\n\n✅ Açıklama: Bir şeye anlayış, kavrayış göstermek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'für': Akkusativ ile kullanılır\nÖrnekler:\n1. Ihr Verständnis für andere Kulturen war bemerkenswert. – Diğer kültürlere olan anlayışı dikkat çekiciydi.",
+  },
+  {
+    id: 231,
+    veri: "Umgang mit\n\n✅ Açıklama: Biriyle veya bir şeyle nasıl ilişki kurulduğu, nasıl başa çıkıldığı anlamına gelir.\n📌 Gramer Bilgisi:\n- 'mit': Dativ ile kullanılır\nÖrnekler:\n1. Sein Umgang mit Kritik war konstruktiv. – Eleştiriyle olan ilişkisi yapıcıydı.",
+  },
+
+  {
+    id: 232,
+    veri: "zur Ruhe kommen\n\n✅ Açıklama: Sakinleşmek, huzur bulmak anlamına gelir, sabit bir ifadedir.\n📌 Gramer Bilgisi:\n- 'zur': 'zu der' (Dativ dişi artikel)\nÖrnekler:\n1. Nach dem stressigen Tag wollte er endlich zur Ruhe kommen. – Stresli bir günün ardından sonunda sakinleşmek istedi.",
+  },
+  {
+    id: 233,
+    veri: "zu Ende gehen\n\n✅ Açıklama: Bir şeyin sona ermesi anlamına gelir.\nÖrnekler:\n1. Die Diskussionen gingen erst nach Mitternacht zu Ende. – Tartışmalar ancak gece yarısından sonra sona erdi.\n2. Der Film geht bald zu Ende. – Film yakında bitecek.\n3. Die Ferien gehen morgen zu Ende. – Tatil yarın sona eriyor.",
+  },
+  {
+    id: 234,
+    veri: "Umgang mit\n\n✅ Açıklama: Biriyle olan ilişki, iletişim anlamına gelir.\n📌 Gramer Bilgisi:\n- 'mit': Dativ ile kullanılır\nÖrnekler:\n1. Die Lehrerin hat nach dem Streit den Umgang mit den Schülern verbessert. – Öğretmen, tartışmadan sonra öğrencilerle olan ilişkisini geliştirdi.",
+  },
+  {
+    id: 235,
+    veri: "in Kraft treten\n\n✅ Açıklama: Bir yasanın veya kuralın yürürlüğe girmesi anlamına gelir.\n📌 Gramer Bilgisi:\n- Karşılaştırma: 'in Kraft setzen' (aktif, bir yasayı yürürlüğe koymak)\nÖrnekler:\n1. Das Gesetz soll im nächsten Monat in Kraft treten. – Yasa önümüzdeki ay yürürlüğe girecek.\n2. Diese Verordnung geht bis zum nächsten Jahr in Kraft. – Bu yönetmelik önümüzdeki yıla kadar yürürlüğe girecek.",
+  },
+  {
+    id: 236,
+    veri: "in Kraft bleiben\n\n✅ Açıklama: Yürürlükte kalmak anlamına gelir.\nÖrnekler:\n1. Die alten Bestimmungen bleiben trotz der Reformen in Kraft. – Eski düzenlemeler reformlara rağmen yürürlükte kalır.\n2. Diese Regelung bleibt bis Ende des Jahres in Kraft. – Bu düzenleme yıl sonuna kadar yürürlükte kalır.",
+  },
+  {
+    id: 237,
+    veri: "außer Kraft setzen\n\n✅ Açıklama: Bir yasa veya kuralı yürürlükten kaldırmak anlamına gelir.\nÖrnekler:\n1. Die alten Regeln wurden außer Kraft gesetzt, um Platz für neue zu machen. – Eski kurallar, yenilerine yer açmak için yürürlükten kaldırıldı.\n2. Die Notverordnung wurde gestern außer Kraft gesetzt. – Olağanüstü hal yönetmeliği dün yürürlükten kaldırıldı.",
+  },
+  {
+    id: 238,
+    veri: "in Gang setzen\n\n✅ Açıklama: Bir süreci başlatmak, faaliyete geçirmek anlamına gelir.\nÖrnekler:\n1. Die Firma setzte ein neues Projekt letzte Woche in Gang. – Firma geçen hafta yeni bir projeyi başlattı.\n2. Wir müssen die Produktion in Gang setzen, um die Nachfrage zu decken. – Talebi karşılamak için üretimi başlatmalıyız.\n3. Die Regierung setzte Maßnahmen zur Krisenbewältigung in Gang. – Hükümet krizi yönetmek için önlemleri yürürlüğe koydu.",
+  },
+  {
+    id: 239,
+    veri: "in Gang bekommen\n\n✅ Açıklama: Bir süreci veya durumu harekete geçirmek, yürütmeye başlamak anlamına gelir.\nÖrnekler:\n1. Sie bekam die Verhandlungen nach langen Diskussionen in Gang. – Uzun tartışmalardan sonra görüşmeleri başlatmayı başardı.\n2. Er bekam die alte Maschine wieder in Gang. – Eski makineyi tekrar çalıştırmayı başardı.",
+  },
+  {
+    id: 240,
+    veri: "in Gang sein\n\n✅ Açıklama: Bir şeyin işlemekte, yürümekte veya başlamış olması durumunu ifade eder.\n📌 Gramer Bilgisi:\n- 'sein' fiili ile kullanılır\nÖrnekler:\n1. Das Projekt ist in Gang und macht gute Fortschritte. – Proje başlamış durumda ve iyi ilerleme kaydediyor.",
+  },
+  {
+    id: 241,
+    veri: "zur Verfügung stehen\n\n✅ Açıklama: Bir şeyin kullanılabilir, mevcut olması anlamına gelir.\nÖrnekler:\n1. Diese Ressourcen stehen für das Projektteam zur Verfügung. – Bu kaynaklar proje ekibinin kullanımına sunulmuştur.",
+  },
+  {
+    id: 242,
+    veri: "zur Verfügung stellen\n\n✅ Açıklama: Bir şeyi kullanıma sunmak, hizmete vermek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'etwas' (Akkusativ) + zur Verfügung stellen\nÖrnekler:\n1. Die Firma stellt ihre Räume für die Veranstaltung zur Verfügung. – Firma, etkinlik için odalarını kullanıma sunuyor.",
+  },
+  {
+    id: 243,
+    veri: "unter Druck stehen\n\n✅ Açıklama: Baskı altında olmak, stresli bir durumda bulunmak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'stehen' fiili cümlenin sonunda yer alır\nÖrnekler:\n1. Das Team steht aufgrund der knappen Fristen unter Druck. – Takım, sıkışık teslim tarihleri nedeniyle baskı altında.",
+  },
+  {
+    id: 244,
+    veri: "zu Ende gehen\n\n✅ Açıklama: Sona ermek, bitmek anlamına gelir.\nÖrnekler:\n1. Die Verhandlungen gehen ohne Ergebnis zu Ende. – Görüşmeler bir sonuç olmadan sona eriyor.\n2. Der Film geht bald zu Ende. – Film yakında bitecek.",
+  },
+  {
+    id: 245,
+    veri: "zum Vorschein kommen\n\n✅ Açıklama: Ortaya çıkmak, gün yüzüne çıkmak anlamına gelir, genellikle gizli kalan şeylerin açığa çıkması için kullanılır.\nÖrnekler:\n1. Die Wahrheit kommt nach langen Untersuchungen zum Vorschein. – Gerçek, uzun süren soruşturmaların ardından ortaya çıkıyor.\n2. Neue Beweise kamen zum Vorschein. – Yeni kanıtlar ortaya çıktı.",
+  },
+  {
+    id: 246,
+    veri: "zum Vorschein bringen\n\n✅ Açıklama: Ortaya çıkarmak, gün yüzüne çıkarmak anlamına gelir, aktif bir fiildir.\nÖrnekler:\n1. Er bringt neue Fakten während der Debatte zum Vorschein. – Tartışma sırasında yeni gerçekleri ortaya çıkarıyor.",
+  },
+  {
+    id: 247,
+    veri: "zum Ausdruck bringen\n\n✅ Açıklama: Bir duyguyu, düşünceyi dile getirmek, ifade etmek anlamına gelir.\nÖrnekler:\n1. Der Redner bringt seine Dankbarkeit in seiner Rede zum Ausdruck. – Konuşmacı minnettarlığını konuşmasında dile getiriyor.",
+  },
+  {
+    id: 248,
+    veri: "zur Anwendung bringen\n\n✅ Açıklama: Uygulamak, hayata geçirmek anlamına gelir, genellikle pasif formda kullanılır.\nÖrnekler:\n1. Die neuen Technologien wurden erfolgreich zur Anwendung gebracht. – Yeni teknolojiler başarıyla uygulamaya kondu.",
+  },
+  {
+    id: 249,
+    veri: "zur Sache kommen\n\n✅ Açıklama: Konuya girmek, esas meseleye gelmek, lafı uzatmadan ana noktaya geçmek anlamına gelir.\nÖrnekler:\n1. Lasst uns zur Sache kommen und die Details besprechen. – Hadi konuya gelelim ve detayları konuşalım.\n2. Könnten wir bitte endlich zur Sache kommen? – Artık konuya gelebilir miyiz?",
+  },
+
+  {
+    id: 250,
+    veri: "zu Schaden kommen\n\n✅ Açıklama: Zarar görmek, yaralanmak, hasar almak anlamına gelir, deyimsel bir ifadedir.\nÖrnekler:\n1. Bei dem Unfall kam niemand zu Schaden. – Kazada kimse zarar görmedi.",
+  },
+  {
+    id: 251,
+    veri: "zur Wahl stehen\n\n✅ Açıklama: Seçime sunulmak, seçenek olarak bulunmak anlamına gelir.\n📌 Kullanım: Karar verme, oylama veya alternatif değerlendirme durumlarında kullanılır.\nÖrnekler:\n1. Mehrere Optionen stehen zur Wahl in dieser Angelegenheit. – Bu konuda birçok seçenek mevcut.\n2. Drei Kandidaten stehen zur Wahl. – Üç aday seçimde yarışıyor.\n3. Welche Farben stehen zur Wahl? – Hangi renkler seçilebilir?",
+  },
+  {
+    id: 252,
+    veri: "in Konkurrenz stehen\n\n✅ Açıklama: Biriyle rekabet içinde olmak anlamına gelir.\n📌 Kullanım: İş dünyası, piyasa veya kişisel karşılaştırmalarda kullanılır.\nÖrnekler:\n1. Die beiden Firmen stehen in Konkurrenz miteinander. – İki firma birbiriyle rekabet içindedir.\n2. Die Supermärkte stehen in Konkurrenz zueinander. – Süpermarketler birbirleriyle rekabet hâlindeler.\n3. Er möchte nicht in Konkurrenz mit seinem Bruder stehen. – Kardeşiyle rekabet etmek istemiyor.",
+  },
+  {
+    id: 253,
+    veri: "im Kampf stehen für\n\n✅ Açıklama: … için mücadele etmek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'für': Akkusativ ile kullanılır\nÖrnekler:\n1. Die Aktivisten stehen im Kampf für ihre Rechte. – Aktivistler hakları için mücadele ediyorlar.",
+  },
+  {
+    id: 254,
+    veri: "in Bewegung geraten\n\n✅ Açıklama: Harekete geçmek, hareketlenmek anlamına gelir, deyimsel bir ifadedir.\nÖrnekler:\n1. Die Verhandlungen gerieten nach monatelangem Stillstand in Bewegung. – Görüşmeler aylardır süren durgunluktan sonra hareketlenmeye başladı.",
+  },
+  {
+    id: 255,
+    veri: "in Gefahr geraten\n\n✅ Açıklama: Tehlikeye girmek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'geraten' fiili Präteritum: geriet\nÖrnekler:\n1. Das Schiff geriet wegen des Sturms in Gefahr. – Gemi fırtına nedeniyle tehlikeye girdi.",
+  },
+  {
+    id: 256,
+    veri: "in Vergessenheit geraten\n\n✅ Açıklama: Unutulmak, unutulmaya yüz tutmak anlamına gelir.\nÖrnekler:\n1. Seine Verdienste sind über die Jahre in Vergessenheit geraten. – Onun hizmetleri yıllar içinde unutuldu.",
+  },
+  {
+    id: 257,
+    veri: "in Erwägung ziehen\n\n✅ Açıklama: Değerlendirmeye almak, göz önünde bulundurmak anlamına gelir.\nÖrnekler:\n1. Wir sollten alle Möglichkeiten in Erwägung ziehen. – Tüm olasılıkları göz önünde bulundurmalıyız.",
+  },
+  {
+    id: 258,
+    veri: "Einspruch erheben\n\n✅ Açıklama: İtiraz etmek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'gegen': Akkusativ ile kullanılır\nÖrnekler:\n1. Er erhebt Einspruch gegen die Entscheidung des Gerichts. – Mahkemenin kararına itiraz ediyor.",
+  },
+  {
+    id: 259,
+    veri: "in Frage kommen\n\n✅ Açıklama: Söz konusu olmak, dikkate alınmak, uygun olmak anlamına gelir.\nÖrnekler:\n1. Diese Option kommt für unser Vorhaben in Frage. – Bu seçenek bizim projemiz için uygun olabilir.",
+  },
+  {
+    id: 260,
+    veri: "Stellung nehmen\n\n✅ Açıklama: Bir konuda görüş bildirmek, tavır almak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'zu': Dativ ile kullanılır\nÖrnekler:\n1. Die Regierung nimmt Stellung zu den Vorwürfen. – Hükümet iddialar hakkında görüş bildiriyor.",
+  },
+  {
+    id: 261,
+    veri: "Beachtung schenken\n\n✅ Açıklama: Dikkat etmek, önem vermek anlamına gelir.\n📌 Gramer Bilgisi:\n- 'jemandem/etwas': Dativ ile kullanılır\nÖrnekler:\n1. Wir sollten den Details mehr Beachtung schenken. – Detaylara daha fazla dikkat etmeliyiz.",
+  },
+  {
+    id: 262,
+    veri: "jemanden zum Wahnsinn treiben\n\n✅ Açıklama: Birini deli etmek, çılgına çevirmek anlamına gelir.\nÖrnekler:\n1. Sein Verhalten treibt alle in der Abteilung zum Wahnsinn. – Onun davranışları bölümdeki herkesi deli ediyor.",
+  },
+  {
+    id: 263,
+    veri: "jemandem Gesellschaft leisten\n\n✅ Açıklama: Birine arkadaşlık etmek, eşlik etmek anlamına gelir.\nÖrnekler:\n1. Sie hat ihm Gesellschaft geleistet während seines Krankenhausaufenthalts. – Hastanede kaldığı süre boyunca ona arkadaşlık etti.",
+  },
+  {
+    id: 264,
+    veri: "die Konsequenzen tragen\n\n✅ Açıklama: Sonuçlarına katlanmak anlamına gelir.\nÖrnekler:\n1. Er musste die Konsequenzen für seine Entscheidungen tragen. – Kararlarının sonuçlarına katlanmak zorunda kaldı.",
+  },
+  {
+    id: 265,
+    veri: "sich zur Wehr setzen\n\n✅ Açıklama: Kendini savunmak, karşı koymak anlamına gelir.\n📌 Gramer Bilgisi:\n- 'gegen': Akkusativ ile kullanılır\nÖrnekler:\n1. Er hat sich zur Wehr gesetzt gegen die Anschuldigungen. – Suçlamalara karşı kendini savundu.",
+  },
+  {
+    id: 266,
+    veri: "eine Meinung vertreten\n\n✅ Açıklama: Bir görüşü savunmak, temsil etmek anlamına gelir.\nÖrnekler:\n1. Er vertritt eine Meinung in der Debatte überzeugend. – Tartışmada görüşünü ikna edici şekilde savunuyor.",
+  },
+  {
+    id: 267,
+    veri: "jemanden zur Verzweiflung bringen\n\n✅ Açıklama: Birini çaresizliğe, umutsuzluğa sürüklemek anlamına gelir.\nÖrnekler:\n1. Sein Verhalten bringt alle im Team zur Verzweiflung. – Onun davranışları takımda herkesi çaresiz bırakıyor.",
+  },
+  {
+    id: 268,
+    veri: "das Urteil fällen\n\n✅ Açıklama: Karar vermek, mahkemede hüküm vermek anlamına gelir.\nÖrnekler:\n1. Der Richter fällt nach langer Beratung das Urteil. – Hakim uzun bir danışmadan sonra kararı verir.",
+  },
+  {
+    id: 269,
+    veri: "Zustandspassiv\n\n✅ Açıklama: Bir işlemin sonucu olarak ortaya çıkan durumu belirtir, 'bir şey yapılmış ve şu anda böyle' anlamı taşır.\n📌 Gramer Bilgisi:\n- Helfer fiil: sein + Partizip II\nÖrnekler:\n1. Die Tische sind gedeckt. – Masalar hazırlanmış.\n2. Die Wände sind gestrichen. – Duvarlar boyanmış durumda.\n3. Das Essen ist gekocht. – Yemek pişmiş durumda.",
+  },
+  {
+    id: 270,
+    veri: "Vorgangspassiv\n\n✅ Açıklama: Bir işlemin, eylemin devam ettiğini veya gerçekleştiğini ifade eder, 'bir şey yapılıyor' anlamı taşır.\n📌 Gramer Bilgisi:\n- Helfer fiil: werden + Partizip II\nÖrnekler:\n1. Die Wände werden gestrichen. – Duvarlar boyanıyor.\n2. Das Essen wird gekocht. – Yemek pişiriliyor.\n3. Die Aufgabe wird gelöst. – Görev çözülüyor.",
+  },
+  {
+    id: 271,
+    veri: "Passiv cümle oluşturma\n\n✅ Açıklama: Geçişli (transitives) bir fiil ile Akkusativ nesne gereklidir.\n📌 Gramer Bilgisi:\n- Geçişsiz fiiller (ör. schwimmen) passiv yapılamaz.\nÖrnekler:\n1. Hätte man schneller gehandelt, wäre das Problem gelöst. – Daha hızlı hareket edilseydi, sorun çözülmüş olurdu.\n2. ❌ Das wird geschwommen. – (Yanlış, geçişsiz fiil).",
+  },
+  {
+    id: 272,
+    veri: "Nun wird geschwiegen\n\n✅ Açıklama: 'Şimdi susuluyor!' anlamına gelir, passiv yapı ile vurgulu bir ifade.\nÖrnekler:\n1. Nun wird geschwiegen! – Artık susuluyor!",
+  },
+  {
+    id: 273,
+    veri: "stimmen\n\n✅ Açıklama: Farklı anlamlarda kullanılır: doğru olmak, oy vermek, akort etmek, uygun olmak, tutarlı olmak.\nÖrnekler:\n1. Das stimmt. – Doğru.\n2. Ich stimme dafür. – Bunun için oy veriyorum.\n3. Er stimmt das Klavier. – Piyanoyu akort ediyor.\n4. Das stimmt mich traurig. – Bu beni üzüyor.\n5. Die Angaben stimmen überein. – Bilgiler uyuşuyor.",
+  },
+  {
+    id: 274,
+    veri: "missfallen\n\n✅ Açıklama: Hoşa gitmemek, rahatsız etmek anlamına gelir, Dativ ile kullanılır.\n📌 Gramer Bilgisi:\n- 'mir', 'dir' gibi Dativ zamirleri ile\nÖrnekler:\n1. Sein Verhalten missfällt mir ganz und gar. – Onun davranışı bana hiç hoş gelmiyor.\n2. Das missfällt mir. – Bu hoşuma gitmiyor.",
+  },
+
+  {
+    id: 275,
+    veri: "enden vs. beenden\n\n✅ Açıklama: 'enden' intransitiv fiildir, nesne almaz, 'sein' ile Perfekt yapılır; 'beenden' transitiv fiildir, nesne alır, 'haben' ile kullanılır.\nÖrnekler:\n1. Die Diskussion ist gestern Abend geendet. – Tartışma dün akşam sona erdi.\n2. Er hat die Diskussion beendet. – O, tartışmayı bitirdi.",
+  },
+  {
+    id: 276,
+    veri: "sich beeilen ve Passiv\n\n✅ Açıklama: 'sich beeilen' reflexives Verb (dönüşlü fiil) olduğu için pasif yapıya dönüştürülemez, çünkü özne ve nesne aynıdır.\nÖrnekler:\n1. Ich beeile mich. – Acele ediyorum.",
+  },
+  {
+    id: 277,
+    veri: "sich fürchten\n\n✅ Açıklama: Reflexives Verb, korkmak anlamına gelir, 'vor' + Dativ ile kullanılır.\nÖrnekler:\n1. Sie fürchtet sich vor der Prüfung. – Sınavdan korkuyor.",
+  },
+  {
+    id: 278,
+    veri: "sich sehnen nach\n\n✅ Açıklama: Reflexives Verb, özlemek, hasret duymak anlamına gelir, 'nach' + Dativ ile kullanılır.\nÖrnekler:\n1. Wir sehnen uns nach einem Urlaub. – Bir tatil özlüyoruz.",
+  },
+  {
+    id: 279,
+    veri: "sich bedanken (Passiv)\n\n✅ Açıklama: Reflexives Verb, pasif yapıda nadiren kullanılır, resmi veya nesnel ifadelerde görülebilir.\nÖrnekler:\n1. Sofort wird sich bedankt! – Hemen teşekkür edilir!",
+  },
+  {
+    id: 280,
+    veri: "sich freuen (Passiv)\n\n✅ Açıklama: Reflexives Verb, normalde pasif olmaz, ancak bağlama göre kullanılabilir.\nÖrnekler:\n1. Hier wurde sich gefreut! – Burada sevinildi!",
+  },
+  {
+    id: 281,
+    veri: "bekommen (Passiversatzform)\n\n✅ Açıklama: 'bekommen + Partizip II' pasif yerine geçer, bir şeyin biri için yapıldığını ifade eder.\nÖrnekler:\n1. Ich bekomme die Haare geschnitten. – Saçlarım kesiliyor.\n2. Ich bekomme ein Geschenk. – Bir hediye alıyorum.",
+  },
+  {
+    id: 282,
+    veri: "sein + zu + Infinitiv\n\n✅ Açıklama: Bir görevin yapılması gerektiğini ifade eder, gereklilik anlamı taşır.\nÖrnekler:\n1. Die Aufgabe ist zu lösen. – Görev çözülecek.",
+  },
+  {
+    id: 283,
+    veri: "kriegen (Passiversatzform)\n\n✅ Açıklama: 'kriegen + etwas + Partizip II' günlük dilde pasif yerine geçer, bir işin başkası tarafından yapıldığını ifade eder.\nÖrnekler:\n1. Wir kriegen das Problem gelöst. – Problemi çözdürüyoruz.\n2. Ich kriege die Tür nicht auf. – Kapıyı açamıyorum.",
+  },
+  {
+    id: 284,
+    veri: "Die Lösung _______ _______ sich schnell finden\n\n✅ Açıklama: Doğru cevap: 'lässt sich' (sich lassen + Infinitiv, Passiversatzform).\nÖrnekler:\n1. Die Lösung lässt sich schnell finden. – Çözüm hızlıca bulunabilir.",
+  },
+  {
+    id: 285,
+    veri: "es gilt + zu + Infinitiv\n\n✅ Açıklama: Gereklilik, zorunluluk anlamı taşır, 'müssen' fiiline benzer.\nÖrnekler:\n1. Es gilt, schnell zu handeln. – Hızlı hareket etmek gerekir.",
+  },
+  {
+    id: 286,
+    veri: "Futur I Passiv\n\n✅ Açıklama: Gelecek zaman pasif yapısı: 'werden + Partizip II + werden'.\nÖrnekler:\n1. Die Aufgabe wird gelöst werden. – Görev çözülecek.\n2. Die Regeln werden eingehalten werden. – Kurallara uyulacak.",
+  },
+  {
+    id: 287,
+    veri: "zu + Partizip I (Adjektivierung)\n\n✅ Açıklama: 'zu + Infinitiv' sıfatlaştırılır, yapılması gereken bir eylemi belirtir.\nÖrnekler:\n1. Das ist ein zu behebendes Problem. – Giderilmesi gereken bir problemdir.\n2. Die zu beachtende Regel muss beachtet werden. – Dikkate alınması gereken kurala uyulmalıdır.\n3. Das ist eine zu ergreifende Maßnahme. – Alınması gereken bir önlemdir.",
+  },
+  {
+    id: 288,
+    veri: "bedienbar\n\n✅ Açıklama: 'kullanılabilir' anlamına gelen sıfat, 'ist + Adjektiv' yapısında kullanılır.\nÖrnekler:\n1. Das Gerät ist bedienbar. – Cihaz kullanılabilir.",
+  },
+  {
+    id: 289,
+    veri: "Infinitivsatz\n\n✅ Açıklama: 'zu + Infinitiv' ile oluşan yapı, fiilin mastar hâlini ifade eder.\nÖrnekler:\n1. Die Entscheidung, sofort zu handeln, war klug. – Hemen harekete geçme kararı akıllıcaydı.\n2. Er behauptet, alles zu wissen. – Her şeyi bildiğini iddia ediyor.\n3. Sie ist sicher, das Rennen zu gewinnen. – Yarışı kazanacağından emin.\n4. Sie rät ihm, fleißig zu lernen. – Ona sıkı çalışmasını tavsiye ediyor.",
+  },
+  {
+    id: 290,
+    veri: "ohne dass + Nebensatz\n\n✅ Açıklama: Olumsuz bir durumu ifade eder, fiil çekimlidir, Türkçeye '…meden önce/maksızın' çevrilir.\nÖrnekler:\n1. Sie lief, ohne dass sie müde wurde. – Yorulmadan koştu.",
+  },
+  {
+    id: 291,
+    veri: "ohne + zu + Infinitiv\n\n✅ Açıklama: Bir şeyi yapmadan anlamı verir.\nÖrnekler:\n1. Sie verließ das Haus, ohne die Tür abzuschließen. – Kapıyı kilitlemeden evden çıktı.",
+  },
+  {
+    id: 292,
+    veri: "ohne + Perfekt-Infinitiv\n\n✅ Açıklama: 'ohne + zu + Partizip II + haben/sein' yapısı, yapılmamış bir eylemi ifade eder.\nÖrnekler:\n1. Der Manager verließ das Büro, ohne seine Aufgaben erledigt zu haben. – Yönetici, görevlerini tamamlamadan ofisten ayrıldı.\n2. Der Dieb entkam, ohne erwischt zu werden. – Hırsız, yakalanmadan kaçtı.",
+  },
+  {
+    id: 293,
+    veri: "Infinitivsatz vs. dass-Satz\n\n✅ Açıklama: 'zu + Infinitiv' ve 'dass + çekimli fiil' anlamca eşdeğerdir.\nÖrnekler:\n1. Ich hoffe, zu gewinnen. – Kazanmayı umuyorum.\n2. Ich hoffe, dass ich gewinne. – Kazanacağımı umuyorum.",
+  },
+  {
+    id: 294,
+    veri: "Perfekt-Infinitiv (Passiv)\n\n✅ Açıklama: 'zu + Partizip II + haben/sein' pasif yapıda kullanılır.\nÖrnekler:\n1. Er bedauert, den Fehler gemacht zu haben. – Yaptığı hatadan pişmanlık duyuyor.\n2. Er erinnert sich daran, sie getroffen zu haben. – Onu görmüş olduğunu hatırlıyor.\n3. Sie gibt vor, nicht informiert worden zu sein. – Bilgilendirilmemiş olduğunu iddia ediyor.",
+  },
+  {
+    id: 295,
+    veri: "trotzdem/dennoch/doch\n\n✅ Açıklama: 'yine de, buna rağmen' anlamına gelir, karşıtlık ifade eder.\nÖrnekler:\n1. Obwohl er weiß, dass es gefährlich ist, beschließt er trotzdem zu gehen. – Tehlikeli olduğunu bilse de yine de gitmeye karar verir.\n2. Obwohl er weiß, dass es gefährlich ist, beschließt er dennoch zu gehen. – Tehlikeli olduğunu bilse de yine de gitmeye karar verir.\n3. Obwohl er weiß, dass es gefährlich ist, beschließt er doch zu gehen. – Tehlikeli olduğunu bilse de yine de gitmeye karar verir.",
+  },
+  {
+    id: 296,
+    veri: "ziemlich\n\n✅ Açıklama: 'oldukça, epeyce' anlamına gelir, en uygun yoğunluk zarfıdır.\nÖrnekler:\n1. Die Aussicht von diesem Berg ist ziemlich beeindruckend. – Bu dağın manzarası oldukça etkileyici.",
+  },
+  {
+    id: 297,
+    veri: "so … dass\n\n✅ Açıklama: 'o kadar … ki' anlamına gelir, bir durumun sonucunu ifade eder.\nÖrnekler:\n1. Sein Verhalten war so unhöflich, dass alle schockiert waren. – Davranışı o kadar kabaydı ki herkes şok oldu.",
+  },
+  {
+    id: 298,
+    veri: "durchaus\n\n✅ Açıklama: 'tamamen, oldukça' anlamına gelir, olumlu bir yargıyı belirtirken eleştiriyle kullanılabilir.\nÖrnekler:\n1. Die Präsentation war durchaus gelungen, aber es fehlte an Details. – Sunum oldukça başarılıydı, ama ayrıntılar eksikti.",
+  },
+  {
+    id: 299,
+    veri: "derart … dass\n\n✅ Açıklama: 'o kadar … ki' anlamına gelir, güçlü bir bağlaç yapısıdır.\nÖrnekler:\n1. Das Buch ist derart spannend, dass man es nicht aus der Hand legen kann. – Kitap o kadar heyecan verici ki insan elinden bırakamıyor.",
+  },
+  {
+    id: 300,
+    veri: "Infinitivsatz (genel)\n\n✅ Açıklama: 'zu + Infinitiv' yapısı, bir eylemin mastar hâlini ifade eder, genellikle özne veya nesne olarak kullanılır.\nÖrnekler:\n1. Es ist schön, dich zu sehen. – Seni görmek güzel.\n2. Es macht Spaß, zu reisen. – Seyahat etmek eğlenceli.\n3. Es ist sein Ziel, zu gewinnen. – Kazanmak onun hedefi.\n4. Den ganzen Tag zu arbeiten macht mich müde. – Bütün gün çalışmak beni yoruyor.\n5. Euch hier zu treffen freut uns. – Sizi burada görmek bizi sevindiriyor.\n6. Sie sind froh, den Streit beigelegt zu haben. – Kavganın çözülmüş olmasından dolayı mutlular.",
+  },
+
+  {
+    id: 301,
+    veri: "derart … dass\n\n✅ Açıklama: 'o kadar … ki' anlamına gelir, sonuç bildiren yan cümlelerle kullanılır.\n📌 Gramer Bilgisi:\n- Güçlü bir bağlaç yapısıdır.\nÖrnekler:\n1. Das Buch ist derart spannend, dass man es nicht aus der Hand legen kann. – Kitap o kadar heyecan verici ki insan elinden bırakamıyor.",
+  },
+  {
+    id: 302,
+    veri: "bewusst\n\n✅ Açıklama: Bilinçli, farkında olarak anlamına gelir, niyetli bir eylemi ifade eder.\nÖrnekler:\n1. Er hat bewusst gegen die Regeln verstoßen. – Bilerek kurallara karşı çıktı.",
+  },
+  {
+    id: 303,
+    veri: "unabsichtlich\n\n✅ Açıklama: Kazara, istemeyerek anlamına gelir, bilinçsiz bir eylemi ifade eder.\nÖrnekler:\n1. Er hat unabsichtlich die Konsequenzen nicht bedacht. – Sonuçları düşünmeden hareket etti.",
+  },
+  {
+    id: 304,
+    veri: "wissentlich\n\n✅ Açıklama: Bilerek, bile bile anlamına gelir, içsel çelişkiyi vurgular.\nÖrnekler:\n1. Er hat wissentlich eine falsche Entscheidung unterstützt. – Bilerek yanlış bir kararı destekledi.",
+  },
+  {
+    id: 305,
+    veri: "Adverbien (Zarf Çekimi)\n\n✅ Açıklama: Zarflar çekimlenmez, sıfatların aksine kasus, cinsiyet veya sayıya göre değişmez.\nÖrnekler:\n1. Sie hat sehr höflich gesprochen. – Çok nazikçe konuştu.\n2. ❌ Sie hat sehr höfliches gesprochen. – (Yanlış, sıfat yerine zarf gerekir).",
+  },
+  {
+    id: 306,
+    veri: "genauso\n\n✅ Açıklama: Aynı şekilde, tıpkı o gibi anlamına gelir, karşılaştırma için kullanılır.\nÖrnekler:\n1. Er hat die Aufgabe genauso gelöst wie sein Kollege. – Görevi tıpkı meslektaşı gibi çözdü.\n2. Ihr Kleid sieht genauso aus wie das der Schauspielerin. – Elbisesi oyuncununki gibi aynı görünüyor.",
+  },
+  {
+    id: 307,
+    veri: "vergebens\n\n✅ Açıklama: Boşuna, nafile anlamına gelir, başarısız bir çabayı ifade eder.\nÖrnekler:\n1. Er hat vergebens versucht, den Chef zu überzeugen. – Patronu ikna etmeyi boşuna denedi.",
+  },
+  {
+    id: 308,
+    veri: "irgendwie\n\n✅ Açıklama: Bir şekilde, her nasılsa anlamına gelir, yöntemin önemsiz olduğunu ifade eder.\nÖrnekler:\n1. Wir müssen irgendwie eine Lösung finden. – Bir şekilde çözüm bulmalıyız.",
+  },
+  {
+    id: 309,
+    veri: "äußerst\n\n✅ Açıklama: Son derece, aşırı anlamına gelir, yüksek bir dereceyi ifade eder.\nÖrnekler:\n1. Die Lage ist äußerst gefährlich geworden. – Durum son derece tehlikeli hale geldi.",
+  },
+  {
+    id: 310,
+    veri: "größtenteils\n\n✅ Açıklama: Çoğunlukla, büyük ölçüde anlamına gelir.\nÖrnekler:\n1. Die Arbeit war größtenteils erfolgreich. – Çalışma büyük ölçüde başarılıydı.",
+  },
+  {
+    id: 311,
+    veri: "einigermaßen\n\n✅ Açıklama: Bir dereceye kadar, kısmen anlamına gelir, orta düzey bir niteliği ifade eder.\nÖrnekler:\n1. Seine Erklärung war einigermaßen verständlich. – Açıklaması kısmen anlaşılırdı.",
+  },
+  {
+    id: 312,
+    veri: "sonst\n\n✅ Açıklama: Aksi takdirde, yoksa anlamına gelir, olumsuz bir sonucu ifade eder.\nÖrnekler:\n1. Kauf die Tickets früh, sonst sind sie ausverkauft! – Biletleri erken al, yoksa tükenirler!",
+  },
+  {
+    id: 313,
+    veri: "jedoch\n\n✅ Açıklama: Ancak, yine de anlamına gelir, resmi ve edebi dilde zıtlık ifade eder.\n📌 Özellikler:\n- Resmi yazı ve edebi dilde yaygın\n- Genelde fiilden sonra gelir\n- Cümle başında sık kullanılır\nÖrnekler:\n1. Es ist schwierig, aber ich versuche es jedoch! – Zor ama yine de deniyorum!",
+  },
+  {
+    id: 314,
+    veri: "wenigstens\n\n✅ Açıklama: En azından, hiç değilse anlamına gelir, minimum bir olumlu durumu ifade eder.\nÖrnekler:\n1. Sie hat wenigstens einen Punkt bekommen. – Hiç değilse bir puan aldı.",
+  },
+  {
+    id: 315,
+    veri: "dies/das\n\n✅ Açıklama: 'dies' görüş veya durumları, 'das' önceki bir durumu işaret eder.\nÖrnekler:\n1. Dies ist meine Meinung: Wir sollten das Angebot annehmen. – Bu benim görüşüm: Teklifi kabul etmeliyiz.\n2. Er hat viel gelernt. Das hat ihm den Erfolg gebracht. – Çok çalıştı. Bu ona başarı getirdi.",
+  },
+  {
+    id: 316,
+    veri: "solch ein\n\n✅ Açıklama: Böyle bir, bu tür bir anlamına gelir, sıfat olarak kullanılır.\nÖrnekler:\n1. Ich habe solch ein Problem, das ich nicht lösen kann. – Çözemediğim böyle bir problemim var.",
+  },
+  {
+    id: 317,
+    veri: "stattdessen/demzufolge\n\n✅ Açıklama: 'stattdessen' yerine, 'demzufolge' buna bağlı olarak anlamına gelir.\nÖrnekler:\n1. Er folgte nicht den Regeln, stattdessen ignorierte er sie. – Kurallara uymadı, bunun yerine onları görmezden geldi.\n2. Die Nachfrage war hoch. Demzufolge wurden die Preise erhöht. – Talep yüksekti. Buna bağlı olarak fiyatlar artırıldı.",
+  },
+  {
+    id: 318,
+    veri: "daran/darauf/damit/dafür\n\n✅ Açıklama: Farklı bağlamlarda kullanılır: 'daran' bir şey hakkında, 'darauf' üzerine, 'damit' amaç için, 'dafür' sebep için.\nÖrnekler:\n1. Das Problem ist komplex. Daran arbeiten wir schon. – Bunun üzerinde çalışıyoruz.\n2. Das Essen ist fertig. Wir warten darauf. – Onu bekliyoruz.\n3. Ich gebe dir das Buch. Damit kannst du besser lernen. – Böylelikle daha iyi öğrenebilirsin.\n4. Das Problem ist komplex. Dafür müssen wir uns Zeit nehmen. – Bunun için zaman ayırmalıyız.",
+  },
+  {
+    id: 319,
+    veri: "womit/wofür\n\n✅ Açıklama: 'womit' araç, 'wofür' amaç belirtir.\nÖrnekler:\n1. Er hat ein Werkzeug, womit er die Tür öffnet. – Kapıyı açmak için bir aleti var.\n2. Das ist der Grund, wofür er so hart arbeitet. – Çok çalışmasının nedeni bu.",
+  },
+  {
+    id: 320,
+    veri: "herauf\n\n✅ Açıklama: Yukarıya doğru hareketi ifade eder.\nÖrnekler:\n1. Komm bitte herauf! – Lütfen yukarı gel!",
+  },
+  {
+    id: 321,
+    veri: "darum/daher/somit/deswegen\n\n✅ Açıklama: Sebep veya sonuç belirtir: 'darum' ve 'deswegen' günlük, 'daher' ve 'somit' daha resmi.\nÖrnekler:\n1. Wir haben keine Zeit, darum müssen wir uns beeilen. – Zamanımız yok, bu yüzden acele etmeliyiz.\n2. Das Wetter war schlecht, daher wurde die Veranstaltung abgesagt. – Hava kötüydü, bu sebeple etkinlik iptal edildi.\n3. Das Wetter war schlecht, somit wurde die Veranstaltung abgesagt. – Hava kötüydü, böylece etkinlik iptal edildi.\n4. Das Wetter war schlecht, deswegen wurde die Veranstaltung abgesagt. – Hava kötüydü, bu nedenle etkinlik iptal edildi.",
+  },
+  {
+    id: 322,
+    veri: "somit/demnach\n\n✅ Açıklama: 'somit' mantıksal sonuç, 'demnach' bir sonuca varıldığında kullanılır.\nÖrnekler:\n1. Er hat die Analyse gelesen, somit hat er seine Meinung geändert. – Analizi okudu, böylece fikrini değiştirdi.\n2. Er hat die Analyse gelesen, demnach hat er seine Meinung geändert. – Analizi okudu, buna göre fikrini değiştirdi.",
+  },
+  {
+    id: 323,
+    veri: "anscheinend/leider\n\n✅ Açıklama: 'anscheinend' görünüşe göre, 'leider' ne yazık ki anlamına gelir.\nÖrnekler:\n1. Anscheinend hat er die Aufgabe nicht verstanden. – Görünüşe göre görevi anlamamış.\n2. Leider kann er nicht kommen. – Ne yazık ki gelemiyor.",
+  },
+  {
+    id: 324,
+    veri: "Konjunktiv II + Passiv + Modalverb\n\n✅ Açıklama: Gerçekleşmemiş durumları ifade eder, 'werden + Partizip II + Modalverb'.\nÖrnekler:\n1. Das Haus wäre gebaut worden. – Ev inşa edilmiş olurdu.\n2. Das Projekt wäre früher abgeschlossen werden können. – Proje daha önce tamamlanabilmiş olurdu.",
+  },
+  {
+    id: 325,
+    veri: "selbst wenn\n\n✅ Açıklama: 'bile olsa' anlamına gelir, zıtlık ifade eder.\nÖrnekler:\n1. Selbst wenn es regnet, gehe ich spazieren. – Yağmur yağsa bile yürüyüşe çıkarım.",
+  },
 ];
 export default data;
