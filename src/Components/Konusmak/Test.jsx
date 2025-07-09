@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 /* const data = [
   {
@@ -1723,196 +1724,3186 @@ import React, { useState, useEffect } from "react";
 ]; */
 const data = [
   {
-    cumle: "Er hat das Lied komponiert.",
-    turkce: "O (erkek) şarkıyı besteledi.",
+    cumle: "Guten Morgen!",
+    turkce: "Günaydın!",
+  },
+  {
+    cumle: "Guten Tag!",
+    turkce: "İyi günler!",
+  },
+  {
+    cumle: "Guten Abend!",
+    turkce: "İyi akşamlar!",
+  },
+  {
+    cumle: "Gute Nacht!",
+    turkce: "İyi geceler!",
+  },
+  {
+    cumle: "Auf Wiedersehen!",
+    turkce: "Hoşça kal!",
+  },
+  {
+    cumle: "Tschüss!",
+    turkce: "Hoşça kal! (Informal)",
+  },
+  {
+    cumle: "Bis bald!",
+    turkce: "Yakında görüşürüz!",
+  },
+  {
+    cumle: "Bis morgen!",
+    turkce: "Yarın görüşürüz!",
+  },
+  {
+    cumle: "Bis später!",
+    turkce: "Sonra görüşürüz!",
+  },
+  {
+    cumle: "Wie heißt du?",
+    turkce: "Adın ne?",
+  },
+  {
+    cumle: "Ich heiße...",
+    turkce: "Benim adım...",
+  },
+  {
+    cumle: "Wie ist dein Name?",
+    turkce: "İsmin nedir?",
+  },
+  {
+    cumle: "Mein Name ist...",
+    turkce: "Benim adım...",
+  },
+  {
+    cumle: "Wie geht es dir?",
+    turkce: "Nasılsın?",
+  },
+  {
+    cumle: "Mir geht es gut.",
+    turkce: "İyiyim.",
+  },
+  {
+    cumle: "Es geht mir nicht so gut.",
+    turkce: "Pek iyi değilim.",
+  },
+  {
+    cumle: "Wie geht es Ihnen?",
+    turkce: "Nasılsınız? (Resmi)",
+  },
+  {
+    cumle: "Mir geht es sehr gut, danke.",
+    turkce: "Çok iyiyim, teşekkürler.",
+  },
+  {
+    cumle: "Woher kommst du?",
+    turkce: "Nerelisin?",
+  },
+  {
+    cumle: "Ich komme aus der Türkei.",
+    turkce: "Türkiye'den geliyorum.",
+  },
+  {
+    cumle: "Wo wohnst du?",
+    turkce: "Nerede yaşıyorsun?",
+  },
+  {
+    cumle: "Ich wohne in Istanbul.",
+    turkce: "İstanbul'da yaşıyorum.",
+  },
+  {
+    cumle: "Wie alt bist du?",
+    turkce: "Kaç yaşındasın?",
+  },
+  {
+    cumle: "Ich bin 25 Jahre alt.",
+    turkce: "25 yaşındayım.",
+  },
+  {
+    cumle: "Was machst du beruflich?",
+    turkce: "Mesleğin ne?",
+  },
+  {
+    cumle: "Ich bin Student/Studentin.",
+    turkce: "Ben öğrenciyim.",
+  },
+  {
+    cumle: "Ich bin Lehrer/Lehrerin.",
+    turkce: "Ben öğretmenim.",
+  },
+  {
+    cumle: "Ich arbeite als Ingenieur.",
+    turkce: "Mühendis olarak çalışıyorum.",
+  },
+  {
+    cumle: "Ich bin Arzt/Ärztin.",
+    turkce: "Ben doktorum.",
+  },
+  {
+    cumle: "Ich bin arbeitslos.",
+    turkce: "İşsizim.",
+  },
+
+  // A1 SEVİYESİ - GÜNLÜK İFADELER
+  {
+    cumle: "Entschuldigung!",
+    turkce: "Özür dilerim!",
+  },
+  {
+    cumle: "Entschuldigen Sie bitte!",
+    turkce: "Lütfen affedin! (Resmi)",
+  },
+  {
+    cumle: "Danke schön!",
+    turkce: "Çok teşekkür ederim!",
+  },
+  {
+    cumle: "Vielen Dank!",
+    turkce: "Çok teşekkürler!",
+  },
+  {
+    cumle: "Danke sehr!",
+    turkce: "Çok teşekkürler!",
+  },
+  {
+    cumle: "Bitte schön!",
+    turkce: "Rica ederim!",
+  },
+  {
+    cumle: "Gern geschehen!",
+    turkce: "Bir şey değil!",
+  },
+  {
+    cumle: "Ja.",
+    turkce: "Evet.",
+  },
+  {
+    cumle: "Nein.",
+    turkce: "Hayır.",
+  },
+  {
+    cumle: "Vielleicht.",
+    turkce: "Belki.",
+  },
+  {
+    cumle: "Natürlich.",
+    turkce: "Elbette.",
+  },
+  {
+    cumle: "Ich verstehe nicht.",
+    turkce: "Anlamıyorum.",
+  },
+  {
+    cumle: "Können Sie bitte langsamer sprechen?",
+    turkce: "Lütfen daha yavaş konuşabilir misiniz?",
+  },
+  {
+    cumle: "Können Sie das bitte wiederholen?",
+    turkce: "Bunu tekrar edebilir misiniz lütfen?",
+  },
+  {
+    cumle: "Wie bitte?",
+    turkce: "Efendim? / Ne dediniz?",
+  },
+  {
+    cumle: "Ich verstehe das nicht.",
+    turkce: "Bunu anlamıyorum.",
+  },
+  {
+    cumle: "Sprechen Sie Englisch?",
+    turkce: "İngilizce biliyor musunuz?",
+  },
+  {
+    cumle: "Sprechen Sie Türkisch?",
+    turkce: "Türkçe biliyor musunuz?",
+  },
+  {
+    cumle: "Ich spreche ein bisschen Deutsch.",
+    turkce: "Biraz Almanca konuşuyorum.",
+  },
+  {
+    cumle: "Ich lerne Deutsch.",
+    turkce: "Almanca öğreniyorum.",
+  },
+
+  // A1 SEVİYESİ - GÜNLÜK HAYAT
+  {
+    cumle: "Wie viel kostet das?",
+    turkce: "Bu ne kadar?",
+  },
+  {
+    cumle: "Das ist zu teuer.",
+    turkce: "Bu çok pahalı.",
+  },
+  {
+    cumle: "Haben Sie es billiger?",
+    turkce: "Daha ucuzu var mı?",
+  },
+  {
+    cumle: "Ich nehme das.",
+    turkce: "Bunu alıyorum.",
+  },
+  {
+    cumle: "Ich möchte einen Kaffee, bitte.",
+    turkce: "Bir kahve istiyorum, lütfen.",
+  },
+  {
+    cumle: "Ich hätte gerne ein Glas Wasser.",
+    turkce: "Bir bardak su istiyorum.",
+  },
+  {
+    cumle: "Die Rechnung, bitte.",
+    turkce: "Hesap, lütfen.",
+  },
+  {
+    cumle: "Haben Sie ein Zimmer frei?",
+    turkce: "Boş odanız var mı?",
+  },
+  {
+    cumle: "Wo ist die Toilette?",
+    turkce: "Tuvalet nerede?",
+  },
+  {
+    cumle: "Wo ist der Ausgang?",
+    turkce: "Çıkış nerede?",
+  },
+  {
+    cumle: "Wie spät ist es?",
+    turkce: "Saat kaç?",
+  },
+  {
+    cumle: "Es ist 10 Uhr.",
+    turkce: "Saat 10.",
+  },
+  {
+    cumle: "Es ist halb acht.",
+    turkce: "Saat yedi buçuk.",
+  },
+  {
+    cumle: "Ich habe Hunger.",
+    turkce: "Açım.",
+  },
+  {
+    cumle: "Ich habe Durst.",
+    turkce: "Susadım.",
+  },
+  {
+    cumle: "Ich bin müde.",
+    turkce: "Yorgunum.",
+  },
+  {
+    cumle: "Ich bin krank.",
+    turkce: "Hastayım.",
+  },
+  {
+    cumle: "Wo ist der Bahnhof?",
+    turkce: "Tren istasyonu nerede?",
+  },
+  {
+    cumle: "Wo ist die nächste Bushaltestelle?",
+    turkce: "En yakın otobüs durağı nerede?",
+  },
+  {
+    cumle: "Wie komme ich zum Hotel?",
+    turkce: "Otele nasıl giderim?",
+  },
+
+  // A2 SEVİYESİ - GÜNLÜK İLETİŞİM
+  {
+    cumle: "Ich hätte gerne eine Tasse Tee.",
+    turkce: "Bir fincan çay istiyorum.",
+  },
+  {
+    cumle: "Können Sie mir helfen?",
+    turkce: "Bana yardım edebilir misiniz?",
+  },
+  {
+    cumle: "Ich brauche Hilfe.",
+    turkce: "Yardıma ihtiyacım var.",
+  },
+  {
+    cumle: "Ich suche den Bahnhof.",
+    turkce: "Tren istasyonunu arıyorum.",
+  },
+  {
+    cumle: "Ich habe mich verlaufen.",
+    turkce: "Kayboldum.",
+  },
+  {
+    cumle: "Wie komme ich zum Museum?",
+    turkce: "Müzeye nasıl giderim?",
+  },
+  {
+    cumle: "Ist es weit von hier?",
+    turkce: "Buradan uzak mı?",
+  },
+  {
+    cumle: "Gehen Sie geradeaus und dann links.",
+    turkce: "Düz gidin ve sonra sola dönün.",
+  },
+  {
+    cumle: "Es ist ungefähr 10 Minuten zu Fuß.",
+    turkce: "Yaklaşık 10 dakikalık yürüme mesafesinde.",
+  },
+  {
+    cumle: "Ich möchte eine Fahrkarte kaufen.",
+    turkce: "Bir bilet satın almak istiyorum.",
+  },
+  {
+    cumle: "Einfach oder hin und zurück?",
+    turkce: "Tek yön mü gidiş-dönüş mü?",
+  },
+  {
+    cumle: "Wann fährt der nächste Zug nach Berlin?",
+    turkce: "Berlin'e bir sonraki tren ne zaman kalkıyor?",
+  },
+  {
+    cumle: "Von welchem Gleis fährt der Zug ab?",
+    turkce: "Tren hangi perondan kalkıyor?",
+  },
+  {
+    cumle: "Ist dieser Platz frei?",
+    turkce: "Bu yer boş mu?",
+  },
+  {
+    cumle: "Darf ich hier sitzen?",
+    turkce: "Buraya oturabilir miyim?",
+  },
+
+  // A2 SEVİYESİ - HOBİLER VE BOŞZAMAN
+  {
+    cumle: "Was machen Sie in Ihrer Freizeit?",
+    turkce: "Boş zamanlarınızda ne yaparsınız?",
+  },
+  {
+    cumle: "Ich lese gerne Bücher.",
+    turkce: "Kitap okumayı severim.",
+  },
+  {
+    cumle: "Ich spiele Fußball.",
+    turkce: "Futbol oynarım.",
+  },
+  {
+    cumle: "Ich gehe oft ins Kino.",
+    turkce: "Sık sık sinemaya giderim.",
+  },
+  {
+    cumle: "Ich höre gerne Musik.",
+    turkce: "Müzik dinlemeyi severim.",
+  },
+  {
+    cumle: "Ich koche gerne.",
+    turkce: "Yemek yapmayı severim.",
+  },
+  {
+    cumle: "Ich reise gerne.",
+    turkce: "Seyahat etmeyi severim.",
+  },
+  {
+    cumle: "Ich treibe Sport.",
+    turkce: "Spor yaparım.",
+  },
+  {
+    cumle: "Ich spiele Gitarre.",
+    turkce: "Gitar çalarım.",
+  },
+  {
+    cumle: "Ich tanze gerne.",
+    turkce: "Dans etmeyi severim.",
+  },
+  {
+    cumle: "Haben Sie Geschwister?",
+    turkce: "Kardeşleriniz var mı?",
+  },
+  {
+    cumle: "Ich habe einen Bruder und eine Schwester.",
+    turkce: "Bir erkek kardeşim ve bir kız kardeşim var.",
+  },
+  {
+    cumle: "Ich habe keine Geschwister.",
+    turkce: "Kardeşim yok.",
+  },
+  {
+    cumle: "Ich bin Einzelkind.",
+    turkce: "Ben tek çocuğum.",
+  },
+  {
+    cumle: "Was sind deine Hobbys?",
+    turkce: "Hobilerin neler?",
+  },
+  {
+    cumle: "Ich mag Musik hören.",
+    turkce: "Müzik dinlemeyi seviyorum.",
+  },
+  {
+    cumle: "Welche Musik hörst du gerne?",
+    turkce: "Ne tür müzik dinlemeyi seversin?",
+  },
+  {
+    cumle: "Ich höre gerne Rock und Pop.",
+    turkce: "Rock ve pop dinlemeyi severim.",
+  },
+  {
+    cumle: "Welche Filme magst du?",
+    turkce: "Hangi filmleri seversin?",
+  },
+  {
+    cumle: "Ich mag Komödien und Actionfilme.",
+    turkce: "Komedileri ve aksiyon filmlerini severim.",
+  },
+
+  // A2 SEVİYESİ - DİL VE ZAMAN İFADELERİ
+  {
+    cumle: "Welche Sprachen sprichst du?",
+    turkce: "Hangi dilleri konuşuyorsun?",
+  },
+  {
+    cumle: "Ich spreche Deutsch und Englisch.",
+    turkce: "Almanca ve İngilizce konuşuyorum.",
+  },
+  {
+    cumle: "Ich lerne seit einem Jahr Deutsch.",
+    turkce: "Bir yıldır Almanca öğreniyorum.",
+  },
+  {
+    cumle: "Deutsch ist eine schwere Sprache.",
+    turkce: "Almanca zor bir dil.",
+  },
+  {
+    cumle: "Ich möchte mein Deutsch verbessern.",
+    turkce: "Almancamı geliştirmek istiyorum.",
+  },
+  {
+    cumle: "Was hast du am Wochenende gemacht?",
+    turkce: "Hafta sonu ne yaptın?",
+  },
+  {
+    cumle: "Ich war zu Hause und habe ferngesehen.",
+    turkce: "Evdeydim ve televizyon izledim.",
+  },
+  {
+    cumle: "Ich war im Kino.",
+    turkce: "Sinemadaydım.",
+  },
+  {
+    cumle: "Ich habe Freunde getroffen.",
+    turkce: "Arkadaşlarımla buluştum.",
+  },
+  {
+    cumle: "Ich hatte keine Zeit.",
+    turkce: "Vaktim yoktu.",
+  },
+  {
+    cumle: "Ich war sehr beschäftigt.",
+    turkce: "Çok meşguldüm.",
+  },
+  {
+    cumle: "Hast du morgen Zeit?",
+    turkce: "Yarın vaktin var mı?",
+  },
+  {
+    cumle: "Leider habe ich keine Zeit.",
+    turkce: "Maalesef vaktim yok.",
+  },
+  {
+    cumle: "Ja, ich habe Zeit.",
+    turkce: "Evet, vaktim var.",
+  },
+  {
+    cumle: "Wir könnten ins Restaurant gehen.",
+    turkce: "Restorana gidebiliriz.",
+  },
+  {
+    cumle: "Das klingt gut.",
+    turkce: "Bu kulağa hoş geliyor.",
+  },
+  {
+    cumle: "Das Wetter ist heute schön.",
+    turkce: "Bugün hava güzel.",
+  },
+  {
+    cumle: "Es regnet stark.",
+    turkce: "Şiddetli yağmur yağıyor.",
+  },
+  {
+    cumle: "Es ist heute sehr heiß.",
+    turkce: "Bugün çok sıcak.",
+  },
+  {
+    cumle: "Es ist kalt.",
+    turkce: "Hava soğuk.",
+  },
+  {
+    cumle: "Es schneit.",
+    turkce: "Kar yağıyor.",
+  },
+  {
+    cumle: "Ich muss jetzt gehen.",
+    turkce: "Şimdi gitmem gerek.",
+  },
+  {
+    cumle: "Ich rufe dich später an.",
+    turkce: "Seni daha sonra arayacağım.",
+  },
+  {
+    cumle: "Wir sehen uns morgen.",
+    turkce: "Yarın görüşürüz.",
+  },
+  {
+    cumle: "Ich bin spät dran.",
+    turkce: "Geç kaldım.",
+  },
+  {
+    cumle: "Ich habe es eilig.",
+    turkce: "Acelem var.",
+  },
+
+  // B1 SEVİYESİ - İLETİŞİM VE GÜNLÜK HAYAT
+  {
+    cumle: "Könnten Sie mir bitte erklären, wie das funktioniert?",
+    turkce: "Bunun nasıl çalıştığını bana açıklayabilir misiniz?",
+  },
+  {
+    cumle: "Können Sie mir das genauer erläutern?",
+    turkce: "Bunu bana daha detaylı açıklayabilir misiniz?",
+  },
+  {
+    cumle: "Ich verstehe den Zusammenhang nicht ganz.",
+    turkce: "Bağlantıyı tam olarak anlamıyorum.",
+  },
+  {
+    cumle: "Können Sie ein Beispiel geben?",
+    turkce: "Bir örnek verebilir misiniz?",
+  },
+  {
+    cumle: "Ich würde gerne einen Termin vereinbaren.",
+    turkce: "Bir randevu almak istiyorum.",
+  },
+  {
+    cumle: "Wann passt es Ihnen am besten?",
+    turkce: "Size en uygun zaman ne zaman?",
+  },
+  {
+    cumle: "Ich bin an diesem Tag leider verhindert.",
+    turkce: "O gün maalesef meşgulüm.",
+  },
+  {
+    cumle: "Können wir den Termin verschieben?",
+    turkce: "Randevuyu erteleyebilir miyiz?",
+  },
+  {
+    cumle: "Ich habe meine Brieftasche verloren.",
+    turkce: "Cüzdanımı kaybettim.",
+  },
+  {
+    cumle: "Haben Sie mein Handy gesehen?",
+    turkce: "Telefonumu gördünüz mü?",
+  },
+  {
+    cumle: "Ich habe meinen Schlüssel vergessen.",
+    turkce: "Anahtarımı unuttum.",
+  },
+  {
+    cumle: "Können Sie mir den Weg zur Post beschreiben?",
+    turkce: "Bana postaneye giden yolu tarif edebilir misiniz?",
+  },
+  {
+    cumle: "Wie lange dauert es zu Fuß?",
+    turkce: "Yürüyerek ne kadar sürer?",
+  },
+  {
+    cumle: "Gibt es hier in der Nähe eine Bank?",
+    turkce: "Buralarda bir banka var mı?",
+  },
+  {
+    cumle: "Wo ist der nächste Supermarkt?",
+    turkce: "En yakın süpermarket nerede?",
+  },
+
+  // B1 SEVİYESİ - EV VE GÜNLÜK YAŞAM
+  {
+    cumle: "Ich suche eine Wohnung zu mieten.",
+    turkce: "Kiralamak için bir daire arıyorum.",
+  },
+  {
+    cumle: "Wie hoch ist die monatliche Miete?",
+    turkce: "Aylık kira ne kadar?",
+  },
+  {
+    cumle: "Sind die Nebenkosten im Preis enthalten?",
+    turkce: "Yan giderler fiyata dahil mi?",
+  },
+  {
+    cumle: "Gibt es einen Aufzug im Gebäude?",
+    turkce: "Binada asansör var mı?",
+  },
+  {
+    cumle: "Wie groß ist die Wohnung?",
+    turkce: "Daire ne kadar büyük?",
+  },
+  {
+    cumle: "Die Heizung funktioniert nicht.",
+    turkce: "Kalorifer çalışmıyor.",
+  },
+  {
+    cumle: "Der Wasserhahn tropft.",
+    turkce: "Musluk damlıyor.",
+  },
+  {
+    cumle: "Ich muss die Waschmaschine reparieren lassen.",
+    turkce: "Çamaşır makinesini tamir ettirmem gerekiyor.",
+  },
+  {
+    cumle: "Können Sie es bitte reparieren?",
+    turkce: "Lütfen tamir edebilir misiniz?",
+  },
+  {
+    cumle: "Wann kann der Techniker kommen?",
+    turkce: "Teknisyen ne zaman gelebilir?",
+  },
+
+  // B1 SEVİYESİ - FİKİR VE TAVSİYE
+  {
+    cumle: "Was würden Sie an meiner Stelle tun?",
+    turkce: "Benim yerimde olsaydınız ne yapardınız?",
+  },
+  {
+    cumle: "Ich bin mir nicht sicher, was ich tun soll.",
+    turkce: "Ne yapacağımdan emin değilim.",
+  },
+  {
+    cumle: "Haben Sie einen Vorschlag?",
+    turkce: "Bir öneriniz var mı?",
+  },
+  {
+    cumle: "Das ist eine gute Idee.",
+    turkce: "Bu iyi bir fikir.",
+  },
+  {
+    cumle: "Ich bin nicht davon überzeugt.",
+    turkce: "Buna ikna olmadım.",
+  },
+  {
+    cumle: "Ich freue mich auf unser Treffen.",
+    turkce: "Görüşmemizi dört gözle bekliyorum.",
+  },
+  {
+    cumle: "Ich bin gespannt auf Ihren Vortrag.",
+    turkce: "Sunumunuzu merakla bekliyorum.",
+  },
+  {
+    cumle: "Es tut mir leid, dass ich zu spät gekommen bin.",
+    turkce: "Geç kaldığım için özür dilerim.",
+  },
+  {
+    cumle: "Ich entschuldige mich für die Unannehmlichkeiten.",
+    turkce: "Rahatsızlık için özür dilerim.",
+  },
+  {
+    cumle: "Ich bin mit dem Ergebnis nicht zufrieden.",
+    turkce: "Sonuçtan memnun değilim.",
+  },
+  {
+    cumle: "Das hat meine Erwartungen nicht erfüllt.",
+    turkce: "Bu beklentilerimi karşılamadı.",
+  },
+  {
+    cumle: "Wir sollten das Problem so schnell wie möglich lösen.",
+    turkce: "Bu sorunu mümkün olduğunca çabuk çözmeliyiz.",
+  },
+  {
+    cumle: "Wir müssen eine Lösung finden.",
+    turkce: "Bir çözüm bulmamız gerekiyor.",
+  },
+
+  // B1 SEVİYESİ - GELECEK PLANLARI VE GEÇMİŞ DENEYİMLER
+  {
+    cumle: "Ich habe vor, nächstes Jahr nach Deutschland zu reisen.",
+    turkce: "Gelecek yıl Almanya'ya seyahat etmeyi planlıyorum.",
+  },
+  {
+    cumle: "Was sind deine Pläne für die Zukunft?",
+    turkce: "Gelecek için planların neler?",
+  },
+  {
+    cumle: "Ich möchte im Ausland studieren.",
+    turkce: "Yurtdışında okumak istiyorum.",
+  },
+  {
+    cumle: "Ich will meine Deutschkenntnisse verbessern.",
+    turkce: "Almanca bilgimi geliştirmek istiyorum.",
+  },
+  {
+    cumle: "Haben Sie schon einmal in der Türkei Urlaub gemacht?",
+    turkce: "Hiç Türkiye'de tatil yaptınız mı?",
+  },
+  {
+    cumle: "Ich war noch nie in Deutschland.",
+    turkce: "Hiç Almanya'da bulunmadım.",
+  },
+  {
+    cumle: "Das war meine beste Reise.",
+    turkce: "Bu benim en iyi seyahatimdi.",
+  },
+  {
+    cumle: "Ich habe viele interessante Menschen kennengelernt.",
+    turkce: "Birçok ilginç insanla tanıştım.",
+  },
+
+  // B1 SEVİYESİ - KOŞULLU CÜMLELER VE FİKİR BELİRTME
+  {
+    cumle: "Wenn ich Zeit hätte, würde ich mehr Sport treiben.",
+    turkce: "Vaktim olsa, daha fazla spor yapardım.",
+  },
+  {
+    cumle: "Wenn das Wetter schön ist, gehen wir spazieren.",
+    turkce: "Hava güzelse, yürüyüşe çıkarız.",
+  },
+  {
+    cumle: "Falls ich nicht rechtzeitig komme, fang ohne mich an.",
+    turkce: "Eğer zamanında gelemezsem, bensiz başla.",
+  },
+  {
+    cumle: "Ich bin seit drei Jahren verheiratet.",
+    turkce: "Üç yıldır evliyim.",
+  },
+  {
+    cumle: "Ich wohne seit 2019 in dieser Stadt.",
+    turkce: "2019'dan beri bu şehirde yaşıyorum.",
+  },
+  {
+    cumle: "Wie lange kennst du ihn schon?",
+    turkce: "Onu ne zamandır tanıyorsun?",
+  },
+  {
+    cumle: "Was sind die Vor- und Nachteile dieser Methode?",
+    turkce: "Bu yöntemin avantajları ve dezavantajları nelerdir?",
+  },
+  {
+    cumle: "Einerseits ist es praktisch, andererseits ist es teuer.",
+    turkce: "Bir yandan pratik, diğer yandan pahalı.",
+  },
+  {
+    cumle: "Ich bin der Meinung, dass...",
+    turkce: "Bence...",
+  },
+  {
+    cumle: "Meiner Ansicht nach ist das keine gute Idee.",
+    turkce: "Bana göre bu iyi bir fikir değil.",
+  },
+  {
+    cumle: "Ich denke, wir sollten zuerst recherchieren.",
+    turkce: "Bence önce araştırma yapmalıyız.",
+  },
+
+  // B1 SEVİYESİ - GÜNLÜK KONUŞMA İFADELERİ
+  {
+    cumle: "Es wäre besser, wenn wir früher anfangen würden.",
+    turkce: "Daha erken başlasak daha iyi olurdu.",
+  },
+  {
+    cumle: "Könnten Sie das bitte wiederholen?",
+    turkce: "Bunu tekrar edebilir misiniz lütfen?",
+  },
+  {
+    cumle: "Ich habe nicht verstanden, was Sie meinen.",
+    turkce: "Ne demek istediğinizi anlamadım.",
+  },
+  {
+    cumle: "Könnten Sie das anders formulieren?",
+    turkce: "Bunu başka türlü ifade edebilir misiniz?",
+  },
+  {
+    cumle: "Ich habe das Gefühl, dass etwas nicht stimmt.",
+    turkce: "Bir şeylerin yanlış olduğu hissine kapılıyorum.",
+  },
+  {
+    cumle: "Ich bin mir nicht sicher, ob das funktionieren wird.",
+    turkce: "Bunun işe yarayacağından emin değilim.",
+  },
+  {
+    cumle: "Wir müssen uns beeilen, sonst verpassen wir den Zug.",
+    turkce: "Acele etmeliyiz, yoksa treni kaçıracağız.",
+  },
+  {
+    cumle: "Beeil dich, wir sind spät dran!",
+    turkce: "Acele et, geç kaldık!",
+  },
+  {
+    cumle: "Ich bin mit deinem Vorschlag einverstanden.",
+    turkce: "Önerinize katılıyorum.",
+  },
+  {
+    cumle: "Ich stimme dir voll und ganz zu.",
+    turkce: "Sana tamamen katılıyorum.",
+  },
+  {
+    cumle: "Da bin ich anderer Meinung.",
+    turkce: "Bu konuda farklı düşünüyorum.",
+  },
+  {
+    cumle: "Darf ich Ihnen eine Frage stellen?",
+    turkce: "Size bir soru sorabilir miyim?",
+  },
+  {
+    cumle: "Darf ich etwas vorschlagen?",
+    turkce: "Bir şey önerebilir miyim?",
+  },
+  {
+    cumle: "Es ist mir egal, was die anderen denken.",
+    turkce: "Başkalarının ne düşündüğü umurumda değil.",
+  },
+  {
+    cumle: "Das spielt für mich keine Rolle.",
+    turkce: "Bu benim için önemli değil.",
+  },
+
+  // B1 SEVİYESİ - İŞ VE TOPLANTI İFADELERİ
+  {
+    cumle: "Können wir einen anderen Termin vereinbaren?",
+    turkce: "Başka bir randevu ayarlayabilir miyiz?",
+  },
+  {
+    cumle: "Der Termin passt mir leider nicht.",
+    turkce: "Maalesef randevu bana uygun değil.",
+  },
+  {
+    cumle: "Können wir das Meeting auf nächste Woche verschieben?",
+    turkce: "Toplantıyı gelecek haftaya erteleyebilir miyiz?",
+  },
+  {
+    cumle: "Ich bin noch nicht fertig mit meiner Arbeit.",
+    turkce: "İşimi henüz bitirmedim.",
+  },
+  {
+    cumle: "Ich brauche noch etwas mehr Zeit.",
+    turkce: "Biraz daha zamana ihtiyacım var.",
+  },
+  {
+    cumle: "Die Frist ist zu knapp.",
+    turkce: "Süre çok kısa.",
+  },
+  {
+    cumle: "Können Sie mir die Unterlagen zuschicken?",
+    turkce: "Bana belgeleri gönderebilir misiniz?",
+  },
+  {
+    cumle: "Ich habe die E-Mail noch nicht erhalten.",
+    turkce: "E-postayı henüz almadım.",
+  },
+  {
+    cumle: "Was halten Sie von diesem Vorschlag?",
+    turkce: "Bu öneri hakkında ne düşünüyorsunuz?",
+  },
+  {
+    cumle: "Das klingt vielversprechend.",
+    turkce: "Bu umut verici görünüyor.",
+  },
+  {
+    cumle: "Das überzeugt mich nicht.",
+    turkce: "Bu beni ikna etmiyor.",
+  },
+  {
+    cumle: "Ich finde es wichtig, dass wir darüber sprechen.",
+    turkce: "Bunun hakkında konuşmamızın önemli olduğunu düşünüyorum.",
+  },
+  {
+    cumle: "Wir sollten alle Aspekte berücksichtigen.",
+    turkce: "Tüm yönleri göz önünde bulundurmalıyız.",
+  },
+  {
+    cumle: "Haben Sie noch weitere Fragen?",
+    turkce: "Başka sorularınız var mı?",
+  },
+
+  // B1 SEVİYESİ - SOSYAL İLİŞKİLER
+  {
+    cumle: "Es tut mir leid, aber ich habe keine Zeit.",
+    turkce: "Üzgünüm ama vaktim yok.",
+  },
+  {
+    cumle: "Ich bin momentan sehr beschäftigt.",
+    turkce: "Şu anda çok meşgulüm.",
+  },
+  {
+    cumle: "Vielleicht ein andermal.",
+    turkce: "Belki başka bir zaman.",
+  },
+  {
+    cumle: "Ich freue mich, Sie kennenzulernen.",
+    turkce: "Sizi tanıdığıma memnun oldum.",
+  },
+  {
+    cumle: "Es war ein schöner Abend mit Ihnen.",
+    turkce: "Sizinle güzel bir akşamdı.",
+  },
+  {
+    cumle: "Wir sollten öfter etwas zusammen unternehmen.",
+    turkce: "Daha sık birlikte bir şeyler yapmalıyız.",
+  },
+  {
+    cumle: "Ich werde mein Bestes tun.",
+    turkce: "Elimden geleni yapacağım.",
+  },
+  {
+    cumle: "Sie können sich auf mich verlassen.",
+    turkce: "Bana güvenebilirsiniz.",
+  },
+  {
+    cumle: "Ich stehe Ihnen gerne zur Verfügung.",
+    turkce: "Memnuniyetle hizmetinizdeyim.",
+  },
+  {
+    cumle: "Ich wünsche Ihnen viel Erfolg!",
+    turkce: "Size başarılar dilerim!",
+  },
+  {
+    cumle: "Gute Besserung!",
+    turkce: "Geçmiş olsun!",
+  },
+  {
+    cumle: "Herzlichen Glückwunsch zum Geburtstag!",
+    turkce: "Doğum günün kutlu olsun!",
+  },
+  {
+    cumle: "Frohe Weihnachten und ein gutes neues Jahr!",
+    turkce: "Mutlu Noeller ve mutlu yıllar!",
+  },
+
+  // B2 SEVİYESİ - DAHA KARMAŞIK İFADELER
+  {
+    cumle: "Es wäre mir lieb, wenn Sie das bis morgen erledigen könnten.",
+    turkce: "Bunu yarına kadar halledebilirseniz sevinirim.",
+  },
+  {
+    cumle: "Ich würde mich freuen, wenn Sie meine Einladung annehmen würden.",
+    turkce: "Davetimi kabul ederseniz sevinirim.",
+  },
+  {
+    cumle: "Obwohl ich mein Bestes gegeben habe, ist es mir nicht gelungen.",
+    turkce: "Elimden gelenin en iyisini yapmama rağmen, başaramadım.",
+  },
+  {
+    cumle: "Es ist wichtig, dass wir alle Möglichkeiten in Betracht ziehen.",
+    turkce: "Tüm olasılıkları göz önünde bulundurmamız önemli.",
+  },
+  {
+    cumle: "Ich hätte es anders gemacht, wenn ich gewusst hätte, dass...",
+    turkce: "Eğer bilseydim ki..., farklı yapardım.",
+  },
+  {
+    cumle: "Unter diesen Umständen sollten wir vorsichtig sein.",
+    turkce: "Bu koşullar altında dikkatli olmalıyız.",
+  },
+  {
+    cumle: "Im Großen und Ganzen bin ich mit dem Ergebnis zufrieden.",
+    turkce: "Genel olarak sonuçtan memnunum.",
+  },
+  {
+    cumle:
+      "Einerseits verstehe ich Ihren Standpunkt, andererseits muss ich widersprechen.",
+    turkce:
+      "Bir yandan bakış açınızı anlıyorum, diğer yandan karşı çıkmak zorundayım.",
+  },
+  {
+    cumle: "Soweit ich informiert bin, findet die Veranstaltung nicht statt.",
+    turkce: "Bildiğim kadarıyla, etkinlik gerçekleşmeyecek.",
+  },
+  {
+    cumle: "Es liegt auf der Hand, dass wir eine Lösung finden müssen.",
+    turkce: "Bir çözüm bulmamız gerektiği açıktır.",
+  },
+  {
+    cumle: "Guten Morgen!",
+    turkce: "Günaydın!",
+    level: "A1",
+    notes: "Sabah selamlaşması",
+  },
+  {
+    cumle: "Guten Tag!",
+    turkce: "İyi günler!",
+    level: "A1",
+    notes: "Gün içinde selamlaşma",
+  },
+  {
+    cumle: "Guten Abend!",
+    turkce: "İyi akşamlar!",
+    level: "A1",
+    notes: "Akşam selamlaşması",
+  },
+  {
+    cumle: "Gute Nacht!",
+    turkce: "İyi geceler!",
+    level: "A1",
+    notes: "Gece vedalaşması",
+  },
+  {
+    cumle: "Auf Wiedersehen!",
+    turkce: "Hoşça kal!",
+    level: "A1",
+    notes: "Resmi vedalaşma",
+  },
+  {
+    cumle: "Tschüss!",
+    turkce: "Hoşça kal! (Informal)",
+    level: "A1",
+    notes: "Samimi vedalaşma",
+  },
+  {
+    cumle: "Bis bald!",
+    turkce: "Yakında görüşürüz!",
+    level: "A1",
+    notes: "Samimi bir veda",
+  },
+  {
+    cumle: "Bis morgen!",
+    turkce: "Yarın görüşürüz!",
+    level: "A1",
+    notes: "Ertesi gün için veda",
+  },
+  {
+    cumle: "Bis später!",
+    turkce: "Sonra görüşürüz!",
+    level: "A1",
+    notes: "Kısa süreli ayrılık için",
+  },
+
+  // A1 SEVİYESİ - TANITMA VE TANIŞMA
+  {
+    cumle: "Wie heißt du?",
+    turkce: "Adın ne?",
+    level: "A1",
+    notes: "Samimi tanışma sorusu",
+  },
+  {
+    cumle: "Ich heiße...",
+    turkce: "Benim adım...",
+    level: "A1",
+    notes: "Kendini tanıtma",
+  },
+  {
+    cumle: "Wie ist dein Name?",
+    turkce: "İsmin nedir?",
+    level: "A1",
+    notes: "Alternatif tanışma sorusu",
+  },
+  {
+    cumle: "Mein Name ist...",
+    turkce: "Benim adım...",
+    level: "A1",
+    notes: "Resmi kendini tanıtma",
+  },
+  {
+    cumle: "Wie geht es dir?",
+    turkce: "Nasılsın?",
+    level: "A1",
+    notes: "Samimi hal hatır sorma",
+  },
+  {
+    cumle: "Mir geht es gut.",
+    turkce: "İyiyim.",
+    level: "A1",
+    notes: "Olumlu yanıt",
+  },
+  {
+    cumle: "Es geht mir nicht so gut.",
+    turkce: "Pek iyi değilim.",
+    level: "A1",
+    notes: "Olumsuz yanıt",
+  },
+  {
+    cumle: "Wie geht es Ihnen?",
+    turkce: "Nasılsınız? (Resmi)",
+    level: "A1",
+    notes: "Resmi hal hatır sorma",
+  },
+  {
+    cumle: "Mir geht es sehr gut, danke.",
+    turkce: "Çok iyiyim, teşekkürler.",
+    level: "A1",
+    notes: "Kibar olumlu yanıt",
+  },
+  {
+    cumle: "Woher kommst du?",
+    turkce: "Nerelisin?",
+    level: "A1",
+    notes: "Köken sorma",
+  },
+  {
+    cumle: "Ich komme aus der Türkei.",
+    turkce: "Türkiye'den geliyorum.",
+    level: "A1",
+    notes: "Köken belirtme",
+  },
+  {
+    cumle: "Wo wohnst du?",
+    turkce: "Nerede yaşıyorsun?",
+    level: "A1",
+    notes: "İkamet sorma",
+  },
+  {
+    cumle: "Ich wohne in Istanbul.",
+    turkce: "İstanbul'da yaşıyorum.",
+    level: "A1",
+    notes: "İkamet belirtme",
+  },
+  {
+    cumle: "Wie alt bist du?",
+    turkce: "Kaç yaşındasın?",
+    level: "A1",
+    notes: "Yaş sorma",
+  },
+  {
+    cumle: "Ich bin 25 Jahre alt.",
+    turkce: "25 yaşındayım.",
+    level: "A1",
+    notes: "Yaş belirtme",
+  },
+  {
+    cumle: "Was machst du beruflich?",
+    turkce: "Mesleğin ne?",
+    level: "A1",
+    notes: "Meslek sorma",
+  },
+  {
+    cumle: "Ich bin Student/Studentin.",
+    turkce: "Ben öğrenciyim.",
+    level: "A1",
+    notes: "Meslek belirtme",
+  },
+  {
+    cumle: "Ich bin Lehrer/Lehrerin.",
+    turkce: "Ben öğretmenim.",
+    level: "A1",
+    notes: "Meslek belirtme",
+  },
+  {
+    cumle: "Ich arbeite als Ingenieur.",
+    turkce: "Mühendis olarak çalışıyorum.",
+    level: "A1",
+    notes: "Meslek belirtme",
+  },
+  {
+    cumle: "Ich bin Arzt/Ärztin.",
+    turkce: "Ben doktorum.",
+    level: "A1",
+    notes: "Meslek belirtme",
+  },
+  {
+    cumle: "Ich bin arbeitslos.",
+    turkce: "İşsizim.",
+    level: "A1",
+    notes: "İş durumu belirtme",
+  },
+
+  // A1 SEVİYESİ - GÜNLÜK İFADELER
+  {
+    cumle: "Entschuldigung!",
+    turkce: "Özür dilerim!",
+    level: "A1",
+    notes: "Samimi özür",
+  },
+  {
+    cumle: "Entschuldigen Sie bitte!",
+    turkce: "Lütfen affedin! (Resmi)",
+    level: "A1",
+    notes: "Resmi özür",
+  },
+  {
+    cumle: "Danke schön!",
+    turkce: "Çok teşekkür ederim!",
+    level: "A1",
+    notes: "Kibar teşekkür",
+  },
+  {
+    cumle: "Vielen Dank!",
+    turkce: "Çok teşekkürler!",
+    level: "A1",
+    notes: "Kibar teşekkür",
+  },
+  {
+    cumle: "Danke sehr!",
+    turkce: "Çok teşekkürler!",
+    level: "A1",
+    notes: "Kibar teşekkür",
+  },
+  {
+    cumle: "Bitte schön!",
+    turkce: "Rica ederim!",
+    level: "A1",
+    notes: "Teşekküre yanıt",
+  },
+  {
+    cumle: "Gern geschehen!",
+    turkce: "Bir şey değil!",
+    level: "A1",
+    notes: "Teşekküre samimi yanıt",
+  },
+  {
+    cumle: "Ja.",
+    turkce: "Evet.",
+    level: "A1",
+    notes: "Olumlama",
+  },
+  {
+    cumle: "Nein.",
+    turkce: "Hayır.",
+    level: "A1",
+    notes: "Olumsuzlama",
+  },
+  {
+    cumle: "Vielleicht.",
+    turkce: "Belki.",
+    level: "A1",
+    notes: "Belirsizlik ifadesi",
+  },
+  {
+    cumle: "Natürlich.",
+    turkce: "Elbette.",
+    level: "A1",
+    notes: "Kesin onay",
+  },
+  {
+    cumle: "Ich verstehe nicht.",
+    turkce: "Anlamıyorum.",
+    level: "A1",
+    notes: "Anlamama ifadesi",
+  },
+  {
+    cumle: "Können Sie bitte langsamer sprechen?",
+    turkce: "Lütfen daha yavaş konuşabilir misiniz?",
+    level: "A1",
+    notes: "Kibar rica",
+  },
+  {
+    cumle: "Können Sie das bitte wiederholen?",
+    turkce: "Bunu tekrar edebilir misiniz lütfen?",
+    level: "A1",
+    notes: "Tekrar isteme",
+  },
+  {
+    cumle: "Wie bitte?",
+    turkce: "Efendim? / Ne dediniz?",
+    level: "A1",
+    notes: "Anlamadığında sorma",
+  },
+  {
+    cumle: "Ich verstehe das nicht.",
+    turkce: "Bunu anlamıyorum.",
+    level: "A1",
+    notes: "Anlamama ifadesi",
+  },
+  {
+    cumle: "Sprechen Sie Englisch?",
+    turkce: "İngilizce biliyor musunuz?",
+    level: "A1",
+    notes: "Dil becerisi sorma",
+  },
+  {
+    cumle: "Sprechen Sie Türkisch?",
+    turkce: "Türkçe biliyor musunuz?",
+    level: "A1",
+    notes: "Dil becerisi sorma",
+  },
+  {
+    cumle: "Ich spreche ein bisschen Deutsch.",
+    turkce: "Biraz Almanca konuşuyorum.",
+    level: "A1",
+    notes: "Dil seviyesi belirtme",
+  },
+  {
+    cumle: "Ich lerne Deutsch.",
+    turkce: "Almanca öğreniyorum.",
+    level: "A1",
+    notes: "Öğrenme süreci belirtme",
+  },
+
+  // A1 SEVİYESİ - GÜNLÜK HAYAT
+  {
+    cumle: "Wie viel kostet das?",
+    turkce: "Bu ne kadar?",
+    level: "A1",
+    notes: "Fiyat sorma",
+  },
+  {
+    cumle: "Das ist zu teuer.",
+    turkce: "Bu çok pahalı.",
+    level: "A1",
+    notes: "Fiyat değerlendirme",
+  },
+  {
+    cumle: "Haben Sie es billiger?",
+    turkce: "Daha ucuzu var mı?",
+    level: "A1",
+    notes: "Pazarlık ifadesi",
+  },
+  {
+    cumle: "Ich nehme das.",
+    turkce: "Bunu alıyorum.",
+    level: "A1",
+    notes: "Satın alma kararı",
+  },
+  {
+    cumle: "Ich möchte einen Kaffee, bitte.",
+    turkce: "Bir kahve istiyorum, lütfen.",
+    level: "A1",
+    notes: "Sipariş verme",
+  },
+  {
+    cumle: "Ich hätte gerne ein Glas Wasser.",
+    turkce: "Bir bardak su istiyorum.",
+    level: "A1",
+    notes: "Kibar sipariş",
+  },
+  {
+    cumle: "Die Rechnung, bitte.",
+    turkce: "Hesap, lütfen.",
+    level: "A1",
+    notes: "Hesap isteme",
+  },
+  {
+    cumle: "Haben Sie ein Zimmer frei?",
+    turkce: "Boş odanız var mı?",
+    level: "A1",
+    notes: "Otel sorgusu",
+  },
+  {
+    cumle: "Wo ist die Toilette?",
+    turkce: "Tuvalet nerede?",
+    level: "A1",
+    notes: "Yer sorma",
+  },
+  {
+    cumle: "Wo ist der Ausgang?",
+    turkce: "Çıkış nerede?",
+    level: "A1",
+    notes: "Yer sorma",
+  },
+  {
+    cumle: "Wie spät ist es?",
+    turkce: "Saat kaç?",
+    level: "A1",
+    notes: "Saat sorma",
+  },
+  {
+    cumle: "Es ist 10 Uhr.",
+    turkce: "Saat 10.",
+    level: "A1",
+    notes: "Saat belirtme",
+  },
+  {
+    cumle: "Es ist halb acht.",
+    turkce: "Saat yedi buçuk.",
+    level: "A1",
+    notes: "Saat belirtme",
+  },
+  {
+    cumle: "Ich habe Hunger.",
+    turkce: "Açım.",
+    level: "A1",
+    notes: "İhtiyaç ifadesi",
+  },
+  {
+    cumle: "Ich habe Durst.",
+    turkce: "Susadım.",
+    level: "A1",
+    notes: "İhtiyaç ifadesi",
+  },
+  {
+    cumle: "Ich bin müde.",
+    turkce: "Yorgunum.",
+    level: "A1",
+    notes: "Durum ifadesi",
+  },
+  {
+    cumle: "Ich bin krank.",
+    turkce: "Hastayım.",
+    level: "A1",
+    notes: "Sağlık durumu ifadesi",
+  },
+  {
+    cumle: "Wo ist der Bahnhof?",
+    turkce: "Tren istasyonu nerede?",
+    level: "A1",
+    notes: "Yer sorma",
+  },
+  {
+    cumle: "Wo ist die nächste Bushaltestelle?",
+    turkce: "En yakın otobüs durağı nerede?",
+    level: "A1",
+    notes: "Yer sorma",
+  },
+  {
+    cumle: "Wie komme ich zum Hotel?",
+    turkce: "Otele nasıl giderim?",
+    level: "A1",
+    notes: "Yol tarifi sorma",
+  },
+
+  // A2 SEVİYESİ - GÜNLÜK İLETİŞİM
+  {
+    cumle: "Ich hätte gerne eine Tasse Tee.",
+    turkce: "Bir fincan çay istiyorum.",
     level: "A2",
-    notes:
-      "Partizip II: komponiert - 'komponieren' fiilinin Partizip 2 hali, '-ieren' ile bittiği için 'ge-' öneki almaz",
+    notes: "Kibar sipariş",
   },
   {
-    cumle: "Ich habe den Termin abgesagt.",
-    turkce: "Randevuyu iptal ettim.",
+    cumle: "Können Sie mir helfen?",
+    turkce: "Bana yardım edebilir misiniz?",
     level: "A2",
-    notes:
-      "Partizip II: abgesagt - absagen fiilinin Partizip 2 hali, ayrılabilir fiil",
+    notes: "Yardım isteme",
   },
   {
-    cumle: "Ich habe gestern schwimmen können.",
-    turkce: "Dün yüzebildim.",
+    cumle: "Ich brauche Hilfe.",
+    turkce: "Yardıma ihtiyacım var.",
+    level: "A2",
+    notes: "Yardım talebi",
+  },
+  {
+    cumle: "Ich suche den Bahnhof.",
+    turkce: "Tren istasyonunu arıyorum.",
+    level: "A2",
+    notes: "Yer arama",
+  },
+  {
+    cumle: "Ich habe mich verlaufen.",
+    turkce: "Kayboldum.",
+    level: "A2",
+    notes: "Durum ifadesi",
+  },
+  {
+    cumle: "Wie komme ich zum Museum?",
+    turkce: "Müzeye nasıl giderim?",
+    level: "A2",
+    notes: "Yol tarifi sorma",
+  },
+  {
+    cumle: "Ist es weit von hier?",
+    turkce:
+      "Burise yakın bir mesafede bulunuyor. Mesafeyi yürüyerek 30 dakikada katedebilirsiniz.",
+
+    level: "A2",
+    notes: "Mesafe sorma",
+  },
+  {
+    cumle: "Gehen Sie geradeaus und dann links.",
+    turkce: "Düz gidin ve sonra sola dönün.",
+    level: "A2",
+    notes: "Yol tarifi verme",
+  },
+  {
+    cumle: "Es ist ungefähr 10 Minuten zu Fuß.",
+    turkce: "Yaklaşık 10 dakikalık yürüme mesafesinde.",
+    level: "A2",
+    notes: "Mesafe belirtme",
+  },
+  {
+    cumle: "Ich möchte eine Fahrkarte kaufen.",
+    turkce: "Bir bilet satın almak istiyorum.",
+    level: "A2",
+    notes: "Bilet alma",
+  },
+  {
+    cumle: "Einfach oder hin und zurück?",
+    turkce: "Tek yön mü gidiş-dönüş mü?",
+    level: "A2",
+    notes: "Bilet türü sorma",
+  },
+  {
+    cumle: "Wann fährt der nächste Zug nach Berlin?",
+    turkce: "Berlin'e bir sonraki tren ne zaman kalkıyor?",
+    level: "A2",
+    notes: "Tren saati sorma",
+  },
+  {
+    cumle: "Von welchem Gleis fährt der Zug ab?",
+    turkce: "Tren hangi perondan kalkıyor?",
+    level: "A2",
+    notes: "Peron sorma",
+  },
+  {
+    cumle: "Ist dieser Platz frei?",
+    turkce: "Bu yer boş mu?",
+    level: "A2",
+    notes: "Yer sorma",
+  },
+  {
+    cumle: "Darf ich hier sitzen?",
+    turkce: "Buraya oturabilir miyim?",
+    level: "A2",
+    notes: "İzin isteme",
+  },
+
+  // A2 SEVİYESİ - HOBİLER VE BOŞ ZAMAN
+  {
+    cumle: "Was machen Sie in Ihrer Freizeit?",
+    turkce: "Boş zamanlarınızda ne yaparsınız?",
+    level: "A2",
+    notes: "Hobi sorma",
+  },
+  {
+    cumle: "Ich lese gerne Bücher.",
+    turkce: "Kitap okumayı severim.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich spiele Fußball.",
+    turkce: "Futbol oynarım.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich gehe oft ins Kino.",
+    turkce: "Sık sık sinemaya giderim.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich höre gerne Musik.",
+    turkce: "Müzik dinlemeyi severim.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich koche gerne.",
+    turkce: "Yemek yapmayı severim.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich reise gerne.",
+    turkce: "Seyahat etmeyi severim.",
+    level: "A2",
+    notes: "Hobi belirt nyelir",
+  },
+  {
+    cumle: "Ich treibe Sport.",
+    turkce: "Spor yaparım.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich spiele Gitarre.",
+    turkce: "Gitar çalarım.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Ich tanze gerne.",
+    turkce: "Dans etmeyi severim.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Haben Sie Geschwister?",
+    turkce: "Kardeşleriniz var mı?",
+    level: "A2",
+    notes: "Aile sorma",
+  },
+  {
+    cumle: "Ich habe einen Bruder und eine Schwester.",
+    turkce: "Bir erkek kardeşim ve bir kız kardeşim var.",
+    level: "A2",
+    notes: "Aile belirtme",
+  },
+  {
+    cumle: "Ich habe keine Geschwister.",
+    turkce: "Kardeşim yok.",
+    level: "A2",
+    notes: "Aile belirtme",
+  },
+  {
+    cumle: "Ich bin Einzelkind.",
+    turkce: "Ben tek çocuğum.",
+    level: "A2",
+    notes: "Aile belirtme",
+  },
+  {
+    cumle: "Was sind deine Hobbys?",
+    turkce: "Hobilerin neler?",
+    level: "A2",
+    notes: "Hobi sorma",
+  },
+  {
+    cumle: "Ich mag Musik hören.",
+    turkce: "Müzik dinlemeyi seviyorum.",
+    level: "A2",
+    notes: "Hobi belirtme",
+  },
+  {
+    cumle: "Welche Musik hörst du gerne?",
+    turkce: "Ne tür müzik dinlemeyi seversin?",
+    level: "A2",
+    notes: "Müzik türü sorma",
+  },
+  {
+    cumle: "Ich höre gerne Rock und Pop.",
+    turkce: "Rock ve pop dinlemeyi severim.",
+    level: "A2",
+    notes: "Müzik türü belirtme",
+  },
+  {
+    cumle: "Welche Filme magst du?",
+    turkce: "Hangi filmleri seversin?",
+    level: "A2",
+    notes: "Film türü sorma",
+  },
+  {
+    cumle: "Ich mag Komödien und Actionfilme.",
+    turkce: "Komedileri ve aksiyon filmlerini severim.",
+    level: "A2",
+    notes: "Film türü belirtme",
+  },
+
+  // A2 SEVİYESİ - DİL VE ZAMAN İFADELERİ
+  {
+    cumle: "Welche Sprachen sprichst du?",
+    turkce: "Hangi dilleri konuşuyorsun?",
+    level: "A2",
+    notes: "Dil becerisi sorma",
+  },
+  {
+    cumle: "Ich spreche Deutsch und Englisch.",
+    turkce: "Almanca ve İngilizce konuşuyorum.",
+    level: "A2",
+    notes: "Dil becerisi belirtme",
+  },
+  {
+    cumle: "Ich lerne seit einem Jahr Deutsch.",
+    turkce: "Bir yıldır Almanca öğreniyorum.",
+    level: "A2",
+    notes: "Öğrenme süresi belirtme",
+  },
+  {
+    cumle: "Deutsch ist eine schwere Sprache.",
+    turkce: "Almanca zor bir dil.",
+    level: "A2",
+    notes: "Dil değerlendirme",
+  },
+  {
+    cumle: "Ich möchte mein Deutsch verbessern.",
+    turkce: "Almancamı geliştirmek istiyorum.",
+    level: "A2",
+    notes: "Hedef belirtme",
+  },
+  {
+    cumle: "Was hast du am Wochenende gemacht?",
+    turkce: "Hafta sonu ne yaptın?",
+    level: "A2",
+    notes: "Geçmiş etkinlik sorma",
+  },
+  {
+    cumle: "Ich war zu Hause und habe ferngesehen.",
+    turkce: "Evdeydim ve televizyon izledim.",
+    level: "A2",
+    notes: "Geçmiş etkinlik belirtme",
+  },
+  {
+    cumle: "Ich war im Kino.",
+    turkce: "Sinemadaydım.",
+    level: "A2",
+    notes: "Geçmiş etkinlik belirtme",
+  },
+  {
+    cumle: "Ich habe Freunde getroffen.",
+    turkce: "Arkadaşlarımla buluştum.",
+    level: "A2",
+    notes: "Geçmiş etkinlik belirtme",
+  },
+  {
+    cumle: "Ich hatte keine Zeit.",
+    turkce: "Vaktim yoktu.",
+    level: "A2",
+    notes: "Geçmiş durum belirtme",
+  },
+  {
+    cumle: "Ich war sehr beschäftigt.",
+    turkce: "Çok meşguldüm.",
+    level: "A2",
+    notes: "Geçmiş durum belirtme",
+  },
+  {
+    cumle: "Hast du morgen Zeit?",
+    turkce: "Yarın vaktin var mı?",
+    level: "A2",
+    notes: "Plan sorma",
+  },
+  {
+    cumle: "Leider habe ich keine Zeit.",
+    turkce: "Maalesef vaktim yok.",
+    level: "A2",
+    notes: "Olumsuz yanıt",
+  },
+  {
+    cumle: "Ja, ich habe Zeit.",
+    turkce: "Evet, vaktim var.",
+    level: "A2",
+    notes: "Olumlu yanıt",
+  },
+  {
+    cumle: "Wir könnten ins Restaurant gehen.",
+    turkce: "Restorana gidebiliriz.",
+    level: "A2",
+    notes: "Plan önerisi",
+  },
+  {
+    cumle: "Das klingt gut.",
+    turkce: "Bu kulağa hoş geliyor.",
+    level: "A2",
+    notes: "Olumlu tepki",
+  },
+  {
+    cumle: "Das Wetter ist heute schön.",
+    turkce: "Bugün hava güzel.",
+    level: "A2",
+    notes: "Hava durumu belirtme",
+  },
+  {
+    cumle: "Es regnet stark.",
+    turkce: "Şiddetli yağmur yağıyor.",
+    level: "A2",
+    notes: "Hava durumu belirtme",
+  },
+  {
+    cumle: "Es ist heute sehr heiß.",
+    turkce: "Bugün çok sıcak.",
+    level: "A2",
+    notes: "Hava durumu belirtme",
+  },
+  {
+    cumle: "Es ist kalt.",
+    turkce: "Hava soğuk.",
+    level: "A2",
+    notes: "Hava durumu belirtme",
+  },
+  {
+    cumle: "Es schneit.",
+    turkce: "Kar yağıyor.",
+    level: "A2",
+    notes: "Hava durumu belirtme",
+  },
+  {
+    cumle: "Ich muss jetzt gehen.",
+    turkce: "Şimdi gitmem gerek.",
+    level: "A2",
+    notes: "Zorunluluk ifadesi",
+  },
+  {
+    cumle: "Ich rufe dich später an.",
+    turkce: "Seni daha sonra arayacağım.",
+    level: "A2",
+    notes: "Gelecek plan belirtme",
+  },
+  {
+    cumle: "Wir sehen uns morgen.",
+    turkce: "Yarın görüşürüz.",
+    level: "A2",
+    notes: "Veda ifadesi",
+  },
+  {
+    cumle: "Ich bin spät dran.",
+    turkce: "Geç kaldım.",
+    level: "A2",
+    notes: "Durum ifadesi",
+  },
+  {
+    cumle: "Ich habe es eilig.",
+    turkce: "Acelem var.",
+    level: "A2",
+    notes: "Acil durum ifadesi",
+  },
+
+  // B1 SEVİYESİ - İLETİŞİM VE GÜNLÜK HAYAT
+  {
+    cumle: "Könnten Sie mir bitte erklären, wie das funktioniert?",
+    turkce: "Bunun nasıl çalıştığını bana açıklayabilir misiniz?",
     level: "B1",
-    notes:
-      "Partizip II: können - Modal fiil können ile kullanımı, Perfekt zamanda infinitif formda kalır",
+    notes: "Kibar açıklama isteme",
   },
   {
-    cumle: "Sie hat ihren Urlaub in Italien verbracht.",
-    turkce: "O (kadın) tatilini İtalya'da geçirdi.",
+    cumle: "Können Sie mir das genauer erläutern?",
+    turkce: "Bunu bana daha detaylı açıklayabilir misiniz?",
     level: "B1",
-    notes:
-      "Partizip II: verbracht - verbringen fiilinin Partizip 2 hali, ayrılamaz fiil",
+    notes: "Detaylı bilgi isteme",
   },
   {
-    cumle: "Wir haben uns über das bestandene Examen gefreut.",
-    turkce: "Geçilen sınavdan dolayı sevindik.",
+    cumle: "Ich verstehe den Zusammenhang nicht ganz.",
+    turkce: "Bağlantıyı tam olarak anlamıyorum.",
     level: "B1",
-    notes:
-      "Partizip II: bestandene - bestehen fiilinin Partizip 2 hali sıfat olarak: bestandene",
+    notes: "Anlama güçlüğü ifadesi",
   },
   {
-    cumle: "Die von mir gekochte Suppe schmeckt gut.",
-    turkce: "Benim pişirdiğim çorba lezzetli.",
+    cumle: "Können Sie ein Beispiel geben?",
+    turkce: "Bir örnek verebilir misiniz?",
     level: "B1",
-    notes:
-      "Partizip II: gekochte - kochen fiilinin Partizip 2 hali sıfat olarak: gekochte",
+    notes: "Örnek isteme",
   },
   {
-    cumle: "Er hat mir zu helfen versprochen.",
-    turkce: "O (erkek) bana yardım etmeyi söz verdi.",
+    cumle: "Ich würde gerne einen Termin vereinbaren.",
+    turkce: "Bir randevu almak istiyorum.",
     level: "B1",
-    notes:
-      "Partizip II: versprochen - versprechen fiilinin Partizip 2 hali, ayrılamaz fiil ve zu infinitif yapısıyla kullanımı",
+    notes: "Randevu talebi",
   },
   {
-    cumle: "Der gestrige Regen hat die Straßen überschwemmt.",
-    turkce: "Dünkü yağmur sokakları sel altında bıraktı.",
+    cumle: "Wann passt es Ihnen am besten?",
+    turkce: "Size en uygun zaman ne zaman?",
     level: "B1",
-    notes:
-      "Partizip II: überschwemmt - überschwemmen fiilinin Partizip 2 hali, ayrılamaz fiil",
+    notes: "Zaman uygunluğu sorma",
   },
   {
-    cumle: "Die gestellte Frage war schwer zu beantworten.",
-    turkce: "Sorulan soru yanıtlaması zordu.",
+    cumle: "Ich bin an diesem Tag leider verhindert.",
+    turkce: "O gün maalesef meşgulüm.",
     level: "B1",
-    notes:
-      "Partizip II: gestellte - stellen fiilinin Partizip 2 hali sıfat olarak: gestellte",
+    notes: "Meşguliyet ifadesi",
   },
   {
-    cumle: "Er hat den ganzen Film gedreht.",
-    turkce: "O (erkek) tüm filmi çekti.",
+    cumle: "Können wir den Termin verschieben?",
+    turkce: "Randevuyu erteleyebilir miyiz?",
     level: "B1",
-    notes: "Partizip II: gedreht - drehen fiilinin Partizip 2 hali: gedreht",
+    notes: "Randevu erteleme talebi",
   },
   {
-    cumle: "Sie hat mir den Weg gezeigt.",
-    turkce: "O (kadın) bana yolu gösterdi.",
+    cumle: "Ich habe meine Brieftasche verloren.",
+    turkce: "Cüzdanımı kaybettim.",
     level: "B1",
-    notes: "Partizip II: gezeigt - zeigen fiilinin Partizip 2 hali: gezeigt",
+    notes: "Kayıp eşya belirtme",
   },
   {
-    cumle: "Der beschädigte Computer funktioniert nicht mehr.",
-    turkce: "Hasarlı bilgisayar artık çalışmıyor.",
+    cumle: "Haben Sie mein Handy gesehen?",
+    turkce: "Telefonumu gördünüz mü?",
     level: "B1",
-    notes:
-      "Partizip II: beschädigte - beschädigen fiilinin Partizip 2 hali sıfat olarak: beschädigte",
+    notes: "Eşya sorma",
   },
   {
-    cumle: "Wir haben die Nachricht übermittelt.",
-    turkce: "Haberi ilettik.",
+    cumle: "Ich habe meinen Schlüssel vergessen.",
+    turkce: "Anahtarımı unuttum.",
     level: "B1",
-    notes:
-      "Partizip II: übermittelt - übermitteln fiilinin Partizip 2 hali, ayrılamaz fiil",
+    notes: "Unutma ifadesi",
   },
   {
-    cumle: "Die Tür ist geschlossen worden.",
-    turkce: "Kapı kapatılmış.",
-    level: "B2",
-    notes:
-      "Partizip II: geschlossen - Vorgangspassiv, Perfekt: ist + Partizip 2 + worden",
+    cumle: "Können Sie mir den Weg zur Post beschreiben?",
+    turkce: "Bana postaneye giden yolu tarif edebilir misiniz?",
+    level: "B1",
+    notes: "Yol tarifi isteme",
   },
   {
-    cumle: "In München angekommen, suchte er ein Hotel.",
-    turkce: "Münih'e vardığında, bir otel aradı.",
-    level: "B2",
-    notes:
-      "Partizip II: angekommen - Partizipialsatz, yan cümle yerine kısaltılmış cümle yapısı",
+    cumle: "Wie lange dauert es zu Fuß?",
+    turkce: "Yürüyerek ne kadar sürer?",
+    level: "B1",
+    notes: "Süre sorma",
   },
   {
-    cumle: "Der Dieb ist von der Polizei verhaftet worden.",
-    turkce: "Hırsız polis tarafından tutuklandı.",
-    level: "B2",
-    notes:
-      "Partizip II: verhaftet - Vorgangspassiv, von + Dativ ile fail belirtimi",
+    cumle: "Gibt es hier in der Nähe eine Bank?",
+    turkce: "Buralarda bir banka var mı?",
+    level: "B1",
+    notes: "Yer sorma",
   },
   {
-    cumle: "Die im Kühlschrank aufbewahrten Lebensmittel sind frisch.",
-    turkce: "Buzdolabında saklanan yiyecekler taze.",
-    level: "B2",
-    notes:
-      "Partizip II: aufbewahrten - aufbewahren fiilinin genişletilmiş Partizip 2 sıfat yapısı",
+    cumle: "Wo ist der nächste Supermarkt?",
+    turkce: "En yakın süpermarket nerede?",
+    level: "B1",
+    notes: "Yer sorma",
+  },
+
+  // B1 SEVİYESİ - EV VE GÜNLÜK YAŞAM
+  {
+    cumle: "Ich suche eine Wohnung zu mieten.",
+    turkce: "Kiralamak için bir daire arıyorum.",
+    level: "B1",
+    notes: "Kiralık ev arama",
   },
   {
-    cumle: "Das gestohlene Auto wurde gefunden.",
-    turkce: "Çalınan araba bulundu.",
-    level: "B2",
-    notes:
-      "Partizip II: gestohlene - stehlen fiilinin Partizip 2 sıfat hali: gestohlene + Vorgangspassiv",
+    cumle: "Wie hoch ist die monatliche Miete?",
+    turkce: "Aylık kira ne kadar?",
+    level: "B1",
+    notes: "Kira sorma",
   },
   {
-    cumle: "Das Problem konnte gelöst werden.",
-    turkce: "Problem çözülebildi.",
-    level: "B2",
-    notes: "Partizip II: gelöst - Vorgangspassiv ile modal fiil kombinasyonu",
+    cumle: "Sind die Nebenkosten im Preis enthalten?",
+    turkce: "Yan giderler fiyata dahil mi?",
+    level: "B1",
+    notes: "Ek masraf sorma",
   },
   {
-    cumle: "Die vom Chef getroffene Entscheidung war richtig.",
-    turkce: "Şef tarafından alınan karar doğruydu.",
-    level: "B2",
-    notes:
-      "Partizip II: getroffene - treffen fiilinin Partizip 2 sıfat hali: getroffene",
+    cumle: "Gibt es einen Aufzug im Gebäude?",
+    turkce: "Binada asansör var mı?",
+    level: "B1",
+    notes: "Bina özelliği sorma",
   },
   {
-    cumle: "Das ist eine weitverbreitete Meinung.",
-    turkce: "Bu, yaygın bir görüştür.",
-    level: "B2",
-    notes:
-      "Partizip II: verbreitete - verbreiten fiilinin Partizip 2 sıfat hali: verbreitete, weit- ile birleşimi",
+    cumle: "Wie groß ist die Wohnung?",
+    turkce: "Daire ne kadar büyük?",
+    level: "B1",
+    notes: "Daire boyutu sorma",
   },
   {
-    cumle: "In der Stadt angekommen, regnete es stark.",
-    turkce: "Şehre vardığımızda, şiddetli yağmur yağıyordu.",
-    level: "B2",
-    notes:
-      "Partizip II: angekommen - Partizipialsatz, zaman ilişkisi belirten kısaltılmış cümle",
+    cumle: "Die Heizung funktioniert nicht.",
+    turkce: "Kalorifer çalışmıyor.",
+    level: "B1",
+    notes: "Arıza bildirme",
   },
   {
-    cumle: "Die neu eingerichtete Wohnung gefällt mir.",
-    turkce: "Yeni döşenmiş daire hoşuma gidiyor.",
-    level: "B2",
-    notes:
-      "Partizip II: eingerichtete - einrichten fiilinin Partizip 2 sıfat hali: eingerichtete",
+    cumle: "Der Wasserhahn tropft.",
+    turkce: "Musluk damlıyor.",
+    level: "B1",
+    notes: "Arıza bildirme",
   },
   {
-    cumle: "Der lang erwartete Brief ist endlich gekommen.",
-    turkce: "Uzun zamandır beklenen mektup sonunda geldi.",
-    level: "B2",
-    notes:
-      "Partizip II: erwartete - erwarten fiilinin Partizip 2 sıfat hali: erwartete",
+    cumle: "Ich muss die Waschmaschine reparieren lassen.",
+    turkce: "Çamaşır makinesini tamir ettirmem gerekiyor.",
+    level: "B1",
+    notes: "Tamir talebi",
   },
   {
-    cumle: "Das Konzert musste verschoben werden.",
-    turkce: "Konser ertelenmek zorunda kaldı.",
-    level: "B2",
-    notes: "Partizip II: verschoben - Vorgangspassiv ile müssen modal fiili",
+    cumle: "Können Sie es bitte reparieren?",
+    turkce: "Lütfen tamir edebilir misiniz?",
+    level: "B1",
+    notes: "Kibar tamir talebi",
   },
   {
-    cumle: "Die Arbeit ist getan worden.",
-    turkce: "İş yapılmış.",
-    level: "B2",
-    notes:
-      "Partizip II: getan - Vorgangspassiv, Perfekt: ist + Partizip 2 + worden",
+    cumle: "Wann kann der Techniker kommen?",
+    turkce: "Teknisyen ne zaman gelebilir?",
+    level: "B1",
+    notes: "Zaman sorma",
+  },
+
+  // B1 SEVİYESİ - FİKİR VE TAVSİYE
+  {
+    cumle: "Was würden Sie an meiner Stelle tun?",
+    turkce: "Benim yerimde olsaydınız ne yapardınız?",
+    level: "B1",
+    notes: "Tavsiye isteme",
   },
   {
-    cumle: "Das gut versteckte Geschenk wurde nicht gefunden.",
-    turkce: "İyi saklanmış hediye bulunmadı.",
-    level: "B2",
-    notes:
-      "Partizip II: versteckte - verstecken fiilinin Partizip 2 sıfat hali: versteckte + Vorgangspassiv",
+    cumle: "Ich bin mir nicht sicher, was ich tun soll.",
+    turkce: "Ne yapacağımdan emin değilim.",
+    level: "B1",
+    notes: "Kararsızlık ifadesi",
   },
   {
-    cumle: "Die Tür wird geöffnet sein.",
-    turkce: "Kapı açılmış olacak.",
+    cumle: "Haben Sie einen Vorschlag?",
+    turkce: "Bir öneriniz var mı?",
+    level: "B1",
+    notes: "Öneri isteme",
+  },
+  {
+    cumle: "Das ist eine gute Idee.",
+    turkce: "Bu iyi bir fikir.",
+    level: "B1",
+    notes: "Olumlu tepki",
+  },
+  {
+    cumle: "Ich bin nicht davon überzeugt.",
+    turkce: "Buna ikna olmadım.",
+    level: "B1",
+    notes: "İkna olmama ifadesi",
+  },
+  {
+    cumle: "Ich freue mich auf unser Treffen.",
+    turkce: "Görüşmemizi dört gözle bekliyorum.",
+    level: "B1",
+    notes: "Heyecan ifadesi",
+  },
+  {
+    cumle: "Ich bin gespannt auf Ihren Vortrag.",
+    turkce: "Sunumunuzu merakla bekliyorum.",
+    level: "B1",
+    notes: "Merak ifadesi",
+  },
+  {
+    cumle: "Es tut mir leid, dass ich zu spät gekommen bin.",
+    turkce: "Geç kaldığım için özür dilerim.",
+    level: "B1",
+    notes: "Özür ifadesi",
+  },
+  {
+    cumle: "Ich entschuldige mich für die Unannehmlichkeiten.",
+    turkce: "Rahatsızlık için özür dilerim.",
+    level: "B1",
+    notes: "Resmi özür",
+  },
+  {
+    cumle: "Ich bin mit dem Ergebnis nicht zufrieden.",
+    turkce: "Sonuçtan memnun değilim.",
+    level: "B1",
+    notes: "Memnuniyetsizlik ifadesi",
+  },
+  {
+    cumle: "Das hat meine Erwartungen nicht erfüllt.",
+    turkce: "Bu beklentilerimi karşılamadı.",
+    level: "B1",
+    notes: "Hayal kırıklığı ifadesi",
+  },
+  {
+    cumle: "Wir sollten das Problem so schnell wie möglich lösen.",
+    turkce: "Bu sorunu mümkün olduğunca çabuk çözmeliyiz.",
+    level: "B1",
+    notes: "Acil çözüm önerisi",
+  },
+  {
+    cumle: "Wir müssen eine Lösung finden.",
+    turkce: "Bir çözüm bulmamız gerekiyor.",
+    level: "B1",
+    notes: "Çözüm gerekliliği",
+  },
+
+  // B1 SEVİYESİ - GELECEK PLANLARI VE GEÇMİŞ DENEYİMLER
+  {
+    cumle: "Ich habe vor, nächstes Jahr nach Deutschland zu reisen.",
+    turkce: "Gelecek yıl Almanya'ya seyahat etmeyi planlıyorum.",
+    level: "B1",
+    notes: "Gelecek plan belirtme",
+  },
+  {
+    cumle: "Was sind deine Pläne für die Zukunft?",
+    turkce: "Gelecek için planların neler?",
+    level: "B1",
+    notes: "Plan sorma",
+  },
+  {
+    cumle: "Ich möchte im Ausland studieren.",
+    turkce: "Yurtdışında okumak istiyorum.",
+    level: "B1",
+    notes: "Hedef belirtme",
+  },
+  {
+    cumle: "Ich will meine Deutschkenntnisse verbessern.",
+    turkce: "Almanca bilgimi geliştirmek istiyorum.",
+    level: "B1",
+    notes: "Hedef belirtme",
+  },
+  {
+    cumle: "Haben Sie schon einmal in der Türkei Urlaub gemacht?",
+    turkce: "Hiç Türkiye'de tatil yaptınız mı?",
+    level: "B1",
+    notes: "Geçmiş deneyim sorma",
+  },
+  {
+    cumle: "Ich war noch nie in Deutschland.",
+    turkce: "Hiç Almanya'da bulunmadım.",
+    level: "B1",
+    notes: "Geçmiş deneyim belirtme",
+  },
+  {
+    cumle: "Das war meine beste Reise.",
+    turkce: "Bu benim en iyi seyahatimdi.",
+    level: "B1",
+    notes: "Geçmiş deneyim değerlendirme",
+  },
+  {
+    cumle: "Ich habe viele interessante Menschen kennengelernt.",
+    turkce: "Birçok ilginç insanla tanıştım.",
+    level: "B1",
+    notes: "Geçmiş deneyim belirtme",
+  },
+
+  // B1 SEVİYESİ - KOŞULLU CÜMLELER VE FİKİR BELİRTME
+  {
+    cumle: "Wenn ich Zeit hätte, würde ich mehr Sport treiben.",
+    turkce: "Vaktim olsa, daha fazla spor yapardım.",
+    level: "B1",
+    notes: "Koşullu cümle (Konjunktiv II)",
+  },
+  {
+    cumle: "Wenn das Wetter schön ist, gehen wir spazieren.",
+    turkce: "Hava güzelse, yürüyüşe çıkarız.",
+    level: "B1",
+    notes: "Koşullu cümle",
+  },
+  {
+    cumle: "Falls ich nicht rechtzeitig komme, fang ohne mich an.",
+    turkce: "Eğer zamanında gelemezsem, bensiz başla.",
+    level: "B1",
+    notes: "Koşullu cümle",
+  },
+  {
+    cumle: "Ich bin seit drei Jahren verheiratet.",
+    turkce: "Üç yıldır evliyim.",
+    level: "B1",
+    notes: "Süre belirtme",
+  },
+  {
+    cumle: "Ich wohne seit 2019 in dieser Stadt.",
+    turkce: "2019'dan beri bu şehirde yaşıyorum.",
+    level: "B1",
+    notes: "Süre belirtme",
+  },
+  {
+    cumle: "Wie lange kennst du ihn schon?",
+    turkce: "Onu ne zamandır tanıyorsun?",
+    level: "B1",
+    notes: "Süre sorma",
+  },
+  {
+    cumle: "Was sind die Vor- und Nachteile dieser Methode?",
+    turkce: "Bu yöntemin avantajları ve dezavantajları nelerdir?",
+    level: "B1",
+    notes: "Değerlendirme sorma",
+  },
+  {
+    cumle: "Einerseits ist es praktisch, andererseits ist es teuer.",
+    turkce: "Bir yandan pratik, diğer yandan pahalı.",
+    level: "B1",
+    notes: "Karşılaştırma ifadesi",
+  },
+  {
+    cumle: "Ich bin der Meinung, dass...",
+    turkce: "Bence...",
+    level: "B1",
+    notes: "Fikir belirtme",
+  },
+  {
+    cumle: "Meiner Ansicht nach ist das keine gute Idee.",
+    turkce: "Bana göre bu iyi bir fikir değil.",
+    level: "B1",
+    notes: "Fikir belirtme",
+  },
+  {
+    cumle: "Ich denke, wir sollten zuerst recherchieren.",
+    turkce: "Bence önce araştırma yapmalıyız.",
+    level: "B1",
+    notes: "Öneri sunma",
+  },
+
+  // B1 SEVİYESİ - GÜNLÜK KONUŞMA İFADELERİ
+  {
+    cumle: "Es wäre besser, wenn wir früher anfangen würden.",
+    turkce: "Daha erken başlasak daha iyi olurdu.",
+    level: "B1",
+    notes: "Koşullu öneri",
+  },
+  {
+    cumle: "Könnten Sie das bitte wiederholen?",
+    turkce: "Bunu tekrar edebilir misiniz lütfen?",
+    level: "B1",
+    notes: "Tekrar isteme",
+  },
+  {
+    cumle: "Ich habe nicht verstanden, was Sie meinen.",
+    turkce: "Ne demek istediğinizi anlamadım.",
+    level: "B1",
+    notes: "Anlamama ifadesi",
+  },
+  {
+    cumle: "Könnten Sie das anders formulieren?",
+    turkce: "Bunu başka türlü ifade edebilir misiniz?",
+    level: "B1",
+    notes: "Yeniden ifade isteme",
+  },
+  {
+    cumle: "Ich habe das Gefühl, dass etwas nicht stimmt.",
+    turkce: "Bir şeylerin yanlış olduğu hissine kapılıyorum.",
+    level: "B1",
+    notes: "Sezgi ifadesi",
+  },
+  {
+    cumle: "Ich bin mir nicht sicher, ob das funktionieren wird.",
+    turkce: "Bunun işe yarayacağından emin değilim.",
+    level: "B1",
+    notes: "Belirsizlik ifadesi",
+  },
+  {
+    cumle: "Wir müssen uns beeilen, sonst verpassen wir den Zug.",
+    turkce: "Acele etmeliyiz, yoksa treni kaçıracağız.",
+    level: "B1",
+    notes: "Acil durum uyarısı",
+  },
+  {
+    cumle: "Beeil dich, wir sind spät dran!",
+    turkce: "Acele et, geç kaldık!",
+    level: "B1",
+    notes: "Acil durum çağrısı",
+  },
+  {
+    cumle: "Ich bin mit deinem Vorschlag einverstanden.",
+    turkce: "Önerinize katılıyorum.",
+    level: "B1",
+    notes: "Onay ifadesi",
+  },
+  {
+    cumle: "Ich stimme dir voll und ganz zu.",
+    turkce: "Sana tamamen katılıyorum.",
+    level: "B1",
+    notes: "Tam onay",
+  },
+  {
+    cumle: "Da bin ich anderer Meinung.",
+    turkce: "Bu konuda farklı düşünüyorum.",
+    level: "B1",
+    notes: "Fikir ayrılığı",
+  },
+  {
+    cumle: "Darf ich Ihnen eine Frage stellen?",
+    turkce: "Size bir soru sorabilir PRED miyim?",
+    level: "B1",
+    notes: "Kibar izin isteme",
+  },
+  {
+    cumle: "Darf ich etwas vorschlagen?",
+    turkce: "Bir şey önerebilir miyim?",
+    level: "B1",
+    notes: "Öneri sunma izni",
+  },
+  {
+    cumle: "Es ist mir egal, was die anderen denken.",
+    turkce: "Başkalarının ne düşündüğü umurumda değil.",
+    level: "B1",
+    notes: "Kayıtsızlık ifadesi",
+  },
+  {
+    cumle: "Das spielt für mich keine Rolle.",
+    turkce: "Bu benim için önemli değil.",
+    level: "B1",
+    notes: "Kayıtsızlık ifadesi",
+  },
+
+  // B1 SEVİYESİ - İŞ VE TOPLANTI İFADELERİ
+  {
+    cumle: "Können wir einen anderen Termin vereinbaren?",
+    turkce: "Başka bir randevu ayarlayabilir miyiz?",
+    level: "B1",
+    notes: "Randevu değiştirme",
+  },
+  {
+    cumle: "Der Termin passt mir leider nicht.",
+    turkce: "Maalesef randevu bana uygun değil.",
+    level: "B1",
+    notes: "Randevu uygunluğu",
+  },
+  {
+    cumle: "Können wir das Meeting auf nächste Woche verschieben?",
+    turkce: "Toplantıyı gelecek haftaya erteleyebilir miyiz?",
+    level: "B1",
+    notes: "Toplantı erteleme",
+  },
+  {
+    cumle: "Ich bin noch nicht fertig mit meiner Arbeit.",
+    turkce: "İşimi henüz bitirmedim.",
+    level: "B1",
+    notes: "İş durumu belirtme",
+  },
+  {
+    cumle: "Ich brauche noch etwas mehr Zeit.",
+    turkce: "Biraz daha zamana ihtiyacım var.",
+    level: "B1",
+    notes: "Zaman talebi",
+  },
+  {
+    cumle: "Die Frist ist zu knapp.",
+    turkce: "Süre çok kısa.",
+    level: "B1",
+    notes: "Süre değerlendirme",
+  },
+  {
+    cumle: "Können Sie mir die Unterlagen zuschicken?",
+    turkce: "Bana belgeleri gönderebilir misiniz?",
+    level: "B1",
+    notes: "Belge talebi",
+  },
+  {
+    cumle: "Ich habe die E-Mail noch nicht erhalten.",
+    turkce: "E-postayı henüz almadım.",
+    level: "B1",
+    notes: "İletişim durumu",
+  },
+  {
+    cumle: "Was halten Sie von diesem Vorschlag?",
+    turkce: "Bu öneri hakkında ne düşünüyorsunuz?",
+    level: "B1",
+    notes: "Fikir sorma",
+  },
+  {
+    cumle: "Das klingt vielversprechend.",
+    turkce: "Bu umut verici görünüyor.",
+    level: "B1",
+    notes: "Olumlu değerlendirme",
+  },
+  {
+    cumle: "Das überzeugt mich nicht.",
+    turkce: "Bu beni ikna etmiyor.",
+    level: "B1",
+    notes: "İkna olmama ifadesi",
+  },
+  {
+    cumle: "Ich finde es wichtig, dass wir darüber sprechen.",
+    turkce: "Bunun hakkında konuşmamızın önemli olduğunu düşünüyorum.",
+    level: "B1",
+    notes: "Konuşma gerekliliği",
+  },
+  {
+    cumle: "Wir sollten alle Aspekte berücksichtigen.",
+    turkce: "Tüm yönleri göz önünde bulundurmalıyız.",
+    level: "B1",
+    notes: "Değerlendirme önerisi",
+  },
+  {
+    cumle: "Haben Sie noch weitere Fragen?",
+    turkce: "Başka sorularınız var mı?",
+    level: "B1",
+    notes: "Soru sorma",
+  },
+
+  // B1 SEVİYESİ - SOSYAL İLİŞKİLER
+  {
+    cumle: "Es tut mir leid, aber ich habe keine Zeit.",
+    turkce: "Üzgünüm ama vaktim yok.",
+    level: "B1",
+    notes: "Zaman eksikliği ifadesi",
+  },
+  {
+    cumle: "Ich bin momentan sehr beschäftigt.",
+    turkce: "Şu anda çok meşgulüm.",
+    level: "B1",
+    notes: "Meşguliyet ifadesi",
+  },
+  {
+    cumle: "Vielleicht ein andermal.",
+    turkce: "Belki başka bir zaman.",
+    level: "B1",
+    notes: "Erteleme önerisi",
+  },
+  {
+    cumle: "Ich freue mich, Sie kennenzulernen.",
+    turkce: "Sizi tanıdığıma memnun oldum.",
+    level: "B1",
+    notes: "Tanışma ifadesi",
+  },
+  {
+    cumle: "Es war ein schöner Abend mit Ihnen.",
+    turkce: "Sizinle güzel bir akşamdı.",
+    level: "B1",
+    notes: "Olumlu deneyim",
+  },
+  {
+    cumle: "Wir sollten öfter etwas zusammen unternehmen.",
+    turkce: "Daha sık birlikte bir şeyler yapmalıyız.",
+    level: "B1",
+    notes: "Sosyal öneri",
+  },
+  {
+    cumle: "Ich werde mein Bestes tun.",
+    turkce: "Elimden geleni yapacağım.",
+    level: "B1",
+    notes: "Çaba sözü",
+  },
+  {
+    cumle: "Sie können sich auf mich verlassen.",
+    turkce: "Bana güvenebilirsiniz.",
+    level: "B1",
+    notes: "Güvence verme",
+  },
+  {
+    cumle: "Ich stehe Ihnen gerne zur Verfügung.",
+    turkce: "Memnuniyetle hizmetinizdeyim.",
+    level: "B1",
+    notes: "Yardım teklifi",
+  },
+  {
+    cumle: "Ich wünsche Ihnen viel Erfolg!",
+    turkce: "Size başarılar dilerim!",
+    level: "B1",
+    notes: "İyi dilek",
+  },
+  {
+    cumle: "Gute Besserung!",
+    turkce: "Geçmiş olsun!",
+    level: "B1",
+    notes: "Sağlık dileği",
+  },
+  {
+    cumle: "Herzlichen Glückwunsch zum Geburtstag!",
+    turkce: "Doğum günün kutlu olsun!",
+    level: "B1",
+    notes: "Tebrik ifadesi",
+  },
+  {
+    cumle: "Frohe Weihnachten und ein gutes neues Jahr!",
+    turkce: "Mutlu Noeller ve mutlu yıllar!",
+    level: "B1",
+    notes: "Tatil tebriği",
+  },
+
+  // B2 SEVİYESİ - DAHA KARMAŞIK İFADELER
+  {
+    cumle: "Es wäre mir lieb, wenn Sie das bis morgen erledigen könnten.",
+    turkce: "Bunu yarına kadar halledebilirseniz sevinirim.",
     level: "B2",
-    notes:
-      "Partizip II: geöffnet - Zustandspassiv + Futur I: wird + Partizip 2 + sein",
+    notes: "Kibar rica (Konjunktiv II)",
+  },
+  {
+    cumle: "Ich würde mich freuen, wenn Sie meine Einladung annehmen würden.",
+    turkce: "Davetimi kabul ederseniz sevinirim.",
+    level: "B2",
+    notes: "Kibar davet",
+  },
+  {
+    cumle: "Obwohl ich mein Bestes gegeben habe, ist es mir nicht gelungen.",
+    turkce: "Elimden gelenin en iyisini yapmama rağmen, başaramadım.",
+    level: "B2",
+    notes: "Zıtlık ifadesi",
+  },
+  {
+    cumle: "Es ist wichtig, dass wir alle Möglichkeiten in Betracht ziehen.",
+    turkce: "Tüm olasılıkları göz önünde bulundurmamız önemli.",
+    level: "B2",
+    notes: "Önem vurgusu",
+  },
+  {
+    cumle: "Ich hätte es anders gemacht, wenn ich gewusst hätte, dass...",
+    turkce: "Eğer bilseydim ki..., farklı yapardım.",
+    level: "B2",
+    notes: "Koşullu geçmiş (Konjunktiv II)",
+  },
+  {
+    cumle: "Unter diesen Umständen sollten wir vorsichtig sein.",
+    turkce: "Bu koşullar altında dikkatli olmalıyız.",
+    level: "B2",
+    notes: "Durum değerlendirme",
+  },
+  {
+    cumle: "Im Großen und Ganzen bin ich mit dem Ergebnis zufrieden.",
+    turkce: "Genel olarak sonuçtan memnunum.",
+    level: "B2",
+    notes: "Genel değerlendirme",
+  },
+  {
+    cumle:
+      "Einerseits verstehe ich Ihren Standpunkt, andererseits muss ich widersprechen.",
+    turkce:
+      "Bir yandan bakış açınızı anlıyorum, diğer yandan karşı çıkmak zorundayım.",
+    level: "B2",
+    notes: "Karşıt görüş sunma",
+  },
+  {
+    cumle: "Soweit ich informiert bin, findet die Veranstaltung nicht statt.",
+    turkce: "Bildiğim kadarıyla, etkinlik gerçekleşmeyecek.",
+    level: "B2",
+    notes: "Bilgi aktarımı",
+  },
+  {
+    cumle: "Es liegt auf der Hand, dass wir eine Lösung finden müssen.",
+    turkce: "Bir çözüm bulmamız gerektiği açıktır.",
+    level: "B2",
+    notes: "Açık gereklilik",
+  },
+  {
+    cumle: "Wenn ich morgens aufstehe, trinke ich eine Tasse Kaffee.",
+    turkce: "Sabah kalktığımda bir fincan kahve içerim.",
+  },
+  {
+    cumle: "Wenn du Zeit hast, können wir ins Kino gehen.",
+    turkce: "Zamanın varsa sinemaya gidebiliriz.",
+  },
+  {
+    cumle: "Ich rufe dich an, wenn ich zu Hause bin.",
+    turkce: "Eve vardığımda seni arayacağım.",
+  },
+  {
+    cumle: "Wenn es regnet, nehme ich einen Regenschirm mit.",
+    turkce: "Yağmur yağdığında yanıma şemsiye alırım.",
+  },
+  {
+    cumle: "Wenn ich Deutsch lerne, notiere ich neue Wörter.",
+    turkce: "Almanca öğrendiğimde yeni kelimeleri not alırım.",
+  },
+  {
+    cumle: "Wenn ich Hunger habe, esse ich einen Apfel.",
+    turkce: "Acıktığımda bir elma yerim.",
+  },
+  {
+    cumle: "Wenn ich krank bin, bleibe ich zu Hause.",
+    turkce: "Hasta olduğumda evde kalırım.",
+  },
+  {
+    cumle: "Wenn du Hilfe brauchst, kannst du mich anrufen.",
+    turkce: "Yardıma ihtiyacın olursa beni arayabilirsin.",
+  },
+  {
+    cumle: "Wenn das Wetter schön ist, gehen wir spazieren.",
+    turkce: "Hava güzel olduğunda yürüyüşe çıkarız.",
+  },
+  {
+    cumle: "Wenn wir uns beeilen, erreichen wir den Bus.",
+    turkce: "Acele edersek otobüse yetişiriz.",
+  },
+  // Obwohl cümleleri
+  {
+    cumle: "Obwohl es spät ist, bin ich nicht müde.",
+    turkce: "Geç olmasına rağmen yorgun değilim.",
+  },
+  {
+    cumle: "Obwohl ich krank bin, gehe ich zur Arbeit.",
+    turkce: "Hasta olmama rağmen işe gidiyorum.",
+  },
+  {
+    cumle: "Er geht joggen, obwohl es regnet.",
+    turkce: "Yağmur yağmasına rağmen koşuya gidiyor.",
+  },
+  {
+    cumle: "Obwohl sie kein Deutsch spricht, reist sie nach Deutschland.",
+    turkce: "Almanca konuşmamasına rağmen Almanya'ya seyahat ediyor.",
+  },
+  {
+    cumle: "Obwohl ich keine Zeit habe, helfe ich dir.",
+    turkce: "Zamanım olmamasına rağmen sana yardım ediyorum.",
+  },
+  {
+    cumle: "Sie ist glücklich, obwohl sie wenig Geld hat.",
+    turkce: "Az parası olmasına rağmen mutlu.",
+  },
+  {
+    cumle: "Obwohl er müde ist, lernt er noch.",
+    turkce: "Yorgun olmasına rağmen hâlâ ders çalışıyor.",
+  },
+  {
+    cumle: "Obwohl ich schon gegessen habe, habe ich noch Hunger.",
+    turkce: "Yemek yemiş olmama rağmen hâlâ açım.",
+  },
+  {
+    cumle: "Sie geht zu Fuß, obwohl sie ein Auto hat.",
+    turkce: "Arabası olmasına rağmen yürüyerek gidiyor.",
+  },
+  {
+    cumle: "Obwohl es schwierig ist, gebe ich nicht auf.",
+    turkce: "Zor olmasına rağmen pes etmiyorum.",
+  },
+  // Ob cümleleri
+  {
+    cumle: "Ich weiß nicht, ob er heute kommt.",
+    turkce: "Bugün gelip gelmeyeceğini bilmiyorum.",
+  },
+  {
+    cumle: "Sie fragt, ob wir Zeit haben.",
+    turkce: "Zamanımız olup olmadığını soruyor.",
+  },
+  {
+    cumle: "Ich bin nicht sicher, ob das Restaurant geöffnet ist.",
+    turkce: "Restoranın açık olup olmadığından emin değilim.",
+  },
+  {
+    cumle: "Er will wissen, ob du mit ihm ins Kino gehst.",
+    turkce: "Onunla sinemaya gidip gitmeyeceğini öğrenmek istiyor.",
+  },
+  {
+    cumle: "Wir überlegen, ob wir in den Urlaub fahren.",
+    turkce: "Tatile gidip gitmeyeceğimizi düşünüyoruz.",
+  },
+  {
+    cumle: "Kannst du mir sagen, ob der Bus schon gefahren ist?",
+    turkce: "Otobüsün çoktan gitmiş olup olmadığını bana söyleyebilir misin?",
+  },
+  {
+    cumle: "Sie zweifelt, ob sie die richtige Entscheidung getroffen hat.",
+    turkce: "Doğru kararı verip vermediğinden şüphe ediyor.",
+  },
+  {
+    cumle: "Er fragt sich, ob er genug Geld hat.",
+    turkce: "Yeterince parası olup olmadığını merak ediyor.",
+  },
+  {
+    cumle: "Ich bin gespannt, ob das Film gut ist.",
+    turkce: "Filmin iyi olup olmadığını merak ediyorum.",
+  },
+  {
+    cumle: "Sie überlegt, ob sie eine neue Sprache lernen soll.",
+    turkce: "Yeni bir dil öğrenip öğrenmemesi gerektiğini düşünüyor.",
+  },
+  // Dass cümleleri
+  {
+    cumle: "Ich freue mich, dass du kommst.",
+    turkce: "Geldiğin için mutluyum.",
+  },
+  {
+    cumle: "Er sagt, dass er morgen anrufen wird.",
+    turkce: "Yarın arayacağını söylüyor.",
+  },
+  {
+    cumle: "Ich hoffe, dass das Wetter schön wird.",
+    turkce: "Havanın güzel olacağını umuyorum.",
+  },
+  {
+    cumle: "Sie weiß, dass ich heute beschäftigt bin.",
+    turkce: "Bugün meşgul olduğumu biliyor.",
+  },
+  {
+    cumle: "Es ist gut, dass du mir hilfst.",
+    turkce: "Bana yardım etmen iyi.",
+  },
+  {
+    cumle: "Ich glaube, dass sie Recht hat.",
+    turkce: "Onun haklı olduğunu düşünüyorum.",
+  },
+  {
+    cumle: "Er ist traurig, dass du nicht kommen kannst.",
+    turkce: "Gelemeyeceğin için üzgün.",
+  },
+  {
+    cumle: "Ich bin sicher, dass wir uns wiedersehen.",
+    turkce: "Tekrar görüşeceğimizden eminim.",
+  },
+  {
+    cumle: "Sie denkt, dass es eine gute Idee ist.",
+    turkce: "Bunun iyi bir fikir olduğunu düşünüyor.",
+  },
+  {
+    cumle: "Es ist wichtig, dass du pünktlich bist.",
+    turkce: "Dakik olman önemli.",
+  },
+  {
+    cumle: "Wenn ich morgens aufstehe, trinke ich eine Tasse Kaffee.",
+    turkce: "Sabah kalktığımda bir fincan kahve içerim.",
+    level: "A2",
+    notes: "Zaman veya koşul ifade eder",
+  },
+  {
+    cumle: "Wenn du Zeit hast, können wir ins Kino gehen.",
+    turkce: "Zamanın varsa sinemaya gidebiliriz.",
+    level: "A2",
+    notes: "Koşullu bir teklif",
+  },
+  {
+    cumle: "Ich rufe dich an, wenn ich zu Hause bin.",
+    turkce: "Eve vardığımda seni arayacağım.",
+    level: "A2",
+    notes: "Gelecekteki bir eylemi belirtir",
+  },
+  {
+    cumle: "Wenn es regnet, nehme ich einen Regenschirm mit.",
+    turkce: "Yağmur yağdığında yanıma şemsiye alırım.",
+    level: "A2",
+    notes: "Genel bir alışkanlık",
+  },
+  {
+    cumle: "Wenn ich Deutsch lerne, notiere ich neue Wörter.",
+    turkce: "Almanca öğrendiğimde yeni kelimeleri not alırım.",
+    level: "A2",
+    notes: "Düzenli bir eylem",
+  },
+  {
+    cumle: "Wenn ich Hunger habe, esse ich einen Apfel.",
+    turkce: "Acıktığımda bir elma yerim.",
+    level: "A2",
+    notes: "Koşullu bir alışkanlık",
+  },
+  {
+    cumle: "Wenn ich krank bin, bleibe ich zu Hause.",
+    turkce: "Hasta olduğumda evde kalırım.",
+    level: "A2",
+    notes: "Koşullu bir durum",
+  },
+  {
+    cumle: "Wenn du Hilfe brauchst, kannst du mich anrufen.",
+    turkce: "Yardıma ihtiyacın olursa beni arayabilirsin.",
+    level: "A2",
+    notes: "Yardım önerisi",
+  },
+  {
+    cumle: "Wenn das Wetter schön ist, gehen wir spazieren.",
+    turkce: "Hava güzel olduğunda yürüyüşe çıkarız.",
+    level: "A2",
+    notes: "Koşullu bir plan",
+  },
+  {
+    cumle: "Wenn wir uns beeilen, erreichen wir den Bus.",
+    turkce: "Acele edersek otobüse yetişiriz.",
+    level: "A2",
+    notes: "Koşullu bir sonuç",
+  },
+
+  // obwohl (rağmen)
+  {
+    cumle: "Obwohl es spät ist, bin ich nicht müde.",
+    turkce: "Geç olmasına rağmen yorgun değilim.",
+    level: "B1",
+    notes: "Zıtlık ifade eder",
+  },
+  {
+    cumle: "Obwohl ich krank bin, gehe ich zur Arbeit.",
+    turkce: "Hasta olmama rağmen işe gidiyorum.",
+    level: "B1",
+    notes: "Zıt bir durum",
+  },
+  {
+    cumle: "Er geht joggen, obwohl es regnet.",
+    turkce: "Yağmur yağmasına rağmen koşuya gidiyor.",
+    level: "B1",
+    notes: "Hava koşuluna rağmen eylem",
+  },
+  {
+    cumle: "Obwohl sie kein Deutsch spricht, reist sie nach Deutschland.",
+    turkce: "Almanca konuşmamasına rağmen Almanya'ya seyahat ediyor.",
+    level: "B1",
+    notes: "Dil bariyerine rağmen",
+  },
+  {
+    cumle: "Obwohl ich keine Zeit habe, helfe ich dir.",
+    turkce: "Zamanım olmamasına rağmen sana yardım ediyorum.",
+    level: "B1",
+    notes: "Fedakarlık ifadesi",
+  },
+  {
+    cumle: "Sie ist glücklich, obwohl sie wenig Geld hat.",
+    turkce: "Az parası olmasına rağmen mutlu.",
+    level: "B1",
+    notes: "Maddi duruma rağmen mutluluk",
+  },
+  {
+    cumle: "Obwohl er müde ist, lernt er noch.",
+    turkce: "Yorgun olmasına rağmen hâlâ ders çalışıyor.",
+    level: "B1",
+    notes: "Azim göstergesi",
+  },
+  {
+    cumle: "Obwohl ich schon gegessen habe, habe ich noch Hunger.",
+    turkce: "Yemek yemiş olmama rağmen hâlâ açım.",
+    level: "B1",
+    notes: "Beklenmedik bir durum",
+  },
+  {
+    cumle: "Sie geht zu Fuß, obwohl sie ein Auto hat.",
+    turkce: "Arabası olmasına rağmen yürüyerek gidiyor.",
+    level: "B1",
+    notes: "Tercih zıtlığı",
+  },
+  {
+    cumle: "Obwohl es schwierig ist, gebe ich nicht auf.",
+    turkce: "Zor olmasına rağmen pes etmiyorum.",
+    level: "B1",
+    notes: "Kararlılık ifadesi",
+  },
+
+  // ob ( olup olmadığını)
+  {
+    cumle: "Ich weiß nicht, ob er heute kommt.",
+    turkce: "Bugün gelip gelmeyeceğini bilmiyorum.",
+    level: "B1",
+    notes: "Belirsizlik sorgusu",
+  },
+  {
+    cumle: "Sie fragt, ob wir Zeit haben.",
+    turkce: "Zamanımız olup olmadığını soruyor.",
+    level: "B1",
+    notes: "Zaman sorgulama",
+  },
+  {
+    cumle: "Ich bin nicht sicher, ob das Restaurant geöffnet ist.",
+    turkce: "Restoranın açık olup olmadığından emin değilim.",
+    level: "B1",
+    notes: "Durum belirsizliği",
+  },
+  {
+    cumle: "Er will wissen, ob du mit ihm ins Kino gehst.",
+    turkce: "Onunla sinemaya gidip gitmeyeceğini öğrenmek istiyor.",
+    level: "B1",
+    notes: "Plan sorgulama",
+  },
+  {
+    cumle: "Wir überlegen, ob wir in den Urlaub fahren.",
+    turkce: "Tatile gidip gitmeyeceğimizi düşünüyoruz.",
+    level: "B1",
+    notes: "Karar verme süreci",
+  },
+  {
+    cumle: "Kannst du mir sagen, ob der Bus schon gefahren ist?",
+    turkce: "Otobüsün çoktan gitmiş olup olmadığını bana söyleyebilir misin?",
+    level: "B1",
+    notes: "Geçmiş durum sorgusu",
+  },
+  {
+    cumle: "Sie zweifelt, ob sie die richtige Entscheidung getroffen hat.",
+    turkce: "Doğru kararı verip vermediğinden şüphe ediyor.",
+    level: "B2",
+    notes: "Karar sorgulama",
+  },
+  {
+    cumle: "Er fragt sich, ob er genug Geld hat.",
+    turkce: "Yeterince parası olup olmadığını merak ediyor.",
+    level: "B2",
+    notes: "Maddi durum sorgusu",
+  },
+  {
+    cumle: "Ich bin gespannt, ob das Film gut ist.",
+    turkce: "Filmin iyi olup olmadığını merak ediyorum.",
+    level: "B2",
+    notes: "Merak ifadesi",
+  },
+  {
+    cumle: "Sie überlegt, ob sie eine neue Sprache lernen soll.",
+    turkce: "Yeni bir dil öğrenip öğrenmemesi gerektiğini düşünüyor.",
+    level: "B2",
+    notes: "Gelecek plan sorgusu",
+  },
+
+  // dass (-dığı için, -diğini)
+  {
+    cumle: "Ich freue mich, dass du kommst.",
+    turkce: "Geldiğin için mutluyum.",
+    level: "B1",
+    notes: "Sebep veya duygu ifadesi",
+  },
+  {
+    cumle: "Er sagt, dass er morgen anrufen wird.",
+    turkce: "Yarın arayacağını söylüyor.",
+    level: "B1",
+    notes: "Dolaylı anlatım",
+  },
+  {
+    cumle: "Ich hoffe, dass das Wetter schön wird.",
+    turkce: "Havanın güzel olacağını umuyorum.",
+    level: "B1",
+    notes: "Umut ifadesi",
+  },
+  {
+    cumle: "Sie weiß, dass ich heute beschäftigt bin.",
+    turkce: "Bugün meşgul olduğumu biliyor.",
+    level: "B1",
+    notes: "Bilgi aktarımı",
+  },
+  {
+    cumle: "Es ist gut, dass du mir hilfst.",
+    turkce: "Bana yardım etmen iyi.",
+    level: "B1",
+    notes: "Olumlu bir durum",
+  },
+  {
+    cumle: "Ich glaube, dass sie Recht hat.",
+    turkce: "Onun haklı olduğunu düşünüyorum.",
+    level: "B1",
+    notes: "Fikir belirtme",
+  },
+  {
+    cumle: "Er ist traurig, dass du nicht kommen kannst.",
+    turkce: "Gelemeyeceğin için üzgün.",
+    level: "B1",
+    notes: "Üzüntü ifadesi",
+  },
+  {
+    cumle: "Ich bin sicher, dass wir uns wiedersehen.",
+    turkce: "Tekrar görüşeceğimizden eminim.",
+    level: "B1",
+    notes: "Güven ifadesi",
+  },
+  {
+    cumle: "Sie denkt, dass es eine gute Idee ist.",
+    turkce: "Bunun iyi bir fikir olduğunu düşünüyor.",
+    level: "B1",
+    notes: "Fikir aktarımı",
+  },
+  {
+    cumle: "Es ist wichtig, dass du pünktlich bist.",
+    turkce: "Dakik olman önemli.",
+    level: "B1",
+    notes: "Önem vurgusu",
+  },
+  {
+    cumle: "Ich kann Deutsch sprechen.",
+    turkce: "Almanca konuşabilirim.",
+    level: "A1",
+  },
+  {
+    cumle: "Kannst du mir helfen?",
+    turkce: "Bana yardım edebilir misin?",
+    level: "A1",
+  },
+  {
+    cumle: "Wir können morgen ins Kino gehen.",
+    turkce: "Yarın sinemaya gidebiliriz.",
+    level: "A1",
+  },
+  {
+    cumle: "Sie kann sehr gut kochen.",
+    turkce: "O çok iyi yemek yapabilir.",
+    level: "A1",
+  },
+  {
+    cumle: "Ich konnte gestern nicht schlafen.",
+    turkce: "Dün uyuyamadım.",
+    level: "A2",
+  },
+  {
+    cumle: "Man kann hier nicht parken.",
+    turkce: "Burada park edilemez.",
+    level: "A2",
+  },
+  {
+    cumle: "Könntest du bitte das Fenster öffnen?",
+    turkce: "Lütfen pencereyi açabilir misin?",
+    level: "B1",
+  },
+  {
+    cumle: "Ich könnte dir mein Auto leihen.",
+    turkce: "Sana arabamı ödünç verebilirim.",
+    level: "B1",
+  },
+  {
+    cumle: "Das kann nicht wahr sein!",
+    turkce: "Bu doğru olamaz!",
+    level: "B1",
+  },
+  {
+    cumle: "Sie können den Antrag online ausfüllen.",
+    turkce: "Başvuruyu çevrimiçi doldurabilirsiniz.",
+    level: "B2",
+  },
+
+  // dürfen (izinli olmak)
+  { cumle: "Darf ich fragen?", turkce: "Sorabilir miyim?", level: "A1" },
+  {
+    cumle: "Du darfst hier nicht rauchen.",
+    turkce: "Burada sigara içemezsin.",
+    level: "A1",
+  },
+  {
+    cumle: "Wir dürfen heute länger bleiben.",
+    turkce: "Bugün daha uzun kalabiliriz.",
+    level: "A1",
+  },
+  {
+    cumle: "Darf ich Ihnen helfen?",
+    turkce: "Size yardım edebilir miyim?",
+    level: "A1",
+  },
+  {
+    cumle: "Die Kinder dürfen nicht allein draußen spielen.",
+    turkce: "Çocuklar dışarıda yalnız oynayamazlar.",
+    level: "A2",
+  },
+  {
+    cumle: "Hier darf man fotografieren.",
+    turkce: "Burada fotoğraf çekilebilir.",
+    level: "A2",
+  },
+  {
+    cumle: "Dürfte ich kurz Ihr Handy benutzen?",
+    turkce: "Kısa bir süre telefonunuzu kullanabilir miyim?",
+    level: "B1",
+  },
+  {
+    cumle: "Sie dürfen die Unterlagen mitnehmen.",
+    turkce: "Belgeleri yanınıza alabilirsiniz.",
+    level: "B1",
+  },
+  {
+    cumle: "Das dürfte kein Problem sein.",
+    turkce: "Bu bir sorun olmamalı.",
+    level: "B2",
+  },
+  {
+    cumle: "Ab 18 Jahren darf man Auto fahren.",
+    turkce: "18 yaşından itibaren araba kullanmak serbesttir.",
+    level: "B2",
+  },
+
+  // müssen (zorunda olmak)
+  {
+    cumle: "Ich muss jetzt gehen.",
+    turkce: "Şimdi gitmem gerek.",
+    level: "A1",
+  },
+  {
+    cumle: "Musst du arbeiten?",
+    turkce: "Çalışmak zorunda mısın?",
+    level: "A1",
+  },
+  {
+    cumle: "Wir müssen um 8 Uhr aufstehen.",
+    turkce: "Saat 8'de kalkmak zorundayız.",
+    level: "A1",
+  },
+  {
+    cumle: "Sie muss heute zum Arzt.",
+    turkce: "Bugün doktora gitmek zorunda.",
+    level: "A1",
+  },
+  {
+    cumle: "Ich musste lange warten.",
+    turkce: "Uzun süre beklemek zorunda kaldım.",
+    level: "A2",
+  },
+  {
+    cumle: "Man muss hier ein Ticket kaufen.",
+    turkce: "Burada bilet satın almak gerekiyor.",
+    level: "A2",
+  },
+  {
+    cumle: "Du musst nicht alles essen.",
+    turkce: "Her şeyi yemek zorunda değilsin.",
+    level: "A2",
+  },
+  {
+    cumle: "Wir müssen unbedingt darüber sprechen.",
+    turkce: "Bu konuda kesinlikle konuşmalıyız.",
+    level: "B1",
+  },
+  {
+    cumle: "Das muss ein Irrtum sein.",
+    turkce: "Bu bir hata olmalı.",
+    level: "B1",
+  },
+  {
+    cumle: "Sie müssen den Antrag bis Freitag einreichen.",
+    turkce: "Başvuruyu Cuma gününe kadar sunmanız gerekiyor.",
+    level: "B2",
+  },
+
+  // sollen (gerekli olmak)
+  {
+    cumle: "Soll ich dir helfen?",
+    turkce: "Sana yardım edeyim mi?",
+    level: "A1",
+  },
+  {
+    cumle: "Du sollst pünktlich sein.",
+    turkce: "Dakik olmalısın.",
+    level: "A1",
+  },
+  {
+    cumle: "Wir sollen heute früh schlafen.",
+    turkce: "Bugün erken uyumalıyız.",
+    level: "A1",
+  },
+  { cumle: "What soll ich kochen?", turkce: "Ne pişirmeliyim?", level: "A1" },
+  {
+    cumle: "Sollte ich einen Regenschirm mitnehmen?",
+    turkce: "Şemsiye almalı mıyım?",
+    level: "A2",
+  },
+  {
+    cumle: "Man soll jeden Tag Obst essen.",
+    turkce: "Her gün meyve yemelidir.",
+    level: "A2",
+  },
+  {
+    cumle: "Er soll sehr nett sein.",
+    turkce: "O çok nazik olmalı/öyle söyleniyor.",
+    level: "B1",
+  },
+  {
+    cumle: "Du solltest mehr Sport treiben.",
+    turkce: "Daha fazla spor yapmalısın.",
+    level: "B1",
+  },
+  {
+    cumle: "Das sollte eigentlich funktionieren.",
+    turkce: "Bu aslında çalışması gerekiyor.",
+    level: "B2",
+  },
+  {
+    cumle: "Sie sollen den Arzt sofort anrufen.",
+    turkce: "Doktoru hemen aramalısınız.",
+    level: "B2",
+  },
+
+  // wollen (istemek)
+  {
+    cumle: "Ich will nach Hause gehen.",
+    turkce: "Eve gitmek istiyorum.",
+    level: "A1",
+  },
+  {
+    cumle: "Willst du einen Kaffee?",
+    turkce: "Kahve ister misin?",
+    level: "A1",
+  },
+  {
+    cumle: "Wir wollen am Wochenende wandern.",
+    turkce: "Hafta sonu yürüyüşe çıkmak istiyoruz.",
+    level: "A1",
+  },
+  {
+    cumle: "Sie will Ärztin werden.",
+    turkce: "Doktor olmak istiyor.",
+    level: "A1",
+  },
+  {
+    cumle: "Ich wollte dich anrufen.",
+    turkce: "Seni aramak istedim.",
+    level: "A2",
+  },
+  {
+    cumle: "Was willst du damit sagen?",
+    turkce: "Bununla ne demek istiyorsun?",
+    level: "A2",
+  },
+  {
+    cumle: "Er will uns nicht helfen.",
+    turkce: "Bize yardım etmek istemiyor.",
+    level: "A2",
+  },
+  {
+    cumle: "Wir wollten eigentlich schon früher kommen.",
+    turkce: "Aslında daha erken gelmek istedik.",
+    level: "B1",
+  },
+  {
+    cumle: "Sie will unbedingt diese Stelle bekommen.",
+    turkce: "Bu pozisyonu kesinlikle almak istiyor.",
+    level: "B1",
+  },
+  {
+    cumle: "Ich will, dass du ehrlich bist.",
+    turkce: "Dürüst olmanı istiyorum.",
+    level: "B2",
+  },
+
+  // mögen/möchten (hoşlanmak/istemek)
+  { cumle: "Ich mag Schokolade.", turkce: "Çikolatayı severim.", level: "A1" },
+  { cumle: "Magst du Tiere?", turkce: "Hayvanları sever misin?", level: "A1" },
+  {
+    cumle: "Möchtest du etwas trinken?",
+    turkce: "Bir şeyler içmek ister misin?",
+    level: "A1",
+  },
+  {
+    cumle: "Wir möchten bestellen.",
+    turkce: "Sipariş vermek istiyoruz.",
+    level: "A1",
+  },
+  { cumle: "Er mag keine Äpfel.", turkce: "Elmaları sevmez.", level: "A1" },
+  {
+    cumle: "Ich möchte gern nach Berlin fahren.",
+    turkce: "Berlin'e gitmek isterim.",
+    level: "A2",
+  },
+  {
+    cumle: "Sie mögen klassische Musik.",
+    turkce: "Klasik müziği severler.",
+    level: "A2",
+  },
+  {
+    cumle: "Möchten Sie einen Termin vereinbaren?",
+    turkce: "Bir randevu ayarlamak ister misiniz?",
+    level: "B1",
+  },
+  {
+    cumle: "Ich mochte diesen Film nicht.",
+    turkce: "Bu filmi sevmedim.",
+    level: "B1",
+  },
+  {
+    cumle: "Er möchte sich bei Ihnen für die Hilfe bedanken.",
+    turkce:
+      "Yardımınız Animations for card transitions using libraries like `framer-motion`. için size teşekkür etmek istiyor.",
+    level: "B2",
+  },
+  {
+    cumle: "Ich hätte gern einen Kaffee.",
+    turkce: "Bir kahve almak isterdim.",
+    level: "A1",
+    notes: "Nezaket ifadesi olarak",
+  },
+  {
+    cumle: "Könntest du mir bitte helfen?",
+    turkce: "Bana yardım edebilir misin lütfen?",
+    level: "A1",
+    notes: "Kibar rica",
+  },
+  {
+    cumle: "Ich würde gerne Deutsch lernen.",
+    turkce: "Almanca öğrenmek isterdim.",
+    level: "A1",
+    notes: "İstek ifade etme",
   },
   {
     cumle: "Wärst du so nett?",
@@ -1921,10 +4912,82 @@ const data = [
     notes: "Rica ifadesi",
   },
   {
+    cumle: "Ich möchte ein Wasser, bitte.",
+    turkce: "Bir su isterdim, lütfen.",
+    level: "A1",
+    notes: "Sipariş verme",
+  },
+  {
+    cumle: "Das wäre schön!",
+    turkce: "Bu güzel olurdu!",
+    level: "A1",
+    notes: "Beğeni ifadesi",
+  },
+  {
+    cumle: "Hättest du Zeit morgen?",
+    turkce: "Yarın vaktin olur muydu?",
+    level: "A1",
+    notes: "Zaman sorma",
+  },
+  {
+    cumle: "Würdest du mir das Salz geben?",
+    turkce: "Bana tuzu verir misin?",
+    level: "A1",
+    notes: "Masa başı rica",
+  },
+  {
+    cumle: "Es wäre gut für dich.",
+    turkce: "Senin için iyi olurdu.",
+    level: "A1",
+    notes: "Öneri/tavsiye",
+  },
+  {
+    cumle: "Ich würde gerne bezahlen.",
+    turkce: "Ödemek isterdim.",
+    level: "A1",
+    notes: "Restoranda ödeme isteği",
+  },
+  {
+    cumle: "Könnten Sie langsamer sprechen?",
+    turkce: "Daha yavaş konuşabilir misiniz?",
+    level: "A1",
+    notes: "Dil öğrenirken rica",
+  },
+  {
+    cumle: "Das wäre alles, danke.",
+    turkce: "Hepsi bu kadar olurdu, teşekkürler.",
+    level: "A1",
+    notes: "Alışveriş sonlandırma",
+  },
+  {
+    cumle: "Ich hätte eine Frage.",
+    turkce: "Bir sorum olurdu/var.",
+    level: "A1",
+    notes: "Soru sorma girişi",
+  },
+  {
+    cumle: "Wäre das möglich?",
+    turkce: "Bu mümkün olur muydu?",
+    level: "A1",
+    notes: "İmkan sorma",
+  },
+  {
     cumle: "Würdest du mir einen Gefallen tun?",
     turkce: "Bana bir iyilik yapar mısın?",
     level: "A1",
     notes: "Rica etme",
+  },
+  {
+    cumle: "Ich hätte gern die Rechnung.",
+    turkce: "Hesabı almak isterdim.",
+    level: "A1",
+    notes: "Restoranda hesap isteme",
+  },
+  {
+    cumle: "Das würde ich nicht machen.",
+    turkce: "Bunu yapmazdım.",
+    level: "A1",
+    notes: "Basit tavsiye",
   },
   {
     cumle: "Könnten Sie mir zeigen, wie das geht?",
@@ -1937,6 +5000,20 @@ const data = [
     turkce: "Gelirsen sevinirim.",
     level: "A1",
     notes: "Davet ifadesi",
+  },
+  {
+    cumle: "Würdest du mir einen Tee bringen?",
+    turkce: "Bana bir çay getirir misin?",
+    level: "A1",
+    notes: "Rica",
+  },
+
+  // A2 Seviyesi (21-40)
+  {
+    cumle: "Wenn ich Zeit hätte, würde ich ins Kino gehen.",
+    turkce: "Zamanım olsaydı, sinemaya giderdim.",
+    level: "A2",
+    notes: "Basit şartlı cümle",
   },
   {
     cumle: "An deiner Stelle würde ich früher aufstehen.",
@@ -1969,10 +5046,34 @@ const data = [
     notes: "İstek belirtme",
   },
   {
+    cumle: "Es wäre besser, wenn du jetzt anrufen würdest.",
+    turkce: "Şimdi arasan daha iyi olurdu.",
+    level: "A2",
+    notes: "Öneri",
+  },
+  {
     cumle: "Ohne deine Hilfe hätte ich es nicht geschafft.",
     turkce: "Senin yardımın olmadan başaramazdım.",
     level: "A2",
     notes: "Minnettarlık",
+  },
+  {
+    cumle: "Würdest du mir deinen Stift leihen?",
+    turkce: "Kalemini bana ödünç verir misin?",
+    level: "A2",
+    notes: "Rica",
+  },
+  {
+    cumle: "Wenn ich mehr Geld hätte, würde ich reisen.",
+    turkce: "Daha fazla param olsaydı, seyahat ederdim.",
+    level: "A2",
+    notes: "Hayali durum",
+  },
+  {
+    cumle: "Es wäre schön, wenn du mitkommen könntest.",
+    turkce: "Gelirsen güzel olurdu.",
+    level: "A2",
+    notes: "Davet",
   },
   {
     cumle: "Ich würde lieber zu Hause bleiben.",
@@ -1985,6 +5086,18 @@ const data = [
     turkce: "Ödevlerimde bana yardım edebilir misin?",
     level: "A2",
     notes: "Yardım isteme",
+  },
+  {
+    cumle: "Wenn das Wetter schön wäre, würden wir grillen.",
+    turkce: "Hava güzel olsaydı, mangal yapardık.",
+    level: "A2",
+    notes: "Koşullu etkinlik",
+  },
+  {
+    cumle: "Ich würde dir gerne meine Stadt zeigen.",
+    turkce: "Sana şehrimi göstermek isterdim.",
+    level: "A2",
+    notes: "İstek",
   },
   {
     cumle: "Hättest du Lust, ins Kino zu gehen?",
@@ -2005,17 +5118,37 @@ const data = [
     notes: "Tercih",
   },
   {
+    cumle: "Wenn ich du wäre, würde ich nicht so viel arbeiten.",
+    turkce: "Ben sen olsaydım, bu kadar çok çalışmazdım.",
+    level: "A2",
+    notes: "Tavsiye",
+  },
+  {
     cumle: "Es wäre toll, wenn wir uns bald wiedersehen könnten.",
     turkce: "Yakında tekrar görüşebilsek harika olurdu.",
     level: "A2",
     notes: "Dilek",
   },
+
+  // B1 Seviyesi (41-60)
   {
     cumle:
       "Wenn ich mehr Zeit gehabt hätte, hätte ich den Film fertig gesehen.",
     turkce: "Daha fazla zamanım olsaydı, filmi bitirmiş olurdum.",
     level: "B1",
     notes: "Geçmişteki hayali durum",
+  },
+  {
+    cumle: "An deiner Stelle hätte ich anders gehandelt.",
+    turkce: "Senin yerinde olsaydım, farklı davranırdım.",
+    level: "B1",
+    notes: "Geçmiş için tavsiye",
+  },
+  {
+    cumle: "Ich würde gerne wissen, ob du Zeit hättest.",
+    turkce: "Zamanın olup olmadığını bilmek isterdim.",
+    level: "B1",
+    notes: "Dolaylı soru",
   },
   {
     cumle: "Ohne den Stau wären wir pünktlich angekommen.",
@@ -2036,10 +5169,23 @@ const data = [
     notes: "Açıklama isteme",
   },
   {
+    cumle: "Wenn ich reich wäre, würde ich ein Haus am Meer kaufen.",
+    turkce: "Zengin olsaydım, deniz kenarında bir ev alırdım.",
+    level: "B1",
+    notes: "Hayali gelecek planı",
+  },
+  {
     cumle: "Ich hätte nicht gedacht, dass es so schwer sein würde.",
     turkce: "Bu kadar zor olacağını düşünmezdim.",
     level: "B1",
     notes: "Beklentinin tersine durum",
+  },
+  {
+    cumle:
+      "Wenn das Wetter besser gewesen wäre, hätten wir einen Ausflug gemacht.",
+    turkce: "Hava daha iyi olsaydı, bir geziye çıkmış olurduk.",
+    level: "B1",
+    notes: "Geçmişteki imkansız etkinlik",
   },
   {
     cumle: "Was hättest du an meiner Stelle getan?",
@@ -2054,10 +5200,29 @@ const data = [
     notes: "İmkansız dilek",
   },
   {
+    cumle: "Es hätte dir gefallen, wenn du dabei gewesen wärst.",
+    turkce: "Orada olsaydın, hoşuna giderdi.",
+    level: "B1",
+    notes: "Geçmiş hakkında varsayım",
+  },
+  {
+    cumle:
+      "Wenn ich früher losgefahren wäre, hätte ich den Zug nicht verpasst.",
+    turkce: "Daha erken yola çıksaydım, treni kaçırmazdım.",
+    level: "B1",
+    notes: "Pişmanlık",
+  },
+  {
     cumle: "Hätte ich das gewusst, hätte ich anders entschieden.",
     turkce: "Bunu bilseydim, farklı karar verirdim.",
     level: "B1",
     notes: "Pişmanlık",
+  },
+  {
+    cumle: "Ich würde dir gerne helfen, aber ich habe keine Zeit.",
+    turkce: "Sana yardım etmek isterdim ama zamanım yok.",
+    level: "B1",
+    notes: "İmkansız istek",
   },
   {
     cumle: "Sie sieht aus, als ob sie müde wäre.",
@@ -2089,6 +5254,14 @@ const data = [
     turkce: "Beni daha erken arasaydın, sana yardım edebilirdim.",
     level: "B1",
     notes: "Geçmişteki imkansız yardım",
+  },
+
+  // B2 Seviyesi (61-100)
+  {
+    cumle: "Hätte ich doch bloß auf dich gehört!",
+    turkce: "Keşke seni dinleseydim!",
+    level: "B2",
+    notes: "Pişmanlık ünlemi",
   },
   {
     cumle: "Selbst wenn ich es gewollt hätte, hätte ich nichts ändern können.",
@@ -2122,6 +5295,12 @@ const data = [
     notes: "Öngörü ifadesi",
   },
   {
+    cumle: "Ich täte das nicht, wenn ich du wäre.",
+    turkce: "Ben sen olsaydım bunu yapmazdım.",
+    level: "B2",
+    notes: "Alternatif konjunktiv II formu",
+  },
+  {
     cumle: "Wenn du nur ein bisschen vorsichtiger gewesen wärest!",
     turkce: "Keşke biraz daha dikkatli olsaydın!",
     level: "B2",
@@ -2132,6 +5311,12 @@ const data = [
     turkce: "Sanki hiç bilgisayar kullanmamış gibi düşünülebilir.",
     level: "B2",
     notes: "Kınayıcı benzetme",
+  },
+  {
+    cumle: "Es wäre schön gewesen, wenn du Bescheid gesagt hättest.",
+    turkce: "Haber verseydin güzel olurdu.",
+    level: "B2",
+    notes: "Nezaket içeren sitem",
   },
   {
     cumle:
@@ -2160,10 +5345,40 @@ const data = [
     notes: "Tehlikeli durum",
   },
   {
+    cumle: "Man sollte meinen, er wäre klüger gewesen.",
+    turkce: "Daha akıllı olduğunu düşünebilirdin.",
+    level: "B2",
+    notes: "Hayal kırıklığı",
+  },
+  {
+    cumle: "An Ihrer Stelle würde ich die Finger davon lassen.",
+    turkce: "Sizin yerinizde olsaydım, ona dokunmazdım.",
+    level: "B2",
+    notes: "Güçlü uyarı",
+  },
+  {
+    cumle: "Ich hätte nie gedacht, dass es so weit kommen würde.",
+    turkce: "İşin bu kadar ilerleyeceğini hiç düşünmezdim.",
+    level: "B2",
+    notes: "Şaşkınlık",
+  },
+  {
     cumle: "Es hätte schlimmer kommen können.",
     turkce: "Daha kötü olabilirdi.",
     level: "B2",
     notes: "Teselli",
+  },
+  {
+    cumle: "Ich würde zu gerne wissen, was sie dazu gesagt hätte.",
+    turkce: "Buna ne diyeceğini çok merak ederdim.",
+    level: "B2",
+    notes: "Merak/ilgi",
+  },
+  {
+    cumle: "Hätte ich das Geld, würde ich sofort eine Weltreise machen.",
+    turkce: "Param olsaydı, hemen dünya turuna çıkardım.",
+    level: "B2",
+    notes: "Hayali plan",
   },
   {
     cumle: "Das hätte ich mir denken können!",
@@ -2172,16 +5387,54 @@ const data = [
     notes: "Kendini eleştirme",
   },
   {
+    cumle:
+      "Wenn du ehrlich gewesen wärst, hätten wir das Problem längst gelöst.",
+    turkce: "Dürüst olsaydın, sorunu çoktan çözmüş olurduk.",
+    level: "B2",
+    notes: "Eleştiri",
+  },
+  {
+    cumle: "Da wäre ich mir nicht so sicher.",
+    turkce: "Bu konuda bu kadar emin olmazdım.",
+    level: "B2",
+    notes: "Kuşku ifadesi",
+  },
+  {
+    cumle: "Es wäre besser gewesen, wenn wir den anderen Weg genommen hätten.",
+    turkce: "Diğer yolu seçseydik daha iyi olurdu.",
+    level: "B2",
+    notes: "Karar eleştirisi",
+  },
+  {
     cumle: "Als ob ich nichts Besseres zu tun hätte!",
     turkce: "Sanki yapacak daha iyi bir işim yokmuş gibi!",
     level: "B2",
     notes: "Sinirli tepki",
   },
   {
+    cumle: "Solltest du Hilfe benötigen, wäre ich gerne für dich da.",
+    turkce:
+      "Yardıma ihtiyacın olursa, sana yardım etmekten memnuniyet duyarım.",
+    level: "B2",
+    notes: "Destek önerisi",
+  },
+  {
+    cumle: "Hätte, hätte, Fahrradkette!",
+    turkce: "Keşke keşke, bisiklet zinciri!",
+    level: "B2",
+    notes: "Alman atasözü: Sürekli 'keşke' demenin anlamsızlığı",
+  },
+  {
     cumle: "Es sähe besser aus, wenn du die Farben anders kombiniert hättest.",
     turkce: "Renkleri farklı kombine etseydin daha iyi görünürdü.",
     level: "B2",
     notes: "Estetik tavsiye",
+  },
+  {
+    cumle: "Ich wäre fast gestorben vor Angst!",
+    turkce: "Korkudan neredeyse ölecektim!",
+    level: "B2",
+    notes: "Abartı",
   },
   {
     cumle: "Diese Aufgabe hätte eigentlich nicht so schwierig sein sollen.",
@@ -2258,16 +5511,107 @@ const data = [
     notes: "Basit edilgen cümle",
   },
   {
-    cumle: "Die Straße wurde gesperrt.",
-    turkce: "Cadde kapatıldı.",
-    level: "A2",
-    notes: "Geçmiş zaman edilgen",
+    cumle: "Der Brief wird geschrieben.",
+    turkce: "Mektup yazılıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Zimmer wird geputzt.",
+    turkce: "Oda temizleniyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Die Tür wird geöffnet.",
+    turkce: "Kapı açılıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Licht wird ausgeschaltet.",
+    turkce: "Işık kapatılıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Der Kaffee wird getrunken.",
+    turkce: "Kahve içiliyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Brot wird gegessen.",
+    turkce: "Ekmek yeniyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Deutsch wird gelernt.",
+    turkce: "Almanca öğreniliyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Auto wird gewaschen.",
+    turkce: "Araba yıkanıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Fenster wird geschlossen.",
+    turkce: "Pencere kapatılıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Essen wird gekocht.",
+    turkce: "Yemek pişiriliyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Die Musik wird gehört.",
+    turkce: "Müzik dinleniyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Die Hausaufgaben werden gemacht.",
+    turkce: "Ev ödevleri yapılıyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
+  },
+  {
+    cumle: "Das Wasser wird getrunken.",
+    turkce: "Su içiliyor.",
+    level: "A1",
+    notes: "Basit edilgen cümle",
   },
   {
     cumle: "Die Frage wird beantwortet.",
     turkce: "Soru cevaplanıyor.",
     level: "A1",
     notes: "Basit edilgen cümle",
+  },
+  // A2 Seviyesi
+  {
+    cumle: "Der Film wurde gestern gesehen.",
+    turkce: "Film dün izlendi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Das Haus wurde renoviert.",
+    turkce: "Ev yenilendi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Die Straße wurde gesperrt.",
+    turkce: "Cadde kapatıldı.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
   },
   {
     cumle: "Das Paket wurde verschickt.",
@@ -2294,6 +5638,18 @@ const data = [
     notes: "Geçmiş zaman edilgen",
   },
   {
+    cumle: "Der Schlüssel wurde gefunden.",
+    turkce: "Anahtar bulundu.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Das Problem wurde gelöst.",
+    turkce: "Problem çözüldü.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
     cumle: "Die Rechnung wurde bezahlt.",
     turkce: "Hesap ödendi.",
     level: "A2",
@@ -2302,6 +5658,12 @@ const data = [
   {
     cumle: "Der Text wurde übersetzt.",
     turkce: "Metin çevrildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Die Wohnung wurde verkauft.",
+    turkce: "Daire satıldı.",
     level: "A2",
     notes: "Geçmiş zaman edilgen",
   },
@@ -2318,8 +5680,32 @@ const data = [
     notes: "Geçmiş zaman edilgen",
   },
   {
+    cumle: "Der Kuchen wurde gebacken.",
+    turkce: "Pasta pişirildi.",
+    level: "A2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
+    cumle: "Das Auto wird repariert werden.",
+    turkce: "Araba tamir edilecek.",
+    level: "A2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
     cumle: "Der Brief wird morgen geschickt werden.",
     turkce: "Mektup yarın gönderilecek.",
+    level: "A2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
+    cumle: "Das Konzert wird organisiert werden.",
+    turkce: "Konser organize edilecek.",
+    level: "A2",
+    notes: "Gelecek zaman edilgen",
+  },
+  {
+    cumle: "Das Haus wird verkauft werden.",
+    turkce: "Ev satılacak.",
     level: "A2",
     notes: "Gelecek zaman edilgen",
   },
@@ -2329,6 +5715,7 @@ const data = [
     level: "A2",
     notes: "Gelecek zaman edilgen",
   },
+  // B1 Seviyesi
   {
     cumle: "Das Museum ist von einem berühmten Architekten gebaut worden.",
     turkce: "Müze ünlü bir mimar tarafından inşa edildi.",
@@ -2372,6 +5759,12 @@ const data = [
     notes: "Plusquamperfekt edilgen, ajan belirtilmiş",
   },
   {
+    cumle: "Die E-Mail wird heute noch beantwortet werden.",
+    turkce: "E-posta bugün hala cevaplanacak.",
+    level: "B1",
+    notes: "Gelecek zaman edilgen, zaman zarfı",
+  },
+  {
     cumle: "Es wird viel darüber diskutiert.",
     turkce: "Bu konu hakkında çok tartışılıyor.",
     level: "B1",
@@ -2394,6 +5787,18 @@ const data = [
     turkce: "Filmin çok iyi olduğu söyleniyor.",
     level: "B1",
     notes: "Edilgen yapı, yan cümle ile",
+  },
+  {
+    cumle: "Es wurde beschlossen, das Projekt zu beenden.",
+    turkce: "Projeyi sonlandırmaya karar verildi.",
+    level: "B1",
+    notes: "Geçmiş zaman edilgen, 'es' ile genel ifade",
+  },
+  {
+    cumle: "Es ist geplant worden, nächstes Jahr zu expandieren.",
+    turkce: "Gelecek yıl genişlemeye karar verildi.",
+    level: "B1",
+    notes: "Geçmiş zaman edilgen, planlama ifadesi",
   },
   {
     cumle: "Es wird daran gearbeitet, eine Lösung zu finden.",
@@ -2431,6 +5836,7 @@ const data = [
     level: "B1",
     notes: "Edilgen yapı, zorunluluk ifadesi",
   },
+  // B2 Seviyesi
   {
     cumle: "Das Gesetz wird im nächsten Monat verabschiedet worden sein.",
     turkce: "Yasa önümüzdeki ay çıkarılmış olacak.",
@@ -2443,6 +5849,31 @@ const data = [
     turkce: "Herkes razı olsaydı, sözleşme çoktan imzalanmış olurdu.",
     level: "B2",
     notes: "Konjunktiv II edilgen, koşullu cümle",
+  },
+  {
+    cumle:
+      "Die Vorbereitungen müssen bis zum Wochenende abgeschlossen worden sein.",
+    turkce: "Hazırlıklar hafta sonuna kadar tamamlanmış olmalı.",
+    level: "B2",
+    notes: "Futura II edilgen, zorunluluk",
+  },
+  {
+    cumle: "Es wird vermutet, dass das Gemälde gestohlen worden sein könnte.",
+    turkce: "Tablonun çalınmış olabileceği tahmin ediliyor.",
+    level: "B2",
+    notes: "Edilgen yapı, olasılık ifadesi",
+  },
+  {
+    cumle: "Die Ware dürfte inzwischen geliefert worden sein.",
+    turkce: "Mal bu arada teslim edilmiş olmalı.",
+    level: "B2",
+    notes: "Edilgen yapı, olasılık ifadesi",
+  },
+  {
+    cumle: "Nachdem das Problem gelöst worden war, konnten wir weitermachen.",
+    turkce: "Sorun çözüldükten sonra devam edebildik.",
+    level: "B2",
+    notes: "Plusquamperfekt edilgen, zaman bağlacı",
   },
   {
     cumle: "Bevor das Gebäude renoviert wurde, sah es ganz anders aus.",
@@ -2592,6 +6023,12 @@ const data = [
     notes: "Geçmiş zaman edilgen",
   },
   {
+    cumle: "Das Handy wurde gefunden.",
+    turkce: "Cep telefonu bulundu.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen",
+  },
+  {
     cumle: "Der Vorschlag wurde von allen akzeptiert.",
     turkce: "Öneri herkes tarafından kabul edildi.",
     level: "B2",
@@ -2616,6 +6053,12 @@ const data = [
     notes: "Konjunktiv II edilgen, olasılık",
   },
   {
+    cumle: "Es wird davon ausgegangen, dass der Täter gefasst werden wird.",
+    turkce: "Failin yakalanacağı varsayılıyor.",
+    level: "B2",
+    notes: "Edilgen yapı, yan cümle ile",
+  },
+  {
     cumle: "Die Qualität muss verbessert werden.",
     turkce: "Kalite iyileştirilmelidir.",
     level: "B2",
@@ -2626,6 +6069,12 @@ const data = [
     turkce: "Unutulmamalıdır ki...",
     level: "B2",
     notes: "Edilgen yapı, uyarı ifadesi",
+  },
+  {
+    cumle: "Dieser Text wurde vor hundert Jahren geschrieben.",
+    turkce: "Bu metin yüz yıl önce yazıldı.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, zaman zarfı",
   },
   {
     cumle: "Die Trauung wird von einem Priester durchgeführt.",
@@ -2658,163 +6107,87 @@ const data = [
     notes: "Geçmiş zaman edilgen, genelleme",
   },
   {
+    cumle: "Diese Brücke wurde vor drei Jahren gebaut.",
+    turkce: "Bu köprü üç yıl önce inşa edildi.",
+    level: "B2",
+    notes: "Geçmiş zaman edilgen, zaman zarfı",
+  },
+  {
     cumle: "Hätten Sie vielleicht einen Moment Zeit für mich?",
     turkce: "Acaba bana biraz zaman ayırabilir miydiniz?",
     level: "B2",
     notes: "Resmi rica",
   },
 ];
-function Test() {
-  const [currentIndex, setCurrentIndex] = useState(
-    parseInt(localStorage.getItem("currentIndex")) || 0 // localStorage'dan mevcut indeksi al, yoksa 0
-  );
-  const [showTurkish, setShowTurkish] = useState(true);
-  const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem("favorites")) || []
-  );
-  const [showFavorites, setShowFavorites] = useState(false);
-  const [repeatCount, setRepeatCount] = useState(0); // Aynı cümlenin kaç kez gösterildiğini takip eder
+function App() {
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    const savedIndex = localStorage.getItem("currentCardIndex");
+    return savedIndex ? parseInt(savedIndex, 10) : 0;
+  });
+  const [showTurkish, setShowTurkish] = useState(false);
 
-  // currentIndex değiştiğinde localStorage'a kaydet
   useEffect(() => {
-    localStorage.setItem("currentIndex", currentIndex);
+    localStorage.setItem("currentCardIndex", currentIndex);
   }, [currentIndex]);
 
-  // Almanca'dan bir sonraki adıma otomatik geçiş (5 saniye)
-  useEffect(() => {
-    let timer;
-    if (!showFavorites && !showTurkish) {
-      // Sadece Almanca gösterimde ve favoriler kapalıyken
-      timer = setTimeout(() => {
-        if (repeatCount < 1) {
-          // İlk gösterim: Aynı cümlenin Türkçesine dön
-          setShowTurkish(true);
-          setRepeatCount((prev) => prev + 1);
-        } else {
-          // İkinci gösterim: Bir sonraki cümleye geç ve sıfırla
-          setCurrentIndex((prev) => (prev + 1) % data.length); // Sırasıyla bir sonraki cümle
-          setShowTurkish(true);
-          setRepeatCount(0);
-        }
-      }, 5000); // Almanca 5 saniye gösteriliyor
-    }
-    return () => clearTimeout(timer);
-  }, [showTurkish, showFavorites, repeatCount]);
-
-  // İleri butonu için fonksiyon (Türkçe'den Almanca'ya geçiş)
-  const goToGerman = () => {
-    setShowTurkish(false);
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % data.length);
+    setShowTurkish(false); // Reset Turkish visibility
   };
 
-  // Favorilere ekleme fonksiyonu
-  const addToFavorites = () => {
-    const newFavorite = data[currentIndex];
-    if (!favorites.some((fav) => fav.cumle === newFavorite.cumle)) {
-      const updatedFavorites = [...favorites, newFavorite];
-      setFavorites(updatedFavorites);
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    }
-    // İleri butonuyla aynı mantık: Almanca'ya geç
-    setShowTurkish(false);
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + data.length) % data.length);
+    setShowTurkish(false); // Reset Turkish visibility
   };
 
-  // Favorilerden kaldırma fonksiyonu
-  const removeFromFavorites = (indexToRemove) => {
-    const updatedFavorites = favorites.filter(
-      (_, index) => index !== indexToRemove
-    );
-    setFavorites(updatedFavorites);
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  const toggleTurkish = () => {
+    setShowTurkish((prev) => !prev);
   };
 
-  // Favorileri aç/kapa fonksiyonu
-  const toggleFavorites = () => {
-    setShowFavorites(!showFavorites);
-  };
+  const currentCard = data[currentIndex];
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md text-center">
-        <h1 className="text-2xl font-bold mb-4">Almanca Öğren</h1>
-
-        {/* Favoriler kapalıyken cümle gösterimi */}
-        {!showFavorites && (
-          <div className="transition-opacity duration-300">
-            {showTurkish ? (
-              <div>
-                <p className="text-2xl font-bold text-red-500">
-                  {data[currentIndex].turkce}
-                </p>
-                <div className="mt-4 flex justify-center gap-4">
-                  <button
-                    onClick={addToFavorites}
-                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-transform hover:scale-105"
-                  >
-                    Favorilere Ekle
-                  </button>
-                  <button
-                    onClick={goToGerman}
-                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-transform hover:scale-105"
-                  >
-                    İleri
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <p className="text-3xl font-semibold text-red-500">
-                  {data[currentIndex].cumle}
-                </p>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Favoriler butonu */}
-        <div className="mt-4">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <div className="flex justify-between items-center mb-4">
           <button
-            onClick={toggleFavorites}
-            className="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition-transform hover:scale-105"
+            onClick={handlePrev}
+            className="p-2 text-gray-600 hover:text-gray-800"
+            aria-label="Previous card"
           >
-            {showFavorites ? "Cümlelere Dön" : "Favorileri Göster"}
+            <FaArrowLeft size={24} />
+          </button>
+          <span className="text-sm text-gray-500">
+            {currentIndex + 1} / {data.length}
+          </span>
+          <button
+            onClick={handleNext}
+            className="p-2 text-gray-600 hover:text-gray-800"
+            aria-label="Next card"
+          >
+            <FaArrowRight size={24} />
           </button>
         </div>
-
-        {/* Favoriler açıkken sadece favoriler listesi */}
-        {showFavorites && (
-          <div className="mt-4 max-h-96 overflow-y-auto transition-all duration-300">
-            <h2 className="text-lg font-semibold mb-2">Favoriler</h2>
-            {favorites.length > 0 ? (
-              <ul className="space-y-3">
-                {favorites.map((fav, index) => (
-                  <li
-                    key={index}
-                    className="p-3 bg-gray-50 rounded-lg shadow-sm flex justify-between items-center hover:bg-gray-100 transition-transform hover:-translate-y-0.5"
-                  >
-                    <div className="text-left">
-                      <p className="font-medium">{fav.cumle}</p>
-                      <p className="text-sm text-gray-700">{fav.turkce}</p>
-                      <p className="text-xs text-gray-500">
-                        Seviye: {fav.level} | Not: {fav.notes}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => removeFromFavorites(index)}
-                      className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 transition-transform hover:scale-105"
-                    >
-                      Kaldır
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-gray-500">Henüz favori eklenmedi.</p>
-            )}
-          </div>
-        )}
+        <div
+          className="bg-orange-100 p-6 rounded-lg cursor-pointer"
+          onClick={toggleTurkish}
+        >
+          <h2 className="text-xl font-bold text-gray-700 mb-2">
+            {currentCard.cumle}
+          </h2>
+          {showTurkish && (
+            <p className="text-base text-gray-600">{currentCard.turkce}</p>
+          )}
+          <p className="text-sm text-gray-500 mt-2">
+            Level: {currentCard.level}
+          </p>
+          {currentCard.notes && (
+            <p className="text-sm text-gray-500">Notes: {currentCard.notes}</p>
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
-export default Test;
+export default App;

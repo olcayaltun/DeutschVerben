@@ -28,6 +28,7 @@ import Makale from "../../Components/Buch/makale/Makale";
 import Video from "../../Components/Buch/Video";
 import B2c1 from "../../Components/Buch/B2c1";
 import Anatest from "../../Components/Buch/Anatest";
+import Buch11 from "../../Components/Buch/Buch11";
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
 
@@ -60,6 +61,7 @@ const components = {
   Video,
   B2c1,
   Anatest,
+  Buch11,
   // ... add Buch3 to Buch30
 };
 
