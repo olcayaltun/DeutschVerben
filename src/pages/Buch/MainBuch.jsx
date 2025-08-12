@@ -29,6 +29,23 @@ import Video from "../../Components/Buch/Video";
 import B2c1 from "../../Components/Buch/B2c1";
 import Anatest from "../../Components/Buch/Anatest";
 import Buch11 from "../../Components/Buch/Buch11";
+import Buch12 from "../../Components/Buch/Buch12";
+import Buch13 from "../../Components/Buch/Buch13";
+import Buch14 from "../../Components/Buch/Buch14";
+import Buch15 from "../../Components/Buch/Buch15";
+import Buch16 from "../../Components/Buch/Buch16";
+import Buch17 from "../../Components/Buch/Buch17";
+import Buch18 from "../../Components/Buch/Buch18";
+import Buch19 from "../../Components/Buch/Buch9";
+import Buch20 from "../../Components/Buch/Buch20";
+import Buch21 from "../../Components/Buch/Buch21";
+import Buch22 from "../../Components/Buch/Buch22";
+import Buch23 from "../../Components/Buch/Buch23";
+import Buch24 from "../../Components/Buch/Buch24";
+import Buch25 from "../../Components/Buch/Buch25";
+import Buch26 from "../../Components/Buch/Buch26";
+import Buch27 from "../../Components/Buch/Buch27";
+
 // ... import others up to Buch30
 // Alternatively, use dynamic imports or a loop (explained below)
 
@@ -62,6 +79,24 @@ const components = {
   B2c1,
   Anatest,
   Buch11,
+  Buch12,
+  Buch13,
+  Buch14,
+
+  Buch15,
+
+  Buch16,
+  Buch17,
+  Buch18,
+  Buch19,
+  Buch20,
+  Buch21,
+  Buch22,
+  Buch23,
+  Buch24,
+  Buch25,
+  Buch26,
+  Buch27,
   // ... add Buch3 to Buch30
 };
 

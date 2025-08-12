@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Buch11 = () => {
   // Örnek olarak metnin bir kısmını alıyoruz
@@ -1191,26 +1191,114 @@ const Buch11 = () => {
     },
     // ... diğer cümleler buraya eklenebilir
   ];
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (audio.paused) {
+      audio.play();
+      setIsPlaying(true);
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    setCurrentTime(audioRef.current.currentTime);
+  };
+
+  const handleLoadedMetadata = () => {
+    setDuration(audioRef.current.duration);
+  };
+
+  const skipTime = (seconds) => {
+    const audio = audioRef.current;
+    audio.currentTime = Math.max(
+      0,
+      Math.min(audio.currentTime + seconds, duration)
+    );
+  };
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60)
+      .toString()
+      .padStart(2, "0");
+    const seconds = Math.floor(time % 60)
+      .toString()
+      .padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  };
 
   return (
-    <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">
-        ARD Krimiserie: Tabor Süden
-      </h1>
-      <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-        {sentences.map((sentence, index) => (
-          <div key={index} className="relative group mb-2">
-            <span className="text-lg text-gray-800 cursor-pointer group-hover:underline">
-              {sentence.original}
-            </span>
-            <div className="absolute hidden group-hover:block bg-black text-white text-sm rounded-lg p-2 mt-1 z-10 max-w-xs">
-              {sentence.translation}
+    <div className="flex h-screen bg-gray-100">
+      {/* Sol taraf - yazılar scroll edebilir */}
+      <div className="w-2/3 overflow-y-scroll p-6">
+        <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+          {sentences.map((sentence, index) => (
+            <div key={index} className="relative group mb-4">
+              <span className="text-lg text-gray-800 cursor-pointer group-hover:underline">
+                {sentence.original}
+              </span>
+              <div className="absolute hidden group-hover:block bg-black text-white text-sm rounded-lg p-2 mt-1 z-10 max-w-xs">
+                {sentence.translation}
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Sağ taraf - sabit ses oynatıcı */}
+      <div className="w-1/3 bg-white border-l border-gray-300  columns-1 items-center justify-center">
+        <div className="bg-gray-50 p-6 rounded-xl shadow-md w-full max-w-sm text-center">
+          <div className="flex items-center justify-between space-x-2 mb-3">
+            <button
+              onClick={() => skipTime(-3)}
+              className="bg-gray-300 text-black px-3 py-1 rounded hover:bg-gray-400"
+            >
+              ⏪ 3s
+            </button>
+
+            <button
+              onClick={togglePlay}
+              className={`px-5 py-2 text-white rounded-lg font-semibold ${
+                isPlaying ? "bg-red-500" : "bg-green-500"
+              } hover:opacity-90 transition`}
+            >
+              {isPlaying ? "⏸ Durdur" : "▶️ Oynat"}
+            </button>
+
+            <button
+              onClick={() => skipTime(3)}
+              className="bg-gray-300 text-black px-3 py-1 rounded hover:bg-gray-400"
+            >
+              3s ⏩
+            </button>
           </div>
-        ))}
+
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span>{formatTime(currentTime)}</span>
+            <span>{formatTime(duration)}</span>
+          </div>
+
+          <audio
+            ref={audioRef}
+            onTimeUpdate={handleTimeUpdate}
+            onLoadedMetadata={handleLoadedMetadata}
+          >
+            <source src="/a.mp3" type="audio/mpeg" />
+            Tarayıcınız audio elementini desteklemiyor.
+          </audio>
+
+          <div className="text-center font-semibold mt-2">
+            🎧 ARD Krimiserie: Tabor Süden
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-
 export default Buch11;
