@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import React from "react";
 
 const vocabulary = [
@@ -1518,12 +1518,465 @@ const vocabulary = [
   },
   { german: "der Kompass, e", turkish: "mıknatısla yönleri belirleyen alet" },
 ];
-function Buch26() {
-  const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const toggleMeaning = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+// LocalStorage helper functions
+
+// LocalStorage helper functions
+const getIncorrectAnswersFromStorage = () => {
+  const stored = localStorage.getItem("incorrectVocabulary");
+  return stored ? JSON.parse(stored) : [];
+};
+
+const saveIncorrectAnswerToStorage = (item) => {
+  const incorrectAnswers = getIncorrectAnswersFromStorage();
+  if (
+    !incorrectAnswers.some(
+      (i) => i.german === item.german && i.userAnswer === item.userAnswer
+    )
+  ) {
+    const updated = [...incorrectAnswers, item];
+    localStorage.setItem("incorrectVocabulary", JSON.stringify(updated));
+  }
+};
+
+const clearIncorrectAnswersStorage = () => {
+  localStorage.removeItem("incorrectVocabulary");
+};
+
+const getTestProgressFromStorage = () => {
+  const stored = localStorage.getItem("testProgress");
+  return stored ? JSON.parse(stored) : null;
+};
+
+const saveTestProgressToStorage = (progress) => {
+  localStorage.setItem("testProgress", JSON.stringify(progress));
+};
+
+const clearTestProgressStorage = () => {
+  localStorage.removeItem("testProgress");
+};
+
+function VocabularyTest() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isCorrect, setIsCorrect] = useState(null);
+  const [incorrectAnswers, setIncorrectAnswers] = useState([]);
+  const [score, setScore] = useState(0);
+  const [showResults, setShowResults] = useState(false);
+  const [options, setOptions] = useState([]);
+  const [storedIncorrect, setStoredIncorrect] = useState(
+    getIncorrectAnswersFromStorage()
+  );
+  const [jumpToQuestion, setJumpToQuestion] = useState(""); // Yeni eklenen state
+  const initialLoad = useRef(true);
+
+  // Load saved progress on initial render
+  useEffect(() => {
+    const savedProgress = getTestProgressFromStorage();
+    if (savedProgress) {
+      setCurrentIndex(savedProgress.currentIndex);
+      setSelectedAnswer(savedProgress.selectedAnswer);
+      setIncorrectAnswers(savedProgress.incorrectAnswers);
+      setScore(savedProgress.score);
+      setOptions(savedProgress.options);
+      setIsCorrect(savedProgress.isCorrect);
+    }
+
+    // Set flag to false after initial load
+    setTimeout(() => (initialLoad.current = false), 100);
+  }, []);
+
+  // Save progress whenever state changes
+  useEffect(() => {
+    if (initialLoad.current) return;
+
+    if (!showResults) {
+      const progress = {
+        currentIndex,
+        selectedAnswer,
+        incorrectAnswers,
+        score,
+        options,
+        isCorrect,
+      };
+      saveTestProgressToStorage(progress);
+    }
+  }, [
+    currentIndex,
+    selectedAnswer,
+    incorrectAnswers,
+    score,
+    options,
+    isCorrect,
+    showResults,
+  ]);
+
+  // Generate 3 options for current question (1 correct + 2 random wrong)
+  useEffect(() => {
+    if (
+      vocabulary.length > 0 &&
+      (options.length === 0 || initialLoad.current)
+    ) {
+      const correctAnswer = vocabulary[currentIndex].turkish;
+
+      // Yanlış cevapları topla (mevcut kelime hariç)
+      const wrongAnswers = vocabulary
+        .filter((_, idx) => idx !== currentIndex)
+        .map((item) => item.turkish);
+
+      // 2 yanlış cevap seç (random)
+      const selectedWrongs = [];
+      while (selectedWrongs.length < 2 && wrongAnswers.length > 0) {
+        const randomIndex = Math.floor(Math.random() * wrongAnswers.length);
+        if (!selectedWrongs.includes(wrongAnswers[randomIndex])) {
+          selectedWrongs.push(wrongAnswers[randomIndex]);
+        }
+      }
+
+      // 3 seçeneği karıştır
+      const allOptions = [correctAnswer, ...selectedWrongs];
+      const shuffledOptions = [...allOptions].sort(() => Math.random() - 0.5);
+
+      setOptions(shuffledOptions);
+    }
+  }, [currentIndex]);
+
+  const handleAnswer = (option) => {
+    const correct = vocabulary[currentIndex].turkish === option;
+    setSelectedAnswer(option);
+    setIsCorrect(correct);
+
+    if (correct) {
+      setScore(score + 1);
+    } else {
+      const incorrectItem = {
+        ...vocabulary[currentIndex],
+        userAnswer: option,
+      };
+      setIncorrectAnswers([...incorrectAnswers, incorrectItem]);
+      saveIncorrectAnswerToStorage(incorrectItem);
+      setStoredIncorrect([...storedIncorrect, incorrectItem]);
+    }
   };
+
+  // İstenilen soruya atlama fonksiyonu
+  const handleJumpToQuestion = () => {
+    const questionNum = parseInt(jumpToQuestion);
+    if (
+      !isNaN(questionNum) &&
+      questionNum >= 1 &&
+      questionNum <= vocabulary.length
+    ) {
+      setCurrentIndex(questionNum - 1);
+      setSelectedAnswer(null);
+      setIsCorrect(null);
+      setOptions([]);
+      setJumpToQuestion("");
+    }
+  };
+
+  const nextQuestion = () => {
+    if (currentIndex < vocabulary.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setSelectedAnswer(null);
+      setIsCorrect(null);
+      setOptions([]);
+    } else {
+      clearTestProgressStorage();
+      setShowResults(true);
+    }
+  };
+
+  const restartTest = () => {
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setIsCorrect(null);
+    setIncorrectAnswers([]);
+    setScore(0);
+    setShowResults(false);
+    setOptions([]);
+    clearTestProgressStorage();
+  };
+
+  const clearAllIncorrect = () => {
+    clearIncorrectAnswersStorage();
+    setStoredIncorrect([]);
+  };
+
+  const exitTest = () => {
+    window.location.reload();
+  };
+
+  if (showResults) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+        <div className="max-w-4xl w-full flex flex-col md:flex-row gap-6">
+          <div className="bg-white rounded-xl shadow-lg p-6 w-full md:w-1/2 border border-gray-200">
+            <h1 className="text-2xl font-bold text-center mb-4 text-indigo-700">
+              Test Sonuçları
+            </h1>
+
+            <div className="text-center mb-6">
+              <p className="text-xl font-semibold">
+                Puan: <span className="text-indigo-600">{score}</span> /{" "}
+                {vocabulary.length}
+              </p>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                <div
+                  className="bg-indigo-600 h-2.5 rounded-full"
+                  style={{ width: `${(score / vocabulary.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+
+            {incorrectAnswers.length > 0 && (
+              <div className="mt-4">
+                <h2 className="font-bold text-lg text-red-600 mb-3">
+                  Bu Testteki Yanlış Cevaplar:
+                </h2>
+                <ul className="space-y-3">
+                  {incorrectAnswers.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="p-3 bg-red-50 rounded-lg border border-red-100"
+                    >
+                      <p className="font-bold text-gray-800">{item.german}</p>
+                      <p className="text-green-600">Doğru: {item.turkish}</p>
+                      <p className="text-red-600">
+                        Senin cevabın: {item.userAnswer}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="flex space-x-3 mt-6">
+              <button
+                onClick={restartTest}
+                className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+              >
+                Testi Yeniden Başlat
+              </button>
+              <button
+                onClick={exitTest}
+                className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+              >
+                Ana Menü
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 w-full md:w-1/2 border border-gray-200">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="text-2xl font-bold text-indigo-700">
+                Tüm Yanlış Cevaplar
+              </h1>
+              {storedIncorrect.length > 0 && (
+                <button
+                  onClick={clearAllIncorrect}
+                  className="text-sm bg-red-100 hover:bg-red-200 text-red-800 px-3 py-1 rounded-lg"
+                >
+                  Temizle
+                </button>
+              )}
+            </div>
+
+            {storedIncorrect.length > 0 ? (
+              <ul className="space-y-3 max-h-[500px] overflow-y-auto pr-2">
+                {storedIncorrect.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="p-3 rounded-lg bg-red-50 border border-red-100"
+                  >
+                    <p className="font-bold text-gray-800">{item.german}</p>
+                    <p className="text-green-600 mt-1">
+                      Doğru cevap: {item.turkish}
+                    </p>
+                    <p className="text-red-600">
+                      Senin cevabın: {item.userAnswer}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-center py-8 text-gray-600">
+                Henüz kayıtlı yanlış cevabınız yok!
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+      <div className="max-w-4xl w-full flex flex-col md:flex-row gap-6">
+        <div className="bg-white rounded-xl shadow-lg p-5 w-full md:w-1/2 border border-gray-200">
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-xl font-bold text-indigo-700">
+              Almanca-Türkçe Test
+            </h1>
+            <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+              {currentIndex + 1} / {vocabulary.length}
+            </span>
+          </div>
+
+          {/* Soru atlama kutusu */}
+          <div className="mb-4 flex items-center">
+            <input
+              type="number"
+              min="1"
+              max={vocabulary.length}
+              value={jumpToQuestion}
+              onChange={(e) => setJumpToQuestion(e.target.value)}
+              placeholder="Soru numarası"
+              className="flex-1 p-2 border border-gray-300 rounded-l-lg text-sm"
+            />
+            <button
+              onClick={handleJumpToQuestion}
+              className="bg-indigo-600 text-white px-4 py-2 rounded-r-lg text-sm"
+            >
+              Git
+            </button>
+          </div>
+
+          <div className="mb-6">
+            <p className="text-lg font-semibold text-center py-4 border-b border-indigo-100">
+              "{vocabulary[currentIndex].german}" kelimesinin anlamı nedir?
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            {options.map((option, idx) => {
+              let buttonClass =
+                "w-full text-left p-3 rounded-lg border transition-colors ";
+
+              if (selectedAnswer) {
+                if (option === vocabulary[currentIndex].turkish) {
+                  buttonClass += "bg-green-100 border-green-500 text-green-800";
+                } else if (option === selectedAnswer) {
+                  buttonClass += "bg-red-100 border-red-500 text-red-800";
+                } else {
+                  buttonClass += "bg-gray-50 border-gray-200 text-gray-700";
+                }
+              } else {
+                buttonClass +=
+                  "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-800";
+              }
+
+              return (
+                <button
+                  key={idx}
+                  className={buttonClass}
+                  onClick={() => !selectedAnswer && handleAnswer(option)}
+                  disabled={selectedAnswer}
+                >
+                  {option}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="flex space-x-3 mt-6">
+            {selectedAnswer ? (
+              <button
+                onClick={nextQuestion}
+                className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+              >
+                {currentIndex < vocabulary.length - 1
+                  ? "Sonraki Soru"
+                  : "Sonuçları Gör"}
+              </button>
+            ) : (
+              <button
+                onClick={exitTest}
+                className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+              >
+                Testten Çık (Kaydet)
+              </button>
+            )}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg p-5 w-full md:w-1/2 border border-gray-200">
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-xl font-bold text-indigo-700">
+              Yanlış Cevaplarım
+            </h1>
+            {storedIncorrect.length > 0 && (
+              <span className="bg-red-500 text-white rounded-full h-6 w-6 flex items-center justify-center text-xs">
+                {storedIncorrect.length}
+              </span>
+            )}
+          </div>
+
+          {storedIncorrect.length > 0 ? (
+            <ul className="space-y-3 max-h-[500px] overflow-y-auto pr-2">
+              {storedIncorrect.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="p-3 rounded-lg bg-red-50 border border-red-100"
+                >
+                  <p className="font-bold text-gray-800">{item.german}</p>
+                  <p className="text-green-600 mt-1">
+                    Doğru cevap: {item.turkish}
+                  </p>
+                  <p className="text-red-600"></p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-center py-8">
+              <p className="text-gray-600 mb-4">
+                Henüz kayıtlı yanlış cevabınız yok!
+              </p>
+              <p className="text-sm text-gray-500">
+                Testi çözdükçe yanlış cevaplarınız burada görünecek
+              </p>
+            </div>
+          )}
+
+          {storedIncorrect.length > 0 && (
+            <button
+              onClick={clearAllIncorrect}
+              className="w-full mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg transition-colors"
+            >
+              Tümünü Temizle
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Buch26() {
+  const [showTest, setShowTest] = useState(false);
+  const [incorrectCount, setIncorrectCount] = useState(0);
+  const [hasSavedProgress, setHasSavedProgress] = useState(false);
+
+  useEffect(() => {
+    const incorrect = getIncorrectAnswersFromStorage();
+    setIncorrectCount(incorrect.length);
+
+    const progress = getTestProgressFromStorage();
+    setHasSavedProgress(!!progress);
+  }, []);
+
+  const startOrResumeTest = () => {
+    setShowTest(true);
+  };
+
+  const clearSavedProgress = () => {
+    clearTestProgressStorage();
+    setHasSavedProgress(false);
+  };
+
+  if (showTest) {
+    return <VocabularyTest />;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
@@ -1532,32 +1985,79 @@ function Buch26() {
           Almanca-Türkçe Sözlük
         </h1>
 
-        <ul className="space-y-3">
+        <ul className="space-y-3 mb-6">
           {vocabulary.map((item, index) => (
             <li
               key={index}
-              className={`p-3 rounded-lg cursor-pointer transition-all ${
-                expandedIndex === index
-                  ? "bg-indigo-50 border border-indigo-200 shadow-sm"
-                  : "bg-gray-50 hover:bg-gray-100"
-              }`}
-              onClick={() => toggleMeaning(index)}
+              className="p-3 rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-200"
             >
               <div className="flex justify-between items-center">
-                <span className="font-bold text-black-500">{item.german}</span>
-                <span className="text-xs text-gray-500">
-                  {expandedIndex === index ? "▲" : "▼"}
+                <span className="font-bold text-gray-800">{item.german}</span>
+                <span className="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">
+                  {index + 1}
                 </span>
               </div>
-
-              {expandedIndex === index && (
-                <div className="mt-2 pt-2 border-t border-indigo-100 text-gray-700 animate-fadeIn">
-                  {item.turkish}
-                </div>
-              )}
+              <div className="mt-2 pt-2 border-t border-indigo-100 text-gray-700">
+                {item.turkish}
+              </div>
             </li>
           ))}
         </ul>
+
+        <div className="flex flex-col space-y-3">
+          <button
+            onClick={startOrResumeTest}
+            className={`w-full font-bold py-3 px-4 rounded-lg transition-colors flex justify-between items-center ${
+              hasSavedProgress
+                ? "bg-yellow-100 hover:bg-yellow-200 text-yellow-800"
+                : "bg-indigo-600 hover:bg-indigo-700 text-white"
+            }`}
+          >
+            <span>{hasSavedProgress ? "Teste Devam Et" : "Teste Başla"}</span>
+            {hasSavedProgress && (
+              <span className="bg-yellow-500 text-white rounded-full h-6 w-6 flex items-center justify-center text-xs">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </span>
+            )}
+          </button>
+
+          <button
+            onClick={() => setShowTest(true)}
+            className={`w-full font-bold py-2 px-4 rounded-lg transition-colors flex justify-between items-center ${
+              incorrectCount > 0
+                ? "bg-red-100 hover:bg-red-200 text-red-800"
+                : "bg-gray-100 text-gray-500"
+            }`}
+            disabled={incorrectCount === 0}
+          >
+            <span>Yanlış Cevaplarım</span>
+            {incorrectCount > 0 && (
+              <span className="bg-red-500 text-white rounded-full h-6 w-6 flex items-center justify-center text-xs">
+                {incorrectCount}
+              </span>
+            )}
+          </button>
+
+          {hasSavedProgress && (
+            <button
+              onClick={clearSavedProgress}
+              className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg transition-colors"
+            >
+              Kayıtlı Testi Temizle
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
