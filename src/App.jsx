@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Test2 from "./pages/Test2";
 import Main from "./pages/Main";
 import Test from "./pages/Test";
 import TrenB from "./pages/Tren";
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/buch" element={<MainBuch />} />
           <Route path="/prä" element={<Präpos />} />
           <Route path="/yenibilgiler" element={<Yenibilgiler />} />
+          <Route path="/test2" element={<Test2 />} />
         </Routes>
       </BrowserRouter>
     </DndProvider>

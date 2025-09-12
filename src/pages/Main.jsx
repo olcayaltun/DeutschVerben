@@ -132,6 +132,12 @@ const Main = () => {
         >
           Test1
         </Link>
+        <Link
+          to="/test2"
+          className="bg-amber-300 px-3 py-2 rounded-md hover:bg-amber-400 transition-colors"
+        >
+          Test2
+        </Link>
       </div>
 
       {/* Main Content */}
