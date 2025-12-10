@@ -5921,11 +5921,13 @@ const konnektorenData = [
   },
 ];
 
+// Tek ekranda görünen, düzenlenmiş CSS yapısıyla optimize edilmiş versiyon
+// Kullanıcı aynı component içinde tüm alanları tek ekranda görebilir.
+
 export default function KonnektorCard() {
   const [konnektorIndex, setKonnektorIndex] = useState(0);
   const [zeitIndex, setZeitIndex] = useState(0);
 
-  // SAYFA YENİLENİNCE LOCALSTORAGE'DAN YÜKLE
   useEffect(() => {
     const savedKonnektor = localStorage.getItem("konnektorIndex");
     const savedZeit = localStorage.getItem("zeitIndex");
@@ -5934,26 +5936,20 @@ export default function KonnektorCard() {
     if (savedZeit !== null) setZeitIndex(Number(savedZeit));
   }, []);
 
-  const currentKonnektor = konnektorenData[konnektorIndex];
-  const currentBeispiel = currentKonnektor.beispiele[zeitIndex];
-
-  // LOCALSTORAGE KAYDET
-  const saveToLocal = (kIndex, zIndex) => {
-    localStorage.setItem("konnektorIndex", kIndex);
-    localStorage.setItem("zeitIndex", zIndex);
+  const saveToLocal = (k, z) => {
+    localStorage.setItem("konnektorIndex", k);
+    localStorage.setItem("zeitIndex", z);
   };
 
-  // Sadece zamanlarda ilerleme
   const handleNextZeit = () => {
     setZeitIndex((prev) => {
-      const nextIndex =
+      const next =
         prev === currentKonnektor.beispiele.length - 1 ? 0 : prev + 1;
-      saveToLocal(konnektorIndex, nextIndex);
-      return nextIndex;
+      saveToLocal(konnektorIndex, next);
+      return next;
     });
   };
 
-  // Konnektor geri
   const handlePrevKonnektor = () => {
     setKonnektorIndex((prev) => {
       const newIndex = prev === 0 ? konnektorenData.length - 1 : prev - 1;
@@ -5963,7 +5959,6 @@ export default function KonnektorCard() {
     setZeitIndex(0);
   };
 
-  // Konnektor ileri
   const handleNextKonnektor = () => {
     setKonnektorIndex((prev) => {
       const newIndex = prev === konnektorenData.length - 1 ? 0 : prev + 1;
@@ -5973,92 +5968,90 @@ export default function KonnektorCard() {
     setZeitIndex(0);
   };
 
-  // Belirli zaman seçme
-  const handleZeitClick = (index) => {
-    setZeitIndex(index);
-    saveToLocal(konnektorIndex, index);
+  const handleZeitClick = (i) => {
+    setZeitIndex(i);
+    saveToLocal(konnektorIndex, i);
   };
 
+  const currentKonnektor = konnektorenData[konnektorIndex];
+  const currentBeispiel = currentKonnektor.beispiele[zeitIndex];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center p-6">
-      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 relative">
-          <div className="flex items-center justify-between">
-            <button
-              onClick={handlePrevKonnektor}
-              className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
+    <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center p-4 overflow-y-auto">
+      <div className="w-full max-w-3xl bg-slate-800 rounded-2xl shadow-xl p-6 space-y-8">
+        {/* ÜST NAV */}
+        <div className="flex justify-between items-center">
+          <button
+            onClick={handlePrevKonnektor}
+            className="p-3 rounded-full bg-slate-700 hover:bg-slate-600"
+          >
+            ◀
+          </button>
 
-            <div className="text-center">
-              <h1 className="text-5xl font-bold">
-                {currentKonnektor.konnektor}
-              </h1>
-              <p className="text-xl mt-2 opacity-90">
-                {currentKonnektor.kategorie}
-              </p>
-              <p className="text-sm mt-3 opacity-75">
-                {konnektorIndex + 1} / {konnektorenData.length}
-              </p>
-            </div>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold">{currentKonnektor.konnektor}</h1>
+            <p className="text-lg text-slate-300">
+              {currentKonnektor.kategorie}
+            </p>
+            <p className="text-xs opacity-70 mt-1">
+              {konnektorIndex + 1} / {konnektorenData.length}
+            </p>
+          </div>
 
-            <button
-              onClick={handleNextKonnektor}
-              className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
+          <button
+            onClick={handleNextKonnektor}
+            className="p-3 rounded-full bg-slate-700 hover:bg-slate-600"
+          >
+            ▶
+          </button>
+        </div>
+
+        {/* CÜMLE KUTUSU */}
+        <div className="bg-slate-700 rounded-xl p-6 shadow-xl text-center space-y-6">
+          <p className="text-2xl font-semibold text-slate-100 leading-relaxed">
+            {currentBeispiel.beispiel}
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 text-base">
+            <span className="bg-indigo-600/20 text-indigo-300 px-4 py-2 rounded-lg border border-indigo-500/30">
+              {currentBeispiel.hauptsatz}
+            </span>
+
+            <span className="bg-purple-600/20 text-purple-300 px-4 py-2 rounded-lg border border-purple-500/30">
+              {currentBeispiel.nebensatz}
+            </span>
           </div>
         </div>
 
-        {/* Cümle */}
-        <div className="p-10 bg-gray-50">
-          <div className="bg-white rounded-xl shadow-lg p-10 mb-8 border border-gray-200">
-            <p className="text-3xl leading-relaxed text-gray-800 text-center font-medium">
-              {currentBeispiel.beispiel}
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-lg font-medium">
-              <span className="text-indigo-600 bg-indigo-50 px-5 py-2 rounded-lg">
-                {currentBeispiel.hauptsatz}
-              </span>
-              <span className="text-purple-600 bg-purple-50 px-5 py-2 rounded-lg">
-                {currentBeispiel.nebensatz}
-              </span>
-            </div>
-          </div>
-
-          {/* Zaman Butonları */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {currentKonnektor.beispiele.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleZeitClick(index)}
-                className={`py-3 px-4 rounded-lg font-medium transition-all duration-200 border-2 ${
-                  zeitIndex === index
-                    ? "bg-indigo-600 text-white border-indigo-600 shadow-md"
-                    : "bg-white text-gray-700 border-gray-300 hover:border-indigo-400 hover:bg-indigo-50"
-                }`}
-              >
-                {item.zeit}
-              </button>
-            ))}
-          </div>
-
-          {/* İleri */}
-          <div className="mt-10 text-center">
+        {/* ZAMAN BUTONLARI */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {currentKonnektor.beispiele.map((item, index) => (
             <button
-              onClick={handleNextZeit}
-              className="group inline-flex items-center gap-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-xl py-5 px-12 rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              key={index}
+              onClick={() => handleZeitClick(index)}
+              className={`py-3 px-4 rounded-lg font-medium border transition-all duration-200 text-sm sm:text-base
+                ${
+                  zeitIndex === index
+                    ? "bg-indigo-600 border-indigo-500 shadow-lg"
+                    : "bg-slate-700 border-slate-600 hover:bg-slate-600"
+                }`}
             >
-              İleri
-              <ChevronRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
+              {item.zeit}
             </button>
-            <p className="text-sm text-gray-600 mt-3">
-              {zeitIndex + 1} / {currentKonnektor.beispiele.length} zaman
-            </p>
-          </div>
+          ))}
+        </div>
+
+        {/* İLERİ */}
+        <div className="text-center">
+          <button
+            onClick={handleNextZeit}
+            className="bg-gradient-to-r from-indigo-600 to-purple-600 px-10 py-4 text-lg rounded-full font-bold shadow-lg hover:scale-105 transition-all"
+          >
+            İleri ▶
+          </button>
+          <p className="text-xs text-slate-400 mt-2">
+            {zeitIndex + 1} / {currentKonnektor.beispiele.length} zaman
+          </p>
         </div>
       </div>
     </div>
